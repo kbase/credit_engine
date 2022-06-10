@@ -1,0 +1,19 @@
+{
+   "ORCID": "https://orcid.org/",
+   "credit": "https://casrai.org/credit/",
+   "datacite": "https://support.datacite.org/docs/schema-optional-properties-v44",
+   "linkml": "https://w3id.org/linkml/",
+   "schema": "http://schema.org/",
+   "Contributor": {
+      "@id": "https://kbase/credit_engine/schema/metadata/Contributor"
+   },
+   "Dataset": {
+      "@id": "https://kbase/credit_engine/schema/metadata/Dataset"
+   },
+   "FundingReference": {
+      "@id": "https://kbase/credit_engine/schema/metadata/FundingReference"
+   },
+   "ResolvablePID": {
+      "@id": "https://kbase/credit_engine/schema/metadata/ResolvablePID"
+   }
+}
