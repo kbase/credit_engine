@@ -1,0 +1,37 @@
+type Contributor
+  {
+    orcid: String!
+    firstName: String
+    lastName: String
+    fullName: String
+    affiliation: String
+    contributorRole: String
+  }
+
+type Dataset
+  {
+    title: String!
+    version: String
+    accessDate: String
+    contributors: [Contributor]
+    resolvablePersistentIdentifiers: [ResolvablePID]
+    fundingReferences: [FundingReference]
+  }
+
+type FundingReference
+  {
+    funderName: String!
+    funderId: String
+    awardId: String
+    awardTitle: String
+    awardUri: String
+  }
+
+type ResolvablePID
+  {
+    id: String!
+    uri: String
+    description: String
+    repository: String
+  }
+

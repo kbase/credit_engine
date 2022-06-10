@@ -1,0 +1,114 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema1: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://kbase/credit_engine/schema/metadata/:Dataset> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <https://kbase/credit_engine/schema/metadata/:Contributor> ;
+            sh:description "people and/or organisations responsible for generating the dataset" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:contributors> ],
+        [ sh:description "for unversioned datasets, the date of access of the dataset" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:access_date> ],
+        [ sh:description "formal title of the data set" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:title> ],
+        [ sh:description "dataset version (if available)" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:version> ],
+        [ sh:class <https://kbase/credit_engine/schema/metadata/:FundingReference> ;
+            sh:description "funding sources for the dataset" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:funding_references> ],
+        [ sh:class <https://kbase/credit_engine/schema/metadata/:ResolvablePID> ;
+            sh:description "unique IDs used to access the dataset or any ancestral datasets" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 4 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:resolvable_persistent_identifiers> ] ;
+    sh:targetClass <https://kbase/credit_engine/schema/metadata/:Dataset> .
+
+<https://kbase/credit_engine/schema/metadata/:Contributor> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "family name" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:last_name> ],
+        [ sh:description "should be a term from either CRedIT or DataCite" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:contributor_role> ],
+        [ sh:description "organisation that the contributor is associated with" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:affiliation> ],
+        [ sh:description "given name" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:first_name> ],
+        [ sh:description "Full name of the contributor" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema1:name ],
+        [ sh:description "ORCID" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:orcid> ] ;
+    sh:targetClass <https://kbase/credit_engine/schema/metadata/:Contributor> .
+
+<https://kbase/credit_engine/schema/metadata/:FundingReference> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "URI for the award" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:award_uri> ],
+        [ sh:description "ID for the funding entity" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:funder_id> ],
+        [ sh:description "human-readable funding body name" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:funder_name> ],
+        [ sh:description "human-readable title of the grant or award" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:award_title> ],
+        [ sh:description "code assigned by the funder to the grant or award" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:award_id> ] ;
+    sh:targetClass <https://kbase/credit_engine/schema/metadata/:FundingReference> .
+
+<https://kbase/credit_engine/schema/metadata/:ResolvablePID> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "brief description of what the ID links to" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema1:description ],
+        [ sh:description "entity within which the RPI is held" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:repository> ],
+        [ sh:description "URI for a resource" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:uri> ],
+        [ sh:description "a CURIE (compact URI)" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <https://kbase/credit_engine/schema/metadata/:id> ] ;
+    sh:targetClass <https://kbase/credit_engine/schema/metadata/:ResolvablePID> .
+
