@@ -38,15 +38,16 @@ linkml:Nodeidentifier NONLITERAL
           <last_name> @linkml:String ? ;
           schema1:name @linkml:String ? ;
           <affiliation> @linkml:String ? ;
-          <contributor_role> @linkml:String ?
+          <contributor_roles> @linkml:String *
        ) ;
        rdf:type [ <Contributor> ]
     )
 }
 
 <Dataset> CLOSED {
-    (  $<Dataset_tes> (  <title> @linkml:String ;
+    (  $<Dataset_tes> (  <titles> @linkml:String * ;
           <version> @linkml:String ? ;
+          <submission_date> @linkml:String ? ;
           <access_date> @linkml:String ? ;
           <contributors> @<Contributor> * ;
           <resolvable_persistent_identifiers> @<ResolvablePID> * ;

@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from metadata.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-06-10T10:36:46\n    Schema: metadata\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://kbase/credit_engine/schema/metadata\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from metadata.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-06-16T14:19:20\n    Schema: metadata\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://kbase/credit_engine/schema/metadata\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "ORCID": "https://orcid.org/",
       "credit": "https://casrai.org/credit/",
@@ -14,8 +14,8 @@
       "affiliation": {
          "@id": "https://kbase/credit_engine/schema/metadata/affiliation"
       },
-      "contributor_role": {
-         "@id": "https://kbase/credit_engine/schema/metadata/contributor_role"
+      "contributor_roles": {
+         "@id": "https://kbase/credit_engine/schema/metadata/contributor_roles"
       },
       "first_name": {
          "@id": "https://kbase/credit_engine/schema/metadata/first_name"
@@ -42,8 +42,11 @@
          "@type": "@id",
          "@id": "https://kbase/credit_engine/schema/metadata/resolvable_persistent_identifiers"
       },
-      "title": {
-         "@id": "https://kbase/credit_engine/schema/metadata/title"
+      "submission_date": {
+         "@id": "https://kbase/credit_engine/schema/metadata/submission_date"
+      },
+      "titles": {
+         "@id": "https://kbase/credit_engine/schema/metadata/titles"
       },
       "version": {
          "@id": "https://kbase/credit_engine/schema/metadata/version"

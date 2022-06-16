@@ -23,7 +23,7 @@
 ### Slots
 
  * [➞affiliation](contributor__affiliation.md) - organisation that the contributor is associated with
- * [➞contributor_role](contributor__contributor_role.md) - should be a term from either CRedIT or DataCite
+ * [➞contributor_roles](contributor__contributor_roles.md) - should be a term from either CRedIT or DataCite
  * [➞first_name](contributor__first_name.md) - given name
  * [➞full_name](contributor__full_name.md) - Full name of the contributor
  * [➞last_name](contributor__last_name.md) - family name
@@ -32,7 +32,8 @@
  * [➞contributors](dataset__contributors.md) - people and/or organisations responsible for generating the dataset
  * [➞funding_references](dataset__funding_references.md) - funding sources for the dataset
  * [➞resolvable_persistent_identifiers](dataset__resolvable_persistent_identifiers.md) - unique IDs used to access the dataset or any ancestral datasets
- * [➞title](dataset__title.md) - formal title of the data set
+ * [➞submission_date](dataset__submission_date.md) - date of submission to repository (if available)
+ * [➞titles](dataset__titles.md) - formal title(s) of the data set
  * [➞version](dataset__version.md) - dataset version (if available)
  * [➞award_id](fundingReference__award_id.md) - code assigned by the funder to the grant or award
  * [➞award_title](fundingReference__award_title.md) - human-readable title of the grant or award

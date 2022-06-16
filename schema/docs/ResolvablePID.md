@@ -1,5 +1,5 @@
 
-# Class: Resolvable_PID
+# Class: ResolvablePID
 
 
 

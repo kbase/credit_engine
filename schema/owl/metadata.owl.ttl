@@ -14,11 +14,11 @@
         <https://kbase/credit_engine/schema/metadata/FundingReference>,
         <https://kbase/credit_engine/schema/metadata/ResolvablePID> ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2022-06-10T10:36:48" ;
+    linkml:generation_date "2022-06-16T14:19:22" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "metadata.yaml" ;
-    linkml:source_file_date "2022-06-10T10:30:55" ;
-    linkml:source_file_size 2493 .
+    linkml:source_file_date "2022-06-16T14:16:39" ;
+    linkml:source_file_size 2718 .
 
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" .
@@ -33,26 +33,29 @@ linkml:topValue a owl:DatatypeProperty ;
         linkml:ClassDefinition ;
     rdfs:label "Dataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://kbase/credit_engine/schema/metadata/FundingReference> ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/funding_references> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://kbase/credit_engine/schema/metadata/Contributor> ;
             owl:onProperty <https://kbase/credit_engine/schema/metadata/contributors> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://kbase/credit_engine/schema/metadata/ResolvablePID> ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/resolvable_persistent_identifiers> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/titles> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://kbase/credit_engine/schema/metadata/FundingReference> ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/funding_references> ],
+        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/version> ],
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/submission_date> ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty <https://kbase/credit_engine/schema/metadata/access_date> ],
         [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/title> ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://kbase/credit_engine/schema/metadata/ResolvablePID> ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/resolvable_persistent_identifiers> ] .
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/version> ] .
 
 <https://kbase/credit_engine/schema/metadata/access_date> a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -84,9 +87,9 @@ linkml:topValue a owl:DatatypeProperty ;
     rdfs:range linkml:String ;
     skos:definition "URI for the award" .
 
-<https://kbase/credit_engine/schema/metadata/contributor_role> a owl:ObjectProperty,
+<https://kbase/credit_engine/schema/metadata/contributor_roles> a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "contributor_role" ;
+    rdfs:label "contributor_roles" ;
     rdfs:range linkml:String ;
     skos:definition "should be a term from either CRedIT or DataCite" .
 
@@ -150,11 +153,17 @@ linkml:topValue a owl:DatatypeProperty ;
     rdfs:range <https://kbase/credit_engine/schema/metadata/ResolvablePID> ;
     skos:definition "unique IDs used to access the dataset or any ancestral datasets" .
 
-<https://kbase/credit_engine/schema/metadata/title> a owl:ObjectProperty,
+<https://kbase/credit_engine/schema/metadata/submission_date> a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "title" ;
+    rdfs:label "submission_date" ;
     rdfs:range linkml:String ;
-    skos:definition "formal title of the data set" .
+    skos:definition "date of submission to repository (if available)" .
+
+<https://kbase/credit_engine/schema/metadata/titles> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "titles" ;
+    rdfs:range linkml:String ;
+    skos:definition "formal title(s) of the data set" .
 
 <https://kbase/credit_engine/schema/metadata/uri> a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -186,29 +195,28 @@ schema1:name a owl:ObjectProperty,
         linkml:ClassDefinition ;
     rdfs:label "Contributor" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/last_name> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/contributor_roles> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/first_name> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/affiliation> ],
+        [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty <https://kbase/credit_engine/schema/metadata/orcid> ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/last_name> ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/contributor_role> ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:name ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/affiliation> ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/first_name> ] .
+            owl:onProperty schema1:name ] .
 
 <https://kbase/credit_engine/schema/metadata/FundingReference> a owl:Class,
         linkml:ClassDefinition ;
@@ -216,27 +224,27 @@ schema1:name a owl:ObjectProperty,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/award_title> ],
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/funder_id> ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty <https://kbase/credit_engine/schema/metadata/award_id> ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/funder_id> ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/award_uri> ],
-        [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty <https://kbase/credit_engine/schema/metadata/funder_name> ;
-            owl:qualifiedCardinality 1 ] .
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/award_title> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/award_uri> ] .
 
 <https://kbase/credit_engine/schema/metadata/ResolvablePID> a owl:Class,
         linkml:ClassDefinition ;
-    rdfs:label "Resolvable_PID" ;
+    rdfs:label "ResolvablePID" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty <https://kbase/credit_engine/schema/metadata/id> ;
@@ -248,11 +256,11 @@ schema1:name a owl:ObjectProperty,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/repository> ],
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/uri> ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty <https://kbase/credit_engine/schema/metadata/uri> ] .
+            owl:onProperty <https://kbase/credit_engine/schema/metadata/repository> ] .
 
 linkml:ClassDefinition a owl:Class ;
     rdfs:label "class_definition" .

@@ -7,18 +7,21 @@
 URI: [https://kbase/credit_engine/schema/metadata/Dataset](https://kbase/credit_engine/schema/metadata/Dataset)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[ResolvablePID],[FundingReference],[FundingReference]<funding_references%200..*-++[Dataset&#124;title:string;version:string%20%3F;access_date:string%20%3F],[ResolvablePID]<resolvable_persistent_identifiers%200..*-++[Dataset],[Contributor]<contributors%200..*-++[Dataset],[Contributor])](https://yuml.me/diagram/nofunky;dir:TB/class/[ResolvablePID],[FundingReference],[FundingReference]<funding_references%200..*-++[Dataset&#124;title:string;version:string%20%3F;access_date:string%20%3F],[ResolvablePID]<resolvable_persistent_identifiers%200..*-++[Dataset],[Contributor]<contributors%200..*-++[Dataset],[Contributor])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[ResolvablePID],[FundingReference],[FundingReference]<funding_references%200..*-++[Dataset&#124;titles:string%20*;version:string%20%3F;submission_date:string%20%3F;access_date:string%20%3F],[ResolvablePID]<resolvable_persistent_identifiers%200..*-++[Dataset],[Contributor]<contributors%200..*-++[Dataset],[Contributor])](https://yuml.me/diagram/nofunky;dir:TB/class/[ResolvablePID],[FundingReference],[FundingReference]<funding_references%200..*-++[Dataset&#124;titles:string%20*;version:string%20%3F;submission_date:string%20%3F;access_date:string%20%3F],[ResolvablePID]<resolvable_persistent_identifiers%200..*-++[Dataset],[Contributor]<contributors%200..*-++[Dataset],[Contributor])
 
 ## Attributes
 
 
 ### Own
 
- * [➞title](dataset__title.md)  <sub>1..1</sub>
-     * Description: formal title of the data set
+ * [➞titles](dataset__titles.md)  <sub>0..\*</sub>
+     * Description: formal title(s) of the data set
      * Range: [String](types/String.md)
  * [➞version](dataset__version.md)  <sub>0..1</sub>
      * Description: dataset version (if available)
+     * Range: [String](types/String.md)
+ * [➞submission_date](dataset__submission_date.md)  <sub>0..1</sub>
+     * Description: date of submission to repository (if available)
      * Range: [String](types/String.md)
  * [➞access_date](dataset__access_date.md)  <sub>0..1</sub>
      * Description: for unversioned datasets, the date of access of the dataset

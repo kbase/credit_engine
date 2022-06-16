@@ -5,13 +5,14 @@ type Contributor
     lastName: String
     fullName: String
     affiliation: String
-    contributorRole: String
+    contributorRoles: [String]
   }
 
 type Dataset
   {
-    title: String!
+    titles: [String]
     version: String
+    submissionDate: String
     accessDate: String
     contributors: [Contributor]
     resolvablePersistentIdentifiers: [ResolvablePID]
