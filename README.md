@@ -24,7 +24,7 @@ poetry shell
 
 ### Metadata Schema
 
-The metadata schema is maintained in [linkml format](https://linkml.io), with other formats (including the python class) generated from the [linkml schema file](schema/metadata.yaml).
+The metadata schema is maintained in [linkml format](https://linkml.io), with other formats (including the python class) generated from the [linkml schema file](schema/linkml/metadata.yaml).
 
 ![Schema diagram](/schema/metadata_schema.png "Metadata schema diagram")
 
@@ -34,7 +34,7 @@ Useful commands:
 
 generate derived files in all formats:
 ```sh
-gen-project -d schema/ schema/metadata.yaml
+gen-project -d schema/ schema/linkml/metadata.yaml
 ```
 
 validate data (in file `data.yaml`) against the schema:
@@ -44,7 +44,7 @@ linkml-validate -s schema/metadata.yaml data.yaml
 
 generate Python models:
 ```sh
-gen-python schema/metadata.yaml > src/metadata.yaml
+gen-python schema/metadata.yaml > src/metadata.py
 ```
 
 generate a schema diagram (can be visualised at yuml.me):

@@ -5,12 +5,13 @@ message Contributor
   string lastName = 0
   string fullName = 0
   string affiliation = 0
-  string contributorRole = 0
+ repeated  string contributorRoles = 0
  }
 message Dataset
  {
-  string title = 0
+ repeated  string titles = 0
   string version = 0
+  string submissionDate = 0
   string accessDate = 0
  repeated  contributor contributors = 0
  repeated  resolvablePID resolvablePersistentIdentifiers = 0

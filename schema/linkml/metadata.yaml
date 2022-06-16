@@ -13,12 +13,16 @@ default_range: string
 classes:
   Dataset:
     attributes:
-      title:
-        description: formal title of the data set
-        required: true
+      titles:
+        description: formal title(s) of the data set
+        multivalued: true
+        inlined_as_list: true
 
       version:
         description: dataset version (if available)
+
+      submission_date:
+        description: date of submission to repository (if available)
 
       access_date:
         description: for unversioned datasets, the date of access of the dataset
@@ -34,7 +38,7 @@ classes:
         description: unique IDs used to access the dataset or any ancestral datasets
         multivalued: true
         inlined_as_list: true
-        range: Resolvable_PID
+        range: ResolvablePID
 
       funding_references:
         description: funding sources for the dataset
@@ -56,8 +60,11 @@ classes:
         slot_uri: schema:name
       affiliation:
         description: organisation that the contributor is associated with
-      contributor_role:
+      contributor_roles:
         description: should be a term from either CRedIT or DataCite
+        multivalued: true
+        inlined_as_list: true
+        todos: add list of valid terms!
 
   FundingReference:
     attributes:
@@ -74,7 +81,7 @@ classes:
         description: URI for the award
 
 
-  Resolvable_PID:
+  ResolvablePID:
     attributes:
       id:
         identifier: true

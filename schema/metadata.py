@@ -1,5 +1,5 @@
 # Auto generated from metadata.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-06-10T10:36:52
+# Generation date: 2022-06-16T14:19:26
 # Schema: metadata
 #
 # id: https://kbase/credit_engine/schema/metadata
@@ -59,21 +59,24 @@ class Dataset(YAMLRoot):
     class_name: ClassVar[str] = "Dataset"
     class_model_uri: ClassVar[URIRef] = URIRef("https://kbase/credit_engine/schema/metadata/Dataset")
 
-    title: str = None
+    titles: Optional[Union[str, List[str]]] = empty_list()
     version: Optional[str] = None
+    submission_date: Optional[str] = None
     access_date: Optional[str] = None
     contributors: Optional[Union[Dict[Union[str, ContributorOrcid], Union[dict, "Contributor"]], List[Union[dict, "Contributor"]]]] = empty_dict()
     resolvable_persistent_identifiers: Optional[Union[Dict[Union[str, ResolvablePIDId], Union[dict, "ResolvablePID"]], List[Union[dict, "ResolvablePID"]]]] = empty_dict()
     funding_references: Optional[Union[Union[dict, "FundingReference"], List[Union[dict, "FundingReference"]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.title):
-            self.MissingRequiredField("title")
-        if not isinstance(self.title, str):
-            self.title = str(self.title)
+        if not isinstance(self.titles, list):
+            self.titles = [self.titles] if self.titles is not None else []
+        self.titles = [v if isinstance(v, str) else str(v) for v in self.titles]
 
         if self.version is not None and not isinstance(self.version, str):
             self.version = str(self.version)
+
+        if self.submission_date is not None and not isinstance(self.submission_date, str):
+            self.submission_date = str(self.submission_date)
 
         if self.access_date is not None and not isinstance(self.access_date, str):
             self.access_date = str(self.access_date)
@@ -103,7 +106,7 @@ class Contributor(YAMLRoot):
     last_name: Optional[str] = None
     full_name: Optional[str] = None
     affiliation: Optional[str] = None
-    contributor_role: Optional[str] = None
+    contributor_roles: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.orcid):
@@ -123,8 +126,9 @@ class Contributor(YAMLRoot):
         if self.affiliation is not None and not isinstance(self.affiliation, str):
             self.affiliation = str(self.affiliation)
 
-        if self.contributor_role is not None and not isinstance(self.contributor_role, str):
-            self.contributor_role = str(self.contributor_role)
+        if not isinstance(self.contributor_roles, list):
+            self.contributor_roles = [self.contributor_roles] if self.contributor_roles is not None else []
+        self.contributor_roles = [v if isinstance(v, str) else str(v) for v in self.contributor_roles]
 
         super().__post_init__(**kwargs)
 
@@ -171,7 +175,7 @@ class ResolvablePID(YAMLRoot):
 
     class_class_uri: ClassVar[URIRef] = URIRef("https://kbase/credit_engine/schema/metadata/ResolvablePID")
     class_class_curie: ClassVar[str] = None
-    class_name: ClassVar[str] = "Resolvable_PID"
+    class_name: ClassVar[str] = "ResolvablePID"
     class_model_uri: ClassVar[URIRef] = URIRef("https://kbase/credit_engine/schema/metadata/ResolvablePID")
 
     id: Union[str, ResolvablePIDId] = None
@@ -204,11 +208,14 @@ class ResolvablePID(YAMLRoot):
 class slots:
     pass
 
-slots.dataset__title = Slot(uri=DEFAULT_.title, name="dataset__title", curie=DEFAULT_.curie('title'),
-                   model_uri=DEFAULT_.dataset__title, domain=None, range=str)
+slots.dataset__titles = Slot(uri=DEFAULT_.titles, name="dataset__titles", curie=DEFAULT_.curie('titles'),
+                   model_uri=DEFAULT_.dataset__titles, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.dataset__version = Slot(uri=DEFAULT_.version, name="dataset__version", curie=DEFAULT_.curie('version'),
                    model_uri=DEFAULT_.dataset__version, domain=None, range=Optional[str])
+
+slots.dataset__submission_date = Slot(uri=DEFAULT_.submission_date, name="dataset__submission_date", curie=DEFAULT_.curie('submission_date'),
+                   model_uri=DEFAULT_.dataset__submission_date, domain=None, range=Optional[str])
 
 slots.dataset__access_date = Slot(uri=DEFAULT_.access_date, name="dataset__access_date", curie=DEFAULT_.curie('access_date'),
                    model_uri=DEFAULT_.dataset__access_date, domain=None, range=Optional[str])
@@ -237,8 +244,8 @@ slots.contributor__full_name = Slot(uri=SCHEMA.name, name="contributor__full_nam
 slots.contributor__affiliation = Slot(uri=DEFAULT_.affiliation, name="contributor__affiliation", curie=DEFAULT_.curie('affiliation'),
                    model_uri=DEFAULT_.contributor__affiliation, domain=None, range=Optional[str])
 
-slots.contributor__contributor_role = Slot(uri=DEFAULT_.contributor_role, name="contributor__contributor_role", curie=DEFAULT_.curie('contributor_role'),
-                   model_uri=DEFAULT_.contributor__contributor_role, domain=None, range=Optional[str])
+slots.contributor__contributor_roles = Slot(uri=DEFAULT_.contributor_roles, name="contributor__contributor_roles", curie=DEFAULT_.curie('contributor_roles'),
+                   model_uri=DEFAULT_.contributor__contributor_roles, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.fundingReference__funder_name = Slot(uri=DEFAULT_.funder_name, name="fundingReference__funder_name", curie=DEFAULT_.curie('funder_name'),
                    model_uri=DEFAULT_.fundingReference__funder_name, domain=None, range=str)

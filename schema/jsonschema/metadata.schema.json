@@ -8,9 +8,12 @@
                "description": "organisation that the contributor is associated with",
                "type": "string"
             },
-            "contributor_role": {
+            "contributor_roles": {
                "description": "should be a term from either CRedIT or DataCite",
-               "type": "string"
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "first_name": {
                "description": "given name",
@@ -64,18 +67,23 @@
                },
                "type": "array"
             },
-            "title": {
-               "description": "formal title of the data set",
+            "submission_date": {
+               "description": "date of submission to repository (if available)",
                "type": "string"
+            },
+            "titles": {
+               "description": "formal title(s) of the data set",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "version": {
                "description": "dataset version (if available)",
                "type": "string"
             }
          },
-         "required": [
-            "title"
-         ],
+         "required": [],
          "title": "Dataset",
          "type": "object"
       },
