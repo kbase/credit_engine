@@ -1,0 +1,255 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1647032",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "tbd",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 4,
+      "citationsOverTime": [
+        {
+          "total": 4,
+          "year": "2022"
+        }
+      ],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2021-06-25T02:23:22.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            "CONACYT \u2013 Centro de Investigaci\u00f3n y Desarrollo en Agrobiotecnolog\u00eda Alimentaria, Centro de Investigaci\u00f3n y Desarrollo, A.C., Blvd. Sta. Catarina s/n, Col. Santiago Tlapacoya, 42110, San Agust\u00edn Tlaxiaca, Hidalgo, Mexico"
+          ],
+          "familyName": "Aguirre Von Wobeser",
+          "givenName": "Eneas",
+          "name": "Aguirre Von Wobeser, Eneas",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5604-0525",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Red de Estudios Moleculares Avanzados, Instituto de Ecolog\u00eda, A.C. Carretera antigua a Coatepec 351, Col. El Haya, 91070, Xalapa, Veracruz, Mexico"
+          ],
+          "familyName": "Alfonso-S\u00e1nchez",
+          "givenName": "Alexandro",
+          "name": "Alfonso-S\u00e1nchez, Alexandro",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-7010-2032",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "CONACYT \u2013 Escuela Nacional de Estudios Superiores, Laboratorio Nacional de An\u00e1lisis y S\u00edntesis Ecol\u00f3gica, Universidad Nacional Aut\u00f3noma de M\u00e9xico, Antigua Carretera a P\u00e1tzcuaro 8701, Col. Ex-Hacienda de San Jos\u00e9 de La Huerta, 58190, Morelia, Michoac\u00e1n, Mexico"
+          ],
+          "familyName": "M\u00e9ndez-Bravo",
+          "givenName": "Alfonso",
+          "name": "M\u00e9ndez-Bravo, Alfonso",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-0991-5464",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Red de Estudios Moleculares Avanzados, Instituto de Ecolog\u00eda, A.C. Carretera antigua a Coatepec 351, Col. El Haya, 91070, Xalapa, Veracruz, Mexico"
+          ],
+          "familyName": "Reverchon",
+          "givenName": "Fr\u00e9d\u00e9rique",
+          "name": "Reverchon, Fr\u00e9d\u00e9rique",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-5864-7494",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2020",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Bark is a permanent surface for microbial colonization at the interface of trees and the surrounding air. However, little is known about the microbial communities harbored on these tissues. Studies on bark microbial ecology show a dominance of bacteria from a few phyla. Bark microbial communities of avocado (Persea americana) could have implications for tree health, as a first barrier for defense against certain pests and diseases in this economically important species. We used shotgun metagenomic sequencing to analyze the bark microbial communities of avocado trees from two orchards, and compared one of them to rhizospheric soil. Our results show that the microbial communities of avocado bark have a well-defined taxonomic structure, with consistent patterns of abundance of bacteria, fungi and archaea, even in trees from two different locations. Bacteria in avocado bark were dominated by Proteobacteria (particularly Alphaproteobacteria), Actinobacteria and Bacteroidetes, consistently with bark communities in other trees. Fungal members were dominated by Ascomycota and Basidiomycota, while most Archaea in bark were Euryarchaeota. We can conclude that avocado bark is a well-defined environment, providing niches for specific taxonomic groups. The present in-depth characterization of bark microbial communities can form a basis for their future manipulation for agronomical purposes.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/69195.32/1647032",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1647032",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "tbd",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 2,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2020,
+      "published": "2020",
+      "publisher": "CONACYT \u2013 Centro de Investigaci\u00f3n y Desarrollo en Agrobiotecnolog\u00eda Alimentaria, Centro de Investigaci\u00f3n y Desarrollo, A.C., Blvd. Sta. Catarina s/n, Col. Santiago Tlapacoya, 42110, San Agust\u00edn Tlaxiaca, Hidalgo, Mexico",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-06-25T02:23:24.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btu170",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/ncomms11257",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4163",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-12-385",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        }
+      ],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "metagenomics, taxonomic classification"
+        }
+      ],
+      "suffix": "69195.32/1647032",
+      "titles": [
+        {
+          "title": "Avocado_Bark_Diversity"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-05-25T20:51:04.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1647032/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi82OTE5NS4zMi8xNjQ3MDMyPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5BZ3VpcnJlIHZvbiBXb2Jlc2VyLCBFbmVhczwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi01NjA0LTA1MjU8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+Q09OQUNZVCDigJMgQ2VudHJvIGRlIEludmVzdGlnYWNpw7NuIHkgRGVzYXJyb2xsbyBlbiBBZ3JvYmlvdGVjbm9sb2fDrWEgQWxpbWVudGFyaWEsIENlbnRybyBkZSBJbnZlc3RpZ2FjacOzbiB5IERlc2Fycm9sbG8sIEEuQy4sIEJsdmQuIFN0YS4gQ2F0YXJpbmEgcy9uLCBDb2wuIFNhbnRpYWdvIFRsYXBhY295YSwgNDIxMTAsIFNhbiBBZ3VzdMOtbiBUbGF4aWFjYSwgSGlkYWxnbywgTWV4aWNvPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5BbGZvbnNvLVPDoW5jaGV6LCBBbGV4YW5kcm88L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNzAxMC0yMDMyPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlJlZCBkZSBFc3R1ZGlvcyBNb2xlY3VsYXJlcyBBdmFuemFkb3MsIEluc3RpdHV0byBkZSBFY29sb2fDrWEsIEEuQy4gQ2FycmV0ZXJhIGFudGlndWEgYSBDb2F0ZXBlYyAzNTEsIENvbC4gRWwgSGF5YSwgOTEwNzAsIFhhbGFwYSwgVmVyYWNydXosIE1leGljbzwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TcOpbmRlei1CcmF2bywgQWxmb25zbzwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0wOTkxLTU0NjQ8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+Q09OQUNZVCDigJMgRXNjdWVsYSBOYWNpb25hbCBkZSBFc3R1ZGlvcyBTdXBlcmlvcmVzLCBMYWJvcmF0b3JpbyBOYWNpb25hbCBkZSBBbsOhbGlzaXMgeSBTw61udGVzaXMgRWNvbMOzZ2ljYSwgVW5pdmVyc2lkYWQgTmFjaW9uYWwgQXV0w7Nub21hIGRlIE3DqXhpY28sIEFudGlndWEgQ2FycmV0ZXJhIGEgUMOhdHpjdWFybyA4NzAxLCBDb2wuIEV4LUhhY2llbmRhIGRlIFNhbiBKb3PDqSBkZSBMYSBIdWVydGEsIDU4MTkwLCBNb3JlbGlhLCBNaWNob2Fjw6FuLCBNZXhpY288L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlJldmVyY2hvbiwgRnLDqWTDqXJpcXVlPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTU4NjQtNzQ5NDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5SZWQgZGUgRXN0dWRpb3MgTW9sZWN1bGFyZXMgQXZhbnphZG9zLCBJbnN0aXR1dG8gZGUgRWNvbG9nw61hLCBBLkMuIENhcnJldGVyYSBhbnRpZ3VhIGEgQ29hdGVwZWMgMzUxLCBDb2wuIEVsIEhheWEsIDkxMDcwLCBYYWxhcGEsIFZlcmFjcnV6LCBNZXhpY288L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5Bdm9jYWRvX0JhcmtfRGl2ZXJzaXR5PC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkNPTkFDWVQg4oCTIENlbnRybyBkZSBJbnZlc3RpZ2FjacOzbiB5IERlc2Fycm9sbG8gZW4gQWdyb2Jpb3RlY25vbG9nw61hIEFsaW1lbnRhcmlhLCBDZW50cm8gZGUgSW52ZXN0aWdhY2nDs24geSBEZXNhcnJvbGxvLCBBLkMuLCBCbHZkLiBTdGEuIENhdGFyaW5hIHMvbiwgQ29sLiBTYW50aWFnbyBUbGFwYWNveWEsIDQyMTEwLCBTYW4gQWd1c3TDrW4gVGxheGlhY2EsIEhpZGFsZ28sIE1leGljbzwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+NTkgQkFTSUMgQklPTE9HSUNBTCBTQ0lFTkNFUzwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm1ldGFnZW5vbWljcywgdGF4b25vbWljIGNsYXNzaWZpY2F0aW9uPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE2NDcwMzI8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+dGJkPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnR1MTcwPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uY29tbXMxMTI1NzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjQxNjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjEwNS0xMi0zODU8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+QmFyayBpcyBhIHBlcm1hbmVudCBzdXJmYWNlIGZvciBtaWNyb2JpYWwgY29sb25pemF0aW9uIGF0IHRoZSBpbnRlcmZhY2Ugb2YgdHJlZXMgYW5kIHRoZSBzdXJyb3VuZGluZyBhaXIuIEhvd2V2ZXIsIGxpdHRsZSBpcyBrbm93biBhYm91dCB0aGUgbWljcm9iaWFsIGNvbW11bml0aWVzIGhhcmJvcmVkIG9uIHRoZXNlIHRpc3N1ZXMuIFN0dWRpZXMgb24gYmFyayBtaWNyb2JpYWwgZWNvbG9neSBzaG93IGEgZG9taW5hbmNlIG9mIGJhY3RlcmlhIGZyb20gYSBmZXcgcGh5bGEuIEJhcmsgbWljcm9iaWFsIGNvbW11bml0aWVzIG9mIGF2b2NhZG8gKFBlcnNlYSBhbWVyaWNhbmEpIGNvdWxkIGhhdmUgaW1wbGljYXRpb25zIGZvciB0cmVlIGhlYWx0aCwgYXMgYSBmaXJzdCBiYXJyaWVyIGZvciBkZWZlbnNlIGFnYWluc3QgY2VydGFpbiBwZXN0cyBhbmQgZGlzZWFzZXMgaW4gdGhpcyBlY29ub21pY2FsbHkgaW1wb3J0YW50IHNwZWNpZXMuIFdlIHVzZWQgc2hvdGd1biBtZXRhZ2Vub21pYyBzZXF1ZW5jaW5nIHRvIGFuYWx5emUgdGhlIGJhcmsgbWljcm9iaWFsIGNvbW11bml0aWVzIG9mIGF2b2NhZG8gdHJlZXMgZnJvbSB0d28gb3JjaGFyZHMsIGFuZCBjb21wYXJlZCBvbmUgb2YgdGhlbSB0byByaGl6b3NwaGVyaWMgc29pbC4gT3VyIHJlc3VsdHMgc2hvdyB0aGF0IHRoZSBtaWNyb2JpYWwgY29tbXVuaXRpZXMgb2YgYXZvY2FkbyBiYXJrIGhhdmUgYSB3ZWxsLWRlZmluZWQgdGF4b25vbWljIHN0cnVjdHVyZSwgd2l0aCBjb25zaXN0ZW50IHBhdHRlcm5zIG9mIGFidW5kYW5jZSBvZiBiYWN0ZXJpYSwgZnVuZ2kgYW5kIGFyY2hhZWEsIGV2ZW4gaW4gdHJlZXMgZnJvbSB0d28gZGlmZmVyZW50IGxvY2F0aW9ucy4gQmFjdGVyaWEgaW4gYXZvY2FkbyBiYXJrIHdlcmUgZG9taW5hdGVkIGJ5IFByb3Rlb2JhY3RlcmlhIChwYXJ0aWN1bGFybHkgQWxwaGFwcm90ZW9iYWN0ZXJpYSksIEFjdGlub2JhY3RlcmlhIGFuZCBCYWN0ZXJvaWRldGVzLCBjb25zaXN0ZW50bHkgd2l0aCBiYXJrIGNvbW11bml0aWVzIGluIG90aGVyIHRyZWVzLiBGdW5nYWwgbWVtYmVycyB3ZXJlIGRvbWluYXRlZCBieSBBc2NvbXljb3RhIGFuZCBCYXNpZGlvbXljb3RhLCB3aGlsZSBtb3N0IEFyY2hhZWEgaW4gYmFyayB3ZXJlIEV1cnlhcmNoYWVvdGEuIFdlIGNhbiBjb25jbHVkZSB0aGF0IGF2b2NhZG8gYmFyayBpcyBhIHdlbGwtZGVmaW5lZCBlbnZpcm9ubWVudCwgcHJvdmlkaW5nIG5pY2hlcyBmb3Igc3BlY2lmaWMgdGF4b25vbWljIGdyb3Vwcy4gVGhlIHByZXNlbnQgaW4tZGVwdGggY2hhcmFjdGVyaXphdGlvbiBvZiBiYXJrIG1pY3JvYmlhbCBjb21tdW5pdGllcyBjYW4gZm9ybSBhIGJhc2lzIGZvciB0aGVpciBmdXR1cmUgbWFuaXB1bGF0aW9uIGZvciBhZ3Jvbm9taWNhbCBwdXJwb3Nlcy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+    },
+    "id": "10.25982/69195.32/1647032",
+    "relationships": {
+      "citations": {
+        "data": [
+          {
+            "id": "10.1093/bioinformatics/btu170",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/ncomms11257",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.4163",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2105-12-385",
+            "type": "dois"
+          }
+        ]
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/69195.32/1647032",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

@@ -1,0 +1,392 @@
+{
+    "timings": {
+        "total": "0.178",
+        "file_fetch": "0.013",
+        "organisms": "0.154",
+        "facets": "0.000",
+        "filtered_facets": "0.000",
+        "count_file_total": "0.008",
+        "a_field": [
+            {
+                "this": "that",
+                "the": "other"
+            },
+            {
+                "this": "is",
+                "the": "end"
+            }
+        ]
+    },
+    "hits_total": 2,
+    "file_total": 2,
+    "unique_file_total": 2,
+    "total": 1,
+    "prioritized_file_total": 2,
+    "prioritized_total": 1,
+    "score_threshold": 8.0,
+    "start": 1,
+    "end": 1,
+    "next_page": false,
+    "cursor_id": "f3d060bef8681f5722f22bea77172be15bc7542e7089509647755cfb29acc599:1",
+    "organisms": [
+        {
+            "agg": "IMG_SP",
+            "agg_id": 1006856,
+            "kingdom": "img",
+            "label": "Genome",
+            "top_hit": {
+                "_id": "51d528ce067c014cd6ef3a53",
+                "_highlight": null,
+                "metadata": {
+                    "proposal": {
+                        "pi": {
+                            "country": "United States",
+                            "institution": "Lawrence Berkeley National Laboratory",
+                            "email_address": "amukhopadhyay@lbl.gov",
+                            "last_name": "Mukhopadhyay",
+                            "middle_name": "",
+                            "first_name": "Aindrila",
+                            "name": "Aindrila Mukhopadhyay"
+                        },
+                        "date_approved": "2012-04-23"
+                    },
+                    "gold_data": {
+                        "organism_name": "Escherichia coli BW25113 JBEI-FM002",
+                        "display_name": "Escherichia coli BW25113 JBEI-FM002"
+                    },
+                    "ncbi_taxon": {
+                        "ncbi_taxon_species": "Escherichia coli"
+                    },
+                    "sequencing_project": {
+                        "sequencing_project_name": "E. coli K12 BW25113 dmsD- (pBbA8c-RFP) spontaneous mutant JBEI-FM002",
+                        "scientific_program_name": "Microbial"
+                    },
+                    "sow_segment": {
+                        "ncbi_organism_name": "Escherichia coli BW25113"
+                    },
+                    "sequencing_project_id": 1006856,
+                    "final_deliv_project": {
+                        "final_deliv_project_name": "E. coli K12 BW25113 dmsD- (pBbA8c-RFP) spontaneous mutant JBEI-FM002"
+                    }
+                },
+                "added_date": "2013-08-12T00:21:53.844000",
+                "file_name": "6401.1.43455.ATCACG.fastq.gz",
+                "user": "sdm"
+            },
+            "pi": {
+                "country": "United States",
+                "institution": "Lawrence Berkeley National Laboratory",
+                "email_address": "amukhopadhyay@lbl.gov",
+                "last_name": "Mukhopadhyay",
+                "middle_name": "",
+                "first_name": "Aindrila",
+                "name": "Aindrila Mukhopadhyay"
+            },
+            "proposal_acceptance_date": "2012-04-23",
+            "work_completion_date": null,
+            "status": null,
+            "id": "IMG_SP-1006856",
+            "grouped_by": "metadata.sequencing_project_id",
+            "score": {
+                "count": 2,
+                "min": 261.84588623046875,
+                "max": 262.1803894042969,
+                "avg": 262.0131378173828,
+                "sum": 524.0262756347656
+            },
+            "grouped_count": 2,
+            "name": "Escherichia coli BW25113 JBEI-FM002",
+            "title": "Escherichia coli BW25113",
+            "file_total": 2,
+            "files": [
+                {
+                    "_id": "51edbeee067c014b2c6614a6",
+                    "_highlight": null,
+                    "file_status_id": 13,
+                    "file_path": "/global/dna/dm_archive/rqc/pipelines/filter/archive/02/77/90/21",
+                    "metadata": {
+                        "proposal": {
+                            "award_doi": "10.46936/10.25585/60007526",
+                            "pi": {
+                                "country": "United States",
+                                "institution": "Lawrence Berkeley National Laboratory",
+                                "email_address": "amukhopadhyay@lbl.gov",
+                                "last_name": "Mukhopadhyay",
+                                "middle_name": "",
+                                "first_name": "Aindrila"
+                            },
+                            "date_approved": "2012-04-23",
+                            "doi": "10.25585/1487552"
+                        },
+                        "data_utilization_status": "Unrestricted",
+                        "gold_data": {
+                            "gold_project_url": "https://gold.jgi.doe.gov/projects?id=Gp0024780",
+                            "gold_stamp_id": "Gp0024780",
+                            "organism_name": "Escherichia coli BW25113 JBEI-FM002",
+                            "display_name": "Escherichia coli BW25113 JBEI-FM002"
+                        },
+                        "ncbi_taxon": {
+                            "ncbi_taxon_class": "Gammaproteobacteria",
+                            "ncbi_taxon_family": "Enterobacteriaceae",
+                            "ncbi_taxon_order": "Enterobacterales",
+                            "ncbi_taxon_species": "Escherichia coli",
+                            "ncbi_taxon_genus": "Escherichia"
+                        },
+                        "sequencing_project": {
+                            "scientific_program_name": "Microbial"
+                        },
+                        "sow_segment": {
+                            "sequencing_project_name": "E. coli K12 BW25113 dmsD- (pBbA8c-RFP) spontaneous mutant JBEI-FM002"
+                        },
+                        "ncbi_taxon_id": 679895,
+                        "sequencing_project_id": 1006856,
+                        "portal": {
+                            "display_location": [
+                                "Filtered Raw Data"
+                            ]
+                        }
+                    },
+                    "file_status": "RESTORED",
+                    "added_date": "2013-07-22T16:23:26.330000",
+                    "file_name": "6401.1.43455.ATCACG.adnq.fastq.gz",
+                    "file_owner": "qc_user",
+                    "modified_date": "2022-08-11T15:02:54.677000",
+                    "dt_to_purge": "2022-08-25T00:00:00",
+                    "file_size": 2016748313,
+                    "file_date": "2012-12-18T19:08:11",
+                    "md5sum": "1450794685a6e3d83daddbe436e2f2d9",
+                    "file_type": [
+                        "fastq",
+                        "fastq.gz"
+                    ],
+                    "file_id": 2825180,
+                    "file_group": "genome",
+                    "user": "rqc",
+                    "file_permissions": "0100644",
+                    "data_group": "Sequencing",
+                    "portal_detail_id": null
+                },
+                {
+                    "_id": "51d528ce067c014cd6ef3a53",
+                    "_highlight": null,
+                    "file_status_id": 13,
+                    "file_path": "/global/dna/dm_archive/sdm/illumina/00/64/01",
+                    "metadata": {
+                        "proposal": {
+                            "award_doi": "10.46936/10.25585/60007526",
+                            "pi": {
+                                "country": "United States",
+                                "institution": "Lawrence Berkeley National Laboratory",
+                                "email_address": "amukhopadhyay@lbl.gov",
+                                "last_name": "Mukhopadhyay",
+                                "middle_name": "",
+                                "first_name": "Aindrila"
+                            },
+                            "date_approved": "2012-04-23",
+                            "doi": "10.25585/1487552"
+                        },
+                        "data_utilization_status": "Unrestricted",
+                        "gold_data": {
+                            "gold_project_url": "https://gold.jgi.doe.gov/projects?id=Gp0024780",
+                            "gold_stamp_id": "Gp0024780",
+                            "organism_name": "Escherichia coli BW25113 JBEI-FM002",
+                            "display_name": "Escherichia coli BW25113 JBEI-FM002"
+                        },
+                        "ncbi_taxon": {
+                            "ncbi_taxon_class": "Gammaproteobacteria",
+                            "ncbi_taxon_family": "Enterobacteriaceae",
+                            "ncbi_taxon_order": "Enterobacterales",
+                            "ncbi_taxon_species": "Escherichia coli",
+                            "ncbi_taxon_genus": "Escherichia"
+                        },
+                        "sequencing_project": {
+                            "scientific_program_name": "Microbial"
+                        },
+                        "sow_segment": {
+                            "sequencing_project_name": "E. coli K12 BW25113 dmsD- (pBbA8c-RFP) spontaneous mutant JBEI-FM002"
+                        },
+                        "ncbi_taxon_id": 679895,
+                        "sequencing_project_id": 1006856,
+                        "portal": {
+                            "display_location": [
+                                "Raw Data"
+                            ]
+                        }
+                    },
+                    "file_status": "RESTORED",
+                    "added_date": "2013-08-12T00:21:53.844000",
+                    "file_name": "6401.1.43455.ATCACG.fastq.gz",
+                    "file_owner": "sdm",
+                    "modified_date": "2022-08-11T15:02:32.787000",
+                    "dt_to_purge": "2022-08-25T00:00:00",
+                    "file_size": 2046479347,
+                    "file_date": "2012-11-18T23:12:37",
+                    "file_type": [
+                        "fastq.gz",
+                        "fastq"
+                    ],
+                    "md5sum": "c3ec5fed42f5e59581ea729519e73048",
+                    "file_id": 133786,
+                    "file_group": "genome",
+                    "user": "sdm",
+                    "file_permissions": "0100644",
+                    "data_group": "Sequencing",
+                    "portal_detail_id": null
+                }
+            ],
+            "fileSize": 4063227660,
+            "highlight": {},
+            "award_doi": "10.46936/10.25585/60007526",
+            "doi": "10.25585/1487552",
+            "data_utilization_status": "Unrestricted",
+            "build_time": 0.012784004211425781
+        }
+    ],
+    "facets": {
+        "meta_type": {},
+        "meta_subtype": {},
+        "meta_content": {},
+        "meta_source": {},
+        "meta_collection": {},
+        "meta_file_format": {},
+        "file_status": {
+            "RESTORED": 2
+        },
+        "file_type": {
+            "fastq": 2,
+            "fastq.gz": 2
+        },
+        "data_type": {
+            "Filtered Raw Data": 1,
+            "Raw Data": 1
+        },
+        "phytozome_version": {},
+        "data_group": {
+            "Analysis": 0,
+            "Sequencing": 2,
+            "Other": 0
+        },
+        "data_utilization_status": {
+            "Restricted": 0,
+            "Unrestricted": 2
+        },
+        "ecosystem": {},
+        "ecosystem_category": {},
+        "ecosystem_subtype": {},
+        "ecosystem_type": {},
+        "specific_ecosystem": {},
+        "ncbi_taxon_order": {
+            "Enterobacterales": 1
+        },
+        "ncbi_taxon_class": {
+            "Gammaproteobacteria": 1
+        },
+        "ncbi_taxon_family": {
+            "Enterobacteriaceae": 1
+        },
+        "ncbi_taxon_genus": {
+            "Escherichia": 1
+        },
+        "phytozome_policy": {},
+        "phytozome_project": {}
+    },
+    "filtered_facets": {
+        "meta_type": {},
+        "meta_subtype": {},
+        "meta_content": {},
+        "meta_source": {},
+        "meta_collection": {},
+        "meta_file_format": {},
+        "file_status": {
+            "RESTORED": 2
+        },
+        "file_type": {
+            "fastq": 2,
+            "fastq.gz": 2
+        },
+        "data_type": {
+            "Filtered Raw Data": 1,
+            "Raw Data": 1
+        },
+        "phytozome_version": {},
+        "data_group": {
+            "Analysis": 0,
+            "Sequencing": 2,
+            "Other": 0
+        },
+        "data_utilization_status": {
+            "Restricted": 0,
+            "Unrestricted": 2
+        },
+        "ecosystem": {},
+        "ecosystem_category": {},
+        "ecosystem_subtype": {},
+        "ecosystem_type": {},
+        "specific_ecosystem": {},
+        "ncbi_taxon_order": {
+            "Enterobacterales": 1
+        },
+        "ncbi_taxon_class": {
+            "Gammaproteobacteria": 1
+        },
+        "ncbi_taxon_family": {
+            "Enterobacteriaceae": 1
+        },
+        "ncbi_taxon_genus": {
+            "Escherichia": 1
+        },
+        "phytozome_policy": {},
+        "phytozome_project": {}
+    },
+    "fields": [
+        "added_date",
+        "dt_to_purge",
+        "file_*",
+        "md5sum",
+        "metadata.data_utilization_status",
+        "metadata.analysis_project.status*",
+        "metadata.analysis_project_id",
+        "metadata.collection",
+        "metadata.content",
+        "metadata.file_format",
+        "metadata.gold_data.display_name",
+        "metadata.gold_data.ecosystem",
+        "metadata.gold_data.ecosystem_category",
+        "metadata.gold_data.ecosystem_subtype",
+        "metadata.gold_data.ecosystem_type",
+        "metadata.gold_data.gold_project_url",
+        "metadata.gold_data.gold_stamp_id",
+        "metadata.gold_data.organism_name",
+        "metadata.gold_data.specific_ecosystem",
+        "metadata.img",
+        "metadata.mycocosm_portal*",
+        "metadata.ncbi_taxon.ncbi_taxon_class",
+        "metadata.ncbi_taxon.ncbi_taxon_family",
+        "metadata.ncbi_taxon.ncbi_taxon_genus",
+        "metadata.ncbi_taxon.ncbi_taxon_order",
+        "metadata.ncbi_taxon.ncbi_taxon_species",
+        "metadata.ncbi_taxon_id",
+        "metadata.phycocosm_portal*",
+        "metadata.phytozome",
+        "metadata.pi_name",
+        "metadata.pmo_project.name",
+        "metadata.pmo_project.pi_name",
+        "metadata.pmo_project.scientific_program",
+        "metadata.pmo_project_id",
+        "metadata.portal",
+        "metadata.proposal.award_doi",
+        "metadata.proposal.date_approved",
+        "metadata.proposal.doi",
+        "metadata.proposal.pi",
+        "metadata.sequencing_project.scientific_program_name",
+        "metadata.sequencing_project_id",
+        "metadata.source",
+        "metadata.sow_segment.sequencing_project_name",
+        "metadata.subtype",
+        "metadata.type",
+        "modified_date",
+        "user"
+    ],
+    "timeout": 180,
+    "filters_applied": false
+}

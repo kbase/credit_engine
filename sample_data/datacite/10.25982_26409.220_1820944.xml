@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/26409.220/1820944</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Wilhelm, Roland</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-1170-1753</nameIdentifier>
+      <affiliation>Cornell Univ., Ithaca, NY (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Conditional Filamentation of Paraburkholderia elongata 5N - Data Container</title>
+  </titles>
+  <publisher>Cornell Univ., Ithaca, NY (United States)</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>Paraburkholderia</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1820944</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">None</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu153</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Overview of Dataset&lt;br&gt;This narrative contains assemblies for all Paraburkholderia discussed in Karasz et al. 2022, where their phosphate-solubilizing activity was measured. Assemblies were downloaded from NCBI and annotated with Prokka. These genomes were created in many Narratives and collected here to be more accessible  Note: The following naming of assemblies does not correspond with current taxonomic names for the following:  Paraburkholderia 5N = Paraburkholderia elongata 5NT  &lt;br&gt;Paraburkholderia 1N = Paraburkholderia solitsuga 1NT  &lt;br&gt;Paraburkholderia vancouverensis = Paraburkholderia madseniana RL16</description>
+  </descriptions>
+</resource>

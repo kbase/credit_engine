@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/1668075</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Dow, Ellen</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-2079-0260</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>KBase Educators Overview</title>
+  </titles>
+  <publisher>Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)</publisher>
+  <publicationYear>2020</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject/>
+    <subject>Data science, Education, Training, Genomics, Metagenomics, Phylogenetics, Transcriptomics, Metabolic Modeling</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1668075</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">AC02-05CH11231</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.25982/90997.49/1783189</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsCitedBy">10.25982/90997.49/1783189</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">KBase worked with a community of instructors to create a connected workflow that integrates genomics, metagenomics, phylogenetics, and pangenomic concepts in a “choose your own adventure” framework. Each concept is stand alone, while complementing one another as they flow from one topic to another across concepts. The pace of each workflow can be adjusted with the flexibility of modules that are shareable and allow students to copy and interact with data and analyses.</description>
+  </descriptions>
+</resource>

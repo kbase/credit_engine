@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/62384.253/1831503</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Chivian, Dylan</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8189-8729</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Jungbluth, Sean</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9265-8341</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Dehal, Paramvir</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-5810-2497</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wood-Charlson, Elisha</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9557-7715</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Canon, Richard</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-8440-738X</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Allen, Benjamin</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-6325-859X</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Clark, Mikayla</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-2862-3416</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Gu, Tianhao</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-3053-1967</nameIdentifier>
+      <affiliation>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Land, Miriam</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-7102-0031</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Price, Gavin</creatorName>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Riehl, William</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-3405-2744</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Sneddon, Michael</creatorName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Sutormin, Roman</creatorName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Zhang, Qizhi</creatorName>
+      <affiliation>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Cottingham, Robert</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-2775-3905</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Henry, Christopher</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8058-9123</nameIdentifier>
+      <affiliation>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Arkin, Adam</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-4999-2931</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Moab Desert Crust - Sample 4E</title>
+  </titles>
+  <publisher>U.S. Department of Energy Systems Biology Knowledgebase</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject/>
+    <subject/>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1831503</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">DE-AC02-05CH11231, DE-AC02-06CH11357, DE-AC05-00OR22725, and DE-AC02-98CH10886</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/s41564-018-0171-1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41564-018-0171-1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/bts174</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btz848</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pcbi.1002195</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu170</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btz848</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4229</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.186072.114</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nmeth.3103</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2164-9-75</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.229202</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gks406</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1002/cpbi.102.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.3176</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv033</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/25.17.3389</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41587-020-0501-8.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41467-018-07641-9</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-11-538</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-12-120</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkp698.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/2049-2618-2-26</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.213959.116</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.7717/peerj.1165</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1002/cpbi.102</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.4229</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.3103</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41564-021-00918-8</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7717/peerj.1165</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/srep08365</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkt1226</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv638</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/2049-2618-2-26</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btm009</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-10-421</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-9-75</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2164-12-120</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pone.0009490</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1007/s00792-012-0482-8</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Uncultivated Bacteria and Archaea comprise the vast majority of species on Earth, but obtaining their genomes directly from the environment, using shotgun sequencing, has only recently become possible. To realize the hope of capturing Earth’s microbial genetic complement, technologies that accelerate recovery of high-quality genomes are necessary. We present a series of analysis steps and data products for the extraction of high quality metagenome-assembled genomes (MAGs) from microbiomes using the U.S. Department of Energy Systems Biology Knowledgebase (KBase) platform (http://www.kbase.us/). In KBase, the process is end-to-end, allowing a user to go from the initial sequencing reads all the way through to MAG genomes, which can then be analyzed with other KBase capabilities such as phylogenetic placement, functional assignment, metabolic modeling, pangenome functional profiling, RNA-Seq, and others. While portions of such capabilities are individually available from other resources, the combination of the intuitive usability, data interoperability, and integration of tools in a freely available compute resource makes KBase a uniquely powerful platform for obtaining MAGs from microbiomes. While this workflow offers tools for each of the key steps in the genome extraction process, it also provides a scaffold that can be easily extended, with additional MAG recovery and analysis tools, via the KBase SDK (Software Development Kit).</description>
+  </descriptions>
+</resource>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/62657.1515/1779219</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Whitham, Jason</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2623-6292</nameIdentifier>
+      <affiliation>North Carolina State Univ., Raleigh, NC (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>JGI QC impact on assembly, binning, phylogenomics, and functional analysis</title>
+  </titles>
+  <publisher>North Carolina State Univ., Raleigh, NC (United States)</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>metagenomics, decontamination, assembly, binning, phylogenomics, functional analysis</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1779219</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">N/A</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.5281/zenodo.1480624.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btv697.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btt086</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.25585/1488010</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1101/gr.186072.114.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.7717/peerj.7359.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/bts174.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.186072.114</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.3893</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkaa939</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.25585/1488010.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41564-020-00811-w</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/s12859-020-03667-3</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-12-120</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pone.0009490</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.25982/77705.1341/1779218.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv697</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.7717/peerj.1165</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/29.1.41</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/2049-2618-2-26</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1128/AEM.02772-15</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkaa1018</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-9-75</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btt086.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/nar/gkaa939.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/bts174</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkx1313</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.4163.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/nar/gkaa983.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btw379</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pcbi.1002195</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1002/cpbi.102</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkaa913</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-10-421</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.25982/68579.143/1766297</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv033</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.3233/978-1-61499-649-1-87</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.pmrj.2010.07.482</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/s12859-020-03667-3.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/molbev/msw046</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1017/CBO9780511790942</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1480624</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.3893.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.25982/62657.1515/1779219.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7717/peerj.1165</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/srep08365</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv638</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.25982/68579.143/1766297.</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkaa983</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pone.0009490</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">BackgroundInvestigators using metagenomic sequencing to study their microbiomes are often provided data that has been trimmed and decontaminated or do it themselves without knowing the effect these procedures can have on their downstream analyses. Here we evaluated the impact that JGI trimming and decontamination procedures had on assembly and binning metrics, placement of metagenome assembled genomes into species trees, and functional profiles of metagenome-assembled genomes (MAGs) extracted from twenty three complex rhizosphere metagenomes. We also investigated how more aggressive trimming impacts these binning metrics.ResultsWe found that JGI trimmed and decontamination of input reads had some significant impacts in assembly and binning metrics compared to raw reads, and that differences in placement of MAGs in species trees increased with decreasing completeness and contamination thresholds. More aggressive trimming beyond those used by JGI were found to reduce MAG counts.ConclusionsMild trimming and decontamination of metagenomics reads prior to assembly can change an investigator’s answer to the questions, “Who is there and what are they doing? However, mild trimming and decontamination of metagenomic reads with high quality scores is recommended for those who elect to do so.</description>
+  </descriptions>
+</resource>

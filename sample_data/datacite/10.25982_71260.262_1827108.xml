@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/71260.262/1827108</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Rubinstein, Rebecca</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8142-6713</nameIdentifier>
+      <affiliation>Subsurface Insights, LLC</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Borton, Mikayla</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8037-4253</nameIdentifier>
+      <affiliation>Colorado State Univ., Fort Collins, CO (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Zhou, Haiyan</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-1569-532X</nameIdentifier>
+      <affiliation>Subsurface Insights, LLC</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Shaffer, Michael</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-1783-3709</nameIdentifier>
+      <affiliation>Colorado State Univ., Fort Collins, CO (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Hoyt, David</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-2857-719X</nameIdentifier>
+      <affiliation>Pacific Northwest National Lab. (PNNL), Richland, WA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Stegen, James</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9135-7424</nameIdentifier>
+      <affiliation>Pacific Northwest National Lab. (PNNL), Richland, WA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Henry, Christopher</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8058-9123</nameIdentifier>
+      <affiliation>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wrighton, Kelly</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-0434-4217</nameIdentifier>
+      <affiliation>Colorado State Univ., Fort Collins, CO (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Versteeg, Roelof</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-6767-1082</nameIdentifier>
+      <affiliation>Subsurface Insights, LLC</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Omics-to-Reactive-Transport (ORT): A workflow linking genome-scale metabolic models with reactive transport codes</title>
+  </titles>
+  <publisher>U.S. Department of Energy Systems Biology Knowledgebase</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject/>
+    <subject/>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1827108</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">DE-SC0019619; DE-SC0018020;</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-15-225</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pcbi.1003126</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-12-120</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/gb-2009-10-6-r69</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkt1226</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-9-75</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Motivation: Nutrient and contaminant behavior in the subsurface are governed by multiple coupled hydrobiogeochemical processes which occur across different temporal and spatial scales. Accurate description of macroscopic system behavior requires accounting for the effects of microscopic and especially microbial processes. Microbial processes mediate precipitation and dissolution and change aqueous geochemistry, all of which impacts macroscopic system behavior. As `omics data describing microbial processes is increasingly affordable and available, novel methods for using this data quickly and effectively for improved ecosystem models are needed. Results: We propose a workflow (`Omics to Reactive Transport – ORT) for utilizing metagenomic and environmental data to describe the effect of microbiological processes in macroscopic reactive transport models. This workflow utilizes and couples two open-source software packages: KBase (a software platform for systems biology) and PFLOTRAN (a reactive transport modeling code). We describe the architecture of ORT and demonstrate an implementation using metagenomic and geochemical data from a river system. Our demonstration uses microbiological drivers of nitrification and denitrification to predict nitrogen cycling patterns which agree with those provided with generalized stoichiometries. While our example uses data from a single measurement, our workflow can be applied to spatiotemporal metagenomic datasets to allow for iterative coupling between KBASE and PFLOTRAN. Live, interactive models, which incorporate the results from this narrative into a PFLOTRAN simulation, are available (without login) at https://pflotranmodeling.paf.subsurfaceinsights.com/pflotran-simple-model/.</description>
+  </descriptions>
+</resource>

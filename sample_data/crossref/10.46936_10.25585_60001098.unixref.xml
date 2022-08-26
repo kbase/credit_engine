@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_records>
+  <doi_record owner="10.46936" timestamp="2021-10-09 02:39:32">
+    <crossref>
+      <grant>
+        <project>
+          <project-title>Mapping the global methanome</project-title>
+          <investigators>
+            <person role="lead_investigator">
+              <givenName>Sean</givenName>
+              <familyName>Crowe</familyName>
+            </person>
+            <person role="co-lead_investigator">
+              <givenName>Steven</givenName>
+              <familyName>Hallam</familyName>
+            </person>
+            <person role="co-lead_investigator">
+              <givenName>Rachel</givenName>
+              <familyName>Simister</familyName>
+            </person>
+          </investigators>
+          <funding funding-type="award">
+            <funder-name>US Department of Energy</funder-name>
+            <funder-id>https://doi.org/10.13039/100000015</funder-id>
+          </funding>
+        </project>
+        <award-number>503042</award-number>
+        <award-start-date>2016-09-09</award-start-date>
+        <doi_data>
+          <doi>10.46936/10.25585/60001098</doi>
+          <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60001098</resource>
+        </doi_data>
+      </grant>
+    </crossref>
+  </doi_record>
+</doi_records>

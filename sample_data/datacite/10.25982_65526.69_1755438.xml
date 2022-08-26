@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/65526.69/1755438</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Song, Hyun-Seob</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-2154-6358</nameIdentifier>
+      <affiliation>University of Nebraska-Lincoln</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Lee, Joon-Yong</creatorName>
+      <affiliation>Pacific Northwest National Lab. (PNNL), Richland, WA (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Substrate-explicit Modeling Tutorial</title>
+  </titles>
+  <publisher>Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)University of Nebraska-Lincoln, Lincoln, NE (United States)</publisher>
+  <publicationYear>2020</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>96 KNOWLEDGE MANAGEMENT AND PRESERVATION</subject>
+    <subject>54 ENVIRONMENTAL SCIENCES</subject>
+    <subject>FTICR-MS, batch reactors, continuous stirred tank reactors (CSTR)</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1755438</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">none</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">This tutorial Narrative demonstrates how to apply thermodynamic theory, also known as lambda theory, to convert molecular formulas of compounds (derived from FTICR-MS peaks using Formulatiry and R codes) into stoichiometric and kinetic forms of biogeochemical reactions and how to use the resulting kinetic equations to simulate dynamic conversion of compounds in batch and continuous stirred tank reactors. It will address under what conditions respiration rates are driven by thermodynamics, and how respiration rates respond to the variations in parameters and input variables and how to interpret the results.</description>
+  </descriptions>
+</resource>

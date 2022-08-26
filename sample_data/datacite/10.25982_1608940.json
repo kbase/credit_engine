@@ -1,0 +1,228 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1608940",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "DE-AC02-05CH11231",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2020-04-11T03:12:23.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+          ],
+          "familyName": "Allen",
+          "givenName": "Benjamin",
+          "name": "Allen, Benjamin",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-6325-859X",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+          ],
+          "familyName": "Land",
+          "givenName": "Miriam",
+          "name": "Land, Miriam",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-7102-0031",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+          ],
+          "familyName": "Wood-Charlson",
+          "givenName": "Elisha",
+          "name": "Wood-Charlson, Elisha",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-9557-7715",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2020",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Genomics is a dynamic field driven by new technology, massive growth in data, and changes in how scientists share knowledge. This brings new challenges for researchers looking to maximize the impact of their science and ensure the longevity of their data. These changes are especially relevant for the practice of publishing genome announcements. Genome announcements are meant to share and promote newly sequenced organisms with the larger scientific community. A few decades ago, genome announcements were highly anticipated hallmarks of novel science. But, what was once a publishing coup is now an every day event. It is harder and harder to keep abreast of all the genomes that have been sequenced and promote your own new genomes to get the attention and recognition of your research community. Fortunately, KBase can help construct genomes from your sequencing data, generate reports for your announcement, and promote your data to your research community.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/1608940",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1608940",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "DE-AC02-05CH11231",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 1,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2020,
+      "published": "2020",
+      "publisher": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States); DOE Systems Biology Knowledgebase (KBase)",
+      "reason": null,
+      "referenceCount": 1,
+      "registered": "2020-04-11T03:12:27.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1002/cpmc.37",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        }
+      ],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "96 KNOWLEDGE MANAGEMENT AND PRESERVATION"
+        },
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "genome"
+        },
+        {
+          "subject": "genomics"
+        },
+        {
+          "subject": "data science"
+        },
+        {
+          "subject": "assembly"
+        },
+        {
+          "subject": "annotation"
+        },
+        {
+          "subject": "comparative genomics"
+        },
+        {
+          "subject": "publication"
+        }
+      ],
+      "suffix": "1608940",
+      "titles": [
+        {
+          "title": "Make the Most Out of Genome Announcements with KBase"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Specialized Mix",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-05-25T20:49:49.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1608940/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xNjA4OTQwPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5BbGxlbiwgQmVuamFtaW48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNjMyNS04NTlYPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPk9hayBSaWRnZSBOYXRpb25hbCBMYWIuIChPUk5MKSwgT2FrIFJpZGdlLCBUTiAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkxhbmQsIE1pcmlhbTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS03MTAyLTAwMzE8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+T2FrIFJpZGdlIE5hdGlvbmFsIExhYi4gKE9STkwpLCBPYWsgUmlkZ2UsIFROIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V29vZC1DaGFybHNvbiwgRWxpc2hhPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTk1NTctNzcxNTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPk1ha2UgdGhlIE1vc3QgT3V0IG9mIEdlbm9tZSBBbm5vdW5jZW1lbnRzIHdpdGggS0Jhc2U8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+T2FrIFJpZGdlIE5hdGlvbmFsIExhYm9yYXRvcnkgKE9STkwpLCBPYWsgUmlkZ2UsIFROIChVbml0ZWQgU3RhdGVzKTsgRE9FIFN5c3RlbXMgQmlvbG9neSBLbm93bGVkZ2ViYXNlIChLQmFzZSk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjA8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0Pjk2IEtOT1dMRURHRSBNQU5BR0VNRU5UIEFORCBQUkVTRVJWQVRJT048L3N1YmplY3Q+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Z2Vub21lPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Z2Vub21pY3M8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5kYXRhIHNjaWVuY2U8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5hc3NlbWJseTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PmFubm90YXRpb248L3N1YmplY3Q+CiAgICA8c3ViamVjdD5jb21wYXJhdGl2ZSBnZW5vbWljczwvc3ViamVjdD4KICAgIDxzdWJqZWN0PnB1YmxpY2F0aW9uPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE2MDg5NDA8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+REUtQUMwMi0wNUNIMTEyMzE8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPlNwZWNpYWxpemVkIE1peDwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTAwMi9jcG1jLjM3PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkdlbm9taWNzIGlzIGEgZHluYW1pYyBmaWVsZCBkcml2ZW4gYnkgbmV3IHRlY2hub2xvZ3ksIG1hc3NpdmUgZ3Jvd3RoIGluIGRhdGEsIGFuZCBjaGFuZ2VzIGluIGhvdyBzY2llbnRpc3RzIHNoYXJlIGtub3dsZWRnZS4gVGhpcyBicmluZ3MgbmV3IGNoYWxsZW5nZXMgZm9yIHJlc2VhcmNoZXJzIGxvb2tpbmcgdG8gbWF4aW1pemUgdGhlIGltcGFjdCBvZiB0aGVpciBzY2llbmNlIGFuZCBlbnN1cmUgdGhlIGxvbmdldml0eSBvZiB0aGVpciBkYXRhLiBUaGVzZSBjaGFuZ2VzIGFyZSBlc3BlY2lhbGx5IHJlbGV2YW50IGZvciB0aGUgcHJhY3RpY2Ugb2YgcHVibGlzaGluZyBnZW5vbWUgYW5ub3VuY2VtZW50cy4gR2Vub21lIGFubm91bmNlbWVudHMgYXJlIG1lYW50IHRvIHNoYXJlIGFuZCBwcm9tb3RlIG5ld2x5IHNlcXVlbmNlZCBvcmdhbmlzbXMgd2l0aCB0aGUgbGFyZ2VyIHNjaWVudGlmaWMgY29tbXVuaXR5LiBBIGZldyBkZWNhZGVzIGFnbywgZ2Vub21lIGFubm91bmNlbWVudHMgd2VyZSBoaWdobHkgYW50aWNpcGF0ZWQgaGFsbG1hcmtzIG9mIG5vdmVsIHNjaWVuY2UuIEJ1dCwgd2hhdCB3YXMgb25jZSBhIHB1Ymxpc2hpbmcgY291cCBpcyBub3cgYW4gZXZlcnkgZGF5IGV2ZW50LiBJdCBpcyBoYXJkZXIgYW5kIGhhcmRlciB0byBrZWVwIGFicmVhc3Qgb2YgYWxsIHRoZSBnZW5vbWVzIHRoYXQgaGF2ZSBiZWVuIHNlcXVlbmNlZCBhbmQgcHJvbW90ZSB5b3VyIG93biBuZXcgZ2Vub21lcyB0byBnZXQgdGhlIGF0dGVudGlvbiBhbmQgcmVjb2duaXRpb24gb2YgeW91ciByZXNlYXJjaCBjb21tdW5pdHkuIEZvcnR1bmF0ZWx5LCBLQmFzZSBjYW4gaGVscCBjb25zdHJ1Y3QgZ2Vub21lcyBmcm9tIHlvdXIgc2VxdWVuY2luZyBkYXRhLCBnZW5lcmF0ZSByZXBvcnRzIGZvciB5b3VyIGFubm91bmNlbWVudCwgYW5kIHByb21vdGUgeW91ciBkYXRhIHRvIHlvdXIgcmVzZWFyY2ggY29tbXVuaXR5LjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+"
+    },
+    "id": "10.25982/1608940",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/1608940",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": [
+          {
+            "id": "10.1002/cpmc.37",
+            "type": "dois"
+          }
+        ]
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

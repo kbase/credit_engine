@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/54100.27/1635639</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Pelletier, Dale</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-4321-7918</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Draft Genome Sequence of Larkinella sp. Strain BK230, Isolated from Populus deltoides Roots</title>
+  </titles>
+  <publisher>Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States); U.S. Department of Energy Systems Biology Knowledgebase</publisher>
+  <publicationYear>2020</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>Genome</subject>
+    <subject>KBase</subject>
+    <subject>Biology</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1635639</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">AC05-00OR22725; AC02-05CH11231; AC02-05CH11231; AC05-00OR22725</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pcbi.1003126</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/bts199</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1089/cmb.2012.0021</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.1672</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.186072.114</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1128/MRA.00159-20</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2164-9-75</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.1672</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-15-225</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.1614</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/srep08365</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1517/14622416.5.4.433</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-12-120</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pone.0009490</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1016/j.ymben.2003.09.002</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo">10.1128/mra.00159-20</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/nar/gkt1226</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1101/gr.186072.114</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1128/MRA.00159-20</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/srep08365</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.1614</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkt1226</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">0.1186/1471-2105-15-225</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.ymben.2003.09.002</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-9-75</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pone.0009490</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1128/AEM.01285-16</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pcbi.1003126</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsCitedBy">10.1128/mra.00159-20</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">This narrative was used for a draft genome of a Larkinella species. This genus contains 9 identified species, of which only 5 have genome sequence data. This specimen was collected from a root sample of an eastern cottonwood (Populus deltoides) from a field site in Bellville, Georgia.</description>
+  </descriptions>
+</resource>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/91640.61/1870603</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Venturini, Andressa</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-5901-1658</nameIdentifier>
+      <affiliation>Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil; Princeton Institute for International and Regional Studies, Princeton University, Princeton, NJ, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Gontijo, Júlia</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-1942-7242</nameIdentifier>
+      <affiliation>Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Mandro, Jéssica</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-3454-0702</nameIdentifier>
+      <affiliation>Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Paula, Fabiana</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-0010-1552</nameIdentifier>
+      <affiliation>Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil; Department of Biological Oceanography, Oceanographic Institute, University of São Paulo, São Paulo, SP, Brazil</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Yoshiura, Caio</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-1016-6456</nameIdentifier>
+      <affiliation>Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">daFrança, Aline</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-8232-3086</nameIdentifier>
+      <affiliation>Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>KBase Narrative - Genome-resolved metagenomics reveals novel archaeal and bacterial genomes from Amazonian forest and pasture soils</title>
+  </titles>
+  <publisher>U.S. Department of Energy Systems Biology Knowledgebase</publisher>
+  <publicationYear>2022</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject/>
+    <subject/>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1870603</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">N/A</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/s41564-018-0171-1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41564-018-0171-1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.1099/mgen.0.000853</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btz848</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu170</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.1923</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1016/j.envres.2022.113139</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1101/225342</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btz848</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.186072.114</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4229</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nmeth.3103</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/gb-2009-10-3-r25</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.3176</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv033</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1099/mgen.0.000853</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-11-538</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/2049-2618-2-26</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1099/ijs.0.64483-0</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.7717/peerj.1165</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.4229</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.3103</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1111/1758-2229.12880</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/225342</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7717/peerj.1165</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1111/1758-2229.12880</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv638</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/2049-2618-2-26</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-10-421</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.envres.2022.113139</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/gb-2009-10-3-r25</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Genome-resolved metagenomics was applied to recover archaeal and bacterial metagenome-assembled genomes (MAGs) from forest and pasture soils of the Brazilian Eastern Amazon, which were subjected to different soil moisture levels (Venturini et al., 2022).</description>
+  </descriptions>
+</resource>

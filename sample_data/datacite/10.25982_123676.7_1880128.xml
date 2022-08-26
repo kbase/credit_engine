@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/123676.7/1880128</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Sander, Kyle</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-5944-7822</nameIdentifier>
+      <affiliation>University of California Berkeley</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Abel, Anthony</creatorName>
+      <affiliation>Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical &amp; Biomolecular Engineering, University of California, Berkeley. Berkeley, CA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Friedline, Skyler</creatorName>
+      <affiliation>Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Sharpless, Willam</creatorName>
+      <affiliation>Center for the Utilization of Biological Engineering in Space, Berkeley, CA
+
+Current Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Skerker, Jeffrey</creatorName>
+      <affiliation>Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA
+
+Current Affiliation: Zymergen, Emeryville, CA
+Introduction</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Deutschbauer, Adam</creatorName>
+      <affiliation>Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Clark, Douglas</creatorName>
+      <affiliation>Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical &amp; Biomolecular Engineering, University of California, Berkeley. Berkeley, CA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Arkin, Adam</creatorName>
+      <affiliation>Center for the Utilization of Biological Engineering in Space, Berkeley, CA
+Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>KBase Narrative - Comparing Proteomes of Cupriavidus basilensis 4G11 and Cupriavidus necator H16</title>
+  </titles>
+  <publisher>U.S. Department of Energy Systems Biology Knowledgebase</publisher>
+  <publicationYear>2022</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject/>
+    <subject/>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1880128</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">N/A</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1089/1066527041410319</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Species of Cupriavidus are among the best bioplastic producing microorganisms known, though intracellular poly-hydroxybutyrate (PHB) is made exclusively during unbalanced growth (e.g. nitrogen limitation), a state characterized by poor growth and cellular stress. Much work has been done studying bioplastic production in the model/type strain C. necator H16. We use an RB-TnSeq library of the closely related C. basilensis 4G11 to assess for genes which decouple PHB production from growth state. In this narrative we compute genome-wide protein homology between these two organisms, and generate a synteny plot across the genomes as well.</description>
+  </descriptions>
+</resource>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/112150.61/1863566</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Goff, Jennifer</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-9089-9632</nameIdentifier>
+      <affiliation>University of Georgia, Athens, Georgia, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Putt, Andrew</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-1130-7134</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Fan, Yupeng</creatorName>
+      <affiliation>University of Oklahoma</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Michael, Jonathan</creatorName>
+      <affiliation>University of Oklahoma</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wang, Yajiao</creatorName>
+      <affiliation>University of Oklahoma</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Ning, Daliang</creatorName>
+      <affiliation>University of Oklahoma</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Fu, Ying</creatorName>
+      <affiliation>University of Oklahoma</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Van Nostrand, Joy</creatorName>
+      <affiliation>University of Oklahoma</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Chandonia, John-Marc</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-5153-9079</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Hazen, Terry</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-2536-9993</nameIdentifier>
+      <affiliation>Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Zhou, Jizhong</creatorName>
+      <affiliation>University of Oklahoma</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Arkin, Adam</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-4999-2931</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Adams, Michael</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-9796-5014</nameIdentifier>
+      <affiliation>University of Georgia</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Geochemical and sequencing data from Goff et. al. 2022</title>
+  </titles>
+  <publisher>University of Georgia, Athens, Georgia (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States); University of Oklahoma, Norman, Oklahoma (United States); Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States); Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States) Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)</publisher>
+  <publicationYear>2022</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>Bacillus, metals, nitrate, amplicon sequencing, geochemistry, microbial ecology</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1863566</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">AC02-05CH11231</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1128/AEM.00062-07</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41587-019-0209-9</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/ismej.2012.8</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.3869</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/s12866-015-0450-4</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.25982/105874.55/1844990</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1128/aem.62.2.316-322.1996</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/s12866-015-0450-4</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gks1219</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.3891931</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1128/aem.62.2.316-322.1996</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract"/>
+  </descriptions>
+</resource>

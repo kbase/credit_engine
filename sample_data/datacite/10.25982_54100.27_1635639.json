@@ -1,0 +1,440 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1635639",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "AC05-00OR22725; AC02-05CH11231; AC02-05CH11231; AC05-00OR22725",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 10,
+      "citationsOverTime": [
+        {
+          "total": 9,
+          "year": "2021"
+        },
+        {
+          "total": 1,
+          "year": "2022"
+        }
+      ],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2020-07-03T03:19:29.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+          ],
+          "familyName": "Pelletier",
+          "givenName": "Dale",
+          "name": "Pelletier, Dale",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-4321-7918",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2020",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This narrative was used for a draft genome of a Larkinella species. This genus contains 9 identified species, of which only 5 have genome sequence data. This specimen was collected from a root sample of an eastern cottonwood (Populus deltoides) from a field site in Bellville, Georgia.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/54100.27/1635639",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1635639",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "AC05-00OR22725; AC02-05CH11231; AC02-05CH11231; AC05-00OR22725",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 8,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2020,
+      "published": "2020",
+      "publisher": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States); U.S. Department of Energy Systems Biology Knowledgebase",
+      "reason": null,
+      "referenceCount": 17,
+      "registered": "2020-07-03T03:19:30.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/bts199",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1089/cmb.2012.0021",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1672",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.186072.114",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1128/mra.00159-20",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-9-75",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1672",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-15-225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1614",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/srep08365",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1517/14622416.5.4.433",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-12-120",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0009490",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ymben.2003.09.002",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1128/mra.00159-20",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsSupplementTo"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkt1226",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.186072.114",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1128/mra.00159-20",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/srep08365",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1614",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkt1226",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "0.1186/1471-2105-15-225",
+          "relatedIdentifierType": "URL",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.ymben.2003.09.002",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-9-75",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0009490",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1128/aem.01285-16",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1128/mra.00159-20",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsCitedBy"
+        }
+      ],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "Genome"
+        },
+        {
+          "subject": "KBase"
+        },
+        {
+          "subject": "Biology"
+        }
+      ],
+      "suffix": "54100.27/1635639",
+      "titles": [
+        {
+          "title": "Draft Genome Sequence of Larkinella sp. Strain BK230, Isolated from Populus deltoides Roots"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-05-25T20:50:44.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1635639/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi81NDEwMC4yNy8xNjM1NjM5PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QZWxsZXRpZXIsIERhbGU8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNDMyMS03OTE4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPk9hayBSaWRnZSBOYXRpb25hbCBMYWIuIChPUk5MKSwgT2FrIFJpZGdlLCBUTiAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5EcmFmdCBHZW5vbWUgU2VxdWVuY2Ugb2YgTGFya2luZWxsYSBzcC4gU3RyYWluIEJLMjMwLCBJc29sYXRlZCBmcm9tIFBvcHVsdXMgZGVsdG9pZGVzIFJvb3RzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPk9hayBSaWRnZSBOYXRpb25hbCBMYWJvcmF0b3J5IChPUk5MKSwgT2FrIFJpZGdlLCBUTiAoVW5pdGVkIFN0YXRlcyk7IFUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjA8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PjU5IEJBU0lDIEJJT0xPR0lDQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5HZW5vbWU8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5LQmFzZTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkJpb2xvZ3k8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iT1NUSSBJRCI+MTYzNTYzOTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJET0UgQ29udHJhY3QgTnVtYmVyIj5BQzA1LTAwT1IyMjcyNTsgQUMwMi0wNUNIMTEyMzE7IEFDMDItMDVDSDExMjMxOyBBQzA1LTAwT1IyMjcyNTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEzNzEvam91cm5hbC5wY2JpLjEwMDMxMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnRzMTk5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMDg5L2NtYi4yMDEyLjAwMjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwMzgvbmJ0LjE2NzI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTAxL2dyLjE4NjA3Mi4xMTQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTI4L01SQS4wMDE1OS0yMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExODYvMTQ3MS0yMTY0LTktNzU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC4xNjcyPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2LzE0NzEtMjEwNS0xNS0yMjU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC4xNjE0PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMDM4L3NyZXAwODM2NTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTUxNy8xNDYyMjQxNi41LjQuNDMzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2LzE0NzEtMjE2NC0xMi0xMjA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEzNzEvam91cm5hbC5wb25lLjAwMDk0OTA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwMTYvai55bWJlbi4yMDAzLjA5LjAwMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNTdXBwbGVtZW50VG8iPjEwLjExMjgvbXJhLjAwMTU5LTIwPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2LzE0NzEtMjEwNS0xMS0xMTk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwOTMvbmFyL2drdDEyMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExMDEvZ3IuMTg2MDcyLjExNDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTEyOC9NUkEuMDAxNTktMjA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L3NyZXAwODM2NTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTAzOC9uYnQuMTYxNDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvbmFyL2drdDEyMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IkNpdGVzIj4wLjExODYvMTQ3MS0yMTA1LTE1LTIyNTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMTYvai55bWJlbi4yMDAzLjA5LjAwMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni8xNDcxLTIxNjQtOS03NTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEzNzEvam91cm5hbC5wb25lLjAwMDk0OTA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExMjgvQUVNLjAxMjg1LTE2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwMzEyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNDaXRlZEJ5Ij4xMC4xMTI4L21yYS4wMDE1OS0yMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5UaGlzIG5hcnJhdGl2ZSB3YXMgdXNlZCBmb3IgYSBkcmFmdCBnZW5vbWUgb2YgYSBMYXJraW5lbGxhIHNwZWNpZXMuIFRoaXMgZ2VudXMgY29udGFpbnMgOSBpZGVudGlmaWVkIHNwZWNpZXMsIG9mIHdoaWNoIG9ubHkgNSBoYXZlIGdlbm9tZSBzZXF1ZW5jZSBkYXRhLiBUaGlzIHNwZWNpbWVuIHdhcyBjb2xsZWN0ZWQgZnJvbSBhIHJvb3Qgc2FtcGxlIG9mIGFuIGVhc3Rlcm4gY290dG9ud29vZCAoUG9wdWx1cyBkZWx0b2lkZXMpIGZyb20gYSBmaWVsZCBzaXRlIGluIEJlbGx2aWxsZSwgR2VvcmdpYS48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+    },
+    "id": "10.25982/54100.27/1635639",
+    "relationships": {
+      "citations": {
+        "data": [
+          {
+            "id": "10.1101/gr.186072.114",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.1614",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.1672",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2164-9-75",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/srep08365",
+            "type": "dois"
+          },
+          {
+            "id": "10.1371/journal.pone.0009490",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/nar/gkt1226",
+            "type": "dois"
+          },
+          {
+            "id": "10.1371/journal.pcbi.1003126",
+            "type": "dois"
+          },
+          {
+            "id": "10.1016/j.ymben.2003.09.002",
+            "type": "dois"
+          },
+          {
+            "id": "10.1128/mra.00159-20",
+            "type": "dois"
+          }
+        ]
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/54100.27/1635639",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": [
+          {
+            "id": "10.1371/journal.pcbi.1003126",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/bts199",
+            "type": "dois"
+          },
+          {
+            "id": "10.1089/cmb.2012.0021",
+            "type": "dois"
+          },
+          {
+            "id": "10.1101/gr.186072.114",
+            "type": "dois"
+          },
+          {
+            "id": "10.1128/mra.00159-20",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2164-9-75",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.1672",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2105-15-225",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/srep08365",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/nar/gkt1226",
+            "type": "dois"
+          },
+          {
+            "id": "10.1016/j.ymben.2003.09.002",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.1614",
+            "type": "dois"
+          },
+          {
+            "id": "10.1371/journal.pone.0009490",
+            "type": "dois"
+          },
+          {
+            "id": "10.1128/aem.01285-16",
+            "type": "dois"
+          },
+          {
+            "id": "10.1517/14622416.5.4.433",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2164-12-120",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2105-11-119",
+            "type": "dois"
+          }
+        ]
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

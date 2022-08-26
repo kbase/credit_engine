@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/63776.53/1637360</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Kothari, Ankita</creatorName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Roux, Simon</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Zhang, Hanqiao</creatorName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Prieto, Anatori</creatorName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Chandonia, John-Marc</creatorName>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Spencer, Sarah</creatorName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wu, Xiaoqin</creatorName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Deutschbauer, Adam</creatorName>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Arkin, Adam</creatorName>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Alm, Eric</creatorName>
+      <affiliation>Massachusetts Inst. of Technology (MIT), Cambridge, MA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Chakraborty, Romy</creatorName>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Mukhopadhyay, Aindrila</creatorName>
+    </creator>
+  </creators>
+  <titles>
+    <title>Isolate genomes from "Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance"</title>
+  </titles>
+  <publisher>Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)</publisher>
+  <publicationYear>2020</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject/>
+    <subject>Virus</subject>
+    <subject>Genome</subject>
+    <subject>Biology</subject>
+    <subject>Environment</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1637360</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">AC02-05CH11231</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu153</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">doi:10.14806/ej.17.1.200</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41467-018-07641-9</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-11-538</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btz848</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu170</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pcbi.1002195</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.14806/ej.17.1.200</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1089/cmb.2012.0021</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btz848</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4229</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.4229</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41587-020-0501-8</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pone.0009490</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.1128/mSystems.00537-21</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance. This Narrative contains data for the 261 ENIGMA isolates described in the paper. See Table S2 for a complete list.</description>
+  </descriptions>
+</resource>

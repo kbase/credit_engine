@@ -1,0 +1,128 @@
+{
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+        "indexed": {
+            "date-parts": [
+                [
+                    2022,
+                    4,
+                    4
+                ]
+            ],
+            "date-time": "2022-04-04T05:14:57Z",
+            "timestamp": 1649049297145
+        },
+        "publisher": "Office of Scientific and Technical Information (OSTI)",
+        "award-start": {
+            "date-parts": [
+                [
+                    2011,
+                    9,
+                    29
+                ]
+            ]
+        },
+        "award": "653",
+        "DOI": "10.46936\\/10.25585\\/60000611",
+        "type": "grant",
+        "created": {
+            "date-parts": [
+                [
+                    2021,
+                    9,
+                    7
+                ]
+            ],
+            "date-time": "2021-09-07T17:44:59Z",
+            "timestamp": 1631036699000
+        },
+        "source": "Crossref",
+        "prefix": "10.46936",
+        "member": "960",
+        "project": [
+            {
+                "project-title": [
+                    {
+                        "title": "Mediterranean Grassland Soil Metagenome (MGSM): Enabling a systems view of soil carbon and nitrogen biogeochemistry under a changing climate."
+                    }
+                ],
+                "investigator": [
+                    {
+                        "given": "Ulisses",
+                        "family": "da Rocha",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Ulas",
+                        "family": "Karaoz",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Nicholas",
+                        "family": "Bouskill",
+                        "affiliation": []
+                    }
+                ],
+                "lead-investigator": [
+                    {
+                        "given": "Eoin",
+                        "family": "Brodie",
+                        "affiliation": []
+                    }
+                ],
+                "co-lead-investigator": [
+                    {
+                        "given": "Mary",
+                        "family": "Firestone",
+                        "affiliation": []
+                    }
+                ],
+                "funding": [
+                    {
+                        "type": "award",
+                        "funder": {
+                            "name": "US Department of Energy",
+                            "id": [
+                                {
+                                    "id": "10.13039\\/100000015",
+                                    "id-type": "DOI",
+                                    "asserted-by": "publisher"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "deposited": {
+            "date-parts": [
+                [
+                    2021,
+                    10,
+                    9
+                ]
+            ],
+            "date-time": "2021-10-09T00:07:25Z",
+            "timestamp": 1633738045000
+        },
+        "score": 1,
+        "resource": {
+            "primary": {
+                "URL": "https:\\/\\/www.osti.gov\\/award-doi-service\\/biblio\\/10.46936\\/10.25585\\/60000611"
+            }
+        },
+        "issued": {
+            "date-parts": [
+                [
+                    2011,
+                    9,
+                    29
+                ]
+            ]
+        },
+        "URL": "http:\\/\\/dx.doi.org\\/10.46936\\/10.25585\\/60000611",
+        "relation": {}
+    }
+}
