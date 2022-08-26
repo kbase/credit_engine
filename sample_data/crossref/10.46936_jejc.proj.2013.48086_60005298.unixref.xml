@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_records>
+  <doi_record owner="10.46936" timestamp="2021-10-09 16:25:56">
+    <crossref>
+      <grant>
+        <project>
+          <project-title>Mapping soil carbon from cradle to grave: using comparative transcriptomics, proteomics and metabolite analysis to identify the microbial blueprint for root-enhanced decomposition of organic matter.</project-title>
+          <investigators>
+            <person role="investigator">
+              <givenName>Eoin</givenName>
+              <familyName>Brodie</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Erin</givenName>
+              <familyName>Nuccio</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Jennifer</givenName>
+              <familyName>Pett-Ridge</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Mary</givenName>
+              <familyName>Lipton</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Thomas</givenName>
+              <familyName>Metz</familyName>
+            </person>
+            <person role="lead_investigator">
+              <givenName>Mary</givenName>
+              <familyName>Firestone</familyName>
+            </person>
+          </investigators>
+          <funding funding-type="award">
+            <funder-name>US Department of Energy</funder-name>
+            <funder-id>https://doi.org/10.13039/100000015</funder-id>
+          </funding>
+        </project>
+        <award-number>48086</award-number>
+        <award-start-date>2013-10-01</award-start-date>
+        <doi_data>
+          <doi>10.46936/jejc.proj.2013.48086/60005298</doi>
+          <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/jejc.proj.2013.48086/60005298</resource>
+        </doi_data>
+      </grant>
+    </crossref>
+  </doi_record>
+</doi_records>

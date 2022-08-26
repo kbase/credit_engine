@@ -1,0 +1,307 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1817654",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "N/A",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 8,
+      "citationsOverTime": [
+        {
+          "total": 8,
+          "year": "2022"
+        }
+      ],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2021-08-31T06:32:06.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            "Division of Natural Sciences, Maryville College, Maryville, TN, USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA"
+          ],
+          "familyName": "Buongiorno",
+          "givenName": "Joy",
+          "name": "Buongiorno, Joy",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-7442-0599",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2021",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "This Narrative is part of a collection used in publications focused on the microbial ecology of fjord sediment in the high Arctic, Svalbard. This paper took a genome-centric approach to uncover novel metabolic capabilities of the Acidobacteriota clade. Metagenomic data was coupled with amplicon sequencing of 16S rRNA and dissimilatory sulfite reductase (dsrB) genes, and transcripts (available under NCBI-Genbank Bioproject PRJNA623111), and gene expression analyses of tetrathionate-amended microcosms. This Narrative contains the metagenomic assemblies that were constructed within KBase for reproducibility. These include: stnF metagenome assembly stnAB metagenome assembly stnAC metagenome assembly These metagenome assemblies served as the launching point for an additional publication focused on a different clade of bacteria (Buongiorno et al., 2020). Link to that Narrative landing page here. Please cite: Flieder, Mathias, Joy Buongiorno, Craig W. Herbold, Bela Hausmann, Thomas Rattei, Karen G. Lloyd, Alexander Loy, and Kenneth Wasmund. \"Novel taxa of Acidobacteriota implicated in seafloor sulfur cycling.\" The ISME Journal (2021): 1-22.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/97146.7/1817654",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1817654",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "N/A",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 2,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2021,
+      "published": "2021",
+      "publisher": "Department of Microbiology, University of Tennessee, Knoxville, TN, USA",
+      "reason": null,
+      "referenceCount": 7,
+      "registered": "2021-08-31T06:32:07.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btv033",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0234839",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/bts174",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1111/1758-2229.12538",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.3389/fmicb.2019.00849",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btu170",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/2049-2618-2-26",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.213959.116",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nmeth.1923",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.186072.114",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/ismej.2014.208",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btv638",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/ismej.2011.141",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1126/science.207.4437.1355",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/gb-2009-10-3-r25",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        }
+      ],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "acidobacteriota, MAGs, metagenome-assembled genomes, amplicon sequencing, 16SDefulfobacterota, marine sediment, Candidatus"
+        }
+      ],
+      "suffix": "97146.7/1817654",
+      "titles": [
+        {
+          "title": "Narrative for Bioproject PRJNA623111"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-05-25T20:59:15.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1817654/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi85NzE0Ni43LzE4MTc2NTQ8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkJ1b25naW9ybm8sIEpveTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi03NDQyLTA1OTk8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+RGl2aXNpb24gb2YgTmF0dXJhbCBTY2llbmNlcywgTWFyeXZpbGxlIENvbGxlZ2UsIE1hcnl2aWxsZSwgVE4sIFVTQTsgRGVwYXJ0bWVudCBvZiBNaWNyb2Jpb2xvZ3ksIFVuaXZlcnNpdHkgb2YgVGVubmVzc2VlLCBLbm94dmlsbGUsIFROLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5OYXJyYXRpdmUgZm9yIEJpb3Byb2plY3QgUFJKTkE2MjMxMTE8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+RGVwYXJ0bWVudCBvZiBNaWNyb2Jpb2xvZ3ksIFVuaXZlcnNpdHkgb2YgVGVubmVzc2VlLCBLbm94dmlsbGUsIFROLCBVU0E8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjE8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PjU5IEJBU0lDIEJJT0xPR0lDQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5hY2lkb2JhY3RlcmlvdGEsIE1BR3MsIG1ldGFnZW5vbWUtYXNzZW1ibGVkIGdlbm9tZXMsIGFtcGxpY29uIHNlcXVlbmNpbmcsIDE2U0RlZnVsZm9iYWN0ZXJvdGEsIG1hcmluZSBzZWRpbWVudCwgQ2FuZGlkYXR1czwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODE3NjU0PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnR2MDMzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMzcxL2pvdXJuYWwucG9uZS4wMjM0ODM5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idHMxNzQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExMTEvMTc1OC0yMjI5LjEyNTM4PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4zMzg5L2ZtaWNiLjIwMTkuMDA4NDk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL2Jpb2luZm9ybWF0aWNzL2J0dTE3MDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExODYvMjA0OS0yNjE4LTItMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTAxL2dyLjIxMzk1OS4xMTY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25tZXRoLjE5MjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTAxL2dyLjE4NjA3Mi4xMTQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwMzgvaXNtZWouMjAxNC4yMDg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL2Jpb2luZm9ybWF0aWNzL2J0djYzODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTAzOC9pc21lai4yMDExLjE0MTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTEyNi9zY2llbmNlLjIwNy40NDM3LjEzNTU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2L2diLTIwMDktMTAtMy1yMjU8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+Jmx0O3AmZ3Q7VGhpcyBOYXJyYXRpdmUgaXMgcGFydCBvZiBhIGNvbGxlY3Rpb24gdXNlZCBpbiBwdWJsaWNhdGlvbnMgZm9jdXNlZCBvbiB0aGUgbWljcm9iaWFsIGVjb2xvZ3kgb2YgZmpvcmQgc2VkaW1lbnQgaW4gdGhlIGhpZ2ggQXJjdGljLCBTdmFsYmFyZC4gVGhpcyBwYXBlciB0b29rIGEgZ2Vub21lLWNlbnRyaWMgYXBwcm9hY2ggdG8gdW5jb3ZlciBub3ZlbCBtZXRhYm9saWMgY2FwYWJpbGl0aWVzIG9mIHRoZSBBY2lkb2JhY3RlcmlvdGEgY2xhZGUuIE1ldGFnZW5vbWljIGRhdGEgd2FzIGNvdXBsZWQgd2l0aCBhbXBsaWNvbiBzZXF1ZW5jaW5nIG9mIDE2UyByUk5BIGFuZCBkaXNzaW1pbGF0b3J5IHN1bGZpdGUgcmVkdWN0YXNlIChkc3JCKSBnZW5lcywgYW5kIHRyYW5zY3JpcHRzIChhdmFpbGFibGUgdW5kZXIgTkNCSS1HZW5iYW5rIEJpb3Byb2plY3QgUFJKTkE2MjMxMTEpLCBhbmQgZ2VuZSBleHByZXNzaW9uIGFuYWx5c2VzIG9mIHRldHJhdGhpb25hdGUtYW1lbmRlZCBtaWNyb2Nvc21zLiZsdDsvcCZndDsmbHQ7cCZndDsgIFRoaXMgTmFycmF0aXZlIGNvbnRhaW5zIHRoZSBtZXRhZ2Vub21pYyBhc3NlbWJsaWVzIHRoYXQgd2VyZSBjb25zdHJ1Y3RlZCB3aXRoaW4gS0Jhc2UgZm9yIHJlcHJvZHVjaWJpbGl0eS4gVGhlc2UgaW5jbHVkZTogJmx0O3VsJmd0OyZsdDtsaSZndDtzdG5GIG1ldGFnZW5vbWUgYXNzZW1ibHkgJmx0Oy9saSZndDsmbHQ7bGkmZ3Q7IHN0bkFCIG1ldGFnZW5vbWUgYXNzZW1ibHkgJmx0Oy9saSZndDsmbHQ7bGkmZ3Q7IHN0bkFDIG1ldGFnZW5vbWUgYXNzZW1ibHkgJmx0Oy9saSZndDsmbHQ7L3VsJmd0OyZsdDtwJmd0OyBUaGVzZSBtZXRhZ2Vub21lIGFzc2VtYmxpZXMgc2VydmVkIGFzIHRoZSBsYXVuY2hpbmcgcG9pbnQgZm9yIGFuIGFkZGl0aW9uYWwgcHVibGljYXRpb24gZm9jdXNlZCBvbiBhIGRpZmZlcmVudCBjbGFkZSBvZiBiYWN0ZXJpYSAoQnVvbmdpb3JubyBldCBhbC4sIDIwMjApLiBMaW5rIHRvIHRoYXQgTmFycmF0aXZlIGxhbmRpbmcgcGFnZSBoZXJlLiAmbHQ7L3AmZ3Q7Jmx0O3AmZ3Q7IFBsZWFzZSBjaXRlOiBGbGllZGVyLCBNYXRoaWFzLCBKb3kgQnVvbmdpb3JubywgQ3JhaWcgVy4gSGVyYm9sZCwgQmVsYSBIYXVzbWFubiwgVGhvbWFzIFJhdHRlaSwgS2FyZW4gRy4gTGxveWQsIEFsZXhhbmRlciBMb3ksIGFuZCBLZW5uZXRoIFdhc211bmQuICJOb3ZlbCB0YXhhIG9mIEFjaWRvYmFjdGVyaW90YSBpbXBsaWNhdGVkIGluIHNlYWZsb29yIHN1bGZ1ciBjeWNsaW5nLiIgVGhlIElTTUUgSm91cm5hbCAoMjAyMSk6IDEtMjIuJmx0Oy9wJmd0OzwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+"
+    },
+    "id": "10.25982/97146.7/1817654",
+    "relationships": {
+      "citations": {
+        "data": [
+          {
+            "id": "10.1093/bioinformatics/bts174",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/btu170",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/2049-2618-2-26",
+            "type": "dois"
+          },
+          {
+            "id": "10.1101/gr.213959.116",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nmeth.1923",
+            "type": "dois"
+          },
+          {
+            "id": "10.1101/gr.186072.114",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/btv638",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/gb-2009-10-3-r25",
+            "type": "dois"
+          }
+        ]
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/97146.7/1817654",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": [
+          {
+            "id": "10.1093/bioinformatics/btv033",
+            "type": "dois"
+          },
+          {
+            "id": "10.1371/journal.pone.0234839",
+            "type": "dois"
+          },
+          {
+            "id": "10.1111/1758-2229.12538",
+            "type": "dois"
+          },
+          {
+            "id": "10.3389/fmicb.2019.00849",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/ismej.2014.208",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/ismej.2011.141",
+            "type": "dois"
+          },
+          {
+            "id": "10.1126/science.207.4437.1355",
+            "type": "dois"
+          }
+        ]
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

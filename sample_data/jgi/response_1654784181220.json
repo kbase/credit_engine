@@ -1,0 +1,396 @@
+{
+  "timings": {
+    "total": "0.047",
+    "file_fetch": "0.016",
+    "organisms": "0.019",
+    "facets": "0.001",
+    "filtered_facets": "0.000",
+    "count_file_total": "0.007"
+  },
+  "hits_total": 2,
+  "file_total": 2,
+  "unique_file_total": 2,
+  "total": 1,
+  "prioritized_file_total": 0,
+  "prioritized_total": 0,
+  "score_threshold": 8,
+  "start": 1,
+  "end": 1,
+  "next_page": false,
+  "cursor_id": "40e7d8b5f2c2c4fb2209fad9874a38bd2616a4cbb335b7aef15643e6699ebd14:1",
+  "organisms": [
+    {
+      "agg": "IMG_SP",
+      "agg_id": 1015649,
+      "kingdom": "img",
+      "label": "Genome",
+      "top_hit": {
+        "_id": "524b98f3067c0136350e4745",
+        "_highlight": null,
+        "metadata": {
+          "proposal": {
+            "pi": {
+              "country": "United States",
+              "institution": "Lawrence Berkeley National Laboratory",
+              "email_address": "ELBrodie@lbl.gov",
+              "last_name": "Brodie",
+              "middle_name": "",
+              "first_name": "Eoin",
+              "name": "Eoin Brodie"
+            },
+            "date_approved": "2011-09-30"
+          },
+          "gold_data": {
+            "organism_name": "Rhodospirillales bacterium URHD0088",
+            "display_name": "Rhodospirillales bacterium URHD0088"
+          },
+          "ncbi_taxon": {
+            "ncbi_taxon_species": "Rhodospirillales bacterium URHD0088"
+          },
+          "sequencing_project": {
+            "sequencing_project_name": "Rhodospirillales bacterium URHD0088",
+            "scientific_program_name": "Microbial"
+          },
+          "sow_segment": {
+            "ncbi_organism_name": "unclassified Rhodospirillales (miscellaneous)"
+          },
+          "sequencing_project_id": 1015649,
+          "final_deliv_project": {
+            "final_deliv_project_name": "Rhodospirillales bacterium URHD0088"
+          }
+        },
+        "added_date": "2013-10-01T20:54:27.862000",
+        "file_name": "7366.1.70184.CAGATC.adnq.fastq.gz",
+        "user": "rqc"
+      },
+      "pi": {
+        "country": "United States",
+        "institution": "Lawrence Berkeley National Laboratory",
+        "email_address": "ELBrodie@lbl.gov",
+        "last_name": "Brodie",
+        "middle_name": "",
+        "first_name": "Eoin",
+        "name": "Eoin Brodie"
+      },
+      "proposal_acceptance_date": "2011-09-30",
+      "work_completion_date": null,
+      "status": null,
+      "id": "IMG_SP-1015649",
+      "grouped_by": "metadata.sequencing_project_id",
+      "score": {
+        "count": 2,
+        "min": 0,
+        "max": 0,
+        "avg": 0,
+        "sum": 0
+      },
+      "grouped_count": 2,
+      "name": "Rhodospirillales bacterium URHD0088",
+      "title": "unclassified Rhodospirillales (miscellaneous)",
+      "file_total": 2,
+      "files": [
+        {
+          "_id": "524b98f3067c0136350e4745",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/filtered_seq_unit/00/00/73/66",
+          "file_status_id": 10,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000611",
+              "pi": {
+                "country": "United States",
+                "institution": "Lawrence Berkeley National Laboratory",
+                "email_address": "ELBrodie@lbl.gov",
+                "last_name": "Brodie",
+                "middle_name": "",
+                "first_name": "Eoin"
+              },
+              "date_approved": "2011-09-30",
+              "doi": "10.25585/1487730"
+            },
+            "data_utilization_status": "Unrestricted",
+            "gold_data": {
+              "ecosystem": "Environmental",
+              "gold_project_url": "https://gold.jgi.doe.gov/projects?id=Gp0015235",
+              "gold_stamp_id": "Gp0015235",
+              "organism_name": "Rhodospirillales bacterium URHD0088",
+              "display_name": "Rhodospirillales bacterium URHD0088"
+            },
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Alphaproteobacteria",
+              "ncbi_taxon_order": "Rhodospirillales",
+              "ncbi_taxon_species": "Rhodospirillales bacterium URHD0088"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "sow_segment": {
+              "sequencing_project_name": "Rhodospirillales bacterium URHD0088"
+            },
+            "ncbi_taxon_id": 1380394,
+            "sequencing_project_id": 1015649,
+            "portal": {
+              "display_location": [
+                "Filtered Raw Data"
+              ]
+            }
+          },
+          "file_status": "PURGED",
+          "added_date": "2013-10-01T20:54:27.862000",
+          "file_name": "7366.1.70184.CAGATC.adnq.fastq.gz",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-24T18:06:19.444000",
+          "dt_to_purge": "2021-09-13T14:46:28",
+          "file_size": 1749963220,
+          "file_date": "2013-10-01T19:31:07",
+          "file_type": [
+            "fastq",
+            "fastq.gz"
+          ],
+          "md5sum": "7383aea7154480666007dc016cb19808",
+          "file_id": 2935952,
+          "file_group": "genome",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Sequencing",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "524b57b4067c0136350e4645",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/sdm/illumina/00/73/66",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000611",
+              "pi": {
+                "country": "United States",
+                "institution": "Lawrence Berkeley National Laboratory",
+                "email_address": "ELBrodie@lbl.gov",
+                "last_name": "Brodie",
+                "middle_name": "",
+                "first_name": "Eoin"
+              },
+              "date_approved": "2011-09-30",
+              "doi": "10.25585/1487730"
+            },
+            "data_utilization_status": "Unrestricted",
+            "gold_data": {
+              "ecosystem_subtype": "Unclassified",
+              "ecosystem": "Environmental",
+              "gold_project_url": "https://gold.jgi.doe.gov/projects?id=Gp0015235",
+              "gold_stamp_id": "Gp0015235",
+              "ecosystem_category": "Terrestrial",
+              "organism_name": "Rhodospirillales bacterium URHD0088",
+              "ecosystem_type": "Soil",
+              "display_name": "Rhodospirillales bacterium URHD0088",
+              "specific_ecosystem": "Forest soil"
+            },
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Alphaproteobacteria",
+              "ncbi_taxon_order": "Rhodospirillales",
+              "ncbi_taxon_species": "Rhodospirillales bacterium URHD0088"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "sow_segment": {
+              "sequencing_project_name": "Rhodospirillales bacterium URHD0088"
+            },
+            "ncbi_taxon_id": 1380394,
+            "sequencing_project_id": 1015649,
+            "portal": {
+              "display_location": [
+                "Raw Data"
+              ]
+            }
+          },
+          "file_status": "PURGED",
+          "added_date": "2013-10-01T16:16:04.703000",
+          "file_name": "7366.1.70184.CAGATC.fastq.gz",
+          "file_owner": "sdm",
+          "modified_date": "2022-05-24T18:06:19.369000",
+          "dt_to_purge": "2020-09-17T18:30:53",
+          "file_size": 2097273665,
+          "file_date": "2013-10-01T16:16:02",
+          "md5sum": "c7194d46180f4e0bc0f579cf36752773",
+          "file_type": [
+            "fastq.gz",
+            "fastq"
+          ],
+          "file_id": 2935696,
+          "file_group": "genome",
+          "user": "sdm",
+          "file_permissions": "0100644",
+          "data_group": "Sequencing",
+          "portal_detail_id": null
+        }
+      ],
+      "fileSize": 3847236885,
+      "highlight": {},
+      "award_doi": "10.46936/10.25585/60000611",
+      "doi": "10.25585/1487730",
+      "data_utilization_status": "Unrestricted",
+      "build_time": 0.01572108268737793
+    }
+  ],
+  "facets": {
+    "meta_type": {},
+    "meta_subtype": {},
+    "meta_content": {},
+    "meta_source": {},
+    "meta_collection": {},
+    "meta_file_format": {},
+    "file_status": {
+      "PURGED": 2
+    },
+    "file_type": {
+      "fastq": 2,
+      "fastq.gz": 2
+    },
+    "data_type": {
+      "Filtered Raw Data": 1,
+      "Raw Data": 1
+    },
+    "phytozome_version": {},
+    "data_group": {
+      "Analysis": 0,
+      "Sequencing": 2,
+      "Other": 0
+    },
+    "data_utilization_status": {
+      "Restricted": 0,
+      "Unrestricted": 2
+    },
+    "ecosystem": {
+      "Environmental": 1
+    },
+    "ecosystem_category": {
+      "Terrestrial": 1
+    },
+    "ecosystem_subtype": {
+      "Unclassified": 1
+    },
+    "ecosystem_type": {
+      "Soil": 1
+    },
+    "specific_ecosystem": {
+      "Forest soil": 1
+    },
+    "ncbi_taxon_order": {
+      "Rhodospirillales": 1
+    },
+    "ncbi_taxon_class": {
+      "Alphaproteobacteria": 1
+    },
+    "ncbi_taxon_family": {},
+    "ncbi_taxon_genus": {},
+    "phytozome_policy": {},
+    "phytozome_project": {}
+  },
+  "filtered_facets": {
+    "meta_type": {},
+    "meta_subtype": {},
+    "meta_content": {},
+    "meta_source": {},
+    "meta_collection": {},
+    "meta_file_format": {},
+    "file_status": {
+      "PURGED": 2
+    },
+    "file_type": {
+      "fastq": 2,
+      "fastq.gz": 2
+    },
+    "data_type": {
+      "Filtered Raw Data": 1,
+      "Raw Data": 1
+    },
+    "phytozome_version": {},
+    "data_group": {
+      "Analysis": 0,
+      "Sequencing": 2,
+      "Other": 0
+    },
+    "data_utilization_status": {
+      "Restricted": 0,
+      "Unrestricted": 2
+    },
+    "ecosystem": {
+      "Environmental": 1
+    },
+    "ecosystem_category": {
+      "Terrestrial": 1
+    },
+    "ecosystem_subtype": {
+      "Unclassified": 1
+    },
+    "ecosystem_type": {
+      "Soil": 1
+    },
+    "specific_ecosystem": {
+      "Forest soil": 1
+    },
+    "ncbi_taxon_order": {
+      "Rhodospirillales": 1
+    },
+    "ncbi_taxon_class": {
+      "Alphaproteobacteria": 1
+    },
+    "ncbi_taxon_family": {},
+    "ncbi_taxon_genus": {},
+    "phytozome_policy": {},
+    "phytozome_project": {}
+  },
+  "fields": [
+    "added_date",
+    "dt_to_purge",
+    "file_*",
+    "md5sum",
+    "metadata.data_utilization_status",
+    "metadata.analysis_project.status*",
+    "metadata.analysis_project_id",
+    "metadata.collection",
+    "metadata.content",
+    "metadata.file_format",
+    "metadata.gold_data.display_name",
+    "metadata.gold_data.ecosystem",
+    "metadata.gold_data.ecosystem_category",
+    "metadata.gold_data.ecosystem_subtype",
+    "metadata.gold_data.ecosystem_type",
+    "metadata.gold_data.gold_project_url",
+    "metadata.gold_data.gold_stamp_id",
+    "metadata.gold_data.organism_name",
+    "metadata.gold_data.specific_ecosystem",
+    "metadata.img",
+    "metadata.mycocosm_portal*",
+    "metadata.ncbi_taxon.ncbi_taxon_class",
+    "metadata.ncbi_taxon.ncbi_taxon_family",
+    "metadata.ncbi_taxon.ncbi_taxon_genus",
+    "metadata.ncbi_taxon.ncbi_taxon_order",
+    "metadata.ncbi_taxon.ncbi_taxon_species",
+    "metadata.ncbi_taxon_id",
+    "metadata.phycocosm_portal*",
+    "metadata.phytozome",
+    "metadata.pi_name",
+    "metadata.pmo_project.name",
+    "metadata.pmo_project.pi_name",
+    "metadata.pmo_project.scientific_program",
+    "metadata.pmo_project_id",
+    "metadata.portal",
+    "metadata.proposal.award_doi",
+    "metadata.proposal.date_approved",
+    "metadata.proposal.doi",
+    "metadata.proposal.pi",
+    "metadata.sequencing_project.scientific_program_name",
+    "metadata.sequencing_project_id",
+    "metadata.source",
+    "metadata.sow_segment.sequencing_project_name",
+    "metadata.subtype",
+    "metadata.type",
+    "modified_date",
+    "user"
+  ],
+  "timeout": 180,
+  "filters_applied": false
+}

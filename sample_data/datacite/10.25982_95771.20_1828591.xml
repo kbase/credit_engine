@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/95771.20/1828591</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Henry, Christopher</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8058-9123</nameIdentifier>
+      <affiliation>Argonne National Laboratory</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wilson, Mark</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-6317-900X</nameIdentifier>
+      <affiliation>Department of Biochemistry and Redox Biology Center, University of Nebraska</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Hanson, Andrew</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2585-9340</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Abraham,, Paul</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2685-9123</nameIdentifier>
+      <affiliation>Biosciences Division, Oak Ridge National Laboratory</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Leong, Bryan</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-4042-1160</nameIdentifier>
+      <affiliation>Horticultural Sciences Department, University of Florida</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">McCarty, Donald</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8694-5117</nameIdentifier>
+      <affiliation>Horticultural Sciences Department, University of Florida</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Bathe, Ulschan</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-0454-502X</nameIdentifier>
+      <affiliation>Horticultural Sciences Department, University of Florida</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>The moderately defficient enzyme: Catalysis-related damage in vivo and its repair</title>
+  </titles>
+  <publisher>U.S. Department of Energy Systems Biology Knowledgebase; Argonne National Laboratory (ANL), Argonne, IL (United States); US Department of Energy Systems Biology Knowledgebase</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject/>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1828591</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">NSF: IOS-1444202; NIH: R01GM139978</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1042/bst20160073</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1021/acs.chemrev.8b00008</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1016/j.sbi.2020.06.004</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1002/pmic.200300744</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1021/acs.analchem.7b01134</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1038/s12276-018-0116-z</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1111/1751-7915.12461</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1016/j.csbj.2021.03.034</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">: 10.1186/s13321-015-0087-1</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Enzymes have in vivo lifespans. Analysis of lifespans – lifetime totals of catalytic turnovers – suggests that non-survivable collateral chemical damage from the very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme death. Analysis also implies that many enzymes are moderately deficient in that their active-site regions are not naturally as hardened against such collateral damage as they could be, leaving room for improvement by rational design or directed evolution. Enzyme lifespan might also be improved by engineering systems that repair otherwise fatal active-site damage, of which a handful are known and more are inferred to exist. Unfortunately, the data needed to design and execute such improvements is lacking: there are too few measurements of in vivo lifespan, and existing information on the extent, nature, and mechanisms of active-site damage and repair during normal enzyme operation is too scarce, anecdotal, and speculative to act on. Fortunately, advances in proteomics, metabolomics, cheminformatics, comparative genomics, and structural biochemistry now empower a systematic, data-driven approach to identify, predict, and validate instances of active-site damage and its repair. These capabilities would be practically useful in enzyme redesign and improvement of in-use stability, and could change thinking about which enzymes die young in vivo, and why.</description>
+  </descriptions>
+</resource>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/59912.37/1635154</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Bolduc, Benjamin</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2420-0755</nameIdentifier>
+      <affiliation>The Ohio State Univ., Columbus, OH (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wood-Charlson, Elisha</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9557-7715</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Dehal, Paramvir</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-5810-2497</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Crockett, Zachary</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2871-4454</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Viral Annotation Pipeline in KBase</title>
+  </titles>
+  <publisher>Lawrence Livermore National Laboratory (LLNL), Livermore, CA (United States); The Ohio State University; U.S. Department of Energy Systems Biology Knowledgebase; Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States); Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)</publisher>
+  <publicationYear>2020</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>Virus</subject>
+    <subject>Genomics</subject>
+    <subject>Bioinformatics</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1635154</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">AC02-05CH11231, AC02-06CH11357, AC05-00OR22725,</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu153</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/s41587-019-0100-8</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7717/peerj.985</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.7717/peerj.985</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2.</description>
+  </descriptions>
+</resource>

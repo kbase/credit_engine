@@ -1,0 +1,372 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1808273",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "N/A",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2021-07-17T03:06:56.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA"
+          ],
+          "familyName": "Nickolson",
+          "givenName": "Grant",
+          "name": "Nickolson, Grant",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA"
+          ],
+          "familyName": "Marshall",
+          "givenName": "Christopher",
+          "name": "Marshall, Christopher",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-6669-3231",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA"
+          ],
+          "familyName": "Balasjin",
+          "givenName": "Nasim",
+          "name": "Balasjin, Nasim",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA"
+          ],
+          "familyName": "Bridwell",
+          "givenName": "Sophie",
+          "name": "Bridwell, Sophie",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2021",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "A strain of Staphylococcus succinus was sampled from the floor of the basement of a house and isolated in an undergraduate classroom in Milwaukee, WI. Here, we report the draft genome sequence of this strain.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/51640.53/1808273",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1808273",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "N/A",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 1,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2021,
+      "published": "2021",
+      "publisher": "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA",
+      "reason": null,
+      "referenceCount": 19,
+      "registered": "2021-07-17T03:06:58.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1093/nar/25.17.3389",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btu153",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-12-120",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0009490",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1007/s00792-012-0482-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1016/j.gde.2005.09.006",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.229202",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btm009",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gks406",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1128/jb.00619-08",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1073/pnas.0506758102",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-538",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkt1226",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btz848",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4229",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "0.1093/nar/gkp698",
+          "relatedIdentifierType": "URL",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.1224503",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-9-75",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/srep08365",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        }
+      ],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "Genome Announcement, Staphylococcus, MRA, Microbial Resource Announcement"
+        }
+      ],
+      "suffix": "51640.53/1808273",
+      "titles": [
+        {
+          "title": "Grant_Staphylococcus_succinus"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-05-25T20:58:47.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1808273/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi81MTY0MC41My8xODA4MjczPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OaWNrb2xzb24sIEdyYW50PC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkRlcGFydG1lbnQgb2YgQmlvbG9naWNhbCBTY2llbmNlcywgTWFycXVldHRlIFVuaXZlcnNpdHksIE1pbHdhdWtlZSwgV2lzY29uc2luLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk1hcnNoYWxsLCBDaHJpc3RvcGhlcjwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMS02NjY5LTMyMzE8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+RGVwYXJ0bWVudCBvZiBCaW9sb2dpY2FsIFNjaWVuY2VzLCBNYXJxdWV0dGUgVW5pdmVyc2l0eSwgTWlsd2F1a2VlLCBXaXNjb25zaW4sIFVTQTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QmFsYXNqaW4sIE5hc2ltPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkRlcGFydG1lbnQgb2YgQmlvbG9naWNhbCBTY2llbmNlcywgTWFycXVldHRlIFVuaXZlcnNpdHksIE1pbHdhdWtlZSwgV2lzY29uc2luLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkJyaWR3ZWxsLCBTb3BoaWU8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+RGVwYXJ0bWVudCBvZiBCaW9sb2dpY2FsIFNjaWVuY2VzLCBNYXJxdWV0dGUgVW5pdmVyc2l0eSwgTWlsd2F1a2VlLCBXaXNjb25zaW4sIFVTQTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkdyYW50X1N0YXBoeWxvY29jY3VzX3N1Y2NpbnVzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRlcGFydG1lbnQgb2YgQmlvbG9naWNhbCBTY2llbmNlcywgTWFycXVldHRlIFVuaXZlcnNpdHksIE1pbHdhdWtlZSwgV2lzY29uc2luLCBVU0E8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjE8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PjU5IEJBU0lDIEJJT0xPR0lDQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5HZW5vbWUgQW5ub3VuY2VtZW50LCBTdGFwaHlsb2NvY2N1cywgTVJBLCBNaWNyb2JpYWwgUmVzb3VyY2UgQW5ub3VuY2VtZW50PC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE4MDgyNzM8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+Ti9BPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTA5My9uYXIvMjUuMTcuMzM4OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idHUxNTM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTY0LTEyLTEyMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBvbmUuMDAwOTQ5MDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTAwNy9zMDA3OTItMDEyLTA0ODItODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTAxNi9qLmdkZS4yMDA1LjA5LjAwNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTEwMS9nci4yMjkyMDI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnRtMDA5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMDkzL25hci9na3M0MDY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTA1LTExLTExOTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTEyOC9KQi4wMDYxOS0wODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTA3My9wbmFzLjA1MDY3NTgxMDI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTA1LTExLTUzODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTA5My9uYXIvZ2t0MTIyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idHo4NDg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwMzgvbmJ0LjQyMjk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjAuMTA5My9uYXIvZ2twNjk4PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTAxL2dyLjEyMjQ1MDM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTY0LTktNzU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwMzgvc3JlcDA4MzY1PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkEgc3RyYWluIG9mIFN0YXBoeWxvY29jY3VzIHN1Y2NpbnVzIHdhcyBzYW1wbGVkIGZyb20gdGhlIGZsb29yIG9mIHRoZSBiYXNlbWVudCBvZiBhIGhvdXNlIGFuZCBpc29sYXRlZCBpbiBhbiB1bmRlcmdyYWR1YXRlIGNsYXNzcm9vbSBpbiBNaWx3YXVrZWUsIFdJLiBIZXJlLCB3ZSByZXBvcnQgdGhlIGRyYWZ0IGdlbm9tZSBzZXF1ZW5jZSBvZiB0aGlzIHN0cmFpbi48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+    },
+    "id": "10.25982/51640.53/1808273",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/51640.53/1808273",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": [
+          {
+            "id": "10.1093/nar/25.17.3389",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/btu153",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2164-12-120",
+            "type": "dois"
+          },
+          {
+            "id": "10.1371/journal.pone.0009490",
+            "type": "dois"
+          },
+          {
+            "id": "10.1007/s00792-012-0482-8",
+            "type": "dois"
+          },
+          {
+            "id": "10.1016/j.gde.2005.09.006",
+            "type": "dois"
+          },
+          {
+            "id": "10.1101/gr.229202",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/btm009",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/nar/gks406",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2105-11-119",
+            "type": "dois"
+          },
+          {
+            "id": "10.1128/jb.00619-08",
+            "type": "dois"
+          },
+          {
+            "id": "10.1073/pnas.0506758102",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2105-11-538",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/nar/gkt1226",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/btz848",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.4229",
+            "type": "dois"
+          },
+          {
+            "id": "10.1101/gr.1224503",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2164-9-75",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/srep08365",
+            "type": "dois"
+          }
+        ]
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

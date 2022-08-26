@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/53247.64/1670777</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Nayfach, Stephen</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Roux, Simon</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Seshadri, Rekha</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Udwary, Daniel</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-3491-0198</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Varghese, Neha</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Schulz, Frederik</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-4932-4677</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wu, Dongying</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Paez-Espino, David</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-2939-5398</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Chen, I-Min</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2026-9798</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Huntemann, Marcel</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-1284-3748</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Palaniappan, Krishna</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Ladau, Joshua</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Mukherjee, Supratim</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-6322-2271</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Reddy, T.B.K.</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-0871-5567</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Nielsen, Torben</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Kirton, Edward</creatorName>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">P. Faria, José</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9302-7250</nameIdentifier>
+      <affiliation>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">N. Edirisinghe, Janaka</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2493-234X</nameIdentifier>
+      <affiliation>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">S. Henry, Christopher</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8058-9123</nameIdentifier>
+      <affiliation>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">P. Jungbluth, Sean</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9265-8341</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Chivian, Dylan</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8189-8729</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Dehal, Paramvir</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-5810-2497</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">M. Wood-Charlson, Elisha</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9557-7715</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">P. Arkin, Adam</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-4999-2931</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Tringe, Susannah</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-6479-8427</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Visel, Axel</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-4130-7784</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Woyke, Tanja</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-9485-5637</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">J. Mouncey, Nigel</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-5380-1256</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">N. Ivanova, Natalia</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-5802-9485</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">C. Kyrpides, Nikos</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-6131-0462</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Eloe-Fadrosh, Emiley</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-8162-1276</nameIdentifier>
+      <affiliation>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>A Genomic Catalogue of Earth’s Microbiomes - Introductory KBase Narrative</title>
+  </titles>
+  <publisher>U.S. Department of Energy Joint Genome Institute (JGI)U.S. Department of Energy Systems Biology Knowledgebase</publisher>
+  <publicationYear>2020</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>MAGs, metagenome-assembled genomes, metagenomics, metabolic reconstruction, metabolic modeling</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1670777</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">None</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo">10.1038/s41587-020-0718-6</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">The reconstruction of bacterial and archaeal genomes from shotgun metagenomes has enabled unprecedented insights into the ecology and evolution of environmental and host-associated microbiomes. Here we applied this powerful approach to over 10,000 metagenomes collected from diverse habitats covering all of Earth’s continents and oceans, human- and animal-host associated microbiomes, engineered environments, and natural and agricultural soils to capture extant microbial metabolic and functional potential. We present a comprehensive catalogue of 52,515 metagenome-assembled genomes representing 12,556 novel candidate species-level operational taxonomic units (OTUs), spanning 135 phyla, which expand the known phylogenetic diversity of Bacteria and Archaea by 44%. We also demonstrate the utility of this collection for secondary metabolite biosynthetic potential and predicting host-virus linkage, which can provide a view into the global distribution of lysogenic viruses. This resource underscores the value of leveraging genome-centric approaches to reveal genomic properties of uncultivated microbes that impact on ecosystem processes.</description>
+  </descriptions>
+</resource>

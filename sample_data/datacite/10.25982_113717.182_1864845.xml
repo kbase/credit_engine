@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/113717.182/1864845</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Gontijo, Júlia</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-1942-7242</nameIdentifier>
+      <affiliation>Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Venturini, Andressa</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-5901-1658</nameIdentifier>
+      <affiliation>Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil; Princeton Institute for International and Regional Studies, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">da França, Aline</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-8232-3086</nameIdentifier>
+      <affiliation>Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Moura, José</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-4962-8870</nameIdentifier>
+      <affiliation>Center for Interdisciplinary Formation, Federal University of Western Pará, Santarém, PA, Brazil</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Nüsslein, Klaus</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-0663-4448</nameIdentifier>
+      <affiliation>Univ. of Massachusetts, Amherst, MA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Bohannan, Brendan</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-2907-1016</nameIdentifier>
+      <affiliation>Univ. of Oregon, Eugene, OR (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Rodrigues, Jorge</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-6446-6462</nameIdentifier>
+      <affiliation>Univ. of California, Davis, CA (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Tsai, Siu</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-3733-6312</nameIdentifier>
+      <affiliation>Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Metagenomes from Eastern Brazilian Amazonian floodplains in the wet and dry seasons</title>
+  </titles>
+  <publisher>Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil; Princeton Institute for International and Regional Studies, USA.</publisher>
+  <publicationYear>2022</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>Microbial Ecology</subject>
+    <subject>Metagenomics</subject>
+    <subject>Soil Microbial Ecology</subject>
+    <subject>Taxonomic annotation.</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1864845</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">N/A</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu170</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/ncomms11257</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-12-385</relatedIdentifier>
+  </relatedIdentifiers>
+  <geoLocations>
+    <geoLocation>
+      <geoLocationPlace>FP2</geoLocationPlace>
+      <geoLocationPoint>
+        <pointLongitude>-54.64719</pointLongitude>
+        <pointLatitude>-2.469778</pointLatitude>
+      </geoLocationPoint>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPlace>FP3</geoLocationPlace>
+      <geoLocationPoint>
+        <pointLongitude>-54.73919</pointLongitude>
+        <pointLatitude>-2.379111</pointLatitude>
+      </geoLocationPoint>
+    </geoLocation>
+  </geoLocations>
+  <descriptions>
+    <description descriptionType="Abstract">Brief sample description&lt;br&gt;Sediment samples from 0 to 10 cm depth were collected in triplicate from two floodplains of the Eastern Brazilian Amazon, one located on the Amazonas River (FP2, 2°28'11.2"S 54°38'49.9"W) and the other at the intersection between the Amazonas and the Tapajós rivers (FP3, 2°22'44.8"S 54°44'21.1"W), in the wet and dry seasons (May and October 2016, respectively). Total DNA was extracted in duplicate from 0.25 g of sediment using PowerLyzer PowerSoil DNA Isolation Kit. The metagenomic libraries were constructed using NEBNext Ultra II DNA Library Prep Kit for Illumina and paired-end sequenced (2 x 150 bp) on an Illumina HiSeq 2500 platform. Detailed information about the study sites, sampling, sediment physicochemical properties, DNA extraction and quantification have been previously described by Gontijo et al. (2021).&lt;br&gt;Sample IDs:&lt;ul&gt;&lt;li&gt;M1, M2 and M3: FP2, wet season&lt;/li&gt;&lt;li&gt;M4, M5 and M6: FP3, wet season&lt;/li&gt;&lt;li&gt;M7, M8 and M9: FP2, dry season&lt;/li&gt;&lt;li&gt;M10, M11 and M12: FP3, dry season&lt;/li&gt;&lt;/ul&gt;</description>
+  </descriptions>
+</resource>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_records>
+  <doi_record owner="10.46936" timestamp="2021-10-08 20:07:25">
+    <crossref>
+      <grant>
+        <project>
+          <project-title>Mediterranean Grassland Soil Metagenome (MGSM): Enabling a systems view of soil carbon and nitrogen biogeochemistry under a changing climate.</project-title>
+          <investigators>
+            <person role="lead_investigator">
+              <givenName>Eoin</givenName>
+              <familyName>Brodie</familyName>
+            </person>
+            <person role="co-lead_investigator">
+              <givenName>Mary</givenName>
+              <familyName>Firestone</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Ulisses</givenName>
+              <familyName>da Rocha</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Ulas</givenName>
+              <familyName>Karaoz</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Nicholas</givenName>
+              <familyName>Bouskill</familyName>
+            </person>
+          </investigators>
+          <funding funding-type="award">
+            <funder-name>US Department of Energy</funder-name>
+            <funder-id>https://doi.org/10.13039/100000015</funder-id>
+          </funding>
+        </project>
+        <award-number>653</award-number>
+        <award-start-date>2011-09-29</award-start-date>
+        <doi_data>
+          <doi>10.46936/10.25585/60000611</doi>
+          <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60000611</resource>
+        </doi_data>
+      </grant>
+    </crossref>
+  </doi_record>
+</doi_records>

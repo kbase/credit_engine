@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/51640.53/1808273</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Nickolson, Grant</creatorName>
+      <affiliation>Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Marshall, Christopher</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-6669-3231</nameIdentifier>
+      <affiliation>Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Balasjin, Nasim</creatorName>
+      <affiliation>Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Bridwell, Sophie</creatorName>
+      <affiliation>Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Grant_Staphylococcus_succinus</title>
+  </titles>
+  <publisher>Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>Genome Announcement, Staphylococcus, MRA, Microbial Resource Announcement</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1808273</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">N/A</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/nar/25.17.3389</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btu153</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-12-120</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pone.0009490</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1007/s00792-012-0482-8</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1016/j.gde.2005.09.006</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1101/gr.229202</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btm009</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/nar/gks406</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-11-119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1128/JB.00619-08</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1073/pnas.0506758102</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-11-538</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/nar/gkt1226</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btz848</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/nbt.4229</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">0.1093/nar/gkp698</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1101/gr.1224503</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2164-9-75</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/srep08365</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">A strain of Staphylococcus succinus was sampled from the floor of the basement of a house and isolated in an undergraduate classroom in Milwaukee, WI. Here, we report the draft genome sequence of this strain.</description>
+  </descriptions>
+</resource>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/101788.79/1828290</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Kumari, Sunita</creatorName>
+      <affiliation>Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>A KBase Case Study on Genome-wide Transcriptomics and Plant Primary Metabolism in Sorghum</title>
+  </titles>
+  <publisher>Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>transcriptomics, metabolism, sorghum</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1828290</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">N/A</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/s12918-018-0607-5</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1073/pnas.1401329111</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pcbi.1004321</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pcbi.1003126</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btp120</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.3122</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.3172</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-15-225</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.416</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.3317</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.1672</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-15-225</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/s13059-014-0550-8</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.3389/fpls.2015.00142</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/nar/gkt1226</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/gb-2013-14-4-r36</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/gb-2013-14-4-r36</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nprot.2012.016</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1111/tpj.14003</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/s13059-014-0550-8</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/s13059-015-0721-2</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pcbi.1003126</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">A better understanding of the genetic and metabolic mechanisms that confer stress resistance and tolerance in plants is key to engineering new crops through advanced breeding technologies. This requires a systems biology approach that builds on a genome-wide understanding of the regulation of gene expression, plant metabolism, physiology and growth. In this study, we examine the response to drought stress in Sorghum, as we leverage the tools for transcriptomics and plant metabolic modeling we have implemented at the U.S. Department of Energy Systems Biology Knowledgebase (KBase). KBase enables researchers worldwide to collaborate and advance research by allowing them to upload private or public data into the KBase Narrative Interface, empowering them to analyze this data using a rich, extensible array of computational and data-analytics tools, and allows them to securely share scientific workflows and conclusions. We demonstrate how to use the current RNA-seq tools in KBase, applicable to both plants and microbes, to assemble and quantify long transcripts and identify differentially expressed genes effectively. More specifically, we demonstrate the utility of the platform by identifying key genes that are differentially expressed during drought-stress in Sorghum bicolor, which is an important sustainable production crop plant. We then show how to use KBase tools to predict the membership of genes in metabolic pathways and examine expression data in the context of metabolic subsystems. We demonstrate the power of the platform by making the data analysis and interpretation available to the biologists in the reproducible, re-usable, point-and-click format of a KBase Narrative thus promoting FAIR (Findable, Accessible, Interoperable and Reusable) guiding principles for scientific data management and stewardship.</description>
+  </descriptions>
+</resource>

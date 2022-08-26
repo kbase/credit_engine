@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/97146.7/1817654</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Buongiorno, Joy</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-7442-0599</nameIdentifier>
+      <affiliation>Division of Natural Sciences, Maryville College, Maryville, TN, USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Narrative for Bioproject PRJNA623111</title>
+  </titles>
+  <publisher>Department of Microbiology, University of Tennessee, Knoxville, TN, USA</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>acidobacteriota, MAGs, metagenome-assembled genomes, amplicon sequencing, 16SDefulfobacterota, marine sediment, Candidatus</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1817654</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">N/A</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1093/bioinformatics/btv033</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pone.0234839</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/bts174</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1111/1758-2229.12538</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.3389/fmicb.2019.00849</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btu170</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/2049-2618-2-26</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.213959.116</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nmeth.1923</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/gr.186072.114</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/ismej.2014.208</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1093/bioinformatics/btv638</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1038/ismej.2011.141</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1126/science.207.4437.1355</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/gb-2009-10-3-r25</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;This Narrative is part of a collection used in publications focused on the microbial ecology of fjord sediment in the high Arctic, Svalbard. This paper took a genome-centric approach to uncover novel metabolic capabilities of the Acidobacteriota clade. Metagenomic data was coupled with amplicon sequencing of 16S rRNA and dissimilatory sulfite reductase (dsrB) genes, and transcripts (available under NCBI-Genbank Bioproject PRJNA623111), and gene expression analyses of tetrathionate-amended microcosms.&lt;/p&gt;&lt;p&gt;  This Narrative contains the metagenomic assemblies that were constructed within KBase for reproducibility. These include: &lt;ul&gt;&lt;li&gt;stnF metagenome assembly &lt;/li&gt;&lt;li&gt; stnAB metagenome assembly &lt;/li&gt;&lt;li&gt; stnAC metagenome assembly &lt;/li&gt;&lt;/ul&gt;&lt;p&gt; These metagenome assemblies served as the launching point for an additional publication focused on a different clade of bacteria (Buongiorno et al., 2020). Link to that Narrative landing page here. &lt;/p&gt;&lt;p&gt; Please cite: Flieder, Mathias, Joy Buongiorno, Craig W. Herbold, Bela Hausmann, Thomas Rattei, Karen G. Lloyd, Alexander Loy, and Kenneth Wasmund. "Novel taxa of Acidobacteriota implicated in seafloor sulfur cycling." The ISME Journal (2021): 1-22.&lt;/p&gt;</description>
+  </descriptions>
+</resource>

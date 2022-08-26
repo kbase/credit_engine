@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crossref_result xmlns="http://www.crossref.org/qrschema/3.0" version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/3.0 http://www.crossref.org/schemas/crossref_query_output3.0.xsd">
+  <query_result>
+    <head>
+      <doi_batch_id>none</doi_batch_id>
+    </head>
+    <body>
+      <query status="resolved">
+        <doi type="grant">10.46936/10.25585/60001190</doi>
+        <crm-item name="publisher-name" type="string">Office of Scientific and Technical Information (OSTI)</crm-item>
+        <crm-item name="prefix-name" type="string">US Department of Energy</crm-item>
+        <crm-item name="member-id" type="number">960</crm-item>
+        <crm-item name="citation-id" type="number">130052549</crm-item>
+        <crm-item name="book-id" type="number">3846906</crm-item>
+        <crm-item name="deposit-timestamp" type="number">1633707689</crm-item>
+        <crm-item name="owner-prefix" type="string">10.46936</crm-item>
+        <crm-item name="last-update" type="date">2021-10-09T10:10:20Z</crm-item>
+        <crm-item name="created" type="date">2021-09-08T20:45:47Z</crm-item>
+        <crm-item name="citedby-count" type="number">0</crm-item>
+        <doi_record>
+          <crossref xmlns="http://www.crossref.org/xschema/1.1" xsi:schemaLocation="http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd">
+            <grant xmlns="http://www.crossref.org/grant_id/0.0.1">
+              <project>
+                <project-title>From genomes to methane production: Targeting critical knowledge gaps in wetland soils</project-title>
+                <investigators>
+                  <person role="lead_investigator">
+                    <givenName>Kelly</givenName>
+                    <familyName>Wrighton</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Christopher</givenName>
+                    <familyName>Miller</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Matthew</givenName>
+                    <familyName>Sullivan</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Christopher</givenName>
+                    <familyName>Miller</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Matthew</givenName>
+                    <familyName>Sullivan</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Gil</givenName>
+                    <familyName>Bohrer</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Lauren</givenName>
+                    <familyName>Kinsman Costello</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Tim</givenName>
+                    <familyName>Morin</familyName>
+                  </person>
+                  <person role="co-lead_investigator">
+                    <givenName>Jorge</givenName>
+                    <familyName>Villa</familyName>
+                  </person>
+                </investigators>
+                <funding funding-type="award">
+                  <funder-name>US Department of Energy</funder-name>
+                  <funder-id>https://doi.org/10.13039/100000015</funder-id>
+                </funding>
+              </project>
+              <award-number>504205</award-number>
+              <award-start-date>2018-08-11</award-start-date>
+              <doi_data>
+                <doi>10.46936/10.25585/60001190</doi>
+                <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60001190</resource>
+              </doi_data>
+            </grant>
+          </crossref>
+        </doi_record>
+      </query>
+    </body>
+  </query_result>
+</crossref_result>

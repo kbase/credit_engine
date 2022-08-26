@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/1608940</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Allen, Benjamin</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0002-6325-859X</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Land, Miriam</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-7102-0031</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Wood-Charlson, Elisha</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-9557-7715</nameIdentifier>
+      <affiliation>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Make the Most Out of Genome Announcements with KBase</title>
+  </titles>
+  <publisher>Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States); DOE Systems Biology Knowledgebase (KBase)</publisher>
+  <publicationYear>2020</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>96 KNOWLEDGE MANAGEMENT AND PRESERVATION</subject>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>genome</subject>
+    <subject>genomics</subject>
+    <subject>data science</subject>
+    <subject>assembly</subject>
+    <subject>annotation</subject>
+    <subject>comparative genomics</subject>
+    <subject>publication</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1608940</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">DE-AC02-05CH11231</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Specialized Mix</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1002/cpmc.37</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">Genomics is a dynamic field driven by new technology, massive growth in data, and changes in how scientists share knowledge. This brings new challenges for researchers looking to maximize the impact of their science and ensure the longevity of their data. These changes are especially relevant for the practice of publishing genome announcements. Genome announcements are meant to share and promote newly sequenced organisms with the larger scientific community. A few decades ago, genome announcements were highly anticipated hallmarks of novel science. But, what was once a publishing coup is now an every day event. It is harder and harder to keep abreast of all the genomes that have been sequenced and promote your own new genomes to get the attention and recognition of your research community. Fortunately, KBase can help construct genomes from your sequencing data, generate reports for your announcement, and promote your data to your research community.</description>
+  </descriptions>
+</resource>

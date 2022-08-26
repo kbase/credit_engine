@@ -1,0 +1,1403 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "JGI Data Portal API",
+        "description": "\n## Using the JGI API\n\n### Quick Start\n\n* Click to expand an endpoint (<span class=\"opblock opblock-get\">blue</span> for GET endpoints, <span class=\"opblock opblock-post\">green</span> for POST).\n* Click the <strong>Try it out</strong> button.\n* Enter a parameter.\n* Click the <strong>Execute</strong> button.\n\n<details>\n\n<summary>Expand for more detailed instructions</summary>\n\n### Introduction\n\nWelcome to the JGI API documentation page! The JGI [application programming interface](https://blog.cloudrail.com/api-tutorial-for-beginners/) (API) lets you explore and download all of the genomic data available through [Phytozome](https://phytozome-next.jgi.doe.gov/) and [IMG](https://img.jgi.doe.gov/). Endpoints for [PhycoCosm](https://phycocosm.jgi.doe.gov/phycocosm/home) and [MycoCosm](https://mycocosm.jgi.doe.gov/mycocosm/home) should become available in February 2021.\n\nThis API is a work in progress \u2014 we\u2019ll be updating it periodically as we expand the query and download capabilities. If you have any questions about updates to the API, don\u2019t hesitate to [contact us](mailto:jgi-jira+JDP@lbl.gov).\n\n### Authorization\n\nBefore trying any query, first log in to the [Data Portal](https://data.jgi.doe.gov/refine-download/phytozome) in the same browser you\u2019re using to view this documentation. Once you\u2019re logged in, you\u2019ll be able to use any of the endpoints.\n\n### Getting started\n\nThis page of documentation shows the endpoints you can use to access all of JGI\u2019s publicly available data.\nClick on a <span class=\"opblock opblock-get\">blue</span> or <span class=\"opblock opblock-post\">green</span> bar to expand any endpoint section.\nThese endpoints are currently available:\n\n<!-- currently disabled\n* **mycocosm_file_list**, which lets you access lists of files/metadata for single genomes from [MycoCosm](https://genome.jgi.doe.gov/programs/fungi/index.jsf).\n* **phycocosm_file_list**, which lets you access files/metadata for single genomes from [PhycoCosm](https://phycocosm.jgi.doe.gov/phycocosm/home).\n-->\n\n* **img_file_list**, which allows you to access lists of files/metadata for single genomes or metagenomes [from IMG](https://img.jgi.doe.gov/).\n* **phytozome_file_list**, which allows you to access lists of files/metadata for all genomes within [Phytozome](http://phytozome.jgi.doe.gov/).\n* **download_files**, which you can use to download immediately available files whose IDs you already have.\n* **request_archived_files**, which you can use to request that certain files be retrieved from our tape archive, allowing you to download them after restoration. [Learn more about JGI\u2019s tape archive](https://data.jgi.doe.gov/refine-download/faq).\n* **request_archived_files/requests**, which allows you to get the file IDs of a fulfilled archived files request, which you can then use to download the associated files.\n\nThere are a few ways to get started using the JGI API. If you already know the IDs of the files you\u2019re looking for, along with whether those files are available for immediate download or are in the tape archive, you can head directly to the **download_files** or **request_archived_files** endpoints.\n\nIf you\u2019re not sure exactly what files you need, check out what files are available before you attempt to download anything. You can do this by querying the Phytozome or IMG endpoints. The section for each endpoint provides instructions for querying that endpoint, along with sample query values you can use as examples.\n</details>\n",
+        "version": "202207.72021.15"
+    },
+    "host": "files.jgi.doe.gov",
+    "schemes": ["https"],
+    "basePath": "/",
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "securityDefinitions": {
+        "Bearer": { "type": "apiKey", "name": "Authorization", "in": "header" }
+    },
+    "security": [{ "Bearer": [] }],
+    "paths": {
+        "/download_files/": {
+            "post": {
+                "operationId": "download_files_create",
+                "summary": "Download immediately available files as a zipped stream ",
+                "description": "Files that are available for immediate download are labeled RESTORED in the file list. To create a query to download available files, follow these steps:\n1. If you\u2019re not already logged in, log into the [Data Portal](https://data.jgi.doe.gov).\n1. Once you have logged in, on the [Data Portal](https://data.jgi.doe.gov), click the avatar in the upper-right -> click \"Copy My Session Token\".\n1. Click the **Try it out** button at the end of these instructions.\n1. In the **Authorization** section below, in the box labeled **SSO session token**, paste your session token that you copied from the Data Portal \"My Session Token\" window.\n1. Look in the **Example value** box.\n    * You'll see something like this:\n        ```\n        {\n        \"ids\": [\n            \"52b9c736166e730e43a34e8a\"\n        ],\n        \"organism\": \"string\",\n        \"projectId\": 0\n        }\n        ```\n    * **Different kingdoms require different combinations of these parameters**\n        * **Phytozome**: You can omit \"organism\" and \"projectId\".  In that case, what you'll have in this box will look like this (note that **you can pass in a list of file ids; you don't need to do one at a time**):\n        ```\n        {\n        \"ids\": [\n            \"52b9c736166e730e43a34e8a\", \"587b0ae47ded5e4229d885bd\"\n        ]\n        }\n        ```\n        * **IMG**: Requires a project ID (use \"its_sp_id\", or \"its_ap_id\").  Your request will look like this:\n        ```\n        {\n        \"ids\": [\n            \"51d49313067c014cd6ea1605\", \"51d4bd8d067c014cd6ea5cba\"\n        ],\n        \"its_sp_id\": 400290\n        }\n        ```\n        * When mycocosm and phycocosm are available, their download instructions will be found here.\n    * The \"ids\" field can also be a map, where keys are organism IDs and values are lists of file IDs:\n        ```\n        {\n        \"ids\": {\n            \"Phytozome-113\": [\"52b9c736166e730e43a34e8a\"],\n            \"Phytozome-444\": [\"587b0ae47ded5e4229d885bd\"]\n        }\n        }\n        ```\n    * If you would like to download via Globus, you can add the \"globus_user_name\" field. You will receive an email notification when the data are ready:\n        ```\n        {\n        \"globus_user_name\": <YOUR_GLOBUS_USERNAME>\n        }\n        ```\n1. Click **Execute**.\n1. Executing the query will produce a command and run it to download the files you've specified.\n1. Due to how this documentation is generated, when your download is finished, you'll need to go through one more step to get the file.\n    * Look beneath the **Responses** header to where you see **Code** and **details**.\n    * If you have a code 200 (success), you should also see a blue link under **Response body** that reads **Download file**.\n    * Clicking the **Download file** link will then let you save the file to your computer.\n    * When you use these commands on the command line, outside of this page, you won't need to do this double download.",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "required": ["ids"],
+                            "type": "object",
+                            "properties": {
+                                "ids": {
+                                    "description": "List of JAMO IDs",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "example": "52b9c736166e730e43a34e8a"
+                                    }
+                                },
+                                "organism": {
+                                    "description": "Organism name (mycocosm_portal_id)",
+                                    "type": "string"
+                                },
+                                "its_sp_id": { "description": "IMG ITS SP ID", "type": "integer" },
+                                "its_ap_id": { "description": "IMG ITS AP ID", "type": "integer" },
+                                "download_related_ap_data": {
+                                    "description": "Download related analysis data",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "globus_user_name": {
+                                    "description": "Globus username",
+                                    "type": "string"
+                                },
+                                "api_version": {
+                                    "description": "API version (1 or 2)",
+                                    "type": "string",
+                                    "default": "2",
+                                    "example": "2"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "SSO session token",
+                        "required": true,
+                        "type": "string",
+                        "pattern": "^Bearer \\S+$"
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "File attachment. *Content-Type: application/zip*" },
+                    "400": {
+                        "description": "We\u2019re unable to process your request. Before you submit your request again, please check the URL to make sure there are no typos and that all ID numbers are correct."
+                    },
+                    "403": { "description": "Access forbidden" },
+                    "404": { "description": "Files not found / Organism not found" },
+                    "409": {
+                        "description": "\nYou\u2019ve requested files from the tape archive. Before you can download these files, we need to retrieve them from our tape archive, which will take up to 24 hours. After 24 hours, your requested files will have been retrieved \u2014 you can re-submit your query. [Learn more about JGI\u2019s tape archive](https://data.jgi.doe.gov/refine-download/faq).\n"
+                    }
+                },
+                "tags": ["POST"]
+            },
+            "parameters": []
+        },
+        "/request_archived_files/": {
+            "post": {
+                "operationId": "request_archived_files_create",
+                "summary": "Request that files be retrieved from the tape archive",
+                "description": "Files that are stored in JGI\u2019s tape archive are labeled PURGED. To request that these files be restored from the archive and made available for download, follow these steps:\n1. If you\u2019re not already logged in, log into the [Data Portal](https://data.jgi.doe.gov).\n1. Once you have logged in, on the [Data Portal](https://data.jgi.doe.gov), click the avatar in the upper-right -> click \"Copy My Session Token\".\n1. Click the **Try it out** button at the end of these instructions.\n1. In the **Authorization** section below, in the box labeled **SSO session token**, paste your session token that you copied from the Data Portal \"My Session Token\" window.\n1. Wait 24 hours for your requested files to be retrieved from the tape archive.\n1. After 24 hours have passed, visit the **download_files** endpoint and re-run the query you generated the previous day. Executing the query will produce a command you can use to download the files you selected.",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "required": ["ids"],
+                            "type": "object",
+                            "properties": {
+                                "ids": {
+                                    "description": "List of JAMO IDs",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "example": "52b9c736166e730e43a34e8a"
+                                    }
+                                },
+                                "organism": {
+                                    "description": "Organism name (mycocosm_portal_id)",
+                                    "type": "string"
+                                },
+                                "its_sp_id": { "description": "IMG ITS SP ID", "type": "integer" },
+                                "its_ap_id": { "description": "IMG ITS AP ID", "type": "integer" },
+                                "restore_related_ap_data": {
+                                    "description": "Restore related analysis data",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "href": { "description": "Referrer path", "type": "string" },
+                                "api_version": {
+                                    "description": "API version (1 or 2)",
+                                    "type": "string",
+                                    "default": "2",
+                                    "example": "2"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "SSO session token",
+                        "required": true,
+                        "type": "string",
+                        "pattern": "^Bearer \\S+$"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "File counts",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "request_id": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1
+                                },
+                                "updated_count": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1
+                                },
+                                "restored_count": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "We\u2019re unable to process your request. Before you submit your request again, please check the URL to make sure there are no typos and that all ID numbers are correct."
+                    },
+                    "403": { "description": "Access forbidden" },
+                    "404": { "description": "Files not found / Organism not found" },
+                    "409": { "description": "disk full / daily disk quota exceeded" }
+                },
+                "tags": ["POST"]
+            },
+            "parameters": []
+        },
+        "/request_archived_files/requests/{request_id}": {
+            "get": {
+                "operationId": "request_archived_files_requests_read",
+                "summary": "Get an archived files request",
+                "description": "\n1. After you've requested archived files to be restored, you'll receive a restore request ID.  That ID can be used with this endpoint to retrieve the list of files included in the restore request.\n1. Click the **Try it out** button.\n1. In the **request_id** field, enter the request ID you received.  The response will include a list of file IDs, which you can use in the download endpoint.\n",
+                "parameters": [
+                    {
+                        "name": "request_id",
+                        "in": "path",
+                        "description": "File restore request ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "api_version",
+                        "in": "query",
+                        "description": "API response version",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["1", "2"],
+                        "default": "2"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "File restore request information",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": { "type": "string", "example": "ready" },
+                                "expiration_date": {
+                                    "type": "string",
+                                    "example": "2020-12-23T13:58:31-08:00"
+                                },
+                                "file_ids": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "example": "52b9c6f1166e730e43a34e46"
+                                    },
+                                    "example": ["52b9c6f1166e730e43a34e46"]
+                                },
+                                "file_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files for all the matching organisms"
+                                },
+                                "unique_file_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files for all matching organisms, de-duplicated (some files are shared across organisms)"
+                                },
+                                "prioritized_file_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files for all the prioritized organisms (relevance score >= threshold)"
+                                },
+                                "hits_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files that matched your query"
+                                },
+                                "start": { "type": "integer", "format": "int32", "example": 1 },
+                                "end": { "type": "integer", "format": "int32", "example": 1 },
+                                "next_page": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 12,
+                                    "description": "Returns false if there is no next page, otherwise an integer"
+                                },
+                                "total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of matching organisms"
+                                },
+                                "prioritized_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of prioritized organisms (relevance score >= threshold)"
+                                },
+                                "score_threshold": {
+                                    "type": "number",
+                                    "format": "float",
+                                    "example": 8.0,
+                                    "description": "Relevance score threshold"
+                                },
+                                "cursor_id": { "type": "string", "example": "abc123:1" },
+                                "organisms": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string",
+                                                "example": "52b9c6f1166e730e43a34e46"
+                                            },
+                                            "name": { "type": "string", "example": "Alyrata foo" },
+                                            "title": {
+                                                "type": "string",
+                                                "example": "Alyrata foo project"
+                                            },
+                                            "kingdom": { "type": "string", "example": "Phytozome" },
+                                            "grouped_by": {
+                                                "type": "string",
+                                                "example": "metadata.phytozome.proteome_id"
+                                            },
+                                            "files": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "_id": {
+                                                            "type": "string",
+                                                            "example": "abc123"
+                                                        },
+                                                        "_highlight": {
+                                                            "type": "object",
+                                                            "example": {
+                                                                "comments": "Your search matched the <em>term</em> in a field."
+                                                            }
+                                                        },
+                                                        "data_group": {
+                                                            "type": "string",
+                                                            "example": "one of Analysis, Sequencing, or Other"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "fileSize": { "type": "integer", "format": "int32" },
+                                            "highlight": {
+                                                "type": "object",
+                                                "example": {
+                                                    "comments": "Your search matched the <em>term</em> in a field."
+                                                }
+                                            },
+                                            "portal_detail_id": {
+                                                "type": "string",
+                                                "example": "Org_abc"
+                                            },
+                                            "score": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "count": { "type": "integer" },
+                                                    "min": { "type": "number", "format": "float" },
+                                                    "max": { "type": "number", "format": "float" },
+                                                    "avg": { "type": "number", "format": "float" },
+                                                    "sum": { "type": "number", "format": "float" }
+                                                }
+                                            },
+                                            "grouped_count": { "type": "integer", "example": "1" }
+                                        }
+                                    }
+                                },
+                                "facets": {
+                                    "type": "object",
+                                    "properties": {
+                                        "file_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "PURGED": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "file_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "fastq": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Filtered Raw Data": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "meta_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_content": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_collection": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_source": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_version": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_policy": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_project": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_file_format": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_group": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Analysis": { "type": "integer", "example": "123" },
+                                                "Sequencing": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                },
+                                                "Other": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_class": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Gammaproteobacteria": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_order": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Poales": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_family": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycenaceae": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_genus": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycena": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_utilization_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_category": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "specific_ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        }
+                                    }
+                                },
+                                "filtered_facets": {
+                                    "type": "object",
+                                    "properties": {
+                                        "file_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "PURGED": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "file_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "fastq": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Filtered Raw Data": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "meta_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_content": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_collection": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_source": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_file_format": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_group": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Analysis": { "type": "integer", "example": "123" },
+                                                "Sequencing": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                },
+                                                "Other": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_class": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Gammaproteobacteria": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_order": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Poales": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_family": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycenaceae": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_genus": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycena": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_version": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_policy": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_project": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_utilization_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_category": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "specific_ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        }
+                                    }
+                                },
+                                "filters_applied": { "type": "boolean", "example": true },
+                                "timeout": { "type": "integer", "example": "1800" },
+                                "timings": {
+                                    "type": "object",
+                                    "example": {
+                                        "total": "2.137",
+                                        "file_fetch": "1.083",
+                                        "organisms": "0.329",
+                                        "facets": "0.526",
+                                        "filtered_facets": "0.181"
+                                    }
+                                },
+                                "fields": {
+                                    "type": "array",
+                                    "items": { "type": "string", "example": "file_status" }
+                                }
+                            }
+                        }
+                    },
+                    "404": { "description": "Request not found" }
+                },
+                "tags": ["GET"]
+            },
+            "parameters": [
+                { "name": "request_id", "in": "path", "required": true, "type": "string" }
+            ]
+        },
+        "/search/": {
+            "get": {
+                "operationId": "search_list",
+                "summary": "Search all genome file metadata",
+                "description": "Search API parameters **ff[]** and **of[]** accept multiple values. You can repeat the name multiple times or pass a JSON string as a single argument. These two\nexamples are equivalent:\n1. `/search/?ff[file_status]=RESTORED&ff[file_status]=PURGED`\n1. `/search/?ff={\"file_status\":[\"RESTORED\",\"PURGED\"]}`",
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Query string -- see <a href='https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-simple-query-string-query.html#_simple_query_string_syntax'>Elasticsearch docs</a>. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "a",
+                        "in": "query",
+                        "description": "Return only autocomplete suggestions. Requires api_version=2",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["1", "2"],
+                        "default": false
+                    },
+                    {
+                        "name": "h",
+                        "in": "query",
+                        "description": "Apply highighting to search terms. Requires api_version=2",
+                        "required": false,
+                        "type": "string",
+                        "default": false
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "description": "Sort order -- takes an organism field name as a value. Requires api_version=2",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["name", "id", "title", "kingdom", "score.avg"]
+                    },
+                    {
+                        "name": "d",
+                        "in": "query",
+                        "description": "Sort order direction. Requires api_version=2",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["asc", "desc"],
+                        "default": "asc"
+                    },
+                    {
+                        "name": "p",
+                        "in": "query",
+                        "description": "Page number. Requires api_version=2",
+                        "required": false,
+                        "type": "integer",
+                        "default": 1
+                    },
+                    {
+                        "name": "x",
+                        "in": "query",
+                        "description": "Page size. Requires api_version=2",
+                        "required": false,
+                        "type": "integer",
+                        "default": 10
+                    },
+                    {
+                        "name": "ff",
+                        "in": "query",
+                        "description": "File filters -- expects a single JSON-encoded string. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[file_status]",
+                        "in": "query",
+                        "description": "File status. Requires api_version=2",
+                        "required": false,
+                        "type": "string",
+                        "enum": [
+                            "RESTORED",
+                            "RESTORE_IN_PROGRESS",
+                            "PURGED",
+                            "BACKUP_COMPLETE",
+                            "BACKUP_IN_PROGRESS",
+                            "BACKUP_READY"
+                        ]
+                    },
+                    {
+                        "name": "ff[data_group]",
+                        "in": "query",
+                        "description": "Data group. Requires api_version=2",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["Analysis", "Sequencing", "Other"]
+                    },
+                    {
+                        "name": "ff[file_type]",
+                        "in": "query",
+                        "description": "File type. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[data_type]",
+                        "in": "query",
+                        "description": "Data type. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[phytozome_version]",
+                        "in": "query",
+                        "description": "Phytozome version. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[phytozome_policy]",
+                        "in": "query",
+                        "description": "Phytozome policy. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[phytozome_project]",
+                        "in": "query",
+                        "description": "Phytozome project. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[meta_type]",
+                        "in": "query",
+                        "description": "metadata.type. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[meta_subtype]",
+                        "in": "query",
+                        "description": "metadata.subtype. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[meta_content]",
+                        "in": "query",
+                        "description": "metadata.content. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[meta_source]",
+                        "in": "query",
+                        "description": "metadata.source. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[meta_collection]",
+                        "in": "query",
+                        "description": "metadata.collection. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[meta_file_format]",
+                        "in": "query",
+                        "description": "metadata.file_format. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ff[data_utilization_status]",
+                        "in": "query",
+                        "description": "Data utilization status. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of",
+                        "in": "query",
+                        "description": "Organism filters -- expects a single JSON-encoded string. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ncbi_taxon_class]",
+                        "in": "query",
+                        "description": "Organism filter by NCBI taxonomy class name. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ncbi_taxon_order]",
+                        "in": "query",
+                        "description": "Organism filter by NCBI taxonomy order name. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ncbi_taxon_family]",
+                        "in": "query",
+                        "description": "Organism filter by NCBI taxonomy family name. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ncbi_taxon_genus]",
+                        "in": "query",
+                        "description": "Organism filter by NCBI taxonomy genus name. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ecosystem]",
+                        "in": "query",
+                        "description": "Organism filter by ecosystem. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ecosystem_category]",
+                        "in": "query",
+                        "description": "Organism filter by ecosystem category. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ecosystem_type]",
+                        "in": "query",
+                        "description": "Organism filter by ecosystem type. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[ecosystem_subtype]",
+                        "in": "query",
+                        "description": "Organism filter by ecosystem subtype. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "of[specific_ecosystem]",
+                        "in": "query",
+                        "description": "Organism filter by specific ecosystem. Requires api_version=2",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "since",
+                        "in": "query",
+                        "description": "Search only in files added since date. Can be a YYYY-MM-DD ISO8601 date or an integer (number of days since now).",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api_version",
+                        "in": "query",
+                        "description": "API response version",
+                        "required": false,
+                        "type": "string",
+                        "default": "2"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of organisms, related files, and their metadata",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "file_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files for all the matching organisms"
+                                },
+                                "unique_file_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files for all matching organisms, de-duplicated (some files are shared across organisms)"
+                                },
+                                "prioritized_file_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files for all the prioritized organisms (relevance score >= threshold)"
+                                },
+                                "hits_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of files that matched your query"
+                                },
+                                "start": { "type": "integer", "format": "int32", "example": 1 },
+                                "end": { "type": "integer", "format": "int32", "example": 1 },
+                                "next_page": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 12,
+                                    "description": "Returns false if there is no next page, otherwise an integer"
+                                },
+                                "total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of matching organisms"
+                                },
+                                "prioritized_total": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "example": 1,
+                                    "description": "Total number of prioritized organisms (relevance score >= threshold)"
+                                },
+                                "score_threshold": {
+                                    "type": "number",
+                                    "format": "float",
+                                    "example": 8.0,
+                                    "description": "Relevance score threshold"
+                                },
+                                "cursor_id": { "type": "string", "example": "abc123:1" },
+                                "organisms": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string",
+                                                "example": "52b9c6f1166e730e43a34e46"
+                                            },
+                                            "name": { "type": "string", "example": "Alyrata foo" },
+                                            "title": {
+                                                "type": "string",
+                                                "example": "Alyrata foo project"
+                                            },
+                                            "kingdom": { "type": "string", "example": "Phytozome" },
+                                            "grouped_by": {
+                                                "type": "string",
+                                                "example": "metadata.phytozome.proteome_id"
+                                            },
+                                            "files": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "_id": {
+                                                            "type": "string",
+                                                            "example": "abc123"
+                                                        },
+                                                        "_highlight": {
+                                                            "type": "object",
+                                                            "example": {
+                                                                "comments": "Your search matched the <em>term</em> in a field."
+                                                            }
+                                                        },
+                                                        "data_group": {
+                                                            "type": "string",
+                                                            "example": "one of Analysis, Sequencing, or Other"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "fileSize": { "type": "integer", "format": "int32" },
+                                            "highlight": {
+                                                "type": "object",
+                                                "example": {
+                                                    "comments": "Your search matched the <em>term</em> in a field."
+                                                }
+                                            },
+                                            "portal_detail_id": {
+                                                "type": "string",
+                                                "example": "Org_abc"
+                                            },
+                                            "score": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "count": { "type": "integer" },
+                                                    "min": { "type": "number", "format": "float" },
+                                                    "max": { "type": "number", "format": "float" },
+                                                    "avg": { "type": "number", "format": "float" },
+                                                    "sum": { "type": "number", "format": "float" }
+                                                }
+                                            },
+                                            "grouped_count": { "type": "integer", "example": "1" }
+                                        }
+                                    }
+                                },
+                                "facets": {
+                                    "type": "object",
+                                    "properties": {
+                                        "file_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "PURGED": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "file_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "fastq": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Filtered Raw Data": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "meta_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_content": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_collection": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_source": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_version": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_policy": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_project": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_file_format": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_group": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Analysis": { "type": "integer", "example": "123" },
+                                                "Sequencing": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                },
+                                                "Other": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_class": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Gammaproteobacteria": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_order": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Poales": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_family": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycenaceae": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_genus": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycena": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_utilization_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_category": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "specific_ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        }
+                                    }
+                                },
+                                "filtered_facets": {
+                                    "type": "object",
+                                    "properties": {
+                                        "file_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "PURGED": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "file_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "fastq": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Filtered Raw Data": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "meta_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_content": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_collection": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_source": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "meta_file_format": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_group": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Analysis": { "type": "integer", "example": "123" },
+                                                "Sequencing": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                },
+                                                "Other": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_class": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Gammaproteobacteria": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_order": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Poales": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ncbi_taxon_family": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycenaceae": {
+                                                    "type": "integer",
+                                                    "example": "123"
+                                                }
+                                            }
+                                        },
+                                        "ncbi_taxon_genus": {
+                                            "type": "object",
+                                            "properties": {
+                                                "Mycena": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_version": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_policy": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "phytozome_project": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "data_utilization_status": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_category": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_type": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "ecosystem_subtype": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        },
+                                        "specific_ecosystem": {
+                                            "type": "object",
+                                            "properties": {
+                                                "example": { "type": "integer", "example": "123" }
+                                            }
+                                        }
+                                    }
+                                },
+                                "filters_applied": { "type": "boolean", "example": true },
+                                "timeout": { "type": "integer", "example": "1800" },
+                                "timings": {
+                                    "type": "object",
+                                    "example": {
+                                        "total": "2.137",
+                                        "file_fetch": "1.083",
+                                        "organisms": "0.329",
+                                        "facets": "0.526",
+                                        "filtered_facets": "0.181"
+                                    }
+                                },
+                                "fields": {
+                                    "type": "array",
+                                    "items": { "type": "string", "example": "file_status" }
+                                }
+                            }
+                        }
+                    },
+                    "403": { "description": "Access forbidden" },
+                    "404": { "description": "Not Found" }
+                },
+                "tags": ["GET"]
+            },
+            "parameters": []
+        }
+    },
+    "definitions": {}
+}

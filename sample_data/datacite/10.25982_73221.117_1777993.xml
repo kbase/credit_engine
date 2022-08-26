@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.25982/73221.117/1777993</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Wang, Jia</creatorName>
+      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0001-8709-9709</nameIdentifier>
+      <affiliation>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in R2A Medium</title>
+  </titles>
+  <publisher>Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)</publisher>
+  <publicationYear>2021</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+    <subject>community model, flux balance analysis, bacterial community, synthetic microbial community, plant-microbe interactions</subject>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1777993</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">AC05-00OR22725</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">None</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1529/biophysj.105.071720</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.1672</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/1471-2105-15-225</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1371/journal.pcbi.1003126</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1529/biophysj.107.124784</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.1186/gb-2009-10-6-r69</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/gb-2009-10-6-r69</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.1614</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/1471-2105-15-225</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.4163</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pcbi.1003126</relatedIdentifier>
+  </relatedIdentifiers>
+  <descriptions>
+    <description descriptionType="Abstract">This narrative was used for the 3-member community modeling using R2A medium for the bacteria isolated from Populus deltoides (PD). 10 bacteiral strains isolated from PD were co-cultured as a synthetic microbial community in R2A complex medium. After 15 passages, there were 3 members survived in R2A medium.The genome of each community member was sequenced and uploaded into KBase for genome annotation and metabolic modeling. To simulate the metabolic interactions among the finally surviving community members, the individual metabolic models of each strain were merged into a compartmentalized community model, and then the community model was gapfilled using R2A medium. The FBA modeling was performed and the metabolites exchange among community members was proposed.The publication by Jia Wang, Dana L. Carper, Leah H. Burdick, Him Shrestha, Manasa Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel J. Doktycz can be found here: &lt;a href='https://doi.org/10.​1016/​j.​csbj.​2021.​03.​034'&gt;https://doi.org/10.​1016/​j.​csbj.​2021.​03.​034&lt;/a&gt;</description>
+  </descriptions>
+</resource>

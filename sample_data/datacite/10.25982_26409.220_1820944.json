@@ -1,0 +1,189 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1820944",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 2,
+      "citationsOverTime": [
+        {
+          "total": 2,
+          "year": "2022"
+        }
+      ],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2021-09-21T02:21:34.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            "Cornell Univ., Ithaca, NY (United States)"
+          ],
+          "familyName": "Wilhelm",
+          "givenName": "Roland",
+          "name": "Wilhelm, Roland",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-1170-1753",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2021",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Overview of Dataset<br>This narrative contains assemblies for all Paraburkholderia discussed in Karasz et al. 2022, where their phosphate-solubilizing activity was measured. Assemblies were downloaded from NCBI and annotated with Prokka. These genomes were created in many Narratives and collected here to be more accessible Note: The following naming of assemblies does not correspond with current taxonomic names for the following: Paraburkholderia 5N = Paraburkholderia elongata 5NT <br>Paraburkholderia 1N = Paraburkholderia solitsuga 1NT <br>Paraburkholderia vancouverensis = Paraburkholderia madseniana RL16",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/26409.220/1820944",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1820944",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 2,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2021,
+      "published": "2021",
+      "publisher": "Cornell Univ., Ithaca, NY (United States)",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2021-09-21T02:21:35.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btu153",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4163",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        }
+      ],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "Paraburkholderia"
+        }
+      ],
+      "suffix": "26409.220/1820944",
+      "titles": [
+        {
+          "title": "Conditional Filamentation of Paraburkholderia elongata 5N - Data Container"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-05-25T20:59:22.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1820944/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8yNjQwOS4yMjAvMTgyMDk0NDwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V2lsaGVsbSwgUm9sYW5kPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTExNzAtMTc1MzwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Db3JuZWxsIFVuaXYuLCBJdGhhY2EsIE5ZIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkNvbmRpdGlvbmFsIEZpbGFtZW50YXRpb24gb2YgUGFyYWJ1cmtob2xkZXJpYSBlbG9uZ2F0YSA1TiAtIERhdGEgQ29udGFpbmVyPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkNvcm5lbGwgVW5pdi4sIEl0aGFjYSwgTlkgKFVuaXRlZCBTdGF0ZXMpPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+UGFyYWJ1cmtob2xkZXJpYTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODIwOTQ0PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkdlbm9tZS9HZW5ldGljcyBEYXRhPC9yZXNvdXJjZVR5cGU+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idHUxNTM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC40MTYzPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPk92ZXJ2aWV3IG9mIERhdGFzZXQmbHQ7YnImZ3Q7VGhpcyBuYXJyYXRpdmUgY29udGFpbnMgYXNzZW1ibGllcyBmb3IgYWxsIFBhcmFidXJraG9sZGVyaWEgZGlzY3Vzc2VkIGluIEthcmFzeiBldCBhbC4gMjAyMiwgd2hlcmUgdGhlaXIgcGhvc3BoYXRlLXNvbHViaWxpemluZyBhY3Rpdml0eSB3YXMgbWVhc3VyZWQuIEFzc2VtYmxpZXMgd2VyZSBkb3dubG9hZGVkIGZyb20gTkNCSSBhbmQgYW5ub3RhdGVkIHdpdGggUHJva2thLiBUaGVzZSBnZW5vbWVzIHdlcmUgY3JlYXRlZCBpbiBtYW55IE5hcnJhdGl2ZXMgYW5kIGNvbGxlY3RlZCBoZXJlIHRvIGJlIG1vcmUgYWNjZXNzaWJsZSAgTm90ZTogVGhlIGZvbGxvd2luZyBuYW1pbmcgb2YgYXNzZW1ibGllcyBkb2VzIG5vdCBjb3JyZXNwb25kIHdpdGggY3VycmVudCB0YXhvbm9taWMgbmFtZXMgZm9yIHRoZSBmb2xsb3dpbmc6ICBQYXJhYnVya2hvbGRlcmlhIDVOID0gUGFyYWJ1cmtob2xkZXJpYSBlbG9uZ2F0YSA1TlQgICZsdDticiZndDtQYXJhYnVya2hvbGRlcmlhIDFOID0gUGFyYWJ1cmtob2xkZXJpYSBzb2xpdHN1Z2EgMU5UICAmbHQ7YnImZ3Q7UGFyYWJ1cmtob2xkZXJpYSB2YW5jb3V2ZXJlbnNpcyA9IFBhcmFidXJraG9sZGVyaWEgbWFkc2VuaWFuYSBSTDE2PC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4="
+    },
+    "id": "10.25982/26409.220/1820944",
+    "relationships": {
+      "citations": {
+        "data": [
+          {
+            "id": "10.1093/bioinformatics/btu153",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.4163",
+            "type": "dois"
+          }
+        ]
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/26409.220/1820944",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1637360",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "AC02-05CH11231",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2021-05-07T03:34:00.000Z",
+      "creators": [
+        {
+          "affiliation": [],
+          "familyName": "Kothari",
+          "givenName": "Ankita",
+          "name": "Kothari, Ankita",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+          ],
+          "familyName": "Roux",
+          "givenName": "Simon",
+          "name": "Roux, Simon",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Zhang",
+          "givenName": "Hanqiao",
+          "name": "Zhang, Hanqiao",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Prieto",
+          "givenName": "Anatori",
+          "name": "Prieto, Anatori",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+          ],
+          "familyName": "Chandonia",
+          "givenName": "John-Marc",
+          "name": "Chandonia, John-Marc",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Spencer",
+          "givenName": "Sarah",
+          "name": "Spencer, Sarah",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Wu",
+          "givenName": "Xiaoqin",
+          "name": "Wu, Xiaoqin",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+          ],
+          "familyName": "Deutschbauer",
+          "givenName": "Adam",
+          "name": "Deutschbauer, Adam",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+          ],
+          "familyName": "Arkin",
+          "givenName": "Adam",
+          "name": "Arkin, Adam",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Massachusetts Inst. of Technology (MIT), Cambridge, MA (United States)"
+          ],
+          "familyName": "Alm",
+          "givenName": "Eric",
+          "name": "Alm, Eric",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+          ],
+          "familyName": "Chakraborty",
+          "givenName": "Romy",
+          "name": "Chakraborty, Romy",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [],
+          "familyName": "Mukhopadhyay",
+          "givenName": "Aindrila",
+          "name": "Mukhopadhyay, Aindrila",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2020",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance. This Narrative contains data for the 261 ENIGMA isolates described in the paper. See Table S2 for a complete list.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/63776.53/1637360",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1637360",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "AC02-05CH11231",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 1,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2020,
+      "published": "2020",
+      "publisher": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)",
+      "reason": null,
+      "referenceCount": 13,
+      "registered": "2021-05-07T03:34:03.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btu153",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.14806/ej.17.1.200",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-018-07641-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-538",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btz848",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btu170",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1002195",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.14806/ej.17.1.200",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1089/cmb.2012.0021",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btz848",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4229",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4229",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41587-020-0501-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pone.0009490",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1128/msystems.00537-21",
+          "relatedIdentifierType": "DOI",
+          "relationType": "IsSupplementedBy"
+        }
+      ],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "Virus"
+        },
+        {
+          "subject": "Genome"
+        },
+        {
+          "subject": "Biology"
+        },
+        {
+          "subject": "Environment"
+        }
+      ],
+      "suffix": "63776.53/1637360",
+      "titles": [
+        {
+          "title": "Isolate genomes from \"Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance\""
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Dataset",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-07-29T02:04:58.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1637360/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi82Mzc3Ni41My8xNjM3MzYwPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Lb3RoYXJpLCBBbmtpdGE8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlJvdXgsIFNpbW9uPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlpoYW5nLCBIYW5xaWFvPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QcmlldG8sIEFuYXRvcmk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkNoYW5kb25pYSwgSm9obi1NYXJjPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYi4gKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TcGVuY2VyLCBTYXJhaDwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V3UsIFhpYW9xaW48L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkRldXRzY2hiYXVlciwgQWRhbTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QXJraW4sIEFkYW08L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+TGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFiLiAoTEJOTCksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkFsbSwgRXJpYzwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5NYXNzYWNodXNldHRzIEluc3QuIG9mIFRlY2hub2xvZ3kgKE1JVCksIENhbWJyaWRnZSwgTUEgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5DaGFrcmFib3J0eSwgUm9teTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TXVraG9wYWRoeWF5LCBBaW5kcmlsYTwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPklzb2xhdGUgZ2Vub21lcyBmcm9tICJFY29nZW5vbWljcyBvZiBncm91bmR3YXRlciB2aXJ1c2VzIHN1Z2dlc3RzIG5pY2hlIGRpZmZlcmVudGlhdGlvbiBsaW5rZWQgdG8gc3BlY2lmaWMgZW52aXJvbm1lbnRhbCB0b2xlcmFuY2UiPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYm9yYXRvcnkgKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIwPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdC8+CiAgICA8c3ViamVjdD5WaXJ1czwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pkdlbm9tZTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkJpb2xvZ3k8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5FbnZpcm9ubWVudDwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xNjM3MzYwPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPkFDMDItMDVDSDExMjMxPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5EYXRhc2V0PC9yZXNvdXJjZVR5cGU+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idHUxNTM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj5kb2k6MTAuMTQ4MDYvZWouMTcuMS4yMDA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L3M0MTQ2Ny0wMTgtMDc2NDEtOTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExODYvMTQ3MS0yMTA1LTExLTExOTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExODYvMTQ3MS0yMTA1LTExLTUzODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnR6ODQ4PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idHUxNzA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMzcxL2pvdXJuYWwucGNiaS4xMDAyMTk1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xNDgwNi9lai4xNy4xLjIwMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwODkvY21iLjIwMTIuMDAyMTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idHo4NDg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC40MjI5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMDM4L25idC40MjI5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9zNDE1ODctMDIwLTA1MDEtODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEzNzEvam91cm5hbC5wb25lLjAwMDk0OTA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudGVkQnkiPjEwLjExMjgvbVN5c3RlbXMuMDA1MzctMjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+RWNvZ2Vub21pY3Mgb2YgZ3JvdW5kd2F0ZXIgdmlydXNlcyBzdWdnZXN0cyBuaWNoZSBkaWZmZXJlbnRpYXRpb24gbGlua2VkIHRvIHNwZWNpZmljIGVudmlyb25tZW50YWwgdG9sZXJhbmNlLiBUaGlzIE5hcnJhdGl2ZSBjb250YWlucyBkYXRhIGZvciB0aGUgMjYxIEVOSUdNQSBpc29sYXRlcyBkZXNjcmliZWQgaW4gdGhlIHBhcGVyLiBTZWUgVGFibGUgUzIgZm9yIGEgY29tcGxldGUgbGlzdC48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+    },
+    "id": "10.25982/63776.53/1637360",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/63776.53/1637360",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": [
+          {
+            "id": "10.1093/bioinformatics/btu153",
+            "type": "dois"
+          },
+          {
+            "id": "10.14806/ej.17.1.200",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/s41467-018-07641-9",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2105-11-119",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/1471-2105-11-538",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/btz848",
+            "type": "dois"
+          },
+          {
+            "id": "10.1093/bioinformatics/btu170",
+            "type": "dois"
+          },
+          {
+            "id": "10.1371/journal.pcbi.1002195",
+            "type": "dois"
+          },
+          {
+            "id": "10.1089/cmb.2012.0021",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.4229",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/s41587-020-0501-8",
+            "type": "dois"
+          },
+          {
+            "id": "10.1371/journal.pone.0009490",
+            "type": "dois"
+          },
+          {
+            "id": "10.1128/msystems.00537-21",
+            "type": "dois"
+          }
+        ]
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}
