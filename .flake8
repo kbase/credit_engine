@@ -10,6 +10,7 @@ extend-exclude =
 .venv,
 *.pyc,
 .github,
+deps,
 other_schema,
 python-coverage,
 sample_data

@@ -8,3 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: psf/black@stable
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Auto-commit black formatting changes

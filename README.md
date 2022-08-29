@@ -24,9 +24,7 @@ poetry shell
 
 ### Metadata Schema
 
-The metadata schema is maintained in [linkml format](https://linkml.io), with other formats (including the python class) generated from the [linkml schema file](schema/linkml/metadata.yaml).
-
-![Schema diagram](/schema/metadata_schema.png "Metadata schema diagram")
+The metadata schema is maintained in [linkml format](https://linkml.io), with other formats (including the python class) generated from the [linkml schema file](schema/kbase/linkml/metadata.yaml).
 
 See the [linkml documentation](https://linkml.io/linkml/index.html) for full details on using the linkml format and the related tools.
 
