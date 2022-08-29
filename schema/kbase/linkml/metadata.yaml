@@ -65,7 +65,7 @@ classes:
         - DataCite:Resource.Contributors
         - DataCite:Resource.Creators
 
-      alternate_identifiers:
+      related_identifiers:
         description: other resolvable persistent unique IDs used to access the resource or related resources
         multivalued: true
         range: ResolvablePID
