@@ -1,0 +1,90 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"The Ohio State Univ., Columbus, OH (United States)\",\"last_name\":\"Bolduc\",\"orcid\":\"0000000324200755\",\"middle_name\":\"\",\"first_name\":\"Benjamin\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Wood-Charlson\",\"orcid\":\"0000000195577715\",\"middle_name\":\"\",\"first_name\":\"Elisha\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Dehal\",\"orcid\":\"0000000158102497\",\"middle_name\":\"\",\"first_name\":\"Paramvir\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Crockett\",\"orcid\":\"0000000328714454\",\"middle_name\":\"\",\"first_name\":\"Zachary\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "The Ohio State Univ., Columbus, OH (United States)",
+        "contributor_type": "",
+        "first_name": "Benjamin",
+        "last_name": "Bolduc",
+        "middle_name": "",
+        "orcid": "0000000324200755",
+        "role": "PRIMARY"
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Elisha",
+        "last_name": "Wood-Charlson",
+        "middle_name": "",
+        "orcid": "0000000195577715",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Paramvir",
+        "last_name": "Dehal",
+        "middle_name": "",
+        "orcid": "0000000158102497",
+        "role": ""
+      },
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Zachary",
+        "last_name": "Crockett",
+        "middle_name": "",
+        "orcid": "0000000328714454",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Bolduc, Benjamin [The Ohio State Univ., Columbus, OH (United States)] (ORCID:0000000324200755)",
+      "Wood-Charlson, Elisha [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)",
+      "Dehal, Paramvir [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000158102497)",
+      "Crockett, Zachary [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000328714454)"
+    ],
+    "country_publication": "United States",
+    "description": "This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2.",
+    "doe_contract_number": "AC02-05CH11231, AC02-06CH11357, AC05-00OR22725,",
+    "doi": "https://doi.org/10.25982/59912.37/1635154",
+    "entry_date": "2020-11-30T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1635154",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1635154",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1635154",
+    "product_type": "Dataset",
+    "publication_date": "2020-06-28T00:00:00Z",
+    "research_orgs": [
+      "Lawrence Livermore National Lab. (LLNL), Livermore, CA (United States)",
+      "The Ohio State Univ., Columbus, OH (United States)",
+      "U.S. Department of Energy Systems Biology Knowledgebase",
+      "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "Virus",
+      "Genomics",
+      "Bioinformatics"
+    ],
+    "title": "Viral Annotation Pipeline in KBase"
+  }
+]

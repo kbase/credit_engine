@@ -1,0 +1,104 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Dow\",\"orcid\":\"0000000220790260\",\"middle_name\":\"G\",\"first_name\":\"Ellen\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Wood-Charlson\",\"orcid\":\"0000000195577715\",\"middle_name\":\"M\",\"first_name\":\"Elisha\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Hess\",\"orcid\":\"0000000289309500\",\"middle_name\":\"\",\"first_name\":\"Nancy\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Scheibe\",\"orcid\":\"0000000288645772\",\"middle_name\":\"\",\"first_name\":\"Timothy\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Ellen",
+        "last_name": "Dow",
+        "middle_name": "G",
+        "orcid": "0000000220790260",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Elisha",
+        "last_name": "Wood-Charlson",
+        "middle_name": "M",
+        "orcid": "0000000195577715",
+        "role": ""
+      },
+      {
+        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+        "contributor_type": "",
+        "first_name": "Nancy",
+        "last_name": "Hess",
+        "middle_name": "",
+        "orcid": "0000000289309500",
+        "role": ""
+      },
+      {
+        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+        "contributor_type": "",
+        "first_name": "Timothy",
+        "last_name": "Scheibe",
+        "middle_name": "",
+        "orcid": "0000000288645772",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Dow, Ellen G [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000220790260)",
+      "Wood-Charlson, Elisha M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)",
+      "Hess, Nancy [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:0000000289309500)",
+      "Scheibe, Timothy [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:0000000288645772)"
+    ],
+    "contributing_org": "Worldwide Hydrobiogeochemical Observation Network for Dynamic River Systems (WHONDRS); DOE Environmental Systems Science Data Infrastructure for a Virtual Ecosystem (ESS-DIVE); Subsurface Biogeochemical Research (SBR)",
+    "country_publication": "United States",
+    "description": "The 2020 Multiscale Microbial Dynamics course is adapted from the virtual 2020 Mutliscale Microbial Dynamics Summer School that was hosted by Environmental Molecular Sciences Laboratory (EMSL), a U.S. Department of Energy (DOE) science user facility located on the Pacific Northwest National Laboratory (PNNL) campus, in collaboration with the Joint Genome Institute (JGI) and the DOE Systems Biology Knowledgebase (KBase). The course course covers how to incorporate microbial metagenomic and environmental metabolite data from watershed ecosystems into metabolic and community modeling using computational frameworks, such as KBase and PFLOTRAN. The curriculum includes lectures and software and data analysis tutorials. All materials are freely accessible to the community as part of the 2020 Microbial Dynamics Summer School Organization in KBase.",
+    "doe_contract_number": "AC02-05CH11231; AC05-76RL01830",
+    "doi": "https://doi.org/10.25982/1722943",
+    "entry_date": "2020-12-17T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1722943",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1722943",
+        "rel": "fulltext"
+      }
+    ],
+    "org_research": [
+      "name=Lawrence Berkeley National Laboratory\nid_ror=https://ror.org/02jbv0t02\nid_isni=0000 0001 2231 4551\nid_fundref=100006235\nid_orgref=62214\nid_wikidata=Q1133630\nid_grid=grid.184769.5\nid_geonames_city_id=5327684\nlat=37.8754425\nlng=-122.245537",
+      "name=DOE Systems Biology Knowledgebase \r\n(KBase)",
+      "name=Environmental Molecular Sciences Laboratory (EMSL), Richland, WA (United States)",
+      "name=Pacific Northwest National Laboratory\nid_ror=https://ror.org/05h992307\nid_geonames_city_id=5808276\nid_wikidata=Q1076890\nid_orgref=75797\nid_grid=grid.451303.0\nid_isni=0000 0001 2218 3491\nlat=46.3432236\nlng=-119.276337",
+      "name=Joint Genome Institute (JGI), Berkeley, CA (United States)"
+    ],
+    "osti_id": "1722943",
+    "product_type": "Dataset",
+    "publication_date": "2020-12-01T00:00:00Z",
+    "research_orgs": [
+      "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+      "DOE Systems Biology Knowledgebase (KBase)",
+      "Environmental Molecular Sciences Laboratory (EMSL), Richland, WA (United States)",
+      "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+      "Joint Genome Institute (JGI), Berkeley, CA (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "96 KNOWLEDGE MANAGEMENT AND PRESERVATION",
+      "54 ENVIRONMENTAL SCIENCES",
+      "metagenomic",
+      "metabolomic",
+      "metabolic modeling",
+      "reactive transport model",
+      "microbial community",
+      "watershed ecosystem",
+      "data analysis",
+      "data science"
+    ],
+    "title": "2020 Multiscale Microbial Dynamics Modeling Course"
+  }
+]

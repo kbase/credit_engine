@@ -1,0 +1,54 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Podar\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Mircea\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Mircea",
+        "last_name": "Podar",
+        "middle_name": "",
+        "orcid": "",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Podar, Mircea [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)]"
+    ],
+    "country_publication": "United States",
+    "description": "This Narrative was used for a complete genome sequence of a new strain of Terriglobus albidus. It is a heterotrophic bacterium associated with the rhizophere of the eastern cottonwood tree (Populus deltoides).",
+    "doe_contract_number": "AC05-00OR22725; AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/44746.21/1635640",
+    "entry_date": "2021-09-29T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1635640",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1635640",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1635640",
+    "product_type": "Dataset",
+    "publication_date": "2020-07-02T00:00:00Z",
+    "research_orgs": [
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "Genome",
+      "KBase",
+      "Biology"
+    ],
+    "title": "Complete Genome Sequence of Terriglobus albidus Strain ORNL, an Acidobacterium Isolated from the Populus deltoides Rhizosphere"
+  }
+]

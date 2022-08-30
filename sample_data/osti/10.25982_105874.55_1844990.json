@@ -1,0 +1,51 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Univ. of Georgia, Athens, GA (United States)\",\"last_name\":\"Goff\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Jennifer\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Univ. of Georgia, Athens, GA (United States)",
+        "contributor_type": "",
+        "first_name": "Jennifer",
+        "last_name": "Goff",
+        "middle_name": "",
+        "orcid": "",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Goff, Jennifer [Univ. of Georgia, Athens, GA (United States)]"
+    ],
+    "country_publication": "United States",
+    "description": "Bacillus cereus strain CPT56D-587-MTF (also referred to as CPTF) was isolated from a nitrate and heavy-metal contaminated site at the Oak Ridge Field Research Center (ORFRC) in Oak Ridge, Tennessee, USA. Strain CPTF has 100% 16S rRNA gene identity to the most abundant metagenome 16S v4 region amplicon sequence variant (ASV) in the soils of the highly contaminated Area 3, the site immediately adjacent to the contamination source: the former S-3 ponds.",
+    "doe_contract_number": "DE-AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/105874.55/1844990",
+    "entry_date": "2022-05-03T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1844990",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1844990",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1844990",
+    "product_type": "Dataset",
+    "publication_date": "2022-02-14T00:00:00Z",
+    "research_orgs": [
+      "Univ. of Georgia, Athens, GA (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "isolate, genome, Bacillus, bacteria, metals, nitrate, Bacillus cereus"
+    ],
+    "title": "Complete Genome of ORR Isolate Bacillus cereus CPT56D-587-MTF"
+  }
+]

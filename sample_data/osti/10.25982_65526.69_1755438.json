@@ -1,0 +1,65 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"University of Nebraska-Lincoln\",\"last_name\":\"Song\",\"orcid\":\"0000000221546358\",\"middle_name\":\"\",\"first_name\":\"Hyun-Seob\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Lee\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Joon-Yong\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "University of Nebraska-Lincoln",
+        "contributor_type": "",
+        "first_name": "Hyun-Seob",
+        "last_name": "Song",
+        "middle_name": "",
+        "orcid": "0000000221546358",
+        "role": "PRIMARY"
+      },
+      {
+        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+        "contributor_type": "",
+        "first_name": "Joon-Yong",
+        "last_name": "Lee",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Song, Hyun-Seob [University of Nebraska-Lincoln] (ORCID:0000000221546358)",
+      "Lee, Joon-Yong [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)]"
+    ],
+    "country_publication": "United States",
+    "description": "This tutorial Narrative demonstrates how to apply thermodynamic theory, also known as lambda theory, to convert molecular formulas of compounds (derived from FTICR-MS peaks using Formulatiry and R codes) into stoichiometric and kinetic forms of biogeochemical reactions and how to use the resulting kinetic equations to simulate dynamic conversion of compounds in batch and continuous stirred tank reactors. It will address under what conditions respiration rates are driven by thermodynamics, and how respiration rates respond to the variations in parameters and input variables and how to interpret the results.",
+    "doi": "https://doi.org/10.25982/65526.69/1755438",
+    "entry_date": "2021-01-05T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1755438",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1755438",
+        "rel": "fulltext"
+      }
+    ],
+    "org_research": [
+      "name=Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)\r\nUniversity of Nebraska-Lincoln, Lincoln, NE (United States)"
+    ],
+    "osti_id": "1755438",
+    "product_type": "Dataset",
+    "publication_date": "2020-09-30T00:00:00Z",
+    "research_orgs": [
+      "Pacific Northwest National Laboratory (PNNL), Richland, WA (United States) University of Nebraska-Lincoln, Lincoln, NE (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "96 KNOWLEDGE MANAGEMENT AND PRESERVATION",
+      "54 ENVIRONMENTAL SCIENCES",
+      "FTICR-MS, batch reactors, continuous stirred tank reactors (CSTR)"
+    ],
+    "title": "Substrate-explicit Modeling Tutorial"
+  }
+]

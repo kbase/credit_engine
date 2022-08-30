@@ -1,0 +1,48 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"The Ohio State University\",\"last_name\":\"Bolduc\",\"orcid\":\"0000000324200755\",\"middle_name\":\"\",\"first_name\":\"Benjamin\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "The Ohio State University",
+        "contributor_type": "",
+        "first_name": "Benjamin",
+        "last_name": "Bolduc",
+        "middle_name": "",
+        "orcid": "0000000324200755",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Bolduc, Benjamin [The Ohio State University] (ORCID:0000000324200755)"
+    ],
+    "country_publication": "United States",
+    "description": "This pipeline processes a single metagenomic dataset (downloaded from NCBI SRA) from the Global Ocean Viromes dataset, identifies the viral sequences using VirSorter, and subsequently classifies them with vConTACT2. Along the way there are several intermediary steps to convert files from one KBase object to another - and though some of these can be skipped for this particular dataset - we're explicitly doing them here as to be more easily generalized to other datasets.",
+    "doe_contract_number": "AC02-05CH11231, AC02-06CH11357, AC05-00OR22725",
+    "doi": "https://doi.org/10.25982/75811.86/1868934",
+    "entry_date": "2022-05-23T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1868934",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1868934",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1868934",
+    "product_type": "Dataset",
+    "publication_date": "2022-05-12T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "KBase Narrative - Viral Analysis End-to-End"
+  }
+]

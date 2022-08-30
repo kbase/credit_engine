@@ -1,0 +1,51 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Podar\",\"orcid\":\"0000000327760205\",\"middle_name\":\"\",\"first_name\":\"Mircea\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Mircea",
+        "last_name": "Podar",
+        "middle_name": "",
+        "orcid": "0000000327760205",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Podar, Mircea [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000327760205)"
+    ],
+    "country_publication": "United States",
+    "description": "Roseimicrobium sp. strain ORNL1 is a soil bacterium that belongs to the phylum Verrucomicrobia and was isolated from the rhizosphere of a forest Eastern cottonwood tree, Populus deltoides, in Tennessee. Its 7.9-Mb chromosome was completely sequenced using PacBio long reads and is predicted to encode 6,288 proteins and 76 RNAs.",
+    "doe_contract_number": "AC05-00OR22725",
+    "doi": "https://doi.org/10.25982/56021.26/1637512",
+    "entry_date": "2021-10-27T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1637512",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1637512",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1637512",
+    "product_type": "Dataset",
+    "publication_date": "2020-07-07T00:00:00Z",
+    "research_orgs": [
+      "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States) U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "bioinformatics, genome, genome announcement"
+    ],
+    "title": "Complete Genome Sequence of the Novel Roseimicrobium sp. Strain ORNL1, a Verrucomicrobium Isolated from the Populus deltoides Rhizosphere"
+  }
+]

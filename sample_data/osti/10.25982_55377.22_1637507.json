@@ -1,0 +1,53 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"podar\",\"orcid\":\"0000000327760205\",\"middle_name\":\"\",\"first_name\":\"Mircea\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Mircea",
+        "last_name": "podar",
+        "middle_name": "",
+        "orcid": "0000000327760205",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "podar, Mircea [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000327760205)"
+    ],
+    "country_publication": "United States",
+    "description": "Starkeya sp. strain ORNL1 is an alphaproteobacterium isolated from the rhizosphere of an Eastern cottonwood tree. Starkeya spp. are physiologically versatile, using a wide range of nutritional and energetic resources and serving important ecological roles in carbon and sulfur cycling. The 6.3-Mb chromosome of Starkeya sp. strain ORNL1 was completely sequenced and will help in understanding nutrient cycles.",
+    "doe_contract_number": "AC05-00OR22725",
+    "doi": "https://doi.org/10.25982/55377.22/1637507",
+    "entry_date": "2021-10-27T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1637507",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1637507",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1637507",
+    "product_type": "Dataset",
+    "publication_date": "2020-07-07T00:00:00Z",
+    "research_orgs": [
+      "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States) U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "Bioinformatics",
+      "genome",
+      "genome announcement"
+    ],
+    "title": "Complete Genome Sequence of Starkeya sp. Strain ORNL1, a Soil Alphaproteobacterium Isolated from the Rhizosphere of Populus deltoides"
+  }
+]

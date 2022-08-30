@@ -1,0 +1,224 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Chivian\",\"orcid\":\"0000000181898729\",\"middle_name\":\"\",\"first_name\":\"Dylan\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Jungbluth\",\"orcid\":\"0000000192658341\",\"middle_name\":\"P\",\"first_name\":\"Sean\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Dehal\",\"orcid\":\"0000000158102497\",\"middle_name\":\"S\",\"first_name\":\"Paramvir\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Wood-Charlson\",\"orcid\":\"0000000195577715\",\"middle_name\":\"\",\"first_name\":\"Elisha\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Canon\",\"orcid\":\"000000028440738X\",\"middle_name\":\"S\",\"first_name\":\"Richard\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Allen\",\"orcid\":\"000000026325859X\",\"middle_name\":\"H\",\"first_name\":\"Benjamin\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Clark\",\"orcid\":\"0000000228623416\",\"middle_name\":\"M\",\"first_name\":\"Mikayla\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Argonne National Lab. (ANL), Argonne, IL (United States)\",\"last_name\":\"Gu\",\"orcid\":\"0000000230531967\",\"middle_name\":\"\",\"first_name\":\"Tianhao\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Land\",\"orcid\":\"0000000171020031\",\"middle_name\":\"L\",\"first_name\":\"Miriam\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Price\",\"orcid\":\"\",\"middle_name\":\"A\",\"first_name\":\"Gavin\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Riehl\",\"orcid\":\"0000000234052744\",\"middle_name\":\"J\",\"first_name\":\"William\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Sneddon\",\"orcid\":\"\",\"middle_name\":\"W\",\"first_name\":\"Michael\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Sutormin\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Roman\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Argonne National Lab. (ANL), Argonne, IL (United States)\",\"last_name\":\"Zhang\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Qizhi\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Cottingham\",\"orcid\":\"0000000227753905\",\"middle_name\":\"W\",\"first_name\":\"Robert\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Argonne National Lab. (ANL), Argonne, IL (United States)\",\"last_name\":\"Henry\",\"orcid\":\"0000000180589123\",\"middle_name\":\"S\",\"first_name\":\"Christopher\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Arkin\",\"orcid\":\"0000000249992931\",\"middle_name\":\"P\",\"first_name\":\"Adam\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Dylan",
+        "last_name": "Chivian",
+        "middle_name": "",
+        "orcid": "0000000181898729",
+        "role": "PRIMARY"
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Sean",
+        "last_name": "Jungbluth",
+        "middle_name": "P",
+        "orcid": "0000000192658341",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Paramvir",
+        "last_name": "Dehal",
+        "middle_name": "S",
+        "orcid": "0000000158102497",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Elisha",
+        "last_name": "Wood-Charlson",
+        "middle_name": "",
+        "orcid": "0000000195577715",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Richard",
+        "last_name": "Canon",
+        "middle_name": "S",
+        "orcid": "000000028440738X",
+        "role": ""
+      },
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Benjamin",
+        "last_name": "Allen",
+        "middle_name": "H",
+        "orcid": "000000026325859X",
+        "role": ""
+      },
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Mikayla",
+        "last_name": "Clark",
+        "middle_name": "M",
+        "orcid": "0000000228623416",
+        "role": ""
+      },
+      {
+        "affiliation": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "contributor_type": "",
+        "first_name": "Tianhao",
+        "last_name": "Gu",
+        "middle_name": "",
+        "orcid": "0000000230531967",
+        "role": ""
+      },
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Miriam",
+        "last_name": "Land",
+        "middle_name": "L",
+        "orcid": "0000000171020031",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Gavin",
+        "last_name": "Price",
+        "middle_name": "A",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "William",
+        "last_name": "Riehl",
+        "middle_name": "J",
+        "orcid": "0000000234052744",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Michael",
+        "last_name": "Sneddon",
+        "middle_name": "W",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Roman",
+        "last_name": "Sutormin",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "contributor_type": "",
+        "first_name": "Qizhi",
+        "last_name": "Zhang",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Robert",
+        "last_name": "Cottingham",
+        "middle_name": "W",
+        "orcid": "0000000227753905",
+        "role": ""
+      },
+      {
+        "affiliation": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "contributor_type": "",
+        "first_name": "Christopher",
+        "last_name": "Henry",
+        "middle_name": "S",
+        "orcid": "0000000180589123",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Adam",
+        "last_name": "Arkin",
+        "middle_name": "P",
+        "orcid": "0000000249992931",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Chivian, Dylan [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000181898729)",
+      "Jungbluth, Sean P [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000192658341)",
+      "Dehal, Paramvir S [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000158102497)",
+      "Wood-Charlson, Elisha [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)",
+      "Canon, Richard S [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:000000028440738X)",
+      "Allen, Benjamin H [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:000000026325859X)",
+      "Clark, Mikayla M [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000228623416)",
+      "Gu, Tianhao [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000230531967)",
+      "Land, Miriam L [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000171020031)",
+      "Price, Gavin A [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]",
+      "Riehl, William J [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000234052744)",
+      "Sneddon, Michael W",
+      "Sutormin, Roman",
+      "Zhang, Qizhi [Argonne National Lab. (ANL), Argonne, IL (United States)]",
+      "Cottingham, Robert W [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000227753905)",
+      "Henry, Christopher S [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000180589123)",
+      "Arkin, Adam P [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000249992931)"
+    ],
+    "country_publication": "United States",
+    "description": "Uncultivated Bacteria and Archaea comprise the vast majority of species on Earth, but obtaining their genomes directly from the environment, using shotgun sequencing, has only recently become possible. To realize the hope of capturing Earth\u2019s microbial genetic complement, technologies that accelerate recovery of high-quality genomes are necessary. We present a series of analysis steps and data products for the extraction of high quality metagenome-assembled genomes (MAGs) from microbiomes using the U.S. Department of Energy Systems Biology Knowledgebase (KBase) platform (http://www.kbase.us/). In KBase, the process is end-to-end, allowing a user to go from the initial sequencing reads all the way through to MAG genomes, which can then be analyzed with other KBase capabilities such as phylogenetic placement, functional assignment, metabolic modeling, pangenome functional profiling, RNA-Seq, and others. While portions of such capabilities are individually available from other resources, the combination of the intuitive usability, data interoperability, and integration of tools in a freely available compute resource makes KBase a uniquely powerful platform for obtaining MAGs from microbiomes. While this workflow offers tools for each of the key steps in the genome extraction process, it also provides a scaffold that can be easily extended, with additional MAG recovery and analysis tools, via the KBase SDK (Software Development Kit).",
+    "doe_contract_number": "DE-AC02-05CH11231, DE-AC02-06CH11357, DE-AC05-00OR22725, and DE-AC02-98CH10886",
+    "doi": "https://doi.org/10.25982/62384.253/1831503",
+    "entry_date": "2021-11-24T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1831503",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1831503",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1831503",
+    "product_type": "Dataset",
+    "publication_date": "2021-11-13T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "Moab Desert Crust - Sample 4E"
+  }
+]

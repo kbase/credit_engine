@@ -1,0 +1,54 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Wang\",\"orcid\":\"0000000187099709\",\"middle_name\":\"\",\"first_name\":\"Jia\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Jia",
+        "last_name": "Wang",
+        "middle_name": "",
+        "orcid": "0000000187099709",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Wang, Jia [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000187099709)"
+    ],
+    "country_publication": "United States",
+    "description": "This narrative was used for the 3-member community modeling using R2A medium for the bacteria isolated from Populus deltoides (PD). 10 bacteiral strains isolated from PD were co-cultured as a synthetic microbial community in R2A complex medium. After 15 passages, there were 3 members survived in R2A medium.\r\n\r\nThe genome of each community member was sequenced and uploaded into KBase for genome annotation and metabolic modeling. To simulate the metabolic interactions among the finally surviving community members, the individual metabolic models of each strain were merged into a compartmentalized community model, and then the community model was gapfilled using R2A medium. The FBA modeling was performed and the metabolites exchange among community members was proposed.\r\n\r\nThe publication by Jia Wang, Dana L. Carper, Leah H. Burdick, Him Shrestha, Manasa Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel J. Doktycz can be found here: <a href='https://doi.org/10.\u200b1016/\u200bj.\u200bcsbj.\u200b2021.\u200b03.\u200b034'>https://doi.org/10.\u200b1016/\u200bj.\u200bcsbj.\u200b2021.\u200b03.\u200b034</a>",
+    "doe_contract_number": "AC05-00OR22725",
+    "doi": "https://doi.org/10.25982/73221.117/1777993",
+    "entry_date": "2021-04-20T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1777993",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1777993",
+        "rel": "fulltext"
+      }
+    ],
+    "org_research": [
+      "name=Oak Ridge National Laboratory\nid_wikidata=Q714439\nid_ror=https://ror.org/01qz5mb56\nid_orgref=38147\nid_grid=grid.135519.a\nid_geonames_city_id=4646571\nid_fundref=100006228\nid_isni=0000 0004 0446 2659\nlat=35.9329987\nlng=-84.3170013"
+    ],
+    "osti_id": "1777993",
+    "product_type": "Dataset",
+    "publication_date": "2021-01-01T00:00:00Z",
+    "research_orgs": [
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "community model, flux balance analysis, bacterial community, synthetic microbial community, plant-microbe interactions"
+    ],
+    "title": "Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in R2A Medium"
+  }
+]

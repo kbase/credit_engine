@@ -1,0 +1,118 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Argonne National Laboratory\",\"last_name\":\"Henry\",\"orcid\":\"0000000180589123\",\"middle_name\":\"Scott\",\"first_name\":\"Christopher\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Department of Biochemistry and Redox Biology Center, University of Nebraska\",\"last_name\":\"Wilson\",\"orcid\":\"000000016317900X\",\"middle_name\":\"\",\"first_name\":\"Mark\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Hanson\",\"orcid\":\"0000000325859340\",\"middle_name\":\"\",\"first_name\":\"Andrew\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Biosciences Division, Oak Ridge National Laboratory\",\"last_name\":\"Abraham,\",\"orcid\":\"0000000326859123\",\"middle_name\":\"\",\"first_name\":\"Paul\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Horticultural Sciences Department, University of Florida\",\"last_name\":\"Leong\",\"orcid\":\"0000000340421160\",\"middle_name\":\"\",\"first_name\":\"Bryan\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Horticultural Sciences Department, University of Florida\",\"last_name\":\"McCarty\",\"orcid\":\"0000000186945117\",\"middle_name\":\"\",\"first_name\":\"Donald\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Horticultural Sciences Department, University of Florida\",\"last_name\":\"Bathe\",\"orcid\":\"000000020454502X\",\"middle_name\":\"\",\"first_name\":\"Ulschan\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Argonne National Laboratory",
+        "contributor_type": "",
+        "first_name": "Christopher",
+        "last_name": "Henry",
+        "middle_name": "Scott",
+        "orcid": "0000000180589123",
+        "role": ""
+      },
+      {
+        "affiliation": "Department of Biochemistry and Redox Biology Center, University of Nebraska",
+        "contributor_type": "",
+        "first_name": "Mark",
+        "last_name": "Wilson",
+        "middle_name": "",
+        "orcid": "000000016317900X",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Andrew",
+        "last_name": "Hanson",
+        "middle_name": "",
+        "orcid": "0000000325859340",
+        "role": ""
+      },
+      {
+        "affiliation": "Biosciences Division, Oak Ridge National Laboratory",
+        "contributor_type": "",
+        "first_name": "Paul",
+        "last_name": "Abraham,",
+        "middle_name": "",
+        "orcid": "0000000326859123",
+        "role": ""
+      },
+      {
+        "affiliation": "Horticultural Sciences Department, University of Florida",
+        "contributor_type": "",
+        "first_name": "Bryan",
+        "last_name": "Leong",
+        "middle_name": "",
+        "orcid": "0000000340421160",
+        "role": ""
+      },
+      {
+        "affiliation": "Horticultural Sciences Department, University of Florida",
+        "contributor_type": "",
+        "first_name": "Donald",
+        "last_name": "McCarty",
+        "middle_name": "",
+        "orcid": "0000000186945117",
+        "role": ""
+      },
+      {
+        "affiliation": "Horticultural Sciences Department, University of Florida",
+        "contributor_type": "",
+        "first_name": "Ulschan",
+        "last_name": "Bathe",
+        "middle_name": "",
+        "orcid": "000000020454502X",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Henry, Christopher Scott [Argonne National Laboratory] (ORCID:0000000180589123)",
+      "Wilson, Mark [Department of Biochemistry and Redox Biology Center, University of Nebraska] (ORCID:000000016317900X)",
+      "Hanson, Andrew (ORCID:0000000325859340)",
+      "Abraham,, Paul [Biosciences Division, Oak Ridge National Laboratory] (ORCID:0000000326859123)",
+      "Leong, Bryan [Horticultural Sciences Department, University of Florida] (ORCID:0000000340421160)",
+      "McCarty, Donald [Horticultural Sciences Department, University of Florida] (ORCID:0000000186945117)",
+      "Bathe, Ulschan [Horticultural Sciences Department, University of Florida] (ORCID:000000020454502X)"
+    ],
+    "country_publication": "United States",
+    "description": "Enzymes have in vivo lifespans. Analysis of lifespans \u2013 lifetime totals of catalytic turnovers \u2013 suggests that non-survivable collateral chemical damage from the very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme death. Analysis also implies that many enzymes are moderately deficient in that their active-site regions are not naturally as hardened against such collateral damage as they could be, leaving room for improvement by rational design or directed evolution. Enzyme lifespan might also be improved by engineering systems that repair otherwise fatal active-site damage, of which a handful are known and more are inferred to exist. Unfortunately, the data needed to design and execute such improvements is lacking: there are too few measurements of in vivo lifespan, and existing information on the extent, nature, and mechanisms of active-site damage and repair during normal enzyme operation is too scarce, anecdotal, and speculative to act on. Fortunately, advances in proteomics, metabolomics, cheminformatics, comparative genomics, and structural biochemistry now empower a systematic, data-driven approach to identify, predict, and validate instances of active-site damage and its repair. These capabilities would be practically useful in enzyme redesign and improvement of in-use stability, and could change thinking about which enzymes die young in vivo, and why.",
+    "doe_contract_number": "NSF: IOS-1444202; NIH: R01GM139978",
+    "doi": "https://doi.org/10.25982/95771.20/1828591",
+    "entry_date": "2021-11-04T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1828591",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1828591",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1828591",
+    "product_type": "Dataset",
+    "publication_date": "2021-11-02T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase",
+      "Argonne National Lab. (ANL), Argonne, IL (United States)",
+      "US Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES"
+    ],
+    "title": "The moderately defficient enzyme: Catalysis-related damage in vivo and its repair"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase\",\"last_name\":\"Dow\",\"orcid\":\"0000000220790260\",\"middle_name\":\"\",\"first_name\":\"Ellen\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase",
+        "contributor_type": "",
+        "first_name": "Ellen",
+        "last_name": "Dow",
+        "middle_name": "",
+        "orcid": "0000000220790260",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Dow, Ellen [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase] (ORCID:0000000220790260)"
+    ],
+    "country_publication": "United States",
+    "description": "KBase worked with a community of instructors to create a connected workflow that integrates genomics, metagenomics, phylogenetics, and pangenomic concepts in a \u201cchoose your own adventure\u201d framework. Each concept is stand alone, while complementing one another as they flow from one topic to another across concepts. The pace of each workflow can be adjusted with the flexibility of modules that are shareable and allow students to copy and interact with data and analyses.",
+    "doe_contract_number": "AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/1668075",
+    "entry_date": "2022-08-08T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1668075",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1668075",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1668075",
+    "product_type": "Dataset",
+    "publication_date": "2020-01-01T00:00:00Z",
+    "research_orgs": [
+      "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER). Biological Systems Science Division"
+    ],
+    "subjects": [
+      "Data science, Education, Training, Genomics, Metagenomics, Phylogenetics, Transcriptomics, Metabolic Modeling"
+    ],
+    "title": "KBase Educators Overview"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Univ. of Connecticut, Storrs, CT (United States)\",\"last_name\":\"Suria\",\"orcid\":\"0000000188008717\",\"middle_name\":\"\",\"first_name\":\"Andrea\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Univ. of Connecticut, Storrs, CT (United States)",
+        "contributor_type": "",
+        "first_name": "Andrea",
+        "last_name": "Suria",
+        "middle_name": "",
+        "orcid": "0000000188008717",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Suria, Andrea [Univ. of Connecticut, Storrs, CT (United States)] (ORCID:0000000188008717)"
+    ],
+    "country_publication": "United States",
+    "description": "The Hawaiian bobtail squid, Euprymna scolopes, has a symbiotic bacterial consortium in the accessory nidamental gland (ANG), a female reproductive organ that protects eggs against fouling microorganisms. To test the antibacterial activity of ANG community members, 19 bacterial isolates were screened for their ability to inhibit Gram-negative and Gram-positive bacteria, of which two strains were inhibitory. These two antibacterial isolates, Leisingera sp. ANG59 and Pseudoalteromonas sp. JC28, were subjected to further genomic characterization. Genomic analysis of Leisingera sp. ANG59 revealed a biosynthetic gene cluster encoding the antimicrobial compound indigoidine. The genome of Pseudoalteromonas sp. JC28 had a 14-gene cluster with >95% amino acid identity to a known bromoalterochromide (BAC) cluster. Chemical analysis confirmed production of known BACs, BAC-A/A\u2032 (compounds 1a/1b), as well as two new derivatives, BAC-D/D\u2032 (compounds 2a/2b). Extensive nuclear magnetic resonance (NMR) analyses allowed complete structural elucidation of compounds 2a/2b, and the absolute stereochemistry was unambiguously determined using an optimized Marfey\u2019s method. The BACs were then investigated for in vitro antibacterial, antifungal, and nitric oxide (NO) inhibitory activity. Compounds 1a/1b were active against the marine bacteria Bacillus algicola and Vibrio fischeri, while compounds 2a/2b were active only against B. algicola. Compounds 1a/1b inhibited NO production via lipopolysaccharide (LPS)-induced inflammation in RAW264.7 macrophage cells and also inhibited the pathogenic fungus Fusarium keratoplasticum, which, coupled with their antibacterial activity, suggests that these polyketide-nonribosomal peptides may be used for squid egg defense against potential pathogens and/or fouling microorganisms. These results indicate that BACs may provide Pseudoalteromonas sp. JC28 an ecological niche, facilitating competition against nonsymbiotic microorganisms in the host\u2019s environment.\u200b",
+    "doi": "https://doi.org/10.25982/69990.6/1778232",
+    "entry_date": "2021-05-10T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1778232",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1778232",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1778232",
+    "product_type": "Dataset",
+    "publication_date": "2020-01-01T00:00:00Z",
+    "research_orgs": [
+      "University of Connecticut, Storrs, Connecticut, USA"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "symbiont, bobtail squid, Euprymna scolopes, Pseudalteromonas"
+    ],
+    "title": "Leisingera sp. ANG59 & Pseudoalteromonas sp. JC28 Genomes Overview"
+  }
+]
