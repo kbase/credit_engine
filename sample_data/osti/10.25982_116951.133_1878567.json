@@ -1,0 +1,47 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of S\u00e3o Paulo\",\"last_name\":\"Mandro\",\"orcid\":\"\",\"middle_name\":\"Adriele\",\"first_name\":\"Jessica\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "University of S\u00e3o Paulo",
+        "contributor_type": "",
+        "first_name": "Jessica",
+        "last_name": "Mandro",
+        "middle_name": "Adriele",
+        "orcid": "",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Mandro, Jessica Adriele [University of S\u00e3o Paulo]"
+    ],
+    "country_publication": "United States",
+    "description": "We report 17 metagenome-assembled genomes (MAGs) recovered from microbial consortia of forest and pasture soils, in the Brazilian Eastern Amazon. Recovered MAGs constitute novel genomes with the potential to act in important ecological processes, including the degradation of carbohydrate and sulfur and nitrogen cycling.",
+    "doi": "https://doi.org/10.25982/116951.133/1878567",
+    "entry_date": "2022-08-01T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1878567",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1878567",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1878567",
+    "product_type": "Dataset",
+    "publication_date": "2022-07-29T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "KBase Narrative - Metagenome-assembled genomes from Amazonian soil microbial consortia"
+  }
+]

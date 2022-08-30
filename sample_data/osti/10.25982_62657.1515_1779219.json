@@ -1,0 +1,50 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"North Carolina State Univ., Raleigh, NC (United States)\",\"last_name\":\"Whitham\",\"orcid\":\"0000000326236292\",\"middle_name\":\"\",\"first_name\":\"Jason\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "North Carolina State Univ., Raleigh, NC (United States)",
+        "contributor_type": "",
+        "first_name": "Jason",
+        "last_name": "Whitham",
+        "middle_name": "",
+        "orcid": "0000000326236292",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Whitham, Jason [North Carolina State Univ., Raleigh, NC (United States)] (ORCID:0000000326236292)"
+    ],
+    "country_publication": "United States",
+    "description": "Background\r\nInvestigators using metagenomic sequencing to study their microbiomes are often provided data that has been trimmed and decontaminated or do it themselves without knowing the effect these procedures can have on their downstream analyses. Here we evaluated the impact that JGI trimming and decontamination procedures had on assembly and binning metrics, placement of metagenome assembled genomes into species trees, and functional profiles of metagenome-assembled genomes (MAGs) extracted from twenty three complex rhizosphere metagenomes. We also investigated how more aggressive trimming impacts these binning metrics.\r\n\r\nResults\r\nWe found that JGI trimmed and decontamination of input reads had some significant impacts in assembly and binning metrics compared to raw reads, and that differences in placement of MAGs in species trees increased with decreasing completeness and contamination thresholds. More aggressive trimming beyond those used by JGI were found to reduce MAG counts.\r\n\r\nConclusions\r\nMild trimming and decontamination of metagenomics reads prior to assembly can change an investigator\u2019s answer to the questions, \u201cWho is there and what are they doing? However, mild trimming and decontamination of metagenomic reads with high quality scores is recommended for those who elect to do so.",
+    "doi": "https://doi.org/10.25982/62657.1515/1779219",
+    "entry_date": "2021-05-17T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1779219",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1779219",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1779219",
+    "product_type": "Dataset",
+    "publication_date": "2021-01-01T00:00:00Z",
+    "research_orgs": [
+      "North Carolina State Univ., Raleigh, NC (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "metagenomics, decontamination, assembly, binning, phylogenomics, functional analysis"
+    ],
+    "title": "JGI QC impact on assembly, binning, phylogenomics, and functional analysis"
+  }
+]

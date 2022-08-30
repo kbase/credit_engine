@@ -1,0 +1,187 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"University of Georgia, Athens, Georgia, USA\",\"last_name\":\"Goff\",\"orcid\":\"0000000290899632\",\"middle_name\":\"\",\"first_name\":\"Jennifer\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Putt\",\"orcid\":\"0000000211307134\",\"middle_name\":\"\",\"first_name\":\"Andrew\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Oklahoma\",\"last_name\":\"Fan\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Yupeng\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Oklahoma\",\"last_name\":\"Michael\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Jonathan\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Oklahoma\",\"last_name\":\"Wang\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Yajiao\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Oklahoma\",\"last_name\":\"Ning\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Daliang\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Oklahoma\",\"last_name\":\"Fu\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Ying\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Oklahoma\",\"last_name\":\"Van Nostrand\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Joy\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Chandonia\",\"orcid\":\"0000000251539079\",\"middle_name\":\"\",\"first_name\":\"John-Marc\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Hazen\",\"orcid\":\"0000000225369993\",\"middle_name\":\"\",\"first_name\":\"Terry\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Oklahoma\",\"last_name\":\"Zhou\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Jizhong\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Arkin\",\"orcid\":\"0000000249992931\",\"middle_name\":\"\",\"first_name\":\"Adam\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of Georgia\",\"last_name\":\"Adams\",\"orcid\":\"0000000297965014\",\"middle_name\":\"\",\"first_name\":\"Michael\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "University of Georgia, Athens, Georgia, USA",
+        "contributor_type": "",
+        "first_name": "Jennifer",
+        "last_name": "Goff",
+        "middle_name": "",
+        "orcid": "0000000290899632",
+        "role": "PRIMARY"
+      },
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Andrew",
+        "last_name": "Putt",
+        "middle_name": "",
+        "orcid": "0000000211307134",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Oklahoma",
+        "contributor_type": "",
+        "first_name": "Yupeng",
+        "last_name": "Fan",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Oklahoma",
+        "contributor_type": "",
+        "first_name": "Jonathan",
+        "last_name": "Michael",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Oklahoma",
+        "contributor_type": "",
+        "first_name": "Yajiao",
+        "last_name": "Wang",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Oklahoma",
+        "contributor_type": "",
+        "first_name": "Daliang",
+        "last_name": "Ning",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Oklahoma",
+        "contributor_type": "",
+        "first_name": "Ying",
+        "last_name": "Fu",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Oklahoma",
+        "contributor_type": "",
+        "first_name": "Joy",
+        "last_name": "Van Nostrand",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "John-Marc",
+        "last_name": "Chandonia",
+        "middle_name": "",
+        "orcid": "0000000251539079",
+        "role": ""
+      },
+      {
+        "affiliation": "Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Terry",
+        "last_name": "Hazen",
+        "middle_name": "",
+        "orcid": "0000000225369993",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Oklahoma",
+        "contributor_type": "",
+        "first_name": "Jizhong",
+        "last_name": "Zhou",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Adam",
+        "last_name": "Arkin",
+        "middle_name": "",
+        "orcid": "0000000249992931",
+        "role": ""
+      },
+      {
+        "affiliation": "University of Georgia",
+        "contributor_type": "",
+        "first_name": "Michael",
+        "last_name": "Adams",
+        "middle_name": "",
+        "orcid": "0000000297965014",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Goff, Jennifer [University of Georgia, Athens, Georgia, USA] (ORCID:0000000290899632)",
+      "Putt, Andrew [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000211307134)",
+      "Fan, Yupeng [University of Oklahoma]",
+      "Michael, Jonathan [University of Oklahoma]",
+      "Wang, Yajiao [University of Oklahoma]",
+      "Ning, Daliang [University of Oklahoma]",
+      "Fu, Ying [University of Oklahoma]",
+      "Van Nostrand, Joy [University of Oklahoma]",
+      "Chandonia, John-Marc [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000251539079)",
+      "Hazen, Terry [Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000225369993)",
+      "Zhou, Jizhong [University of Oklahoma]",
+      "Arkin, Adam [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000249992931)",
+      "Adams, Michael [University of Georgia] (ORCID:0000000297965014)"
+    ],
+    "country_publication": "United States",
+    "doe_contract_number": "AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/112150.61/1863566",
+    "entry_date": "2022-04-20T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1863566",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1863566",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1863566",
+    "product_type": "Dataset",
+    "publication_date": "2022-04-19T00:00:00Z",
+    "research_orgs": [
+      "University of Georgia, Athens, Georgia (United States)",
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+      "University of Oklahoma, Norman, Oklahoma (United States)",
+      "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+      "Univ. of Tennessee, Knoxville, TN (United States)",
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States) Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "Bacillus, metals, nitrate, amplicon sequencing, geochemistry, microbial ecology"
+    ],
+    "title": "Geochemical and sequencing data from Goff et. al. 2022"
+  }
+]

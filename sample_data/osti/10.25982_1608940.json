@@ -1,0 +1,81 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Allen\",\"orcid\":\"000000026325859X\",\"middle_name\":\"H\",\"first_name\":\"Benjamin\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Land\",\"orcid\":\"0000000171020031\",\"middle_name\":\"L\",\"first_name\":\"Miriam\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Wood-Charlson\",\"orcid\":\"0000000195577715\",\"middle_name\":\"M\",\"first_name\":\"Elisha\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Benjamin",
+        "last_name": "Allen",
+        "middle_name": "H",
+        "orcid": "000000026325859X",
+        "role": "PRIMARY"
+      },
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Miriam",
+        "last_name": "Land",
+        "middle_name": "L",
+        "orcid": "0000000171020031",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Elisha",
+        "last_name": "Wood-Charlson",
+        "middle_name": "M",
+        "orcid": "0000000195577715",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Allen, Benjamin H [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:000000026325859X)",
+      "Land, Miriam L [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000171020031)",
+      "Wood-Charlson, Elisha M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)"
+    ],
+    "country_publication": "United States",
+    "description": "Genomics is a dynamic field driven by new technology, massive growth in data, and changes in how scientists share knowledge. This brings new challenges for researchers looking to maximize the impact of their science and ensure the longevity of their data. These changes are especially relevant for the practice of publishing genome announcements. Genome announcements are meant to share and promote newly sequenced organisms with the larger scientific community. A few decades ago, genome announcements were highly anticipated hallmarks of novel science. But, what was once a publishing coup is now an every day event. It is harder and harder to keep abreast of all the genomes that have been sequenced and promote your own new genomes to get the attention and recognition of your research community. Fortunately, KBase can help construct genomes from your sequencing data, generate reports for your announcement, and promote your data to your research community.",
+    "doe_contract_number": "DE-AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/1608940",
+    "entry_date": "2020-12-02T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1608940",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1608940",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1608940",
+    "product_type": "Dataset",
+    "publication_date": "2020-04-06T00:00:00Z",
+    "research_orgs": [
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+      "DOE Systems Biology Knowledgebase (KBase)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "96 KNOWLEDGE MANAGEMENT AND PRESERVATION",
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "genome",
+      "genomics",
+      "data science",
+      "assembly",
+      "annotation",
+      "comparative genomics",
+      "publication"
+    ],
+    "title": "Make the Most Out of Genome Announcements with KBase"
+  }
+]

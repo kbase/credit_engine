@@ -1,0 +1,64 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"North Carolina State Univ., Raleigh, NC (United States)\",\"last_name\":\"Krebs\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Rose\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"North Carolina State Univ., Raleigh, NC (United States)\",\"last_name\":\"Goller\",\"orcid\":\"0000000220130334\",\"middle_name\":\"\",\"first_name\":\"Carlos\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "North Carolina State Univ., Raleigh, NC (United States)",
+        "contributor_type": "",
+        "first_name": "Rose",
+        "last_name": "Krebs",
+        "middle_name": "",
+        "orcid": "",
+        "role": "PRIMARY"
+      },
+      {
+        "affiliation": "North Carolina State Univ., Raleigh, NC (United States)",
+        "contributor_type": "",
+        "first_name": "Carlos",
+        "last_name": "Goller",
+        "middle_name": "",
+        "orcid": "0000000220130334",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Krebs, Rose [North Carolina State Univ., Raleigh, NC (United States)]",
+      "Goller, Carlos [North Carolina State Univ., Raleigh, NC (United States)] (ORCID:0000000220130334)"
+    ],
+    "country_publication": "United States",
+    "description": "Delftia is a genus of bacteria with a bunch of cool features! The best studied species, Delftia acidovorans can produce gold nanoparticles from gold ions in solution. This bacteria has been found living in biofolms with Cupriavidis metallidurans on gold nuggets. It is also found in soil, in sinks and in rhizospheres of different plants where it promotes their growth.\r\n\r\nDelftia acidovorans forms gold nuggets by producing a short nonribosomal peptide called delftibactin. The 16 genes responsible for the production of delftibactin are called the del cluster (delA-delP). These genes were originally discovered in Delftia acidovorans SPH-1, but our research shows that the del cluster appears to be present across the genus.\r\n\r\nWe'll start with a number of raw reads, clean them up and do a little taxonomy to figure out what we might be able to assemble. Next, we'll assemble the reads using 4 different methods and pick out the best assembly. Then we'll take those reads and sort them by genome and assess the quality of those genomes. We'll select the high quality genomes to annotate and insert into phylogenetic trees to find relatives.",
+    "doi": "https://doi.org/10.25982/67335.259/1773074",
+    "entry_date": "2021-03-31T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1773074",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1773074",
+        "rel": "fulltext"
+      }
+    ],
+    "org_research": [
+      "name=North Carolina State University\nid_isni=0000 0001 2173 6074\nid_fundref=100007703\nid_orgref=72544\nid_wikidata=Q1132346\nid_ror=https://ror.org/04tj63d06\nid_grid=grid.40803.3f\nid_geonames_city_id=4487042\nlat=35.7843857\nlng=-78.682785"
+    ],
+    "osti_id": "1773074",
+    "product_type": "Dataset",
+    "publication_date": "2020-08-14T00:00:00Z",
+    "research_orgs": [
+      "North Carolina State Univ., Raleigh, NC (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "Delftia, metagenome, MAGs"
+    ],
+    "title": "Case Study: Can you find Delftia?"
+  }
+]

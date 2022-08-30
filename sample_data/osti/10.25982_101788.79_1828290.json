@@ -1,0 +1,50 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)\",\"last_name\":\"Kumari\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Sunita\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)",
+        "contributor_type": "",
+        "first_name": "Sunita",
+        "last_name": "Kumari",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Kumari, Sunita [Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)]"
+    ],
+    "country_publication": "United States",
+    "description": "A better understanding of the genetic and metabolic mechanisms that confer stress resistance and tolerance in plants is key to engineering new crops through advanced breeding technologies. This requires a systems biology approach that builds on a genome-wide understanding of the regulation of gene expression, plant metabolism, physiology and growth. In this study, we examine the response to drought stress in Sorghum, as we leverage the tools for transcriptomics and plant metabolic modeling we have implemented at the U.S. Department of Energy Systems Biology Knowledgebase (KBase). KBase enables researchers worldwide to collaborate and advance research by allowing them to upload private or public data into the KBase Narrative Interface, empowering them to analyze this data using a rich, extensible array of computational and data-analytics tools, and allows them to securely share scientific workflows and conclusions. We demonstrate how to use the current RNA-seq tools in KBase, applicable to both plants and microbes, to assemble and quantify long transcripts and identify differentially expressed genes effectively. More specifically, we demonstrate the utility of the platform by identifying key genes that are differentially expressed during drought-stress in Sorghum bicolor, which is an important sustainable production crop plant. We then show how to use KBase tools to predict the membership of genes in metabolic pathways and examine expression data in the context of metabolic subsystems. We demonstrate the power of the platform by making the data analysis and interpretation available to the biologists in the reproducible, re-usable, point-and-click format of a KBase Narrative thus promoting FAIR (Findable, Accessible, Interoperable and Reusable) guiding principles for scientific data management and stewardship.",
+    "doi": "https://doi.org/10.25982/101788.79/1828290",
+    "entry_date": "2021-12-16T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1828290",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1828290",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1828290",
+    "product_type": "Dataset",
+    "publication_date": "2021-11-01T00:00:00Z",
+    "research_orgs": [
+      "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "transcriptomics, metabolism, sorghum"
+    ],
+    "title": "A KBase Case Study on Genome-wide Transcriptomics and Plant Primary Metabolism in Sorghum"
+  }
+]

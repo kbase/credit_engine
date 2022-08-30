@@ -1,0 +1,124 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"University of California Berkeley\",\"last_name\":\"Sander\",\"orcid\":\"0000000259447822\",\"middle_name\":\"\",\"first_name\":\"Kyle\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA\",\"last_name\":\"Abel\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Anthony\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA\",\"last_name\":\"Friedline\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Skyler\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Center for the Utilization of Biological Engineering in Space, Berkeley, CA\\n\\nCurrent Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA\",\"last_name\":\"Sharpless\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Willam\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA\\n\\nCurrent Affiliation: Zymergen, Emeryville, CA\\nIntroduction\",\"last_name\":\"Skerker\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Jeffrey\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA\",\"last_name\":\"Deutschbauer\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Adam\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA\",\"last_name\":\"Clark\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Douglas\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Center for the Utilization of Biological Engineering in Space, Berkeley, CA\\nDepartment of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA\",\"last_name\":\"Arkin\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Adam\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "University of California Berkeley",
+        "contributor_type": "",
+        "first_name": "Kyle",
+        "last_name": "Sander",
+        "middle_name": "",
+        "orcid": "0000000259447822",
+        "role": "PRIMARY"
+      },
+      {
+        "affiliation": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA",
+        "contributor_type": "",
+        "first_name": "Anthony",
+        "last_name": "Abel",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA",
+        "contributor_type": "",
+        "first_name": "Skyler",
+        "last_name": "Friedline",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA\n\nCurrent Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA",
+        "contributor_type": "",
+        "first_name": "Willam",
+        "last_name": "Sharpless",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA\n\nCurrent Affiliation: Zymergen, Emeryville, CA\nIntroduction",
+        "contributor_type": "",
+        "first_name": "Jeffrey",
+        "last_name": "Skerker",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "contributor_type": "",
+        "first_name": "Adam",
+        "last_name": "Deutschbauer",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA",
+        "contributor_type": "",
+        "first_name": "Douglas",
+        "last_name": "Clark",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA\nDepartment of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "contributor_type": "",
+        "first_name": "Adam",
+        "last_name": "Arkin",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Sander, Kyle [University of California Berkeley] (ORCID:0000000259447822)",
+      "Abel, Anthony [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA]",
+      "Friedline, Skyler [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA]",
+      "Sharpless, Willam [Center for the Utilization of Biological Engineering in Space, Berkeley, CA\n\nCurrent Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA]",
+      "Skerker, Jeffrey [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA\n\nCurrent Affiliation: Zymergen, Emeryville, CA\nIntroduction]",
+      "Deutschbauer, Adam [Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA]",
+      "Clark, Douglas [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA]",
+      "Arkin, Adam [Center for the Utilization of Biological Engineering in Space, Berkeley, CA\nDepartment of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA]"
+    ],
+    "country_publication": "United States",
+    "description": "Species of Cupriavidus are among the best bioplastic producing microorganisms known, though intracellular poly-hydroxybutyrate (PHB) is made exclusively during unbalanced growth (e.g. nitrogen limitation), a state characterized by poor growth and cellular stress. Much work has been done studying bioplastic production in the model/type strain C. necator H16. We use an RB-TnSeq library of the closely related C. basilensis 4G11 to assess for genes which decouple PHB production from growth state. In this narrative we compute genome-wide protein homology between these two organisms, and generate a synteny plot across the genomes as well.",
+    "doi": "https://doi.org/10.25982/123676.7/1880128",
+    "entry_date": "2022-08-10T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1880128",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1880128",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1880128",
+    "product_type": "Dataset",
+    "publication_date": "2022-08-08T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "KBase Narrative - Comparing Proteomes of Cupriavidus basilensis 4G11 and Cupriavidus necator H16"
+  }
+]

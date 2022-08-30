@@ -1,0 +1,54 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Pelletier\",\"orcid\":\"0000000243217918\",\"middle_name\":\"\",\"first_name\":\"Dale\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "contributor_type": "",
+        "first_name": "Dale",
+        "last_name": "Pelletier",
+        "middle_name": "",
+        "orcid": "0000000243217918",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "Pelletier, Dale [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000243217918)"
+    ],
+    "country_publication": "United States",
+    "description": "This narrative was used for a draft genome of a Larkinella species. This genus contains 9 identified species, of which only 5 have genome sequence data. This specimen was collected from a root sample of an eastern cottonwood (Populus deltoides) from a field site in Bellville, Georgia.",
+    "doe_contract_number": "AC05-00OR22725; AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/54100.27/1635639",
+    "entry_date": "2021-09-29T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1635639",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1635639",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1635639",
+    "product_type": "Dataset",
+    "publication_date": "2020-07-02T00:00:00Z",
+    "research_orgs": [
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "Genome",
+      "KBase",
+      "Biology"
+    ],
+    "title": "Draft Genome Sequence of Larkinella sp. Strain BK230, Isolated from Populus deltoides Roots"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Cornell Univ., Ithaca, NY (United States)\",\"last_name\":\"St. James\",\"orcid\":\"0000000256072789\",\"middle_name\":\"\",\"first_name\":\"Andrew\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Cornell Univ., Ithaca, NY (United States)",
+        "contributor_type": "",
+        "first_name": "Andrew",
+        "last_name": "St. James",
+        "middle_name": "",
+        "orcid": "0000000256072789",
+        "role": "PRIMARY"
+      }
+    ],
+    "authors": [
+      "St. James, Andrew [Cornell Univ., Ithaca, NY (United States)] (ORCID:0000000256072789)"
+    ],
+    "country_publication": "United States",
+    "description": "<p>This Narrative is part of a collection used in a single publication. The paper took a metagnomic and metatranscriptomic approach to examine a bioreactor's response to the presence of sulfate, which reduces the production of methane, a valuable product, while producing hydrogen sulfide, a corrosive contaminant. </p><p> This Narrative collection has been created to highlight the types of analyses done for this publication. They are as follows (in order): </p><ul> <li>SJ1 Metagenomes: a metagenomic analysis of sample SJ1, the initial bioreactor. </li><li>SJ1 Metatranscriptomes: QC-filtered raw RNA reads were aligned to individual MAGs and assembled into transcripts. </li><li>Metagenome-discovered food webs in a long-term methanogenic bioreactor and rapid switch to sulfate reducing conditions (this Narrative): the public Narrative referenced in the paper, which contains several key MAGs.</li></ul>",
+    "doe_contract_number": "AC02\u201305CH11231",
+    "doi": "https://doi.org/10.25982/51077.6/1637903",
+    "entry_date": "2021-09-29T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1637903",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1637903",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1637903",
+    "product_type": "Dataset",
+    "publication_date": "2020-07-09T00:00:00Z",
+    "research_orgs": [
+      "Cornell Univ., Ithaca, NY (United States)",
+      "Department of Energy Systems Biology Knowledgebase",
+      "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+      "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "metagenomics, metatranscriptomics, bioinformatics"
+    ],
+    "title": "Ecogenomics reveals community interactions in a long-term methanogenic bioreactor and a rapid switch to sulfate-reducing conditions"
+  }
+]

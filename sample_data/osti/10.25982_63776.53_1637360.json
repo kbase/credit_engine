@@ -1,0 +1,174 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Kothari\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Ankita\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)\",\"last_name\":\"Roux\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Simon\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Zhang\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Hanqiao\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Prieto\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Anatori\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Chandonia\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"John-Marc\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Spencer\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Sarah\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Wu\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Xiaoqin\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Deutschbauer\",\"orcid\":\"\",\"middle_name\":\"M\",\"first_name\":\"Adam\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Arkin\",\"orcid\":\"\",\"middle_name\":\"P\",\"first_name\":\"Adam\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Massachusetts Inst. of Technology (MIT), Cambridge, MA (United States)\",\"last_name\":\"Alm\",\"orcid\":\"\",\"middle_name\":\"J\",\"first_name\":\"Eric\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Chakraborty\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Romy\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"\",\"last_name\":\"Mukhopadhyay\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Aindrila\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Ankita",
+        "last_name": "Kothari",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Simon",
+        "last_name": "Roux",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Hanqiao",
+        "last_name": "Zhang",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Anatori",
+        "last_name": "Prieto",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "John-Marc",
+        "last_name": "Chandonia",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Sarah",
+        "last_name": "Spencer",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Xiaoqin",
+        "last_name": "Wu",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Adam",
+        "last_name": "Deutschbauer",
+        "middle_name": "M",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Adam",
+        "last_name": "Arkin",
+        "middle_name": "P",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Massachusetts Inst. of Technology (MIT), Cambridge, MA (United States)",
+        "contributor_type": "",
+        "first_name": "Eric",
+        "last_name": "Alm",
+        "middle_name": "J",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "contributor_type": "",
+        "first_name": "Romy",
+        "last_name": "Chakraborty",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      },
+      {
+        "affiliation": "",
+        "contributor_type": "",
+        "first_name": "Aindrila",
+        "last_name": "Mukhopadhyay",
+        "middle_name": "",
+        "orcid": "",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Kothari, Ankita",
+      "Roux, Simon [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]",
+      "Zhang, Hanqiao",
+      "Prieto, Anatori",
+      "Chandonia, John-Marc [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]",
+      "Spencer, Sarah",
+      "Wu, Xiaoqin",
+      "Deutschbauer, Adam M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]",
+      "Arkin, Adam P [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]",
+      "Alm, Eric J [Massachusetts Inst. of Technology (MIT), Cambridge, MA (United States)]",
+      "Chakraborty, Romy [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]",
+      "Mukhopadhyay, Aindrila"
+    ],
+    "country_publication": "United States",
+    "description": "Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance. This Narrative contains data for the 261 ENIGMA isolates described in the paper. See Table S2 for a complete list.",
+    "doe_contract_number": "AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/63776.53/1637360",
+    "entry_date": "2022-07-29T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1637360",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1637360",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1637360",
+    "product_type": "Dataset",
+    "publication_date": "2020-07-06T00:00:00Z",
+    "research_orgs": [
+      "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "Virus",
+      "Genome",
+      "Biology",
+      "Environment"
+    ],
+    "title": "Isolate genomes from \"Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance\""
+  }
+]

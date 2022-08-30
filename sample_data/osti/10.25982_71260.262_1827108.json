@@ -1,0 +1,136 @@
+[
+  {
+    "author_details": [
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Subsurface Insights, LLC\",\"last_name\":\"Rubinstein\",\"orcid\":\"0000000181426713\",\"middle_name\":\"L\",\"first_name\":\"Rebecca\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Colorado State Univ., Fort Collins, CO (United States)\",\"last_name\":\"Borton\",\"orcid\":\"0000000180374253\",\"middle_name\":\"\",\"first_name\":\"Mikayla\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Subsurface Insights, LLC\",\"last_name\":\"Zhou\",\"orcid\":\"000000031569532X\",\"middle_name\":\"\",\"first_name\":\"Haiyan\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Colorado State Univ., Fort Collins, CO (United States)\",\"last_name\":\"Shaffer\",\"orcid\":\"0000000217833709\",\"middle_name\":\"\",\"first_name\":\"Michael\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Hoyt\",\"orcid\":\"000000022857719X\",\"middle_name\":\"\",\"first_name\":\"David\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Stegen\",\"orcid\":\"0000000191357424\",\"middle_name\":\"\",\"first_name\":\"James\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Argonne National Lab. (ANL), Argonne, IL (United States)\",\"last_name\":\"Henry\",\"orcid\":\"0000000180589123\",\"middle_name\":\"\",\"first_name\":\"Christopher\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Colorado State Univ., Fort Collins, CO (United States)\",\"last_name\":\"Wrighton\",\"orcid\":\"0000000304344217\",\"middle_name\":\"\",\"first_name\":\"Kelly\"}",
+      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Subsurface Insights, LLC\",\"last_name\":\"Versteeg\",\"orcid\":\"0000000267671082\",\"middle_name\":\"\",\"first_name\":\"Roelof\"}"
+    ],
+    "author_details_decoded": [
+      {
+        "affiliation": "Subsurface Insights, LLC",
+        "contributor_type": "",
+        "first_name": "Rebecca",
+        "last_name": "Rubinstein",
+        "middle_name": "L",
+        "orcid": "0000000181426713",
+        "role": ""
+      },
+      {
+        "affiliation": "Colorado State Univ., Fort Collins, CO (United States)",
+        "contributor_type": "",
+        "first_name": "Mikayla",
+        "last_name": "Borton",
+        "middle_name": "",
+        "orcid": "0000000180374253",
+        "role": ""
+      },
+      {
+        "affiliation": "Subsurface Insights, LLC",
+        "contributor_type": "",
+        "first_name": "Haiyan",
+        "last_name": "Zhou",
+        "middle_name": "",
+        "orcid": "000000031569532X",
+        "role": ""
+      },
+      {
+        "affiliation": "Colorado State Univ., Fort Collins, CO (United States)",
+        "contributor_type": "",
+        "first_name": "Michael",
+        "last_name": "Shaffer",
+        "middle_name": "",
+        "orcid": "0000000217833709",
+        "role": ""
+      },
+      {
+        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+        "contributor_type": "",
+        "first_name": "David",
+        "last_name": "Hoyt",
+        "middle_name": "",
+        "orcid": "000000022857719X",
+        "role": ""
+      },
+      {
+        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+        "contributor_type": "",
+        "first_name": "James",
+        "last_name": "Stegen",
+        "middle_name": "",
+        "orcid": "0000000191357424",
+        "role": ""
+      },
+      {
+        "affiliation": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "contributor_type": "",
+        "first_name": "Christopher",
+        "last_name": "Henry",
+        "middle_name": "",
+        "orcid": "0000000180589123",
+        "role": ""
+      },
+      {
+        "affiliation": "Colorado State Univ., Fort Collins, CO (United States)",
+        "contributor_type": "",
+        "first_name": "Kelly",
+        "last_name": "Wrighton",
+        "middle_name": "",
+        "orcid": "0000000304344217",
+        "role": ""
+      },
+      {
+        "affiliation": "Subsurface Insights, LLC",
+        "contributor_type": "",
+        "first_name": "Roelof",
+        "last_name": "Versteeg",
+        "middle_name": "",
+        "orcid": "0000000267671082",
+        "role": ""
+      }
+    ],
+    "authors": [
+      "Rubinstein, Rebecca L [Subsurface Insights, LLC] (ORCID:0000000181426713)",
+      "Borton, Mikayla [Colorado State Univ., Fort Collins, CO (United States)] (ORCID:0000000180374253)",
+      "Zhou, Haiyan [Subsurface Insights, LLC] (ORCID:000000031569532X)",
+      "Shaffer, Michael [Colorado State Univ., Fort Collins, CO (United States)] (ORCID:0000000217833709)",
+      "Hoyt, David [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:000000022857719X)",
+      "Stegen, James [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:0000000191357424)",
+      "Henry, Christopher [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000180589123)",
+      "Wrighton, Kelly [Colorado State Univ., Fort Collins, CO (United States)] (ORCID:0000000304344217)",
+      "Versteeg, Roelof [Subsurface Insights, LLC] (ORCID:0000000267671082)"
+    ],
+    "country_publication": "United States",
+    "description": "Motivation: Nutrient and contaminant behavior in the subsurface are governed by multiple coupled hydrobiogeochemical processes which occur across different temporal and spatial scales. Accurate description of macroscopic system behavior requires accounting for the effects of microscopic and especially microbial processes. Microbial processes mediate precipitation and dissolution and change aqueous geochemistry, all of which impacts macroscopic system behavior. As `omics data describing microbial processes is increasingly affordable and available, novel methods for using this data quickly and effectively for improved ecosystem models are needed. Results: We propose a workflow (`Omics to Reactive Transport \u2013 ORT) for utilizing metagenomic and environmental data to describe the effect of microbiological processes in macroscopic reactive transport models. This workflow utilizes and couples two open-source software packages: KBase (a software platform for systems biology) and PFLOTRAN (a reactive transport modeling code). We describe the architecture of ORT and demonstrate an implementation using metagenomic and geochemical data from a river system. Our demonstration uses microbiological drivers of nitrification and denitrification to predict nitrogen cycling patterns which agree with those provided with generalized stoichiometries. While our example uses data from a single measurement, our workflow can be applied to spatiotemporal metagenomic datasets to allow for iterative coupling between KBASE and PFLOTRAN. Live, interactive models, which incorporate the results from this narrative into a PFLOTRAN simulation, are available (without login) at https://pflotranmodeling.paf.subsurfaceinsights.com/pflotran-simple-model/.",
+    "doe_contract_number": "DE-SC0019619; DE-SC0018020",
+    "doi": "https://doi.org/10.25982/71260.262/1827108",
+    "entry_date": "2021-10-27T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1827108",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1827108",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1827108",
+    "product_type": "Dataset",
+    "publication_date": "2021-03-12T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "Omics-to-Reactive-Transport (ORT): A workflow linking genome-scale metabolic models with reactive transport codes"
+  }
+]
