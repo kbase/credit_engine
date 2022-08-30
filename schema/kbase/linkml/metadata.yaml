@@ -23,30 +23,38 @@ classes:
         range: ResolvablePID
         required: true
         exact_mappings:
-        - DataCite:Resource.identifier
+        - from: DataCite:id
+          via: { id: "DOI:${DataCite:id}" }
+        - from: OSTI:osti_id
+          via: { id: "OSTI:${OSTI:osti_id}"}
 
       resource_type:
         description: the type of resource being described
         range: ResourceType
         required: true
         exact_mappings:
-        - DataCite:Resource.ResourceType
+        - OSTI:product_type
+        # see DataCite:attributes.types
+        - DataCite:attributes.types.schema_org
 
       title:
         description: formal title(s) of the data set
         multivalued: true
         exact_mappings:
-        - DataCite:Resource.Titles.Title
+        - DataCite:attributes.titles[].title
+        - from: OSTI:title
+          via: [OSTI:title]
 
       version:
         description: resource version (if available)
         exact_mappings:
-        - DataCite:Resource.version
+        - DataCite:attributes.version
 
       submission_date:
         description: for unversioned datasets, date of submission to repository (if available)
-        exact_mappings:
-        - DataCite:Resources.Dates.Date[date_type="SUBMITTED"]
+        close_mappings:
+        - DataCite:attributes.published
+        - OSTI:publication_date
         range: date_or_datetime
 
       access_date:
@@ -56,36 +64,37 @@ classes:
         examples:
         - 2022-05-10
 
-
       contributors:
         description: people and/or organisations responsible for generating the dataset
         multivalued: true
         range: Person
-        exact_mappings:
-        - DataCite:Resource.Contributors
-        - DataCite:Resource.Creators
+        narrow_mappings:
+        - DataCite:attributes.contributors
+        - DataCite:attributes.creators
 
       related_identifiers:
         description: other resolvable persistent unique IDs used to access the resource or related resources
         multivalued: true
         range: ResolvablePID
-        exact_mappings:
-        - DataCite:Resource.RelatedIdentifiers
-        - DataCite:Resource.AlternateIdentifier
+        close_mappings:
+        - DataCite:attributes.identifiers
+        - DataCite:attributes.related_identifiers
+        - DataCite:attributes.alternate_identifiers
 
       funding:
         description: funding sources for the dataset
         inlined_as_list: true
         multivalued: true
         range: FundingReference
-        exact_mappings:
-        - DataCite:Resource.FundingReferences
         close_mappings:
+        - DataCite:attributes.funding_references
         - CrossRef:Message.project.funding
 
       license:
         description: license under which the data is made available
         slot_uri: biolink:license
+        related_mappings:
+        - DataCite:attributes.rights_list # check this
 
 
   Person:
@@ -94,40 +103,57 @@ classes:
         identifier: true
         description: ORCID
         range: uriorcurie
+        exact_mappings:
+        - from:
+            DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
+          via:
+            "ORCID:${ DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '') }"
 
       first_name:
         description: given name
         exact_mappings:
-        - DataCite:Resource.Contributors.Contributor.given_name
+        - DataCite:attributes.creators[].given_name
+        - DataCite:attributes.contributors[].given_name
 
       last_name:
         description: family name
         exact_mappings:
-        - DataCite:Resource.Contributors.Contributor.family_name
+        - DataCite:attributes.creators[].family_name
+        - DataCite:attributes.contributors[].family_name
 
       full_name:
         description: Full name of the contributor
         # slot_uri: schema:name
         equals_expression: "{first_name} + {last_name}"
-        exact_mappings:
-        - DataCite:Resource.Contributors.Contributor.ContributorName.value  # CHECK!
-        # DataCite:Resource.Creators.Creator.CreatorName["Personal"].value
+        related_mappings:
+        # these have the names comma-separated and inverted
+        - DataCite:attributes.creators[].name
+        - DataCite:attributes.contributors[].name
 
       affiliations:
         description: organisation(s) that the contributor is associated with
-        inlined_as_list: true
         multivalued: true
         range: Organisation
         exact_mappings:
-        - DataCite:Resource.Contributors.Contributor.affiliation
+        -
+          from: DataCite:attributes.contributors[].affiliation[]
+          via: {
+            organisation_name: "DataCite:attributes.contributors[].affiliation[].name"
+          }
+        -
+          from: DataCite:attributes.creators[].affiliation[]
+          via: {
+            organisation_name: "DataCite:attributes.creators[].affiliation[].name"
+          }
 
       contributor_roles:
         description: List of one or more terms indicating the type of contribution. Should be a term from either CRedIT or DataCite
         multivalued: true
         inlined_as_list: true
         exact_mappings:
-        - DataCite:Resource.Contributors.Contributor.contributor_type
-        todos: add list of valid terms!
+        - DataCite:attributes.contributors[].contributor_type
+        - DataCite:attributes.creators[].contributor_type
+        todos: add DataCite and Credit roles as enums
 
 
   Organisation:
@@ -139,13 +165,15 @@ classes:
         description: unique identifier for the organisation -- ROR / ISNI, etc.
         identifier: true
         exact_mappings:
-        - DataCite:Affiliation.affiliation_identifier
+        - DataCite:attributes.contributors[].affiliation.affiliation_identifier
+        - DataCite:attributes.creators[].affiliation.affiliation_identifier
         range: uriorcurie
 
       organisation_name:
         description: name of the organisation
         exact_mappings:
-        - DataCite:Affiliation.value
+        - DataCite:attributes.contributors[].affiliation.name
+        - DataCite:attributes.creators[].affiliation.name
 
 
   FundingReference:
@@ -154,31 +182,31 @@ classes:
         description: human-readable funding body name
         required: true
         exact_mappings:
-        - DataCite:Resource.FundingReferences.FundingReference.funder_name
+        - DataCite:attributes.funding_references[].funder_name
         - CrossRef:Message.project.funding.funder.name
 
       funder_id:
         description: ID for the funding entity - acceptable formats include crossref funder ID, DOI, ROR, ISNI, others?
         exact_mappings:
-        - DataCite:Resource.FundingReferences.FundingReference.FunderIdentifier.value
+        - DataCite:attributes.funding_references[].funder_identifier
         - CrossRef:Message.project.funding.funder.id.id
         range: uriorcurie
 
       award_id:
         description: code assigned by the funder to the grant or award
         exact_mappings:
-        - DataCite:Resource.FundingReferences.FundingReference.AwardNumber.value
+        - DataCite:attributes.funding_references[].award_number
         - CrossRef:Message.award
 
       award_title:
         description: human-readable title of the grant or award
         exact_mappings:
-        - DataCite:Resource.FundingReferences.FundingReference.award_title
+        - DataCite:attributes.funding_references[].award_title
 
       award_uri:
         description: URI for the award
         exact_mappings:
-        - DataCite:Resource.FundingReferences.FundingReference.AwardNumber.award_uri
+        - DataCite:attributes.funding_references[].award_uri
         range: uriorcurie
 
 
@@ -189,9 +217,13 @@ classes:
         description: a CURIE (compact URI)
         required: true
         exact_mappings:
-        - DataCite:Resource.identifier.value
-        - DataCite:Resource.AlternateIdentifiers.AlternateIdentifier.value
-        - DataCite:Resource.RelatedIdentifiers.RelatedIdentifier.value
+        - DataCite:attributes.identifier.value
+        - from: DataCite:attributes.alternate_identifiers[]
+          via: "${DataCite:attributes.alternate_identifiers[].alternate_identifier_type}:${DataCite:attributes.alternate_identifiers[].alternate_identifier}"
+        - from: DataCite:attributes.related_identifiers[]
+          via: "${DataCite:attributes.related_identifiers[].related_identifier_type}:${DataCite:attributes.related_identifiers[].related_identifier}"
+        - from: DataCite:attributes.identifiers[]
+          via: "${DataCite:attributes.identifiers[].identifier_type}:${DataCite:attributes.identifiers[].identifier}"
         range: uriorcurie
 
       uri:
@@ -201,13 +233,13 @@ classes:
       description:
         description: brief description of what the ID links to
         # slot_uri: schema:description
-        exact_mappings:
-        - DataCite:ResourceType  # ???
 
       relation_type:
         description: how the resource represented by this ID relates to the original resource
         exact_mappings:
-        - DataCite:RelationType # also need to represent the resource itself
+        # for the primary ID, we also need to represent the resource itself
+        - DataCite:attributes.related_identifiers[].relation_type
+        todos: add DataCite relation types as an enum
 
 enums:
   ResourceType:
