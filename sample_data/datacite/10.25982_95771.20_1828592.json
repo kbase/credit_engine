@@ -24,7 +24,9 @@
       "creators": [
         {
           "affiliation": [
-            "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            {
+              "name": "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            }
           ],
           "familyName": "Henry",
           "givenName": "Christopher",
@@ -109,7 +111,106 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi85NTc3MS4yMC8xODI4NTkyPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5IZW5yeSwgQ2hyaXN0b3BoZXI8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+QXJnb25uZSBOYXRpb25hbCBMYWIuIChBTkwpLCBBcmdvbm5lLCBJTCAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5UaGUgbW9kZXJhdGVseSBkZWZmaWNpZW50IGVuenltZTogQ2F0YWx5c2lzLXJlbGF0ZWQgZGFtYWdlIGluIHZpdm8gYW5kIGl0cyByZXBhaXI8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+QXJnb25uZSBOYXRpb25hbCBMYWJvcmF0b3J5IChBTkwpLCBBcmdvbm5lLCBJTCAoVW5pdGVkIFN0YXRlcyk7IFVTIERlcGFydG1lbnQgb2YgRW5lcmd5IFN5c3RlbXMgQmlvbG9neSBLbm93bGVkZ2ViYXNlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3QvPgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE4Mjg1OTI8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+Ti9BPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+RW56eW1lcyBoYXZlIGluIHZpdm8gbGlmZXNwYW5zLiBBbmFseXNpcyBvZiBsaWZlc3BhbnMg4oCTIGxpZmV0aW1lIHRvdGFscyBvZiBjYXRhbHl0aWMgdHVybm92ZXJzIOKAkyBzdWdnZXN0cyB0aGF0IG5vbi1zdXJ2aXZhYmxlIGNvbGxhdGVyYWwgY2hlbWljYWwgZGFtYWdlIGZyb20gdGhlIHZlcnkgcmVhY3Rpb25zIHRoYXQgZW56eW1lcyBjYXRhbHl6ZSBpcyBhIGNvbW1vbiBidXQgdW5kZXJkaWFnbm9zZWQgY2F1c2Ugb2YgZW56eW1lIGRlYXRoLiBBbmFseXNpcyBhbHNvIGltcGxpZXMgdGhhdCBtYW55IGVuenltZXMgYXJlIG1vZGVyYXRlbHkgZGVmaWNpZW50IGluIHRoYXQgdGhlaXIgYWN0aXZlLXNpdGUgcmVnaW9ucyBhcmUgbm90IG5hdHVyYWxseSBhcyBoYXJkZW5lZCBhZ2FpbnN0IHN1Y2ggY29sbGF0ZXJhbCBkYW1hZ2UgYXMgdGhleSBjb3VsZCBiZSwgbGVhdmluZyByb29tIGZvciBpbXByb3ZlbWVudCBieSByYXRpb25hbCBkZXNpZ24gb3IgZGlyZWN0ZWQgZXZvbHV0aW9uLiBFbnp5bWUgbGlmZXNwYW4gbWlnaHQgYWxzbyBiZSBpbXByb3ZlZCBieSBlbmdpbmVlcmluZyBzeXN0ZW1zIHRoYXQgcmVwYWlyIG90aGVyd2lzZSBmYXRhbCBhY3RpdmUtc2l0ZSBkYW1hZ2UsIG9mIHdoaWNoIGEgaGFuZGZ1bCBhcmUga25vd24gYW5kIG1vcmUgYXJlIGluZmVycmVkIHRvIGV4aXN0LiBVbmZvcnR1bmF0ZWx5LCB0aGUgZGF0YSBuZWVkZWQgdG8gZGVzaWduIGFuZCBleGVjdXRlIHN1Y2ggaW1wcm92ZW1lbnRzIGlzIGxhY2tpbmc6IHRoZXJlIGFyZSB0b28gZmV3IG1lYXN1cmVtZW50cyBvZiBpbiB2aXZvIGxpZmVzcGFuLCBhbmQgZXhpc3RpbmcgaW5mb3JtYXRpb24gb24gdGhlIGV4dGVudCwgbmF0dXJlLCBhbmQgbWVjaGFuaXNtcyBvZiBhY3RpdmUtc2l0ZSBkYW1hZ2UgYW5kIHJlcGFpciBkdXJpbmcgbm9ybWFsIGVuenltZSBvcGVyYXRpb24gaXMgdG9vIHNjYXJjZSwgYW5lY2RvdGFsLCBhbmQgc3BlY3VsYXRpdmUgdG8gYWN0IG9uLiBGb3J0dW5hdGVseSwgYWR2YW5jZXMgaW4gcHJvdGVvbWljcywgbWV0YWJvbG9taWNzLCBjaGVtaW5mb3JtYXRpY3MsIGNvbXBhcmF0aXZlIGdlbm9taWNzLCBhbmQgc3RydWN0dXJhbCBiaW9jaGVtaXN0cnkgbm93IGVtcG93ZXIgYSBzeXN0ZW1hdGljLCBkYXRhLWRyaXZlbiBhcHByb2FjaCB0byBpZGVudGlmeSwgcHJlZGljdCwgYW5kIHZhbGlkYXRlIGluc3RhbmNlcyBvZiBhY3RpdmUtc2l0ZSBkYW1hZ2UgYW5kIGl0cyByZXBhaXIuIFRoZXNlIGNhcGFiaWxpdGllcyB3b3VsZCBiZSBwcmFjdGljYWxseSB1c2VmdWwgaW4gZW56eW1lIHJlZGVzaWduIGFuZCBpbXByb3ZlbWVudCBvZiBpbi11c2Ugc3RhYmlsaXR5LCBhbmQgY291bGQgY2hhbmdlIHRoaW5raW5nIGFib3V0IHdoaWNoIGVuenltZXMgZGllIHlvdW5nIGluIHZpdm8sIGFuZCB3aHkuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4="
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi85NTc3MS4yMC8xODI4NTkyPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5IZW5yeSwgQ2hyaXN0b3BoZXI8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+QXJnb25uZSBOYXRpb25hbCBMYWIuIChBTkwpLCBBcmdvbm5lLCBJTCAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5UaGUgbW9kZXJhdGVseSBkZWZmaWNpZW50IGVuenltZTogQ2F0YWx5c2lzLXJlbGF0ZWQgZGFtYWdlIGluIHZpdm8gYW5kIGl0cyByZXBhaXI8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+QXJnb25uZSBOYXRpb25hbCBMYWJvcmF0b3J5IChBTkwpLCBBcmdvbm5lLCBJTCAoVW5pdGVkIFN0YXRlcyk7IFVTIERlcGFydG1lbnQgb2YgRW5lcmd5IFN5c3RlbXMgQmlvbG9neSBLbm93bGVkZ2ViYXNlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3QvPgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE4Mjg1OTI8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+Ti9BPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+RW56eW1lcyBoYXZlIGluIHZpdm8gbGlmZXNwYW5zLiBBbmFseXNpcyBvZiBsaWZlc3BhbnMg4oCTIGxpZmV0aW1lIHRvdGFscyBvZiBjYXRhbHl0aWMgdHVybm92ZXJzIOKAkyBzdWdnZXN0cyB0aGF0IG5vbi1zdXJ2aXZhYmxlIGNvbGxhdGVyYWwgY2hlbWljYWwgZGFtYWdlIGZyb20gdGhlIHZlcnkgcmVhY3Rpb25zIHRoYXQgZW56eW1lcyBjYXRhbHl6ZSBpcyBhIGNvbW1vbiBidXQgdW5kZXJkaWFnbm9zZWQgY2F1c2Ugb2YgZW56eW1lIGRlYXRoLiBBbmFseXNpcyBhbHNvIGltcGxpZXMgdGhhdCBtYW55IGVuenltZXMgYXJlIG1vZGVyYXRlbHkgZGVmaWNpZW50IGluIHRoYXQgdGhlaXIgYWN0aXZlLXNpdGUgcmVnaW9ucyBhcmUgbm90IG5hdHVyYWxseSBhcyBoYXJkZW5lZCBhZ2FpbnN0IHN1Y2ggY29sbGF0ZXJhbCBkYW1hZ2UgYXMgdGhleSBjb3VsZCBiZSwgbGVhdmluZyByb29tIGZvciBpbXByb3ZlbWVudCBieSByYXRpb25hbCBkZXNpZ24gb3IgZGlyZWN0ZWQgZXZvbHV0aW9uLiBFbnp5bWUgbGlmZXNwYW4gbWlnaHQgYWxzbyBiZSBpbXByb3ZlZCBieSBlbmdpbmVlcmluZyBzeXN0ZW1zIHRoYXQgcmVwYWlyIG90aGVyd2lzZSBmYXRhbCBhY3RpdmUtc2l0ZSBkYW1hZ2UsIG9mIHdoaWNoIGEgaGFuZGZ1bCBhcmUga25vd24gYW5kIG1vcmUgYXJlIGluZmVycmVkIHRvIGV4aXN0LiBVbmZvcnR1bmF0ZWx5LCB0aGUgZGF0YSBuZWVkZWQgdG8gZGVzaWduIGFuZCBleGVjdXRlIHN1Y2ggaW1wcm92ZW1lbnRzIGlzIGxhY2tpbmc6IHRoZXJlIGFyZSB0b28gZmV3IG1lYXN1cmVtZW50cyBvZiBpbiB2aXZvIGxpZmVzcGFuLCBhbmQgZXhpc3RpbmcgaW5mb3JtYXRpb24gb24gdGhlIGV4dGVudCwgbmF0dXJlLCBhbmQgbWVjaGFuaXNtcyBvZiBhY3RpdmUtc2l0ZSBkYW1hZ2UgYW5kIHJlcGFpciBkdXJpbmcgbm9ybWFsIGVuenltZSBvcGVyYXRpb24gaXMgdG9vIHNjYXJjZSwgYW5lY2RvdGFsLCBhbmQgc3BlY3VsYXRpdmUgdG8gYWN0IG9uLiBGb3J0dW5hdGVseSwgYWR2YW5jZXMgaW4gcHJvdGVvbWljcywgbWV0YWJvbG9taWNzLCBjaGVtaW5mb3JtYXRpY3MsIGNvbXBhcmF0aXZlIGdlbm9taWNzLCBhbmQgc3RydWN0dXJhbCBiaW9jaGVtaXN0cnkgbm93IGVtcG93ZXIgYSBzeXN0ZW1hdGljLCBkYXRhLWRyaXZlbiBhcHByb2FjaCB0byBpZGVudGlmeSwgcHJlZGljdCwgYW5kIHZhbGlkYXRlIGluc3RhbmNlcyBvZiBhY3RpdmUtc2l0ZSBkYW1hZ2UgYW5kIGl0cyByZXBhaXIuIFRoZXNlIGNhcGFiaWxpdGllcyB3b3VsZCBiZSBwcmFjdGljYWxseSB1c2VmdWwgaW4gZW56eW1lIHJlZGVzaWduIGFuZCBpbXByb3ZlbWVudCBvZiBpbi11c2Ugc3RhYmlsaXR5LCBhbmQgY291bGQgY2hhbmdlIHRoaW5raW5nIGFib3V0IHdoaWNoIGVuenltZXMgZGllIHlvdW5nIGluIHZpdm8sIGFuZCB3aHkuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1828592"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "N/A"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "None"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "Argonne National Lab. (ANL), Argonne, IL (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Henry, Christopher"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [
+                "Enzymes have in vivo lifespans. Analysis of lifespans \u2013 lifetime totals of catalytic turnovers \u2013 suggests that non-survivable collateral chemical damage from the very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme death. Analysis also implies that many enzymes are moderately deficient in that their active-site regions are not naturally as hardened against such collateral damage as they could be, leaving room for improvement by rational design or directed evolution. Enzyme lifespan might also be improved by engineering systems that repair otherwise fatal active-site damage, of which a handful are known and more are inferred to exist. Unfortunately, the data needed to design and execute such improvements is lacking: there are too few measurements of in vivo lifespan, and existing information on the extent, nature, and mechanisms of active-site damage and repair during normal enzyme operation is too scarce, anecdotal, and speculative to act on. Fortunately, advances in proteomics, metabolomics, cheminformatics, comparative genomics, and structural biochemistry now empower a systematic, data-driven approach to identify, predict, and validate instances of active-site damage and its repair. These capabilities would be practically useful in enzyme redesign and improvement of in-use stability, and could change thinking about which enzymes die young in vivo, and why."
+              ],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": null,
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25982/95771.20/1828592"
+        },
+        "language": "en",
+        "publicationYear": "2021",
+        "publisher": {
+          "lang": null,
+          "value": "Argonne National Laboratory (ANL), Argonne, IL (United States); US Department of Energy Systems Biology Knowledgebase"
+        },
+        "relatedIdentifiers": null,
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Genome/Genetics Data"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "59 BASIC BIOLOGICAL SCIENCES",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "The moderately defficient enzyme: Catalysis-related damage in vivo and its repair"
+            }
+          ]
+        },
+        "version": null
+      }
     },
     "id": "10.25982/95771.20/1828592",
     "relationships": {

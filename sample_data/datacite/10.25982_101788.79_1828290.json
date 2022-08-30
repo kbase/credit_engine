@@ -24,7 +24,9 @@
       "creators": [
         {
           "affiliation": [
-            "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)"
+            {
+              "name": "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)"
+            }
           ],
           "familyName": "Kumari",
           "givenName": "Sunita",
@@ -228,7 +230,316 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMDE3ODguNzkvMTgyODI5MDwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+S3VtYXJpLCBTdW5pdGE8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+Q29sZCBTcHJpbmcgSGFyYm9yIExhYm9yYXRvcnkgQ29sZCBTcHJpbmcgSGFyYm9yLCBOWSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIEtCYXNlIENhc2UgU3R1ZHkgb24gR2Vub21lLXdpZGUgVHJhbnNjcmlwdG9taWNzIGFuZCBQbGFudCBQcmltYXJ5IE1ldGFib2xpc20gaW4gU29yZ2h1bTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5Db2xkIFNwcmluZyBIYXJib3IgTGFib3JhdG9yeSBDb2xkIFNwcmluZyBIYXJib3IsIE5ZIChVbml0ZWQgU3RhdGVzKTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMTwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+NTkgQkFTSUMgQklPTE9HSUNBTCBTQ0lFTkNFUzwvc3ViamVjdD4KICAgIDxzdWJqZWN0PnRyYW5zY3JpcHRvbWljcywgbWV0YWJvbGlzbSwgc29yZ2h1bTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODI4MjkwPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvczEyOTE4LTAxOC0wNjA3LTU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDczL3BuYXMuMTQwMTMyOTExMTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwNDMyMTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwMzEyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnRwMTIwPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMzEyMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjMxNzI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjEwNS0xNS0yMjU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC40MTYzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuNDE2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9ubWV0aC4zMzE3PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMTY3MjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni8xNDcxLTIxMDUtMTUtMjI1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9zMTMwNTktMDE0LTA1NTAtODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjMzODkvZnBscy4yMDE1LjAwMTQyPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9uYXIvZ2t0MTIyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni9nYi0yMDEzLTE0LTQtcjM2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9nYi0yMDEzLTE0LTQtcjM2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9ucHJvdC4yMDEyLjAxNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExMTEvdHBqLjE0MDAzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2L3MxMzA1OS0wMTQtMDU1MC04PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9zMTMwNTktMDE1LTA3MjEtMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEzNzEvam91cm5hbC5wY2JpLjEwMDMxMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+QSBiZXR0ZXIgdW5kZXJzdGFuZGluZyBvZiB0aGUgZ2VuZXRpYyBhbmQgbWV0YWJvbGljIG1lY2hhbmlzbXMgdGhhdCBjb25mZXIgc3RyZXNzIHJlc2lzdGFuY2UgYW5kIHRvbGVyYW5jZSBpbiBwbGFudHMgaXMga2V5IHRvIGVuZ2luZWVyaW5nIG5ldyBjcm9wcyB0aHJvdWdoIGFkdmFuY2VkIGJyZWVkaW5nIHRlY2hub2xvZ2llcy4gVGhpcyByZXF1aXJlcyBhIHN5c3RlbXMgYmlvbG9neSBhcHByb2FjaCB0aGF0IGJ1aWxkcyBvbiBhIGdlbm9tZS13aWRlIHVuZGVyc3RhbmRpbmcgb2YgdGhlIHJlZ3VsYXRpb24gb2YgZ2VuZSBleHByZXNzaW9uLCBwbGFudCBtZXRhYm9saXNtLCBwaHlzaW9sb2d5IGFuZCBncm93dGguIEluIHRoaXMgc3R1ZHksIHdlIGV4YW1pbmUgdGhlIHJlc3BvbnNlIHRvIGRyb3VnaHQgc3RyZXNzIGluIFNvcmdodW0sIGFzIHdlIGxldmVyYWdlIHRoZSB0b29scyBmb3IgdHJhbnNjcmlwdG9taWNzIGFuZCBwbGFudCBtZXRhYm9saWMgbW9kZWxpbmcgd2UgaGF2ZSBpbXBsZW1lbnRlZCBhdCB0aGUgVS5TLiBEZXBhcnRtZW50IG9mIEVuZXJneSBTeXN0ZW1zIEJpb2xvZ3kgS25vd2xlZGdlYmFzZSAoS0Jhc2UpLiBLQmFzZSBlbmFibGVzIHJlc2VhcmNoZXJzIHdvcmxkd2lkZSB0byBjb2xsYWJvcmF0ZSBhbmQgYWR2YW5jZSByZXNlYXJjaCBieSBhbGxvd2luZyB0aGVtIHRvIHVwbG9hZCBwcml2YXRlIG9yIHB1YmxpYyBkYXRhIGludG8gdGhlIEtCYXNlIE5hcnJhdGl2ZSBJbnRlcmZhY2UsIGVtcG93ZXJpbmcgdGhlbSB0byBhbmFseXplIHRoaXMgZGF0YSB1c2luZyBhIHJpY2gsIGV4dGVuc2libGUgYXJyYXkgb2YgY29tcHV0YXRpb25hbCBhbmQgZGF0YS1hbmFseXRpY3MgdG9vbHMsIGFuZCBhbGxvd3MgdGhlbSB0byBzZWN1cmVseSBzaGFyZSBzY2llbnRpZmljIHdvcmtmbG93cyBhbmQgY29uY2x1c2lvbnMuIFdlIGRlbW9uc3RyYXRlIGhvdyB0byB1c2UgdGhlIGN1cnJlbnQgUk5BLXNlcSB0b29scyBpbiBLQmFzZSwgYXBwbGljYWJsZSB0byBib3RoIHBsYW50cyBhbmQgbWljcm9iZXMsIHRvIGFzc2VtYmxlIGFuZCBxdWFudGlmeSBsb25nIHRyYW5zY3JpcHRzIGFuZCBpZGVudGlmeSBkaWZmZXJlbnRpYWxseSBleHByZXNzZWQgZ2VuZXMgZWZmZWN0aXZlbHkuIE1vcmUgc3BlY2lmaWNhbGx5LCB3ZSBkZW1vbnN0cmF0ZSB0aGUgdXRpbGl0eSBvZiB0aGUgcGxhdGZvcm0gYnkgaWRlbnRpZnlpbmcga2V5IGdlbmVzIHRoYXQgYXJlIGRpZmZlcmVudGlhbGx5IGV4cHJlc3NlZCBkdXJpbmcgZHJvdWdodC1zdHJlc3MgaW4gU29yZ2h1bSBiaWNvbG9yLCB3aGljaCBpcyBhbiBpbXBvcnRhbnQgc3VzdGFpbmFibGUgcHJvZHVjdGlvbiBjcm9wIHBsYW50LiBXZSB0aGVuIHNob3cgaG93IHRvIHVzZSBLQmFzZSB0b29scyB0byBwcmVkaWN0IHRoZSBtZW1iZXJzaGlwIG9mIGdlbmVzIGluIG1ldGFib2xpYyBwYXRod2F5cyBhbmQgZXhhbWluZSBleHByZXNzaW9uIGRhdGEgaW4gdGhlIGNvbnRleHQgb2YgbWV0YWJvbGljIHN1YnN5c3RlbXMuIFdlIGRlbW9uc3RyYXRlIHRoZSBwb3dlciBvZiB0aGUgcGxhdGZvcm0gYnkgbWFraW5nIHRoZSBkYXRhIGFuYWx5c2lzIGFuZCBpbnRlcnByZXRhdGlvbiBhdmFpbGFibGUgdG8gdGhlIGJpb2xvZ2lzdHMgaW4gdGhlIHJlcHJvZHVjaWJsZSwgcmUtdXNhYmxlLCBwb2ludC1hbmQtY2xpY2sgZm9ybWF0IG9mIGEgS0Jhc2UgTmFycmF0aXZlIHRodXMgcHJvbW90aW5nIEZBSVIgKEZpbmRhYmxlLCBBY2Nlc3NpYmxlLCBJbnRlcm9wZXJhYmxlIGFuZCBSZXVzYWJsZSkgZ3VpZGluZyBwcmluY2lwbGVzIGZvciBzY2llbnRpZmljIGRhdGEgbWFuYWdlbWVudCBhbmQgc3Rld2FyZHNoaXAuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4="
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMDE3ODguNzkvMTgyODI5MDwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+S3VtYXJpLCBTdW5pdGE8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+Q29sZCBTcHJpbmcgSGFyYm9yIExhYm9yYXRvcnkgQ29sZCBTcHJpbmcgSGFyYm9yLCBOWSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIEtCYXNlIENhc2UgU3R1ZHkgb24gR2Vub21lLXdpZGUgVHJhbnNjcmlwdG9taWNzIGFuZCBQbGFudCBQcmltYXJ5IE1ldGFib2xpc20gaW4gU29yZ2h1bTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5Db2xkIFNwcmluZyBIYXJib3IgTGFib3JhdG9yeSBDb2xkIFNwcmluZyBIYXJib3IsIE5ZIChVbml0ZWQgU3RhdGVzKTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMTwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+NTkgQkFTSUMgQklPTE9HSUNBTCBTQ0lFTkNFUzwvc3ViamVjdD4KICAgIDxzdWJqZWN0PnRyYW5zY3JpcHRvbWljcywgbWV0YWJvbGlzbSwgc29yZ2h1bTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODI4MjkwPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvczEyOTE4LTAxOC0wNjA3LTU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDczL3BuYXMuMTQwMTMyOTExMTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwNDMyMTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwMzEyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnRwMTIwPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMzEyMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjMxNzI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjEwNS0xNS0yMjU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC40MTYzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuNDE2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9ubWV0aC4zMzE3PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMTY3MjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni8xNDcxLTIxMDUtMTUtMjI1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9zMTMwNTktMDE0LTA1NTAtODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjMzODkvZnBscy4yMDE1LjAwMTQyPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9uYXIvZ2t0MTIyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni9nYi0yMDEzLTE0LTQtcjM2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9nYi0yMDEzLTE0LTQtcjM2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9ucHJvdC4yMDEyLjAxNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExMTEvdHBqLjE0MDAzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2L3MxMzA1OS0wMTQtMDU1MC04PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9zMTMwNTktMDE1LTA3MjEtMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEzNzEvam91cm5hbC5wY2JpLjEwMDMxMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+QSBiZXR0ZXIgdW5kZXJzdGFuZGluZyBvZiB0aGUgZ2VuZXRpYyBhbmQgbWV0YWJvbGljIG1lY2hhbmlzbXMgdGhhdCBjb25mZXIgc3RyZXNzIHJlc2lzdGFuY2UgYW5kIHRvbGVyYW5jZSBpbiBwbGFudHMgaXMga2V5IHRvIGVuZ2luZWVyaW5nIG5ldyBjcm9wcyB0aHJvdWdoIGFkdmFuY2VkIGJyZWVkaW5nIHRlY2hub2xvZ2llcy4gVGhpcyByZXF1aXJlcyBhIHN5c3RlbXMgYmlvbG9neSBhcHByb2FjaCB0aGF0IGJ1aWxkcyBvbiBhIGdlbm9tZS13aWRlIHVuZGVyc3RhbmRpbmcgb2YgdGhlIHJlZ3VsYXRpb24gb2YgZ2VuZSBleHByZXNzaW9uLCBwbGFudCBtZXRhYm9saXNtLCBwaHlzaW9sb2d5IGFuZCBncm93dGguIEluIHRoaXMgc3R1ZHksIHdlIGV4YW1pbmUgdGhlIHJlc3BvbnNlIHRvIGRyb3VnaHQgc3RyZXNzIGluIFNvcmdodW0sIGFzIHdlIGxldmVyYWdlIHRoZSB0b29scyBmb3IgdHJhbnNjcmlwdG9taWNzIGFuZCBwbGFudCBtZXRhYm9saWMgbW9kZWxpbmcgd2UgaGF2ZSBpbXBsZW1lbnRlZCBhdCB0aGUgVS5TLiBEZXBhcnRtZW50IG9mIEVuZXJneSBTeXN0ZW1zIEJpb2xvZ3kgS25vd2xlZGdlYmFzZSAoS0Jhc2UpLiBLQmFzZSBlbmFibGVzIHJlc2VhcmNoZXJzIHdvcmxkd2lkZSB0byBjb2xsYWJvcmF0ZSBhbmQgYWR2YW5jZSByZXNlYXJjaCBieSBhbGxvd2luZyB0aGVtIHRvIHVwbG9hZCBwcml2YXRlIG9yIHB1YmxpYyBkYXRhIGludG8gdGhlIEtCYXNlIE5hcnJhdGl2ZSBJbnRlcmZhY2UsIGVtcG93ZXJpbmcgdGhlbSB0byBhbmFseXplIHRoaXMgZGF0YSB1c2luZyBhIHJpY2gsIGV4dGVuc2libGUgYXJyYXkgb2YgY29tcHV0YXRpb25hbCBhbmQgZGF0YS1hbmFseXRpY3MgdG9vbHMsIGFuZCBhbGxvd3MgdGhlbSB0byBzZWN1cmVseSBzaGFyZSBzY2llbnRpZmljIHdvcmtmbG93cyBhbmQgY29uY2x1c2lvbnMuIFdlIGRlbW9uc3RyYXRlIGhvdyB0byB1c2UgdGhlIGN1cnJlbnQgUk5BLXNlcSB0b29scyBpbiBLQmFzZSwgYXBwbGljYWJsZSB0byBib3RoIHBsYW50cyBhbmQgbWljcm9iZXMsIHRvIGFzc2VtYmxlIGFuZCBxdWFudGlmeSBsb25nIHRyYW5zY3JpcHRzIGFuZCBpZGVudGlmeSBkaWZmZXJlbnRpYWxseSBleHByZXNzZWQgZ2VuZXMgZWZmZWN0aXZlbHkuIE1vcmUgc3BlY2lmaWNhbGx5LCB3ZSBkZW1vbnN0cmF0ZSB0aGUgdXRpbGl0eSBvZiB0aGUgcGxhdGZvcm0gYnkgaWRlbnRpZnlpbmcga2V5IGdlbmVzIHRoYXQgYXJlIGRpZmZlcmVudGlhbGx5IGV4cHJlc3NlZCBkdXJpbmcgZHJvdWdodC1zdHJlc3MgaW4gU29yZ2h1bSBiaWNvbG9yLCB3aGljaCBpcyBhbiBpbXBvcnRhbnQgc3VzdGFpbmFibGUgcHJvZHVjdGlvbiBjcm9wIHBsYW50LiBXZSB0aGVuIHNob3cgaG93IHRvIHVzZSBLQmFzZSB0b29scyB0byBwcmVkaWN0IHRoZSBtZW1iZXJzaGlwIG9mIGdlbmVzIGluIG1ldGFib2xpYyBwYXRod2F5cyBhbmQgZXhhbWluZSBleHByZXNzaW9uIGRhdGEgaW4gdGhlIGNvbnRleHQgb2YgbWV0YWJvbGljIHN1YnN5c3RlbXMuIFdlIGRlbW9uc3RyYXRlIHRoZSBwb3dlciBvZiB0aGUgcGxhdGZvcm0gYnkgbWFraW5nIHRoZSBkYXRhIGFuYWx5c2lzIGFuZCBpbnRlcnByZXRhdGlvbiBhdmFpbGFibGUgdG8gdGhlIGJpb2xvZ2lzdHMgaW4gdGhlIHJlcHJvZHVjaWJsZSwgcmUtdXNhYmxlLCBwb2ludC1hbmQtY2xpY2sgZm9ybWF0IG9mIGEgS0Jhc2UgTmFycmF0aXZlIHRodXMgcHJvbW90aW5nIEZBSVIgKEZpbmRhYmxlLCBBY2Nlc3NpYmxlLCBJbnRlcm9wZXJhYmxlIGFuZCBSZXVzYWJsZSkgZ3VpZGluZyBwcmluY2lwbGVzIGZvciBzY2llbnRpZmljIGRhdGEgbWFuYWdlbWVudCBhbmQgc3Rld2FyZHNoaXAuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1828290"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "N/A"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "None"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Kumari, Sunita"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [
+                "A better understanding of the genetic and metabolic mechanisms that confer stress resistance and tolerance in plants is key to engineering new crops through advanced breeding technologies. This requires a systems biology approach that builds on a genome-wide understanding of the regulation of gene expression, plant metabolism, physiology and growth. In this study, we examine the response to drought stress in Sorghum, as we leverage the tools for transcriptomics and plant metabolic modeling we have implemented at the U.S. Department of Energy Systems Biology Knowledgebase (KBase). KBase enables researchers worldwide to collaborate and advance research by allowing them to upload private or public data into the KBase Narrative Interface, empowering them to analyze this data using a rich, extensible array of computational and data-analytics tools, and allows them to securely share scientific workflows and conclusions. We demonstrate how to use the current RNA-seq tools in KBase, applicable to both plants and microbes, to assemble and quantify long transcripts and identify differentially expressed genes effectively. More specifically, we demonstrate the utility of the platform by identifying key genes that are differentially expressed during drought-stress in Sorghum bicolor, which is an important sustainable production crop plant. We then show how to use KBase tools to predict the membership of genes in metabolic pathways and examine expression data in the context of metabolic subsystems. We demonstrate the power of the platform by making the data analysis and interpretation available to the biologists in the reproducible, re-usable, point-and-click format of a KBase Narrative thus promoting FAIR (Findable, Accessible, Interoperable and Reusable) guiding principles for scientific data management and stewardship."
+              ],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": null,
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25982/101788.79/1828290"
+        },
+        "language": "en",
+        "publicationYear": "2021",
+        "publisher": {
+          "lang": null,
+          "value": "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)"
+        },
+        "relatedIdentifiers": {
+          "relatedIdentifier": [
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/s12918-018-0607-5"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1073/pnas.1401329111"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1371/journal.pcbi.1004321"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1371/journal.pcbi.1003126"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1093/bioinformatics/btp120"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.3122"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.3172"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/1471-2105-15-225"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.4163"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.416"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nmeth.3317"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.1672"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/1471-2105-15-225"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/s13059-014-0550-8"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.3389/fpls.2015.00142"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1093/nar/gkt1226"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/gb-2013-14-4-r36"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/gb-2013-14-4-r36"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nprot.2012.016"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1111/tpj.14003"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/s13059-014-0550-8"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/s13059-015-0721-2"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1371/journal.pcbi.1003126"
+            }
+          ]
+        },
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Genome/Genetics Data"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "59 BASIC BIOLOGICAL SCIENCES",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "transcriptomics, metabolism, sorghum",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "A KBase Case Study on Genome-wide Transcriptomics and Plant Primary Metabolism in Sorghum"
+            }
+          ]
+        },
+        "version": null
+      }
     },
     "id": "10.25982/101788.79/1828290",
     "relationships": {

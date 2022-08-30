@@ -24,7 +24,9 @@
       "creators": [
         {
           "affiliation": [
-            "University of California Berkeley"
+            {
+              "name": "University of California Berkeley"
+            }
           ],
           "familyName": "Sander",
           "givenName": "Kyle",
@@ -40,7 +42,9 @@
         },
         {
           "affiliation": [
-            "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA"
+            {
+              "name": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA"
+            }
           ],
           "familyName": "Abel",
           "givenName": "Anthony",
@@ -50,7 +54,9 @@
         },
         {
           "affiliation": [
-            "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA"
+            {
+              "name": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA"
+            }
           ],
           "familyName": "Friedline",
           "givenName": "Skyler",
@@ -60,7 +66,9 @@
         },
         {
           "affiliation": [
-            "Center for the Utilization of Biological Engineering in Space, Berkeley, CA Current Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA"
+            {
+              "name": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA Current Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA"
+            }
           ],
           "familyName": "Sharpless",
           "givenName": "Willam",
@@ -70,7 +78,9 @@
         },
         {
           "affiliation": [
-            "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA Current Affiliation: Zymergen, Emeryville, CA Introduction"
+            {
+              "name": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA Current Affiliation: Zymergen, Emeryville, CA Introduction"
+            }
           ],
           "familyName": "Skerker",
           "givenName": "Jeffrey",
@@ -80,7 +90,9 @@
         },
         {
           "affiliation": [
-            "Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA"
+            {
+              "name": "Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA"
+            }
           ],
           "familyName": "Deutschbauer",
           "givenName": "Adam",
@@ -90,7 +102,9 @@
         },
         {
           "affiliation": [
-            "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA"
+            {
+              "name": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA"
+            }
           ],
           "familyName": "Clark",
           "givenName": "Douglas",
@@ -100,7 +114,9 @@
         },
         {
           "affiliation": [
-            "Center for the Utilization of Biological Engineering in Space, Berkeley, CA Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA"
+            {
+              "name": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA"
+            }
           ],
           "familyName": "Arkin",
           "givenName": "Adam",
@@ -187,7 +203,220 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMjM2NzYuNy8xODgwMTI4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TYW5kZXIsIEt5bGU8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNTk0NC03ODIyPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYSBCZXJrZWxleTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QWJlbCwgQW50aG9ueTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIHRoZSBVdGlsaXphdGlvbiBvZiBCaW9sb2dpY2FsIEVuZ2luZWVyaW5nIGluIFNwYWNlLCBCZXJrZWxleSwgQ0E7IERlcGFydG1lbnQgb2YgQ2hlbWljYWwgJmFtcDsgQmlvbW9sZWN1bGFyIEVuZ2luZWVyaW5nLCBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIEJlcmtlbGV5LiBCZXJrZWxleSwgQ0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZyaWVkbGluZSwgU2t5bGVyPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgdGhlIFV0aWxpemF0aW9uIG9mIEJpb2xvZ2ljYWwgRW5naW5lZXJpbmcgaW4gU3BhY2UsIEJlcmtlbGV5LCBDQTsgRGVwYXJ0bWVudCBvZiBCaW9lbmdpbmVlcmluZywgVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBCZXJrZWxleS4gQmVya2VsZXksIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TaGFycGxlc3MsIFdpbGxhbTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIHRoZSBVdGlsaXphdGlvbiBvZiBCaW9sb2dpY2FsIEVuZ2luZWVyaW5nIGluIFNwYWNlLCBCZXJrZWxleSwgQ0EKCkN1cnJlbnQgQWZmaWxpYXRpb246IERlcGFydG1lbnQgb2YgQmlvZW5naW5lZXJpbmcsIFVuaXZlcnNpdHkgb2YgU2FuIERpZWdvLCBTYW4gRGllZ28sIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Ta2Vya2VyLCBKZWZmcmV5PC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgdGhlIFV0aWxpemF0aW9uIG9mIEJpb2xvZ2ljYWwgRW5naW5lZXJpbmcgaW4gU3BhY2UsIEJlcmtlbGV5LCBDQTsgRGVwYXJ0bWVudCBvZiBCaW9lbmdpbmVlcmluZywgVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBCZXJrZWxleS4gQmVya2VsZXksIENBOyBFbnZpcm9ubWVudGFsIEdlbm9taWNzIGFuZCBTeXN0ZW1zIEJpb2xvZ3kgRGl2aXNpb24sIExhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYm9yYXRvcnksIEJlcmtlbGV5LCBDQQoKQ3VycmVudCBBZmZpbGlhdGlvbjogWnltZXJnZW4sIEVtZXJ5dmlsbGUsIENBCkludHJvZHVjdGlvbjwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RGV1dHNjaGJhdWVyLCBBZGFtPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkVudmlyb25tZW50YWwgR2Vub21pY3MgYW5kIFN5c3RlbXMgQmlvbG9neSBEaXZpc2lvbiwgTGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFib3JhdG9yeSwgQmVya2VsZXksIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5DbGFyaywgRG91Z2xhczwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIHRoZSBVdGlsaXphdGlvbiBvZiBCaW9sb2dpY2FsIEVuZ2luZWVyaW5nIGluIFNwYWNlLCBCZXJrZWxleSwgQ0E7IERlcGFydG1lbnQgb2YgQ2hlbWljYWwgJmFtcDsgQmlvbW9sZWN1bGFyIEVuZ2luZWVyaW5nLCBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIEJlcmtlbGV5LiBCZXJrZWxleSwgQ0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkFya2luLCBBZGFtPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgdGhlIFV0aWxpemF0aW9uIG9mIEJpb2xvZ2ljYWwgRW5naW5lZXJpbmcgaW4gU3BhY2UsIEJlcmtlbGV5LCBDQQpEZXBhcnRtZW50IG9mIEJpb2VuZ2luZWVyaW5nLCBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIEJlcmtlbGV5LiBCZXJrZWxleSwgQ0E7IEVudmlyb25tZW50YWwgR2Vub21pY3MgYW5kIFN5c3RlbXMgQmlvbG9neSBEaXZpc2lvbiwgTGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFib3JhdG9yeSwgQmVya2VsZXksIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+S0Jhc2UgTmFycmF0aXZlIC0gQ29tcGFyaW5nIFByb3Rlb21lcyBvZiBDdXByaWF2aWR1cyBiYXNpbGVuc2lzIDRHMTEgYW5kIEN1cHJpYXZpZHVzIG5lY2F0b3IgSDE2PC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjI8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0Lz4KICAgIDxzdWJqZWN0Lz4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODgwMTI4PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDg5LzEwNjY1MjcwNDE0MTAzMTk8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+U3BlY2llcyBvZiBDdXByaWF2aWR1cyBhcmUgYW1vbmcgdGhlIGJlc3QgYmlvcGxhc3RpYyBwcm9kdWNpbmcgbWljcm9vcmdhbmlzbXMga25vd24sIHRob3VnaCBpbnRyYWNlbGx1bGFyIHBvbHktaHlkcm94eWJ1dHlyYXRlIChQSEIpIGlzIG1hZGUgZXhjbHVzaXZlbHkgZHVyaW5nIHVuYmFsYW5jZWQgZ3Jvd3RoIChlLmcuIG5pdHJvZ2VuIGxpbWl0YXRpb24pLCBhIHN0YXRlIGNoYXJhY3Rlcml6ZWQgYnkgcG9vciBncm93dGggYW5kIGNlbGx1bGFyIHN0cmVzcy4gTXVjaCB3b3JrIGhhcyBiZWVuIGRvbmUgc3R1ZHlpbmcgYmlvcGxhc3RpYyBwcm9kdWN0aW9uIGluIHRoZSBtb2RlbC90eXBlIHN0cmFpbiBDLiBuZWNhdG9yIEgxNi4gV2UgdXNlIGFuIFJCLVRuU2VxIGxpYnJhcnkgb2YgdGhlIGNsb3NlbHkgcmVsYXRlZCBDLiBiYXNpbGVuc2lzIDRHMTEgdG8gYXNzZXNzIGZvciBnZW5lcyB3aGljaCBkZWNvdXBsZSBQSEIgcHJvZHVjdGlvbiBmcm9tIGdyb3d0aCBzdGF0ZS4gSW4gdGhpcyBuYXJyYXRpdmUgd2UgY29tcHV0ZSBnZW5vbWUtd2lkZSBwcm90ZWluIGhvbW9sb2d5IGJldHdlZW4gdGhlc2UgdHdvIG9yZ2FuaXNtcywgYW5kIGdlbmVyYXRlIGEgc3ludGVueSBwbG90IGFjcm9zcyB0aGUgZ2Vub21lcyBhcyB3ZWxsLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+"
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMjM2NzYuNy8xODgwMTI4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TYW5kZXIsIEt5bGU8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNTk0NC03ODIyPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYSBCZXJrZWxleTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QWJlbCwgQW50aG9ueTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIHRoZSBVdGlsaXphdGlvbiBvZiBCaW9sb2dpY2FsIEVuZ2luZWVyaW5nIGluIFNwYWNlLCBCZXJrZWxleSwgQ0E7IERlcGFydG1lbnQgb2YgQ2hlbWljYWwgJmFtcDsgQmlvbW9sZWN1bGFyIEVuZ2luZWVyaW5nLCBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIEJlcmtlbGV5LiBCZXJrZWxleSwgQ0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZyaWVkbGluZSwgU2t5bGVyPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgdGhlIFV0aWxpemF0aW9uIG9mIEJpb2xvZ2ljYWwgRW5naW5lZXJpbmcgaW4gU3BhY2UsIEJlcmtlbGV5LCBDQTsgRGVwYXJ0bWVudCBvZiBCaW9lbmdpbmVlcmluZywgVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBCZXJrZWxleS4gQmVya2VsZXksIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TaGFycGxlc3MsIFdpbGxhbTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIHRoZSBVdGlsaXphdGlvbiBvZiBCaW9sb2dpY2FsIEVuZ2luZWVyaW5nIGluIFNwYWNlLCBCZXJrZWxleSwgQ0EKCkN1cnJlbnQgQWZmaWxpYXRpb246IERlcGFydG1lbnQgb2YgQmlvZW5naW5lZXJpbmcsIFVuaXZlcnNpdHkgb2YgU2FuIERpZWdvLCBTYW4gRGllZ28sIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Ta2Vya2VyLCBKZWZmcmV5PC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgdGhlIFV0aWxpemF0aW9uIG9mIEJpb2xvZ2ljYWwgRW5naW5lZXJpbmcgaW4gU3BhY2UsIEJlcmtlbGV5LCBDQTsgRGVwYXJ0bWVudCBvZiBCaW9lbmdpbmVlcmluZywgVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBCZXJrZWxleS4gQmVya2VsZXksIENBOyBFbnZpcm9ubWVudGFsIEdlbm9taWNzIGFuZCBTeXN0ZW1zIEJpb2xvZ3kgRGl2aXNpb24sIExhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYm9yYXRvcnksIEJlcmtlbGV5LCBDQQoKQ3VycmVudCBBZmZpbGlhdGlvbjogWnltZXJnZW4sIEVtZXJ5dmlsbGUsIENBCkludHJvZHVjdGlvbjwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RGV1dHNjaGJhdWVyLCBBZGFtPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkVudmlyb25tZW50YWwgR2Vub21pY3MgYW5kIFN5c3RlbXMgQmlvbG9neSBEaXZpc2lvbiwgTGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFib3JhdG9yeSwgQmVya2VsZXksIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5DbGFyaywgRG91Z2xhczwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIHRoZSBVdGlsaXphdGlvbiBvZiBCaW9sb2dpY2FsIEVuZ2luZWVyaW5nIGluIFNwYWNlLCBCZXJrZWxleSwgQ0E7IERlcGFydG1lbnQgb2YgQ2hlbWljYWwgJmFtcDsgQmlvbW9sZWN1bGFyIEVuZ2luZWVyaW5nLCBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIEJlcmtlbGV5LiBCZXJrZWxleSwgQ0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkFya2luLCBBZGFtPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgdGhlIFV0aWxpemF0aW9uIG9mIEJpb2xvZ2ljYWwgRW5naW5lZXJpbmcgaW4gU3BhY2UsIEJlcmtlbGV5LCBDQQpEZXBhcnRtZW50IG9mIEJpb2VuZ2luZWVyaW5nLCBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIEJlcmtlbGV5LiBCZXJrZWxleSwgQ0E7IEVudmlyb25tZW50YWwgR2Vub21pY3MgYW5kIFN5c3RlbXMgQmlvbG9neSBEaXZpc2lvbiwgTGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFib3JhdG9yeSwgQmVya2VsZXksIENBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+S0Jhc2UgTmFycmF0aXZlIC0gQ29tcGFyaW5nIFByb3Rlb21lcyBvZiBDdXByaWF2aWR1cyBiYXNpbGVuc2lzIDRHMTEgYW5kIEN1cHJpYXZpZHVzIG5lY2F0b3IgSDE2PC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjI8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0Lz4KICAgIDxzdWJqZWN0Lz4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODgwMTI4PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDg5LzEwNjY1MjcwNDE0MTAzMTk8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+U3BlY2llcyBvZiBDdXByaWF2aWR1cyBhcmUgYW1vbmcgdGhlIGJlc3QgYmlvcGxhc3RpYyBwcm9kdWNpbmcgbWljcm9vcmdhbmlzbXMga25vd24sIHRob3VnaCBpbnRyYWNlbGx1bGFyIHBvbHktaHlkcm94eWJ1dHlyYXRlIChQSEIpIGlzIG1hZGUgZXhjbHVzaXZlbHkgZHVyaW5nIHVuYmFsYW5jZWQgZ3Jvd3RoIChlLmcuIG5pdHJvZ2VuIGxpbWl0YXRpb24pLCBhIHN0YXRlIGNoYXJhY3Rlcml6ZWQgYnkgcG9vciBncm93dGggYW5kIGNlbGx1bGFyIHN0cmVzcy4gTXVjaCB3b3JrIGhhcyBiZWVuIGRvbmUgc3R1ZHlpbmcgYmlvcGxhc3RpYyBwcm9kdWN0aW9uIGluIHRoZSBtb2RlbC90eXBlIHN0cmFpbiBDLiBuZWNhdG9yIEgxNi4gV2UgdXNlIGFuIFJCLVRuU2VxIGxpYnJhcnkgb2YgdGhlIGNsb3NlbHkgcmVsYXRlZCBDLiBiYXNpbGVuc2lzIDRHMTEgdG8gYXNzZXNzIGZvciBnZW5lcyB3aGljaCBkZWNvdXBsZSBQSEIgcHJvZHVjdGlvbiBmcm9tIGdyb3d0aCBzdGF0ZS4gSW4gdGhpcyBuYXJyYXRpdmUgd2UgY29tcHV0ZSBnZW5vbWUtd2lkZSBwcm90ZWluIGhvbW9sb2d5IGJldHdlZW4gdGhlc2UgdHdvIG9yZ2FuaXNtcywgYW5kIGdlbmVyYXRlIGEgc3ludGVueSBwbG90IGFjcm9zcyB0aGUgZ2Vub21lcyBhcyB3ZWxsLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1880128"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "N/A"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "None"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "University of California Berkeley"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Sander, Kyle"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-5944-7822"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Abel, Anthony"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Friedline, Skyler"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "Center for the Utilization of Biological Engineering in Space, Berkeley, CA\n\nCurrent Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Sharpless, Willam"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA\n\nCurrent Affiliation: Zymergen, Emeryville, CA\nIntroduction"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Skerker, Jeffrey"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Deutschbauer, Adam"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Clark, Douglas"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "Center for the Utilization of Biological Engineering in Space, Berkeley, CA\nDepartment of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Arkin, Adam"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [
+                "Species of Cupriavidus are among the best bioplastic producing microorganisms known, though intracellular poly-hydroxybutyrate (PHB) is made exclusively during unbalanced growth (e.g. nitrogen limitation), a state characterized by poor growth and cellular stress. Much work has been done studying bioplastic production in the model/type strain C. necator H16. We use an RB-TnSeq library of the closely related C. basilensis 4G11 to assess for genes which decouple PHB production from growth state. In this narrative we compute genome-wide protein homology between these two organisms, and generate a synteny plot across the genomes as well."
+              ],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": null,
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25982/123676.7/1880128"
+        },
+        "language": "en",
+        "publicationYear": "2022",
+        "publisher": {
+          "lang": null,
+          "value": "U.S. Department of Energy Systems Biology Knowledgebase"
+        },
+        "relatedIdentifiers": {
+          "relatedIdentifier": [
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1089/1066527041410319"
+            }
+          ]
+        },
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Genome/Genetics Data"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "KBase Narrative - Comparing Proteomes of Cupriavidus basilensis 4G11 and Cupriavidus necator H16"
+            }
+          ]
+        },
+        "version": null
+      }
     },
     "id": "10.25982/123676.7/1880128",
     "relationships": {
