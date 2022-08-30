@@ -1,5 +1,6 @@
 import os
 import json
+from typing import Union
 
 
 def full_path(file_path: str) -> str:
@@ -37,16 +38,34 @@ def read_text_file(file_path: str) -> list:
         return [line.rstrip() for line in fh]
 
 
-def write_to_file(file_path: str, lines: list):
+def write_to_file(file_path: str, lines: Union[list, dict, str]):
     """Write a list of lines of text to a file.
 
     :param file_path: path relative to the credit_engine repo
     :type file_path: string
-    :param lines: list containing things to be written to the file
-    :type lines: list
+    :param lines: content to be written to the file
+    :type lines: list / dict / str
     """
     with open(full_path(file_path), "w") as fh:
-        fh.write(str(lines) + "\n")
+        if isinstance(lines, list):
+            is_data_struct = False
+            for line in lines:
+                if isinstance(line, (list, dict)):
+                    is_data_struct = True
+                    break
+
+            if is_data_struct:
+                # dump as JSON
+                fh.write(json.dumps(lines, indent=2, sort_keys=True))
+            else:
+                for line in lines:
+                    fh.write(str(line) + "\n")
+
+        elif isinstance(lines, dict):
+            # dump as JSON
+            fh.write(json.dumps(lines, indent=2, sort_keys=True))
+        else:
+            fh.write(str(lines))
         fh.close()
 
 

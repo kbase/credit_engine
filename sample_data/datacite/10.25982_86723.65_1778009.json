@@ -24,7 +24,9 @@
       "creators": [
         {
           "affiliation": [
-            "Univ. of Miami, Miami, FL (United States)University of Miami Rosenstiel School of Marine and Atmospheric Science"
+            {
+              "name": "Univ. of Miami, Miami, FL (United States)University of Miami Rosenstiel School of Marine and Atmospheric Science"
+            }
           ],
           "familyName": "Patin",
           "givenName": "Nastassia",
@@ -159,7 +161,192 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi84NjcyMy42NS8xNzc4MDA5PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QYXRpbiwgTmFzdGFzc2lhPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTg1MjItNzY4MjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Vbml2LiBvZiBNaWFtaSwgTWlhbWksIEZMIChVbml0ZWQgU3RhdGVzKVVuaXZlcnNpdHkgb2YgTWlhbWkgUm9zZW5zdGllbCBTY2hvb2wgb2YgTWFyaW5lIGFuZCBBdG1vc3BoZXJpYyBTY2llbmNlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+R3VsZiBvZiBNZXhpY28gYmx1ZSBob2xlIGhhcmJvcnMgaGlnaCBsZXZlbHMgb2Ygbm92ZWwgbWljcm9iaWFsIGxpbmVhZ2VzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkNlbnRlciBmb3IgTWljcm9iaWFsIER5bmFtaWNzIGFuZCBJbmZlY3Rpb24sIEdlb3JnaWEgSW5zdGl0dXRlIG9mIFRlY2hub2xvZ3ksIEF0bGFudGEsIEdBLCBVU0E7IFNjaG9vbCBvZiBCaW9sb2dpY2FsIFNjaWVuY2VzLCBHZW9yZ2lhIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5LCBBdGxhbnRhLCBHQSwgVVNBOyBTb3V0aHdlc3QgRmlzaGVyaWVzIFNjaWVuY2UgQ2VudGVyLCBOYXRpb25hbCBNYXJpbmUgRmlzaGVyaWVzIFNlcnZpY2UsIE5hdGlvbmFsIE9jZWFuaWMgYW5kIEF0bW9zcGhlcmljIEFkbWluaXN0cmF0aW9uLCBMYSBKb2xsYSwgQ0EsIFVTQTsgQ29vcGVyYXRpdmUgSW5zdGl0dXRlIGZvciBNYXJpbmUgYW5kIEF0bW9zcGhlcmljIFN0dWRpZXMsIFJvc2Vuc3RpZWwgU2Nob29sIG9mIE1hcmluZSBhbmQgQXRtb3NwaGVyaWMgU2NpZW5jZSwgVW5pdmVyc2l0eSBvZiBNaWFtaSwgTWlhbWksIEZMLCBVU0E7IE9jZWFuIENoZW1pc3RyeSBhbmQgRWNvc3lzdGVtcyBEaXZpc2lvbiwgQXRsYW50aWMgT2NlYW5vZ3JhcGhpYyBhbmQgTWV0ZW9yb2xvZ2ljYWwgTGFib3JhdG9yeSwgTmF0aW9uYWwgT2NlYW5pYyBhbmQgQXRtb3NwaGVyaWMgQWRtaW5pc3RyYXRpb24sIE1pYW1pLCBGTCwgVVNBPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWdlbm9taWNzLCBtYXJpbmUgbWljcm9iaWFsIGNvbW11bml0aWVzLCBNQUdzLCBtZXRhZ2Vub21lLWFzc2VtYmxlZCBnZW5vbWVzLDwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xNzc4MDA5PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNJZGVudGljYWxUbyI+MTAuNjA4NC9tOS5maWdzaGFyZS4xMjY0NDA0NS52MTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTAzOC9zNDEzOTYtMDIxLTAwOTE3LXg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwODEudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNDIudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNDgudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwMTgudjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNjAudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNTEudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+eHBsb3JhdGlvbiBvZiBveHlnZW4tZGVwbGV0ZWQgbWFyaW5lIGVudmlyb25tZW50cyBoYXMgY29uc2lzdGVudGx5IHJldmVhbGVkIG5vdmVsIG1pY3JvYmlhbCB0YXhhIGFuZCBtZXRhYm9saWMgY2FwYWJpbGl0aWVzIHRoYXQgZXhwYW5kIG91ciB1bmRlcnN0YW5kaW5nIG9mIG1pY3JvYmlhbCBldm9sdXRpb24gYW5kIGVjb2xvZ3kuIE1hcmluZSBibHVlIGhvbGVzIGFyZSBzaGFsbG93IGthcnN0IGZvcm1hdGlvbnMgY2hhcmFjdGVyaXplZCBieSBsb3cgb3h5Z2VuIGFuZCBoaWdoIG9yZ2FuaWMgbWF0dGVyIGNvbnRlbnQuIFRoZXkgYXJlIGxvZ2lzdGljYWxseSBjaGFsbGVuZ2luZyB0byBzYW1wbGUsIGFuZCB0aHVzIG91ciB1bmRlcnN0YW5kaW5nIG9mIHRoZWlyIGJpb2dlb2NoZW1pc3RyeSBhbmQgbWljcm9iaWFsIGVjb2xvZ3kgaXMgbGltaXRlZC4gV2UgcHJlc2VudCBhIG1ldGFnZW5vbWljIGFuZCBnZW9jaGVtaWNhbCBjaGFyYWN0ZXJpemF0aW9uIG9mIEFtYmVyamFjayBIb2xlIG9uIHRoZSBGbG9yaWRhIGNvbnRpbmVudGFsIHNoZWxmIChHdWxmIG9mIE1leGljbykuIERpc3NvbHZlZCBveHlnZW4gYmVjYW1lIGRlcGxldGVkIGF0IHRoZSBob2xl4oCZcyByaW0gKDMy4oCJbSB3YXRlciBkZXB0aCksIHJlbWFpbmVkIGxvdyBidXQgZGV0ZWN0YWJsZSBpbiBhbiBpbnRlcm1lZGlhdGUgaHlwb3hpYyB6b25lICg0MOKAkzc14oCJbSksIGFuZCB0aGVuIGluY3JlYXNlZCB0byBhIHNlY29uZGFyeSBwZWFrIGJlZm9yZSBmYWxsaW5nIGJlbG93IGRldGVjdGlvbiBpbiB0aGUgYm90dG9tIGxheWVyICg4MOKAkzExMOKAiW0pLCBjb25jb21pdGFudCB3aXRoIGluY3JlYXNlcyBpbiBudXRyaWVudHMsIGRpc3NvbHZlZCBpcm9uLCBhbmQgYSBzZXJpZXMgb2Ygc2VxdWVudGlhbGx5IG1vcmUgcmVkdWNlZCBzdWxmdXIgc3BlY2llcy4gTWljcm9iaWFsIGNvbW11bml0aWVzIGluIHRoZSBib3R0b20gbGF5ZXIgY29udGFpbmVkIGhlcmV0b2ZvcmUgdW5kb2N1bWVudGVkIGxldmVscyBvZiB0aGUgcmVjZW50bHkgZGlzY292ZXJlZCBwaHlsdW0gV29lc2VhcmNoYWVvdGEgKHVwIHRvIDU4JSBvZiB0aGUgY29tbXVuaXR5KSwgYWxvbmcgd2l0aCBsaW5lYWdlcyBpbiB0aGUgYmFjdGVyaWFsIENhbmRpZGF0ZSBQaHlsYSBSYWRpYXRpb24gKENQUikuIFRoaXJ0eS1vbmUgaGlnaC1xdWFsaXR5IG1ldGFnZW5vbWUtYXNzZW1ibGVkIGdlbm9tZXMgKE1BR3MpIHNob3dlZCBleHRlbnNpdmUgYmlvY2hlbWljYWwgY2FwYWJpbGl0aWVzIGZvciBzdWxmdXIgYW5kIG5pdHJvZ2VuIGN5Y2xpbmcsIGFzIHdlbGwgYXMgZm9yIHJlc2lzdGluZyBhbmQgcmVzcGlyaW5nIGFyc2VuaWMuIE9uZSB1bmNoYXJhY3Rlcml6ZWQgZ2VuZSBhc3NvY2lhdGVkIHdpdGggYSBDUFIgbGluZWFnZSBkaWZmZXJlbnRpYXRlZCBoeXBveGljIGZyb20gYW5veGljIHpvbmUgY29tbXVuaXRpZXMuIE92ZXJhbGwsIG1pY3JvYmlhbCBjb21tdW5pdGllcyBhbmQgZ2VvY2hlbWljYWwgcHJvZmlsZXMgd2VyZSBzdGFibGUgYWNyb3NzIHR3byBzYW1wbGluZyBkYXRlcyBpbiB0aGUgc3ByaW5nIGFuZCBmYWxsIG9mIDIwMTkuIFRoZSBibHVlIGhvbGUgaGFiaXRhdCBpcyBhIG5hdHVyYWwgbWFyaW5lIGxhYm9yYXRvcnkgdGhhdCBwcm92aWRlcyBvcHBvcnR1bml0aWVzIGZvciBzYW1wbGluZyB0YXhhIHdpdGggdW5kZXItY2hhcmFjdGVyaXplZCBidXQgcG90ZW50aWFsbHkgaW1wb3J0YW50IHJvbGVzIGluIHJlZG94LXN0cmF0aWZpZWQgbWljcm9iaWFsIHByb2Nlc3Nlcy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi84NjcyMy42NS8xNzc4MDA5PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QYXRpbiwgTmFzdGFzc2lhPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTg1MjItNzY4MjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Vbml2LiBvZiBNaWFtaSwgTWlhbWksIEZMIChVbml0ZWQgU3RhdGVzKVVuaXZlcnNpdHkgb2YgTWlhbWkgUm9zZW5zdGllbCBTY2hvb2wgb2YgTWFyaW5lIGFuZCBBdG1vc3BoZXJpYyBTY2llbmNlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+R3VsZiBvZiBNZXhpY28gYmx1ZSBob2xlIGhhcmJvcnMgaGlnaCBsZXZlbHMgb2Ygbm92ZWwgbWljcm9iaWFsIGxpbmVhZ2VzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkNlbnRlciBmb3IgTWljcm9iaWFsIER5bmFtaWNzIGFuZCBJbmZlY3Rpb24sIEdlb3JnaWEgSW5zdGl0dXRlIG9mIFRlY2hub2xvZ3ksIEF0bGFudGEsIEdBLCBVU0E7IFNjaG9vbCBvZiBCaW9sb2dpY2FsIFNjaWVuY2VzLCBHZW9yZ2lhIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5LCBBdGxhbnRhLCBHQSwgVVNBOyBTb3V0aHdlc3QgRmlzaGVyaWVzIFNjaWVuY2UgQ2VudGVyLCBOYXRpb25hbCBNYXJpbmUgRmlzaGVyaWVzIFNlcnZpY2UsIE5hdGlvbmFsIE9jZWFuaWMgYW5kIEF0bW9zcGhlcmljIEFkbWluaXN0cmF0aW9uLCBMYSBKb2xsYSwgQ0EsIFVTQTsgQ29vcGVyYXRpdmUgSW5zdGl0dXRlIGZvciBNYXJpbmUgYW5kIEF0bW9zcGhlcmljIFN0dWRpZXMsIFJvc2Vuc3RpZWwgU2Nob29sIG9mIE1hcmluZSBhbmQgQXRtb3NwaGVyaWMgU2NpZW5jZSwgVW5pdmVyc2l0eSBvZiBNaWFtaSwgTWlhbWksIEZMLCBVU0E7IE9jZWFuIENoZW1pc3RyeSBhbmQgRWNvc3lzdGVtcyBEaXZpc2lvbiwgQXRsYW50aWMgT2NlYW5vZ3JhcGhpYyBhbmQgTWV0ZW9yb2xvZ2ljYWwgTGFib3JhdG9yeSwgTmF0aW9uYWwgT2NlYW5pYyBhbmQgQXRtb3NwaGVyaWMgQWRtaW5pc3RyYXRpb24sIE1pYW1pLCBGTCwgVVNBPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWdlbm9taWNzLCBtYXJpbmUgbWljcm9iaWFsIGNvbW11bml0aWVzLCBNQUdzLCBtZXRhZ2Vub21lLWFzc2VtYmxlZCBnZW5vbWVzLDwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xNzc4MDA5PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNJZGVudGljYWxUbyI+MTAuNjA4NC9tOS5maWdzaGFyZS4xMjY0NDA0NS52MTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTAzOC9zNDEzOTYtMDIxLTAwOTE3LXg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwODEudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNDIudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNDgudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwMTgudjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNjAudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzSWRlbnRpY2FsVG8iPjEwLjYwODQvbTkuZmlnc2hhcmUuMTI2NDQwNTEudjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+eHBsb3JhdGlvbiBvZiBveHlnZW4tZGVwbGV0ZWQgbWFyaW5lIGVudmlyb25tZW50cyBoYXMgY29uc2lzdGVudGx5IHJldmVhbGVkIG5vdmVsIG1pY3JvYmlhbCB0YXhhIGFuZCBtZXRhYm9saWMgY2FwYWJpbGl0aWVzIHRoYXQgZXhwYW5kIG91ciB1bmRlcnN0YW5kaW5nIG9mIG1pY3JvYmlhbCBldm9sdXRpb24gYW5kIGVjb2xvZ3kuIE1hcmluZSBibHVlIGhvbGVzIGFyZSBzaGFsbG93IGthcnN0IGZvcm1hdGlvbnMgY2hhcmFjdGVyaXplZCBieSBsb3cgb3h5Z2VuIGFuZCBoaWdoIG9yZ2FuaWMgbWF0dGVyIGNvbnRlbnQuIFRoZXkgYXJlIGxvZ2lzdGljYWxseSBjaGFsbGVuZ2luZyB0byBzYW1wbGUsIGFuZCB0aHVzIG91ciB1bmRlcnN0YW5kaW5nIG9mIHRoZWlyIGJpb2dlb2NoZW1pc3RyeSBhbmQgbWljcm9iaWFsIGVjb2xvZ3kgaXMgbGltaXRlZC4gV2UgcHJlc2VudCBhIG1ldGFnZW5vbWljIGFuZCBnZW9jaGVtaWNhbCBjaGFyYWN0ZXJpemF0aW9uIG9mIEFtYmVyamFjayBIb2xlIG9uIHRoZSBGbG9yaWRhIGNvbnRpbmVudGFsIHNoZWxmIChHdWxmIG9mIE1leGljbykuIERpc3NvbHZlZCBveHlnZW4gYmVjYW1lIGRlcGxldGVkIGF0IHRoZSBob2xl4oCZcyByaW0gKDMy4oCJbSB3YXRlciBkZXB0aCksIHJlbWFpbmVkIGxvdyBidXQgZGV0ZWN0YWJsZSBpbiBhbiBpbnRlcm1lZGlhdGUgaHlwb3hpYyB6b25lICg0MOKAkzc14oCJbSksIGFuZCB0aGVuIGluY3JlYXNlZCB0byBhIHNlY29uZGFyeSBwZWFrIGJlZm9yZSBmYWxsaW5nIGJlbG93IGRldGVjdGlvbiBpbiB0aGUgYm90dG9tIGxheWVyICg4MOKAkzExMOKAiW0pLCBjb25jb21pdGFudCB3aXRoIGluY3JlYXNlcyBpbiBudXRyaWVudHMsIGRpc3NvbHZlZCBpcm9uLCBhbmQgYSBzZXJpZXMgb2Ygc2VxdWVudGlhbGx5IG1vcmUgcmVkdWNlZCBzdWxmdXIgc3BlY2llcy4gTWljcm9iaWFsIGNvbW11bml0aWVzIGluIHRoZSBib3R0b20gbGF5ZXIgY29udGFpbmVkIGhlcmV0b2ZvcmUgdW5kb2N1bWVudGVkIGxldmVscyBvZiB0aGUgcmVjZW50bHkgZGlzY292ZXJlZCBwaHlsdW0gV29lc2VhcmNoYWVvdGEgKHVwIHRvIDU4JSBvZiB0aGUgY29tbXVuaXR5KSwgYWxvbmcgd2l0aCBsaW5lYWdlcyBpbiB0aGUgYmFjdGVyaWFsIENhbmRpZGF0ZSBQaHlsYSBSYWRpYXRpb24gKENQUikuIFRoaXJ0eS1vbmUgaGlnaC1xdWFsaXR5IG1ldGFnZW5vbWUtYXNzZW1ibGVkIGdlbm9tZXMgKE1BR3MpIHNob3dlZCBleHRlbnNpdmUgYmlvY2hlbWljYWwgY2FwYWJpbGl0aWVzIGZvciBzdWxmdXIgYW5kIG5pdHJvZ2VuIGN5Y2xpbmcsIGFzIHdlbGwgYXMgZm9yIHJlc2lzdGluZyBhbmQgcmVzcGlyaW5nIGFyc2VuaWMuIE9uZSB1bmNoYXJhY3Rlcml6ZWQgZ2VuZSBhc3NvY2lhdGVkIHdpdGggYSBDUFIgbGluZWFnZSBkaWZmZXJlbnRpYXRlZCBoeXBveGljIGZyb20gYW5veGljIHpvbmUgY29tbXVuaXRpZXMuIE92ZXJhbGwsIG1pY3JvYmlhbCBjb21tdW5pdGllcyBhbmQgZ2VvY2hlbWljYWwgcHJvZmlsZXMgd2VyZSBzdGFibGUgYWNyb3NzIHR3byBzYW1wbGluZyBkYXRlcyBpbiB0aGUgc3ByaW5nIGFuZCBmYWxsIG9mIDIwMTkuIFRoZSBibHVlIGhvbGUgaGFiaXRhdCBpcyBhIG5hdHVyYWwgbWFyaW5lIGxhYm9yYXRvcnkgdGhhdCBwcm92aWRlcyBvcHBvcnR1bml0aWVzIGZvciBzYW1wbGluZyB0YXhhIHdpdGggdW5kZXItY2hhcmFjdGVyaXplZCBidXQgcG90ZW50aWFsbHkgaW1wb3J0YW50IHJvbGVzIGluIHJlZG94LXN0cmF0aWZpZWQgbWljcm9iaWFsIHByb2Nlc3Nlcy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1778009"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "N/A"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "None"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "Univ. of Miami, Miami, FL (United States)University of Miami Rosenstiel School of Marine and Atmospheric Science"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Patin, Nastassia"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-8522-7682"
+                }
+              ]
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [
+                "xploration of oxygen-depleted marine environments has consistently revealed novel microbial taxa and metabolic capabilities that expand our understanding of microbial evolution and ecology. Marine blue holes are shallow karst formations characterized by low oxygen and high organic matter content. They are logistically challenging to sample, and thus our understanding of their biogeochemistry and microbial ecology is limited. We present a metagenomic and geochemical characterization of Amberjack Hole on the Florida continental shelf (Gulf of Mexico). Dissolved oxygen became depleted at the hole\u2019s rim (32\u2009m water depth), remained low but detectable in an intermediate hypoxic zone (40\u201375\u2009m), and then increased to a secondary peak before falling below detection in the bottom layer (80\u2013110\u2009m), concomitant with increases in nutrients, dissolved iron, and a series of sequentially more reduced sulfur species. Microbial communities in the bottom layer contained heretofore undocumented levels of the recently discovered phylum Woesearchaeota (up to 58% of the community), along with lineages in the bacterial Candidate Phyla Radiation (CPR). Thirty-one high-quality metagenome-assembled genomes (MAGs) showed extensive biochemical capabilities for sulfur and nitrogen cycling, as well as for resisting and respiring arsenic. One uncharacterized gene associated with a CPR lineage differentiated hypoxic from anoxic zone communities. Overall, microbial communities and geochemical profiles were stable across two sampling dates in the spring and fall of 2019. The blue hole habitat is a natural marine laboratory that provides opportunities for sampling taxa with under-characterized but potentially important roles in redox-stratified microbial processes."
+              ],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": null,
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25982/86723.65/1778009"
+        },
+        "language": "en",
+        "publicationYear": "2021",
+        "publisher": {
+          "lang": null,
+          "value": "Center for Microbial Dynamics and Infection, Georgia Institute of Technology, Atlanta, GA, USA; School of Biological Sciences, Georgia Institute of Technology, Atlanta, GA, USA; Southwest Fisheries Science Center, National Marine Fisheries Service, National Oceanic and Atmospheric Administration, La Jolla, CA, USA; Cooperative Institute for Marine and Atmospheric Studies, Rosenstiel School of Marine and Atmospheric Science, University of Miami, Miami, FL, USA; Ocean Chemistry and Ecosystems Division, Atlantic Oceanographic and Meteorological Laboratory, National Oceanic and Atmospheric Administration, Miami, FL, USA"
+        },
+        "relatedIdentifiers": {
+          "relatedIdentifier": [
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsIdenticalTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.6084/m9.figshare.12644045.v1"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/s41396-021-00917-x"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsIdenticalTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.6084/m9.figshare.12644081.v1"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsIdenticalTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.6084/m9.figshare.12644042.v1"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsIdenticalTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.6084/m9.figshare.12644048.v1"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsIdenticalTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.6084/m9.figshare.12644018.v3"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsIdenticalTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.6084/m9.figshare.12644060.v1"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsIdenticalTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.6084/m9.figshare.12644051.v1"
+            }
+          ]
+        },
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Dataset"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "59 BASIC BIOLOGICAL SCIENCES",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "metagenomics, marine microbial communities, MAGs, metagenome-assembled genomes,",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "Gulf of Mexico blue hole harbors high levels of novel microbial lineages"
+            }
+          ]
+        },
+        "version": null
+      }
     },
     "id": "10.25982/86723.65/1778009",
     "relationships": {

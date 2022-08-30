@@ -24,7 +24,9 @@
       "creators": [
         {
           "affiliation": [
-            "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+            {
+              "name": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+            }
           ],
           "familyName": "Gontijo",
           "givenName": "J\u00falia",
@@ -40,7 +42,9 @@
         },
         {
           "affiliation": [
-            "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil; Princeton Institute for International and Regional Studies, USA"
+            {
+              "name": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil; Princeton Institute for International and Regional Studies, USA"
+            }
           ],
           "familyName": "Venturini",
           "givenName": "Andressa",
@@ -56,7 +60,9 @@
         },
         {
           "affiliation": [
-            "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+            {
+              "name": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+            }
           ],
           "familyName": "Da Fran\u00e7a",
           "givenName": "Aline",
@@ -72,7 +78,9 @@
         },
         {
           "affiliation": [
-            "Center for Interdisciplinary Formation, Federal University of Western Par\u00e1, Santar\u00e9m, PA, Brazil"
+            {
+              "name": "Center for Interdisciplinary Formation, Federal University of Western Par\u00e1, Santar\u00e9m, PA, Brazil"
+            }
           ],
           "familyName": "Moura",
           "givenName": "Jos\u00e9",
@@ -88,7 +96,9 @@
         },
         {
           "affiliation": [
-            "Univ. of Massachusetts, Amherst, MA (United States)"
+            {
+              "name": "Univ. of Massachusetts, Amherst, MA (United States)"
+            }
           ],
           "familyName": "N\u00fcsslein",
           "givenName": "Klaus",
@@ -104,7 +114,9 @@
         },
         {
           "affiliation": [
-            "Univ. of Oregon, Eugene, OR (United States)"
+            {
+              "name": "Univ. of Oregon, Eugene, OR (United States)"
+            }
           ],
           "familyName": "Bohannan",
           "givenName": "Brendan",
@@ -120,7 +132,9 @@
         },
         {
           "affiliation": [
-            "Univ. of California, Davis, CA (United States)"
+            {
+              "name": "Univ. of California, Davis, CA (United States)"
+            }
           ],
           "familyName": "Rodrigues",
           "givenName": "Jorge",
@@ -136,7 +150,9 @@
         },
         {
           "affiliation": [
-            "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+            {
+              "name": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+            }
           ],
           "familyName": "Tsai",
           "givenName": "Siu",
@@ -275,7 +291,377 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMTM3MTcuMTgyLzE4NjQ4NDU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkdvbnRpam8sIErDumxpYTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMy0xOTQyLTcyNDI8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+Q2VudGVyIGZvciBOdWNsZWFyIEVuZXJneSBpbiBBZ3JpY3VsdHVyZSwgVW5pdmVyc2l0eSBvZiBTw6NvIFBhdWxvLCBCcmF6aWw8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlZlbnR1cmluaSwgQW5kcmVzc2E8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNTkwMS0xNjU4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgTnVjbGVhciBFbmVyZ3kgaW4gQWdyaWN1bHR1cmUsIFVuaXZlcnNpdHkgb2YgU8OjbyBQYXVsbywgQnJhemlsOyBQcmluY2V0b24gSW5zdGl0dXRlIGZvciBJbnRlcm5hdGlvbmFsIGFuZCBSZWdpb25hbCBTdHVkaWVzLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPmRhIEZyYW7Dp2EsIEFsaW5lPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTgyMzItMzA4NjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIE51Y2xlYXIgRW5lcmd5IGluIEFncmljdWx0dXJlLCBVbml2ZXJzaXR5IG9mIFPDo28gUGF1bG8sIEJyYXppbDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TW91cmEsIEpvc8OpPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTQ5NjItODg3MDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIEludGVyZGlzY2lwbGluYXJ5IEZvcm1hdGlvbiwgRmVkZXJhbCBVbml2ZXJzaXR5IG9mIFdlc3Rlcm4gUGFyw6EsIFNhbnRhcsOpbSwgUEEsIEJyYXppbDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TsO8c3NsZWluLCBLbGF1czwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0wNjYzLTQ0NDg8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VW5pdi4gb2YgTWFzc2FjaHVzZXR0cywgQW1oZXJzdCwgTUEgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Cb2hhbm5hbiwgQnJlbmRhbjwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMy0yOTA3LTEwMTY8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VW5pdi4gb2YgT3JlZ29uLCBFdWdlbmUsIE9SIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Um9kcmlndWVzLCBKb3JnZTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi02NDQ2LTY0NjI8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VW5pdi4gb2YgQ2FsaWZvcm5pYSwgRGF2aXMsIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+VHNhaSwgU2l1PC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTM3MzMtNjMxMjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIE51Y2xlYXIgRW5lcmd5IGluIEFncmljdWx0dXJlLCBVbml2ZXJzaXR5IG9mIFPDo28gUGF1bG8sIEJyYXppbDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPk1ldGFnZW5vbWVzIGZyb20gRWFzdGVybiBCcmF6aWxpYW4gQW1hem9uaWFuIGZsb29kcGxhaW5zIGluIHRoZSB3ZXQgYW5kIGRyeSBzZWFzb25zPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkNlbnRlciBmb3IgTnVjbGVhciBFbmVyZ3kgaW4gQWdyaWN1bHR1cmUsIFVuaXZlcnNpdHkgb2YgU8OjbyBQYXVsbywgQnJhemlsOyBQcmluY2V0b24gSW5zdGl0dXRlIGZvciBJbnRlcm5hdGlvbmFsIGFuZCBSZWdpb25hbCBTdHVkaWVzLCBVU0EuPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIyPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+TWljcm9iaWFsIEVjb2xvZ3k8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5NZXRhZ2Vub21pY3M8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5Tb2lsIE1pY3JvYmlhbCBFY29sb2d5PC9zdWJqZWN0PgogICAgPHN1YmplY3Q+VGF4b25vbWljIGFubm90YXRpb24uPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE4NjQ4NDU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+Ti9BPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnR1MTcwPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uY29tbXMxMTI1NzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjQxNjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjEwNS0xMi0zODU8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxnZW9Mb2NhdGlvbnM+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvblBsYWNlPkZQMjwvZ2VvTG9jYXRpb25QbGFjZT4KICAgICAgPGdlb0xvY2F0aW9uUG9pbnQ+CiAgICAgICAgPHBvaW50TG9uZ2l0dWRlPi01NC42NDcxOTwvcG9pbnRMb25naXR1ZGU+CiAgICAgICAgPHBvaW50TGF0aXR1ZGU+LTIuNDY5Nzc4PC9wb2ludExhdGl0dWRlPgogICAgICA8L2dlb0xvY2F0aW9uUG9pbnQ+CiAgICA8L2dlb0xvY2F0aW9uPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25QbGFjZT5GUDM8L2dlb0xvY2F0aW9uUGxhY2U+CiAgICAgIDxnZW9Mb2NhdGlvblBvaW50PgogICAgICAgIDxwb2ludExvbmdpdHVkZT4tNTQuNzM5MTk8L3BvaW50TG9uZ2l0dWRlPgogICAgICAgIDxwb2ludExhdGl0dWRlPi0yLjM3OTExMTwvcG9pbnRMYXRpdHVkZT4KICAgICAgPC9nZW9Mb2NhdGlvblBvaW50PgogICAgPC9nZW9Mb2NhdGlvbj4KICA8L2dlb0xvY2F0aW9ucz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkJyaWVmIHNhbXBsZSBkZXNjcmlwdGlvbiZsdDticiZndDtTZWRpbWVudCBzYW1wbGVzIGZyb20gMCB0byAxMCBjbSBkZXB0aCB3ZXJlIGNvbGxlY3RlZCBpbiB0cmlwbGljYXRlIGZyb20gdHdvIGZsb29kcGxhaW5zIG9mIHRoZSBFYXN0ZXJuIEJyYXppbGlhbiBBbWF6b24sIG9uZSBsb2NhdGVkIG9uIHRoZSBBbWF6b25hcyBSaXZlciAoRlAyLCAywrAyOCcxMS4yIlMgNTTCsDM4JzQ5LjkiVykgYW5kIHRoZSBvdGhlciBhdCB0aGUgaW50ZXJzZWN0aW9uIGJldHdlZW4gdGhlIEFtYXpvbmFzIGFuZCB0aGUgVGFwYWrDs3Mgcml2ZXJzIChGUDMsIDLCsDIyJzQ0LjgiUyA1NMKwNDQnMjEuMSJXKSwgaW4gdGhlIHdldCBhbmQgZHJ5IHNlYXNvbnMgKE1heSBhbmQgT2N0b2JlciAyMDE2LCByZXNwZWN0aXZlbHkpLiBUb3RhbCBETkEgd2FzIGV4dHJhY3RlZCBpbiBkdXBsaWNhdGUgZnJvbSAwLjI1IGcgb2Ygc2VkaW1lbnQgdXNpbmcgUG93ZXJMeXplciBQb3dlclNvaWwgRE5BIElzb2xhdGlvbiBLaXQuIFRoZSBtZXRhZ2Vub21pYyBsaWJyYXJpZXMgd2VyZSBjb25zdHJ1Y3RlZCB1c2luZyBORUJOZXh0IFVsdHJhIElJIEROQSBMaWJyYXJ5IFByZXAgS2l0IGZvciBJbGx1bWluYSBhbmQgcGFpcmVkLWVuZCBzZXF1ZW5jZWQgKDIgeCAxNTAgYnApIG9uIGFuIElsbHVtaW5hIEhpU2VxIDI1MDAgcGxhdGZvcm0uIERldGFpbGVkIGluZm9ybWF0aW9uIGFib3V0IHRoZSBzdHVkeSBzaXRlcywgc2FtcGxpbmcsIHNlZGltZW50IHBoeXNpY29jaGVtaWNhbCBwcm9wZXJ0aWVzLCBETkEgZXh0cmFjdGlvbiBhbmQgcXVhbnRpZmljYXRpb24gaGF2ZSBiZWVuIHByZXZpb3VzbHkgZGVzY3JpYmVkIGJ5IEdvbnRpam8gZXQgYWwuICgyMDIxKS4mbHQ7YnImZ3Q7U2FtcGxlIElEczombHQ7dWwmZ3Q7Jmx0O2xpJmd0O00xLCBNMiBhbmQgTTM6IEZQMiwgd2V0IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0O2xpJmd0O000LCBNNSBhbmQgTTY6IEZQMywgd2V0IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0O2xpJmd0O003LCBNOCBhbmQgTTk6IEZQMiwgZHJ5IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0O2xpJmd0O00xMCwgTTExIGFuZCBNMTI6IEZQMywgZHJ5IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0Oy91bCZndDs8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMTM3MTcuMTgyLzE4NjQ4NDU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkdvbnRpam8sIErDumxpYTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMy0xOTQyLTcyNDI8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+Q2VudGVyIGZvciBOdWNsZWFyIEVuZXJneSBpbiBBZ3JpY3VsdHVyZSwgVW5pdmVyc2l0eSBvZiBTw6NvIFBhdWxvLCBCcmF6aWw8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlZlbnR1cmluaSwgQW5kcmVzc2E8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNTkwMS0xNjU4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkNlbnRlciBmb3IgTnVjbGVhciBFbmVyZ3kgaW4gQWdyaWN1bHR1cmUsIFVuaXZlcnNpdHkgb2YgU8OjbyBQYXVsbywgQnJhemlsOyBQcmluY2V0b24gSW5zdGl0dXRlIGZvciBJbnRlcm5hdGlvbmFsIGFuZCBSZWdpb25hbCBTdHVkaWVzLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPmRhIEZyYW7Dp2EsIEFsaW5lPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTgyMzItMzA4NjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIE51Y2xlYXIgRW5lcmd5IGluIEFncmljdWx0dXJlLCBVbml2ZXJzaXR5IG9mIFPDo28gUGF1bG8sIEJyYXppbDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TW91cmEsIEpvc8OpPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTQ5NjItODg3MDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIEludGVyZGlzY2lwbGluYXJ5IEZvcm1hdGlvbiwgRmVkZXJhbCBVbml2ZXJzaXR5IG9mIFdlc3Rlcm4gUGFyw6EsIFNhbnRhcsOpbSwgUEEsIEJyYXppbDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TsO8c3NsZWluLCBLbGF1czwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0wNjYzLTQ0NDg8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VW5pdi4gb2YgTWFzc2FjaHVzZXR0cywgQW1oZXJzdCwgTUEgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Cb2hhbm5hbiwgQnJlbmRhbjwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMy0yOTA3LTEwMTY8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VW5pdi4gb2YgT3JlZ29uLCBFdWdlbmUsIE9SIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Um9kcmlndWVzLCBKb3JnZTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi02NDQ2LTY0NjI8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VW5pdi4gb2YgQ2FsaWZvcm5pYSwgRGF2aXMsIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+VHNhaSwgU2l1PC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTM3MzMtNjMxMjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5DZW50ZXIgZm9yIE51Y2xlYXIgRW5lcmd5IGluIEFncmljdWx0dXJlLCBVbml2ZXJzaXR5IG9mIFPDo28gUGF1bG8sIEJyYXppbDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPk1ldGFnZW5vbWVzIGZyb20gRWFzdGVybiBCcmF6aWxpYW4gQW1hem9uaWFuIGZsb29kcGxhaW5zIGluIHRoZSB3ZXQgYW5kIGRyeSBzZWFzb25zPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkNlbnRlciBmb3IgTnVjbGVhciBFbmVyZ3kgaW4gQWdyaWN1bHR1cmUsIFVuaXZlcnNpdHkgb2YgU8OjbyBQYXVsbywgQnJhemlsOyBQcmluY2V0b24gSW5zdGl0dXRlIGZvciBJbnRlcm5hdGlvbmFsIGFuZCBSZWdpb25hbCBTdHVkaWVzLCBVU0EuPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIyPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+TWljcm9iaWFsIEVjb2xvZ3k8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5NZXRhZ2Vub21pY3M8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5Tb2lsIE1pY3JvYmlhbCBFY29sb2d5PC9zdWJqZWN0PgogICAgPHN1YmplY3Q+VGF4b25vbWljIGFubm90YXRpb24uPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE4NjQ4NDU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+Ti9BPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnR1MTcwPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uY29tbXMxMTI1NzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjQxNjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjEwNS0xMi0zODU8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxnZW9Mb2NhdGlvbnM+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvblBsYWNlPkZQMjwvZ2VvTG9jYXRpb25QbGFjZT4KICAgICAgPGdlb0xvY2F0aW9uUG9pbnQ+CiAgICAgICAgPHBvaW50TG9uZ2l0dWRlPi01NC42NDcxOTwvcG9pbnRMb25naXR1ZGU+CiAgICAgICAgPHBvaW50TGF0aXR1ZGU+LTIuNDY5Nzc4PC9wb2ludExhdGl0dWRlPgogICAgICA8L2dlb0xvY2F0aW9uUG9pbnQ+CiAgICA8L2dlb0xvY2F0aW9uPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25QbGFjZT5GUDM8L2dlb0xvY2F0aW9uUGxhY2U+CiAgICAgIDxnZW9Mb2NhdGlvblBvaW50PgogICAgICAgIDxwb2ludExvbmdpdHVkZT4tNTQuNzM5MTk8L3BvaW50TG9uZ2l0dWRlPgogICAgICAgIDxwb2ludExhdGl0dWRlPi0yLjM3OTExMTwvcG9pbnRMYXRpdHVkZT4KICAgICAgPC9nZW9Mb2NhdGlvblBvaW50PgogICAgPC9nZW9Mb2NhdGlvbj4KICA8L2dlb0xvY2F0aW9ucz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkJyaWVmIHNhbXBsZSBkZXNjcmlwdGlvbiZsdDticiZndDtTZWRpbWVudCBzYW1wbGVzIGZyb20gMCB0byAxMCBjbSBkZXB0aCB3ZXJlIGNvbGxlY3RlZCBpbiB0cmlwbGljYXRlIGZyb20gdHdvIGZsb29kcGxhaW5zIG9mIHRoZSBFYXN0ZXJuIEJyYXppbGlhbiBBbWF6b24sIG9uZSBsb2NhdGVkIG9uIHRoZSBBbWF6b25hcyBSaXZlciAoRlAyLCAywrAyOCcxMS4yIlMgNTTCsDM4JzQ5LjkiVykgYW5kIHRoZSBvdGhlciBhdCB0aGUgaW50ZXJzZWN0aW9uIGJldHdlZW4gdGhlIEFtYXpvbmFzIGFuZCB0aGUgVGFwYWrDs3Mgcml2ZXJzIChGUDMsIDLCsDIyJzQ0LjgiUyA1NMKwNDQnMjEuMSJXKSwgaW4gdGhlIHdldCBhbmQgZHJ5IHNlYXNvbnMgKE1heSBhbmQgT2N0b2JlciAyMDE2LCByZXNwZWN0aXZlbHkpLiBUb3RhbCBETkEgd2FzIGV4dHJhY3RlZCBpbiBkdXBsaWNhdGUgZnJvbSAwLjI1IGcgb2Ygc2VkaW1lbnQgdXNpbmcgUG93ZXJMeXplciBQb3dlclNvaWwgRE5BIElzb2xhdGlvbiBLaXQuIFRoZSBtZXRhZ2Vub21pYyBsaWJyYXJpZXMgd2VyZSBjb25zdHJ1Y3RlZCB1c2luZyBORUJOZXh0IFVsdHJhIElJIEROQSBMaWJyYXJ5IFByZXAgS2l0IGZvciBJbGx1bWluYSBhbmQgcGFpcmVkLWVuZCBzZXF1ZW5jZWQgKDIgeCAxNTAgYnApIG9uIGFuIElsbHVtaW5hIEhpU2VxIDI1MDAgcGxhdGZvcm0uIERldGFpbGVkIGluZm9ybWF0aW9uIGFib3V0IHRoZSBzdHVkeSBzaXRlcywgc2FtcGxpbmcsIHNlZGltZW50IHBoeXNpY29jaGVtaWNhbCBwcm9wZXJ0aWVzLCBETkEgZXh0cmFjdGlvbiBhbmQgcXVhbnRpZmljYXRpb24gaGF2ZSBiZWVuIHByZXZpb3VzbHkgZGVzY3JpYmVkIGJ5IEdvbnRpam8gZXQgYWwuICgyMDIxKS4mbHQ7YnImZ3Q7U2FtcGxlIElEczombHQ7dWwmZ3Q7Jmx0O2xpJmd0O00xLCBNMiBhbmQgTTM6IEZQMiwgd2V0IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0O2xpJmd0O000LCBNNSBhbmQgTTY6IEZQMywgd2V0IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0O2xpJmd0O003LCBNOCBhbmQgTTk6IEZQMiwgZHJ5IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0O2xpJmd0O00xMCwgTTExIGFuZCBNMTI6IEZQMywgZHJ5IHNlYXNvbiZsdDsvbGkmZ3Q7Jmx0Oy91bCZndDs8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1864845"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "N/A"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "None"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Gontijo, J\u00falia"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0003-1942-7242"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil; Princeton Institute for International and Regional Studies, USA"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Venturini, Andressa"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-5901-1658"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "da Fran\u00e7a, Aline"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-8232-3086"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Center for Interdisciplinary Formation, Federal University of Western Par\u00e1, Santar\u00e9m, PA, Brazil"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Moura, Jos\u00e9"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0003-4962-8870"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Univ. of Massachusetts, Amherst, MA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "N\u00fcsslein, Klaus"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-0663-4448"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Univ. of Oregon, Eugene, OR (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Bohannan, Brendan"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0003-2907-1016"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Univ. of California, Davis, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Rodrigues, Jorge"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-6446-6462"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Tsai, Siu"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-3733-6312"
+                }
+              ]
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [
+                "Brief sample description<br>Sediment samples from 0 to 10 cm depth were collected in triplicate from two floodplains of the Eastern Brazilian Amazon, one located on the Amazonas River (FP2, 2\u00b028'11.2\"S 54\u00b038'49.9\"W) and the other at the intersection between the Amazonas and the Tapaj\u00f3s rivers (FP3, 2\u00b022'44.8\"S 54\u00b044'21.1\"W), in the wet and dry seasons (May and October 2016, respectively). Total DNA was extracted in duplicate from 0.25 g of sediment using PowerLyzer PowerSoil DNA Isolation Kit. The metagenomic libraries were constructed using NEBNext Ultra II DNA Library Prep Kit for Illumina and paired-end sequenced (2 x 150 bp) on an Illumina HiSeq 2500 platform. Detailed information about the study sites, sampling, sediment physicochemical properties, DNA extraction and quantification have been previously described by Gontijo et al. (2021).<br>Sample IDs:<ul><li>M1, M2 and M3: FP2, wet season</li><li>M4, M5 and M6: FP3, wet season</li><li>M7, M8 and M9: FP2, dry season</li><li>M10, M11 and M12: FP3, dry season</li></ul>"
+              ],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": {
+          "geoLocation": [
+            {
+              "geoLocationBox": [],
+              "geoLocationPlace": [
+                "FP2"
+              ],
+              "geoLocationPoint": [
+                {
+                  "pointLatitude": -2.469778,
+                  "pointLongitude": -54.64719
+                }
+              ],
+              "geoLocationPolygon": []
+            },
+            {
+              "geoLocationBox": [],
+              "geoLocationPlace": [
+                "FP3"
+              ],
+              "geoLocationPoint": [
+                {
+                  "pointLatitude": -2.379111,
+                  "pointLongitude": -54.73919
+                }
+              ],
+              "geoLocationPolygon": []
+            }
+          ]
+        },
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25982/113717.182/1864845"
+        },
+        "language": "en",
+        "publicationYear": "2022",
+        "publisher": {
+          "lang": null,
+          "value": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil; Princeton Institute for International and Regional Studies, USA."
+        },
+        "relatedIdentifiers": {
+          "relatedIdentifier": [
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1093/bioinformatics/btu170"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/ncomms11257"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.4163"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/1471-2105-12-385"
+            }
+          ]
+        },
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Genome/Genetics Data"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "59 BASIC BIOLOGICAL SCIENCES",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "Microbial Ecology",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "Metagenomics",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "Soil Microbial Ecology",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "Taxonomic annotation.",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "Metagenomes from Eastern Brazilian Amazonian floodplains in the wet and dry seasons"
+            }
+          ]
+        },
+        "version": null
+      }
     },
     "id": "10.25982/113717.182/1864845",
     "relationships": {

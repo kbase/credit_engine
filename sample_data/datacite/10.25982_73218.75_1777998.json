@@ -29,7 +29,9 @@
       "creators": [
         {
           "affiliation": [
-            "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+            {
+              "name": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+            }
           ],
           "familyName": "Wang",
           "givenName": "Jia",
@@ -179,7 +181,219 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi83MzIxOC43NS8xNzc3OTk4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5XYW5nLCBKaWE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtODcwOS05NzA5PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPk9hayBSaWRnZSBOYXRpb25hbCBMYWIuIChPUk5MKSwgT2FrIFJpZGdlLCBUTiAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5Db21tdW5pdHkgTW9kZWxpbmcgYW5kIEZsdXggQmFsYW5jZSBBbmFseXNpcyBvZiBTeW50aGV0aWMgQmFjdGVyaWFsIENvbW11bml0eSBpbiBNT1BTIE1lZGl1bTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5PYWsgUmlkZ2UgTmF0aW9uYWwgTGFib3JhdG9yeSAoT1JOTCksIE9hayBSaWRnZSwgVE4gKFVuaXRlZCBTdGF0ZXMpPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Y29tbXVuaXR5IG1vZGVsLCBmbHV4IGJhbGFuY2UgYW5hbHlzaXMsIGJhY3RlcmlhbCBjb21tdW5pdHksIHN5bnRoZXRpYyBtaWNyb2JpYWwgY29tbXVuaXR5LCBwbGFudC1taWNyb2JlIGludGVyYWN0aW9uczwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xNzc3OTk4PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPkFDMDUtMDBPUjIyNzI1PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjE1MjkvYmlvcGh5c2ouMTA1LjA3MTcyMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjE2NzI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTA1LTE1LTIyNTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwMzEyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjE1MjkvYmlvcGh5c2ouMTA3LjEyNDc4NDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni9nYi0yMDA5LTEwLTYtcjY5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9nYi0yMDA5LTEwLTYtcjY5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMTYxNDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExODYvMTQ3MS0yMTA1LTE1LTIyNTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjQxNjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMzcxL2pvdXJuYWwucGNiaS4xMDAzMTI2PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoaXMgbmFycmF0aXZlIHdhcyB1c2VkIGZvciB0aGUgNC1tZW1iZXIgY29tbXVuaXR5IG1vZGVsaW5nIHVzaW5nIE1PUFMgbWVkaXVtIGZvciB0aGUgYmFjdGVyaWEgaXNvbGF0ZWQgZnJvbSBQb3B1bHVzIGRlbHRvaWRlcyAoUEQpLiAxMCBiYWN0ZXJpYWwgc3RyYWlucyBpc29sYXRlZCBmcm9tIFBEIHdlcmUgY28tY3VsdHVyZWQgYXMgYSBzeW50aGV0aWMgbWljcm9iaWFsIGNvbW11bml0eSBpbiBNT1BTIG1pbmltYWwgbWVkaXVtLiBBZnRlciAxNSBwYXNzYWdlcyB0aGVyZSB3ZXJlIDQgbWVtYmVycyBzdXJ2aXZlZCBpbiBNT1BTIG1lZGl1bS5UaGUgZ2Vub21lIG9mIGVhY2ggY29tbXVuaXR5IG1lbWJlciB3YXMgc2VxdWVuY2VkIGFuZCB1cGxvYWRlZCBpbnRvIEtCYXNlIGZvciBnZW5vbWUgYW5ub3RhdGlvbiBhbmQgbWV0YWJvbGljIG1vZGVsaW5nLiBUbyBzaW11bGF0ZSB0aGUgbWV0YWJvbGljIGludGVyYWN0aW9ucyBhbW9uZyB0aGUgZmluYWxseSBzdXJ2aXZpbmcgY29tbXVuaXR5IG1lbWJlcnMsIHRoZSBpbmRpdmlkdWFsIG1ldGFib2xpYyBtb2RlbHMgb2YgZWFjaCBzdHJhaW4gd2VyZSBtZXJnZWQgaW50byBhIGNvbXBhcnRtZW50YWxpemVkIGNvbW11bml0eSBtb2RlbCwgYW5kIHRoZW4gdGhlIGNvbW11bml0eSBtb2RlbCB3YXMgZ2FwZmlsbGVkIHVzaW5nIE1PUFMgbWVkaXVtLiBUaGUgRkJBIG1vZGVsaW5nIHdhcyBwZXJmb3JtZWQgYW5kIHRoZSBtZXRhYm9saXRlcyBleGNoYW5nZSBhbW9uZyBjb21tdW5pdHkgbWVtYmVycyB3YXMgcHJvcG9zZWQuVGhlIHB1YmxpY2F0aW9uIGJ5IEppYSBXYW5nLCBEYW5hIEwuIENhcnBlciwgTGVhaCBILiBCdXJkaWNrLCBIaW0gU2hyZXN0aGEsIE1hbmFzYSBBcHBpZGksIFBhdWwgRS4gQWJyYWhhbSwgQ29sbGluIE0uIFRpbW0sIFJvYmVydCBMLiBIZXR0aWNoLCBEYWxlIEEuIFBlbGxldGllciwgTWl0Y2hlbCBKLiBEb2t0eWN6IGNhbiBiZSBmb3VuZCBoZXJlOiAmbHQ7YSBocmVmPSdodHRwczovL2RvaS5vcmcvMTAu4oCLMTAxNi/igItqLuKAi2NzYmou4oCLMjAyMS7igIswMy7igIswMzQnJmd0O2h0dHBzOi8vZG9pLm9yZy8xMC7igIsxMDE2L+KAi2ou4oCLY3Niai7igIsyMDIxLuKAizAzLuKAizAzNCZsdDsvYSZndDs8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi83MzIxOC43NS8xNzc3OTk4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5XYW5nLCBKaWE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtODcwOS05NzA5PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPk9hayBSaWRnZSBOYXRpb25hbCBMYWIuIChPUk5MKSwgT2FrIFJpZGdlLCBUTiAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5Db21tdW5pdHkgTW9kZWxpbmcgYW5kIEZsdXggQmFsYW5jZSBBbmFseXNpcyBvZiBTeW50aGV0aWMgQmFjdGVyaWFsIENvbW11bml0eSBpbiBNT1BTIE1lZGl1bTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5PYWsgUmlkZ2UgTmF0aW9uYWwgTGFib3JhdG9yeSAoT1JOTCksIE9hayBSaWRnZSwgVE4gKFVuaXRlZCBTdGF0ZXMpPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Y29tbXVuaXR5IG1vZGVsLCBmbHV4IGJhbGFuY2UgYW5hbHlzaXMsIGJhY3RlcmlhbCBjb21tdW5pdHksIHN5bnRoZXRpYyBtaWNyb2JpYWwgY29tbXVuaXR5LCBwbGFudC1taWNyb2JlIGludGVyYWN0aW9uczwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xNzc3OTk4PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPkFDMDUtMDBPUjIyNzI1PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IlByb2R1Y3QgTnVtYmVyIj5Ob25lPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5HZW5vbWUvR2VuZXRpY3MgRGF0YTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjE1MjkvYmlvcGh5c2ouMTA1LjA3MTcyMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjE2NzI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTA1LTE1LTIyNTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwMzEyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjE1MjkvYmlvcGh5c2ouMTA3LjEyNDc4NDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni9nYi0yMDA5LTEwLTYtcjY5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9nYi0yMDA5LTEwLTYtcjY5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMTYxNDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjExODYvMTQ3MS0yMTA1LTE1LTIyNTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjQxNjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMzcxL2pvdXJuYWwucGNiaS4xMDAzMTI2PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoaXMgbmFycmF0aXZlIHdhcyB1c2VkIGZvciB0aGUgNC1tZW1iZXIgY29tbXVuaXR5IG1vZGVsaW5nIHVzaW5nIE1PUFMgbWVkaXVtIGZvciB0aGUgYmFjdGVyaWEgaXNvbGF0ZWQgZnJvbSBQb3B1bHVzIGRlbHRvaWRlcyAoUEQpLiAxMCBiYWN0ZXJpYWwgc3RyYWlucyBpc29sYXRlZCBmcm9tIFBEIHdlcmUgY28tY3VsdHVyZWQgYXMgYSBzeW50aGV0aWMgbWljcm9iaWFsIGNvbW11bml0eSBpbiBNT1BTIG1pbmltYWwgbWVkaXVtLiBBZnRlciAxNSBwYXNzYWdlcyB0aGVyZSB3ZXJlIDQgbWVtYmVycyBzdXJ2aXZlZCBpbiBNT1BTIG1lZGl1bS5UaGUgZ2Vub21lIG9mIGVhY2ggY29tbXVuaXR5IG1lbWJlciB3YXMgc2VxdWVuY2VkIGFuZCB1cGxvYWRlZCBpbnRvIEtCYXNlIGZvciBnZW5vbWUgYW5ub3RhdGlvbiBhbmQgbWV0YWJvbGljIG1vZGVsaW5nLiBUbyBzaW11bGF0ZSB0aGUgbWV0YWJvbGljIGludGVyYWN0aW9ucyBhbW9uZyB0aGUgZmluYWxseSBzdXJ2aXZpbmcgY29tbXVuaXR5IG1lbWJlcnMsIHRoZSBpbmRpdmlkdWFsIG1ldGFib2xpYyBtb2RlbHMgb2YgZWFjaCBzdHJhaW4gd2VyZSBtZXJnZWQgaW50byBhIGNvbXBhcnRtZW50YWxpemVkIGNvbW11bml0eSBtb2RlbCwgYW5kIHRoZW4gdGhlIGNvbW11bml0eSBtb2RlbCB3YXMgZ2FwZmlsbGVkIHVzaW5nIE1PUFMgbWVkaXVtLiBUaGUgRkJBIG1vZGVsaW5nIHdhcyBwZXJmb3JtZWQgYW5kIHRoZSBtZXRhYm9saXRlcyBleGNoYW5nZSBhbW9uZyBjb21tdW5pdHkgbWVtYmVycyB3YXMgcHJvcG9zZWQuVGhlIHB1YmxpY2F0aW9uIGJ5IEppYSBXYW5nLCBEYW5hIEwuIENhcnBlciwgTGVhaCBILiBCdXJkaWNrLCBIaW0gU2hyZXN0aGEsIE1hbmFzYSBBcHBpZGksIFBhdWwgRS4gQWJyYWhhbSwgQ29sbGluIE0uIFRpbW0sIFJvYmVydCBMLiBIZXR0aWNoLCBEYWxlIEEuIFBlbGxldGllciwgTWl0Y2hlbCBKLiBEb2t0eWN6IGNhbiBiZSBmb3VuZCBoZXJlOiAmbHQ7YSBocmVmPSdodHRwczovL2RvaS5vcmcvMTAu4oCLMTAxNi/igItqLuKAi2NzYmou4oCLMjAyMS7igIswMy7igIswMzQnJmd0O2h0dHBzOi8vZG9pLm9yZy8xMC7igIsxMDE2L+KAi2ou4oCLY3Niai7igIsyMDIxLuKAizAzLuKAizAzNCZsdDsvYSZndDs8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1777998"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "AC05-00OR22725"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "None"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Wang, Jia"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-8709-9709"
+                }
+              ]
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [
+                "This narrative was used for the 4-member community modeling using MOPS medium for the bacteria isolated from Populus deltoides (PD). 10 bacterial strains isolated from PD were co-cultured as a synthetic microbial community in MOPS minimal medium. After 15 passages there were 4 members survived in MOPS medium.The genome of each community member was sequenced and uploaded into KBase for genome annotation and metabolic modeling. To simulate the metabolic interactions among the finally surviving community members, the individual metabolic models of each strain were merged into a compartmentalized community model, and then the community model was gapfilled using MOPS medium. The FBA modeling was performed and the metabolites exchange among community members was proposed.The publication by Jia Wang, Dana L. Carper, Leah H. Burdick, Him Shrestha, Manasa Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel J. Doktycz can be found here: <a href='https://doi.org/10.\u200b1016/\u200bj.\u200bcsbj.\u200b2021.\u200b03.\u200b034'>https://doi.org/10.\u200b1016/\u200bj.\u200bcsbj.\u200b2021.\u200b03.\u200b034</a>"
+              ],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": null,
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25982/73218.75/1777998"
+        },
+        "language": "en",
+        "publicationYear": "2021",
+        "publisher": {
+          "lang": null,
+          "value": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)"
+        },
+        "relatedIdentifiers": {
+          "relatedIdentifier": [
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1529/biophysj.105.071720"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.1672"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/1471-2105-15-225"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1371/journal.pcbi.1003126"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1529/biophysj.107.124784"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "References",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/gb-2009-10-6-r69"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/gb-2009-10-6-r69"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.1614"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1186/1471-2105-15-225"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/nbt.4163"
+            },
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "Cites",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1371/journal.pcbi.1003126"
+            }
+          ]
+        },
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Genome/Genetics Data"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "59 BASIC BIOLOGICAL SCIENCES",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "community model, flux balance analysis, bacterial community, synthetic microbial community, plant-microbe interactions",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in MOPS Medium"
+            }
+          ]
+        },
+        "version": null
+      }
     },
     "id": "10.25982/73218.75/1777998",
     "relationships": {

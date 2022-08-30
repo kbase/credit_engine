@@ -24,7 +24,9 @@
       "creators": [
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Nayfach",
           "givenName": "Stephen",
@@ -34,7 +36,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Roux",
           "givenName": "Simon",
@@ -44,7 +48,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Seshadri",
           "givenName": "Rekha",
@@ -54,7 +60,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Udwary",
           "givenName": "Daniel",
@@ -70,7 +78,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Varghese",
           "givenName": "Neha",
@@ -80,7 +90,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Schulz",
           "givenName": "Frederik",
@@ -96,7 +108,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Wu",
           "givenName": "Dongying",
@@ -106,7 +120,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Paez-Espino",
           "givenName": "David",
@@ -122,7 +138,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Chen",
           "givenName": "I-Min",
@@ -138,7 +156,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Huntemann",
           "givenName": "Marcel",
@@ -154,7 +174,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Palaniappan",
           "givenName": "Krishna",
@@ -164,7 +186,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Ladau",
           "givenName": "Joshua",
@@ -174,7 +198,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Mukherjee",
           "givenName": "Supratim",
@@ -190,7 +216,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Reddy",
           "givenName": "T.B.K.",
@@ -206,7 +234,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Nielsen",
           "givenName": "Torben",
@@ -216,7 +246,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Kirton",
           "givenName": "Edward",
@@ -226,7 +258,9 @@
         },
         {
           "affiliation": [
-            "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            {
+              "name": "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            }
           ],
           "familyName": "P. Faria",
           "givenName": "Jos\u00e9",
@@ -242,7 +276,9 @@
         },
         {
           "affiliation": [
-            "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            {
+              "name": "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            }
           ],
           "familyName": "N. Edirisinghe",
           "givenName": "Janaka",
@@ -258,7 +294,9 @@
         },
         {
           "affiliation": [
-            "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            {
+              "name": "Argonne National Lab. (ANL), Argonne, IL (United States)"
+            }
           ],
           "familyName": "S. Henry",
           "givenName": "Christopher",
@@ -274,7 +312,9 @@
         },
         {
           "affiliation": [
-            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            {
+              "name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "P. Jungbluth",
           "givenName": "Sean",
@@ -290,7 +330,9 @@
         },
         {
           "affiliation": [
-            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            {
+              "name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Chivian",
           "givenName": "Dylan",
@@ -306,7 +348,9 @@
         },
         {
           "affiliation": [
-            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            {
+              "name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Dehal",
           "givenName": "Paramvir",
@@ -322,7 +366,9 @@
         },
         {
           "affiliation": [
-            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            {
+              "name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "M. Wood-Charlson",
           "givenName": "Elisha",
@@ -338,7 +384,9 @@
         },
         {
           "affiliation": [
-            "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            {
+              "name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "P. Arkin",
           "givenName": "Adam",
@@ -354,7 +402,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Tringe",
           "givenName": "Susannah",
@@ -370,7 +420,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Visel",
           "givenName": "Axel",
@@ -386,7 +438,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Woyke",
           "givenName": "Tanja",
@@ -402,7 +456,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "J. Mouncey",
           "givenName": "Nigel",
@@ -418,7 +474,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "N. Ivanova",
           "givenName": "Natalia",
@@ -434,7 +492,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "C. Kyrpides",
           "givenName": "Nikos",
@@ -450,7 +510,9 @@
         },
         {
           "affiliation": [
-            "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            {
+              "name": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+            }
           ],
           "familyName": "Eloe-Fadrosh",
           "givenName": "Emiley",
@@ -550,7 +612,750 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi81MzI0Ny42NC8xNjcwNzc3PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OYXlmYWNoLCBTdGVwaGVuPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlJvdXgsIFNpbW9uPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlNlc2hhZHJpLCBSZWtoYTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5VZHdhcnksIERhbmllbDwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0zNDkxLTAxOTg8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+VmFyZ2hlc2UsIE5laGE8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+U2NodWx6LCBGcmVkZXJpazwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi00OTMyLTQ2Nzc8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V3UsIERvbmd5aW5nPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlBhZXotRXNwaW5vLCBEYXZpZDwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0yOTM5LTUzOTg8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Q2hlbiwgSS1NaW48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMjAyNi05Nzk4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkh1bnRlbWFubiwgTWFyY2VsPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTEyODQtMzc0ODwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QYWxhbmlhcHBhbiwgS3Jpc2huYTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5MYWRhdSwgSm9zaHVhPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk11a2hlcmplZSwgU3VwcmF0aW08L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNjMyMi0yMjcxPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlJlZGR5LCBULkIuSy48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItMDg3MS01NTY3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk5pZWxzZW4sIFRvcmJlbjwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5LaXJ0b24sIEVkd2FyZDwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QLiBGYXJpYSwgSm9zw6k8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtOTMwMi03MjUwPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkFyZ29ubmUgTmF0aW9uYWwgTGFiLiAoQU5MKSwgQXJnb25uZSwgSUwgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OLiBFZGlyaXNpbmdoZSwgSmFuYWthPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTI0OTMtMjM0WDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Bcmdvbm5lIE5hdGlvbmFsIExhYi4gKEFOTCksIEFyZ29ubmUsIElMIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Uy4gSGVucnksIENocmlzdG9waGVyPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTgwNTgtOTEyMzwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Bcmdvbm5lIE5hdGlvbmFsIExhYi4gKEFOTCksIEFyZ29ubmUsIElMIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+UC4gSnVuZ2JsdXRoLCBTZWFuPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTkyNjUtODM0MTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Q2hpdmlhbiwgRHlsYW48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtODE4OS04NzI5PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYi4gKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5EZWhhbCwgUGFyYW12aXI8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTgxMC0yNDk3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYi4gKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5NLiBXb29kLUNoYXJsc29uLCBFbGlzaGE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtOTU1Ny03NzE1PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYi4gKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QLiBBcmtpbiwgQWRhbTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi00OTk5LTI5MzE8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+TGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFiLiAoTEJOTCksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlRyaW5nZSwgU3VzYW5uYWg8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNjQ3OS04NDI3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlZpc2VsLCBBeGVsPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTQxMzAtNzc4NDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Xb3lrZSwgVGFuamE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItOTQ4NS01NjM3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkouIE1vdW5jZXksIE5pZ2VsPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTUzODAtMTI1NjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OLiBJdmFub3ZhLCBOYXRhbGlhPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTU4MDItOTQ4NTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5DLiBLeXJwaWRlcywgTmlrb3M8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNjEzMS0wNDYyPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkVsb2UtRmFkcm9zaCwgRW1pbGV5PC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTgxNjItMTI3NjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+QSBHZW5vbWljIENhdGFsb2d1ZSBvZiBFYXJ0aOKAmXMgTWljcm9iaW9tZXMgLSBJbnRyb2R1Y3RvcnkgS0Jhc2UgTmFycmF0aXZlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKVUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjA8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PjU5IEJBU0lDIEJJT0xPR0lDQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5NQUdzLCBtZXRhZ2Vub21lLWFzc2VtYmxlZCBnZW5vbWVzLCBtZXRhZ2Vub21pY3MsIG1ldGFib2xpYyByZWNvbnN0cnVjdGlvbiwgbWV0YWJvbGljIG1vZGVsaW5nPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE2NzA3Nzc8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIj4xMC4xMDM4L3M0MTU4Ny0wMjAtMDcxOC02PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoZSByZWNvbnN0cnVjdGlvbiBvZiBiYWN0ZXJpYWwgYW5kIGFyY2hhZWFsIGdlbm9tZXMgZnJvbSBzaG90Z3VuIG1ldGFnZW5vbWVzIGhhcyBlbmFibGVkIHVucHJlY2VkZW50ZWQgaW5zaWdodHMgaW50byB0aGUgZWNvbG9neSBhbmQgZXZvbHV0aW9uIG9mIGVudmlyb25tZW50YWwgYW5kIGhvc3QtYXNzb2NpYXRlZCBtaWNyb2Jpb21lcy4gSGVyZSB3ZSBhcHBsaWVkIHRoaXMgcG93ZXJmdWwgYXBwcm9hY2ggdG8gb3ZlciAxMCwwMDAgbWV0YWdlbm9tZXMgY29sbGVjdGVkIGZyb20gZGl2ZXJzZSBoYWJpdGF0cyBjb3ZlcmluZyBhbGwgb2YgRWFydGjigJlzIGNvbnRpbmVudHMgYW5kIG9jZWFucywgaHVtYW4tIGFuZCBhbmltYWwtaG9zdCBhc3NvY2lhdGVkIG1pY3JvYmlvbWVzLCBlbmdpbmVlcmVkIGVudmlyb25tZW50cywgYW5kIG5hdHVyYWwgYW5kIGFncmljdWx0dXJhbCBzb2lscyB0byBjYXB0dXJlIGV4dGFudCBtaWNyb2JpYWwgbWV0YWJvbGljIGFuZCBmdW5jdGlvbmFsIHBvdGVudGlhbC4gV2UgcHJlc2VudCBhIGNvbXByZWhlbnNpdmUgY2F0YWxvZ3VlIG9mIDUyLDUxNSBtZXRhZ2Vub21lLWFzc2VtYmxlZCBnZW5vbWVzIHJlcHJlc2VudGluZyAxMiw1NTYgbm92ZWwgY2FuZGlkYXRlIHNwZWNpZXMtbGV2ZWwgb3BlcmF0aW9uYWwgdGF4b25vbWljIHVuaXRzIChPVFVzKSwgc3Bhbm5pbmcgMTM1IHBoeWxhLCB3aGljaCBleHBhbmQgdGhlIGtub3duIHBoeWxvZ2VuZXRpYyBkaXZlcnNpdHkgb2YgQmFjdGVyaWEgYW5kIEFyY2hhZWEgYnkgNDQlLiBXZSBhbHNvIGRlbW9uc3RyYXRlIHRoZSB1dGlsaXR5IG9mIHRoaXMgY29sbGVjdGlvbiBmb3Igc2Vjb25kYXJ5IG1ldGFib2xpdGUgYmlvc3ludGhldGljIHBvdGVudGlhbCBhbmQgcHJlZGljdGluZyBob3N0LXZpcnVzIGxpbmthZ2UsIHdoaWNoIGNhbiBwcm92aWRlIGEgdmlldyBpbnRvIHRoZSBnbG9iYWwgZGlzdHJpYnV0aW9uIG9mIGx5c29nZW5pYyB2aXJ1c2VzLiBUaGlzIHJlc291cmNlIHVuZGVyc2NvcmVzIHRoZSB2YWx1ZSBvZiBsZXZlcmFnaW5nIGdlbm9tZS1jZW50cmljIGFwcHJvYWNoZXMgdG8gcmV2ZWFsIGdlbm9taWMgcHJvcGVydGllcyBvZiB1bmN1bHRpdmF0ZWQgbWljcm9iZXMgdGhhdCBpbXBhY3Qgb24gZWNvc3lzdGVtIHByb2Nlc3Nlcy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi81MzI0Ny42NC8xNjcwNzc3PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OYXlmYWNoLCBTdGVwaGVuPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlJvdXgsIFNpbW9uPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlNlc2hhZHJpLCBSZWtoYTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5VZHdhcnksIERhbmllbDwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0zNDkxLTAxOTg8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+VmFyZ2hlc2UsIE5laGE8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+U2NodWx6LCBGcmVkZXJpazwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi00OTMyLTQ2Nzc8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V3UsIERvbmd5aW5nPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlBhZXotRXNwaW5vLCBEYXZpZDwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0yOTM5LTUzOTg8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VVNET0UgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Q2hlbiwgSS1NaW48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMjAyNi05Nzk4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkh1bnRlbWFubiwgTWFyY2VsPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTEyODQtMzc0ODwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QYWxhbmlhcHBhbiwgS3Jpc2huYTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5MYWRhdSwgSm9zaHVhPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk11a2hlcmplZSwgU3VwcmF0aW08L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNjMyMi0yMjcxPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlJlZGR5LCBULkIuSy48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItMDg3MS01NTY3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk5pZWxzZW4sIFRvcmJlbjwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5LaXJ0b24sIEVkd2FyZDwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QLiBGYXJpYSwgSm9zw6k8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtOTMwMi03MjUwPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkFyZ29ubmUgTmF0aW9uYWwgTGFiLiAoQU5MKSwgQXJnb25uZSwgSUwgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OLiBFZGlyaXNpbmdoZSwgSmFuYWthPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTI0OTMtMjM0WDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Bcmdvbm5lIE5hdGlvbmFsIExhYi4gKEFOTCksIEFyZ29ubmUsIElMIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Uy4gSGVucnksIENocmlzdG9waGVyPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTgwNTgtOTEyMzwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Bcmdvbm5lIE5hdGlvbmFsIExhYi4gKEFOTCksIEFyZ29ubmUsIElMIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+UC4gSnVuZ2JsdXRoLCBTZWFuPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTkyNjUtODM0MTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Q2hpdmlhbiwgRHlsYW48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtODE4OS04NzI5PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYi4gKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5EZWhhbCwgUGFyYW12aXI8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNTgxMC0yNDk3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYi4gKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5NLiBXb29kLUNoYXJsc29uLCBFbGlzaGE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtOTU1Ny03NzE1PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkxhd3JlbmNlIEJlcmtlbGV5IE5hdGlvbmFsIExhYi4gKExCTkwpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QLiBBcmtpbiwgQWRhbTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi00OTk5LTI5MzE8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+TGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFiLiAoTEJOTCksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlRyaW5nZSwgU3VzYW5uYWg8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtNjQ3OS04NDI3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlZpc2VsLCBBeGVsPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTQxMzAtNzc4NDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Xb3lrZSwgVGFuamE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItOTQ4NS01NjM3PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkouIE1vdW5jZXksIE5pZ2VsPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTUzODAtMTI1NjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OLiBJdmFub3ZhLCBOYXRhbGlhPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTU4MDItOTQ4NTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5DLiBLeXJwaWRlcywgTmlrb3M8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNjEzMS0wNDYyPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVTRE9FIEpvaW50IEdlbm9tZSBJbnN0aXR1dGUgKEpHSSksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkVsb2UtRmFkcm9zaCwgRW1pbGV5PC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTgxNjItMTI3NjwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5VU0RPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlIChKR0kpLCBCZXJrZWxleSwgQ0EgKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+QSBHZW5vbWljIENhdGFsb2d1ZSBvZiBFYXJ0aOKAmXMgTWljcm9iaW9tZXMgLSBJbnRyb2R1Y3RvcnkgS0Jhc2UgTmFycmF0aXZlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgSm9pbnQgR2Vub21lIEluc3RpdHV0ZSAoSkdJKVUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjA8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PjU5IEJBU0lDIEJJT0xPR0lDQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5NQUdzLCBtZXRhZ2Vub21lLWFzc2VtYmxlZCBnZW5vbWVzLCBtZXRhZ2Vub21pY3MsIG1ldGFib2xpYyByZWNvbnN0cnVjdGlvbiwgbWV0YWJvbGljIG1vZGVsaW5nPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE2NzA3Nzc8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIj4xMC4xMDM4L3M0MTU4Ny0wMjAtMDcxOC02PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoZSByZWNvbnN0cnVjdGlvbiBvZiBiYWN0ZXJpYWwgYW5kIGFyY2hhZWFsIGdlbm9tZXMgZnJvbSBzaG90Z3VuIG1ldGFnZW5vbWVzIGhhcyBlbmFibGVkIHVucHJlY2VkZW50ZWQgaW5zaWdodHMgaW50byB0aGUgZWNvbG9neSBhbmQgZXZvbHV0aW9uIG9mIGVudmlyb25tZW50YWwgYW5kIGhvc3QtYXNzb2NpYXRlZCBtaWNyb2Jpb21lcy4gSGVyZSB3ZSBhcHBsaWVkIHRoaXMgcG93ZXJmdWwgYXBwcm9hY2ggdG8gb3ZlciAxMCwwMDAgbWV0YWdlbm9tZXMgY29sbGVjdGVkIGZyb20gZGl2ZXJzZSBoYWJpdGF0cyBjb3ZlcmluZyBhbGwgb2YgRWFydGjigJlzIGNvbnRpbmVudHMgYW5kIG9jZWFucywgaHVtYW4tIGFuZCBhbmltYWwtaG9zdCBhc3NvY2lhdGVkIG1pY3JvYmlvbWVzLCBlbmdpbmVlcmVkIGVudmlyb25tZW50cywgYW5kIG5hdHVyYWwgYW5kIGFncmljdWx0dXJhbCBzb2lscyB0byBjYXB0dXJlIGV4dGFudCBtaWNyb2JpYWwgbWV0YWJvbGljIGFuZCBmdW5jdGlvbmFsIHBvdGVudGlhbC4gV2UgcHJlc2VudCBhIGNvbXByZWhlbnNpdmUgY2F0YWxvZ3VlIG9mIDUyLDUxNSBtZXRhZ2Vub21lLWFzc2VtYmxlZCBnZW5vbWVzIHJlcHJlc2VudGluZyAxMiw1NTYgbm92ZWwgY2FuZGlkYXRlIHNwZWNpZXMtbGV2ZWwgb3BlcmF0aW9uYWwgdGF4b25vbWljIHVuaXRzIChPVFVzKSwgc3Bhbm5pbmcgMTM1IHBoeWxhLCB3aGljaCBleHBhbmQgdGhlIGtub3duIHBoeWxvZ2VuZXRpYyBkaXZlcnNpdHkgb2YgQmFjdGVyaWEgYW5kIEFyY2hhZWEgYnkgNDQlLiBXZSBhbHNvIGRlbW9uc3RyYXRlIHRoZSB1dGlsaXR5IG9mIHRoaXMgY29sbGVjdGlvbiBmb3Igc2Vjb25kYXJ5IG1ldGFib2xpdGUgYmlvc3ludGhldGljIHBvdGVudGlhbCBhbmQgcHJlZGljdGluZyBob3N0LXZpcnVzIGxpbmthZ2UsIHdoaWNoIGNhbiBwcm92aWRlIGEgdmlldyBpbnRvIHRoZSBnbG9iYWwgZGlzdHJpYnV0aW9uIG9mIGx5c29nZW5pYyB2aXJ1c2VzLiBUaGlzIHJlc291cmNlIHVuZGVyc2NvcmVzIHRoZSB2YWx1ZSBvZiBsZXZlcmFnaW5nIGdlbm9tZS1jZW50cmljIGFwcHJvYWNoZXMgdG8gcmV2ZWFsIGdlbm9taWMgcHJvcGVydGllcyBvZiB1bmN1bHRpdmF0ZWQgbWljcm9iZXMgdGhhdCBpbXBhY3Qgb24gZWNvc3lzdGVtIHByb2Nlc3Nlcy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1670777"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "None"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "None"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Nayfach, Stephen"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Roux, Simon"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Seshadri, Rekha"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Udwary, Daniel"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-3491-0198"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Varghese, Neha"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Schulz, Frederik"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-4932-4677"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Wu, Dongying"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Paez-Espino, David"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-2939-5398"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Chen, I-Min"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0003-2026-9798"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Huntemann, Marcel"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-1284-3748"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Palaniappan, Krishna"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Ladau, Joshua"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Mukherjee, Supratim"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-6322-2271"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Reddy, T.B.K."
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-0871-5567"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Nielsen, Torben"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Kirton, Edward"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            },
+            {
+              "affiliation": [
+                "Argonne National Lab. (ANL), Argonne, IL (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "P. Faria, Jos\u00e9"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-9302-7250"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Argonne National Lab. (ANL), Argonne, IL (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "N. Edirisinghe, Janaka"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0003-2493-234X"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Argonne National Lab. (ANL), Argonne, IL (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "S. Henry, Christopher"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-8058-9123"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "P. Jungbluth, Sean"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-9265-8341"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Chivian, Dylan"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-8189-8729"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Dehal, Paramvir"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-5810-2497"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "M. Wood-Charlson, Elisha"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-9557-7715"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "P. Arkin, Adam"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-4999-2931"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Tringe, Susannah"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-6479-8427"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Visel, Axel"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-4130-7784"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Woyke, Tanja"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-9485-5637"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "J. Mouncey, Nigel"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0001-5380-1256"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "N. Ivanova, Natalia"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-5802-9485"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "C. Kyrpides, Nikos"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-6131-0462"
+                }
+              ]
+            },
+            {
+              "affiliation": [
+                "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": "Personal",
+                "value": "Eloe-Fadrosh, Emiley"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": [
+                {
+                  "attributes": {
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeURI": "http://orcid.org/"
+                  },
+                  "children": [],
+                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
+                  "tail": null,
+                  "text": "https://orcid.org/0000-0002-8162-1276"
+                }
+              ]
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [
+                "The reconstruction of bacterial and archaeal genomes from shotgun metagenomes has enabled unprecedented insights into the ecology and evolution of environmental and host-associated microbiomes. Here we applied this powerful approach to over 10,000 metagenomes collected from diverse habitats covering all of Earth\u2019s continents and oceans, human- and animal-host associated microbiomes, engineered environments, and natural and agricultural soils to capture extant microbial metabolic and functional potential. We present a comprehensive catalogue of 52,515 metagenome-assembled genomes representing 12,556 novel candidate species-level operational taxonomic units (OTUs), spanning 135 phyla, which expand the known phylogenetic diversity of Bacteria and Archaea by 44%. We also demonstrate the utility of this collection for secondary metabolite biosynthetic potential and predicting host-virus linkage, which can provide a view into the global distribution of lysogenic viruses. This resource underscores the value of leveraging genome-centric approaches to reveal genomic properties of uncultivated microbes that impact on ecosystem processes."
+              ],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": null,
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25982/53247.64/1670777"
+        },
+        "language": "en",
+        "publicationYear": "2020",
+        "publisher": {
+          "lang": null,
+          "value": "U.S. Department of Energy Joint Genome Institute (JGI)U.S. Department of Energy Systems Biology Knowledgebase"
+        },
+        "relatedIdentifiers": {
+          "relatedIdentifier": [
+            {
+              "relatedIdentifierType": "DOI",
+              "relatedMetadataScheme": null,
+              "relationType": "IsSupplementTo",
+              "resourceTypeGeneral": null,
+              "schemeType": null,
+              "schemeURI": null,
+              "value": "10.1038/s41587-020-0718-6"
+            }
+          ]
+        },
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Genome/Genetics Data"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "59 BASIC BIOLOGICAL SCIENCES",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "MAGs, metagenome-assembled genomes, metagenomics, metabolic reconstruction, metabolic modeling",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "A Genomic Catalogue of Earth\u2019s Microbiomes - Introductory KBase Narrative"
+            }
+          ]
+        },
+        "version": null
+      }
     },
     "id": "10.25982/53247.64/1670777",
     "relationships": {
