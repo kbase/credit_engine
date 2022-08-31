@@ -9,6 +9,9 @@ prefixes:
   datacite: https://purl.org/datacite/v4.4
   biolink: https://biolink.github.io/biolink-model/docs/
   crossref: https://crossref.org/
+  DOI: https://doi.org/
+  OSTI: https://www.osti.gov/biblio/
+  ROR: https://ror.org/
 imports:
   - linkml:types
 default_range: string
@@ -24,9 +27,9 @@ classes:
         required: true
         exact_mappings:
         - from: DataCite:id
-          via: { id: "DOI:${DataCite:id}" }
+          via: { id: "DOI:{DataCite:id}" }
         - from: OSTI:osti_id
-          via: { id: "OSTI:${OSTI:osti_id}"}
+          via: { id: "OSTI:{OSTI:osti_id}"}
 
       resource_type:
         description: the type of resource being described
@@ -36,6 +39,9 @@ classes:
         - OSTI:product_type
         # see DataCite:attributes.types
         - DataCite:attributes.types.schema_org
+        examples:
+        - dataset
+        - report
 
       title:
         description: formal title(s) of the data set
@@ -44,6 +50,8 @@ classes:
         - DataCite:attributes.titles[].title
         - from: OSTI:title
           via: [OSTI:title]
+        examples:
+        - Viral Annotation Pipeline in KBase
 
       version:
         description: resource version (if available)
@@ -56,6 +64,8 @@ classes:
         - DataCite:attributes.published
         - OSTI:publication_date
         range: date_or_datetime
+        examples:
+        - 2022-05-10
 
       access_date:
         # date in epoch time?
@@ -71,6 +81,8 @@ classes:
         narrow_mappings:
         - DataCite:attributes.contributors
         - DataCite:attributes.creators
+        - OSTI:contributors
+        - OSTI:authors
 
       related_identifiers:
         description: other resolvable persistent unique IDs used to access the resource or related resources
@@ -80,6 +92,9 @@ classes:
         - DataCite:attributes.identifiers
         - DataCite:attributes.related_identifiers
         - DataCite:attributes.alternate_identifiers
+        - OSTI:related_identifiers
+        - from: OSTI:doi
+          via: { id: "DOI:{OSTI:doi}"}
 
       funding:
         description: funding sources for the dataset
@@ -93,8 +108,12 @@ classes:
       license:
         description: license under which the data is made available
         slot_uri: biolink:license
+        examples:
+        - CC-BY-4.0
+        - CC0
         related_mappings:
-        - DataCite:attributes.rights_list # check this
+        # TODO: coercion?
+        - DataCite:attributes.rights_list
 
 
   Person:
@@ -103,28 +122,41 @@ classes:
         identifier: true
         description: ORCID
         range: uriorcurie
+        examples:
+        - ORCID:0000-0001-9557-7715
         exact_mappings:
         - from:
             DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
           via:
-            "ORCID:${ DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '') }"
+            "ORCID:{ DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '') }"
+        - OSTI:orcid
 
       first_name:
         description: given name
+        examples:
+        - Ellen
         exact_mappings:
         - DataCite:attributes.creators[].given_name
         - DataCite:attributes.contributors[].given_name
+        - OSTI:first_name
 
       last_name:
         description: family name
+        examples:
+        - Dow
         exact_mappings:
         - DataCite:attributes.creators[].family_name
         - DataCite:attributes.contributors[].family_name
+        - OSTI:last_name
 
       full_name:
         description: Full name of the contributor
         # slot_uri: schema:name
         equals_expression: "{first_name} + {last_name}"
+        examples:
+        - Ellen Dow
+        - Vlad the Impaler
+        - Madonna
         related_mappings:
         # these have the names comma-separated and inverted
         - DataCite:attributes.creators[].name
@@ -164,6 +196,8 @@ classes:
       organisation_id:
         description: unique identifier for the organisation -- ROR / ISNI, etc.
         identifier: true
+        examples:
+        - ROR:01znn6x10
         exact_mappings:
         - DataCite:attributes.contributors[].affiliation.affiliation_identifier
         - DataCite:attributes.creators[].affiliation.affiliation_identifier
@@ -174,6 +208,11 @@ classes:
         exact_mappings:
         - DataCite:attributes.contributors[].affiliation.name
         - DataCite:attributes.creators[].affiliation.name
+        - OSTI:research_organization
+        examples:
+        - U.S. Department of Energy Systems Biology Knowledgebase
+        - Lawrence Berkeley National Laboratory
+        - The Ohio State Univ., Columbus, OH
 
 
   FundingReference:
@@ -184,6 +223,9 @@ classes:
         exact_mappings:
         - DataCite:attributes.funding_references[].funder_name
         - CrossRef:Message.project.funding.funder.name
+        - OSTI:sponsoring_organization
+        examples:
+        - US DOE Office of Science (SC), Biological and Environmental Research (BER)
 
       funder_id:
         description: ID for the funding entity - acceptable formats include crossref funder ID, DOI, ROR, ISNI, others?
@@ -216,23 +258,35 @@ classes:
         identifier: true
         description: a CURIE (compact URI)
         required: true
+        examples:
+        - DOI:10.25982/59912.37/1635154
+        - OSTI:1635154
         exact_mappings:
         - DataCite:attributes.identifier.value
         - from: DataCite:attributes.alternate_identifiers[]
-          via: "${DataCite:attributes.alternate_identifiers[].alternate_identifier_type}:${DataCite:attributes.alternate_identifiers[].alternate_identifier}"
+          via: "{DataCite:attributes.alternate_identifiers[].alternate_identifier_type}:{DataCite:attributes.alternate_identifiers[].alternate_identifier}"
         - from: DataCite:attributes.related_identifiers[]
-          via: "${DataCite:attributes.related_identifiers[].related_identifier_type}:${DataCite:attributes.related_identifiers[].related_identifier}"
+          via: "{DataCite:attributes.related_identifiers[].related_identifier_type}:{DataCite:attributes.related_identifiers[].related_identifier}"
         - from: DataCite:attributes.identifiers[]
-          via: "${DataCite:attributes.identifiers[].identifier_type}:${DataCite:attributes.identifiers[].identifier}"
+          via: "{DataCite:attributes.identifiers[].identifier_type}:{DataCite:attributes.identifiers[].identifier}"
         range: uriorcurie
 
       uri:
         description: URI for a resource
         range: uriorcurie
+        exact_mappings:
+        - OSTI:site_url
+        examples:
+        - https://kbase.us/n/59912/37/
 
       description:
-        description: brief description of what the ID links to
         # slot_uri: schema:description
+        description: brief description of what the ID links to
+        exact_mappings:
+        - OSTI:description
+        examples:
+        - This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2
+
 
       relation_type:
         description: how the resource represented by this ID relates to the original resource
