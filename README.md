@@ -2,8 +2,13 @@
 
 This repo holds the schema and associated scripts used by the KBase Credit Engine.
 
+- [KBase Credit Engine](#kbase-credit-engine)
+  - [Installation](#installation)
+  - [Metadata Schema](#metadata-schema)
+    - [Schema Diagram](#schema-diagram)
+    - [Useful commands:](#useful-commands)
 
-### Installation
+## Installation
 
 This repo uses [poetry](https://python-poetry.org/) to manage the python environment and dependencies.
 
@@ -21,14 +26,19 @@ Activate the virtual environment:
 poetry shell
 ```
 
+## Metadata Schema
 
-### Metadata Schema
-
-The metadata schema is maintained in [linkml format](https://linkml.io), with other formats (including the python class) generated from the [linkml schema file](schema/kbase/linkml/metadata.yaml).
+The metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/kbase/linkml/metadata.yaml).
 
 See the [linkml documentation](https://linkml.io/linkml/index.html) for full details on using the linkml format and the related tools.
 
-Useful commands:
+### Schema Diagram
+
+Generated using [erdantic](https://erdantic.drivendata.org/stable/)
+
+![KBase metadata schema diagram](schema/kbase/kbase-schema.png "Entity-relationship diagram for KBase metadata schema")
+
+### Useful commands:
 
 generate derived files in all formats:
 ```sh

@@ -34,7 +34,7 @@ classes:
           # via: { id: "OSTI:{OSTI:osti_id}"}
         - JGI:organisms[].grouped_by
           # from JGI:organisms[].grouped_by
-          # via: { id: JGI:organisms[].files[].{JGI.organisms[].grouped_by} }
+          # via: { id: JGI:organisms[].files[].{JGI:organisms[].grouped_by} }
 
       resource_type:
         description: the type of resource being described
@@ -64,8 +64,8 @@ classes:
         exact_mappings:
         - DataCite:attributes.version
 
-      submission_date:
-        description: for unversioned resources, date of submission to repository (if available)
+      available_date:
+        description: for unversioned resources, the date when the resource was made available to the public
         close_mappings:
         - DataCite:attributes.published
         - OSTI:publication_date
@@ -81,6 +81,7 @@ classes:
 
       contributors:
         description: people and/or organisations responsible for generating the resource
+        inlined_as_list: true
         multivalued: true
         range: Person
         narrow_mappings:
@@ -88,9 +89,11 @@ classes:
         - DataCite:attributes.creators
         - OSTI:contributors
         - OSTI:authors
+        - JGI:organisms[].pi
 
       related_identifiers:
         description: other resolvable persistent unique IDs used to access the resource or related resources
+        inlined_as_list: true
         multivalued: true
         range: ResolvablePID
         close_mappings:
@@ -145,7 +148,6 @@ classes:
         - DataCite:attributes.creators[].given_name
         - DataCite:attributes.contributors[].given_name
         - OSTI:first_name
-        narrow_mappings:
         - JGI:organisms[].pi.first_name
 
       last_name:
@@ -156,7 +158,6 @@ classes:
         - DataCite:attributes.creators[].family_name
         - DataCite:attributes.contributors[].family_name
         - OSTI:last_name
-        narrow_mappings:
         - JGI:organisms[].pi.last_name
 
       full_name:
@@ -176,6 +177,7 @@ classes:
 
       affiliations:
         description: organisation(s) that the contributor is associated with
+        inlined_as_list: true
         multivalued: true
         range: Organisation
         related_mappings:
@@ -230,7 +232,7 @@ classes:
         - DataCite:attributes.contributors[].affiliation.name
         - DataCite:attributes.creators[].affiliation.name
         - OSTI:research_organization
-        - JGI:organisms.pi.institution
+        - JGI:organisms[].pi.institution
         examples:
         - value: U.S. Department of Energy Systems Biology Knowledgebase
         - value: Lawrence Berkeley National Laboratory
@@ -283,6 +285,7 @@ classes:
         examples:
         - value: DOI:10.25982/59912.37/1635154
         - value: OSTI:1635154
+        - value: https://kbase.us/n/59912/37/
         exact_mappings:
         - DataCite:attributes.identifier.value
         - DataCite:attributes.alternate_identifiers[]
@@ -294,15 +297,9 @@ classes:
         - DataCite:attributes.identifiers[]
           # from: DataCite:attributes.identifiers[]
           # via: "{DataCite:attributes.identifiers[].identifier_type}:{DataCite:attributes.identifiers[].identifier}"
-        range: uriorcurie
-
-      uri:
-        description: URI for a resource
-        range: uri
-        exact_mappings:
+        related_mappings:
         - OSTI:site_url
-        examples:
-        - value: https://kbase.us/n/59912/37/
+        range: uriorcurie
 
       description:
         # slot_uri: schema:description
@@ -313,7 +310,7 @@ classes:
         - value: This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2
 
 
-      relation_type:
+      relationship_type:
         description: how the resource represented by this ID relates to the original resource, as described by DataCite relation types
         exact_mappings:
         # for the primary ID, we also need to represent the resource itself
