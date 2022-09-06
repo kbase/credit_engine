@@ -1,0 +1,1496 @@
+{
+  "timings": {
+    "total": "0.086",
+    "file_fetch": "0.016",
+    "organisms": "0.056",
+    "facets": "0.000",
+    "filtered_facets": "0.000",
+    "count_file_total": "0.010"
+  },
+  "hits_total": 16,
+  "file_total": 16,
+  "unique_file_total": 16,
+  "total": 1,
+  "prioritized_file_total": 16,
+  "prioritized_total": 1,
+  "score_threshold": 8,
+  "start": 1,
+  "end": 1,
+  "next_page": false,
+  "cursor_id": "0b4ee13f76d0eac4618ec8ae38cb001ea949844e7f69132fd103703192fef533:1",
+  "organisms": [
+    {
+      "agg": "Phytozome",
+      "agg_id": 586,
+      "kingdom": "phytozome",
+      "label": "Genome",
+      "top_hit": {
+        "_id": "5f9c9c9747675a20c852b7c1",
+        "_highlight": null,
+        "metadata": {
+          "ncbi_taxon": {
+            "ncbi_taxon_species": "Acorus americanus"
+          },
+          "phytozome": {
+            "proteome_name": "Acorus americanus",
+            "annotation_version": "v1.1",
+            "phytozome_genome_id": 586,
+            "version": "v1.1"
+          }
+        },
+        "added_date": "2020-10-30T16:07:03.680000",
+        "file_name": "Aamericanus_586_v1.1.repeatmasked_assembly_v1.0.gff3.gz",
+        "user": "plant"
+      },
+      "pi": null,
+      "proposal_acceptance_date": null,
+      "work_completion_date": null,
+      "status": null,
+      "id": "Phytozome-586",
+      "grouped_by": "metadata.phytozome.phytozome_genome_id",
+      "score": {
+        "count": 16,
+        "min": 352.2080078125,
+        "max": 386.6333923339844,
+        "avg": 366.1089210510254,
+        "sum": 5857.742736816406
+      },
+      "grouped_count": 16,
+      "name": "Acorus americanus v1.1",
+      "title": "Acorus americanus",
+      "file_total": 16,
+      "files": [
+        {
+          "_id": "5f9c9c9747675a20c852b7c2",
+          "_highlight": null,
+          "file_status_id": 13,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "structural",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "genes",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "RESTORED",
+          "added_date": "2020-10-30T16:07:03.726000",
+          "file_name": "Aamericanus_586_v1.1.gene.gff3.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-31T00:09:09.324000",
+          "dt_to_purge": "2022-09-10T00:09:09",
+          "file_size": 6021406,
+          "file_date": "2020-07-24T21:34:00",
+          "file_type": "gff",
+          "md5sum": "05a32402aaa2382c2a12c5c6811a2eec",
+          "file_id": 12124120,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7be",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "transcript",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.520000",
+          "file_name": "Aamericanus_586_v1.1.transcript.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-07-24T00:20:45.883000",
+          "dt_to_purge": "2022-07-24T00:00:00",
+          "file_size": 20148318,
+          "file_date": "2020-07-24T21:40:28",
+          "file_type": "fasta",
+          "md5sum": "9578f9193d3714eb7eddbaabe956bcd5",
+          "file_id": 12124116,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7c0",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "transcript",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.626000",
+          "file_name": "Aamericanus_586_v1.1.transcript_primaryTranscriptOnly.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-07-24T00:20:46.037000",
+          "dt_to_purge": "2022-07-24T00:00:00",
+          "file_size": 14633445,
+          "file_date": "2020-07-24T21:47:09",
+          "file_type": "fasta",
+          "md5sum": "ea22ff12b3070221c3d95a15f6efd79e",
+          "file_id": 12124118,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7c3",
+          "_highlight": null,
+          "file_status_id": 13,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/assembly",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "assembly"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "assembly"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "assembly"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "assembly",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "unmasked",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "RESTORED",
+          "added_date": "2020-10-30T16:07:03.777000",
+          "file_name": "Aamericanus_586_v1.0.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-16T02:03:26.970000",
+          "dt_to_purge": "2022-09-15T00:00:00",
+          "file_size": 111164096,
+          "file_date": "2019-10-30T14:52:49",
+          "file_type": "fasta",
+          "md5sum": "7314f75c6f4d3f3e0d2b3cc94a20a7e9",
+          "file_id": 12124121,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7b7",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "policy",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "other",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  ""
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "info",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "other",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.124000",
+          "file_name": "Aamericanus_586_v1.1.DataReleasePolicy.html",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-24T00:06:54.194000",
+          "dt_to_purge": "2022-08-24T00:00:00",
+          "file_size": 3309,
+          "file_date": "2020-10-29T06:50:36",
+          "file_type": "html",
+          "md5sum": "c1cdcc07b8e64df16f0ff22991608ff2",
+          "file_id": 12124109,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100666",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7ba",
+          "_highlight": null,
+          "file_status_id": 13,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "transcript",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "RESTORED",
+          "added_date": "2020-10-30T16:07:03.302000",
+          "file_name": "Aamericanus_586_v1.1.protein_primaryTranscriptOnly.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-19T10:18:02.700000",
+          "dt_to_purge": "2022-09-02T00:00:00",
+          "file_size": 6741640,
+          "file_date": "2020-07-24T21:52:56",
+          "file_type": "fasta",
+          "md5sum": "f6fa268998dba02d0aaef0ef6e45da57",
+          "file_id": 12124112,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7b6",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "other",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "other",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  ""
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "info",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "other",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.065000",
+          "file_name": "Aamericanus_586_v1.1.readme.txt",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-24T00:06:54.177000",
+          "dt_to_purge": "2022-08-24T00:00:00",
+          "file_size": 5307,
+          "file_date": "2020-08-29T00:32:47",
+          "file_type": "text",
+          "md5sum": "35f97afc6791b003c967379cc923a504",
+          "file_id": 12124108,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100777",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7bf",
+          "_highlight": null,
+          "file_status_id": 13,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "protein",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "RESTORED",
+          "added_date": "2020-10-30T16:07:03.573000",
+          "file_name": "Aamericanus_586_v1.1.protein.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-09-01T00:04:16.493000",
+          "dt_to_purge": "2022-09-15T00:00:00",
+          "file_size": 7801979,
+          "file_date": "2020-07-24T21:52:58",
+          "file_type": "fasta",
+          "md5sum": "1de7105539d884acd89ac9f1303ee24e",
+          "file_id": 12124117,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7c4",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/assembly",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "assembly"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "assembly"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "assembly"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "assembly",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "masked",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.828000",
+          "file_name": "Aamericanus_586_v1.0.softmasked.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-07-24T00:20:46.251000",
+          "dt_to_purge": "2022-07-24T00:00:00",
+          "file_size": 117908987,
+          "file_date": "2019-11-02T21:44:08",
+          "file_type": "fasta",
+          "md5sum": "d2eae811ecd2d423383932d5f734b76d",
+          "file_id": 12124122,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7c5",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/assembly",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "assembly"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "assembly"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "assembly"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "assembly",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "masked",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.877000",
+          "file_name": "Aamericanus_586_v1.0.hardmasked.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-07-24T00:20:46.338000",
+          "dt_to_purge": "2022-07-24T00:00:00",
+          "file_size": 65182194,
+          "file_date": "2020-07-24T21:55:05",
+          "file_type": "fasta",
+          "md5sum": "5d2f0a64cf173ab96915b4d2fa619a66",
+          "file_id": 12124123,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7b8",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "functional",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "genes,deflines",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.199000",
+          "file_name": "Aamericanus_586_v1.1.defline.txt",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-07-24T00:20:45.652000",
+          "dt_to_purge": "2022-07-24T00:00:00",
+          "file_size": 4306115,
+          "file_date": "2020-08-29T00:32:36",
+          "file_type": "text",
+          "md5sum": "2356208ceb2a82eaf61f06741fee8ab2",
+          "file_id": 12124110,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100777",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7bd",
+          "_highlight": null,
+          "file_status_id": 13,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "transcript",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "RESTORED",
+          "added_date": "2020-10-30T16:07:03.470000",
+          "file_name": "Aamericanus_586_v1.1.cds_primaryTranscriptOnly.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-16T19:48:48.623000",
+          "dt_to_purge": "2022-09-15T00:00:00",
+          "file_size": 10092249,
+          "file_date": "2020-07-24T21:52:52",
+          "file_type": "fasta",
+          "md5sum": "746e71285771c9c6941fe2a02a6ec1d3",
+          "file_id": 12124115,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7bb",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "sequence",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "CDS",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.356000",
+          "file_name": "Aamericanus_586_v1.1.cds.fa.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-31T00:09:09.238000",
+          "dt_to_purge": "2022-08-31T00:00:00",
+          "file_size": 12288941,
+          "file_date": "2020-07-24T21:52:55",
+          "file_type": "fasta",
+          "md5sum": "4bbbaa6b1069bc1d0d3e9dfb4e3a43ec",
+          "file_id": 12124113,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7b9",
+          "_highlight": null,
+          "file_status_id": 13,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "structural",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "genes",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "RESTORED",
+          "added_date": "2020-10-30T16:07:03.248000",
+          "file_name": "Aamericanus_586_v1.1.gene_exons.gff3.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-09-01T01:31:06.361000",
+          "dt_to_purge": "2022-10-01T00:00:00",
+          "file_size": 8830487,
+          "file_date": "2020-07-24T21:52:49",
+          "file_type": "gff",
+          "md5sum": "2d15781d2da84ab39ffb1a00542fe203",
+          "file_id": 12124111,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7c1",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "structural",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/repeat",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "DNA,repeats",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "PURGED",
+          "added_date": "2020-10-30T16:07:03.680000",
+          "file_name": "Aamericanus_586_v1.1.repeatmasked_assembly_v1.0.gff3.gz",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-07-24T00:20:46.122000",
+          "dt_to_purge": "2022-07-24T00:00:00",
+          "file_size": 14178071,
+          "file_date": "2020-07-24T21:55:02",
+          "file_type": "gff",
+          "md5sum": "de51162e1e4150feeb70243ac53c20a6",
+          "file_id": 12124119,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        },
+        {
+          "_id": "5f9c9c9747675a20c852b7bc",
+          "_highlight": null,
+          "file_status_id": 13,
+          "file_path": "/global/dna/dm_archive/plant/phytozome/Aamericanus/v1.1/annotation",
+          "metadata": {
+            "ncbi_taxon": {
+              "ncbi_taxon_class": "Magnoliopsida",
+              "ncbi_taxon_family": "Acoraceae",
+              "ncbi_taxon_order": "Acorales",
+              "ncbi_taxon_species": "Acorus americanus",
+              "ncbi_taxon_genus": "Acorus"
+            },
+            "subtype": "functional,other",
+            "ncbi_taxon_id": 263995,
+            "collection": "all",
+            "source": "nuclear",
+            "portal": {
+              "display_location": {
+                "PhytozomeV13": [
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ],
+                "Aamericanus": [
+                  "v1.1",
+                  "annotation"
+                ],
+                "Phytozome": [
+                  "PhytozomeV13",
+                  "Aamericanus",
+                  "v1.1",
+                  "annotation"
+                ]
+              },
+              "identifier": [
+                "Phytozome",
+                "PhytozomeV13",
+                "Aamericanus"
+              ]
+            },
+            "type": "annotation/gene",
+            "phytozome": {
+              "proteome_name": "Acorus americanus",
+              "annotation_version": "v1.1",
+              "phytozome_release_id": [
+                "13",
+                "current"
+              ],
+              "proteome_id": 586,
+              "phytozome_genome_id": 586,
+              "Gspecies": "Aamericanus",
+              "data_release_policy": "restricted",
+              "version": "v1.1",
+              "assembly_version": "v1.0"
+            },
+            "content": "GO,KEGG,KOG,IPR,genes,deflines",
+            "data_utilization_status": "Unrestricted"
+          },
+          "file_status": "RESTORED",
+          "added_date": "2020-10-30T16:07:03.413000",
+          "file_name": "Aamericanus_586_v1.1.annotation_info.txt",
+          "file_owner": "pzdeploy",
+          "modified_date": "2022-08-19T10:31:14.673000",
+          "dt_to_purge": "2022-09-02T00:00:00",
+          "file_size": 11178825,
+          "file_date": "2020-08-29T00:30:17",
+          "file_type": "text",
+          "md5sum": "2fc736d8980b80e38fe5d675ca670fa7",
+          "file_id": 12124114,
+          "file_group": "compgen",
+          "user": "plant",
+          "file_permissions": "0100777",
+          "data_group": "Analysis",
+          "portal_detail_id": "Aamericanus_v1_1"
+        }
+      ],
+      "fileSize": 410485369,
+      "highlight": {},
+      "portal_detail_id": "Aamericanus_v1_1",
+      "data_utilization_status": "Unrestricted",
+      "build_time": 0.01562190055847168
+    }
+  ],
+  "facets": {
+    "meta_type": {
+      "annotation/gene": 10,
+      "assembly": 3,
+      "info": 2,
+      "annotation/repeat": 1
+    },
+    "meta_subtype": {
+      "sequence": 9,
+      "structural": 3,
+      "functional": 1,
+      "functional,other": 1,
+      "other": 1,
+      "policy": 1
+    },
+    "meta_content": {
+      "transcript": 4,
+      "genes": 2,
+      "masked": 2,
+      "other": 2,
+      "CDS": 1,
+      "DNA,repeats": 1,
+      "GO,KEGG,KOG,IPR,genes,deflines": 1,
+      "genes,deflines": 1,
+      "protein": 1,
+      "unmasked": 1
+    },
+    "meta_source": {
+      "nuclear": 14,
+      "other": 2
+    },
+    "meta_collection": {
+      "all": 16
+    },
+    "meta_file_format": {},
+    "file_status": {
+      "PURGED": 9,
+      "RESTORED": 7
+    },
+    "file_type": {
+      "fasta": 9,
+      "gff": 3,
+      "text": 3,
+      "html": 1
+    },
+    "data_type": {},
+    "phytozome_version": {
+      "13": 16,
+      "current": 16
+    },
+    "data_group": {
+      "Analysis": 16,
+      "Sequencing": 0,
+      "Other": 0
+    },
+    "data_utilization_status": {
+      "Restricted": 0,
+      "Unrestricted": 16
+    },
+    "ecosystem": {},
+    "ecosystem_category": {},
+    "ecosystem_subtype": {},
+    "ecosystem_type": {},
+    "specific_ecosystem": {},
+    "ncbi_taxon_order": {
+      "Acorales": 1
+    },
+    "ncbi_taxon_class": {
+      "Magnoliopsida": 1
+    },
+    "ncbi_taxon_family": {
+      "Acoraceae": 1
+    },
+    "ncbi_taxon_genus": {
+      "Acorus": 1
+    },
+    "phytozome_policy": {
+      "restricted": 1
+    },
+    "phytozome_project": {}
+  },
+  "filtered_facets": {
+    "meta_type": {
+      "annotation/gene": 10,
+      "assembly": 3,
+      "info": 2,
+      "annotation/repeat": 1
+    },
+    "meta_subtype": {
+      "sequence": 9,
+      "structural": 3,
+      "functional": 1,
+      "functional,other": 1,
+      "other": 1,
+      "policy": 1
+    },
+    "meta_content": {
+      "transcript": 4,
+      "genes": 2,
+      "masked": 2,
+      "other": 2,
+      "CDS": 1,
+      "DNA,repeats": 1,
+      "GO,KEGG,KOG,IPR,genes,deflines": 1,
+      "genes,deflines": 1,
+      "protein": 1,
+      "unmasked": 1
+    },
+    "meta_source": {
+      "nuclear": 14,
+      "other": 2
+    },
+    "meta_collection": {
+      "all": 16
+    },
+    "meta_file_format": {},
+    "file_status": {
+      "PURGED": 9,
+      "RESTORED": 7
+    },
+    "file_type": {
+      "fasta": 9,
+      "gff": 3,
+      "text": 3,
+      "html": 1
+    },
+    "data_type": {},
+    "phytozome_version": {
+      "13": 16,
+      "current": 16
+    },
+    "data_group": {
+      "Analysis": 16,
+      "Sequencing": 0,
+      "Other": 0
+    },
+    "data_utilization_status": {
+      "Restricted": 0,
+      "Unrestricted": 16
+    },
+    "ecosystem": {},
+    "ecosystem_category": {},
+    "ecosystem_subtype": {},
+    "ecosystem_type": {},
+    "specific_ecosystem": {},
+    "ncbi_taxon_order": {
+      "Acorales": 1
+    },
+    "ncbi_taxon_class": {
+      "Magnoliopsida": 1
+    },
+    "ncbi_taxon_family": {
+      "Acoraceae": 1
+    },
+    "ncbi_taxon_genus": {
+      "Acorus": 1
+    },
+    "phytozome_policy": {
+      "restricted": 1
+    },
+    "phytozome_project": {}
+  },
+  "fields": [
+    "added_date",
+    "dt_to_purge",
+    "file_*",
+    "md5sum",
+    "metadata.data_utilization_status",
+    "metadata.analysis_project.status*",
+    "metadata.analysis_project_id",
+    "metadata.collection",
+    "metadata.content",
+    "metadata.file_format",
+    "metadata.gold_data.display_name",
+    "metadata.gold_data.ecosystem",
+    "metadata.gold_data.ecosystem_category",
+    "metadata.gold_data.ecosystem_subtype",
+    "metadata.gold_data.ecosystem_type",
+    "metadata.gold_data.gold_project_url",
+    "metadata.gold_data.gold_stamp_id",
+    "metadata.gold_data.organism_name",
+    "metadata.gold_data.specific_ecosystem",
+    "metadata.img",
+    "metadata.mycocosm_portal*",
+    "metadata.ncbi_taxon.ncbi_taxon_class",
+    "metadata.ncbi_taxon.ncbi_taxon_family",
+    "metadata.ncbi_taxon.ncbi_taxon_genus",
+    "metadata.ncbi_taxon.ncbi_taxon_order",
+    "metadata.ncbi_taxon.ncbi_taxon_species",
+    "metadata.ncbi_taxon_id",
+    "metadata.phycocosm_portal*",
+    "metadata.phytozome",
+    "metadata.pi_name",
+    "metadata.pmo_project.name",
+    "metadata.pmo_project.pi_name",
+    "metadata.pmo_project.scientific_program",
+    "metadata.pmo_project_id",
+    "metadata.portal",
+    "metadata.proposal.award_doi",
+    "metadata.proposal.date_approved",
+    "metadata.proposal.doi",
+    "metadata.proposal.pi",
+    "metadata.sequencing_project.scientific_program_name",
+    "metadata.sequencing_project_id",
+    "metadata.source",
+    "metadata.sow_segment.sequencing_project_name",
+    "metadata.subtype",
+    "metadata.type",
+    "modified_date",
+    "user"
+  ],
+  "timeout": 180,
+  "filters_applied": false
+}

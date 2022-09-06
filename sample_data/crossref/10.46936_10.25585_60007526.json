@@ -1,14 +1,14 @@
 {
   "message": {
-    "DOI": "10.46936/10.25585/60000611",
-    "URL": "http://dx.doi.org/10.46936/10.25585/60000611",
-    "award": "653",
+    "DOI": "10.46936/10.25585/60007526",
+    "URL": "http://dx.doi.org/10.46936/10.25585/60007526",
+    "award": "1100",
     "award-start": {
       "date-parts": [
         [
-          2011,
-          9,
-          29
+          2012,
+          4,
+          23
         ]
       ]
     },
@@ -16,23 +16,23 @@
       "date-parts": [
         [
           2021,
-          9,
-          7
+          11,
+          29
         ]
       ],
-      "date-time": "2021-09-07T17:44:59Z",
-      "timestamp": 1631036699000
+      "date-time": "2021-11-29T19:59:58Z",
+      "timestamp": 1638215998000
     },
     "deposited": {
       "date-parts": [
         [
           2021,
-          10,
-          9
+          11,
+          29
         ]
       ],
-      "date-time": "2021-10-09T00:07:25Z",
-      "timestamp": 1633738045000
+      "date-time": "2021-11-29T19:59:58Z",
+      "timestamp": 1638215998000
     },
     "indexed": {
       "date-parts": [
@@ -42,15 +42,15 @@
           4
         ]
       ],
-      "date-time": "2022-04-04T05:14:57Z",
-      "timestamp": 1649049297145
+      "date-time": "2022-04-04T21:48:39Z",
+      "timestamp": 1649108919844
     },
     "issued": {
       "date-parts": [
         [
-          2011,
-          9,
-          29
+          2012,
+          4,
+          23
         ]
       ]
     },
@@ -58,13 +58,6 @@
     "prefix": "10.46936",
     "project": [
       {
-        "co-lead-investigator": [
-          {
-            "affiliation": [],
-            "family": "Firestone",
-            "given": "Mary"
-          }
-        ],
         "funding": [
           {
             "funder": {
@@ -80,33 +73,16 @@
             "type": "award"
           }
         ],
-        "investigator": [
-          {
-            "affiliation": [],
-            "family": "da Rocha",
-            "given": "Ulisses"
-          },
-          {
-            "affiliation": [],
-            "family": "Karaoz",
-            "given": "Ulas"
-          },
-          {
-            "affiliation": [],
-            "family": "Bouskill",
-            "given": "Nicholas"
-          }
-        ],
         "lead-investigator": [
           {
             "affiliation": [],
-            "family": "Brodie",
-            "given": "Eoin"
+            "family": "Mukhopadhyay",
+            "given": "Aindrila"
           }
         ],
         "project-title": [
           {
-            "title": "Mediterranean Grassland Soil Metagenome (MGSM): Enabling a systems view of soil carbon and nitrogen biogeochemistry under a changing climate."
+            "title": "Spontaneous E. coli mutants tolerant to toxic compounds."
           }
         ]
       }
@@ -115,7 +91,7 @@
     "relation": {},
     "resource": {
       "primary": {
-        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60000611"
+        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60007526"
       }
     },
     "score": 1,

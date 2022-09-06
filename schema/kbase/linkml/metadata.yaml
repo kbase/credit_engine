@@ -26,10 +26,15 @@ classes:
         range: ResolvablePID
         required: true
         exact_mappings:
-        - from: DataCite:id
-          via: { id: "DOI:{DataCite:id}" }
-        - from: OSTI:osti_id
-          via: { id: "OSTI:{OSTI:osti_id}"}
+        - DataCite:id
+          # from: DataCite:id
+          # via: { id: "DOI:{DataCite:id}" }
+        - OSTI:osti_id
+          # from: OSTI:osti_id
+          # via: { id: "OSTI:{OSTI:osti_id}"}
+        - JGI:organisms[].grouped_by
+          # from JGI:organisms[].grouped_by
+          # via: { id: JGI:organisms[].files[].{JGI:organisms[].grouped_by} }
 
       resource_type:
         description: the type of resource being described
@@ -40,42 +45,43 @@ classes:
         # see DataCite:attributes.types
         - DataCite:attributes.types.schema_org
         examples:
-        - dataset
-        - report
+        - value: dataset
+        - value: report
 
       title:
         description: formal title(s) of the data set
         multivalued: true
         exact_mappings:
         - DataCite:attributes.titles[].title
-        - from: OSTI:title
-          via: [OSTI:title]
+        - OSTI:title
+          # from: OSTI:title
+          # via: [OSTI:title]
         examples:
-        - Viral Annotation Pipeline in KBase
+        - value: Viral Annotation Pipeline in KBase
 
       version:
         description: resource version (if available)
         exact_mappings:
         - DataCite:attributes.version
 
-      submission_date:
-        description: for unversioned datasets, date of submission to repository (if available)
+      available_date:
+        description: for unversioned resources, the date when the resource was made available to the public
         close_mappings:
         - DataCite:attributes.published
         - OSTI:publication_date
         range: date_or_datetime
         examples:
-        - 2022-05-10
+        - value: 2022-05-10
 
       access_date:
-        # date in epoch time?
-        description: for unversioned datasets, the date of access of the dataset
+        description: for unversioned resources, when the resource was accessed
         range: date_or_datetime
         examples:
-        - 2022-05-10
+        - value: 2022-05-10
 
       contributors:
-        description: people and/or organisations responsible for generating the dataset
+        description: people and/or organisations responsible for generating the resource
+        inlined_as_list: true
         multivalued: true
         range: Person
         narrow_mappings:
@@ -83,9 +89,11 @@ classes:
         - DataCite:attributes.creators
         - OSTI:contributors
         - OSTI:authors
+        - JGI:organisms[].pi
 
       related_identifiers:
         description: other resolvable persistent unique IDs used to access the resource or related resources
+        inlined_as_list: true
         multivalued: true
         range: ResolvablePID
         close_mappings:
@@ -93,11 +101,12 @@ classes:
         - DataCite:attributes.related_identifiers
         - DataCite:attributes.alternate_identifiers
         - OSTI:related_identifiers
-        - from: OSTI:doi
-          via: { id: "DOI:{OSTI:doi}"}
+        - OSTI:doi
+          # from: OSTI:doi
+          # via: { id: "DOI:{OSTI:doi}"}
 
       funding:
-        description: funding sources for the dataset
+        description: funding sources for the resource
         inlined_as_list: true
         multivalued: true
         range: FundingReference
@@ -109,8 +118,8 @@ classes:
         description: license under which the data is made available
         slot_uri: biolink:license
         examples:
-        - CC-BY-4.0
-        - CC0
+        - value: CC-BY-4.0
+        - value: CC0
         related_mappings:
         # TODO: coercion?
         - DataCite:attributes.rights_list
@@ -123,69 +132,83 @@ classes:
         description: ORCID
         range: uriorcurie
         examples:
-        - ORCID:0000-0001-9557-7715
+        - value: ORCID:0000-0001-9557-7715
         exact_mappings:
-        - from:
-            DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
-          via:
-            "ORCID:{ DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '') }"
+        - DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
+        - DataCite:attributes.creators[].name_identifiers[].name_identifier_scheme == 'ORCID'
+          # from: DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
+          # via: "ORCID:{ DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '') }"
         - OSTI:orcid
 
       first_name:
         description: given name
         examples:
-        - Ellen
+        - value: Ellen
         exact_mappings:
         - DataCite:attributes.creators[].given_name
         - DataCite:attributes.contributors[].given_name
         - OSTI:first_name
+        - JGI:organisms[].pi.first_name
 
       last_name:
         description: family name
         examples:
-        - Dow
+        - value: Dow
         exact_mappings:
         - DataCite:attributes.creators[].family_name
         - DataCite:attributes.contributors[].family_name
         - OSTI:last_name
+        - JGI:organisms[].pi.last_name
 
       full_name:
         description: Full name of the contributor
         # slot_uri: schema:name
         equals_expression: "{first_name} + {last_name}"
         examples:
-        - Ellen Dow
-        - Vlad the Impaler
-        - Madonna
+        - value: Ellen Dow
+        - value: Vlad the Impaler
+        - value: Madonna
         related_mappings:
         # these have the names comma-separated and inverted
         - DataCite:attributes.creators[].name
         - DataCite:attributes.contributors[].name
+        exact_mappings:
+        - JGI:organisms[].pi.name
 
       affiliations:
         description: organisation(s) that the contributor is associated with
+        inlined_as_list: true
         multivalued: true
         range: Organisation
-        exact_mappings:
-        -
-          from: DataCite:attributes.contributors[].affiliation[]
-          via: {
-            organisation_name: "DataCite:attributes.contributors[].affiliation[].name"
-          }
-        -
-          from: DataCite:attributes.creators[].affiliation[]
-          via: {
-            organisation_name: "DataCite:attributes.creators[].affiliation[].name"
-          }
+        related_mappings:
+        - DataCite:attributes.contributors[].affiliation[]
+          # from: DataCite:attributes.contributors[].affiliation[]
+          # via: {
+          #   organisation_name: "DataCite:attributes.contributors[].affiliation[].name"
+          # }
+        - DataCite:attributes.creators[].affiliation[]
+          # from: DataCite:attributes.creators[].affiliation[]
+          # via: {
+          #   organisation_name: "DataCite:attributes.creators[].affiliation[].name"
+          # }
+        - JGI:organisms[].pi.institution
+          # from: JGI:organisms[].pi.institution
+          # via: {
+          #   organisation_name: "JGI:organisms[].pi.institution"
+          #}
 
       contributor_roles:
-        description: List of one or more terms indicating the type of contribution. Should be a term from either CRedIT or DataCite
+        description: List of one or more terms indicating the type of contribution. Should be a term from either CRedIT or DataCite's role vocabulary.
         multivalued: true
         inlined_as_list: true
         exact_mappings:
         - DataCite:attributes.contributors[].contributor_type
         - DataCite:attributes.creators[].contributor_type
         todos: add DataCite and Credit roles as enums
+        related_mappings:
+        - JGI:organisms[].pi
+        # from: JGI:organisms[].pi
+        # via: "DataCite:ProjectLeader"
 
 
   Organisation:
@@ -197,7 +220,7 @@ classes:
         description: unique identifier for the organisation -- ROR / ISNI, etc.
         identifier: true
         examples:
-        - ROR:01znn6x10
+        - value: ROR:01znn6x10
         exact_mappings:
         - DataCite:attributes.contributors[].affiliation.affiliation_identifier
         - DataCite:attributes.creators[].affiliation.affiliation_identifier
@@ -209,10 +232,11 @@ classes:
         - DataCite:attributes.contributors[].affiliation.name
         - DataCite:attributes.creators[].affiliation.name
         - OSTI:research_organization
+        - JGI:organisms[].pi.institution
         examples:
-        - U.S. Department of Energy Systems Biology Knowledgebase
-        - Lawrence Berkeley National Laboratory
-        - The Ohio State Univ., Columbus, OH
+        - value: U.S. Department of Energy Systems Biology Knowledgebase
+        - value: Lawrence Berkeley National Laboratory
+        - value: The Ohio State Univ., Columbus, OH
 
 
   FundingReference:
@@ -225,7 +249,7 @@ classes:
         - CrossRef:Message.project.funding.funder.name
         - OSTI:sponsoring_organization
         examples:
-        - US DOE Office of Science (SC), Biological and Environmental Research (BER)
+        - value: US DOE Office of Science (SC), Biological and Environmental Research (BER)
 
       funder_id:
         description: ID for the funding entity - acceptable formats include crossref funder ID, DOI, ROR, ISNI, others?
@@ -256,28 +280,26 @@ classes:
     attributes:
       id:
         identifier: true
-        description: a CURIE (compact URI)
+        description: a resolvable URI or CURIE (compact URI) for a resource
         required: true
         examples:
-        - DOI:10.25982/59912.37/1635154
-        - OSTI:1635154
+        - value: DOI:10.25982/59912.37/1635154
+        - value: OSTI:1635154
+        - value: https://kbase.us/n/59912/37/
         exact_mappings:
         - DataCite:attributes.identifier.value
-        - from: DataCite:attributes.alternate_identifiers[]
-          via: "{DataCite:attributes.alternate_identifiers[].alternate_identifier_type}:{DataCite:attributes.alternate_identifiers[].alternate_identifier}"
-        - from: DataCite:attributes.related_identifiers[]
-          via: "{DataCite:attributes.related_identifiers[].related_identifier_type}:{DataCite:attributes.related_identifiers[].related_identifier}"
-        - from: DataCite:attributes.identifiers[]
-          via: "{DataCite:attributes.identifiers[].identifier_type}:{DataCite:attributes.identifiers[].identifier}"
-        range: uriorcurie
-
-      uri:
-        description: URI for a resource
-        range: uriorcurie
-        exact_mappings:
+        - DataCite:attributes.alternate_identifiers[]
+          # from: DataCite:attributes.alternate_identifiers[]
+          # via: "{DataCite:attributes.alternate_identifiers[].alternate_identifier_type}:{DataCite:attributes.alternate_identifiers[].alternate_identifier}"
+        - DataCite:attributes.related_identifiers[]
+          # from: DataCite:attributes.related_identifiers[]
+          # via: "{DataCite:attributes.related_identifiers[].related_identifier_type}:{DataCite:attributes.related_identifiers[].related_identifier}"
+        - DataCite:attributes.identifiers[]
+          # from: DataCite:attributes.identifiers[]
+          # via: "{DataCite:attributes.identifiers[].identifier_type}:{DataCite:attributes.identifiers[].identifier}"
+        related_mappings:
         - OSTI:site_url
-        examples:
-        - https://kbase.us/n/59912/37/
+        range: uriorcurie
 
       description:
         # slot_uri: schema:description
@@ -285,11 +307,11 @@ classes:
         exact_mappings:
         - OSTI:description
         examples:
-        - This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2
+        - value: This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2
 
 
-      relation_type:
-        description: how the resource represented by this ID relates to the original resource
+      relationship_type:
+        description: how the resource represented by this ID relates to the original resource, as described by DataCite relation types
         exact_mappings:
         # for the primary ID, we also need to represent the resource itself
         - DataCite:attributes.related_identifiers[].relation_type
@@ -299,6 +321,7 @@ enums:
   ResourceType:
     permissible_values:
       dataset:
+      report:
 
   ContributorType:
     permissible_values:

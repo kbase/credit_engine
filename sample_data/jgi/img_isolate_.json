@@ -1,0 +1,4728 @@
+{
+  "timings": {
+    "total": "0.338",
+    "file_fetch": "0.052",
+    "organisms": "0.195",
+    "facets": "0.001",
+    "filtered_facets": "0.000",
+    "count_file_total": "0.083"
+  },
+  "hits_total": 70,
+  "file_total": 70,
+  "unique_file_total": 70,
+  "total": 1,
+  "prioritized_file_total": 70,
+  "prioritized_total": 1,
+  "score_threshold": 8,
+  "start": 1,
+  "end": 1,
+  "next_page": false,
+  "cursor_id": "d0981b19eb136ed95155ae0d43779d9d552d1df0bcde184925ff69deb051ca7d:1",
+  "organisms": [
+    {
+      "agg": "IMG_SP",
+      "agg_id": 1337686,
+      "kingdom": "img",
+      "label": "Metagenome",
+      "top_hit": {
+        "_id": "623930fbc6477704c3319226",
+        "_highlight": null,
+        "metadata": {
+          "proposal": {
+            "pi": {
+              "country": "United States",
+              "institution": "Bigelow Laboratory for Ocean Sciences",
+              "email_address": "jmcgonigle@bigelow.org",
+              "last_name": "McGonigle",
+              "middle_name": "",
+              "first_name": "Julia",
+              "name": "Julia McGonigle"
+            },
+            "date_approved": "2021-05-21"
+          },
+          "img": {
+            "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10"
+          },
+          "projects": {
+            "goldAnalysisProjectType": "Metagenome - Single Particle Sort"
+          },
+          "sequencing_project": {
+            "sequencing_project_name": "AH-954-A10",
+            "scientific_program_name": "Microbial"
+          },
+          "analysis_project": {
+            "status_date": "2022-03-12",
+            "status_name": "Complete",
+            "goldAnalysisProjectType": "Metagenome - Single Particle Sort"
+          },
+          "sequencing_project_id": [
+            1337686
+          ],
+          "final_deliv_project": {
+            "final_deliv_project_name": "AH-954-A10"
+          },
+          "analysis_project_id": 1337581
+        },
+        "added_date": "2022-03-21T19:14:19.848000",
+        "file_name": "Ga0504782_cath_funfam.gff",
+        "user": "img"
+      },
+      "pi": {
+        "country": "United States",
+        "institution": "Bigelow Laboratory for Ocean Sciences",
+        "email_address": "jmcgonigle@bigelow.org",
+        "last_name": "McGonigle",
+        "middle_name": "",
+        "first_name": "Julia",
+        "name": "Julia McGonigle"
+      },
+      "proposal_acceptance_date": "2021-05-21",
+      "work_completion_date": "2022-03-12",
+      "status": "Complete",
+      "id": "IMG_SP-1337686",
+      "grouped_by": "metadata.sequencing_project_id",
+      "score": {
+        "count": 70,
+        "min": 7.312719821929932,
+        "max": 10.92004680633545,
+        "avg": 10.512389298847744,
+        "sum": 735.867250919342
+      },
+      "grouped_count": 70,
+      "name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+      "title": "AH-954-A10",
+      "file_total": 70,
+      "files": [
+        {
+          "_id": "623930fbc6477704c3319226",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_cath_funfam.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.848000",
+          "file_name": "Ga0504782_cath_funfam.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:56.732000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 302958,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "78a7eef0d16815458a03b99af798b0cd",
+          "file_id": 14288499,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331922d",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_ec.tsv"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.168000",
+          "file_name": "Ga0504782_ec.tsv",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.752000",
+          "dt_to_purge": "2022-03-23T19:14:20",
+          "file_size": 33663,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "52cba24ce43c746c26fdc4485c7bcf00",
+          "file_id": 14288506,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331922f",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_gene_phylogeny.tsv"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.267000",
+          "file_name": "Ga0504782_gene_phylogeny.tsv",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.771000",
+          "dt_to_purge": "2022-03-23T19:14:20",
+          "file_size": 181141,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "df2b06f20afde9d8cc6dd5ca6037e513",
+          "file_id": 14288508,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331923c",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_4_genes.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.864000",
+          "file_name": "Ga0504782_genemark_tt_4_genes.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.971000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 975000,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "fasta",
+          "md5sum": "8ec4d3d1607e43c0a1eee1b3bcb56e34",
+          "file_id": 14288521,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331923d",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_4.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.910000",
+          "file_name": "Ga0504782_genemark_tt_4.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.577000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 110765,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "tab",
+          "md5sum": "d6f86f9c526faa3fdce7017b31d2748e",
+          "file_id": 14288522,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319241",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_ko_ec.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.090000",
+          "file_name": "Ga0504782_ko_ec.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.681000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 150801,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "tab",
+          "md5sum": "746d69d29823461463026c74b811fdf3",
+          "file_id": 14288526,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319245",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_prodigal.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.274000",
+          "file_name": "Ga0504782_prodigal.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.882000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 125141,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "tab",
+          "md5sum": "fb22138e4684002e8c2111514f34d4f0",
+          "file_id": 14288530,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319246",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_prodigal.out"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.320000",
+          "file_name": "Ga0504782_prodigal.out",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.323000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 5840,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "text",
+          "md5sum": "cfb1e07af7bfa8c29ba83c50a459edc7",
+          "file_id": 14288531,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c331924f",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.supfam.domtblout"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.728000",
+          "file_name": "Ga0504782_proteins.supfam.domtblout",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.417000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 9695866,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "e7ef3754f6a41ec91365f4eefa28721c",
+          "file_id": 14288540,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319250",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.tigrfam.domtblout"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.769000",
+          "file_name": "Ga0504782_proteins.tigrfam.domtblout",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.428000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 96052,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "60f96361513b49c8969b538355cfeb25",
+          "file_id": 14288541,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319252",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_rfam.tbl"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.852000",
+          "file_name": "Ga0504782_rfam.tbl",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.446000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 1807,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "txt",
+          "md5sum": "1d45fe45100f9fd7aa306aa896516f98",
+          "file_id": 14288543,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fec6477704c3319258",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_supfam.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:22.132000",
+          "file_name": "Ga0504782_supfam.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:58.328000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 306887,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "5f47bc30ae959fe91824b237753c1583",
+          "file_id": 14288549,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "622a8e2fe99caa81935b230c",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-39/AUTO-390998",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "QC and Genome Assembly"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "txt"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-03-10T15:47:59.951000",
+          "file_name": "sps-HXWHW.txt",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-25T06:51:34.681000",
+          "dt_to_purge": "2023-03-10T15:47:59",
+          "file_size": 4702,
+          "file_date": "2022-02-09T03:00:56",
+          "md5sum": "1e8fd54142db4a889356f61b554cf4c1",
+          "file_type": [
+            "report"
+          ],
+          "file_id": 14183507,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100775",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "62032e8ff9c444ffdffcc5a4",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "sequencing_project_id": 1337686,
+            "portal": {
+              "display_location": [
+                "Sequencing QC Reports"
+              ]
+            }
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-02-25T16:23:21.818000",
+          "file_name": "52647.3.412641.AAGGGAGA-GTCAAAGG.QC.pdf",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-23T13:01:10.198000",
+          "dt_to_purge": "2022-05-26T16:23:21",
+          "file_size": 229334,
+          "file_date": "2022-02-25T16:03:26",
+          "file_type": [
+            "pdf"
+          ],
+          "md5sum": "6370d6100da391cd2c637344ea71aa50",
+          "file_id": 14008888,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Sequencing",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "62034f9bf9c444ffdffcc986",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-38/AUTO-380335",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "gold_data": {
+              "ecosystem": "Environmental",
+              "gold_stamp_id": "Gp0592475",
+              "gold_project_url": "https://gold.jgi.doe.gov/projects?id=Gp0592475",
+              "display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "sow_segment": {
+              "sequencing_project_name": "AH-954-A10"
+            },
+            "ncbi_taxon_id": null,
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": 1337686,
+            "portal": {
+              "display_location": [
+                "Filtered Raw Data"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "tar"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-02-08T21:22:35.856000",
+          "file_name": "52647.3.412641.AAGGGAGA-GTCAAAGG.chaff.tar",
+          "file_owner": "qc_user",
+          "modified_date": "2022-07-16T07:36:13.331000",
+          "dt_to_purge": "2022-11-05T21:22:35",
+          "file_size": 2549760,
+          "file_date": "2022-02-08T20:39:27",
+          "file_type": [
+            "chaff"
+          ],
+          "md5sum": "023ccc7f70cf5afe4fd0d829f0e706aa",
+          "file_id": 14009802,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "623930fbc6477704c3319222",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Table_9_-_3300050906.functional_diversity.txt"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "Metagenome Report Tables"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.672000",
+          "file_name": "Table_9_-_3300050906.functional_diversity.txt",
+          "file_owner": "img",
+          "modified_date": "2022-05-23T13:01:10.319000",
+          "dt_to_purge": "2022-03-23T19:14:19",
+          "file_size": 299,
+          "file_date": "2022-03-21T19:14:00",
+          "file_type": "report",
+          "md5sum": "80cf94f28e1f08c3109273df6a7afbbf",
+          "file_id": 14288495,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331922a",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_contig_names_mapping.tsv"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.029000",
+          "file_name": "Ga0504782_contig_names_mapping.tsv",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.723000",
+          "dt_to_purge": "2022-03-23T19:14:20",
+          "file_size": 6113,
+          "file_date": "2022-03-21T13:52:00",
+          "file_type": "tab",
+          "md5sum": "7217ba6bac14e5f02fb84ff7bab82093",
+          "file_id": 14288503,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319230",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_genes.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.318000",
+          "file_name": "Ga0504782_genemark_genes.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.662000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 998277,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "fasta",
+          "md5sum": "c5c580d82977c797cba0a34ae05e0c34",
+          "file_id": 14288509,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319232",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_proteins.faa"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.407000",
+          "file_name": "Ga0504782_genemark_proteins.faa",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.696000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 395020,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "fasta",
+          "md5sum": "7957221dbce9e76d0295c12482347f1e",
+          "file_id": 14288511,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319233",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_11_genes.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.454000",
+          "file_name": "Ga0504782_genemark_tt_11_genes.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.739000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 998277,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "fasta",
+          "md5sum": "c5c580d82977c797cba0a34ae05e0c34",
+          "file_id": 14288512,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319237",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_15.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.641000",
+          "file_name": "Ga0504782_genemark_tt_15.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.366000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 114014,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "1043b4c0cdf142ae15c16b36abe4b77b",
+          "file_id": 14288516,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319238",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_15_proteins.faa"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.687000",
+          "file_name": "Ga0504782_genemark_tt_15_proteins.faa",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.828000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 390917,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "fasta",
+          "md5sum": "cbfe7a611d0eb870bebd0fb335d93a7d",
+          "file_id": 14288517,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319242",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_ko.tsv"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.137000",
+          "file_name": "Ga0504782_ko.tsv",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.969000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 44731,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "tab",
+          "md5sum": "898db4bf8fccd30ba8d3f821056b3bb5",
+          "file_id": 14288527,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c331924a",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.cog.domtblout"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.507000",
+          "file_name": "Ga0504782_proteins.cog.domtblout",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.363000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 1587358,
+          "file_date": "2022-03-21T13:52:03",
+          "file_type": "tab",
+          "md5sum": "79ba8e1ea0ce49ab6910dae6bcf40e44",
+          "file_id": 14288535,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c331924e",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.smart.domtblout"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.686000",
+          "file_name": "Ga0504782_proteins.smart.domtblout",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.405000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 168388,
+          "file_date": "2022-03-21T13:52:04",
+          "file_type": "tab",
+          "md5sum": "b5b77e79b1628888b519ad8c4df1a214",
+          "file_id": 14288539,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319253",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_sbatch.sh"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.900000",
+          "file_name": "Ga0504782_sbatch.sh",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.455000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 1350,
+          "file_date": "2022-03-21T13:52:00",
+          "file_type": "Shell Script",
+          "md5sum": "8d3ca4f50c5c4b6446643e4d5e5985eb",
+          "file_id": 14288544,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fec6477704c3319259",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_tigrfam.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:22.176000",
+          "file_name": "Ga0504782_tigrfam.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:58.431000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 53332,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "16498b48c212179694d7c7cec540477a",
+          "file_id": 14288550,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fec6477704c331925a",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_trna.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:22.220000",
+          "file_name": "Ga0504782_trna.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:58.541000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 2958,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "77c698a25ffd512a8685de9f3853fff4",
+          "file_id": 14288551,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "622a8e2fe99caa81935b230b",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-39/AUTO-390998",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "QC and Genome Assembly"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "pdf"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-03-10T15:47:59.905000",
+          "file_name": "sps-HXWHW.pdf",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-25T06:51:34.668000",
+          "dt_to_purge": "2023-03-10T15:47:59",
+          "file_size": 4061740,
+          "file_date": "2022-02-09T03:01:13",
+          "md5sum": "703b96edf63ebb395e7f299c00de658b",
+          "file_type": [
+            "report"
+          ],
+          "file_id": 14183506,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "623930fbc6477704c3319223",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Table_7_-_3300050906.metagenome_properties.txt"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "Metagenome Report Tables"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.711000",
+          "file_name": "Table_7_-_3300050906.metagenome_properties.txt",
+          "file_owner": "img",
+          "modified_date": "2022-05-23T13:01:10.328000",
+          "dt_to_purge": "2022-03-23T19:14:19",
+          "file_size": 814,
+          "file_date": "2022-03-21T19:14:00",
+          "file_type": "report",
+          "md5sum": "35acf6691a8403640867617e4a49c049",
+          "file_id": 14288496,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fbc6477704c3319224",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Table_8_-_3300050906.taxonomic_composition.txt"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "Metagenome Report Tables"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.754000",
+          "file_name": "Table_8_-_3300050906.taxonomic_composition.txt",
+          "file_owner": "img",
+          "modified_date": "2022-05-23T13:01:10.337000",
+          "dt_to_purge": "2022-03-23T19:14:19",
+          "file_size": 17283,
+          "file_date": "2022-03-21T19:14:00",
+          "file_type": "report",
+          "md5sum": "7f19d960be661f72bd3fb2915f514e4f",
+          "file_id": 14288497,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fbc6477704c3319228",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_cog.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.939000",
+          "file_name": "Ga0504782_cog.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:56.942000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 224384,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "7e43df2da6665f209bdc4e0e7e815e20",
+          "file_id": 14288501,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331922c",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/3300050906.tar.gz"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.122000",
+          "file_name": "3300050906.tar.gz",
+          "file_owner": "img",
+          "modified_date": "2022-08-02T00:15:33.701000",
+          "dt_to_purge": "2022-08-02T00:00:00",
+          "file_size": 2763682,
+          "file_date": "2022-03-21T19:12:48",
+          "file_type": "tar.gz",
+          "md5sum": "7b6f29bafc54da7c0030ab326c97483d",
+          "file_id": 14288505,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319234",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_11.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.502000",
+          "file_name": "Ga0504782_genemark_tt_11.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.262000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 118537,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "85750b2c281294e5908256ae80fc7489",
+          "file_id": 14288513,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319239",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_25_genes.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.733000",
+          "file_name": "Ga0504782_genemark_tt_25_genes.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.878000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 972407,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "fasta",
+          "md5sum": "68d896c6c63018588f030f2f502339fc",
+          "file_id": 14288518,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331923e",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_4_proteins.faa"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.957000",
+          "file_name": "Ga0504782_genemark_tt_4_proteins.faa",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.983000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 382629,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "fasta",
+          "md5sum": "b80472ac328844be3c85478e063898f1",
+          "file_id": 14288523,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319247",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_prodigal_proteins.faa"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.365000",
+          "file_name": "Ga0504782_prodigal_proteins.faa",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:56.130000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 383944,
+          "file_date": "2022-03-21T13:52:03",
+          "file_type": "fasta",
+          "md5sum": "d6a1aba82d6a81be890176451ff15280",
+          "file_id": 14288532,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c331924d",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.pfam.domtblout"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.639000",
+          "file_name": "Ga0504782_proteins.pfam.domtblout",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.394000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 434953,
+          "file_date": "2022-03-21T13:52:04",
+          "file_type": "tab",
+          "md5sum": "efb9235b0c8434adce26053da9845c8c",
+          "file_id": 14288538,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319251",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_rfam.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.810000",
+          "file_name": "Ga0504782_rfam.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:58.010000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 903,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "3636f1f678ca3d90c13e9ccbae3ae9f9",
+          "file_id": 14288542,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fec6477704c3319257",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_structural_annotation_stats.tsv"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:22.077000",
+          "file_name": "Ga0504782_structural_annotation_stats.tsv",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.492000",
+          "dt_to_purge": "2022-03-23T19:14:22",
+          "file_size": 2113,
+          "file_date": "2022-03-21T13:52:06",
+          "file_type": "tab",
+          "md5sum": "bb8222028cef73e8cb22e2b18e408fe7",
+          "file_id": 14288548,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "62034f9bf9c444ffdffcc989",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-38/AUTO-380335",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "Filtered Raw Data"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "text"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-02-08T21:22:35.930000",
+          "file_name": "52647.3.412641.AAGGGAGA-GTCAAAGG.filter_cmd-CELL-ENRICHMENT.sh",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-25T06:51:34.644000",
+          "dt_to_purge": "2023-02-08T21:22:35",
+          "file_size": 6135,
+          "file_date": "2022-02-08T20:35:57",
+          "file_type": [
+            "report"
+          ],
+          "md5sum": "a1e3b72a3eec32d2a1187f8b20cff7f7",
+          "file_id": 14009805,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "622a8e2fe99caa81935b230a",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-39/AUTO-390998",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "QC and Genome Assembly"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "fasta"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-03-10T15:47:59.864000",
+          "file_name": "contigs.trim.fasta",
+          "file_owner": "qc_user",
+          "modified_date": "2022-07-16T07:36:13.331000",
+          "dt_to_purge": "2023-03-10T15:47:59",
+          "file_size": 1035612,
+          "file_date": "2022-02-08T22:17:57",
+          "md5sum": "fe8a2f2312658ad1a50f5f033eef76bb",
+          "file_type": [
+            "scaffolds"
+          ],
+          "file_id": 14183504,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "623930fbc6477704c3319221",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Table_6_-_Ga0504782_sigs_annotation_parameters.txt"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "Metagenome Report Tables"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.617000",
+          "file_name": "Table_6_-_Ga0504782_sigs_annotation_parameters.txt",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.310000",
+          "dt_to_purge": "2022-03-23T19:14:19",
+          "file_size": 347,
+          "file_date": "2022-03-21T13:52:06",
+          "file_type": "report",
+          "md5sum": "16897e99a524047527354d64eea52c20",
+          "file_id": 14288494,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fbc6477704c3319225",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_annotation_config.yaml"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.805000",
+          "file_name": "Ga0504782_annotation_config.yaml",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.345000",
+          "dt_to_purge": "2022-03-23T19:14:19",
+          "file_size": 3007,
+          "file_date": "2022-03-21T13:52:00",
+          "file_type": "ymal",
+          "md5sum": "1f1b8376f744df59dd09c6b9d893d43c",
+          "file_id": 14288498,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fbc6477704c3319227",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_cds.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.892000",
+          "file_name": "Ga0504782_cds.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:56.833000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 117952,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "26749e639aa994ff318244320bbdd270",
+          "file_id": 14288500,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fbc6477704c3319229",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_combined_logs.txt"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:19.982000",
+          "file_name": "Ga0504782_combined_logs.txt",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.713000",
+          "dt_to_purge": "2022-03-23T19:14:19",
+          "file_size": 550196,
+          "file_date": "2022-03-21T13:52:06",
+          "file_type": "txt",
+          "md5sum": "bf8e6b3f97bd6d37d72273cafe5735db",
+          "file_id": 14288502,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331923a",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_25.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.776000",
+          "file_name": "Ga0504782_genemark_tt_25.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.474000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 110712,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "tab",
+          "md5sum": "4ea4ad7e73ae419bd4fa7e4fdd45e0de",
+          "file_id": 14288519,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331923b",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_25_proteins.faa"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.818000",
+          "file_name": "Ga0504782_genemark_tt_25_proteins.faa",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.904000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 381797,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "fasta",
+          "md5sum": "a685347968bec7fac4399ba989e9b0dc",
+          "file_id": 14288520,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c331923f",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genes.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.002000",
+          "file_name": "Ga0504782_genes.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:56.002000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 1058722,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "fasta",
+          "md5sum": "f408af01cef3c68b7198a7d91c3392c8",
+          "file_id": 14288524,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319243",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_pfam.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.189000",
+          "file_name": "Ga0504782_pfam.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.776000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 241773,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "tab",
+          "md5sum": "68ff3a3b664c0d8302971c926a8ce21a",
+          "file_id": 14288528,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319249",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.cath_funfam.domtblout"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.465000",
+          "file_name": "Ga0504782_proteins.cath_funfam.domtblout",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.355000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 4063298,
+          "file_date": "2022-03-21T13:52:03",
+          "file_type": "tab",
+          "md5sum": "37a21c3ef509636ceff234dcb8e6eb7b",
+          "file_id": 14288534,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c331924b",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.faa"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.550000",
+          "file_name": "Ga0504782_proteins.faa",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:56.115000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 425725,
+          "file_date": "2022-03-21T13:52:04",
+          "file_type": "fasta",
+          "md5sum": "2de9d28114510d0fb44e73e5036557e7",
+          "file_id": 14288536,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319254",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_smart.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.943000",
+          "file_name": "Ga0504782_smart.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:58.121000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 79832,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "3403e548dc7e1045ab1100f9ba426b95",
+          "file_id": 14288545,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319255",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_structural_annotation.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.986000",
+          "file_name": "Ga0504782_structural_annotation.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:58.224000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 136565,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "tab",
+          "md5sum": "1b42f2a3a3dd70bfa7801c731dfedf40",
+          "file_id": 14288546,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fec6477704c3319256",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_structural_annotation_stats.json"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:22.027000",
+          "file_name": "Ga0504782_structural_annotation_stats.json",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.482000",
+          "dt_to_purge": "2022-03-23T19:14:22",
+          "file_size": 3308,
+          "file_date": "2022-03-21T13:52:06",
+          "file_type": "json",
+          "md5sum": "e65bb1c0b388254dab6858fa2615cefc",
+          "file_id": 14288547,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fec6477704c331925c",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_trnascan_bacterial.out"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:22.303000",
+          "file_name": "Ga0504782_trnascan_bacterial.out",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.537000",
+          "dt_to_purge": "2022-03-23T19:14:22",
+          "file_size": 8014,
+          "file_date": "2022-03-21T13:52:06",
+          "file_type": "text",
+          "md5sum": "3f08584a9a8c7872a40aefa18899c48e",
+          "file_id": 14288553,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "62029853f9c444ffdffcb881",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/sdm/illumina/05/26/47",
+          "file_status_id": 10,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "gold_data": {
+              "ecosystem": "Environmental",
+              "gold_stamp_id": "Gp0592475",
+              "gold_project_url": "https://gold.jgi.doe.gov/projects?id=Gp0592475",
+              "display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "sow_segment": {
+              "sequencing_project_name": "AH-954-A10"
+            },
+            "ncbi_taxon_id": null,
+            "sequencing_project_id": 1337686,
+            "portal": {
+              "display_location": [
+                "Raw Data"
+              ]
+            }
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-02-08T08:20:35.678000",
+          "file_name": "52647.3.412641.AAGGGAGA-GTCAAAGG.fastq.gz",
+          "file_owner": "sdm",
+          "modified_date": "2022-05-25T06:51:34.372000",
+          "dt_to_purge": "2022-04-09T08:20:30",
+          "file_size": 1448457024,
+          "file_date": "2022-02-07T04:38:51",
+          "file_type": [
+            "fastq.gz",
+            "fastq"
+          ],
+          "md5sum": "52ecc38b6bac1f3a8a8a7f92ad2798c5",
+          "file_id": 14005846,
+          "file_group": "dmadm",
+          "user": "sdm",
+          "file_permissions": "0100644",
+          "data_group": "Sequencing",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "62034f9bf9c444ffdffcc985",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-38/AUTO-380335",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "gold_data": {
+              "ecosystem": "Environmental",
+              "gold_stamp_id": "Gp0592475",
+              "gold_project_url": "https://gold.jgi.doe.gov/projects?id=Gp0592475",
+              "display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "sow_segment": {
+              "sequencing_project_name": "AH-954-A10"
+            },
+            "ncbi_taxon_id": null,
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": 1337686,
+            "portal": {
+              "display_location": [
+                "Filtered Raw Data"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "fastq"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-02-08T21:22:35.811000",
+          "file_name": "52647.3.412641.AAGGGAGA-GTCAAAGG.filter-CELL-ENRICHMENT.fastq.gz",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-25T06:51:34.593000",
+          "dt_to_purge": "2023-02-08T21:22:32",
+          "file_size": 744202055,
+          "file_date": "2022-02-08T20:32:36",
+          "file_type": [
+            "fastq",
+            "curated"
+          ],
+          "md5sum": "b6c362d87698c1bf1495caaabcc3a21d",
+          "file_id": 14009801,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "62034f9bf9c444ffdffcc987",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-38/AUTO-380335",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "Filtered Raw Data"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "text"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-02-08T21:22:35.880000",
+          "file_name": "52647.3.412641.AAGGGAGA-GTCAAAGG.filtered-report.txt",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-25T06:51:34.617000",
+          "dt_to_purge": "2023-02-08T21:22:35",
+          "file_size": 3735,
+          "file_date": "2022-02-08T20:39:31",
+          "file_type": [
+            "report"
+          ],
+          "md5sum": "248e7bc9f794a0d9c4bf439ec16cb98b",
+          "file_id": 14009803,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100755",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "62034f9bf9c444ffdffcc988",
+          "_highlight": null,
+          "file_path": "/global/dna/dm_archive/rqc/analyses-38/AUTO-380335",
+          "file_status_id": 8,
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "Filtered Raw Data"
+              ]
+            },
+            "analysis_project_id": [
+              1337581
+            ],
+            "file_format": "text"
+          },
+          "file_status": "BACKUP_COMPLETE",
+          "added_date": "2022-02-08T21:22:35.903000",
+          "file_name": "52647.3.412641.AAGGGAGA-GTCAAAGG.filtered-methods.txt",
+          "file_owner": "qc_user",
+          "modified_date": "2022-05-25T06:51:34.634000",
+          "dt_to_purge": "2023-02-08T21:22:35",
+          "file_size": 1405,
+          "file_date": "2022-02-08T20:39:27",
+          "file_type": [
+            "report"
+          ],
+          "md5sum": "658a653cb889504fa10235464bc9d744",
+          "file_id": 14009804,
+          "file_group": "qc_user",
+          "user": "rqc",
+          "file_permissions": "0100644",
+          "data_group": "Analysis",
+          "portal_detail_id": null
+        },
+        {
+          "_id": "623930fcc6477704c331922b",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_contigs.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.075000",
+          "file_name": "Ga0504782_contigs.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.626000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 1035086,
+          "file_date": "2022-03-21T13:52:00",
+          "file_type": "fasta",
+          "md5sum": "ccf728a31dba1ab85021b2df9e2b483c",
+          "file_id": 14288504,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c331922e",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_functional_annotation.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.213000",
+          "file_name": "Ga0504782_functional_annotation.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.060000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 286772,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "e0fd51eb58f62ca69960f5e557b07cea",
+          "file_id": 14288507,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319231",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark.gff"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.360000",
+          "file_name": "Ga0504782_genemark.gff",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-10T01:02:57.168000",
+          "dt_to_purge": "2022-06-10T00:00:00",
+          "file_size": 104889,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "tab",
+          "md5sum": "8db00ceb68c16b78cd48e7ea13250615",
+          "file_id": 14288510,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319235",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_11_proteins.faa"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.548000",
+          "file_name": "Ga0504782_genemark_tt_11_proteins.faa",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.766000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 395020,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "fasta",
+          "md5sum": "7957221dbce9e76d0295c12482347f1e",
+          "file_id": 14288514,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fcc6477704c3319236",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_genemark_tt_15_genes.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:20.596000",
+          "file_name": "Ga0504782_genemark_tt_15_genes.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:55.791000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 993884,
+          "file_date": "2022-03-21T13:52:01",
+          "file_type": "fasta",
+          "md5sum": "4326948e896eadd262274ba8c33c6447",
+          "file_id": 14288515,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319240",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_imgap.info"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.047000",
+          "file_name": "Ga0504782_imgap.info",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:10.950000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 405,
+          "file_date": "2022-03-21T13:52:02",
+          "file_type": "txt",
+          "md5sum": "9264c7735505ea51485735162aaff819",
+          "file_id": 14288525,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319244",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_prodigal_genes.fna"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.230000",
+          "file_name": "Ga0504782_prodigal_genes.fna",
+          "file_owner": "gbp",
+          "modified_date": "2022-06-17T00:11:56.066000",
+          "dt_to_purge": "2022-06-17T00:00:00",
+          "file_size": 1011797,
+          "file_date": "2022-03-21T13:52:03",
+          "file_type": "fasta",
+          "md5sum": "1fe646f8a9abd111e796c10e03754b12",
+          "file_id": 14288529,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c3319248",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_product_names.tsv"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.417000",
+          "file_name": "Ga0504782_product_names.tsv",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.347000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 71785,
+          "file_date": "2022-03-21T13:52:03",
+          "file_type": "tab",
+          "md5sum": "4d12838154a6e7e85bf1902b3b01d661",
+          "file_id": 14288533,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fdc6477704c331924c",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_proteins.img_nr.last.blasttab"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:21.595000",
+          "file_name": "Ga0504782_proteins.img_nr.last.blasttab",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.384000",
+          "dt_to_purge": "2022-03-23T19:14:21",
+          "file_size": 74048321,
+          "file_date": "2022-03-21T13:52:04",
+          "file_type": "tab",
+          "md5sum": "3d9fe7c4d9f233ca8eca8d7fb85e4998",
+          "file_id": 14288537,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        },
+        {
+          "_id": "623930fec6477704c331925b",
+          "_highlight": null,
+          "file_status_id": 10,
+          "file_path": "/global/dna/dm_archive/img/submissions/264587",
+          "metadata": {
+            "proposal": {
+              "award_doi": "10.46936/10.25585/60000513",
+              "pi": {
+                "country": "United States",
+                "institution": "Bigelow Laboratory for Ocean Sciences",
+                "email_address": "jmcgonigle@bigelow.org",
+                "last_name": "McGonigle",
+                "middle_name": "",
+                "first_name": "Julia"
+              },
+              "date_approved": "2021-05-21",
+              "doi": null
+            },
+            "data_utilization_status": "Restricted",
+            "img": {
+              "jat_key_id": "AUTO-390998",
+              "taxon_oid": 3300050906,
+              "database": "IMG/M ER",
+              "add_date": "12-MAR-22",
+              "gold_id": "Ga0504782",
+              "itsApId": 1337581,
+              "taxon_display_name": "Sorted cell/s from hydrothermal vent fluid, Lost City Hydrothermal field, North Atlantic Ocean - AH-954-A10",
+              "destination": "submissions/264587/Ga0504782_trnascan_archaeal.out"
+            },
+            "sequencing_project": {
+              "scientific_program_name": "Microbial"
+            },
+            "analysis_project": {
+              "status_date": "2022-03-12",
+              "status_name": "Complete"
+            },
+            "sequencing_project_id": [
+              1337686
+            ],
+            "portal": {
+              "display_location": [
+                "IMG Data"
+              ]
+            },
+            "analysis_project_id": 1337581
+          },
+          "file_status": "PURGED",
+          "added_date": "2022-03-21T19:14:22.261000",
+          "file_name": "Ga0504782_trnascan_archaeal.out",
+          "file_owner": "gbp",
+          "modified_date": "2022-05-23T13:01:11.527000",
+          "dt_to_purge": "2022-03-23T19:14:22",
+          "file_size": 8104,
+          "file_date": "2022-03-21T13:52:05",
+          "file_type": "text",
+          "md5sum": "b53980dc669b1b5ebcdc7af9425dcffd",
+          "file_id": 14288552,
+          "file_group": "img",
+          "user": "img",
+          "file_permissions": "0100664",
+          "data_group": "Analysis",
+          "portal_detail_id": 3300050906
+        }
+      ],
+      "fileSize": 2307737417,
+      "highlight": {},
+      "portal_detail_id": 3300050906,
+      "award_doi": "10.46936/10.25585/60000513",
+      "data_utilization_status": "Restricted",
+      "build_time": 0.0521245002746582
+    }
+  ],
+  "facets": {
+    "meta_type": {},
+    "meta_subtype": {},
+    "meta_content": {},
+    "meta_source": {},
+    "meta_collection": {},
+    "meta_file_format": {
+      "text": 3,
+      "fasta": 1,
+      "fastq": 1,
+      "pdf": 1,
+      "tar": 1,
+      "txt": 1
+    },
+    "file_status": {
+      "PURGED": 61,
+      "BACKUP_COMPLETE": 9
+    },
+    "file_type": {
+      "tab": 31,
+      "fasta": 15,
+      "report": 9,
+      "text": 3,
+      "txt": 3,
+      "fastq": 2,
+      "Shell Script": 1,
+      "chaff": 1,
+      "curated": 1,
+      "fastq.gz": 1,
+      "json": 1,
+      "pdf": 1,
+      "scaffolds": 1,
+      "tar.gz": 1,
+      "ymal": 1
+    },
+    "data_type": {
+      "IMG Data": 56,
+      "Filtered Raw Data": 5,
+      "Metagenome Report Tables": 4,
+      "QC and Genome Assembly": 3,
+      "Raw Data": 1,
+      "Sequencing QC Reports": 1
+    },
+    "phytozome_version": {},
+    "data_group": {
+      "Analysis": 68,
+      "Sequencing": 2,
+      "Other": 0
+    },
+    "data_utilization_status": {
+      "Restricted": 70,
+      "Unrestricted": 0
+    },
+    "ecosystem": {
+      "Environmental": 1
+    },
+    "ecosystem_category": {},
+    "ecosystem_subtype": {},
+    "ecosystem_type": {},
+    "specific_ecosystem": {},
+    "ncbi_taxon_order": {},
+    "ncbi_taxon_class": {},
+    "ncbi_taxon_family": {},
+    "ncbi_taxon_genus": {},
+    "phytozome_policy": {},
+    "phytozome_project": {}
+  },
+  "filtered_facets": {
+    "meta_type": {},
+    "meta_subtype": {},
+    "meta_content": {},
+    "meta_source": {},
+    "meta_collection": {},
+    "meta_file_format": {
+      "text": 3,
+      "fasta": 1,
+      "fastq": 1,
+      "pdf": 1,
+      "tar": 1,
+      "txt": 1
+    },
+    "file_status": {
+      "PURGED": 61,
+      "BACKUP_COMPLETE": 9
+    },
+    "file_type": {
+      "tab": 31,
+      "fasta": 15,
+      "report": 9,
+      "text": 3,
+      "txt": 3,
+      "fastq": 2,
+      "Shell Script": 1,
+      "chaff": 1,
+      "curated": 1,
+      "fastq.gz": 1,
+      "json": 1,
+      "pdf": 1,
+      "scaffolds": 1,
+      "tar.gz": 1,
+      "ymal": 1
+    },
+    "data_type": {
+      "IMG Data": 56,
+      "Filtered Raw Data": 5,
+      "Metagenome Report Tables": 4,
+      "QC and Genome Assembly": 3,
+      "Raw Data": 1,
+      "Sequencing QC Reports": 1
+    },
+    "phytozome_version": {},
+    "data_group": {
+      "Analysis": 68,
+      "Sequencing": 2,
+      "Other": 0
+    },
+    "data_utilization_status": {
+      "Restricted": 70,
+      "Unrestricted": 0
+    },
+    "ecosystem": {
+      "Environmental": 1
+    },
+    "ecosystem_category": {},
+    "ecosystem_subtype": {},
+    "ecosystem_type": {},
+    "specific_ecosystem": {},
+    "ncbi_taxon_order": {},
+    "ncbi_taxon_class": {},
+    "ncbi_taxon_family": {},
+    "ncbi_taxon_genus": {},
+    "phytozome_policy": {},
+    "phytozome_project": {}
+  },
+  "fields": [
+    "added_date",
+    "dt_to_purge",
+    "file_*",
+    "md5sum",
+    "metadata.data_utilization_status",
+    "metadata.analysis_project.status*",
+    "metadata.analysis_project_id",
+    "metadata.collection",
+    "metadata.content",
+    "metadata.file_format",
+    "metadata.gold_data.display_name",
+    "metadata.gold_data.ecosystem",
+    "metadata.gold_data.ecosystem_category",
+    "metadata.gold_data.ecosystem_subtype",
+    "metadata.gold_data.ecosystem_type",
+    "metadata.gold_data.gold_project_url",
+    "metadata.gold_data.gold_stamp_id",
+    "metadata.gold_data.organism_name",
+    "metadata.gold_data.specific_ecosystem",
+    "metadata.img",
+    "metadata.mycocosm_portal*",
+    "metadata.ncbi_taxon.ncbi_taxon_class",
+    "metadata.ncbi_taxon.ncbi_taxon_family",
+    "metadata.ncbi_taxon.ncbi_taxon_genus",
+    "metadata.ncbi_taxon.ncbi_taxon_order",
+    "metadata.ncbi_taxon.ncbi_taxon_species",
+    "metadata.ncbi_taxon_id",
+    "metadata.phycocosm_portal*",
+    "metadata.phytozome",
+    "metadata.pi_name",
+    "metadata.pmo_project.name",
+    "metadata.pmo_project.pi_name",
+    "metadata.pmo_project.scientific_program",
+    "metadata.pmo_project_id",
+    "metadata.portal",
+    "metadata.proposal.award_doi",
+    "metadata.proposal.date_approved",
+    "metadata.proposal.doi",
+    "metadata.proposal.pi",
+    "metadata.sequencing_project.scientific_program_name",
+    "metadata.sequencing_project_id",
+    "metadata.source",
+    "metadata.sow_segment.sequencing_project_name",
+    "metadata.subtype",
+    "metadata.type",
+    "modified_date",
+    "user"
+  ],
+  "timeout": 180,
+  "filters_applied": false
+}

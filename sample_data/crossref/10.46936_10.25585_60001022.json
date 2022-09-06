@@ -1,14 +1,14 @@
 {
   "message": {
-    "DOI": "10.46936/jejc.proj.2013.48086/60005298",
-    "URL": "http://dx.doi.org/10.46936/jejc.proj.2013.48086/60005298",
-    "award": "48086",
+    "DOI": "10.46936/10.25585/60001022",
+    "URL": "http://dx.doi.org/10.46936/10.25585/60001022",
+    "award": "978",
     "award-start": {
       "date-parts": [
         [
-          2013,
-          10,
-          1
+          2012,
+          9,
+          9
         ]
       ]
     },
@@ -17,11 +17,11 @@
         [
           2021,
           9,
-          21
+          8
         ]
       ],
-      "date-time": "2021-09-21T23:17:05Z",
-      "timestamp": 1632266225000
+      "date-time": "2021-09-08T20:32:27Z",
+      "timestamp": 1631133147000
     },
     "deposited": {
       "date-parts": [
@@ -31,26 +31,26 @@
           9
         ]
       ],
-      "date-time": "2021-10-09T20:25:56Z",
-      "timestamp": 1633811156000
+      "date-time": "2021-10-09T09:42:10Z",
+      "timestamp": 1633772530000
     },
     "indexed": {
       "date-parts": [
         [
           2022,
-          4,
-          2
+          3,
+          31
         ]
       ],
-      "date-time": "2022-04-02T21:49:59Z",
-      "timestamp": 1648936199330
+      "date-time": "2022-03-31T10:42:16Z",
+      "timestamp": 1648723336376
     },
     "issued": {
       "date-parts": [
         [
-          2013,
-          10,
-          1
+          2012,
+          9,
+          9
         ]
       ]
     },
@@ -58,6 +58,18 @@
     "prefix": "10.46936",
     "project": [
       {
+        "co-lead-investigator": [
+          {
+            "affiliation": [],
+            "family": "Grigoriev",
+            "given": "Igor"
+          },
+          {
+            "affiliation": [],
+            "family": "Grigoriev",
+            "given": "Igor"
+          }
+        ],
         "funding": [
           {
             "funder": {
@@ -76,40 +88,50 @@
         "investigator": [
           {
             "affiliation": [],
-            "family": "Brodie",
-            "given": "Eoin"
+            "family": "Plett",
+            "given": "Jonathan"
           },
           {
             "affiliation": [],
-            "family": "Nuccio",
-            "given": "Erin"
+            "family": "Perotto",
+            "given": "Silvia"
           },
           {
             "affiliation": [],
-            "family": "Pett-Ridge",
-            "given": "Jennifer"
+            "family": "Kohler",
+            "given": "Annegret"
           },
           {
             "affiliation": [],
-            "family": "Lipton",
-            "given": "Mary"
+            "family": "Sitrit",
+            "given": "Yaron"
           },
           {
             "affiliation": [],
-            "family": "Metz",
-            "given": "Thomas"
+            "family": "Nehls",
+            "given": "Uwe"
+          },
+          {
+            "affiliation": [],
+            "family": "Peter",
+            "given": "Martina"
+          },
+          {
+            "affiliation": [],
+            "family": "Pereira",
+            "given": "Maira"
           }
         ],
         "lead-investigator": [
           {
             "affiliation": [],
-            "family": "Firestone",
-            "given": "Mary"
+            "family": "Martin",
+            "given": "Francis"
           }
         ],
         "project-title": [
           {
-            "title": "Mapping soil carbon from cradle to grave: using comparative transcriptomics, proteomics and metabolite analysis to identify the microbial blueprint for root-enhanced decomposition of organic matter."
+            "title": "Mycorrhizal Genomics Initiative: Exploring the Symbiotic Transcriptomes"
           }
         ]
       }
@@ -118,7 +140,7 @@
     "relation": {},
     "resource": {
       "primary": {
-        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/jejc.proj.2013.48086/60005298"
+        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60001022"
       }
     },
     "score": 1,

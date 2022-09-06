@@ -6,42 +6,34 @@
     </head>
     <body>
       <query status="resolved">
-        <doi type="grant">10.46936/10.25585/60000611</doi>
+        <doi type="grant">10.46936/10.25585/60000745</doi>
         <crm-item name="publisher-name" type="string">Office of Scientific and Technical Information (OSTI)</crm-item>
         <crm-item name="prefix-name" type="string">US Department of Energy</crm-item>
         <crm-item name="member-id" type="number">960</crm-item>
-        <crm-item name="citation-id" type="number">130021499</crm-item>
+        <crm-item name="citation-id" type="number">130024626</crm-item>
         <crm-item name="book-id" type="number">3846906</crm-item>
-        <crm-item name="deposit-timestamp" type="number">1633707606</crm-item>
+        <crm-item name="deposit-timestamp" type="number">1633707625</crm-item>
         <crm-item name="owner-prefix" type="string">10.46936</crm-item>
-        <crm-item name="last-update" type="date">2021-10-09T00:07:25Z</crm-item>
-        <crm-item name="created" type="date">2021-09-07T17:44:59Z</crm-item>
+        <crm-item name="last-update" type="date">2021-10-09T03:19:51Z</crm-item>
+        <crm-item name="created" type="date">2021-09-07T18:29:57Z</crm-item>
         <crm-item name="citedby-count" type="number">0</crm-item>
         <doi_record>
           <crossref xmlns="http://www.crossref.org/xschema/1.1" xsi:schemaLocation="http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd">
             <grant xmlns="http://www.crossref.org/grant_id/0.0.1">
               <project>
-                <project-title>Mediterranean Grassland Soil Metagenome (MGSM): Enabling a systems view of soil carbon and nitrogen biogeochemistry under a changing climate.</project-title>
+                <project-title>Metagenomic analysis of the rhizosphere of three biofuel crops at the KBS intensive site</project-title>
                 <investigators>
                   <person role="lead_investigator">
-                    <givenName>Eoin</givenName>
-                    <familyName>Brodie</familyName>
-                  </person>
-                  <person role="co-lead_investigator">
-                    <givenName>Mary</givenName>
-                    <familyName>Firestone</familyName>
+                    <givenName>James</givenName>
+                    <familyName>Tiedje</familyName>
                   </person>
                   <person role="investigator">
-                    <givenName>Ulisses</givenName>
-                    <familyName>da Rocha</familyName>
+                    <givenName>Bangzhou</givenName>
+                    <familyName>Zhang</familyName>
                   </person>
                   <person role="investigator">
-                    <givenName>Ulas</givenName>
-                    <familyName>Karaoz</familyName>
-                  </person>
-                  <person role="investigator">
-                    <givenName>Nicholas</givenName>
-                    <familyName>Bouskill</familyName>
+                    <givenName>chao</givenName>
+                    <familyName>xue</familyName>
                   </person>
                 </investigators>
                 <funding funding-type="award">
@@ -49,11 +41,11 @@
                   <funder-id>https://doi.org/10.13039/100000015</funder-id>
                 </funding>
               </project>
-              <award-number>653</award-number>
-              <award-start-date>2011-09-29</award-start-date>
+              <award-number>1296</award-number>
+              <award-start-date>2013-01-28</award-start-date>
               <doi_data>
-                <doi>10.46936/10.25585/60000611</doi>
-                <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60000611</resource>
+                <doi>10.46936/10.25585/60000745</doi>
+                <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60000745</resource>
               </doi_data>
             </grant>
           </crossref>
