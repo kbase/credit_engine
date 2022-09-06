@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.25585/1487760</identifier>
+  <creators>
+    <creator>
+      <creatorName>Firestone, Mary</creatorName>
+      <affiliation>University of California, Berkeley</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Mapping soil carbon from cradle to grave: using comparative transcriptomics, proteomics and metabolite analysis to identify the microbial blueprint for root-enhanced decomposition of organic matter.</title>
+  </titles>
+  <publisher>DOE Joint Genome Institute</publisher>
+  <publicationYear>2013</publicationYear>
+  <language>en</language>
+  <subjects>
+    <subject/>
+    <subject/>
+  </subjects>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="OSTI ID">1487760</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="DOE Contract Number">AC02-05CH11231</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="Product Number">1472</alternateIdentifier>
+  </alternateIdentifiers>
+  <resourceType resourceTypeGeneral="Dataset">Genome/Genetics Data</resourceType>
+  <descriptions>
+    <description descriptionType="Abstract"/>
+  </descriptions>
+</resource>

@@ -1,14 +1,14 @@
 {
   "message": {
-    "DOI": "10.46936/jejc.proj.2013.48086/60005298",
-    "URL": "http://dx.doi.org/10.46936/jejc.proj.2013.48086/60005298",
-    "award": "48086",
+    "DOI": "10.46936/10.25585/60000745",
+    "URL": "http://dx.doi.org/10.46936/10.25585/60000745",
+    "award": "1296",
     "award-start": {
       "date-parts": [
         [
           2013,
-          10,
-          1
+          1,
+          28
         ]
       ]
     },
@@ -17,11 +17,11 @@
         [
           2021,
           9,
-          21
+          7
         ]
       ],
-      "date-time": "2021-09-21T23:17:05Z",
-      "timestamp": 1632266225000
+      "date-time": "2021-09-07T18:29:57Z",
+      "timestamp": 1631039397000
     },
     "deposited": {
       "date-parts": [
@@ -31,26 +31,26 @@
           9
         ]
       ],
-      "date-time": "2021-10-09T20:25:56Z",
-      "timestamp": 1633811156000
+      "date-time": "2021-10-09T03:19:51Z",
+      "timestamp": 1633749591000
     },
     "indexed": {
       "date-parts": [
         [
           2022,
-          4,
-          2
+          3,
+          29
         ]
       ],
-      "date-time": "2022-04-02T21:49:59Z",
-      "timestamp": 1648936199330
+      "date-time": "2022-03-29T15:08:15Z",
+      "timestamp": 1648566495991
     },
     "issued": {
       "date-parts": [
         [
           2013,
-          10,
-          1
+          1,
+          28
         ]
       ]
     },
@@ -76,40 +76,25 @@
         "investigator": [
           {
             "affiliation": [],
-            "family": "Brodie",
-            "given": "Eoin"
+            "family": "Zhang",
+            "given": "Bangzhou"
           },
           {
             "affiliation": [],
-            "family": "Nuccio",
-            "given": "Erin"
-          },
-          {
-            "affiliation": [],
-            "family": "Pett-Ridge",
-            "given": "Jennifer"
-          },
-          {
-            "affiliation": [],
-            "family": "Lipton",
-            "given": "Mary"
-          },
-          {
-            "affiliation": [],
-            "family": "Metz",
-            "given": "Thomas"
+            "family": "xue",
+            "given": "chao"
           }
         ],
         "lead-investigator": [
           {
             "affiliation": [],
-            "family": "Firestone",
-            "given": "Mary"
+            "family": "Tiedje",
+            "given": "James"
           }
         ],
         "project-title": [
           {
-            "title": "Mapping soil carbon from cradle to grave: using comparative transcriptomics, proteomics and metabolite analysis to identify the microbial blueprint for root-enhanced decomposition of organic matter."
+            "title": "Metagenomic analysis of the rhizosphere of three biofuel crops at the KBS intensive site"
           }
         ]
       }
@@ -118,7 +103,7 @@
     "relation": {},
     "resource": {
       "primary": {
-        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/jejc.proj.2013.48086/60005298"
+        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60000745"
       }
     },
     "score": 1,

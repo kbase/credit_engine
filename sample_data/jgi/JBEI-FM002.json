@@ -6,16 +6,6 @@
         "facets": "0.000",
         "filtered_facets": "0.000",
         "count_file_total": "0.008",
-        "a_field": [
-            {
-                "this": "that",
-                "the": "other"
-            },
-            {
-                "this": "is",
-                "the": "end"
-            }
-        ]
     },
     "hits_total": 2,
     "file_total": 2,

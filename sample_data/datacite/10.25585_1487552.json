@@ -1,0 +1,257 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "https://doi.org/10.25585/1487552",
+          "alternateIdentifierType": "DOI"
+        },
+        {
+          "alternateIdentifier": "1487552",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "AC02-05CH11231",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "1100",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2019-01-03T03:47:22.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            {
+              "name": "Lawrence Berkeley National Laboratory"
+            }
+          ],
+          "familyName": "Mukhopadhyay",
+          "givenName": "Aindrila",
+          "name": "Mukhopadhyay, Aindrila",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2012",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25585/1487552",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "https://doi.org/10.25585/1487552",
+          "identifierType": "DOI"
+        },
+        {
+          "identifier": "1487552",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "AC02-05CH11231",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "1100",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25585",
+      "publicationYear": 2012,
+      "published": "2012",
+      "publisher": "DOE Joint Genome Institute",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2019-01-03T03:47:23.000Z",
+      "relatedIdentifiers": [],
+      "rightsList": [],
+      "schemaVersion": null,
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [],
+      "suffix": "1487552",
+      "titles": [
+        {
+          "title": "Spontaneous E. coli mutants tolerant to toxic compounds."
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2020-07-15T22:24:46.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1487552/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjU1ODUvMTQ4NzU1MjwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPk11a2hvcGFkaHlheSwgQWluZHJpbGE8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+TGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFib3JhdG9yeTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPlNwb250YW5lb3VzIEUuIGNvbGkgbXV0YW50cyB0b2xlcmFudCB0byB0b3hpYyBjb21wb3VuZHMuPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRPRSBKb2ludCBHZW5vbWUgSW5zdGl0dXRlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDEyPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdC8+CiAgICA8c3ViamVjdC8+CiAgPC9zdWJqZWN0cz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iT1NUSSBJRCI+MTQ4NzU1MjwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJET0UgQ29udHJhY3QgTnVtYmVyIj5BQzAyLTA1Q0gxMTIzMTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+MTEwMDwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiLz4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=",
+      "xml_data": {
+        "alternateIdentifiers": {
+          "alternateIdentifier": [
+            {
+              "alternateIdentifierType": "OSTI ID",
+              "value": "1487552"
+            },
+            {
+              "alternateIdentifierType": "DOE Contract Number",
+              "value": "AC02-05CH11231"
+            },
+            {
+              "alternateIdentifierType": "Product Number",
+              "value": "1100"
+            }
+          ]
+        },
+        "contributors": null,
+        "creators": {
+          "creator": [
+            {
+              "affiliation": [
+                "Lawrence Berkeley National Laboratory"
+              ],
+              "creatorName": {
+                "lang": null,
+                "nameType": null,
+                "value": "Mukhopadhyay, Aindrila"
+              },
+              "familyName": null,
+              "givenName": null,
+              "nameIdentifier": []
+            }
+          ]
+        },
+        "dates": null,
+        "descriptions": {
+          "description": [
+            {
+              "content": [],
+              "descriptionType": "Abstract",
+              "lang": null
+            }
+          ]
+        },
+        "formats": null,
+        "fundingReferences": null,
+        "geoLocations": null,
+        "identifier": {
+          "identifierType": "DOI",
+          "value": "10.25585/1487552"
+        },
+        "language": "en",
+        "publicationYear": "2012",
+        "publisher": {
+          "lang": null,
+          "value": "DOE Joint Genome Institute"
+        },
+        "relatedIdentifiers": null,
+        "relatedItems": null,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "value": "Genome/Genetics Data"
+        },
+        "rightsList": null,
+        "sizes": null,
+        "subjects": {
+          "subject": [
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "",
+              "valueURI": null
+            },
+            {
+              "classificationCode": null,
+              "lang": null,
+              "schemeURI": null,
+              "subjectScheme": null,
+              "value": "",
+              "valueURI": null
+            }
+          ]
+        },
+        "titles": {
+          "title": [
+            {
+              "lang": null,
+              "titleType": null,
+              "value": "Spontaneous E. coli mutants tolerant to toxic compounds."
+            }
+          ]
+        },
+        "version": null
+      }
+    },
+    "id": "10.25585/1487552",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25585/1487552",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

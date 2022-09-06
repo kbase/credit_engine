@@ -1,14 +1,14 @@
 {
   "message": {
-    "DOI": "10.46936/jejc.proj.2013.48086/60005298",
-    "URL": "http://dx.doi.org/10.46936/jejc.proj.2013.48086/60005298",
-    "award": "48086",
+    "DOI": "10.46936/10.25585/60000513",
+    "URL": "http://dx.doi.org/10.46936/10.25585/60000513",
+    "award": "507648",
     "award-start": {
       "date-parts": [
         [
-          2013,
-          10,
-          1
+          2021,
+          5,
+          21
         ]
       ]
     },
@@ -16,41 +16,41 @@
       "date-parts": [
         [
           2021,
-          9,
-          21
+          8,
+          20
         ]
       ],
-      "date-time": "2021-09-21T23:17:05Z",
-      "timestamp": 1632266225000
+      "date-time": "2021-08-20T17:15:13Z",
+      "timestamp": 1629479713000
     },
     "deposited": {
       "date-parts": [
         [
           2021,
           10,
-          9
+          8
         ]
       ],
-      "date-time": "2021-10-09T20:25:56Z",
-      "timestamp": 1633811156000
+      "date-time": "2021-10-08T22:52:32Z",
+      "timestamp": 1633733552000
     },
     "indexed": {
       "date-parts": [
         [
           2022,
-          4,
-          2
+          3,
+          30
         ]
       ],
-      "date-time": "2022-04-02T21:49:59Z",
-      "timestamp": 1648936199330
+      "date-time": "2022-03-30T18:16:47Z",
+      "timestamp": 1648664207728
     },
     "issued": {
       "date-parts": [
         [
-          2013,
-          10,
-          1
+          2021,
+          5,
+          21
         ]
       ]
     },
@@ -76,40 +76,25 @@
         "investigator": [
           {
             "affiliation": [],
-            "family": "Brodie",
-            "given": "Eoin"
+            "family": "Orcutt",
+            "given": "Beth"
           },
           {
             "affiliation": [],
-            "family": "Nuccio",
-            "given": "Erin"
-          },
-          {
-            "affiliation": [],
-            "family": "Pett-Ridge",
-            "given": "Jennifer"
-          },
-          {
-            "affiliation": [],
-            "family": "Lipton",
-            "given": "Mary"
-          },
-          {
-            "affiliation": [],
-            "family": "Metz",
-            "given": "Thomas"
+            "family": "Brazelton",
+            "given": "William"
           }
         ],
         "lead-investigator": [
           {
             "affiliation": [],
-            "family": "Firestone",
-            "given": "Mary"
+            "family": "McGonigle",
+            "given": "Julia"
           }
         ],
         "project-title": [
           {
-            "title": "Mapping soil carbon from cradle to grave: using comparative transcriptomics, proteomics and metabolite analysis to identify the microbial blueprint for root-enhanced decomposition of organic matter."
+            "title": "Linking Genomes to Phenomes in Extremophilic Microorganisms with Advanced Single Cell Approaches"
           }
         ]
       }
@@ -118,7 +103,7 @@
     "relation": {},
     "resource": {
       "primary": {
-        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/jejc.proj.2013.48086/60005298"
+        "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60000513"
       }
     },
     "score": 1,
