@@ -39,8 +39,7 @@ jobs:
       name: Run Python tests
       id: run_pytest
       run: |
-        poetry shell
-        PYTHONPATH=$(pwd) pytest -rP tests/
+        poetry run PYTHONPATH=$(pwd) pytest -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov
