@@ -3,7 +3,7 @@ profile = "black"
 skip_gitignore = true
 
 [tool.poetry]
-name = "credit_engine"
+name = "src"
 version = "0.1.0"
 description = ""
 authors = ["ialarmedalien <ialarmedalien@gmail.com>"]
