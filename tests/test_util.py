@@ -1,7 +1,9 @@
+import sys
+print(sys.path)
+
 import pytest
 import src.util as util
 from pathlib import Path
-
 
 enc = "encoded"
 f_name = "file_name"

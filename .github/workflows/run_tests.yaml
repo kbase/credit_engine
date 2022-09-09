@@ -10,7 +10,6 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9", "3.10"]
-        poetry-version: ["1.1", "1.2"]
 
     steps:
     -
@@ -22,10 +21,10 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     -
-      name: Install poetry ${{ matrix.poetry-version }}
+      name: Install poetry 1.2
       uses: abatilo/actions-poetry@v2
       with:
-        poetry-version: ${{ matrix.poetry-version }}
+        poetry-version: 1.2
     -
       name: Install dependencies
       id: install_deps
@@ -40,7 +39,8 @@ jobs:
       name: Run Python tests
       id: run_pytest
       run: |
-        poetry run pytest tests/
+        poetry shell
+        PYTHONPATH=$(pwd) pytest -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov
