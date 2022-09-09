@@ -1,21 +1,61 @@
 import json
+from pathlib import Path
 import os
-from typing import Union
+from typing import Union, Optional, List
+from urllib.parse import quote
+import unicodedata
+import re
 
 
-def full_path(file_path: str) -> str:
+def encode_doi(doi: str) -> str:
+    """Encodes any dodgy doi characters for use as an URL.
+    See https://www.doi.org/doi_handbook/2_Numbering.html#2.5.2 for DOI encoding recs
+    :param doi: the doi
+    :type doi: str
+    :return: encoded doi for URI usage
+    :rtype: str
+    """
+    return quote(doi)
+
+
+def doi_to_file_name(doi: str) -> str:
+    """Create an OS-friendly DOI string to use as a file name.
+    Inspired by https://github.com/django/django/blob/main/django/utils/text.py
+
+    :param doi: the doi
+    :type doi: str
+    :return: appropriate file name for the doi
+    :rtype: str
+    """
+    f_name = (
+        unicodedata.normalize("NFKD", doi).encode("ascii", "ignore").decode("ascii")
+    )
+    f_name = re.sub(r"[^\w\s\.\-]", "_", f_name.lower())
+    return re.sub(r"[-_\s]+", "_", f_name)
+
+
+def full_path(file_path: Union[Path, str]) -> Path:
     """Generate the full path for a file.
 
     :param file_path: path relative to the credit_engine repo
-    :type file_path: str
+    :type file_path: Path
     :return: full path
-    :rtype: str
+    :rtype: Path
     """
-    return os.path.abspath(os.path.join(os.getcwd(), file_path))
+    if isinstance(file_path, str):
+        file_path = Path(file_path)
+
+    cwd = Path.cwd()
+    full_path = os.path.join(cwd, file_path)
+
+    return Path.resolve(Path(full_path))
 
 
-def dir_scanner(dir_path: str, conditions: Union[list, None] = None) -> list[str]:
-    """Create a generator that scans a directory and returns the paths of files that meeet the conditions.
+def dir_scanner(
+    dir_path: Union[Path, str], conditions: Optional[list] = None
+) -> List[str]:
+    """Scan a directory and return the paths of files that meet the conditions.
+    If no conditions are given, returns all files except `.DS_Store`.
 
     :param dir_path: path to directory
     :type dir_path: str
@@ -24,7 +64,8 @@ def dir_scanner(dir_path: str, conditions: Union[list, None] = None) -> list[str
     :return file_list: list of full paths meeting the criteria
     :rtype file_list: list of strings
     """
-    if not dir_path.startswith("/"):
+    if not os.path.isabs(dir_path):
+        # assume we need to add the standard full path pieces
         dir_path = full_path(dir_path)
 
     if os.path.isfile(dir_path):
@@ -60,7 +101,7 @@ def read_json_file(file_path: str) -> dict:
     :return: parsed JSON data
     :rtype: dict
     """
-    with open(full_path(file_path)) as fh:
+    with open(full_path(file_path), encoding="utf-8") as fh:
         return json.load(fh)
 
 
@@ -84,24 +125,22 @@ def write_to_file(file_path: str, lines: Union[list, dict, str]):
     :param lines: content to be written to the file
     :type lines: list / dict / str
     """
-    with open(full_path(file_path), "w") as fh:
-        if isinstance(lines, list):
-            is_data_struct = False
-            for line in lines:
-                if isinstance(line, (list, dict)):
-                    is_data_struct = True
-                    break
+    is_data_struct = False
+    if isinstance(lines, dict):
+        is_data_struct = True
+    elif isinstance(lines, list):
+        for line in lines:
+            if isinstance(line, (list, dict)):
+                is_data_struct = True
+                break
 
-            if is_data_struct:
-                # dump as JSON
-                fh.write(json.dumps(lines, indent=2, sort_keys=True))
-            else:
-                for line in lines:
-                    fh.write(str(line) + "\n")
-
-        elif isinstance(lines, dict):
+    with open(full_path(file_path), "w", encoding="utf-8") as fh:
+        if is_data_struct is True:
             # dump as JSON
-            fh.write(json.dumps(lines, indent=2, sort_keys=True))
+            json.dump(lines, fh, indent=2, sort_keys=True)
+        elif isinstance(lines, list):
+            for line in lines:
+                fh.write(str(line) + "\n")
         else:
             fh.write(str(lines))
         fh.close()
@@ -115,6 +154,5 @@ def write_bytes_to_file(file_path: str, file_bytes: bytes):
     :param file_bytes: bytes to be written to the file
     :type file_bytes: bytes
     """
-    with open(full_path(file_path), "wb") as fh:
-        fh.write(file_bytes)
-        fh.close()
+    p = full_path(file_path)
+    p.write_bytes(file_bytes)

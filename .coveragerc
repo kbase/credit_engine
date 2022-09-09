@@ -1,0 +1,10 @@
+[run]
+omit =
+    deps/*
+    tests/*
+
+[html]
+directory = ./htmlcov
+
+[xml]
+output = ./coverage.xml
