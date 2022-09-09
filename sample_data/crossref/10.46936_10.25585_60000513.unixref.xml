@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_records>
+  <doi_record owner="10.46936" timestamp="2021-10-08 18:52:32">
+    <crossref>
+      <grant>
+        <project>
+          <project-title>Linking Genomes to Phenomes in Extremophilic Microorganisms with Advanced Single Cell Approaches</project-title>
+          <investigators>
+            <person role="lead_investigator">
+              <givenName>Julia</givenName>
+              <familyName>McGonigle</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Beth</givenName>
+              <familyName>Orcutt</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>William</givenName>
+              <familyName>Brazelton</familyName>
+            </person>
+          </investigators>
+          <funding funding-type="award">
+            <funder-name>US Department of Energy</funder-name>
+            <funder-id>https://doi.org/10.13039/100000015</funder-id>
+          </funding>
+        </project>
+        <award-number>507648</award-number>
+        <award-start-date>2021-05-21</award-start-date>
+        <doi_data>
+          <doi>10.46936/10.25585/60000513</doi>
+          <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60000513</resource>
+        </doi_data>
+      </grant>
+    </crossref>
+  </doi_record>
+</doi_records>

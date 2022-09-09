@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_records>
+  <doi_record owner="10.46936" timestamp="2021-10-09 05:42:10">
+    <crossref>
+      <grant>
+        <project>
+          <project-title>Mycorrhizal Genomics Initiative: Exploring the Symbiotic Transcriptomes</project-title>
+          <investigators>
+            <person role="lead_investigator">
+              <givenName>Francis</givenName>
+              <familyName>Martin</familyName>
+            </person>
+            <person role="co-lead_investigator">
+              <givenName>Igor</givenName>
+              <familyName>Grigoriev</familyName>
+            </person>
+            <person role="co-lead_investigator">
+              <givenName>Igor</givenName>
+              <familyName>Grigoriev</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Jonathan</givenName>
+              <familyName>Plett</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Silvia</givenName>
+              <familyName>Perotto</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Annegret</givenName>
+              <familyName>Kohler</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Yaron</givenName>
+              <familyName>Sitrit</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Uwe</givenName>
+              <familyName>Nehls</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Martina</givenName>
+              <familyName>Peter</familyName>
+            </person>
+            <person role="investigator">
+              <givenName>Maira</givenName>
+              <familyName>Pereira</familyName>
+            </person>
+          </investigators>
+          <funding funding-type="award">
+            <funder-name>US Department of Energy</funder-name>
+            <funder-id>https://doi.org/10.13039/100000015</funder-id>
+          </funding>
+        </project>
+        <award-number>978</award-number>
+        <award-start-date>2012-09-09</award-start-date>
+        <doi_data>
+          <doi>10.46936/10.25585/60001022</doi>
+          <resource>https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60001022</resource>
+        </doi_data>
+      </grant>
+    </crossref>
+  </doi_record>
+</doi_records>

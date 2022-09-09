@@ -35,7 +35,7 @@ def dir_scanner(dir_path: str, conditions: Union[list, None] = None) -> list[str
 
     file_list = []
     for f in os.listdir(dir_path):
-        if f == '.DS_Store':
+        if f == ".DS_Store":
             continue
         if not os.path.isfile(os.path.join(dir_path, f)):
             continue
