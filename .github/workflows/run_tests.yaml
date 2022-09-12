@@ -39,8 +39,7 @@ jobs:
       name: poetry run pytest -rP tests/
       id: run_pytest
       run: |
-        poetry run python -c "import sys; print (sys.path)"
-        poetry run pytest --cov=credit_engine -rP tests/
+        poetry run pytest --cov=credit_engine --cov-report=./coverage.xml -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov
@@ -48,7 +47,7 @@ jobs:
       uses: codecov/codecov-action@v2
       continue-on-error: true
       with:
-        files: ./python-coverage/coverage.xml
+        files: ./coverage.xml
         fail_ci_if_error: true
     -
       name: outcome
