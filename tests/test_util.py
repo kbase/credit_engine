@@ -9,6 +9,8 @@ from pathlib import Path
 enc = "encoded"
 f_name = "file_name"
 
+KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
+
 doi_test_data = [
     pytest.param(
         {
@@ -41,12 +43,21 @@ def test_doi_to_file_name(param):
 
 # TODO: test with strings and with Path objects
 def test_full_path():
-    full_path_to_file = util.full_path("sample_data/kbase/kbase-dois.txt")
+    full_path_to_file = util.full_path(KBASE_DOI_FILE)
     print(util.full_path("src/util.py"))
+    print({ "full path to file": full_path_to_file, "type path": type(full_path_to_file)})
 
     assert Path.is_file(full_path_to_file)
     assert Path(full_path_to_file).is_absolute()
 
+    from pathlib import PurePath
+
+    alt_path_to_file = PurePath(KBASE_DOI_FILE)
+    assert alt_path_to_file.is_absolute() is False
+    aptf = Path(alt_path_to_file)
+    full_alt_path = util.full_path(aptf)
+    assert full_alt_path.is_absolute()
+    assert full_alt_path.samefile(full_path_to_file)
 
 def test_file_read_write_list(tmp_path):
     dest_path = tmp_path / "lines.txt"
@@ -58,7 +69,7 @@ def test_file_read_write_list(tmp_path):
 
     # round trip an existing file
     doi_list_path = tmp_path / "doi_list.txt"
-    doi_list = util.read_text_file("sample_data/kbase/kbase-dois.txt")
+    doi_list = util.read_text_file(KBASE_DOI_FILE)
     assert len(doi_list) > 1
     util.write_to_file(doi_list_path, doi_list)
     assert doi_list == util.read_text_file(doi_list_path)
