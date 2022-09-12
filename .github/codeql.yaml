@@ -3,6 +3,10 @@ name: "CodeQL"
 on:
   push:
   pull_request:
+    types:
+    - opened
+    - synchronize
+    - ready_for_review
   schedule:
     - cron: '0 8 * * 2'
 

@@ -21,14 +21,26 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     -
+      name: Install poetry 1.2
+      uses: abatilo/actions-poetry@v2
+      with:
+        poetry-version: 1.2
+    -
       name: Install dependencies
       id: install_deps
       run: poetry install
     -
-      name: Run Python tests
+      name: Lint linkml file
+      id: lint_linkml
+      run: |
+        poetry run linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
+      continue-on-error: true
+    -
+      name: poetry run pytest -rP tests/
       id: run_pytest
       run: |
-        poetry run pytest tests/
+        poetry run python -c "import sys; print (sys.path)"
+        poetry run pytest -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov
@@ -38,12 +50,6 @@ jobs:
       with:
         files: ./python-coverage/coverage.xml
         fail_ci_if_error: true
-    -
-      name: Lint linkml file
-      id: lint_linkml
-      run: |
-        poetry run linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
-      continue-on-error: true
     -
       name: outcome
       if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success' || steps.lint_linkml.outcome != 'success'

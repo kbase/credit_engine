@@ -1,0 +1,16 @@
+name: Standard PR workflow
+
+on:
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - ready_for_review
+
+jobs:
+  format_files:
+    uses: ./.github/workflows/black.yaml
+
+  run_unit_tests:
+    uses: ./.github/workflows/run_tests.yaml
+    needs: format_files
