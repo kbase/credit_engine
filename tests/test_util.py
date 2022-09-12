@@ -45,7 +45,9 @@ def test_doi_to_file_name(param):
 def test_full_path():
     full_path_to_file = util.full_path(KBASE_DOI_FILE)
     print(util.full_path("src/util.py"))
-    print({ "full path to file": full_path_to_file, "type path": type(full_path_to_file)})
+    print(
+        {"full path to file": full_path_to_file, "type path": type(full_path_to_file)}
+    )
 
     assert Path.is_file(full_path_to_file)
     assert Path(full_path_to_file).is_absolute()
@@ -58,6 +60,7 @@ def test_full_path():
     full_alt_path = util.full_path(aptf)
     assert full_alt_path.is_absolute()
     assert full_alt_path.samefile(full_path_to_file)
+
 
 def test_file_read_write_list(tmp_path):
     dest_path = tmp_path / "lines.txt"
