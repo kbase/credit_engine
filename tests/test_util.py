@@ -1,4 +1,5 @@
 import sys
+
 print(sys.path)
 
 import pytest
@@ -86,6 +87,7 @@ def test_file_read_write_text_lines(tmp_path):
     util.write_to_file(text_lines_file, text_lines)
     # compare to existing file
     assert util.read_text_file(text_lines_file) == util.read_text_file("data/text.txt")
+
 
 def test_dir_scanner():
     # TODO: write tests!
