@@ -3,10 +3,11 @@ profile = "black"
 skip_gitignore = true
 
 [tool.poetry]
-name = "src"
+name = "credit_engine"
 version = "0.1.0"
 description = ""
 authors = ["ialarmedalien <ialarmedalien@gmail.com>"]
+packages = [{ include = "credit_engine", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
