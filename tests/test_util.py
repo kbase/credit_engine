@@ -86,7 +86,9 @@ def test_file_read_write_text_lines(tmp_path):
     text_lines_file = tmp_path / "text.txt"
     util.write_to_file(text_lines_file, text_lines)
     # compare to existing file
-    assert util.read_text_file(text_lines_file) == util.read_text_file("tests/data/text.txt")
+    assert util.read_text_file(text_lines_file) == util.read_text_file(
+        "tests/data/text.txt"
+    )
 
 
 def test_dir_scanner():
