@@ -1,12 +1,15 @@
 # KBase Credit Engine
 
+![Lint and test](https://github.com/kbase/credit_engine/actions/workflows/run_tests.yaml/badge.svg?branch=develop)
+[![codecov](https://codecov.io/gh/kbase/credit_engine/branch/develop/graph/badge.svg?token=vOUaMmH86Z)](https://codecov.io/gh/kbase/credit_engine)
+
 This repo holds the schema and associated scripts used by the KBase Credit Engine.
 
 - [KBase Credit Engine](#kbase-credit-engine)
   - [Installation](#installation)
   - [Metadata Schema](#metadata-schema)
     - [Schema Diagram](#schema-diagram)
-    - [Useful commands:](#useful-commands)
+    - [Useful commands](#useful-commands)
 
 ## Installation
 
@@ -26,6 +29,13 @@ Activate the virtual environment:
 poetry shell
 ```
 
+Run tests or other scripts:
+
+```sh
+poetry run <command>
+poetry run pytest tests/
+```
+
 ## Metadata Schema
 
 The metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/kbase/linkml/metadata.yaml).
@@ -38,11 +48,18 @@ Generated using [erdantic](https://erdantic.drivendata.org/stable/)
 
 ![KBase metadata schema diagram](schema/kbase/kbase-schema.png "Entity-relationship diagram for KBase metadata schema")
 
-### Useful commands:
+### Useful commands
+
+These assume that you have already run `poetry shell` to activate the credit engine virtual environment.
 
 generate derived files in all formats:
 ```sh
 gen-project -d schema/ schema/linkml/metadata.yaml
+```
+
+lint the KBase linkml schema file:
+```sh
+linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
 ```
 
 validate data (in file `data.yaml`) against the schema:
