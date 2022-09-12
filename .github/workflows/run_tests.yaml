@@ -39,7 +39,7 @@ jobs:
       name: poetry run pytest -rP tests/
       id: run_pytest
       run: |
-        poetry run pytest --cov=credit_engine --cov-report=./coverage.xml -rP tests/
+        poetry run pytest --cov=credit_engine --cov-report=xml -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov
