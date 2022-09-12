@@ -37,7 +37,7 @@ jobs:
       continue-on-error: true
     -
       name: poetry run pytest -rP tests/
-      id: run_pytest_no_pypath
+      id: run_pytest
       run: |
         poetry run python -c "import sys; print (sys.path)"
         poetry run pytest -rP tests/
