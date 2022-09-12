@@ -1,12 +1,11 @@
-[tool.isort]
-profile = "black"
-skip_gitignore = true
-
 [tool.poetry]
 name = "credit_engine"
 version = "0.1.0"
 description = ""
 authors = ["ialarmedalien <ialarmedalien@gmail.com>"]
+packages = [
+    { include = 'credit_engine' }
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -39,3 +38,7 @@ pytest-sugar = "^0.9.5"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
