@@ -36,32 +36,11 @@ jobs:
         poetry run linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
       continue-on-error: true
     -
-      name: pytest -rP tests/
-      id: pytest_only
-      run: |
-        python -c "import sys; print (sys.path)"
-        pytest -rP tests/
-      continue-on-error: true
-    -
-      name: PYTHONPATH=$(pwd) pytest -rP tests/
-      id: pytest_only_with_path
-      run: |
-        PYTHONPATH=$(pwd) python -c "import sys; print (sys.path)"
-        PYTHONPATH=$(pwd) pytest -rP tests/
-      continue-on-error: true
-    -
       name: poetry run pytest -rP tests/
       id: run_pytest_no_pypath
       run: |
         poetry run python -c "import sys; print (sys.path)"
         poetry run pytest -rP tests/
-      continue-on-error: true
-    -
-      name: PYTHONPATH=$(pwd) poetry run pytest -rP tests/
-      id: run_pytest
-      run: |
-        PYTHONPATH=$(pwd) poetry run python -c "import sys; print (sys.path)"
-        PYTHONPATH=$(pwd) poetry run pytest -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov

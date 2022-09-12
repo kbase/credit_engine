@@ -1,9 +1,8 @@
 import sys
-
 print(sys.path)
 
 import pytest
-import src.util as util
+import credit_engine.util as util
 from pathlib import Path
 
 enc = "encoded"
@@ -39,6 +38,7 @@ def test_doi_to_file_name(param):
     assert util.doi_to_file_name(param["doi"]) == param[f_name]
 
 
+# TODO: test with strings and with Path objects
 def test_full_path():
     full_path_to_file = util.full_path("sample_data/kbase/kbase-dois.txt")
     print(util.full_path("src/util.py"))
@@ -47,42 +47,45 @@ def test_full_path():
     assert Path(full_path_to_file).is_absolute()
 
 
-def test_file_read_write_list():
+def test_file_read_write_list(tmp_path):
+    dest_path = tmp_path / "lines.txt"
     # round trip a simple list
     sample_list = ["hocus", "pocus", "diplo", "docus"]
-    util.write_to_file("tests/temp/lines.txt", sample_list)
-    lines = util.read_text_file("tests/temp/lines.txt")
+    util.write_to_file(dest_path, sample_list)
+    lines = util.read_text_file(dest_path)
     assert lines == sample_list
 
     # round trip an existing file
+    doi_list_path = tmp_path / "doi_list.txt"
     doi_list = util.read_text_file("sample_data/kbase/kbase-dois.txt")
     assert len(doi_list) > 1
-    util.write_to_file("tests/temp/doi_list.txt", doi_list)
-    assert doi_list == util.read_text_file("tests/temp/doi_list.txt")
+    util.write_to_file(doi_list_path, doi_list)
+    assert doi_list == util.read_text_file(doi_list_path)
 
 
-def test_file_read_write_json():
+def test_file_read_write_json(tmp_path):
+    dest_path = tmp_path / "dict.txt"
     # top level data structure is a list; ensure it is round-tripped correctly
     json_sample = util.read_json_file(
         "sample_data/osti/10.25982_26409.220_1820944.json"
     )
-    util.write_to_file("tests/temp/dict.txt", json_sample)
-    assert json_sample == util.read_json_file("tests/temp/dict.txt")
+    util.write_to_file(dest_path, json_sample)
+    assert json_sample == util.read_json_file(dest_path)
 
 
-def test_file_read_write_text_lines():
+def test_file_read_write_text_lines(tmp_path):
     # TODO: add test
-    util.write_to_file(
-        "tests/temp/text.txt",
-        """Write a list of lines of text to a file.
+    text_lines = """Write a list of lines of text to a file.
 
 :param file_path: path relative to the credit_engine repo
 :type file_path: string
 :param lines: content to be written to the file
 :type lines: list / dict / str
-""",
-    )
-
+"""
+    text_lines_file = tmp_path / "text.txt"
+    util.write_to_file(text_lines_file, text_lines)
+    # compare to existing file
+    assert util.read_text_file(text_lines_file) == util.read_text_file("data/text.txt")
 
 def test_dir_scanner():
     # TODO: write tests!
