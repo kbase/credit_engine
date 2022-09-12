@@ -41,14 +41,9 @@ def test_doi_to_file_name(param):
     assert util.doi_to_file_name(param["doi"]) == param[f_name]
 
 
-# TODO: test with strings and with Path objects
 def test_full_path():
     full_path_to_file = util.full_path(KBASE_DOI_FILE)
     print(util.full_path("src/util.py"))
-    print(
-        {"full path to file": full_path_to_file, "type path": type(full_path_to_file)}
-    )
-
     assert Path.is_file(full_path_to_file)
     assert Path(full_path_to_file).is_absolute()
 
@@ -89,7 +84,6 @@ def test_file_read_write_json(tmp_path):
 
 
 def test_file_read_write_text_lines(tmp_path):
-    # TODO: add test
     text_lines = """Write a list of lines of text to a file.
 
 :param file_path: path relative to the credit_engine repo

@@ -33,14 +33,14 @@ jobs:
       name: Lint linkml file
       id: lint_linkml
       run: |
-        poetry run linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
+        poetry run linkml-lint -c ./schema/kbase/linkml/default.yaml -f terminal ./schema/kbase/linkml/metadata.yaml
       continue-on-error: true
     -
       name: poetry run pytest -rP tests/
       id: run_pytest
       run: |
         poetry run python -c "import sys; print (sys.path)"
-        poetry run pytest -rP tests/
+        poetry run pytest --cov=credit_engine -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov
