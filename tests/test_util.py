@@ -34,7 +34,9 @@ doi_test_data = [
 
 file_read_write_json_test_data = [
     # top level data structure is a list
-    pytest.param("sample_data/osti/10.25982_26409.220_1820944.json", id="list_of_dicts"),
+    pytest.param(
+        "sample_data/osti/10.25982_26409.220_1820944.json", id="list_of_dicts"
+    ),
     # top level data structure is a dict
     pytest.param("sample_data/crossref/10.46936_10.25585_60000513.json", id="dict"),
 ]
@@ -117,26 +119,16 @@ def test_file_write_bytes(tmp_path):
 
 files = {
     "dot_json": [
-        'file_a.json',
-        'file_b.json',
+        "file_a.json",
+        "file_b.json",
     ],
-    "numbered": [
-        'file_1.txt',
-        'file_2.txt',
-        'file_1.xml',
-        'file_2.xml'
-    ],
-    "only_one": [
-        'file_1.txt'
-    ],
-    "twos": [
-        'file_2.txt',
-        'file_2.xml'
-    ],
+    "numbered": ["file_1.txt", "file_2.txt", "file_1.xml", "file_2.xml"],
+    "only_one": ["file_1.txt"],
+    "twos": ["file_2.txt", "file_2.xml"],
 }
 files["all"] = files["numbered"] + files["dot_json"]
 
-all_files = ['.DS_Store'] + files["all"]
+all_files = [".DS_Store"] + files["all"]
 directories = [f"directory_{character}" for character in ["1", "2", "a", "b"]]
 
 dir_scanner_test_inputs = {
@@ -145,9 +137,7 @@ dir_scanner_test_inputs = {
         # "expected": files["all"],
     },
     "dot_json": {
-        "conditions": [
-            lambda x: x.endswith('.json')
-        ],
+        "conditions": [lambda x: x.endswith(".json")],
         # "expected": files["only_one"]
     },
     "numbered": {
@@ -159,7 +149,7 @@ dir_scanner_test_inputs = {
     "only_one": {
         "conditions": [
             lambda x: x.find("1") != -1,
-            lambda x: x.endswith('txt'),
+            lambda x: x.endswith("txt"),
         ],
         # "expected": files["only_one"]
     },
@@ -172,7 +162,7 @@ dir_scanner_test_inputs = {
 }
 
 dir_scanner_test_data = []
-for k,v in dir_scanner_test_inputs.items():
+for k, v in dir_scanner_test_inputs.items():
     v["expected"] = files[k]
     dir_scanner_test_data.append(pytest.param(v, id=k))
 
@@ -206,6 +196,6 @@ def test_dir_scanner(param, tmp_path):
 
 
 def test_dir_scanner_with_relative_file_input():
-    got = util.dir_scanner(KBASE_DOI_FILE, [lambda x: x.find('kbase-dois') != -1])
+    got = util.dir_scanner(KBASE_DOI_FILE, [lambda x: x.find("kbase-dois") != -1])
     assert len(got) == 1
     assert got[0].endswith(KBASE_DOI_FILE)
