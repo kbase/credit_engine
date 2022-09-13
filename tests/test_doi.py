@@ -27,7 +27,7 @@ response_data = {
 
 # custom class to be the mock return value of requests.get()
 class MockResponse:
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args):
         self.request = args[0]
         self.response = response_data[self.request]
 
