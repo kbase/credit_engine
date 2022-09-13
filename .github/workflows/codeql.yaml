@@ -1,14 +1,9 @@
 name: "CodeQL"
 
 on:
-  push:
-  pull_request:
-    types:
-    - opened
-    - synchronize
-    - ready_for_review
+  workflow_call:
   schedule:
-    - cron: '0 8 * * 2'
+    - cron: '45 6 * * 2'
 
 jobs:
   analyze:

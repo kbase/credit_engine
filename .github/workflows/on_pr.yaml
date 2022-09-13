@@ -14,3 +14,6 @@ jobs:
   run_unit_tests:
     uses: ./.github/workflows/run_tests.yaml
     needs: format_files
+
+  run_code_ql:
+    uses: ./.github/workflows/codeql.yaml
