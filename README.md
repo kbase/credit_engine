@@ -1,6 +1,6 @@
 # KBase Credit Engine
 
-![Lint and test](https://github.com/kbase/credit_engine/actions/workflows/run_tests.yaml/badge.svg?branch=develop)
+![Lint and test](https://github.com/kbase/credit_engine/actions/workflows/run_tests.yaml/badge.svg)
 [![codecov](https://codecov.io/gh/kbase/credit_engine/branch/develop/graph/badge.svg?token=vOUaMmH86Z)](https://codecov.io/gh/kbase/credit_engine)
 
 This repo holds the schema and associated scripts used by the KBase Credit Engine.
