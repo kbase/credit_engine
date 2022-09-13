@@ -1,19 +1,14 @@
-name: Standard PR workflow
+name: Merge to main / develop
 
 on:
-  pull_request:
-    types:
-    - opened
-    - synchronize
-    - ready_for_review
+  push:
+    branches:
+      - main
+      - develop
 
 jobs:
-  format_files:
-    uses: ./.github/workflows/black.yaml
-
   run_unit_tests:
     uses: ./.github/workflows/run_tests.yaml
-    needs: format_files
 
   run_code_ql:
     uses: ./.github/workflows/codeql.yaml
