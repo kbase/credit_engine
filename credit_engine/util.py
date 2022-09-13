@@ -143,7 +143,7 @@ def write_to_file(file_path: str, lines: Union[list, dict, str]):
                 fh.write(str(line) + "\n")
         else:
             fh.write(str(lines))
-        fh.close()
+    assert fh.closed
 
 
 def write_bytes_to_file(file_path: str, file_bytes: bytes):
