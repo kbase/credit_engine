@@ -1,10 +1,10 @@
 import json
-from pathlib import Path
 import os
-from typing import Union, Optional, List
-from urllib.parse import quote
-import unicodedata
 import re
+import unicodedata
+from pathlib import Path
+from typing import List, Optional, Union
+from urllib.parse import quote
 
 
 def encode_doi(doi: str) -> str:
@@ -46,9 +46,9 @@ def full_path(file_path: Union[Path, str]) -> Path:
         file_path = Path(file_path)
 
     cwd = Path.cwd()
-    full_path = os.path.join(cwd, file_path)
+    path_including_cwd = os.path.join(cwd, file_path)
 
-    return Path.resolve(Path(full_path))
+    return Path.resolve(Path(path_including_cwd))
 
 
 def dir_scanner(
