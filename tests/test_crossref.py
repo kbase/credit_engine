@@ -86,7 +86,7 @@ def test_retrieve_doi_fail(mock_response):
 @pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_TEST_DATA)
 def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
     default_dir = tmp_path / "default_dir"
-    monkeypatch.setattr(crossref, "CROSSREF_SAMPLE_DATA_DIR", default_dir)
+    monkeypatch.setattr(crossref, "SAMPLE_DATA_DIR", default_dir)
 
     run_retrieve_doi_list(
         capsys=capsys,

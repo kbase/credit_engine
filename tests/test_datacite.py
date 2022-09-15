@@ -1,12 +1,7 @@
-import os.path
-from pathlib import Path
-from urllib.parse import quote
-
 import pytest
 
 import credit_engine.parsers.datacite as datacite
 from credit_engine.parsers.datacite import get_endpoint, retrieve_doi, retrieve_doi_list
-from credit_engine.util import dir_scanner
 from .common import run_retrieve_doi_list
 
 from .conftest import (
@@ -45,7 +40,7 @@ def test_retrieve_doi_fail(mock_response):
 @pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_TEST_DATA)
 def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
     default_dir = tmp_path / "default_dir"
-    monkeypatch.setattr(datacite, "DATACITE_SAMPLE_DATA_DIR", default_dir)
+    monkeypatch.setattr(datacite, "SAMPLE_DATA_DIR", default_dir)
 
     run_retrieve_doi_list(
         capsys=capsys,

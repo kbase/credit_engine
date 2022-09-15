@@ -5,6 +5,7 @@ import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
 from credit_engine.errors import make_error
+import requests
 
 
 def clean_doi_list(doi_list: list[str]) -> list[str]:
@@ -108,6 +109,24 @@ def dir_scanner(
         file_list.append(os.path.join(dir_path, f))
 
     return file_list
+
+
+def save_data_to_file(
+    doi: str,
+    save_dir: Union[Path, str],
+    suffix: str,
+    resp: requests.Response,
+    result_data: dict[str, dict],
+):
+    doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.{suffix}")
+    try:
+        if suffix.endswith("xml"):
+            write_bytes_to_file(doi_file, resp.content)
+        else:
+            write_to_file(doi_file, resp.json())
+        result_data["files"][doi] = doi_file
+    except OSError as e:
+        print(e)
 
 
 def read_json_file(file_path: Union[Path, str]) -> dict[str, Union[str, list, dict]]:
