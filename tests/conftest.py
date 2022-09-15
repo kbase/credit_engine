@@ -86,6 +86,19 @@ CLEAN_DOI_LIST_DATA = [
     ),
 ]
 
+DATA = {
+    NOT_FOUND: {OK: False, CODE: 404, CONTENT: "Resource not found"},
+    VALID_DOI: {
+        OK: True,
+        CODE: 200,
+        JSON: {"this": "is", "not": "a", "dict": {}},
+    },
+    ANOTHER_VALID_DOI: {
+        OK: True,
+        CODE: 200,
+        JSON: {"this": ["is", "different", "apparently"]},
+    },
+}
 
 RESPONSE_DATA = {
     # check_doi_source
@@ -100,11 +113,13 @@ RESPONSE_DATA = {
         JSON: {"message": {"agency": {"id": "crossref"}}},
     },
     # returns a 404
-    "https://api.crossref.org/works/NOT_FOUND/agency": {
-        OK: False,
-        CODE: 404,
-        CONTENT: "Resource not found.",
-    },
+    "https://api.crossref.org/works/NOT_FOUND/agency": DATA[NOT_FOUND],
+    # crossref retrieve_doi
+    "https://api.crossref.org/works/VALID_DOI": DATA[VALID_DOI],
+    "https://api.crossref.org/works/ANOTHER_VALID_DOI": DATA[ANOTHER_VALID_DOI],
+    "https://api.crossref.org/works/INVALID_DOI": DATA[NOT_FOUND],
+    "https://api.crossref.org/works/NOT_FOUND": DATA[NOT_FOUND],
+    # 'https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}'
     # datacite retrieve_doi
     "https://api.datacite.org/dois/NOT_FOUND?affiliation=true": {
         OK: False,
@@ -130,16 +145,10 @@ RESPONSE_DATA = {
             ]
         },
     },
-    "https://api.datacite.org/dois/VALID_DOI?affiliation=true": {
-        OK: True,
-        CODE: 200,
-        JSON: {"this": "is", "not": "a", "dict": {}},
-    },
-    "https://api.datacite.org/dois/ANOTHER_VALID_DOI?affiliation=true": {
-        OK: True,
-        CODE: 200,
-        JSON: {"this": ["is", "different", "apparently"]},
-    },
+    "https://api.datacite.org/dois/VALID_DOI?affiliation=true": DATA[VALID_DOI],
+    "https://api.datacite.org/dois/ANOTHER_VALID_DOI?affiliation=true": DATA[
+        ANOTHER_VALID_DOI
+    ],
 }
 
 
@@ -177,6 +186,7 @@ INVALID_DOI_LIST = {
 }
 
 RETRIEVE_DOI_LIST_TEST_DATA = []
+SUFFIX = "json"
 
 # add in save_files and save_dir
 for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
@@ -202,7 +212,7 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
                 **p,
                 "save_files": True,
                 "save_dir": "tmp_path",
-                "file_list": [doi + ".json" for doi in p["output"]["data"].keys()],
+                "file_list": [f"{doi}.{SUFFIX}" for doi in p["output"]["data"]],
             },
             id=p["id"] + "_save_to_dir",
         )
@@ -214,9 +224,29 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
             {
                 **p,
                 "save_files": True,
-                "file_list": [doi + ".json" for doi in p["output"]["data"].keys()],
+                "file_list": [f"{doi}.{SUFFIX}" for doi in p["output"]["data"]],
             },
             id=p["id"] + "_save_to_default_dir",
+        )
+    )
+
+    # save to an invalid dir
+    RETRIEVE_DOI_LIST_TEST_DATA.append(
+        pytest.param(
+            {
+                **p,
+                "save_files": True,
+                "save_dir": "/does/not/exist",
+                "file_list": [],
+                # only valid DOIs will have the file not found error
+                "errors": p.get("errors", [])
+                + [
+                    f"[Errno 2] No such file or directory: '/does/not/exist/{doi}.{SUFFIX}'"
+                    for doi in p["input"]
+                    if doi in [VALID_DOI, ANOTHER_VALID_DOI]
+                ],
+            },
+            id=p["id"] + "_save_to_invalid_dir",
         )
     )
 

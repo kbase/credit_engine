@@ -4,19 +4,7 @@ import re
 import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
-from urllib.parse import quote
 from credit_engine.errors import make_error
-
-
-def encode_doi(doi: str) -> str:
-    """Encodes any dodgy doi characters for use as an URL.
-    See https://www.doi.org/doi_handbook/2_Numbering.html#2.5.2 for DOI encoding recs
-    :param doi: the doi
-    :type doi: str
-    :return: encoded doi for URI usage
-    :rtype: str
-    """
-    return quote(doi)
 
 
 def clean_doi_list(doi_list: list[str]) -> list[str]:

@@ -1,13 +1,21 @@
-from urllib.parse import quote
-
 import pytest
 
-from credit_engine.parsers.crossref import DEFAULT_EMAIL, get_endpoint
-
-SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
-QUOTED_DOI = quote(SAMPLE_DOI)
-SAMPLE_EMAIL = "me@home.com"
-QUOTED_EMAIL = quote(SAMPLE_EMAIL)
+from credit_engine.parsers.crossref import (
+    DEFAULT_EMAIL,
+    get_endpoint,
+    retrieve_doi,
+    retrieve_doi_list,
+)
+from credit_engine.parsers import crossref
+from .conftest import (
+    CLEAN_DOI_LIST_DATA,
+    DOI_DATA,
+    QUOTED_DOI,
+    SAMPLE_DOI,
+    SAMPLE_EMAIL,
+    RETRIEVE_DOI_LIST_TEST_DATA,
+)
+from .common import run_retrieve_doi_list
 
 GET_ENDPOINT_DATA = [
     pytest.param(
@@ -62,3 +70,38 @@ def test_get_endpoint_fail():
 
     with pytest.raises(ValueError, match=r"Invalid output format: XML"):
         get_endpoint("some_doi_here", "XML")
+
+
+def test_retrieve_doi_ok(mock_response):
+    assert retrieve_doi("VALID_DOI").json() == DOI_DATA["VALID_DOI"]
+
+
+def test_retrieve_doi_fail(mock_response):
+    with pytest.raises(
+        ValueError, match="Request for NOT_FOUND failed with status code 404"
+    ):
+        retrieve_doi("NOT_FOUND")
+
+
+@pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_TEST_DATA)
+def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
+    default_dir = tmp_path / "default_dir"
+    monkeypatch.setattr(crossref, "CROSSREF_SAMPLE_DATA_DIR", default_dir)
+
+    run_retrieve_doi_list(
+        capsys=capsys,
+        default_dir=default_dir,
+        mock_response=mock_response,
+        monkeypatch=monkeypatch,
+        param=param,
+        retrieve_doi_list=crossref.retrieve_doi_list,
+        tmp_path=tmp_path,
+    )
+
+
+@pytest.mark.parametrize("param", CLEAN_DOI_LIST_DATA)
+def test_retrieve_doi_list_fail(param, mock_response):
+    # only run tests where we know the test fails
+    if "output" not in param:
+        with pytest.raises(ValueError, match=param["error"]):
+            retrieve_doi_list(param["input"])
