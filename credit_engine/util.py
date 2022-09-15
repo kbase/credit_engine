@@ -5,7 +5,7 @@ import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
 from urllib.parse import quote
-from errors import make_error
+from credit_engine.errors import make_error
 
 
 def encode_doi(doi: str) -> str:
