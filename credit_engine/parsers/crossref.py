@@ -125,11 +125,5 @@ def retrieve_doi_list(
                 resp=resp,
                 result_data=results,
             )
-            # doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.json")
-            # try:
-            #     write_to_file(doi_file, resp.json())
-            #     results["files"][doi] = doi_file
-            # except OSError as e:
-            #     print(e)
 
     return results
