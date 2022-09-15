@@ -1,59 +1,59 @@
 import credit_engine.errors as errors
+from credit_engine.errors import ERROR_STRING
 import pytest
-
 
 MAKE_ERROR_TEST_DATA = [
     pytest.param(
         {
             "input": [],
-            "output": "An unspecified error has occurred",
+            "output": ERROR_STRING["generic"],
         },
         id="no_args",
     ),
     pytest.param(
         {
             "input": ["this error type does not exist"],
-            "output": "An unspecified error has occurred",
+            "output": ERROR_STRING["generic"],
         },
         id="invalid_args",
     ),
     pytest.param(
         {
             "input": ["doi_list_format"],
-            "output": "DOI list must be a list of strings with non-zero length",
+            "output": ERROR_STRING["doi_list_format"],
         },
         id="zero_len_list",
     ),
     pytest.param(
         {
             "input": ["doi_list_format", {"this": "that"}],
-            "output": "DOI list must be a list of strings with non-zero length",
+            "output": ERROR_STRING["doi_list_format"],
         },
         id="zero_len_list_extra_args",
     ),
     pytest.param(
         {
             "input": ["no_valid_dois"],
-            "output": "No valid DOIs found in doi list",
+            "output": ERROR_STRING["no_valid_dois"],
         },
         id="no_valid_dois",
     ),
     pytest.param(
         {
             "input": ["missing_required"],
-            "output": "Missing required argument",
+            "output": ERROR_STRING["missing_required"],
         },
         id="missing_required_no_args",
     ),
     pytest.param(
         {
             "input": ["missing_required", ""],
-            "output": "Missing required argument",
+            "output": ERROR_STRING["missing_required"],
         },
         id="missing_required_wrong_args_type",
     ),
     pytest.param(
-        {"input": ["missing_required", {}], "output": "Missing required argument"},
+        {"input": ["missing_required", {}], "output": ERROR_STRING["missing_required"]},
         id="missing_required_empty_args",
     ),
     pytest.param(

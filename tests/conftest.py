@@ -1,6 +1,7 @@
 import json
 from typing import Any, Union
 from urllib.parse import quote
+from credit_engine.errors import ERROR_STRING
 
 import pytest
 import requests
@@ -38,28 +39,28 @@ CLEAN_DOI_LIST_DATA = [
     pytest.param(
         {
             "input": VALID_DOI,
-            "error": "DOI list must be a list of strings with non-zero length",
+            "error": ERROR_STRING["doi_list_format"],
         },
         id="wrong_input",
     ),
     pytest.param(
         {
             "input": [],
-            "error": "DOI list must be a list of strings with non-zero length",
+            "error": ERROR_STRING["doi_list_format"],
         },
         id="zero_length_list_input",
     ),
     pytest.param(
         {
             "input": None,
-            "error": "DOI list must be a list of strings with non-zero length",
+            "error": ERROR_STRING["doi_list_format"],
         },
         id="None_input",
     ),
     pytest.param(
         {
             "input": [None, "       ", "    ", "  \t  \n\n", ""],
-            "error": "No valid DOIs found in doi list",
+            "error": ERROR_STRING["no_valid_dois"],
         },
         id="spaced_out",
     ),
