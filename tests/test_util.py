@@ -2,8 +2,17 @@ import os.path
 from pathlib import Path, PurePath
 
 import pytest
+from pytest_cases import fixture_ref, lazy_value, parametrize
 
 import credit_engine.util as util
+
+from .conftest import (
+    CLEAN_DOI_LIST_DATA,
+    ANOTHER_VALID_DOI,
+    INVALID_DOI,
+    NOT_FOUND,
+    VALID_DOI,
+)
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
 
@@ -45,18 +54,27 @@ TEXT_LINES = """Write a list of lines of text to a file.
 
 
 @pytest.mark.parametrize("param", DOI_TEST_DATA)
-def test_encode_doi(param):
-    assert util.encode_doi(param["doi"]) == param["encoded"]
-
-
-@pytest.mark.parametrize("param", DOI_TEST_DATA)
 def test_doi_to_file_name(param):
     assert util.doi_to_file_name(param["doi"]) == param["file_name"]
 
 
+@pytest.mark.parametrize("param", DOI_TEST_DATA)
+def test_encode_doi(param):
+    assert util.encode_doi(param["doi"]) == param["encoded"]
+
+
+@pytest.mark.parametrize("param", CLEAN_DOI_LIST_DATA)
+def test_clean_doi_list(param):
+    if "output" in param:
+        clean_dois = util.clean_doi_list(param["input"])
+        assert set(clean_dois) == set(param["output"])
+    else:
+        with pytest.raises(ValueError, match=param["error"]):
+            util.clean_doi_list(param["input"])
+
+
 def test_full_path():
     full_path_to_file = util.full_path(KBASE_DOI_FILE)
-    print(util.full_path("src/util.py"))
     assert Path.is_file(full_path_to_file)
     assert Path(full_path_to_file).is_absolute()
 
@@ -117,6 +135,7 @@ FILES = {
     "numbered": ["file_1.txt", "file_2.txt", "file_1.xml", "file_2.xml"],
     "only_one": ["file_1.txt"],
     "twos": ["file_2.txt", "file_2.xml"],
+    "none": [],
 }
 FILES["all"] = FILES["numbered"] + FILES["dot_json"]
 
@@ -146,7 +165,13 @@ DIR_SCANNER_TEST_INPUTS = {
             lambda x: x.find("2") != -1,
         ],
     },
+    "none": {
+        "conditions": [
+            lambda x: x.find("hippopotamus") != -1,
+        ]
+    },
 }
+
 
 DIR_SCANNER_TEST_DATA = []
 for k, v in DIR_SCANNER_TEST_INPUTS.items():
