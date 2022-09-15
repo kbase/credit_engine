@@ -27,7 +27,6 @@ DOI_DATA = {
 }
 
 
-
 CLEAN_DOI_LIST_DATA = [
     pytest.param(
         {
@@ -219,7 +218,6 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
             id=p["id"] + "_save_to_default_dir",
         )
     )
-
 
 
 # custom class to be the mock return value of requests.get()
