@@ -1,0 +1,20 @@
+name: Merge to main / develop
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  run_unit_tests:
+    uses: ./.github/workflows/run_tests.yaml
+
+  run_code_ql:
+    uses: ./.github/workflows/codeql.yaml
+
+  run_codacy:
+    uses: ./.github/workflows/codacy.yaml
+
+  run_trivy:
+    uses: ./.github/workflows/trivy.yaml

@@ -1,0 +1,6 @@
+Write a list of lines of text to a file.
+
+:param file_path: path relative to the credit_engine repo
+:type file_path: string
+:param lines: content to be written to the file
+:type lines: list / dict / str

@@ -1,4 +1,4 @@
-name: Testing workflow
+name: Lint and Test
 
 on:
   workflow_call:
@@ -21,29 +21,34 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     -
+      name: Install poetry 1.2
+      uses: abatilo/actions-poetry@v2
+      with:
+        poetry-version: 1.2
+    -
       name: Install dependencies
       id: install_deps
       run: poetry install
     -
-      name: Run Python tests
+      name: Lint linkml file
+      id: lint_linkml
+      run: |
+        poetry run linkml-lint -c ./schema/kbase/linkml/default.yaml -f terminal ./schema/kbase/linkml/metadata.yaml
+      continue-on-error: true
+    -
+      name: poetry run pytest -rP tests/
       id: run_pytest
       run: |
-        poetry run pytest tests/
+        poetry run pytest --cov=credit_engine --cov-report=xml -rP tests/
       continue-on-error: true
     -
       name: Send to Codecov
       id: send_to_codecov
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v3
       continue-on-error: true
       with:
-        files: ./python-coverage/coverage.xml
+        files: ./coverage.xml
         fail_ci_if_error: true
-    -
-      name: Lint linkml file
-      id: lint_linkml
-      run: |
-        poetry run linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
-      continue-on-error: true
     -
       name: outcome
       if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success' || steps.lint_linkml.outcome != 'success'
