@@ -1,5 +1,4 @@
-from typing import Optional, Any
-
+from typing import Any, Optional
 
 ERROR_STRING = {
     "doi_list_format": "DOI list must be a list of strings with non-zero length",

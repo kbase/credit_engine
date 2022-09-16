@@ -1,15 +1,15 @@
-import pytest
 import os.path
 from pathlib import Path
-from credit_engine.util import dir_scanner
+
+import pytest
+
 from credit_engine.parsers import doi
+from credit_engine.util import dir_scanner
 
 
 def run_retrieve_doi_list(
     capsys,
     default_dir,
-    mock_response,
-    monkeypatch,
     param,
     source,
     tmp_path,
@@ -39,6 +39,7 @@ def run_retrieve_doi_list(
         if save_dir is None:
             save_dir = default_dir
             assert Path.exists(save_dir)
+
         # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in param["file_list"]]
         # TODO: add file contents check

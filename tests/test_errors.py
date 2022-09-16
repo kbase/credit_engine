@@ -1,6 +1,7 @@
+import pytest
+
 import credit_engine.errors as errors
 from credit_engine.errors import ERROR_STRING
-import pytest
 
 MAKE_ERROR_TEST_DATA = [
     pytest.param(

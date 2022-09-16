@@ -1,9 +1,11 @@
-import requests
 from typing import Optional
 from urllib.parse import quote
+
+import requests
+
 from credit_engine.errors import make_error
 
-VALID_OUTPUT_FORMATS = ["json", "unixsd", "unixref"]
+FILE_EXTENSIONS = {"unixref": "unixref.xml", "unixsd": "unixsd.xml", "json": "json"}
 SAMPLE_DATA_DIR = "sample_data/crossref"
 DEFAULT_EMAIL = "credit_engine@kbase.us"
 DEFAULT_FORMAT = "json"
@@ -32,7 +34,7 @@ def get_endpoint(
         output_format = DEFAULT_FORMAT
 
     lc_output_format = output_format.lower()
-    if lc_output_format not in VALID_OUTPUT_FORMATS:
+    if lc_output_format not in FILE_EXTENSIONS:
         raise ValueError(make_error("invalid", {"format": output_format}))
 
     if lc_output_format == "json":

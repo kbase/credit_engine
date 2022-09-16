@@ -5,9 +5,7 @@ import pytest
 
 import credit_engine.util as util
 
-from .conftest import (
-    CLEAN_DOI_LIST_DATA,
-)
+from .conftest import CLEAN_DOI_LIST_DATA, MockResponse
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
 
@@ -113,6 +111,73 @@ def test_file_write_bytes(tmp_path):
     util.write_bytes_to_file(dest_path, byte_content)
     dest_path_contents = dest_path.read_bytes()
     assert dest_path_contents == byte_content
+
+
+SAVE_DATA_TO_FILE_TEST_DATA = [
+    pytest.param(
+        {
+            "doi": "VALID_DOI",
+            "suffix": "json",
+            "resp": MockResponse({"json": {"this": "that"}}),
+            "doi_file": "VALID_DOI.json",
+        },
+        id="",
+    )
+]
+
+
+@pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_TEST_DATA)
+def test_save_data_to_file(param, tmp_path):
+    doi_file = tmp_path / param["doi_file"]
+    assert (
+        util.save_data_to_file(param["doi"], tmp_path, param["suffix"], param["resp"])
+        == doi_file
+    )
+    assert Path.exists(doi_file) and Path.is_file(doi_file)
+    # read the file contents and ensure they are correct
+
+
+SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
+    # dir does not exist
+    pytest.param(
+        {
+            "doi": "VALID_DOI",
+            "save_dir": "no/dir/found",
+            "suffix": "json",
+            "resp": MockResponse({"json": {"this": "that"}}),
+            "error": f"No such file or directory: '{util.full_path('no/dir/found')}/VALID_DOI.json'",
+        },
+        id="relative_dir_not_found",
+    ),
+    pytest.param(
+        {
+            "doi": "VALID_DOI",
+            "save_dir": "/no/dir/found",
+            "suffix": "json",
+            "resp": MockResponse({"json": {"this": "that"}}),
+            "error": "No such file or directory: '/no/dir/found/VALID_DOI.json'",
+        },
+        id="absolute_dir_not_found",
+    ),
+]
+
+
+@pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_FAIL_TEST_DATA)
+def test_save_data_to_file_fail(param, capsys):
+    assert (
+        util.save_data_to_file(
+            param["doi"], param["save_dir"], param["suffix"], param["resp"]
+        )
+        is None
+    )
+    readouterr = capsys.readouterr()
+    sys_out = readouterr.out.split("\n")
+    match_found = False
+    for line in sys_out:
+        if line.find(param["error"]) != -1:
+            match_found = True
+            break
+    assert match_found is True
 
 
 FILES = {

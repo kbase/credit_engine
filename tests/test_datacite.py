@@ -3,14 +3,14 @@ import pytest
 import credit_engine.parsers.datacite as datacite
 import credit_engine.parsers.doi as doi
 from credit_engine.parsers.datacite import get_endpoint, retrieve_doi
-from .common import run_retrieve_doi_list
 
+from .common import run_retrieve_doi_list
 from .conftest import (
     CLEAN_DOI_LIST_DATA,
-    QUOTED_DOI,
-    SAMPLE_DOI,
     DOI_DATA,
+    QUOTED_DOI,
     RETRIEVE_DOI_LIST_TEST_DATA,
+    SAMPLE_DOI,
 )
 
 
@@ -46,8 +46,6 @@ def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
     run_retrieve_doi_list(
         capsys=capsys,
         default_dir=default_dir,
-        mock_response=mock_response,
-        monkeypatch=monkeypatch,
         param=param,
         source="datacite",
         tmp_path=tmp_path,
