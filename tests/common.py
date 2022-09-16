@@ -30,7 +30,9 @@ def run_retrieve_doi_list(
         else:
             Path.mkdir(default_dir, exist_ok=True, parents=True)
 
-        retrieval_results = doi.retrieve_doi_list(param["input"], save_files, save_dir, source)
+        retrieval_results = doi.retrieve_doi_list(
+            param["input"], save_files, save_dir, source
+        )
 
         assert retrieval_results["data"] == param["output"]["data"]
 

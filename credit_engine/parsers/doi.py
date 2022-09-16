@@ -42,7 +42,7 @@ def retrieve_doi_list(
     """
     cleaned_doi_list = util.clean_doi_list(doi_list)
 
-    if source == 'datacite':
+    if source == "datacite":
         parser = datacite
     elif source == "crossref":
         parser = crossref
