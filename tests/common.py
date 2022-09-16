@@ -2,6 +2,7 @@ import pytest
 import os.path
 from pathlib import Path
 from credit_engine.util import dir_scanner
+from credit_engine.parsers import doi
 
 
 def run_retrieve_doi_list(
@@ -10,7 +11,7 @@ def run_retrieve_doi_list(
     mock_response,
     monkeypatch,
     param,
-    retrieve_doi_list,
+    source,
     tmp_path,
 ):
 
@@ -29,7 +30,7 @@ def run_retrieve_doi_list(
         else:
             Path.mkdir(default_dir, exist_ok=True, parents=True)
 
-        retrieval_results = retrieve_doi_list(param["input"], save_files, save_dir)
+        retrieval_results = doi.retrieve_doi_list(param["input"], save_files, save_dir, source)
 
         assert retrieval_results["data"] == param["output"]["data"]
 
@@ -46,7 +47,7 @@ def run_retrieve_doi_list(
                 dir_scanner(save_dir)
             assert retrieval_results["files"] == {}
     else:
-        assert retrieve_doi_list(param["input"]) == param["output"]
+        assert doi.retrieve_doi_list(param["input"], source=source) == param["output"]
         assert dir_scanner(tmp_path) == []
 
     if "errors" in param:

@@ -1,7 +1,8 @@
 import pytest
 
 import credit_engine.parsers.datacite as datacite
-from credit_engine.parsers.datacite import get_endpoint, retrieve_doi, retrieve_doi_list
+import credit_engine.parsers.doi as doi
+from credit_engine.parsers.datacite import get_endpoint, retrieve_doi
 from .common import run_retrieve_doi_list
 
 from .conftest import (
@@ -48,7 +49,7 @@ def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
         mock_response=mock_response,
         monkeypatch=monkeypatch,
         param=param,
-        retrieve_doi_list=datacite.retrieve_doi_list,
+        source="datacite",
         tmp_path=tmp_path,
     )
 
@@ -58,4 +59,4 @@ def test_retrieve_doi_list_fail(param, mock_response):
     # only run tests where we know the test fails
     if "output" not in param:
         with pytest.raises(ValueError, match=param["error"]):
-            retrieve_doi_list(param["input"])
+            doi.retrieve_doi_list(param["input"], source="datacite")

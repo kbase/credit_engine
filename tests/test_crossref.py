@@ -1,12 +1,12 @@
 import pytest
 
+from credit_engine.parsers import crossref
+import credit_engine.parsers.doi as doi
 from credit_engine.parsers.crossref import (
     DEFAULT_EMAIL,
     get_endpoint,
     retrieve_doi,
-    retrieve_doi_list,
 )
-from credit_engine.parsers import crossref
 from .conftest import (
     CLEAN_DOI_LIST_DATA,
     DOI_DATA,
@@ -94,7 +94,7 @@ def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
         mock_response=mock_response,
         monkeypatch=monkeypatch,
         param=param,
-        retrieve_doi_list=crossref.retrieve_doi_list,
+        source="crossref",
         tmp_path=tmp_path,
     )
 
@@ -104,4 +104,4 @@ def test_retrieve_doi_list_fail(param, mock_response):
     # only run tests where we know the test fails
     if "output" not in param:
         with pytest.raises(ValueError, match=param["error"]):
-            retrieve_doi_list(param["input"])
+            doi.retrieve_doi_list(param["input"], source="crossref")

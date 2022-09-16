@@ -1,13 +1,7 @@
 import requests
-from typing import Optional, Union
-from pathlib import Path
+from typing import Optional
 from urllib.parse import quote
 from credit_engine.errors import make_error
-
-from credit_engine.util import (
-    clean_doi_list,
-    save_data_to_file,
-)
 
 VALID_OUTPUT_FORMATS = ["json", "unixsd", "unixref"]
 SAMPLE_DATA_DIR = "sample_data/crossref"
@@ -74,56 +68,3 @@ def retrieve_doi(
     raise ValueError(
         f"Request for {doi} failed with status code {response.status_code}"
     )
-
-
-def retrieve_doi_list(
-    doi_list: list[str],
-    save_files: bool = False,
-    save_dir: Optional[Union[Path, str]] = SAMPLE_DATA_DIR,
-    # TODO: add output_format_list option
-) -> dict[str, dict]:
-    """Retrieve a list of DOIs from DataCite.
-
-    :param doi_list: list of DOIs to retrieve
-    :type doi_list: list[str]
-    :param save_files: whether or not to save the data to disk, defaults to False
-    :type save_files: bool, optional
-    :param save_dir: the directory to save files to, defaults to SAMPLE_DATA_DIR
-    :type save_dir: Optional[Union[Path, str]], optional
-    :return: a dictionary with two keys, 'data', where the DOI json is stored, and
-    'files', containing a mapping of DOI to file path for saved data
-    :rtype: dict[str, dict]
-    """
-
-    cleaned_doi_list = clean_doi_list(doi_list)
-    if not save_dir:
-        # use the sample dir
-        save_dir = SAMPLE_DATA_DIR
-
-    results = {
-        "data": {},
-    }
-
-    if save_files:
-        results["files"] = {}
-
-    for doi in cleaned_doi_list:
-        try:
-            resp = retrieve_doi(doi)
-
-        except ValueError as e:
-            print(e)
-            continue
-
-        results["data"][doi] = resp.json()
-
-        if save_files:
-            save_data_to_file(
-                doi=doi,
-                save_dir=save_dir,
-                suffix="json",
-                resp=resp,
-                result_data=results,
-            )
-
-    return results
