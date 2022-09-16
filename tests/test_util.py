@@ -2,16 +2,11 @@ import os.path
 from pathlib import Path, PurePath
 
 import pytest
-from pytest_cases import fixture_ref, lazy_value, parametrize
 
 import credit_engine.util as util
 
 from .conftest import (
     CLEAN_DOI_LIST_DATA,
-    ANOTHER_VALID_DOI,
-    INVALID_DOI,
-    NOT_FOUND,
-    VALID_DOI,
 )
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
@@ -20,7 +15,6 @@ DOI_TEST_DATA = [
     pytest.param(
         {
             "doi": "10.1000/123%45.6#789",
-            "encoded": "10.1000/123%2545.6%23789",
             "file_name": "10.1000_123_45.6_789",
         },
         id="percent_hashtag",
@@ -28,7 +22,6 @@ DOI_TEST_DATA = [
     pytest.param(
         {
             "doi": '10.100/%"# ?.<>{}^[]`|\\+',
-            "encoded": "10.100/%25%22%23%20%3F.%3C%3E%7B%7D%5E%5B%5D%60%7C%5C%2B",
             "file_name": "10.100_._",
         },
         id="all_special_uri_chars",
@@ -56,11 +49,6 @@ TEXT_LINES = """Write a list of lines of text to a file.
 @pytest.mark.parametrize("param", DOI_TEST_DATA)
 def test_doi_to_file_name(param):
     assert util.doi_to_file_name(param["doi"]) == param["file_name"]
-
-
-@pytest.mark.parametrize("param", DOI_TEST_DATA)
-def test_encode_doi(param):
-    assert util.encode_doi(param["doi"]) == param["encoded"]
 
 
 @pytest.mark.parametrize("param", CLEAN_DOI_LIST_DATA)

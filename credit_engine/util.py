@@ -4,19 +4,8 @@ import re
 import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
-from urllib.parse import quote
 from credit_engine.errors import make_error
-
-
-def encode_doi(doi: str) -> str:
-    """Encodes any dodgy doi characters for use as an URL.
-    See https://www.doi.org/doi_handbook/2_Numbering.html#2.5.2 for DOI encoding recs
-    :param doi: the doi
-    :type doi: str
-    :return: encoded doi for URI usage
-    :rtype: str
-    """
-    return quote(doi)
+import requests
 
 
 def clean_doi_list(doi_list: list[str]) -> list[str]:
@@ -120,6 +109,24 @@ def dir_scanner(
         file_list.append(os.path.join(dir_path, f))
 
     return file_list
+
+
+def save_data_to_file(
+    doi: str,
+    save_dir: Union[Path, str],
+    suffix: str,
+    resp: requests.Response,
+    result_data: dict[str, dict],
+):
+    doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.{suffix}")
+    try:
+        if suffix.endswith("xml"):
+            write_bytes_to_file(doi_file, resp.content)
+        else:
+            write_to_file(doi_file, resp.json())
+        result_data["files"][doi] = doi_file
+    except OSError as e:
+        print(e)
 
 
 def read_json_file(file_path: Union[Path, str]) -> dict[str, Union[str, list, dict]]:

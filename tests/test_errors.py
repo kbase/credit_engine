@@ -71,6 +71,27 @@ MAKE_ERROR_TEST_DATA = [
         id="missing_required_valid_args",
     ),
     pytest.param(
+        {
+            "input": ["invalid", {}],
+            "output": ERROR_STRING["invalid"],
+        },
+        id="invalid_empty_args",
+    ),
+    pytest.param(
+        {
+            "input": ["invalid", {"this": "that"}],
+            "output": "Invalid output format: FORMAT",
+        },
+        id="invalid_invalid_args",
+    ),
+    pytest.param(
+        {
+            "input": ["invalid", {"format": "koala"}],
+            "output": "Invalid output format: koala",
+        },
+        id="invalid_valid_args",
+    ),
+    pytest.param(
         {"input": ["http_error"], "output": "HTTP request failed"},
         id="http_error_no_args",
     ),
