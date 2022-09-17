@@ -255,8 +255,6 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
 # custom class to be the mock return value of requests.get()
 class MockResponse:
     def __init__(self, kwargs: dict[str, Any]):
-        print("args to __init__")
-        print(kwargs)
         if "url" in kwargs:
             self.response = RESPONSE_DATA[kwargs["url"]]
             return
@@ -271,10 +269,10 @@ class MockResponse:
     @property
     def content(self):
         if self.response[CONTENT]:
-            return self.response[CONTENT].encode()
+            return self.response[CONTENT]
 
         if self.response[JSON]:
-            return json.dumps(self.response[JSON]).encode()
+            return json.dumps(self.response[JSON])
 
         return ""
 

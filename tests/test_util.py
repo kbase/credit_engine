@@ -1,9 +1,11 @@
+import json
 import os.path
 from pathlib import Path, PurePath
 
 import pytest
 
 import credit_engine.util as util
+from tests.common import run_file_contents_check
 
 from .conftest import CLEAN_DOI_LIST_DATA, MockResponse
 
@@ -113,28 +115,46 @@ def test_file_write_bytes(tmp_path):
     assert dest_path_contents == byte_content
 
 
+save_data_to_file_data = [
+    {
+        "doi": "10.25585/1487552",
+        "suffix": "json",
+        "content": json.loads(
+            Path.read_text(util.full_path("sample_data/datacite/10.25585_1487552.json"))
+        ),
+    },
+    {
+        "doi": "10.25585/1487552",
+        "suffix": "xml",
+        "content": Path.read_bytes(
+            util.full_path("sample_data/datacite/10.25585_1487552.xml")
+        ),
+    },
+]
+
+
 SAVE_DATA_TO_FILE_TEST_DATA = [
     pytest.param(
         {
-            "doi": "VALID_DOI",
-            "suffix": "json",
-            "resp": MockResponse({"json": {"this": "that"}}),
-            "doi_file": "VALID_DOI.json",
+            **param,
+            "resp": MockResponse({"json": param["content"]})
+            if param["suffix"] == "json"
+            else MockResponse({"content": param["content"]}),
         },
-        id="",
+        id=f"save_{param['suffix']}",
     )
+    for param in save_data_to_file_data
 ]
 
 
 @pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_TEST_DATA)
 def test_save_data_to_file(param, tmp_path):
-    doi_file = tmp_path / param["doi_file"]
+    doi_file = tmp_path / f'{util.doi_to_file_name(param["doi"])}.{param["suffix"]}'
     assert (
         util.save_data_to_file(param["doi"], tmp_path, param["suffix"], param["resp"])
         == doi_file
     )
-    assert Path.exists(doi_file) and Path.is_file(doi_file)
-    # read the file contents and ensure they are correct
+    run_file_contents_check(doi_file, param["content"])
 
 
 SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
