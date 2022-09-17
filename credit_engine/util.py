@@ -4,8 +4,10 @@ import re
 import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
-from credit_engine.errors import make_error
+
 import requests
+
+from credit_engine.errors import make_error
 
 
 def clean_doi_list(doi_list: list[str]) -> list[str]:
@@ -116,17 +118,25 @@ def save_data_to_file(
     save_dir: Union[Path, str],
     suffix: str,
     resp: requests.Response,
-    result_data: dict[str, dict],
-):
+) -> Optional[Path]:
+    # ensure we don't have an extra full stop
+    if suffix.startswith("."):
+        suffix = suffix[1:]
+
     doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.{suffix}")
     try:
         if suffix.endswith("xml"):
             write_bytes_to_file(doi_file, resp.content)
         else:
             write_to_file(doi_file, resp.json())
-        result_data["files"][doi] = doi_file
+        return doi_file
     except OSError as e:
         print(e)
+    except Exception as e:
+        print(type(Exception))
+        print(e)
+
+    return None
 
 
 def read_json_file(file_path: Union[Path, str]) -> dict[str, Union[str, list, dict]]:

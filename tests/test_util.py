@@ -1,13 +1,13 @@
+import json
 import os.path
 from pathlib import Path, PurePath
 
 import pytest
 
 import credit_engine.util as util
+from tests.common import run_file_contents_check
 
-from .conftest import (
-    CLEAN_DOI_LIST_DATA,
-)
+from .conftest import CLEAN_DOI_LIST_DATA, MockResponse
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
 
@@ -113,6 +113,91 @@ def test_file_write_bytes(tmp_path):
     util.write_bytes_to_file(dest_path, byte_content)
     dest_path_contents = dest_path.read_bytes()
     assert dest_path_contents == byte_content
+
+
+save_data_to_file_data = [
+    {
+        "doi": "10.25585/1487552",
+        "suffix": "json",
+        "content": json.loads(
+            Path.read_text(util.full_path("sample_data/datacite/10.25585_1487552.json"))
+        ),
+    },
+    {
+        "doi": "10.25585/1487552",
+        "suffix": "xml",
+        "content": Path.read_bytes(
+            util.full_path("sample_data/datacite/10.25585_1487552.xml")
+        ),
+    },
+]
+
+
+SAVE_DATA_TO_FILE_TEST_DATA = [
+    pytest.param(
+        {
+            **param,
+            "resp": MockResponse({"json": param["content"]})
+            if param["suffix"] == "json"
+            else MockResponse({"content": param["content"]}),
+        },
+        id=f"save_{param['suffix']}",
+    )
+    for param in save_data_to_file_data
+]
+
+
+@pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_TEST_DATA)
+def test_save_data_to_file(param, tmp_path):
+    doi_file = tmp_path / f'{util.doi_to_file_name(param["doi"])}.{param["suffix"]}'
+    assert (
+        util.save_data_to_file(param["doi"], tmp_path, param["suffix"], param["resp"])
+        == doi_file
+    )
+    run_file_contents_check(doi_file, param["content"])
+
+
+SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
+    # dir does not exist
+    pytest.param(
+        {
+            "doi": "VALID_DOI",
+            "save_dir": "no/dir/found",
+            "suffix": "json",
+            "resp": MockResponse({"json": {"this": "that"}}),
+            "error": f"No such file or directory: '{util.full_path('no/dir/found')}/VALID_DOI.json'",
+        },
+        id="relative_dir_not_found",
+    ),
+    pytest.param(
+        {
+            "doi": "VALID_DOI",
+            "save_dir": "/no/dir/found",
+            "suffix": "json",
+            "resp": MockResponse({"json": {"this": "that"}}),
+            "error": "No such file or directory: '/no/dir/found/VALID_DOI.json'",
+        },
+        id="absolute_dir_not_found",
+    ),
+]
+
+
+@pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_FAIL_TEST_DATA)
+def test_save_data_to_file_fail(param, capsys):
+    assert (
+        util.save_data_to_file(
+            param["doi"], param["save_dir"], param["suffix"], param["resp"]
+        )
+        is None
+    )
+    readouterr = capsys.readouterr()
+    sys_out = readouterr.out.split("\n")
+    match_found = False
+    for line in sys_out:
+        if line.find(param["error"]) != -1:
+            match_found = True
+            break
+    assert match_found is True
 
 
 FILES = {

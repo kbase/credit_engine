@@ -1,8 +1,10 @@
 from urllib.parse import quote
+
 import requests
 
-VALID_OUTPUT_FORMATS = ["json"]
+FILE_EXTENSIONS = {"xml": "xml", "json": "json"}
 SAMPLE_DATA_DIR = "sample_data/datacite"
+DEFAULT_FORMAT = "json"
 
 
 def get_endpoint(doi: str = "") -> str:
@@ -39,3 +41,14 @@ def retrieve_doi(doi: str) -> requests.Response:
     raise ValueError(
         f"Request for {doi} failed with status code {response.status_code}"
     )
+
+
+# def decode_xml(json_data: dict[str, Any]) -> dict[str, Any]:
+
+#     try:
+#         doi_xml = json_data["data"]["attributes"]["xml"]
+#         if doi_xml:
+#             decoded_xml = base64.b64decode(doi_xml)
+#     except:
+#         # do something
+#         pass

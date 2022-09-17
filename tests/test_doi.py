@@ -1,66 +1,7 @@
-import json
-
 import pytest
-import requests
 
-from credit_engine.parsers.doi import check_doi_source
-
-response_data = {
-    "https://api.crossref.org/works/DATACITE_DOI/agency": {
-        "ok": True,
-        "status_code": 200,
-        "json": {"message": {"agency": {"id": "datacite"}}},
-    },
-    "https://api.crossref.org/works/CROSSREF_DOI/agency": {
-        "ok": True,
-        "status_code": 200,
-        "json": {"message": {"agency": {"id": "crossref"}}},
-    },
-    # returns a 404
-    "https://api.crossref.org/works/NOT_FOUND/agency": {
-        "ok": False,
-        "status_code": 404,
-        "content": "Resource not found.",
-    },
-}
-
-
-# custom class to be the mock return value of requests.get()
-class MockResponse:
-    def __init__(self, *args):
-        self.request = args[0]
-        self.response = response_data[self.request]
-
-    @property
-    def content(self):
-        if self.response["content"]:
-            return self.response["content"].encode()
-
-        if self.response["json"]:
-            return json.dumps(self.response["json"]).encode()
-
-    @property
-    def ok(self):
-        return self.response["ok"]
-
-    @property
-    def status_code(self):
-        return self.response["status_code"]
-
-    def json(self):
-        return self.response["json"]
-
-
-# monkeypatched requests.get moved to a fixture
-@pytest.fixture
-def mock_response(monkeypatch):
-    """Requests.get() mocked to return {'mock_key':'mock_response'}."""
-
-    def mock_get(*args, **kwargs):
-        return MockResponse(*args, **kwargs)
-
-    monkeypatch.setattr(requests, "get", mock_get)
-
+from credit_engine.errors import make_error
+from credit_engine.parsers import crossref, datacite, doi
 
 CHECK_DOI_SOURCE_TEST_DATA = [
     pytest.param(
@@ -88,5 +29,62 @@ CHECK_DOI_SOURCE_TEST_DATA = [
 
 
 @pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
-def test_check_doi_source(param, mock_response):
-    assert check_doi_source(param["doi"]) == param["expected"]
+def test_check_doi_source(param, _mock_response):
+    assert doi.check_doi_source(param["doi"]) == param["expected"]
+
+
+GET_EXTENSION_TEST_DATA = [
+    pytest.param(
+        {
+            "parser": datacite,
+            "output_format": "JSON",
+            "expected": datacite.FILE_EXTENSIONS["json"],
+        },
+        id="datacite_json",
+    ),
+    pytest.param(
+        {
+            "parser": crossref,
+            "output_format": "json",
+            "expected": crossref.FILE_EXTENSIONS["json"],
+        },
+        id="crossref_json",
+    ),
+    pytest.param(
+        {
+            "parser": crossref,
+            "output_format": "UNIXREF",
+            "expected": crossref.FILE_EXTENSIONS["unixref"],
+        },
+        id="crossref_unixref",
+    ),
+    pytest.param(
+        {
+            "parser": crossref,
+            "output_format": "xml",
+            "error": True,
+        },
+        id="crossref_xml",
+    ),
+    pytest.param(
+        {
+            "parser": datacite,
+            "output_format": "unixsd",
+            "error": True,
+        },
+        id="datacite_unixsd",
+    ),
+]
+
+
+@pytest.mark.parametrize("param", GET_EXTENSION_TEST_DATA)
+def test_get_extension(param):
+    if "expected" in param:
+        assert (
+            doi.get_extension(param["parser"], param["output_format"])
+            == param["expected"]
+        )
+    else:
+        error_text = make_error("invalid", {"format": param["output_format"]})
+        with pytest.raises(ValueError, match=error_text):
+            doi.get_extension(param["parser"], param["output_format"])

@@ -1,19 +1,64 @@
-import pytest
+import json
 import os.path
 from pathlib import Path
-from credit_engine.util import dir_scanner
+from typing import Union
+
+import _pytest.capture
+import pytest
+
 from credit_engine.parsers import doi
+from credit_engine.util import dir_scanner
+
+
+def run_file_contents_check(
+    file_path: Union[Path, str], expected: Union[bytes, str, list, dict]
+):
+    """Assert that the contents of the file match the expected content.
+
+    :param file_path: file to check
+    :type file_path: Union[Path, str]
+    :param expected: expected file contents
+    :type expected: Union[bytes, str, list, dict]
+    """
+    path_to_file = Path(file_path)
+    assert Path.exists(path_to_file) and Path.is_file(path_to_file)
+
+    suffix = path_to_file.suffix
+    content = None
+
+    if suffix == ".xml":
+        content = path_to_file.read_bytes()
+    elif suffix == ".json":
+        with Path.open(path_to_file) as fh:
+            content = json.load(fh)
+    elif suffix == ".txt":
+        content = path_to_file.read_text()
+    else:
+        raise ValueError(f"Could not parse file based on suffix: {suffix}")
+
+    assert content == expected
 
 
 def run_retrieve_doi_list(
-    capsys,
-    default_dir,
-    mock_response,
-    monkeypatch,
-    param,
-    source,
-    tmp_path,
+    capsys: _pytest.capture.CaptureFixture,
+    default_dir: Path,
+    param: dict,
+    source: str,
+    tmp_path: Path,
 ):
+    """Retrieve and check a list of DOIs
+
+    :param capsys: pytest stdout/stderr capture
+    :type capsys: _type_
+    :param default_dir: default directory for the data source
+    :type default_dir: Path
+    :param param: input parameters
+    :type param: dict
+    :param source: data source (e.g. 'crossref', 'datacite')
+    :type source: str
+    :param tmp_path: pytest temporary directory
+    :type tmp_path: Path
+    """
 
     file_list = []
     if "save_files" in param:
@@ -39,11 +84,17 @@ def run_retrieve_doi_list(
         if save_dir is None:
             save_dir = default_dir
             assert Path.exists(save_dir)
+
         # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in param["file_list"]]
-        # TODO: add file contents check
         if save_dir != "/does/not/exist":
             assert set(dir_scanner(save_dir)) == set(file_list)
+            if "files" in retrieval_results:
+                # ensure file contents are as expected
+                for f in retrieval_results["files"]:
+                    run_file_contents_check(
+                        retrieval_results["files"][f], retrieval_results["data"][f]
+                    )
         else:
             with pytest.raises(FileNotFoundError, match=r"No such file or directory"):
                 dir_scanner(save_dir)

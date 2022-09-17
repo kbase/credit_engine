@@ -1,11 +1,13 @@
-from typing import List, Optional
+from pathlib import Path
+from typing import List, Optional, Union
 from urllib.parse import quote
-import credit_engine.util as util
-import credit_engine.parsers as parsers
+
+import requests
+
 import credit_engine.parsers.crossref as crossref
 import credit_engine.parsers.datacite as datacite
-from pathlib import Path
-import requests
+import credit_engine.util as util
+from credit_engine.errors import make_error
 
 
 def check_doi_source(doi: str) -> Optional[str]:
@@ -26,10 +28,27 @@ def check_doi_source(doi: str) -> Optional[str]:
     return None
 
 
+def get_extension(parser, output_format: str = "json") -> str:
+    """Get the appropriate file extension for saving data.
+
+    :param parser: the appropriate parser for the data source
+    :type parser: module
+    :param output_format: format of data to be saved, defaults to 'json'
+    :type output_format: str, optional
+    :raises ValueError: if the output format is not valid for that parser
+    :return: file extension
+    :rtype: str
+    """
+    lc_output_format = output_format.lower()
+    if lc_output_format not in parser.FILE_EXTENSIONS:
+        raise ValueError(make_error("invalid", {"format": output_format}))
+    return parser.FILE_EXTENSIONS[lc_output_format]
+
+
 def retrieve_doi_list(
     doi_list: List[str],
     save_files: bool = False,
-    save_dir: Optional[str] = None,
+    save_dir: Optional[Union[Path, str]] = None,
     source: Optional[str] = None,
     output_format_list: Optional[list[str]] = None,
 ) -> dict:
@@ -48,6 +67,16 @@ def retrieve_doi_list(
         parser = crossref
     else:
         raise ValueError(f"Invalid data source: {source}")
+
+    if output_format_list:
+        # ensure the validity of the file format(s)
+        invalid_formats = [
+            fmt for fmt in output_format_list if fmt not in parser.FILE_EXTENSIONS
+        ]
+        if invalid_formats:
+            raise ValueError(make_error("invalid", {"format": invalid_formats}))
+    else:
+        output_format_list = [parser.DEFAULT_FORMAT]
 
     if not save_dir:
         # use the sample dir
@@ -71,12 +100,13 @@ def retrieve_doi_list(
         results["data"][doi] = resp.json()
 
         if save_files:
-            util.save_data_to_file(
+            doi_file = util.save_data_to_file(
                 doi=doi,
                 save_dir=save_dir,
-                suffix="json",
+                suffix=get_extension(parser, "json"),
                 resp=resp,
-                result_data=results,
             )
+            if doi_file:
+                results["files"][doi] = doi_file
 
     return results

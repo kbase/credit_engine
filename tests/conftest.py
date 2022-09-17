@@ -1,10 +1,11 @@
 import json
-from typing import Any, Union
+from typing import Any, Optional, Union
 from urllib.parse import quote
-from credit_engine.errors import ERROR_STRING
 
 import pytest
 import requests
+
+from credit_engine.errors import ERROR_STRING
 
 SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
 QUOTED_DOI = quote(SAMPLE_DOI)
@@ -253,17 +254,25 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
 
 # custom class to be the mock return value of requests.get()
 class MockResponse:
-    def __init__(self, *args: str, **kwargs: dict[str, Union[str, list, dict]]):
-        self.request_url = args[0]
-        self.response = RESPONSE_DATA[self.request_url]
+    def __init__(self, kwargs: dict[str, Any]):
+        if "url" in kwargs:
+            self.response = RESPONSE_DATA[kwargs["url"]]
+            return
+
+        if "json" in kwargs:
+            self.response = {JSON: kwargs["json"]}
+        elif "content" in kwargs:
+            self.response = {CONTENT: kwargs["content"]}
+        else:
+            self.response = kwargs
 
     @property
     def content(self):
         if self.response[CONTENT]:
-            return self.response[CONTENT].encode()
+            return self.response[CONTENT]
 
         if self.response[JSON]:
-            return json.dumps(self.response[JSON]).encode()
+            return json.dumps(self.response[JSON])
 
         return ""
 
@@ -280,11 +289,17 @@ class MockResponse:
 
 
 # monkeypatched requests.get moved to a fixture
-@pytest.fixture
+@pytest.fixture(name="_mock_response")
 def mock_response(monkeypatch):
-    """Requests.get() mocked to return {'mock_key':'mock_response'}."""
+    """Requests.get() returns a MockResponse object"""
 
-    def mock_get(*args: list[str], **kwargs: dict[str, Any]):
-        return MockResponse(*args, **kwargs)
+    def mock_get(url: str, params: Optional[dict] = None, **kwargs: Optional[dict]):
+        if params is None:
+            params = {}
+        response_args = {**params, **kwargs}
+
+        if url:
+            response_args["url"] = url
+        return MockResponse(response_args)
 
     monkeypatch.setattr(requests, "get", mock_get)
