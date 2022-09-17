@@ -3,9 +3,6 @@ import pytest
 from credit_engine.errors import make_error
 from credit_engine.parsers import crossref, datacite, doi
 
-from .common import run_retrieve_doi_list
-from .conftest import CLEAN_DOI_LIST_DATA, RETRIEVE_DOI_LIST_TEST_DATA
-
 CHECK_DOI_SOURCE_TEST_DATA = [
     pytest.param(
         {
@@ -32,7 +29,7 @@ CHECK_DOI_SOURCE_TEST_DATA = [
 
 
 @pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
-def test_check_doi_source(param, mock_response):
+def test_check_doi_source(param, _mock_response):
     assert doi.check_doi_source(param["doi"]) == param["expected"]
 
 

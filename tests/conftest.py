@@ -289,7 +289,7 @@ class MockResponse:
 
 
 # monkeypatched requests.get moved to a fixture
-@pytest.fixture(name="mock_response")
+@pytest.fixture(name="_mock_response")
 def mock_response(monkeypatch):
     """Requests.get() returns a MockResponse object"""
 

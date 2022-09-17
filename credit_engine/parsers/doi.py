@@ -1,10 +1,9 @@
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Union
 from urllib.parse import quote
 
 import requests
 
-import credit_engine.parsers as parsers
 import credit_engine.parsers.crossref as crossref
 import credit_engine.parsers.datacite as datacite
 import credit_engine.util as util
@@ -49,7 +48,7 @@ def get_extension(parser, output_format: str = "json") -> str:
 def retrieve_doi_list(
     doi_list: List[str],
     save_files: bool = False,
-    save_dir: Optional[str] = None,
+    save_dir: Optional[Union[Path, str]] = None,
     source: Optional[str] = None,
     output_format_list: Optional[list[str]] = None,
 ) -> dict:

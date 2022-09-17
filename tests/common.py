@@ -1,8 +1,9 @@
 import json
 import os.path
 from pathlib import Path
-from typing import Optional, Union
+from typing import Union
 
+import _pytest.capture
 import pytest
 
 from credit_engine.parsers import doi
@@ -39,12 +40,25 @@ def run_file_contents_check(
 
 
 def run_retrieve_doi_list(
-    capsys,
-    default_dir,
-    param,
-    source,
-    tmp_path,
+    capsys: _pytest.capture.CaptureFixture,
+    default_dir: Path,
+    param: dict,
+    source: str,
+    tmp_path: Path,
 ):
+    """Retrieve and check a list of DOIs
+
+    :param capsys: pytest stdout/stderr capture
+    :type capsys: _type_
+    :param default_dir: default directory for the data source
+    :type default_dir: Path
+    :param param: input parameters
+    :type param: dict
+    :param source: data source (e.g. 'crossref', 'datacite')
+    :type source: str
+    :param tmp_path: pytest temporary directory
+    :type tmp_path: Path
+    """
 
     file_list = []
     if "save_files" in param:

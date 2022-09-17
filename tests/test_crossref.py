@@ -69,11 +69,11 @@ def test_get_endpoint_fail():
         get_endpoint("some_doi_here", "XML")
 
 
-def test_retrieve_doi_ok(mock_response):
+def test_retrieve_doi_ok(_mock_response):
     assert retrieve_doi("VALID_DOI").json() == DOI_DATA["VALID_DOI"]
 
 
-def test_retrieve_doi_fail(mock_response):
+def test_retrieve_doi_fail(_mock_response):
     with pytest.raises(
         ValueError, match="Request for NOT_FOUND failed with status code 404"
     ):
@@ -81,7 +81,7 @@ def test_retrieve_doi_fail(mock_response):
 
 
 @pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_TEST_DATA)
-def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
+def test_retrieve_doi_list(param: dict, _mock_response, tmp_path, capsys, monkeypatch):
     default_dir = tmp_path / "default_dir"
     monkeypatch.setattr(crossref, "SAMPLE_DATA_DIR", default_dir)
 
@@ -95,7 +95,7 @@ def test_retrieve_doi_list(param, mock_response, tmp_path, capsys, monkeypatch):
 
 
 @pytest.mark.parametrize("param", CLEAN_DOI_LIST_DATA)
-def test_retrieve_doi_list_fail(param, mock_response):
+def test_retrieve_doi_list_fail(param, _mock_response):
     # only run tests where we know the test fails
     if "output" not in param:
         with pytest.raises(ValueError, match=param["error"]):
