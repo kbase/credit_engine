@@ -1,3 +1,5 @@
+import re
+
 import pytest
 
 from credit_engine.errors import make_error
@@ -88,3 +90,40 @@ def test_get_extension(param):
         error_text = make_error("invalid", {"format": param["output_format"]})
         with pytest.raises(ValueError, match=error_text):
             doi.get_extension(param["parser"], param["output_format"])
+
+
+RETRIEVE_DOI_LIST_FAIL_TEST_DATA = [
+    pytest.param(
+        {
+            "input": [
+                ["VALID_DOI", "ANOTHER_VALID_DOI"],
+                None,
+                None,
+                "THE BOWELS OF HELL",
+            ],
+            "error": "Invalid data source: THE BOWELS OF HELL",
+        },
+        id="invalid_source",
+    ),
+    pytest.param(
+        {
+            "input": [
+                ["VALID_DOI", "ANOTHER_VALID_DOI"],
+                None,
+                None,
+                "datacite",
+                ["rdfxml", "json", "duck types"],
+            ],
+            "error": re.escape(
+                make_error("invalid", {"format": ["rdfxml", "duck types"]})
+            ),
+        },
+        id="invalid_format",
+    ),
+]
+
+
+@pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_FAIL_TEST_DATA)
+def test_retrieve_doi_list_fail(param):
+    with pytest.raises(ValueError, match=param["error"]):
+        doi.retrieve_doi_list(*param["input"])
