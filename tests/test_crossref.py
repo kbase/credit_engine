@@ -4,14 +4,16 @@ import credit_engine.parsers.doi as doi
 from credit_engine.parsers import crossref
 from credit_engine.parsers.crossref import DEFAULT_EMAIL, get_endpoint, retrieve_doi
 
-from .common import run_retrieve_doi_list
+from .common import check_stdout_for_errs, run_retrieve_doi_list
 from .conftest import (
     CLEAN_DOI_LIST_DATA,
     DOI_DATA,
+    NOT_FOUND,
     QUOTED_DOI,
     RETRIEVE_DOI_LIST_TEST_DATA,
     SAMPLE_DOI,
     SAMPLE_EMAIL,
+    VALID_DOI,
 )
 
 GET_ENDPOINT_DATA = [
@@ -69,15 +71,33 @@ def test_get_endpoint_fail():
         get_endpoint("some_doi_here", "XML")
 
 
-def test_retrieve_doi_ok(_mock_response):
-    assert retrieve_doi("VALID_DOI").json() == DOI_DATA["VALID_DOI"]
+def test_retrieve_doi_ok_default_format(_mock_response):
+    assert retrieve_doi(VALID_DOI) == {"json": DOI_DATA[VALID_DOI]}
 
 
-def test_retrieve_doi_fail(_mock_response):
-    with pytest.raises(
-        ValueError, match="Request for NOT_FOUND failed with status code 404"
-    ):
-        retrieve_doi("NOT_FOUND")
+def test_retrieve_doi_ok_format_list(_mock_response):
+    # TODO!
+    pass
+    # assert retrieve_doi(VALID_DOI, ["unixref", "unixsd"]) == {"unixref": ..., "unixsd": ...}
+
+
+def test_retrieve_doi_fail_default_format(_mock_response, capsys):
+    assert retrieve_doi(NOT_FOUND) == {"json": None}
+    check_stdout_for_errs(
+        capsys, ["Request for NOT_FOUND json failed with status code 404"]
+    )
+
+
+def test_retrieve_doi_fail_format_list(_mock_response, capsys):
+    fmt_list = ["unixref", "unixsd"]
+    assert retrieve_doi(NOT_FOUND, fmt_list) == {"unixref": None, "unixsd": None}
+    check_stdout_for_errs(
+        capsys,
+        [
+            f"Request for NOT_FOUND {fmt} failed with status code 404"
+            for fmt in fmt_list
+        ],
+    )
 
 
 @pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_TEST_DATA)

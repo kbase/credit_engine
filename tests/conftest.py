@@ -101,6 +101,20 @@ DATA = {
     },
 }
 
+CROSSREF_404 = {OK: False, CODE: 404, CONTENT: "Resource not found"}
+DATACITE_404 = {
+    OK: False,
+    CODE: 404,
+    JSON: {
+        "errors": [
+            {
+                "status": "404",
+                "title": "The resource you are looking for doesn't exist.",
+            }
+        ]
+    },
+}
+
 RESPONSE_DATA = {
     # check_doi_source
     "https://api.crossref.org/works/DATACITE_DOI/agency": {
@@ -122,34 +136,12 @@ RESPONSE_DATA = {
     "https://api.crossref.org/works/NOT_FOUND": DATA[NOT_FOUND],
     # 'https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}'
     # datacite retrieve_doi
-    "https://api.datacite.org/dois/NOT_FOUND?affiliation=true": {
-        OK: False,
-        CODE: 404,
-        JSON: {
-            "errors": [
-                {
-                    "status": "404",
-                    "title": "The resource you are looking for doesn't exist.",
-                }
-            ]
-        },
-    },
-    "https://api.datacite.org/dois/INVALID_DOI?affiliation=true": {
-        OK: False,
-        CODE: 404,
-        JSON: {
-            "errors": [
-                {
-                    "status": "404",
-                    "title": "The resource you are looking for doesn't exist.",
-                }
-            ]
-        },
-    },
     "https://api.datacite.org/dois/VALID_DOI?affiliation=true": DATA[VALID_DOI],
     "https://api.datacite.org/dois/ANOTHER_VALID_DOI?affiliation=true": DATA[
         ANOTHER_VALID_DOI
     ],
+    "https://api.datacite.org/dois/NOT_FOUND?affiliation=true": DATACITE_404,
+    "https://api.datacite.org/dois/INVALID_DOI?affiliation=true": DATACITE_404,
 }
 
 
@@ -158,8 +150,8 @@ VALID_DOI_LIST = {
     "input": ["VALID_DOI", "ANOTHER_VALID_DOI"],
     "output": {
         "data": {
-            "VALID_DOI": DOI_DATA["VALID_DOI"],
-            "ANOTHER_VALID_DOI": DOI_DATA["ANOTHER_VALID_DOI"],
+            "VALID_DOI": {"json": DOI_DATA["VALID_DOI"]},
+            "ANOTHER_VALID_DOI": {"json": DOI_DATA["ANOTHER_VALID_DOI"]},
         }
     },
     "file_list": [],
@@ -169,20 +161,30 @@ SEMI_VALID_DOI_LIST = {
     "input": ["VALID_DOI", "NOT_FOUND"],
     "output": {
         "data": {
-            "VALID_DOI": DOI_DATA["VALID_DOI"],
+            "VALID_DOI": {
+                "json": DOI_DATA["VALID_DOI"],
+            },
+            "NOT_FOUND": {
+                "json": None,
+            },
         }
     },
     "file_list": [],
-    "errors": ["Request for NOT_FOUND failed with status code 404"],
+    "errors": ["Request for NOT_FOUND json failed with status code 404"],
 }
 INVALID_DOI_LIST = {
     "id": "all_invalid",
     "input": ["NOT_FOUND", "INVALID_DOI"],
-    "output": {"data": {}},
+    "output": {
+        "data": {
+            "NOT_FOUND": {"json": None},
+            "INVALID_DOI": {"json": None},
+        }
+    },
     "file_list": [],
     "errors": [
-        "Request for NOT_FOUND failed with status code 404",
-        "Request for INVALID_DOI failed with status code 404",
+        "Request for NOT_FOUND json failed with status code 404",
+        "Request for INVALID_DOI json failed with status code 404",
     ],
 }
 
@@ -213,7 +215,11 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
                 **p,
                 "save_files": True,
                 "save_dir": "tmp_path",
-                "file_list": [f"{doi}.{SUFFIX}" for doi in p["output"]["data"]],
+                "file_list": [
+                    f"{doi}.{SUFFIX}"
+                    for doi in p["output"]["data"]
+                    if p["output"]["data"][doi]["json"]
+                ],
             },
             id=p["id"] + "_save_to_dir",
         )
@@ -225,7 +231,11 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
             {
                 **p,
                 "save_files": True,
-                "file_list": [f"{doi}.{SUFFIX}" for doi in p["output"]["data"]],
+                "file_list": [
+                    f"{doi}.{SUFFIX}"
+                    for doi in p["output"]["data"]
+                    if p["output"]["data"][doi]["json"]
+                ],
             },
             id=p["id"] + "_save_to_default_dir",
         )
@@ -256,7 +266,15 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
 class MockResponse:
     def __init__(self, kwargs: dict[str, Any]):
         if "url" in kwargs:
-            self.response = RESPONSE_DATA[kwargs["url"]]
+            if kwargs["url"] in RESPONSE_DATA:
+                self.response = RESPONSE_DATA[kwargs["url"]]
+            elif kwargs["url"].find("crossref") != -1:
+                self.response = CROSSREF_404
+            elif kwargs["url"].find("datacite") != -1:
+                self.response = DATACITE_404
+            else:
+                raise ValueError(f'No suitable response for url {kwargs["url"]}')
+
             return
 
         if "json" in kwargs:

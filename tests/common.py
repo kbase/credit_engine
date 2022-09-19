@@ -10,6 +10,16 @@ from credit_engine.parsers import doi
 from credit_engine.util import dir_scanner
 
 
+def check_stdout_for_errs(
+    capsys: _pytest.capture.CaptureFixture,
+    error_list: list[str],
+):
+    readouterr = capsys.readouterr()
+    out_errors = readouterr.out.split("\n")
+    for error in error_list:
+        assert error in out_errors
+
+
 def run_file_contents_check(
     file_path: Union[Path, str], expected: Union[bytes, str, list, dict]
 ):
@@ -88,12 +98,17 @@ def run_retrieve_doi_list(
         # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in param["file_list"]]
         if save_dir != "/does/not/exist":
+
+            print({"save_dir": save_dir, "file_list": file_list})
+            scan_results = dir_scanner(save_dir)
+            print({"scan_results": scan_results})
             assert set(dir_scanner(save_dir)) == set(file_list)
             if "files" in retrieval_results:
                 # ensure file contents are as expected
                 for f in retrieval_results["files"]:
                     run_file_contents_check(
-                        retrieval_results["files"][f], retrieval_results["data"][f]
+                        retrieval_results["files"][f]["json"],
+                        retrieval_results["data"][f]["json"],
                     )
         else:
             with pytest.raises(FileNotFoundError, match=r"No such file or directory"):
@@ -104,7 +119,4 @@ def run_retrieve_doi_list(
         assert dir_scanner(tmp_path) == []
 
     if "errors" in param:
-        readouterr = capsys.readouterr()
-        out_errors = readouterr.out.split("\n")
-        for error in param["errors"]:
-            assert error in out_errors
+        check_stdout_for_errs(capsys, param["errors"])

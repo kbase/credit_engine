@@ -9,6 +9,9 @@ import credit_engine.parsers.datacite as datacite
 import credit_engine.util as util
 from credit_engine.errors import make_error
 
+DATA = "data"
+FILES = "files"
+
 
 def check_doi_source(doi: str) -> Optional[str]:
     """Check whether a DOI is accessible via CrossRef
@@ -59,6 +62,7 @@ def retrieve_doi_list(
     :return: a dictionary
     :rtype: dict
     """
+    # validate_input(doi_list, save_files, save_dir, source, output_format_list)
     cleaned_doi_list = util.clean_doi_list(doi_list)
 
     if source == "datacite":
@@ -83,30 +87,30 @@ def retrieve_doi_list(
         save_dir = parser.SAMPLE_DATA_DIR
 
     results = {
-        "data": {},
+        DATA: {},
     }
 
     if save_files:
-        results["files"] = {}
+        results[FILES] = {}
 
     for doi in cleaned_doi_list:
-        try:
-            resp = parser.retrieve_doi(doi)
-
-        except ValueError as e:
-            print(e)
-            continue
-
-        results["data"][doi] = resp.json()
+        results[DATA][doi] = parser.retrieve_doi(
+            doi, output_format_list=output_format_list
+        )
 
         if save_files:
-            doi_file = util.save_data_to_file(
-                doi=doi,
-                save_dir=save_dir,
-                suffix=get_extension(parser, "json"),
-                resp=resp,
-            )
-            if doi_file:
-                results["files"][doi] = doi_file
+            for fmt in output_format_list:
+                if results[DATA][doi][fmt] is not None:
+                    doi_file = util.save_data_to_file(
+                        doi=doi,
+                        save_dir=save_dir,
+                        suffix=get_extension(parser, fmt),
+                        data=results[DATA][doi][fmt],
+                    )
+                    if doi_file:
+                        if doi not in results[FILES]:
+                            results[FILES][doi] = {fmt: doi_file}
+                        else:
+                            results[FILES][doi][fmt] = doi_file
 
     return results

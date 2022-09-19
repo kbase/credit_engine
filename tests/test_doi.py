@@ -4,6 +4,8 @@ import pytest
 
 from credit_engine.errors import make_error
 from credit_engine.parsers import crossref, datacite, doi
+from tests.common import run_retrieve_doi_list
+from tests.conftest import CLEAN_DOI_LIST_DATA, RETRIEVE_DOI_LIST_TEST_DATA
 
 CHECK_DOI_SOURCE_TEST_DATA = [
     pytest.param(
@@ -124,6 +126,33 @@ RETRIEVE_DOI_LIST_FAIL_TEST_DATA = [
 
 
 @pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_FAIL_TEST_DATA)
-def test_retrieve_doi_list_fail(param):
+def test_retrieve_doi_list_param_fail(param):
     with pytest.raises(ValueError, match=param["error"]):
         doi.retrieve_doi_list(*param["input"])
+
+
+@pytest.mark.parametrize("source", ["datacite", "crossref"])
+@pytest.mark.parametrize("param", CLEAN_DOI_LIST_DATA)
+def test_retrieve_doi_list_doi_fail(param, source, _mock_response):
+    # only run tests where we know the test fails
+    if "output" not in param:
+        with pytest.raises(ValueError, match=param["error"]):
+            doi.retrieve_doi_list(param["input"], source)
+
+
+@pytest.mark.parametrize("source", ["datacite", "crossref"])
+@pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_TEST_DATA)
+def test_retrieve_doi_list(
+    param: dict, source: str, _mock_response, tmp_path, capsys, monkeypatch
+):
+    default_dir = tmp_path / "default_dir"
+    for parser in [crossref, datacite]:
+        monkeypatch.setattr(parser, "SAMPLE_DATA_DIR", default_dir)
+
+    run_retrieve_doi_list(
+        capsys=capsys,
+        default_dir=default_dir,
+        param=param,
+        source=source,
+        tmp_path=tmp_path,
+    )
