@@ -117,7 +117,7 @@ def save_data_to_file(
     doi: str,
     save_dir: Union[Path, str],
     suffix: str,
-    resp: requests.Response,
+    data: Union[dict, list, str, bytes],
 ) -> Optional[Path]:
     # ensure we don't have an extra full stop
     if suffix.startswith("."):
@@ -125,13 +125,14 @@ def save_data_to_file(
 
     doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.{suffix}")
     try:
-        if suffix.endswith("xml"):
-            write_bytes_to_file(doi_file, resp.content)
+        if isinstance(data, bytes):
+            write_bytes_to_file(doi_file, data)
         else:
-            write_to_file(doi_file, resp.json())
+            write_to_file(doi_file, data)
         return doi_file
     except OSError as e:
         print(e)
+    # includes JSON decoding errors
     except Exception as e:
         print(type(Exception))
         print(e)
