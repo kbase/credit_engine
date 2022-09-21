@@ -323,12 +323,14 @@ classes:
       date:
         description: the date upon which the event occurred
         range: date_or_datetime
+        required: true
         examples:
         - value: 2022-05-10
 
       date_type:
         description: the nature of the resource-related event that occurred on that date
         range: DateType
+        required: true
         examples:
         - value: available
         - value: updated
