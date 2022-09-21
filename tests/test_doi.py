@@ -5,7 +5,14 @@ import pytest
 from credit_engine.errors import make_error
 from credit_engine.parsers import crossref, datacite, doi
 from tests.common import run_retrieve_doi_list
-from tests.conftest import CLEAN_DOI_LIST_DATA, RETRIEVE_DOI_LIST_TEST_DATA
+from tests.conftest import (
+    ANOTHER_VALID_DOI,
+    CLEAN_DOI_LIST_DATA,
+    NOT_FOUND,
+    RETRIEVE_DOI_LIST_TEST_DATA,
+    DOI_DATA,
+    A_VALID_DOI,
+)
 
 CHECK_DOI_SOURCE_TEST_DATA = [
     pytest.param(
@@ -24,7 +31,7 @@ CHECK_DOI_SOURCE_TEST_DATA = [
     ),
     pytest.param(
         {
-            "doi": "NOT_FOUND",
+            "doi": NOT_FOUND,
             "expected": None,
         },
         id="not_found",
@@ -98,7 +105,7 @@ RETRIEVE_DOI_LIST_FAIL_TEST_DATA = [
     pytest.param(
         {
             "input": [
-                ["VALID_DOI", "ANOTHER_VALID_DOI"],
+                [A_VALID_DOI, ANOTHER_VALID_DOI],
                 None,
                 None,
                 "THE BOWELS OF HELL",
@@ -110,7 +117,7 @@ RETRIEVE_DOI_LIST_FAIL_TEST_DATA = [
     pytest.param(
         {
             "input": [
-                ["VALID_DOI", "ANOTHER_VALID_DOI"],
+                [A_VALID_DOI, ANOTHER_VALID_DOI],
                 None,
                 None,
                 "datacite",
@@ -123,6 +130,15 @@ RETRIEVE_DOI_LIST_FAIL_TEST_DATA = [
         id="invalid_format",
     ),
 ]
+
+
+def test_printing_out_some_data():
+    from tests.conftest import generate_response
+
+    response = generate_response("sample_data/datacite/10.25585_1487552.json")
+
+    print(response)
+    assert 1 == 2
 
 
 @pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_FAIL_TEST_DATA)
@@ -140,10 +156,17 @@ def test_retrieve_doi_list_doi_fail(param, source, _mock_response):
             doi.retrieve_doi_list(param["input"], source)
 
 
+@pytest.mark.parametrize("formats", [["json"]])
 @pytest.mark.parametrize("source", ["datacite", "crossref"])
 @pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_TEST_DATA)
 def test_retrieve_doi_list(
-    param: dict, source: str, _mock_response, tmp_path, capsys, monkeypatch
+    param: dict,
+    source: str,
+    formats: list[str],
+    _mock_response,
+    tmp_path,
+    capsys,
+    monkeypatch,
 ):
     default_dir = tmp_path / "default_dir"
     for parser in [crossref, datacite]:
@@ -155,4 +178,5 @@ def test_retrieve_doi_list(
         param=param,
         source=source,
         tmp_path=tmp_path,
+        format_list=formats,
     )

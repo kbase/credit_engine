@@ -1,4 +1,6 @@
 import json
+from importlib.resources import path
+from pathlib import Path
 from typing import Any, Optional, Union
 from urllib.parse import quote
 
@@ -11,35 +13,34 @@ SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
 QUOTED_DOI = quote(SAMPLE_DOI)
 SAMPLE_EMAIL = "me@home.com"
 QUOTED_EMAIL = quote(SAMPLE_EMAIL)
+DEFAULT_EMAIL = "credit_engine@kbase.us"
 
 NOT_FOUND = "NOT_FOUND"
 INVALID_DOI = "INVALID_DOI"
-VALID_DOI = "VALID_DOI"
+A_VALID_DOI = "A_VALID_DOI"
 ANOTHER_VALID_DOI = "ANOTHER_VALID_DOI"
-
 
 OK = "ok"
 CODE = "status_code"
 JSON = "json"
 CONTENT = "content"
-
-DOI_DATA = {
-    "VALID_DOI": {"this": "is", "not": "a", "dict": {}},
-    "ANOTHER_VALID_DOI": {"this": ["is", "different", "apparently"]},
-}
+XML = "xml"
+UNIXREF = "unixref"
+UNIXSD = "unixsd"
 
 
+# input for cleaning up DOI lists
 CLEAN_DOI_LIST_DATA = [
     pytest.param(
         {
-            "input": [VALID_DOI, ANOTHER_VALID_DOI, INVALID_DOI, NOT_FOUND],
-            "output": [VALID_DOI, ANOTHER_VALID_DOI, INVALID_DOI, NOT_FOUND],
+            "input": [A_VALID_DOI, ANOTHER_VALID_DOI, INVALID_DOI, NOT_FOUND],
+            "output": [A_VALID_DOI, ANOTHER_VALID_DOI, INVALID_DOI, NOT_FOUND],
         },
         id="all_ok",
     ),
     pytest.param(
         {
-            "input": VALID_DOI,
+            "input": A_VALID_DOI,
             "error": ERROR_STRING["doi_list_format"],
         },
         id="wrong_input",
@@ -67,7 +68,7 @@ CLEAN_DOI_LIST_DATA = [
     ),
     pytest.param(
         {
-            "input": [10.12345, 12345, r"     ANOTHER_VALID_DOI       "],
+            "input": [10.12345, 12345, f"     {ANOTHER_VALID_DOI}       "],
             "output": ["10.12345", "12345", ANOTHER_VALID_DOI],
         },
         id="format_conversion",
@@ -75,36 +76,78 @@ CLEAN_DOI_LIST_DATA = [
     pytest.param(
         {
             "input": [
-                f"  {VALID_DOI} ",
+                f"  {A_VALID_DOI} ",
                 INVALID_DOI,
-                VALID_DOI,
+                A_VALID_DOI,
                 INVALID_DOI,
-                f"   {VALID_DOI}\n\n",
+                f"   {A_VALID_DOI}\n\n",
             ],
-            "output": [VALID_DOI, INVALID_DOI],
+            "output": [A_VALID_DOI, INVALID_DOI],
         },
         id="duplicates",
     ),
 ]
 
+
+def generate_response(file_path: str):
+    current_dir = Path.cwd()
+    path_to_file = Path.resolve(current_dir.joinpath(Path(file_path)))
+    if path_to_file.suffix == f".{JSON}":
+        print('importing as JSON')
+        with open(path_to_file, encoding="utf-8") as fh:
+            file_data = json.load(fh)
+            return file_data
+
+    print('reading as bytes')
+    return path_to_file.read_bytes()
+
+
+DATA_FILES = {
+    'DATACITE': {
+        A_VALID_DOI: {
+            JSON: "sample_data/datacite/10.25585_1487552.json",
+            XML: "sample_data/datacite/10.25585_1487552.xml",
+        },
+        ANOTHER_VALID_DOI: {
+            JSON: "sample_data/datacite/10.25585_1487554.json",
+            XML: "sample_data/datacite/10.25585_1487554.xml",
+        },
+    },
+    'CROSSREF': {
+        A_VALID_DOI: {
+            JSON: "sample_data/crossref/10.46936_10.25585_60007526.json",
+            UNIXREF: "sample_data/crossref/10.46936_10.25585_60007526.unixref.xml",
+            UNIXSD: "sample_data/crossref/10.46936_10.25585_60007526.unixsd.xml",
+        },
+        ANOTHER_VALID_DOI: {
+            JSON: "sample_data/crossref/10.46936_10.25585_60007530.json",
+            UNIXREF: "sample_data/crossref/10.46936_10.25585_60007530.unixref.xml",
+            UNIXSD: "sample_data/crossref/10.46936_10.25585_60007530.unixsd.xml",
+        },
+    }
+}
+
+DOI_DATA = {doi: generate_response(DATA_FILES[source][doi][JSON]) for doi in [A_VALID_DOI, ANOTHER_VALID_DOI]
+for source in ['DATACITE', 'CROSSREF']}
+
+
+OK_200 = {OK: True, CODE: 200}
+NOT_FOUND_404 = {OK: False, CODE: 404}
+
 DATA = {
-    NOT_FOUND: {OK: False, CODE: 404, CONTENT: "Resource not found"},
-    VALID_DOI: {
-        OK: True,
-        CODE: 200,
-        JSON: {"this": "is", "not": "a", "dict": {}},
+    A_VALID_DOI: {
+        **OK_200,
+        JSON: DOI_DATA[A_VALID_DOI],
     },
     ANOTHER_VALID_DOI: {
-        OK: True,
-        CODE: 200,
-        JSON: {"this": ["is", "different", "apparently"]},
+        **OK_200,
+        JSON: DOI_DATA[ANOTHER_VALID_DOI],
     },
 }
 
-CROSSREF_404 = {OK: False, CODE: 404, CONTENT: "Resource not found"}
+CROSSREF_404 = {**NOT_FOUND_404, CONTENT: "Resource not found"}
 DATACITE_404 = {
-    OK: False,
-    CODE: 404,
+    **NOT_FOUND_404,
     JSON: {
         "errors": [
             {
@@ -115,57 +158,82 @@ DATACITE_404 = {
     },
 }
 
-RESPONSE_DATA = {
-    # check_doi_source
+RESPONSE_JSON = {
+    # check_doi_source at crossref
     "https://api.crossref.org/works/DATACITE_DOI/agency": {
-        OK: True,
-        CODE: 200,
-        JSON: {"message": {"agency": {"id": "datacite"}}},
+        "message": {"agency": {"id": "datacite"}},
     },
     "https://api.crossref.org/works/CROSSREF_DOI/agency": {
-        OK: True,
-        CODE: 200,
-        JSON: {"message": {"agency": {"id": "crossref"}}},
+        "message": {"agency": {"id": "crossref"}},
     },
-    # returns a 404
-    "https://api.crossref.org/works/NOT_FOUND/agency": DATA[NOT_FOUND],
     # crossref retrieve_doi
-    "https://api.crossref.org/works/VALID_DOI": DATA[VALID_DOI],
-    "https://api.crossref.org/works/ANOTHER_VALID_DOI": DATA[ANOTHER_VALID_DOI],
-    "https://api.crossref.org/works/INVALID_DOI": DATA[NOT_FOUND],
-    "https://api.crossref.org/works/NOT_FOUND": DATA[NOT_FOUND],
-    # 'https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}'
+    f"https://api.crossref.org/works/{A_VALID_DOI}": generate_response(DATA_FILES['CROSSREF'][A_VALID_DOI][JSON]),
+    f"https://api.crossref.org/works/{ANOTHER_VALID_DOI}": generate_response(DATA_FILES['CROSSREF'][ANOTHER_VALID_DOI][JSON]),
     # datacite retrieve_doi
-    "https://api.datacite.org/dois/VALID_DOI?affiliation=true": DATA[VALID_DOI],
-    "https://api.datacite.org/dois/ANOTHER_VALID_DOI?affiliation=true": DATA[
-        ANOTHER_VALID_DOI
-    ],
-    "https://api.datacite.org/dois/NOT_FOUND?affiliation=true": DATACITE_404,
-    "https://api.datacite.org/dois/INVALID_DOI?affiliation=true": DATACITE_404,
+    f"https://api.datacite.org/dois/{A_VALID_DOI}?affiliation=true": generate_response(DATA_FILES['DATACITE'][A_VALID_DOI][JSON]),
+    f"https://api.datacite.org/dois/{ANOTHER_VALID_DOI}?affiliation=true": generate_response(DATA_FILES['DATACITE'][ANOTHER_VALID_DOI][JSON]),
 }
 
 
-VALID_DOI_LIST = {
+RESPONSE_DATA = {
+    # "https://api.crossref.org/works/DATACITE_DOI/agency": {
+    #     **OK_200,
+    #     JSON: {"message": {"agency": {"id": "datacite"}}},
+    # },
+    # "https://api.crossref.org/works/CROSSREF_DOI/agency": {
+    #     **OK_200,
+    #     JSON: {"message": {"agency": {"id": "crossref"}}},
+    # },
+
+    # check_doi_source
+    # returns a 404
+    f"https://api.crossref.org/works/{NOT_FOUND}/agency": CROSSREF_404,
+
+    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixsd&id={A_VALID_DOI}": {
+        **OK_200,
+        CONTENT: generate_response(DATA_FILES['CROSSREF'][A_VALID_DOI][UNIXSD]),
+    },
+    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixref&id={A_VALID_DOI}": {
+        **OK_200,
+        CONTENT: generate_response(DATA_FILES['CROSSREF'][A_VALID_DOI][UNIXREF]),
+    },
+    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixsd&id={ANOTHER_VALID_DOI}": {
+        **OK_200,
+        CONTENT: generate_response(DATA_FILES['CROSSREF'][ANOTHER_VALID_DOI][UNIXSD]),
+    },
+    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixref&id={ANOTHER_VALID_DOI}": {
+        **OK_200,
+        CONTENT: generate_response(DATA_FILES['CROSSREF'][ANOTHER_VALID_DOI][UNIXREF]),
+    },
+    f"https://api.crossref.org/works/{INVALID_DOI}": CROSSREF_404,
+    f"https://api.crossref.org/works/{NOT_FOUND}": CROSSREF_404,
+    # 'https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}'
+    f"https://api.datacite.org/dois/{NOT_FOUND}?affiliation=true": DATACITE_404,
+    f"https://api.datacite.org/dois/{INVALID_DOI}?affiliation=true": DATACITE_404,
+}
+
+
+A_VALID_DOI_LIST = {
     "id": "all_valid",
-    "input": ["VALID_DOI", "ANOTHER_VALID_DOI"],
+    "input": [A_VALID_DOI, ANOTHER_VALID_DOI],
     "output": {
         "data": {
-            "VALID_DOI": {"json": DOI_DATA["VALID_DOI"]},
-            "ANOTHER_VALID_DOI": {"json": DOI_DATA["ANOTHER_VALID_DOI"]},
+            A_VALID_DOI: {JSON: DOI_DATA[A_VALID_DOI]},
+            ANOTHER_VALID_DOI: {JSON: DOI_DATA[ANOTHER_VALID_DOI]},
         }
     },
     "file_list": [],
 }
 SEMI_VALID_DOI_LIST = {
     "id": "semi_valid",
-    "input": ["VALID_DOI", "NOT_FOUND"],
+    "input": [A_VALID_DOI, NOT_FOUND],
     "output": {
         "data": {
-            "VALID_DOI": {
-                "json": DOI_DATA["VALID_DOI"],
+            A_VALID_DOI: {
+                JSON: DOI_DATA[A_VALID_DOI],
             },
-            "NOT_FOUND": {
-                "json": None,
+            NOT_FOUND: {
+                JSON: None,
             },
         }
     },
@@ -174,11 +242,11 @@ SEMI_VALID_DOI_LIST = {
 }
 INVALID_DOI_LIST = {
     "id": "all_invalid",
-    "input": ["NOT_FOUND", "INVALID_DOI"],
+    "input": [NOT_FOUND, INVALID_DOI],
     "output": {
         "data": {
-            "NOT_FOUND": {"json": None},
-            "INVALID_DOI": {"json": None},
+            NOT_FOUND: {JSON: None},
+            INVALID_DOI: {JSON: None},
         }
     },
     "file_list": [],
@@ -189,10 +257,10 @@ INVALID_DOI_LIST = {
 }
 
 RETRIEVE_DOI_LIST_TEST_DATA = []
-SUFFIX = "json"
+SUFFIX = JSON
 
 # add in save_files and save_dir
-for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
+for p in [A_VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
     # no save_files param
     RETRIEVE_DOI_LIST_TEST_DATA.append(pytest.param(p, id=p["id"]))
 
@@ -218,7 +286,7 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
                 "file_list": [
                     f"{doi}.{SUFFIX}"
                     for doi in p["output"]["data"]
-                    if p["output"]["data"][doi]["json"]
+                    if p["output"]["data"][doi][JSON]
                 ],
             },
             id=p["id"] + "_save_to_dir",
@@ -234,7 +302,7 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
                 "file_list": [
                     f"{doi}.{SUFFIX}"
                     for doi in p["output"]["data"]
-                    if p["output"]["data"][doi]["json"]
+                    if p["output"]["data"][doi][JSON]
                 ],
             },
             id=p["id"] + "_save_to_default_dir",
@@ -254,7 +322,7 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
                 + [
                     f"[Errno 2] No such file or directory: '/does/not/exist/{doi}.{SUFFIX}'"
                     for doi in p["input"]
-                    if doi in [VALID_DOI, ANOTHER_VALID_DOI]
+                    if doi in [A_VALID_DOI, ANOTHER_VALID_DOI]
                 ],
             },
             id=p["id"] + "_save_to_invalid_dir",
@@ -266,21 +334,31 @@ for p in [VALID_DOI_LIST, SEMI_VALID_DOI_LIST, INVALID_DOI_LIST]:
 class MockResponse:
     def __init__(self, kwargs: dict[str, Any]):
         if "url" in kwargs:
+            if kwargs["url"] in RESPONSE_JSON:
+                self.response = {
+                    **OK_200,
+                    JSON: RESPONSE_JSON[kwargs["url"]]
+                }
+                return
             if kwargs["url"] in RESPONSE_DATA:
                 self.response = RESPONSE_DATA[kwargs["url"]]
-            elif kwargs["url"].find("crossref") != -1:
+                return
+
+            if kwargs["url"].find("crossref") != -1:
                 self.response = CROSSREF_404
             elif kwargs["url"].find("datacite") != -1:
                 self.response = DATACITE_404
+
+            # elif kwargs["url"].find(INVALID_DOI) > -1 or kwargs["url"].find(NOT_FOUND) > -1:
             else:
                 raise ValueError(f'No suitable response for url {kwargs["url"]}')
 
             return
 
-        if "json" in kwargs:
-            self.response = {JSON: kwargs["json"]}
-        elif "content" in kwargs:
-            self.response = {CONTENT: kwargs["content"]}
+        if JSON in kwargs:
+            self.response = {JSON: kwargs[JSON]}
+        elif CONTENT in kwargs:
+            self.response = {CONTENT: kwargs[CONTENT]}
         else:
             self.response = kwargs
 
@@ -303,6 +381,11 @@ class MockResponse:
         return self.response[CODE]
 
     def json(self) -> Union[list, dict]:
+        """Mimic the JSON method, which decodes response content to produce JSON data.
+
+        :return: decoded response data
+        :rtype: Union[list, dict]
+        """
         return self.response[JSON]
 
 

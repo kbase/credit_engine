@@ -5,8 +5,6 @@ import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
 
-import requests
-
 from credit_engine.errors import make_error
 
 

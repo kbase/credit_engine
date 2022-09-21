@@ -46,6 +46,9 @@ def run_file_contents_check(
     else:
         raise ValueError(f"Could not parse file based on suffix: {suffix}")
 
+    # if content != expected:
+    #     print(content)
+    #     print({"expected": expected})
     assert content == expected
 
 
@@ -55,6 +58,7 @@ def run_retrieve_doi_list(
     param: dict,
     source: str,
     tmp_path: Path,
+    format_list: list[str],
 ):
     """Retrieve and check a list of DOIs
 
@@ -68,6 +72,8 @@ def run_retrieve_doi_list(
     :type source: str
     :param tmp_path: pytest temporary directory
     :type tmp_path: Path
+    :param format_list: list of formats
+    :type format_list: list[str]
     """
 
     file_list = []
@@ -86,7 +92,7 @@ def run_retrieve_doi_list(
             Path.mkdir(default_dir, exist_ok=True, parents=True)
 
         retrieval_results = doi.retrieve_doi_list(
-            param["input"], save_files, save_dir, source
+            param["input"], save_files, save_dir, source, format_list
         )
 
         assert retrieval_results["data"] == param["output"]["data"]
@@ -98,18 +104,15 @@ def run_retrieve_doi_list(
         # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in param["file_list"]]
         if save_dir != "/does/not/exist":
-
-            print({"save_dir": save_dir, "file_list": file_list})
-            scan_results = dir_scanner(save_dir)
-            print({"scan_results": scan_results})
             assert set(dir_scanner(save_dir)) == set(file_list)
             if "files" in retrieval_results:
                 # ensure file contents are as expected
                 for f in retrieval_results["files"]:
-                    run_file_contents_check(
-                        retrieval_results["files"][f]["json"],
-                        retrieval_results["data"][f]["json"],
-                    )
+                    for fmt in format_list:
+                        run_file_contents_check(
+                            retrieval_results["files"][f][fmt],
+                            retrieval_results["data"][f][fmt],
+                        )
         else:
             with pytest.raises(FileNotFoundError, match=r"No such file or directory"):
                 dir_scanner(save_dir)

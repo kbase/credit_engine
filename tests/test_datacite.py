@@ -12,7 +12,7 @@ from .conftest import (
     QUOTED_DOI,
     RETRIEVE_DOI_LIST_TEST_DATA,
     SAMPLE_DOI,
-    VALID_DOI,
+    A_VALID_DOI,
 )
 
 
@@ -30,13 +30,13 @@ def test_get_endpoint_fail():
 
 
 def test_retrieve_doi_ok_default_format(_mock_response):
-    assert retrieve_doi(VALID_DOI) == {"json": DOI_DATA[VALID_DOI]}
+    assert retrieve_doi(A_VALID_DOI) == {"json": DOI_DATA[A_VALID_DOI]}
 
 
 def test_retrieve_doi_ok_format_list(_mock_response):
     # TODO!
     pass
-    # assert retrieve_doi(VALID_DOI, ["json", "xml"]) == {"json": ..., "xml": ...}
+    # assert retrieve_doi(A_VALID_DOI, ["json", "xml"]) == {"json": ..., "xml": ...}
 
 
 def test_retrieve_doi_fail_default_format(_mock_response, capsys):
@@ -69,6 +69,7 @@ def test_retrieve_doi_list(param, _mock_response, tmp_path, capsys, monkeypatch)
         param=param,
         source="datacite",
         tmp_path=tmp_path,
+        format_list=["json"],
     )
 
 

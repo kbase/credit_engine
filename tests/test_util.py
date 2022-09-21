@@ -156,21 +156,21 @@ SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
     # dir does not exist
     pytest.param(
         {
-            "doi": "VALID_DOI",
+            "doi": "A_VALID_DOI",
             "save_dir": "no/dir/found",
             "suffix": "json",
             "data": {"this": "that"},
-            "error": f"No such file or directory: '{util.full_path('no/dir/found')}/VALID_DOI.json'",
+            "error": f"No such file or directory: '{util.full_path('no/dir/found')}/A_VALID_DOI.json'",
         },
         id="relative_dir_not_found",
     ),
     pytest.param(
         {
-            "doi": "VALID_DOI",
+            "doi": "A_VALID_DOI",
             "save_dir": "/no/dir/found",
             "suffix": "json",
             "data": {"this": "that"},
-            "error": "No such file or directory: '/no/dir/found/VALID_DOI.json'",
+            "error": "No such file or directory: '/no/dir/found/A_VALID_DOI.json'",
         },
         id="absolute_dir_not_found",
     ),
