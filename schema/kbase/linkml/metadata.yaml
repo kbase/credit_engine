@@ -64,20 +64,20 @@ classes:
         exact_mappings:
         - DataCite:attributes.version
 
-      available_date:
-        description: for unversioned resources, the date when the resource was made available to the public
+      dates:
+        description: lifecycle dates for the resource
+        inlined_as_list: true
+        multivalued: true
+        range: EventDate
+        examples:
+        - value: { date: 2022-05-10, date_type: available }
         close_mappings:
         - DataCite:attributes.published
+          # from DataCite:attributes.published
+          # via { date: DataCite:attributes.published, date_type: published }
         - OSTI:publication_date
-        range: date_or_datetime
-        examples:
-        - value: 2022-05-10
-
-      access_date:
-        description: for unversioned resources, when the resource was accessed
-        range: date_or_datetime
-        examples:
-        - value: 2022-05-10
+          # from: OSTI:publication_date
+          # via { date: OSTI:publication_date, date_type: published }
 
       contributors:
         description: people and/or organisations responsible for generating the resource
@@ -317,6 +317,25 @@ classes:
         - DataCite:attributes.related_identifiers[].relation_type
         todos: add DataCite relation types as an enum
 
+
+  EventDate:
+    attributes:
+      date:
+        description: the date upon which the event occurred
+        range: date_or_datetime
+        required: true
+        examples:
+        - value: 2022-05-10
+
+      date_type:
+        description: the nature of the resource-related event that occurred on that date
+        range: DateType
+        required: true
+        examples:
+        - value: available
+        - value: updated
+
+
 enums:
   ResourceType:
     permissible_values:
@@ -327,3 +346,12 @@ enums:
     permissible_values:
       Person:
       Organisation:
+
+  DateType:
+    permissible_values:
+      accessed:
+        description: The date that the resource was accessed.
+      available:
+        description: The date the resource is made publicly available. To indicate the end of an embargo period, use Available.
+      updated:
+        description: The date of the last update to the resource, when the resource is being added to.
