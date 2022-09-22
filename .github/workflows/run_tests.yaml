@@ -33,7 +33,7 @@ jobs:
       name: Lint linkml file
       id: lint_linkml
       run: |
-        poetry run linkml-lint -c ./schema/kbase/linkml/default.yaml -f terminal ./schema/kbase/linkml/metadata.yaml
+        poetry run linkml-lint ./schema/kbase/linkml/metadata.yaml
       continue-on-error: true
     -
       name: poetry run pytest -rP tests/
