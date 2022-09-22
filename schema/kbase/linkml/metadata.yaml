@@ -2,16 +2,16 @@ id: https://kbase/credit_engine/schema/metadata
 name: metadata
 description: Schema for KBase resource metadata
 prefixes:
-  linkml: https://w3id.org/linkml/
-  schema: http://schema.org/
-  ORCID: https://orcid.org/
+  biolink: https://w3id.org/biolink/vocab/
   credit: https://casrai.org/credit/
-  datacite: https://purl.org/datacite/v4.4
-  biolink: https://biolink.github.io/biolink-model/docs/
   crossref: https://crossref.org/
-  DOI: https://doi.org/
+  datacite: https://purl.org/datacite/v4.4
+  DOI: http://identifiers.org/doi/
+  linkml: https://w3id.org/linkml/
+  ORCID: http://identifiers.org/orcid/
   OSTI: https://www.osti.gov/biblio/
   ROR: https://ror.org/
+  schema: http://schema.org/
 imports:
   - linkml:types
 default_range: string
@@ -19,6 +19,7 @@ default_range: string
 classes:
 
   Resource:
+    description: A data source of some type.
     attributes:
       identifier:
         description: resolvable persistent unique ID for the resource
@@ -90,6 +91,7 @@ classes:
         - OSTI:contributors
         - OSTI:authors
         - JGI:organisms[].pi
+        todos: this should include organisations as well as people
 
       related_identifiers:
         description: other resolvable persistent unique IDs used to access the resource or related resources
@@ -126,6 +128,7 @@ classes:
 
 
   Person:
+    description: A human or human-like entity.
     attributes:
       orcid:
         identifier: true
@@ -240,6 +243,7 @@ classes:
 
 
   FundingReference:
+    description: funding information about a single funding source
     attributes:
       funder_name:
         description: human-readable funding body name
@@ -277,6 +281,7 @@ classes:
 
 
   ResolvablePID:
+    description: a resolvable permanent ID
     attributes:
       id:
         identifier: true
@@ -309,7 +314,6 @@ classes:
         examples:
         - value: This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2
 
-
       relationship_type:
         description: how the resource represented by this ID relates to the original resource, as described by DataCite relation types
         exact_mappings:
@@ -319,6 +323,7 @@ classes:
 
 
   EventDate:
+    description: The date of a specified event.
     attributes:
       date:
         description: the date upon which the event occurred
@@ -338,16 +343,13 @@ classes:
 
 enums:
   ResourceType:
+    description: The type of resource being represented
     permissible_values:
       dataset:
       report:
 
-  ContributorType:
-    permissible_values:
-      Person:
-      Organisation:
-
   DateType:
+    description: The type of date being represented
     permissible_values:
       accessed:
         description: The date that the resource was accessed.
@@ -355,3 +357,10 @@ enums:
         description: The date the resource is made publicly available. To indicate the end of an embargo period, use Available.
       updated:
         description: The date of the last update to the resource, when the resource is being added to.
+
+  # TODO: use as range for 'contributors'
+  # ContributorType:
+  #   description: The type of contributor being represented
+  #   permissible_values:
+  #     Person:
+  #     Organisation:
