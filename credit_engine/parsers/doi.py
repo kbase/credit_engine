@@ -1,5 +1,4 @@
 import types
-from enum import Enum, EnumMeta
 from pathlib import Path
 from typing import Any, Optional, Union
 from urllib.parse import quote
@@ -12,9 +11,6 @@ import credit_engine.parsers.crossref as crossref
 import credit_engine.parsers.datacite as datacite
 import credit_engine.util as util
 from credit_engine.errors import make_error
-
-DATA = "data"
-FILES = "files"
 
 SOURCE_TO_PARSER = {
     CE.CROSSREF: crossref,
@@ -107,8 +103,7 @@ def _validate_retrieve_doi_list_input(
     except ValueError as e:
         input_errors.append(e.args[0])
 
-    # FIXME: this should be covered by argument validation
-    if not source or source not in SOURCE_TO_PARSER:
+    if source not in SOURCE_TO_PARSER:
         # if not source or source not in SourceToParser:
         input_errors.append(
             make_error(
@@ -201,33 +196,33 @@ def retrieve_doi_list(
     )
 
     results = {
-        DATA: {},
+        CE.DATA: {},
     }
 
     if params["save_files"]:
-        results[FILES] = {}
+        results[CE.FILES] = {}
 
     for doi in params["doi_list"]:
-        results[DATA][doi] = parser.retrieve_doi(
+        results[CE.DATA][doi] = parser.retrieve_doi(
             doi, output_format_list=params["output_format_list"]
         )
         if not save_files:
-            return results
+            continue
 
-        if doi not in results[FILES]:
-            results[FILES][doi] = {}
+        if doi not in results[CE.FILES]:
+            results[CE.FILES][doi] = {}
         for fmt in params["output_format_list"]:
-            if results[DATA][doi][fmt] is None:
-                results[FILES][doi][fmt] = None
+            if results[CE.DATA][doi][fmt] is None:
+                results[CE.FILES][doi][fmt] = None
                 continue
             # otherwise, save to file
             doi_file = util.save_data_to_file(
                 doi=doi,
                 save_dir=params["save_dir"],
                 suffix=get_extension(params["source"], fmt),
-                data=results[DATA][doi][fmt],
+                data=results[CE.DATA][doi][fmt],
             )
             if doi_file:
-                results[FILES][doi][fmt] = doi_file
+                results[CE.FILES][doi][fmt] = doi_file
 
     return results

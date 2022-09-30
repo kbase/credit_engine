@@ -23,7 +23,7 @@ PARSER = {
     CE.DATACITE: datacite,
 }
 
-DATA_SOURCES = [pytest.param(src, id=src) for src in PARSER]
+SOURCE_TEST_DATA = [pytest.param(src, id=src) for src in PARSER]
 
 DATA_FORMAT = {
     CE.CROSSREF: {
@@ -39,12 +39,6 @@ DATA_FORMAT = {
         CE.JSON: CE.EXT[CE.JSON],
     },
 }
-
-
-def xtest_printing_out_some_data():
-    response = generate_response("sample_data/datacite/10.25585_1487552.json")
-    print(response)
-    assert 1 == 2
 
 
 CHECK_DOI_SOURCE_TEST_DATA = [
@@ -70,18 +64,6 @@ CHECK_DOI_SOURCE_TEST_DATA = [
         id="not_found",
     ),
 ]
-
-
-@pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
-def xtest_check_doi_source(param, _mock_response):
-    """Test the DOI source function
-
-    :param param: doi: the DOI to query; expected: expected result
-    :type param: pytest.param
-    :param _mock_response: mock requests.get function
-    :type _mock_response: pytest mock
-    """
-    assert doi.check_doi_source(param["doi"]) == param["expected"]
 
 
 GET_EXTENSION_TEST_DATA = [
@@ -127,26 +109,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
 ]
 
-
-@pytest.mark.parametrize("output_format", [CE.JSON, CE.XML, CE.UNIXREF, CE.UNIXSD])
-@pytest.mark.parametrize("source", DATA_SOURCES)
-def test_get_extension(source, output_format):
-
-    expected = DATA_FORMAT.get(source, {}).get(output_format, None)
-    if expected is None:
-        error_text = make_error(
-            "invalid_param",
-            {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
-        )
-        with pytest.raises(ValueError, match=error_text):
-            doi.get_extension(source, output_format)
-
-    else:
-        assert doi.get_extension(source, output_format) == expected
-        assert doi.get_extension(source, output_format.upper()) == expected
-        assert doi.get_extension(source, output_format.title()) == expected
-        assert doi.get_extension(source, output_format.title().swapcase()) == expected
-
+# test data for retrieve_doi_list
 
 INVALID_SOURCE_TEST_DATA = [
     pytest.param(
@@ -176,7 +139,21 @@ INVALID_SOURCE_TEST_DATA = [
     ),
 ]
 
-INVALID_OUTPUT_FORMAT_LIST = [
+OUTPUT_FORMAT_LIST = [
+    # valid for Crossref, Datacite
+    pytest.param(["json"], id="json"),
+    # valid for Datacite
+    pytest.param(["json", "xml"], id="json_xml"),
+    # valid for Datacite
+    pytest.param(["xml"], id="xml"),
+    # valid for Crossref
+    pytest.param(["json", "unixref", "json", "json"], id="json_unixref"),
+    # valid for Crossref
+    pytest.param(["unixsd", "unixref"], id="unixref_unixsd"),
+]
+
+
+INVALID_OUTPUT_FORMAT_LIST_TEST_DATA = [
     pytest.param(
         {
             "input": "txt",
@@ -226,7 +203,7 @@ INVALID_OUTPUT_FORMAT_LIST = [
     ),
 ]
 
-INVALID_SAVE_DIR = [
+INVALID_SAVE_DIR_TEST_DATA = [
     pytest.param(
         {
             "input": "/does/not/exist",
@@ -248,34 +225,6 @@ INVALID_SAVE_DIR = [
         id="valid_save_dir",
     ),
 ]
-
-
-@pytest.mark.parametrize("output_format_list", INVALID_OUTPUT_FORMAT_LIST)
-@pytest.mark.parametrize("save_dir", INVALID_SAVE_DIR)
-@pytest.mark.parametrize("source", INVALID_SOURCE_TEST_DATA)
-@pytest.mark.parametrize("doi_list", CLEAN_DOI_LIST_DATA)
-def test_retrieve_doi_list_errors(
-    doi_list, source, save_dir, output_format_list, capsys
-):
-    error_list = []
-    for parameter in [doi_list, source, save_dir, output_format_list]:
-        if "error" in parameter:
-            error_list.append(parameter["error"])
-
-    if not error_list:
-        return
-
-    # TODO: better tests
-    error_match = "(Please check the above errors and try again|validation errors? for RetrieveDoiList)"
-    with pytest.raises(ValueError, match=error_match):
-        doi.retrieve_doi_list(
-            doi_list=doi_list["input"],
-            source=source["input"],
-            output_format_list=output_format_list["input"],
-            save_files=True,
-            save_dir=save_dir["input"],
-        )
-
 
 SAVE_PARAMS = [
     pytest.param({"id": "no_save_no_dir"}, id="no_save_no_dir"),
@@ -304,19 +253,6 @@ SAVE_PARAMS = [
     ),
 ]
 
-OUTPUT_FORMAT_LIST = [
-    # valid for Crossref, Datacite
-    pytest.param(["json"], id="json"),
-    # valid for Datacite
-    pytest.param(["json", "xml"], id="json_xml"),
-    # valid for Datacite
-    pytest.param(["xml"], id="xml"),
-    # valid for Crossref
-    pytest.param(["json", "unixref", "json", "json"], id="json_unixref"),
-    # valid for Crossref
-    pytest.param(["unixsd", "unixref"], id="unixref_unixsd"),
-]
-
 DOI_LIST = [
     pytest.param([A_VALID_DOI, ANOTHER_VALID_DOI], id="all_valid"),
     pytest.param([A_VALID_DOI, INVALID_DOI], id="some_valid"),
@@ -324,9 +260,69 @@ DOI_LIST = [
 ]
 
 
+@pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
+def test_check_doi_source(param, _mock_response):
+    """Test the DOI source function
+
+    :param param: doi: the DOI to query; expected: expected result
+    :type param: pytest.param
+    :param _mock_response: mock requests.get function
+    :type _mock_response: pytest mock
+    """
+    assert doi.check_doi_source(param["doi"]) == param["expected"]
+
+
+@pytest.mark.parametrize("output_format", [CE.JSON, CE.XML, CE.UNIXREF, CE.UNIXSD])
+@pytest.mark.parametrize("source", SOURCE_TEST_DATA)
+def test_get_extension(source, output_format):
+
+    expected = DATA_FORMAT.get(source, {}).get(output_format, None)
+    if expected is None:
+        error_text = make_error(
+            "invalid_param",
+            {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
+        )
+        with pytest.raises(ValueError, match=error_text):
+            doi.get_extension(source, output_format)
+
+    else:
+        assert doi.get_extension(source, output_format) == expected
+        assert doi.get_extension(source, output_format.upper()) == expected
+        assert doi.get_extension(source, output_format.title()) == expected
+        assert doi.get_extension(source, output_format.title().swapcase()) == expected
+
+
+@pytest.mark.parametrize("output_format_list", INVALID_OUTPUT_FORMAT_LIST_TEST_DATA)
+@pytest.mark.parametrize("save_dir", INVALID_SAVE_DIR_TEST_DATA)
+@pytest.mark.parametrize("source", INVALID_SOURCE_TEST_DATA)
+@pytest.mark.parametrize("doi_list", CLEAN_DOI_LIST_DATA)
+def test_retrieve_doi_list_errors(
+    doi_list, source, save_dir, output_format_list, capsys
+):
+    error_list = []
+    for parameter in [doi_list, source, save_dir, output_format_list]:
+        if "error" in parameter:
+            error_list.append(parameter["error"])
+
+    if not error_list:
+        return
+
+    # TODO: better tests
+    error_match = "(Please check the above errors and try again|validation errors? for RetrieveDoiList)"
+    with pytest.raises(ValueError, match=error_match):
+        doi.retrieve_doi_list(
+            doi_list=doi_list["input"],
+            source=source["input"],
+            output_format_list=output_format_list["input"],
+            save_files=True,
+            save_dir=save_dir["input"],
+        )
+
+
+
 @pytest.mark.parametrize("output_format_list", OUTPUT_FORMAT_LIST)
 @pytest.mark.parametrize("save_to", SAVE_PARAMS)
-@pytest.mark.parametrize("source", DATA_SOURCES)
+@pytest.mark.parametrize("source", SOURCE_TEST_DATA)
 @pytest.mark.parametrize("doi_list", DOI_LIST)
 def test_retrieve_doi_list(
     doi_list, source, save_to, output_format_list, capsys, monkeypatch, _mock_response

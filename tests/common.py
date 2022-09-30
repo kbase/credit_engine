@@ -89,6 +89,8 @@ def run_retrieve_doi_list(
 
     :param param: input parameters
     :type param: dict
+    :param expected: expected results
+    :type expected: dict
     :param default_dir: default directory for the data source
     :type default_dir: Path
     :param tmp_path: temporary directory
@@ -107,16 +109,15 @@ def run_retrieve_doi_list(
     if "save_files" in param and param["save_files"]:
         save_dir = param["save_dir"] if "save_dir" in param else default_dir
         assert Path(save_dir).exists()
+       # interpolate the path to the save directory
+        file_list = [os.path.join(save_dir, doi) for doi in expected["file_list"]]
 
         retrieval_results = doi.retrieve_doi_list(*list_params)
         assert retrieval_results["data"] == expected["output"]["data"]
-
-        # interpolate the path to the save directory
-        file_list = [os.path.join(save_dir, doi) for doi in expected["file_list"]]
         assert set(dir_scanner(save_dir)) == set(file_list)
-        assert "files" in retrieval_results
+
         # ensure file contents are as expected
-        print(retrieval_results["files"])
+        assert "files" in retrieval_results
         for f in retrieval_results["files"]:
             for fmt in output_format_list:
                 if retrieval_results["data"][f][fmt] is None:
@@ -127,14 +128,16 @@ def run_retrieve_doi_list(
                         retrieval_results["data"][f][fmt],
                     )
     else:
-        assert (
-            doi.retrieve_doi_list(
-                param["doi_list"],
-                source=param["source"],
-                output_format_list=output_format_list,
-            )
-            == expected["output"]
+        retrieval_results = doi.retrieve_doi_list(
+            param["doi_list"],
+            source=param["source"],
+            output_format_list=param["output_format_list"],
         )
+        print("retrieval_results")
+        print(retrieval_results)
+        print("expected")
+        print(expected["output"])
+        assert retrieval_results == expected["output"]
         assert dir_scanner(tmp_path) == []
 
     if "errors" in expected:
