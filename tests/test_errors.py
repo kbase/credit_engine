@@ -1,5 +1,6 @@
 import pytest
 
+import credit_engine.constants as CE
 import credit_engine.errors as errors
 from credit_engine.errors import ERROR_STRING
 
@@ -96,7 +97,7 @@ MAKE_ERROR_TEST_DATA = [
         {
             "input": [
                 "invalid_param",
-                {"param": "output format", "format": "morse code"},
+                {"param": CE.OUTPUT_FORMAT, "format": "morse code"},
             ],
             "output": 'Invalid output format: {"format": "morse code", "param": "output format"}',
         },
@@ -106,7 +107,7 @@ MAKE_ERROR_TEST_DATA = [
         {
             "input": [
                 "invalid_param",
-                {"param": "output format", "output format": "elevator music"},
+                {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: "elevator music"},
             ],
             "output": "Invalid output format: elevator music",
         },
