@@ -119,15 +119,25 @@ save_data_to_file_data = [
     {
         "doi": "10.25585/1487552",
         "suffix": "json",
-        "content": json.loads(
+        "data": json.loads(
             Path.read_text(util.full_path("sample_data/datacite/10.25585_1487552.json"))
         ),
     },
     {
         "doi": "10.25585/1487552",
         "suffix": "xml",
-        "content": Path.read_bytes(
+        "data": Path.read_bytes(
             util.full_path("sample_data/datacite/10.25585_1487552.xml")
+        ),
+    },
+    {
+        "doi": "10.46936/10.25585/60007526",
+        "suffix": ".unixref.xml",
+        "trimmed_suffix": "unixref.xml",
+        "data": Path.read_bytes(
+            util.full_path(
+                "sample_data/crossref/10.46936_10.25585_60007526.unixref.xml"
+            )
         ),
     },
 ]
@@ -135,12 +145,7 @@ save_data_to_file_data = [
 
 SAVE_DATA_TO_FILE_TEST_DATA = [
     pytest.param(
-        {
-            **param,
-            "resp": MockResponse({"json": param["content"]})
-            if param["suffix"] == "json"
-            else MockResponse({"content": param["content"]}),
-        },
+        param,
         id=f"save_{param['suffix']}",
     )
     for param in save_data_to_file_data
@@ -149,33 +154,36 @@ SAVE_DATA_TO_FILE_TEST_DATA = [
 
 @pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_TEST_DATA)
 def test_save_data_to_file(param, tmp_path):
-    doi_file = tmp_path / f'{util.doi_to_file_name(param["doi"])}.{param["suffix"]}'
+    doi_file = (
+        tmp_path
+        / f'{util.doi_to_file_name(param["doi"])}.{param["trimmed_suffix"]if "trimmed_suffix" in param else param["suffix"]}'
+    )
     assert (
-        util.save_data_to_file(param["doi"], tmp_path, param["suffix"], param["resp"])
+        util.save_data_to_file(param["doi"], tmp_path, param["suffix"], param["data"])
         == doi_file
     )
-    run_file_contents_check(doi_file, param["content"])
+    run_file_contents_check(doi_file, param["data"])
 
 
 SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
     # dir does not exist
     pytest.param(
         {
-            "doi": "VALID_DOI",
+            "doi": "A_VALID_DOI",
             "save_dir": "no/dir/found",
             "suffix": "json",
-            "resp": MockResponse({"json": {"this": "that"}}),
-            "error": f"No such file or directory: '{util.full_path('no/dir/found')}/VALID_DOI.json'",
+            "data": {"this": "that"},
+            "error": f"No such file or directory: '{util.full_path('no/dir/found')}/A_VALID_DOI.json'",
         },
         id="relative_dir_not_found",
     ),
     pytest.param(
         {
-            "doi": "VALID_DOI",
+            "doi": "A_VALID_DOI",
             "save_dir": "/no/dir/found",
             "suffix": "json",
-            "resp": MockResponse({"json": {"this": "that"}}),
-            "error": "No such file or directory: '/no/dir/found/VALID_DOI.json'",
+            "data": {"this": "that"},
+            "error": "No such file or directory: '/no/dir/found/A_VALID_DOI.json'",
         },
         id="absolute_dir_not_found",
     ),
@@ -186,7 +194,7 @@ SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
 def test_save_data_to_file_fail(param, capsys):
     assert (
         util.save_data_to_file(
-            param["doi"], param["save_dir"], param["suffix"], param["resp"]
+            param["doi"], param["save_dir"], param["suffix"], param["data"]
         )
         is None
     )

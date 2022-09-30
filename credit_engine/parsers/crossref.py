@@ -1,14 +1,15 @@
-from typing import Optional
+from typing import Optional, Union
 from urllib.parse import quote
 
 import requests
 
+import credit_engine.constants as CE
 from credit_engine.errors import make_error
 
-FILE_EXTENSIONS = {"unixref": "unixref.xml", "unixsd": "unixsd.xml", "json": "json"}
-SAMPLE_DATA_DIR = "sample_data/crossref"
+FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.UNIXREF, CE.UNIXSD]}
+SAMPLE_DATA_DIR = f"sample_data/{CE.CROSSREF}"
 DEFAULT_EMAIL = "credit_engine@kbase.us"
-DEFAULT_FORMAT = "json"
+DEFAULT_FORMAT = CE.JSON
 
 
 def get_endpoint(
@@ -35,7 +36,12 @@ def get_endpoint(
 
     lc_output_format = output_format.lower()
     if lc_output_format not in FILE_EXTENSIONS:
-        raise ValueError(make_error("invalid", {"format": output_format}))
+        raise ValueError(
+            make_error(
+                "invalid_param",
+                {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
+            )
+        )
 
     if lc_output_format == "json":
         return f"https://api.crossref.org/works/{quote(doi)}"
@@ -48,9 +54,9 @@ def get_endpoint(
 
 def retrieve_doi(
     doi: str,
-    output_format: Optional[str] = None,
+    output_format_list: Optional[list[str]] = None,
     email_address: Optional[str] = None,
-) -> requests.Response:
+) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from Crossref.
 
     :param doi: the DOI to retrieve
@@ -63,10 +69,29 @@ def retrieve_doi(
     :return: the decoded JSON response
     :rtype: dict
     """
-    response = requests.get(get_endpoint(doi, output_format, email_address))
-    if response.status_code == 200:
-        return response
+    if not output_format_list:
+        output_format_list = [DEFAULT_FORMAT]
 
-    raise ValueError(
-        f"Request for {doi} failed with status code {response.status_code}"
-    )
+    doi_data = {}
+    for fmt in output_format_list:
+        response = requests.get(get_endpoint(doi, fmt, email_address))
+        if response.status_code == 200:
+            doi_data[fmt] = extract_data_from_resp(response, fmt)
+        else:
+            print(
+                f"Request for {doi} {fmt} failed with status code {response.status_code}"
+            )
+            doi_data[fmt] = None
+    return doi_data
+
+
+def extract_data_from_resp(
+    resp: requests.Response, fmt: str
+) -> Union[dict, list, bytes, None]:
+    if fmt == "json":
+        try:
+            return resp.json()
+        except Exception as e:
+            print(e)
+            return None
+    return resp.content

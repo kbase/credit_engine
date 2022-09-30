@@ -1,9 +1,53 @@
 import re
+import tempfile
+from pathlib import Path
 
 import pytest
 
+import credit_engine.constants as CE
+import tests.common as common
+
+# from credit_engine.util import dir_scanner
 from credit_engine.errors import make_error
 from credit_engine.parsers import crossref, datacite, doi
+from tests.conftest import (
+    A_VALID_DOI,
+    ANOTHER_VALID_DOI,
+    CLEAN_DOI_LIST_DATA,
+    INVALID_DOI,
+    NOT_FOUND,
+    generate_response,
+    generate_response_for_doi,
+)
+
+PARSER = {
+    CE.CROSSREF: crossref,
+    CE.DATACITE: datacite,
+}
+
+DATA_SOURCES = [pytest.param(src, id=src) for src in PARSER]
+
+DATA_FORMAT = {
+    CE.CROSSREF: {
+        CE.JSON: CE.EXT[CE.JSON],
+        CE.UNIXREF: CE.EXT[CE.UNIXREF],
+        CE.UNIXSD: CE.EXT[CE.UNIXSD],
+    },
+    CE.DATACITE: {
+        CE.JSON: CE.EXT[CE.JSON],
+        CE.XML: CE.EXT[CE.XML],
+    },
+    CE.OSTI: {
+        CE.JSON: CE.EXT[CE.JSON],
+    },
+}
+
+
+def xtest_printing_out_some_data():
+    response = generate_response("sample_data/datacite/10.25585_1487552.json")
+    print(response)
+    assert 1 == 2
+
 
 CHECK_DOI_SOURCE_TEST_DATA = [
     pytest.param(
@@ -22,7 +66,7 @@ CHECK_DOI_SOURCE_TEST_DATA = [
     ),
     pytest.param(
         {
-            "doi": "NOT_FOUND",
+            "doi": NOT_FOUND,
             "expected": None,
         },
         id="not_found",
@@ -31,7 +75,14 @@ CHECK_DOI_SOURCE_TEST_DATA = [
 
 
 @pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
-def test_check_doi_source(param, _mock_response):
+def xtest_check_doi_source(param, _mock_response):
+    """Test the DOI source function
+
+    :param param: doi: the DOI to query; expected: expected result
+    :type param: pytest.param
+    :param _mock_response: mock requests.get function
+    :type _mock_response: pytest mock
+    """
     assert doi.check_doi_source(param["doi"]) == param["expected"]
 
 
@@ -79,51 +130,280 @@ GET_EXTENSION_TEST_DATA = [
 ]
 
 
-@pytest.mark.parametrize("param", GET_EXTENSION_TEST_DATA)
-def test_get_extension(param):
-    if "expected" in param:
-        assert (
-            doi.get_extension(param["parser"], param["output_format"])
-            == param["expected"]
+# @pytest.mark.parametrize("param", GET_EXTENSION_TEST_DATA)
+@pytest.mark.parametrize("output_format", [CE.JSON, CE.XML, CE.UNIXREF, CE.UNIXSD])
+@pytest.mark.parametrize("source", DATA_SOURCES)
+def test_get_extension(source, output_format):
+
+    expected = DATA_FORMAT.get(source, {}).get(output_format, None)
+    if expected is None:
+        error_text = make_error(
+            "invalid_param",
+            {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
         )
-    else:
-        error_text = make_error("invalid", {"format": param["output_format"]})
         with pytest.raises(ValueError, match=error_text):
-            doi.get_extension(param["parser"], param["output_format"])
+            doi.get_extension(source, output_format)
+
+    else:
+        assert doi.get_extension(source, output_format) == expected
+        assert doi.get_extension(source, output_format.upper()) == expected
+        assert doi.get_extension(source, output_format.title()) == expected
+        assert doi.get_extension(source, output_format.title().swapcase()) == expected
 
 
-RETRIEVE_DOI_LIST_FAIL_TEST_DATA = [
+INVALID_SOURCE_TEST_DATA = [
     pytest.param(
         {
-            "input": [
-                ["VALID_DOI", "ANOTHER_VALID_DOI"],
-                None,
-                None,
-                "THE BOWELS OF HELL",
-            ],
-            "error": "Invalid data source: THE BOWELS OF HELL",
+            "input": "THE BOWELS OF HELL",
+            "error": make_error(
+                "invalid_param",
+                {"param": CE.DATA_SOURCE, CE.DATA_SOURCE: "THE BOWELS OF HELL"},
+            ),
         },
         id="invalid_source",
     ),
     pytest.param(
         {
-            "input": [
-                ["VALID_DOI", "ANOTHER_VALID_DOI"],
-                None,
-                None,
-                "datacite",
-                ["rdfxml", "json", "duck types"],
-            ],
-            "error": re.escape(
-                make_error("invalid", {"format": ["rdfxml", "duck types"]})
+            "input": "",
+            "error": make_error(
+                "invalid_param", {"param": CE.DATA_SOURCE, CE.DATA_SOURCE: ""}
             ),
         },
-        id="invalid_format",
+        id="invalid_source_empty",
+    ),
+    pytest.param(
+        {
+            "input": CE.DATACITE,
+        },
+        id="valid_source",
+    ),
+]
+
+INVALID_OUTPUT_FORMAT_LIST = [
+    pytest.param(
+        {
+            "input": "txt",
+            "error": make_error(  # re.escape(
+                "invalid_param", {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: "txt"}
+            ),
+        },
+        id="invalid_fmt_type",
+    ),
+    pytest.param(
+        {
+            "input": [None, ""],
+            "error": make_error(  # re.escape(
+                "invalid_param",
+                {
+                    "param": CE.OUTPUT_FORMAT,
+                    CE.OUTPUT_FORMAT: [None, ""],
+                },
+            ),
+        },
+        id="invalid_fmt_list_of_empties",
+    ),
+    pytest.param(
+        {
+            "input": ["text"],
+            "error": make_error(  # re.escape(
+                "invalid_param", {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: ["text"]}
+            ),
+        },
+        id="invalid_fmt_value",
+    ),
+    pytest.param(
+        {
+            "input": ["rdfxml", "xml", "json", "duck types"],
+            "error": make_error(  # re.escape(
+                "invalid_param",
+                {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: ["rdfxml", "duck types"]},
+            ),
+        },
+        id="invalid_fmt_values",
+    ),
+    pytest.param(
+        {
+            "input": ["json"],
+        },
+        id="valid_fmt",
+    ),
+]
+
+INVALID_SAVE_DIR = [
+    pytest.param(
+        {
+            "input": "/does/not/exist",
+            "error": "invalid save_dir: '/does/not/exist' does not exist or is not a directory",
+        },
+        id="absolute_save_dir",
+    ),
+    pytest.param(
+        {
+            "input": "does/not/exist",
+            "error": "invalid save_dir: 'does/not/exist' does not exist or is not a directory",
+        },
+        id="relative_save_dir",
+    ),
+    pytest.param(
+        {
+            "input": "",
+        },
+        id="valid_save_dir",
     ),
 ]
 
 
-@pytest.mark.parametrize("param", RETRIEVE_DOI_LIST_FAIL_TEST_DATA)
-def test_retrieve_doi_list_fail(param):
-    with pytest.raises(ValueError, match=param["error"]):
-        doi.retrieve_doi_list(*param["input"])
+@pytest.mark.parametrize("output_format_list", INVALID_OUTPUT_FORMAT_LIST)
+@pytest.mark.parametrize("save_dir", INVALID_SAVE_DIR)
+@pytest.mark.parametrize("source", INVALID_SOURCE_TEST_DATA)
+@pytest.mark.parametrize("doi_list", CLEAN_DOI_LIST_DATA)
+def test_retrieve_doi_list_errors(
+    doi_list, source, save_dir, output_format_list, capsys
+):
+    error_list = []
+    for parameter in [doi_list, source, save_dir, output_format_list]:
+        if "error" in parameter:
+            error_list.append(parameter["error"])
+
+    if not error_list:
+        return
+
+    # TODO: better tests
+    error_match = "(Please check the above errors and try again|validation errors? for RetrieveDoiList)"
+    with pytest.raises(ValueError, match=error_match):
+        doi.retrieve_doi_list(
+            doi_list=doi_list["input"],
+            source=source["input"],
+            output_format_list=output_format_list["input"],
+            save_files=True,
+            save_dir=save_dir["input"],
+        )
+
+
+SAVE_PARAMS = [
+    pytest.param({"id": "no_save_no_dir"}, id="no_save_no_dir"),
+    pytest.param(
+        {
+            "id": "no_save",
+            "save_files": False,
+            "save_dir": "tmp_path",
+        },
+        id="no_save",
+    ),
+    pytest.param(
+        {
+            "id": "save_to_default_dir",
+            "save_files": True,
+        },
+        id="save_to_default_dir",
+    ),
+    pytest.param(
+        {
+            "id": "save_to_dir",
+            "save_files": True,
+            "save_dir": "tmp_path",
+        },
+        id="save_to_dir",
+    ),
+]
+
+OUTPUT_FORMAT_LIST = [
+    # valid for Crossref, Datacite
+    pytest.param(["json"], id="json"),
+    # valid for Datacite
+    pytest.param(["json", "xml"], id="json_xml"),
+    # valid for Datacite
+    pytest.param(["xml"], id="xml"),
+    # valid for Crossref
+    pytest.param(["json", "unixref", "json", "json"], id="json_unixref"),
+    # valid for Crossref
+    pytest.param(["unixsd", "unixref"], id="unixref_unixsd"),
+]
+
+DOI_LIST = [
+    pytest.param([A_VALID_DOI, ANOTHER_VALID_DOI], id="all_valid"),
+    pytest.param([A_VALID_DOI, INVALID_DOI], id="some_valid"),
+    pytest.param([NOT_FOUND, INVALID_DOI], id="all_invalid"),
+]
+
+
+@pytest.mark.parametrize("output_format_list", OUTPUT_FORMAT_LIST)
+@pytest.mark.parametrize("save_to", SAVE_PARAMS)
+@pytest.mark.parametrize("source", DATA_SOURCES)
+@pytest.mark.parametrize("doi_list", DOI_LIST)
+def test_retrieve_doi_list(
+    doi_list, source, save_to, output_format_list, capsys, monkeypatch, _mock_response
+):
+
+    deduped_output_format_list = list(set(output_format_list))
+    # expect an error if any of the output_format_list formats are wrong
+    no_format = [fmt for fmt in output_format_list if fmt not in DATA_FORMAT[source]]
+    if no_format:
+        with pytest.raises(ValueError, match="Invalid output format"):
+            doi.retrieve_doi_list(doi_list, source, output_format_list)
+        return
+
+    # pytest's tmp_path does not create a new dir for each run of the tests, hence the use of tempfile
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        tmp_path = Path(tmp_dir)
+        default_dir = tmp_path / "default_dir"
+        specified_dir = tmp_path / "specified_dir"
+        for parser in [crossref, datacite]:
+            monkeypatch.setattr(parser, "SAMPLE_DATA_DIR", default_dir)
+
+        # set up the expected output
+        output_data = {}
+        errors = []
+        param = {
+            "doi_list": doi_list,
+            "source": source,
+            "output_format_list": output_format_list,
+        }
+
+        for d in doi_list:
+            if d not in output_data:
+                output_data[d] = {}
+            for fmt in deduped_output_format_list:
+                output_data[d][fmt] = generate_response_for_doi(source, d, fmt)
+                if output_data[d][fmt] is None:
+                    errors.append(f"Request for {d} {fmt} failed with status code 404")
+
+        # calculate the expected results
+        file_list = []
+        if save_to["id"] in ["save_to_dir", "save_to_default_dir"]:
+            file_list = [
+                f"{d}{CE.EXT[fmt]}"
+                for d in doi_list
+                for fmt in deduped_output_format_list
+                if d in output_data and fmt in output_data[d] and output_data[d][fmt]
+            ]
+
+        # copy over file save settings
+        if "save_files" in save_to:
+            param["save_files"] = save_to["save_files"]
+
+        # set up the appropriate directories
+        if "save_dir" in save_to:
+            # convert "tmp_path" to the value of tmp_path
+            if save_to["save_dir"] == "tmp_path":
+                param["save_dir"] = specified_dir
+                # ensure the save dir exists
+                Path.mkdir(specified_dir, parents=True)
+                assert param["save_dir"].exists()
+            else:
+                param["save_dir"] = save_to["save_dir"]
+        else:
+            Path.mkdir(default_dir, parents=True)
+            assert default_dir.exists()
+
+        expected = {"file_list": file_list, "output": {"data": output_data}}
+        if errors:
+            expected["errors"] = errors
+
+        common.run_retrieve_doi_list(
+            param=param,
+            expected=expected,
+            default_dir=default_dir,
+            tmp_path=tmp_path,
+            capsys=capsys,
+        )

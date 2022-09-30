@@ -73,24 +73,44 @@ MAKE_ERROR_TEST_DATA = [
     ),
     pytest.param(
         {
-            "input": ["invalid", {}],
-            "output": ERROR_STRING["invalid"],
+            "input": ["invalid_param", {}],
+            "output": ERROR_STRING["invalid_param"],
         },
-        id="invalid_empty_args",
+        id="invalid_param_empty_args",
     ),
     pytest.param(
         {
-            "input": ["invalid", {"this": "that"}],
-            "output": "Invalid output format: FORMAT",
+            "input": ["invalid_param", {"this": "that"}],
+            "output": 'Invalid parameter: {"this": "that"}',
         },
-        id="invalid_invalid_args",
+        id="invalid_param_no_param",
     ),
     pytest.param(
         {
-            "input": ["invalid", {"format": "koala"}],
-            "output": "Invalid output format: koala",
+            "input": ["invalid_param", {"param": "koala"}],
+            "output": 'Invalid koala: {"param": "koala"}',
         },
-        id="invalid_valid_args",
+        id="invalid_param_param_no_args",
+    ),
+    pytest.param(
+        {
+            "input": [
+                "invalid_param",
+                {"param": "output format", "format": "morse code"},
+            ],
+            "output": 'Invalid output format: {"format": "morse code", "param": "output format"}',
+        },
+        id="invalid_param_param_invalid_args",
+    ),
+    pytest.param(
+        {
+            "input": [
+                "invalid_param",
+                {"param": "output format", "output format": "elevator music"},
+            ],
+            "output": "Invalid output format: elevator music",
+        },
+        id="invalid_param_valid_args",
     ),
     pytest.param(
         {"input": ["http_error"], "output": "HTTP request failed"},

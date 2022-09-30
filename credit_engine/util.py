@@ -5,12 +5,19 @@ import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
 
-import requests
+import pydantic
+from pydantic import constr, validate_arguments
 
 from credit_engine.errors import make_error
 
 
-def clean_doi_list(doi_list: list[str]) -> list[str]:
+class NoWhitespaceString(pydantic.ConstrainedStr):
+    strip_whitespace = True
+    min_length = 1
+
+
+@validate_arguments
+def clean_doi_list(doi_list: list[NoWhitespaceString]) -> list[str]:
     """Clean up a list of DOIs.
 
     Dedupe and remove blanks.
@@ -18,11 +25,10 @@ def clean_doi_list(doi_list: list[str]) -> list[str]:
     :param doi_list: list of putative DOIs
     :type doi_list: list[str]
     :raises ValueError: if DOI list is not a list or is empty
-    :raises ValueError: if no valid DOIs are found
-    :return: list of cleaned-up DOIs
+    :return: list (possibly empty) of cleaned-up DOIs
     :rtype: list[str]
     """
-    if not doi_list or not isinstance(doi_list, list):
+    if not doi_list:
         raise ValueError(make_error("doi_list_format"))
 
     clean_doi_list = set()
@@ -31,9 +37,6 @@ def clean_doi_list(doi_list: list[str]) -> list[str]:
             clean_doi = str(putative_doi).strip()
             if clean_doi:
                 clean_doi_list.add(clean_doi)
-
-    if not clean_doi_list:
-        raise ValueError(make_error("no_valid_dois"))
 
     return list(clean_doi_list)
 
@@ -113,11 +116,12 @@ def dir_scanner(
     return file_list
 
 
+@validate_arguments
 def save_data_to_file(
     doi: str,
     save_dir: Union[Path, str],
     suffix: str,
-    resp: requests.Response,
+    data: Union[dict, list, str, bytes],
 ) -> Optional[Path]:
     # ensure we don't have an extra full stop
     if suffix.startswith("."):
@@ -125,13 +129,14 @@ def save_data_to_file(
 
     doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.{suffix}")
     try:
-        if suffix.endswith("xml"):
-            write_bytes_to_file(doi_file, resp.content)
+        if isinstance(data, bytes):
+            write_bytes_to_file(doi_file, data)
         else:
-            write_to_file(doi_file, resp.json())
+            write_to_file(doi_file, data)
         return doi_file
     except OSError as e:
         print(e)
+    # includes JSON decoding errors
     except Exception as e:
         print(type(Exception))
         print(e)
