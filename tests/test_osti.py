@@ -2,7 +2,7 @@ import pytest
 
 from credit_engine.parsers.osti import get_endpoint
 
-from .conftest import QUOTED_DOI, SAMPLE_DOI
+from tests.conftest import QUOTED_DOI, SAMPLE_DOI
 
 
 def test_get_endpoint_ok():

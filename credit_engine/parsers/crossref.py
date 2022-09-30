@@ -1,18 +1,21 @@
-from typing import Optional
+from typing import Optional, Union
 from urllib.parse import quote
 
 import requests
-
+from json import JSONDecodeError
+import credit_engine.constants as CE
 from credit_engine.errors import make_error
+from pydantic import validate_arguments
 
-FILE_EXTENSIONS = {"unixref": "unixref.xml", "unixsd": "unixsd.xml", "json": "json"}
-SAMPLE_DATA_DIR = "sample_data/crossref"
+FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.UNIXREF, CE.UNIXSD]}
+SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.CROSSREF}"
 DEFAULT_EMAIL = "credit_engine@kbase.us"
-DEFAULT_FORMAT = "json"
+DEFAULT_FORMAT = CE.JSON
 
 
+@validate_arguments
 def get_endpoint(
-    doi: str = "",
+    doi: CE.TrimmedString,
     output_format: Optional[str] = DEFAULT_FORMAT,
     email_address: Optional[str] = DEFAULT_EMAIL,
 ) -> str:
@@ -27,15 +30,17 @@ def get_endpoint(
     :return: full URL to query
     :rtype: str
     """
-    if not doi:
-        raise ValueError(make_error("missing_required", {"required": "doi"}))
-
     if not output_format:
         output_format = DEFAULT_FORMAT
 
     lc_output_format = output_format.lower()
     if lc_output_format not in FILE_EXTENSIONS:
-        raise ValueError(make_error("invalid", {"format": output_format}))
+        raise ValueError(
+            make_error(
+                "invalid_param",
+                {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
+            )
+        )
 
     if lc_output_format == "json":
         return f"https://api.crossref.org/works/{quote(doi)}"
@@ -46,11 +51,12 @@ def get_endpoint(
     return f"https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}"
 
 
+@validate_arguments
 def retrieve_doi(
-    doi: str,
-    output_format: Optional[str] = None,
+    doi: CE.TrimmedString,
+    output_format_list: Optional[list[str]] = None,
     email_address: Optional[str] = None,
-) -> requests.Response:
+) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from Crossref.
 
     :param doi: the DOI to retrieve
@@ -63,10 +69,29 @@ def retrieve_doi(
     :return: the decoded JSON response
     :rtype: dict
     """
-    response = requests.get(get_endpoint(doi, output_format, email_address))
-    if response.status_code == 200:
-        return response
+    if not output_format_list:
+        output_format_list = [DEFAULT_FORMAT]
 
-    raise ValueError(
-        f"Request for {doi} failed with status code {response.status_code}"
-    )
+    doi_data = {}
+    for fmt in output_format_list:
+        response = requests.get(get_endpoint(doi, fmt, email_address))
+        if response.status_code == 200:
+            doi_data[fmt] = extract_data_from_resp(doi, response, fmt)
+        else:
+            print(
+                f"Request for {doi} {fmt} failed with status code {response.status_code}"
+            )
+            doi_data[fmt] = None
+    return doi_data
+
+
+def extract_data_from_resp(
+    doi: str, resp: requests.Response, fmt: str
+) -> Union[dict, list, bytes, None]:
+    if fmt == "json":
+        try:
+            return resp.json()
+        except JSONDecodeError as e:
+            print(f"Error decoding JSON for {doi}: " + str(e))
+            return None
+    return resp.content
