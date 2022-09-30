@@ -21,11 +21,6 @@ INVALID_DOI = "INVALID_DOI"
 A_VALID_DOI = "A_VALID_DOI"
 ANOTHER_VALID_DOI = "ANOTHER_VALID_DOI"
 
-# VALID_DC_DOI_1 = "10.25585/1487552"
-# VALID_DC_DOI_2 = "10.25585/1487554"
-# VALID_CR_DOI_1 = "10.46936/10.25585/60007526"
-# VALID_CR_DOI_2 = "10.46936/10.25585/60007530"
-
 OK = "ok"
 CODE = "status_code"
 CONTENT = "content"
@@ -136,12 +131,10 @@ def generate_response(file_path: str) -> Union[None, bytes, str, list, dict]:
     current_dir = Path.cwd()
     path_to_file = Path.resolve(current_dir.joinpath(Path(file_path)))
     if path_to_file.suffix == f".{CE.JSON}":
-        # print('importing as JSON')
         with open(path_to_file, encoding="utf-8") as fh:
             file_data = json.load(fh)
             return file_data
 
-    # print('reading as bytes')
     return path_to_file.read_bytes()
 
 
@@ -226,16 +219,6 @@ RESPONSE_JSON = {
 
 
 RESPONSE_DATA = {
-    # "https://api.crossref.org/works/DATACITE_DOI/agency": {
-    #     **OK_200,
-    #     JSON: {"message": {"agency": {"id": datacite}}},
-    # },
-    # "https://api.crossref.org/works/CROSSREF_DOI/agency": {
-    #     **OK_200,
-    #     JSON: {"message": {"agency": {"id": crossref}}},
-    # },
-    # check_doi_source
-    # returns a 404
     f"https://api.crossref.org/works/{NOT_FOUND}/agency": CROSSREF_404,
     f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixsd&id={A_VALID_DOI}": {
         **OK_200,
@@ -255,7 +238,6 @@ RESPONSE_DATA = {
     },
     f"https://api.crossref.org/works/{INVALID_DOI}": CROSSREF_404,
     f"https://api.crossref.org/works/{NOT_FOUND}": CROSSREF_404,
-    # 'https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}'
     f"https://api.datacite.org/dois/{NOT_FOUND}?affiliation=true": DATACITE_404,
     f"https://api.datacite.org/dois/{INVALID_DOI}?affiliation=true": DATACITE_404,
 }
@@ -277,7 +259,6 @@ class MockResponse:
             elif kwargs["url"].find("datacite") != -1:
                 self.response = DATACITE_404
 
-            # elif kwargs["url"].find(INVALID_DOI) > -1 or kwargs["url"].find(NOT_FOUND) > -1:
             else:
                 raise ValueError(f'No suitable response for url {kwargs["url"]}')
 

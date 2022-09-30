@@ -1,12 +1,10 @@
 import pytest
 
 import credit_engine.constants as CE
-import credit_engine.parsers.datacite as datacite
-import credit_engine.parsers.doi as doi
 from credit_engine.parsers.datacite import get_endpoint, retrieve_doi
 
-from .common import check_stdout_for_errs
-from .conftest import (
+from tests.common import check_stdout_for_errs
+from tests.conftest import (
     A_VALID_DOI,
     NOT_FOUND,
     QUOTED_DOI,

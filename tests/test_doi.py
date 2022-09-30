@@ -1,4 +1,3 @@
-import re
 import tempfile
 from pathlib import Path
 
@@ -7,7 +6,6 @@ import pytest
 import credit_engine.constants as CE
 import tests.common as common
 
-# from credit_engine.util import dir_scanner
 from credit_engine.errors import make_error
 from credit_engine.parsers import crossref, datacite, doi
 from tests.conftest import (
@@ -130,7 +128,6 @@ GET_EXTENSION_TEST_DATA = [
 ]
 
 
-# @pytest.mark.parametrize("param", GET_EXTENSION_TEST_DATA)
 @pytest.mark.parametrize("output_format", [CE.JSON, CE.XML, CE.UNIXREF, CE.UNIXSD])
 @pytest.mark.parametrize("source", DATA_SOURCES)
 def test_get_extension(source, output_format):
@@ -183,7 +180,7 @@ INVALID_OUTPUT_FORMAT_LIST = [
     pytest.param(
         {
             "input": "txt",
-            "error": make_error(  # re.escape(
+            "error": make_error(
                 "invalid_param", {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: "txt"}
             ),
         },
@@ -192,7 +189,7 @@ INVALID_OUTPUT_FORMAT_LIST = [
     pytest.param(
         {
             "input": [None, ""],
-            "error": make_error(  # re.escape(
+            "error": make_error(
                 "invalid_param",
                 {
                     "param": CE.OUTPUT_FORMAT,
@@ -205,7 +202,7 @@ INVALID_OUTPUT_FORMAT_LIST = [
     pytest.param(
         {
             "input": ["text"],
-            "error": make_error(  # re.escape(
+            "error": make_error(
                 "invalid_param", {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: ["text"]}
             ),
         },
@@ -214,7 +211,7 @@ INVALID_OUTPUT_FORMAT_LIST = [
     pytest.param(
         {
             "input": ["rdfxml", "xml", "json", "duck types"],
-            "error": make_error(  # re.escape(
+            "error": make_error(
                 "invalid_param",
                 {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: ["rdfxml", "duck types"]},
             ),

@@ -107,6 +107,7 @@ def _validate_retrieve_doi_list_input(
     except ValueError as e:
         input_errors.append(e.args[0])
 
+    # FIXME: this should be covered by argument validation
     if not source or source not in SOURCE_TO_PARSER:
         # if not source or source not in SourceToParser:
         input_errors.append(
@@ -167,7 +168,6 @@ def _validate_retrieve_doi_list_input(
 @validate_arguments
 def retrieve_doi_list(
     doi_list: list[util.NoWhitespaceString],
-    # source: SourceToParser,
     source: util.NoWhitespaceString,
     output_format_list: Optional[list[util.NoWhitespaceString]] = None,
     save_files: bool = False,
@@ -211,22 +211,23 @@ def retrieve_doi_list(
         results[DATA][doi] = parser.retrieve_doi(
             doi, output_format_list=params["output_format_list"]
         )
+        if not save_files:
+            return results
 
-        if save_files:
-            if doi not in results[FILES]:
-                results[FILES][doi] = {}
-            for fmt in params["output_format_list"]:
-                if results[DATA][doi][fmt] is None:
-                    results[FILES][doi][fmt] = None
-                    continue
-                # otherwise, save to file
-                doi_file = util.save_data_to_file(
-                    doi=doi,
-                    save_dir=params["save_dir"],
-                    suffix=get_extension(params["source"], fmt),
-                    data=results[DATA][doi][fmt],
-                )
-                if doi_file:
-                    results[FILES][doi][fmt] = doi_file
+        if doi not in results[FILES]:
+            results[FILES][doi] = {}
+        for fmt in params["output_format_list"]:
+            if results[DATA][doi][fmt] is None:
+                results[FILES][doi][fmt] = None
+                continue
+            # otherwise, save to file
+            doi_file = util.save_data_to_file(
+                doi=doi,
+                save_dir=params["save_dir"],
+                suffix=get_extension(params["source"], fmt),
+                data=results[DATA][doi][fmt],
+            )
+            if doi_file:
+                results[FILES][doi][fmt] = doi_file
 
     return results

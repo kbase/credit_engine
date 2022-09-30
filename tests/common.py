@@ -7,7 +7,6 @@ from typing import Pattern, Union
 import _pytest.capture
 import pytest
 
-# import credit_engine.constants as CE
 from credit_engine.parsers import doi
 from credit_engine.util import dir_scanner
 
