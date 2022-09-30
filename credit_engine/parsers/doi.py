@@ -18,7 +18,8 @@ SOURCE_TO_PARSER = {
 }
 
 
-def check_doi_source(doi: str) -> Optional[str]:
+@validate_arguments
+def check_doi_source(doi: CE.TrimmedString) -> Optional[str]:
     """Check whether a DOI is accessible via CrossRef
 
     :param doi: digital object identifier
@@ -37,7 +38,7 @@ def check_doi_source(doi: str) -> Optional[str]:
 
 
 @validate_arguments
-def get_extension(source: str, output_format: str = "json") -> str:
+def get_extension(source: str, output_format: str = CE.JSON) -> str:
     """Get the appropriate file extension for saving data.
 
     :param source: the data source
@@ -50,7 +51,6 @@ def get_extension(source: str, output_format: str = "json") -> str:
     """
     lc_output_format = output_format.lower()
     if source not in SOURCE_TO_PARSER:
-        # if source not in SourceToParser:
         raise ValueError(f"No parser for source {source}")
     parser = SOURCE_TO_PARSER[source]
     if lc_output_format not in parser.FILE_EXTENSIONS:
@@ -65,9 +65,9 @@ def get_extension(source: str, output_format: str = "json") -> str:
 
 @validate_arguments
 def _validate_retrieve_doi_list_input(
-    doi_list: list[util.NoWhitespaceString],
-    source: util.NoWhitespaceString,
-    output_format_list: Optional[list[util.NoWhitespaceString]] = None,
+    doi_list: CE.NonEmptyList[CE.TrimmedString],
+    source: CE.TrimmedString,
+    output_format_list: Optional[list[CE.TrimmedString]] = None,
     save_files: bool = False,
     save_dir: Optional[Union[Path, str]] = None,
 ) -> tuple[dict, types.ModuleType]:
@@ -93,18 +93,9 @@ def _validate_retrieve_doi_list_input(
     }
     parser: Optional[types.ModuleType] = None
 
-    # clean_doi_list is empty if there are no valid DOIs
-    try:
-        cleaned_doi_list = util.clean_doi_list(doi_list)
-        if not cleaned_doi_list:
-            input_errors.append(make_error("no_valid_dois"))
-        else:
-            params["doi_list"] = cleaned_doi_list
-    except ValueError as e:
-        input_errors.append(e.args[0])
+    params["doi_list"] = util.clean_doi_list(doi_list)
 
     if source not in SOURCE_TO_PARSER:
-        # if not source or source not in SourceToParser:
         input_errors.append(
             make_error(
                 "invalid_param", {"param": CE.DATA_SOURCE, CE.DATA_SOURCE: source}
@@ -162,9 +153,9 @@ def _validate_retrieve_doi_list_input(
 
 @validate_arguments
 def retrieve_doi_list(
-    doi_list: list[util.NoWhitespaceString],
-    source: util.NoWhitespaceString,
-    output_format_list: Optional[list[util.NoWhitespaceString]] = None,
+    doi_list: CE.NonEmptyList[CE.TrimmedString],
+    source: CE.TrimmedString,
+    output_format_list: Optional[list[CE.TrimmedString]] = None,
     save_files: bool = False,
     save_dir: Optional[Union[Path, str]] = None,
 ) -> dict:

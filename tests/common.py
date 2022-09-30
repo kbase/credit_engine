@@ -10,6 +10,8 @@ import pytest
 from credit_engine.parsers import doi
 from credit_engine.util import dir_scanner
 
+VERBOSE = False
+
 
 def check_stdout_for_errs(
     capsys: _pytest.capture.CaptureFixture,
@@ -17,8 +19,9 @@ def check_stdout_for_errs(
 ):
     readouterr = capsys.readouterr()
     out_errors = readouterr.out.split("\n")
-    print({"STDOUT": out_errors})
-    print(error_list)
+    if VERBOSE:
+        print({"STDOUT": out_errors})
+        print(error_list)
     for error in error_list:
         assert error in out_errors
 
@@ -29,8 +32,9 @@ def check_stderr_for_errs(
 ):
     readouterr = capsys.readouterr()
     out_errors = readouterr.err.split("\n")
-    print({"STDERR": out_errors})
-    print(error_list)
+    if VERBOSE:
+        print({"STDERR": out_errors})
+        print(error_list)
     for error in error_list:
         assert error in out_errors
 
@@ -109,7 +113,7 @@ def run_retrieve_doi_list(
     if "save_files" in param and param["save_files"]:
         save_dir = param["save_dir"] if "save_dir" in param else default_dir
         assert Path(save_dir).exists()
-       # interpolate the path to the save directory
+        # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in expected["file_list"]]
 
         retrieval_results = doi.retrieve_doi_list(*list_params)
@@ -133,10 +137,6 @@ def run_retrieve_doi_list(
             source=param["source"],
             output_format_list=param["output_format_list"],
         )
-        print("retrieval_results")
-        print(retrieval_results)
-        print("expected")
-        print(expected["output"])
         assert retrieval_results == expected["output"]
         assert dir_scanner(tmp_path) == []
 

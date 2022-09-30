@@ -3,6 +3,7 @@ import os.path
 from pathlib import Path, PurePath
 
 import pytest
+from pydantic import ValidationError
 
 import credit_engine.util as util
 from tests.common import run_file_contents_check
@@ -57,7 +58,7 @@ def test_clean_doi_list(param):
         clean_dois = util.clean_doi_list(param["input"])
         assert set(clean_dois) == set(param["output"])
     else:
-        with pytest.raises(ValueError, match=param["error"]):
+        with pytest.raises(ValidationError, match=param["error"]):
             util.clean_doi_list(param["input"])
 
 

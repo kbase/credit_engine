@@ -1,3 +1,5 @@
+import pydantic as pydantic
+
 # data sources
 CROSSREF = "crossref"
 DATACITE = "datacite"
@@ -25,3 +27,12 @@ DATA = "data"
 FILES = "files"
 
 KBASE_DOI = "10.1038/nbt.4163"
+
+
+class TrimmedString(pydantic.ConstrainedStr):
+    strip_whitespace = True
+    min_length = 1
+
+
+class NonEmptyList(pydantic.ConstrainedList):
+    min_items = 1

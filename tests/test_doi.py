@@ -14,7 +14,6 @@ from tests.conftest import (
     CLEAN_DOI_LIST_DATA,
     INVALID_DOI,
     NOT_FOUND,
-    generate_response,
     generate_response_for_doi,
 )
 
@@ -272,6 +271,13 @@ def test_check_doi_source(param, _mock_response):
     assert doi.check_doi_source(param["doi"]) == param["expected"]
 
 
+def test_get_extension_fail_bad_source():
+    SOURCE = "not a real source"
+    error_text = f"No parser for source {SOURCE}"
+    with pytest.raises(ValueError, match=error_text):
+        doi.get_extension(SOURCE, CE.JSON)
+
+
 @pytest.mark.parametrize("output_format", [CE.JSON, CE.XML, CE.UNIXREF, CE.UNIXSD])
 @pytest.mark.parametrize("source", SOURCE_TEST_DATA)
 def test_get_extension(source, output_format):
@@ -317,7 +323,6 @@ def test_retrieve_doi_list_errors(
             save_files=True,
             save_dir=save_dir["input"],
         )
-
 
 
 @pytest.mark.parametrize("output_format_list", OUTPUT_FORMAT_LIST)

@@ -20,6 +20,9 @@ NOT_FOUND = "NOT_FOUND"
 INVALID_DOI = "INVALID_DOI"
 A_VALID_DOI = "A_VALID_DOI"
 ANOTHER_VALID_DOI = "ANOTHER_VALID_DOI"
+INVALID_JSON = "INVALID_JSON"
+INVALID_XML = "INVALID_XML"
+NO_XML_NODE = "NO_XML_NODE"
 
 OK = "ok"
 CODE = "status_code"
@@ -49,7 +52,9 @@ CLEAN_DOI_LIST_DATA = [
     pytest.param(
         {
             "input": [],
-            "error": ERROR_STRING["doi_list_format"],
+            "error": re.escape(
+                "1 validation error for CleanDoiList\ndoi_list\n  ensure this value has at least 1 items (type=value_error.list.min_items; limit_value=1)",
+            ),
         },
         id="zero_length_list_input",
     ),
@@ -236,10 +241,26 @@ RESPONSE_DATA = {
         **OK_200,
         CONTENT: generate_response_for_doi(CE.CROSSREF, ANOTHER_VALID_DOI, CE.UNIXREF),
     },
+    f"https://api.crossref.org/works/{INVALID_JSON}": {
+        **OK_200,
+        CONTENT: '{"this": "that"',
+    },
     f"https://api.crossref.org/works/{INVALID_DOI}": CROSSREF_404,
     f"https://api.crossref.org/works/{NOT_FOUND}": CROSSREF_404,
     f"https://api.datacite.org/dois/{NOT_FOUND}?affiliation=true": DATACITE_404,
     f"https://api.datacite.org/dois/{INVALID_DOI}?affiliation=true": DATACITE_404,
+    f"https://api.datacite.org/dois/{INVALID_JSON}?affiliation=true": {
+        **OK_200,
+        CONTENT: '{"this": "that"',
+    },
+    f"https://api.datacite.org/dois/{NO_XML_NODE}?affiliation=true": {
+        **OK_200,
+        JSON: {"this": "that"},
+    },
+    f"https://api.datacite.org/dois/{INVALID_XML}?affiliation=true": {
+        **OK_200,
+        JSON: {"data": {"attributes": {"xml": "abcdefghijklmopqrst"}}},
+    },
 }
 
 
@@ -295,7 +316,9 @@ class MockResponse:
         :return: decoded response data
         :rtype: Union[list, dict]
         """
-        return self.response[JSON]
+        if JSON in self.response:
+            return self.response[JSON]
+        return json.loads(self.response[CONTENT])
 
 
 # monkeypatched requests.get moved to a fixture

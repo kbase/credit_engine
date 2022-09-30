@@ -4,20 +4,12 @@ import re
 import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
-
-import pydantic
-from pydantic import constr, validate_arguments
-
-from credit_engine.errors import make_error
-
-
-class NoWhitespaceString(pydantic.ConstrainedStr):
-    strip_whitespace = True
-    min_length = 1
+from pydantic import validate_arguments
+import credit_engine.constants as CE
 
 
 @validate_arguments
-def clean_doi_list(doi_list: list[NoWhitespaceString]) -> list[str]:
+def clean_doi_list(doi_list: CE.NonEmptyList[CE.TrimmedString]) -> list[str]:
     """Clean up a list of DOIs.
 
     Dedupe and remove blanks.
@@ -28,9 +20,6 @@ def clean_doi_list(doi_list: list[NoWhitespaceString]) -> list[str]:
     :return: list (possibly empty) of cleaned-up DOIs
     :rtype: list[str]
     """
-    if not doi_list:
-        raise ValueError(make_error("doi_list_format"))
-
     clean_doi_list = set()
     for putative_doi in doi_list:
         if putative_doi:
@@ -118,7 +107,7 @@ def dir_scanner(
 
 @validate_arguments
 def save_data_to_file(
-    doi: str,
+    doi: CE.TrimmedString,
     save_dir: Union[Path, str],
     suffix: str,
     data: Union[dict, list, str, bytes],
@@ -136,7 +125,7 @@ def save_data_to_file(
         return doi_file
     except OSError as e:
         print(e)
-    # includes JSON decoding errors
+    # includes JSON encoding errors
     except Exception as e:
         print(type(Exception))
         print(e)
