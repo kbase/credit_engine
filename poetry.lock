@@ -1651,7 +1651,7 @@ docs = ["Sphinx", "elementpath (>=3.0.0,<4.0.0)", "jinja2", "sphinx-rtd-theme"]
 
 [[package]]
 name = "xsdata"
-version = "22.8"
+version = "22.9"
 description = "Python XML Binding"
 category = "main"
 optional = false
@@ -1688,7 +1688,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "307afb9bbc9dfe4892d1f04bc048cd8be926d1a3a10112a912243b32f0c68cc9"
+content-hash = "f089a5b378e52fdcf53a9c79292c13d9335093e0af5685ce1737d7242027fd0a"
 
 [metadata.files]
 alabaster = [
@@ -2700,8 +2700,8 @@ xmlschema = [
     {file = "xmlschema-2.0.4.tar.gz", hash = "sha256:00d34f97c761c191c20e822899c490930d2c4c9ea6cc7e98f25360fde498f1ab"},
 ]
 xsdata = [
-    {file = "xsdata-22.8-py3-none-any.whl", hash = "sha256:d50930f82585d96a02ae138e48f7431d1ca0fbaae70bf57f426465803ad1b451"},
-    {file = "xsdata-22.8.tar.gz", hash = "sha256:3161cc44f637e45b389fd3b4cf74115b823295f4a5b47dd750d76b0812b6896e"},
+    {file = "xsdata-22.9-py3-none-any.whl", hash = "sha256:090cc780861dbf2bb7ae7cdac08cddba1c8000fba08b9915fdb45be8f8807b78"},
+    {file = "xsdata-22.9.tar.gz", hash = "sha256:c62d5002b4de59baca4c4ea9edfdc08fb7759713ec21139aaeebff20cc3e7cfc"},
 ]
 zipp = [
     {file = "zipp-3.8.1-py3-none-any.whl", hash = "sha256:47c40d7fe183a6f21403a199b3e4192cca5774656965b0a4988ad2f8feb5f009"},
