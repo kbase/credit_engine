@@ -215,3 +215,23 @@ def retrieve_doi_list(
                 results[CE.FILES][doi][fmt] = doi_file
 
     return results
+
+
+def import_dois_from_file(
+    file: Union[Path, str],
+    source: CE.TrimmedString,
+    output_format_list: Optional[list[CE.TrimmedString]] = None,
+    save_files: bool = False,
+    save_dir: Optional[Union[Path, str]] = None,
+) -> dict:
+
+    doi_list = util.read_text_file(file)
+    no_blanks = [line for line in list(set(doi_list)) if line]
+
+    return retrieve_doi_list(
+        no_blanks,
+        source,
+        output_format_list,
+        save_files,
+        save_dir,
+    )
