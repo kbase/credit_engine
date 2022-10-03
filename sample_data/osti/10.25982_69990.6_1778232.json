@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Univ. of Connecticut, Storrs, CT (United States)\",\"last_name\":\"Suria\",\"orcid\":\"0000000188008717\",\"middle_name\":\"\",\"first_name\":\"Andrea\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Univ. of Connecticut, Storrs, CT (United States)",
-        "contributor_type": "",
-        "first_name": "Andrea",
-        "last_name": "Suria",
-        "middle_name": "",
-        "orcid": "0000000188008717",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Suria, Andrea [Univ. of Connecticut, Storrs, CT (United States)] (ORCID:0000000188008717)"
     ],

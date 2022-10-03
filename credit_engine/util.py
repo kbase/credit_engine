@@ -4,7 +4,9 @@ import re
 import unicodedata
 from pathlib import Path
 from typing import Callable, Optional, Union
+
 from pydantic import validate_arguments
+
 import credit_engine.constants as CE
 
 

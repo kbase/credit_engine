@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1773074</osti_id>
+        <title>Case Study: Can you find Delftia?</title>
+        <description>Delftia is a genus of bacteria with a bunch of cool features! The best studied species, Delftia acidovorans can produce gold nanoparticles from gold ions in solution. This bacteria has been found living in biofolms with Cupriavidis metallidurans on gold nuggets. It is also found in soil, in sinks and in rhizospheres of different plants where it promotes their growth.
+
+Delftia acidovorans forms gold nuggets by producing a short nonribosomal peptide called delftibactin. The 16 genes responsible for the production of delftibactin are called the del cluster (delA-delP). These genes were originally discovered in Delftia acidovorans SPH-1, but our research shows that the del cluster appears to be present across the genus.
+
+We&#039;ll start with a number of raw reads, clean them up and do a little taxonomy to figure out what we might be able to assemble. Next, we&#039;ll assemble the reads using 4 different methods and pick out the best assembly. Then we&#039;ll take those reads and sort them by genome and assess the quality of those genomes. We&#039;ll select the high quality genomes to annotate and insert into phylogenetic trees to find relatives.</description>
+        <authors>
+            <author>Krebs, Rose [North Carolina State Univ., Raleigh, NC (United States)]</author>
+            <author>Goller, Carlos [North Carolina State Univ., Raleigh, NC (United States)] (ORCID:0000000220130334)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/67335.259/1773074</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-08-14T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>North Carolina State Univ., Raleigh, NC (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>Delftia, metagenome, MAGs</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-03-31T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1773074" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1773074" />
+            </links>
+    </record>
+    </records>

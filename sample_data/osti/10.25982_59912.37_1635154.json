@@ -1,49 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"The Ohio State Univ., Columbus, OH (United States)\",\"last_name\":\"Bolduc\",\"orcid\":\"0000000324200755\",\"middle_name\":\"\",\"first_name\":\"Benjamin\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Wood-Charlson\",\"orcid\":\"0000000195577715\",\"middle_name\":\"\",\"first_name\":\"Elisha\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Dehal\",\"orcid\":\"0000000158102497\",\"middle_name\":\"\",\"first_name\":\"Paramvir\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Crockett\",\"orcid\":\"0000000328714454\",\"middle_name\":\"\",\"first_name\":\"Zachary\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "The Ohio State Univ., Columbus, OH (United States)",
-        "contributor_type": "",
-        "first_name": "Benjamin",
-        "last_name": "Bolduc",
-        "middle_name": "",
-        "orcid": "0000000324200755",
-        "role": "PRIMARY"
-      },
-      {
-        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
-        "contributor_type": "",
-        "first_name": "Elisha",
-        "last_name": "Wood-Charlson",
-        "middle_name": "",
-        "orcid": "0000000195577715",
-        "role": ""
-      },
-      {
-        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
-        "contributor_type": "",
-        "first_name": "Paramvir",
-        "last_name": "Dehal",
-        "middle_name": "",
-        "orcid": "0000000158102497",
-        "role": ""
-      },
-      {
-        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
-        "contributor_type": "",
-        "first_name": "Zachary",
-        "last_name": "Crockett",
-        "middle_name": "",
-        "orcid": "0000000328714454",
-        "role": ""
-      }
-    ],
     "authors": [
       "Bolduc, Benjamin [The Ohio State Univ., Columbus, OH (United States)] (ORCID:0000000324200755)",
       "Wood-Charlson, Elisha [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)",

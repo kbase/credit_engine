@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1668075</osti_id>
+        <title>KBase Educators Overview</title>
+        <description>KBase worked with a community of instructors to create a connected workflow that integrates genomics, metagenomics, phylogenetics, and pangenomic concepts in a “choose your own adventure” framework. Each concept is stand alone, while complementing one another as they flow from one topic to another across concepts. The pace of each workflow can be adjusted with the flexibility of modules that are shareable and allow students to copy and interact with data and analyses.</description>
+        <authors>
+            <author>Dow, Ellen [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase] (ORCID:0000000220790260)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/1668075</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-01-01T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER). Biological Systems Science Division</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>Data science, Education, Training, Genomics, Metagenomics, Phylogenetics, Transcriptomics, Metabolic Modeling</subject>
+            </subjects>
+        <doe_contract_number>AC02-05CH11231</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-08-08T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1668075" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1668075" />
+            </links>
+    </record>
+    </records>

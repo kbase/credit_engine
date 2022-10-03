@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Wang\",\"orcid\":\"0000000187099709\",\"middle_name\":\"\",\"first_name\":\"Jia\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
-        "contributor_type": "",
-        "first_name": "Jia",
-        "last_name": "Wang",
-        "middle_name": "",
-        "orcid": "0000000187099709",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Wang, Jia [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000187099709)"
     ],

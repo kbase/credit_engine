@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1777998</osti_id>
+        <title>Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in MOPS Medium</title>
+        <description>This narrative was used for the 4-member community modeling using MOPS medium for the bacteria isolated from Populus deltoides (PD). 10 bacterial strains isolated from PD were co-cultured as a synthetic microbial community in MOPS minimal medium. After 15 passages there were 4 members survived in MOPS medium.
+
+The genome of each community member was sequenced and uploaded into KBase for genome annotation and metabolic modeling. To simulate the metabolic interactions among the finally surviving community members, the individual metabolic models of each strain were merged into a compartmentalized community model, and then the community model was gapfilled using MOPS medium. The FBA modeling was performed and the metabolites exchange among community members was proposed.
+
+The publication by Jia Wang, Dana L. Carper, Leah H. Burdick, Him Shrestha, Manasa Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel J. Doktycz can be found here: &lt;a href=&#039;https://doi.org/10.​1016/​j.​csbj.​2021.​03.​034&#039;&gt;https://doi.org/10.​1016/​j.​csbj.​2021.​03.​034&lt;/a&gt;</description>
+        <authors>
+            <author>Wang, Jia [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000187099709)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/73218.75/1777998</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-01-01T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>community model, flux balance analysis, bacterial community, synthetic microbial community, plant-microbe interactions</subject>
+            </subjects>
+        <doe_contract_number>AC05-00OR22725</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-04-20T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1777998" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1777998" />
+            </links>
+    </record>
+    </records>

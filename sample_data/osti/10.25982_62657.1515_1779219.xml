@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1779219</osti_id>
+        <title>JGI QC impact on assembly, binning, phylogenomics, and functional analysis</title>
+        <description>Background
+Investigators using metagenomic sequencing to study their microbiomes are often provided data that has been trimmed and decontaminated or do it themselves without knowing the effect these procedures can have on their downstream analyses. Here we evaluated the impact that JGI trimming and decontamination procedures had on assembly and binning metrics, placement of metagenome assembled genomes into species trees, and functional profiles of metagenome-assembled genomes (MAGs) extracted from twenty three complex rhizosphere metagenomes. We also investigated how more aggressive trimming impacts these binning metrics.
+
+Results
+We found that JGI trimmed and decontamination of input reads had some significant impacts in assembly and binning metrics compared to raw reads, and that differences in placement of MAGs in species trees increased with decreasing completeness and contamination thresholds. More aggressive trimming beyond those used by JGI were found to reduce MAG counts.
+
+Conclusions
+Mild trimming and decontamination of metagenomics reads prior to assembly can change an investigator’s answer to the questions, “Who is there and what are they doing? However, mild trimming and decontamination of metagenomic reads with high quality scores is recommended for those who elect to do so.</description>
+        <authors>
+            <author>Whitham, Jason [North Carolina State Univ., Raleigh, NC (United States)] (ORCID:0000000326236292)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/62657.1515/1779219</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-01-01T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>North Carolina State Univ., Raleigh, NC (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>metagenomics, decontamination, assembly, binning, phylogenomics, functional analysis</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-05-17T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1779219" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1779219" />
+            </links>
+    </record>
+    </records>

@@ -5,9 +5,8 @@ import pytest
 
 import credit_engine.constants as CE
 import tests.common as common
-
 from credit_engine.errors import make_error
-from credit_engine.parsers import crossref, datacite, doi
+from credit_engine.parsers import crossref, datacite, doi, osti
 from tests.conftest import (
     A_VALID_DOI,
     ANOTHER_VALID_DOI,
@@ -20,6 +19,7 @@ from tests.conftest import (
 PARSER = {
     CE.CROSSREF: crossref,
     CE.DATACITE: datacite,
+    CE.OSTI: osti,
 }
 
 SOURCE_TEST_DATA = [pytest.param(src, id=src) for src in PARSER]
@@ -36,6 +36,7 @@ DATA_FORMAT = {
     },
     CE.OSTI: {
         CE.JSON: CE.EXT[CE.JSON],
+        CE.XML: CE.EXT[CE.XML],
     },
 }
 
@@ -84,6 +85,14 @@ GET_EXTENSION_TEST_DATA = [
     ),
     pytest.param(
         {
+            "parser": osti,
+            "output_format": "Json",
+            "expected": osti.FILE_EXTENSIONS["json"],
+        },
+        id="osti_json",
+    ),
+    pytest.param(
+        {
             "parser": crossref,
             "output_format": "UNIXREF",
             "expected": crossref.FILE_EXTENSIONS["unixref"],
@@ -105,6 +114,14 @@ GET_EXTENSION_TEST_DATA = [
             "error": True,
         },
         id="datacite_unixsd",
+    ),
+    pytest.param(
+        {
+            "parser": osti,
+            "output_format": "unixref",
+            "error": True,
+        },
+        id="osti_unixref",
     ),
 ]
 
@@ -132,6 +149,15 @@ INVALID_SOURCE_TEST_DATA = [
     ),
     pytest.param(
         {
+            "input": None,
+            "error": make_error(
+                "invalid_param", {"param": CE.DATA_SOURCE, CE.DATA_SOURCE: None}
+            ),
+        },
+        id="invalid_source_None",
+    ),
+    pytest.param(
+        {
             "input": CE.DATACITE,
         },
         id="valid_source",
@@ -139,11 +165,11 @@ INVALID_SOURCE_TEST_DATA = [
 ]
 
 OUTPUT_FORMAT_LIST = [
-    # valid for Crossref, Datacite
+    # valid for Crossref, Datacite, OSTI
     pytest.param(["json"], id="json"),
-    # valid for Datacite
+    # valid for Datacite, OSTI
     pytest.param(["json", "xml"], id="json_xml"),
-    # valid for Datacite
+    # valid for Datacite, OSTI
     pytest.param(["xml"], id="xml"),
     # valid for Crossref
     pytest.param(["json", "unixref", "json", "json"], id="json_unixref"),
@@ -199,6 +225,12 @@ INVALID_OUTPUT_FORMAT_LIST_TEST_DATA = [
             "input": ["json"],
         },
         id="valid_fmt",
+    ),
+    pytest.param(
+        {
+            "input": None,
+        },
+        id="valid_fmt_None_default",
     ),
 ]
 
@@ -314,7 +346,7 @@ def test_retrieve_doi_list_errors(
         return
 
     # TODO: better tests
-    error_match = "(Please check the above errors and try again|validation errors? for RetrieveDoiList)"
+    error_match = "(Please check the above errors and try again|validation errors? for (Validate)?RetrieveDoiList(Input)?)"
     with pytest.raises(ValueError, match=error_match):
         doi.retrieve_doi_list(
             doi_list=doi_list["input"],
@@ -346,7 +378,7 @@ def test_retrieve_doi_list(
         tmp_path = Path(tmp_dir)
         default_dir = tmp_path / "default_dir"
         specified_dir = tmp_path / "specified_dir"
-        for parser in [crossref, datacite]:
+        for parser in PARSER.values():
             monkeypatch.setattr(parser, "SAMPLE_DATA_DIR", default_dir)
 
         # set up the expected output

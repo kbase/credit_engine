@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1827108</osti_id>
+        <title>Omics-to-Reactive-Transport (ORT): A workflow linking genome-scale metabolic models with reactive transport codes</title>
+        <description>Motivation: Nutrient and contaminant behavior in the subsurface are governed by multiple coupled hydrobiogeochemical processes which occur across different temporal and spatial scales. Accurate description of macroscopic system behavior requires accounting for the effects of microscopic and especially microbial processes. Microbial processes mediate precipitation and dissolution and change aqueous geochemistry, all of which impacts macroscopic system behavior. As `omics data describing microbial processes is increasingly affordable and available, novel methods for using this data quickly and effectively for improved ecosystem models are needed. Results: We propose a workflow (`Omics to Reactive Transport – ORT) for utilizing metagenomic and environmental data to describe the effect of microbiological processes in macroscopic reactive transport models. This workflow utilizes and couples two open-source software packages: KBase (a software platform for systems biology) and PFLOTRAN (a reactive transport modeling code). We describe the architecture of ORT and demonstrate an implementation using metagenomic and geochemical data from a river system. Our demonstration uses microbiological drivers of nitrification and denitrification to predict nitrogen cycling patterns which agree with those provided with generalized stoichiometries. While our example uses data from a single measurement, our workflow can be applied to spatiotemporal metagenomic datasets to allow for iterative coupling between KBASE and PFLOTRAN. Live, interactive models, which incorporate the results from this narrative into a PFLOTRAN simulation, are available (without login) at https://pflotranmodeling.paf.subsurfaceinsights.com/pflotran-simple-model/.</description>
+        <authors>
+            <author>Rubinstein, Rebecca L [Subsurface Insights, LLC] (ORCID:0000000181426713)</author>
+            <author>Borton, Mikayla [Colorado State Univ., Fort Collins, CO (United States)] (ORCID:0000000180374253)</author>
+            <author>Zhou, Haiyan [Subsurface Insights, LLC] (ORCID:000000031569532X)</author>
+            <author>Shaffer, Michael [Colorado State Univ., Fort Collins, CO (United States)] (ORCID:0000000217833709)</author>
+            <author>Hoyt, David [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:000000022857719X)</author>
+            <author>Stegen, James [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:0000000191357424)</author>
+            <author>Henry, Christopher [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000180589123)</author>
+            <author>Wrighton, Kelly [Colorado State Univ., Fort Collins, CO (United States)] (ORCID:0000000304344217)</author>
+            <author>Versteeg, Roelof [Subsurface Insights, LLC] (ORCID:0000000267671082)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/71260.262/1827108</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-03-12T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            </subjects>
+        <doe_contract_number>DE-SC0019619; DE-SC0018020</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-10-27T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1827108" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1827108" />
+            </links>
+    </record>
+    </records>

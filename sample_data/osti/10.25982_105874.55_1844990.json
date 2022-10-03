@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Univ. of Georgia, Athens, GA (United States)\",\"last_name\":\"Goff\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Jennifer\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Univ. of Georgia, Athens, GA (United States)",
-        "contributor_type": "",
-        "first_name": "Jennifer",
-        "last_name": "Goff",
-        "middle_name": "",
-        "orcid": "",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Goff, Jennifer [Univ. of Georgia, Athens, GA (United States)]"
     ],

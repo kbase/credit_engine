@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1637360</osti_id>
+        <title>Isolate genomes from &#034;Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance&#034;</title>
+        <description>Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance. This Narrative contains data for the 261 ENIGMA isolates described in the paper. See Table S2 for a complete list.</description>
+        <authors>
+            <author>Kothari, Ankita</author>
+            <author>Roux, Simon [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Zhang, Hanqiao</author>
+            <author>Prieto, Anatori</author>
+            <author>Chandonia, John-Marc [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]</author>
+            <author>Spencer, Sarah</author>
+            <author>Wu, Xiaoqin</author>
+            <author>Deutschbauer, Adam M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]</author>
+            <author>Arkin, Adam P [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]</author>
+            <author>Alm, Eric J [Massachusetts Inst. of Technology (MIT), Cambridge, MA (United States)]</author>
+            <author>Chakraborty, Romy [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]</author>
+            <author>Mukhopadhyay, Aindrila</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/63776.53/1637360</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-07-06T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>Virus</subject>
+            <subject>Genome</subject>
+            <subject>Biology</subject>
+            <subject>Environment</subject>
+            </subjects>
+        <doe_contract_number>AC02-05CH11231</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-07-29T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1637360" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1637360" />
+            </links>
+    </record>
+    </records>

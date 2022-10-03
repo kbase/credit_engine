@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1844990</osti_id>
+        <title>Complete Genome of ORR Isolate Bacillus cereus CPT56D-587-MTF</title>
+        <description>Bacillus cereus strain CPT56D-587-MTF (also referred to as CPTF) was isolated from a nitrate and heavy-metal contaminated site at the Oak Ridge Field Research Center (ORFRC) in Oak Ridge, Tennessee, USA. Strain CPTF has 100% 16S rRNA gene identity to the most abundant metagenome 16S v4 region amplicon sequence variant (ASV) in the soils of the highly contaminated Area 3, the site immediately adjacent to the contamination source: the former S-3 ponds.</description>
+        <authors>
+            <author>Goff, Jennifer [Univ. of Georgia, Athens, GA (United States)]</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/105874.55/1844990</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2022-02-14T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Univ. of Georgia, Athens, GA (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>isolate, genome, Bacillus, bacteria, metals, nitrate, Bacillus cereus</subject>
+            </subjects>
+        <doe_contract_number>DE-AC02-05CH11231</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-05-03T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1844990" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1844990" />
+            </links>
+    </record>
+    </records>

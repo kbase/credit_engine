@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"University of S\u00e3o Paulo\",\"last_name\":\"Mandro\",\"orcid\":\"\",\"middle_name\":\"Adriele\",\"first_name\":\"Jessica\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "University of S\u00e3o Paulo",
-        "contributor_type": "",
-        "first_name": "Jessica",
-        "last_name": "Mandro",
-        "middle_name": "Adriele",
-        "orcid": "",
-        "role": ""
-      }
-    ],
     "authors": [
       "Mandro, Jessica Adriele [University of S\u00e3o Paulo]"
     ],

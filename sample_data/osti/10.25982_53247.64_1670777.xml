@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1670777</osti_id>
+        <title>A Genomic Catalogue of Earth’s Microbiomes - Introductory KBase Narrative</title>
+        <description>The reconstruction of bacterial and archaeal genomes from shotgun metagenomes has enabled unprecedented insights into the ecology and evolution of environmental and host-associated microbiomes. Here we applied this powerful approach to over 10,000 metagenomes collected from diverse habitats covering all of Earth’s continents and oceans, human- and animal-host associated microbiomes, engineered environments, and natural and agricultural soils to capture extant microbial metabolic and functional potential. We present a comprehensive catalogue of 52,515 metagenome-assembled genomes representing 12,556 novel candidate species-level operational taxonomic units (OTUs), spanning 135 phyla, which expand the known phylogenetic diversity of Bacteria and Archaea by 44%. We also demonstrate the utility of this collection for secondary metabolite biosynthetic potential and predicting host-virus linkage, which can provide a view into the global distribution of lysogenic viruses. This resource underscores the value of leveraging genome-centric approaches to reveal genomic properties of uncultivated microbes that impact on ecosystem processes.</description>
+        <authors>
+            <author>Nayfach, Stephen [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Roux, Simon [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Seshadri, Rekha [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Udwary, Daniel [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000234910198)</author>
+            <author>Varghese, Neha [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Schulz, Frederik [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000249324677)</author>
+            <author>Wu, Dongying [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Paez-Espino, David [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000229395398)</author>
+            <author>Chen, I-Min [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000320269798)</author>
+            <author>Huntemann, Marcel [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000212843748)</author>
+            <author>Palaniappan, Krishna [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Ladau, Joshua [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Mukherjee, Supratim [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000263222271)</author>
+            <author>Reddy, T.B.K. [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000208715567)</author>
+            <author>Nielsen, Torben [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>Kirton, Edward [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)]</author>
+            <author>P. Faria, José [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000193027250)</author>
+            <author>N. Edirisinghe, Janaka [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:000000032493234X)</author>
+            <author>S. Henry, Christopher [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000180589123)</author>
+            <author>P. Jungbluth, Sean [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000192658341)</author>
+            <author>Chivian, Dylan [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000181898729)</author>
+            <author>Dehal, Paramvir [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000158102497)</author>
+            <author>M. Wood-Charlson, Elisha [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)</author>
+            <author>P. Arkin, Adam [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000249992931)</author>
+            <author>Tringe, Susannah [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000164798427)</author>
+            <author>Visel, Axel [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000241307784)</author>
+            <author>Woyke, Tanja [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000294855637)</author>
+            <author>J. Mouncey, Nigel [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000153801256)</author>
+            <author>N. Ivanova, Natalia [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000258029485)</author>
+            <author>C. Kyrpides, Nikos [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000261310462)</author>
+            <author>Eloe-Fadrosh, Emiley A. [USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)] (ORCID:0000000281621276)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/53247.64/1670777</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-01-01T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>U.S. Department of Energy Joint Genome Institute (JGI) U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>MAGs, metagenome-assembled genomes, metagenomics, metabolic reconstruction, metabolic modeling</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-02-21T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1670777" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1670777" />
+            </links>
+    </record>
+    </records>

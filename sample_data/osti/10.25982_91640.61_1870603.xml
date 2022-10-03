@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1870603</osti_id>
+        <title>KBase Narrative - Genome-resolved metagenomics reveals novel archaeal and bacterial genomes from Amazonian forest and pasture soils</title>
+        <description>Genome-resolved metagenomics was applied to recover archaeal and bacterial metagenome-assembled genomes (MAGs) from forest and pasture soils of the Brazilian Eastern Amazon, which were subjected to different soil moisture levels (Venturini et al., 2022).</description>
+        <authors>
+            <author>Venturini, Andressa Monteiro [Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil; Princeton Institute for International and Regional Studies, Princeton University, Princeton, NJ, USA] (ORCID:0000000259011658)</author>
+            <author>Gontijo, Júlia Brandão [Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil] (ORCID:0000000319427242)</author>
+            <author>Mandro, Jéssica Adriele [Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil] (ORCID:0000000334540702)</author>
+            <author>Paula, Fabiana daSilva [Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil; Department of Biological Oceanography, Oceanographic Institute, University of São Paulo, São Paulo, SP, Brazil] (ORCID:0000000200101552)</author>
+            <author>Yoshiura, Caio Augusto [Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil] (ORCID:0000000210166456)</author>
+            <author>daFrança, Aline Giovana [Cell and Molecular Biology Laboratory, Center for Nuclear Energy in Agriculture, University of São Paulo, Piracicaba, SP, Brazil] (ORCID:0000000282323086)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/91640.61/1870603</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2022-05-30T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-07-29T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1870603" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1870603" />
+            </links>
+    </record>
+    </records>

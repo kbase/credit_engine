@@ -1,23 +1,23 @@
+from json import JSONDecodeError
 from typing import Optional, Union
 from urllib.parse import quote
 
 import requests
-from json import JSONDecodeError
+from pydantic import validate_arguments
+
 import credit_engine.constants as CE
 from credit_engine.errors import make_error
-from pydantic import validate_arguments
 
 FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.UNIXREF, CE.UNIXSD]}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.CROSSREF}"
-DEFAULT_EMAIL = "credit_engine@kbase.us"
 DEFAULT_FORMAT = CE.JSON
 
 
 @validate_arguments
 def get_endpoint(
     doi: CE.TrimmedString,
-    output_format: Optional[str] = DEFAULT_FORMAT,
-    email_address: Optional[str] = DEFAULT_EMAIL,
+    output_format: Optional[CE.TrimmedString] = None,
+    email_address: Optional[CE.TrimmedString] = None,
 ) -> str:
     """Get the appropriate endpoint for a CrossRef query.
 
@@ -31,7 +31,7 @@ def get_endpoint(
     :rtype: str
     """
     if not output_format:
-        output_format = DEFAULT_FORMAT
+        output_format = CE.JSON
 
     lc_output_format = output_format.lower()
     if lc_output_format not in FILE_EXTENSIONS:
@@ -46,7 +46,7 @@ def get_endpoint(
         return f"https://api.crossref.org/works/{quote(doi)}"
 
     if not email_address:
-        email_address = DEFAULT_EMAIL
+        email_address = CE.DEFAULT_EMAIL
 
     return f"https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}"
 
@@ -54,8 +54,8 @@ def get_endpoint(
 @validate_arguments
 def retrieve_doi(
     doi: CE.TrimmedString,
-    output_format_list: Optional[list[str]] = None,
-    email_address: Optional[str] = None,
+    output_format_list: Optional[list[CE.TrimmedString]] = None,
+    email_address: Optional[CE.TrimmedString] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from Crossref.
 

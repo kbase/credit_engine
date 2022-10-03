@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1817654</osti_id>
+        <title>Narrative for Bioproject PRJNA623111</title>
+        <description>&lt;p&gt;This Narrative is part of a collection used in publications focused on the microbial ecology of fjord sediment in the high Arctic, Svalbard. This paper took a genome-centric approach to uncover novel metabolic capabilities of the Acidobacteriota clade. Metagenomic data was coupled with amplicon sequencing of 16S rRNA and dissimilatory sulfite reductase (dsrB) genes, and transcripts (available under NCBI-Genbank Bioproject PRJNA623111), and gene expression analyses of tetrathionate-amended microcosms.&lt;/p&gt;&lt;p&gt;  This Narrative contains the metagenomic assemblies that were constructed within KBase for reproducibility. These include: &lt;ul&gt;&lt;li&gt;stnF metagenome assembly &lt;/li&gt;&lt;li&gt; stnAB metagenome assembly &lt;/li&gt;&lt;li&gt; stnAC metagenome assembly &lt;/li&gt;&lt;/ul&gt;&lt;p&gt; These metagenome assemblies served as the launching point for an additional publication focused on a different clade of bacteria (Buongiorno et al., 2020). Link to that Narrative landing page here. &lt;/p&gt;&lt;p&gt; Please cite: Flieder, Mathias, Joy Buongiorno, Craig W. Herbold, Bela Hausmann, Thomas Rattei, Karen G. Lloyd, Alexander Loy, and Kenneth Wasmund. &#034;Novel taxa of Acidobacteriota implicated in seafloor sulfur cycling.&#034; The ISME Journal (2021): 1-22.&lt;/p&gt;</description>
+        <authors>
+            <author>Buongiorno, Joy [Division of Natural Sciences, Maryville College, Maryville, TN, USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA] (ORCID:0000000274420599)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/97146.7/1817654</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-08-21T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Department of Microbiology, University of Tennessee, Knoxville, TN, USA</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>acidobacteriota, MAGs, metagenome-assembled genomes, amplicon sequencing, 16SDefulfobacterota, marine sediment, Candidatus</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-09-01T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1817654" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1817654" />
+            </links>
+    </record>
+    </records>

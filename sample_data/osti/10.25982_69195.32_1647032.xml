@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1647032</osti_id>
+        <title>Avocado_Bark_Diversity</title>
+        <description>Bark is a permanent surface for microbial colonization at the interface of trees and the surrounding air. However, little is known about the microbial communities harbored on these tissues. Studies on bark microbial ecology show a dominance of bacteria from a few phyla. Bark microbial communities of avocado (Persea americana) could have implications for tree health, as a first barrier for defense against certain pests and diseases in this economically important species. We used shotgun metagenomic sequencing to analyze the bark microbial communities of avocado trees from two orchards, and compared one of them to rhizospheric soil. Our results show that the microbial communities of avocado bark have a well-defined taxonomic structure, with consistent patterns of abundance of bacteria, fungi and archaea, even in trees from two different locations. Bacteria in avocado bark were dominated by Proteobacteria (particularly Alphaproteobacteria), Actinobacteria and Bacteroidetes, consistently with bark communities in other trees. Fungal members were dominated by Ascomycota and Basidiomycota, while most Archaea in bark were Euryarchaeota. We can conclude that avocado bark is a well-defined environment, providing niches for specific taxonomic groups. The present in-depth characterization of bark microbial communities can form a basis for their future manipulation for agronomical purposes.</description>
+        <authors>
+            <author>Aguirre von Wobeser, Eneas [CONACYT – Centro de Investigación y Desarrollo en Agrobiotecnología Alimentaria, Centro de Investigación y Desarrollo, A.C., Blvd. Sta. Catarina s/n, Col. Santiago Tlapacoya, 42110, San Agustín Tlaxiaca, Hidalgo, Mexico] (ORCID:0000000256040525)</author>
+            <author>Alfonso-Sánchez, Alexandro [Red de Estudios Moleculares Avanzados, Instituto de Ecología, A.C. Carretera antigua a Coatepec 351, Col. El Haya, 91070, Xalapa, Veracruz, Mexico] (ORCID:0000000270102032)</author>
+            <author>Méndez-Bravo, Alfonso [CONACYT – Escuela Nacional de Estudios Superiores, Laboratorio Nacional de Análisis y Síntesis Ecológica, Universidad Nacional Autónoma de México, Antigua Carretera a Pátzcuaro 8701, Col. Ex-Hacienda de San José de La Huerta, 58190, Morelia, Michoacán, Mexico] (ORCID:0000000209915464)</author>
+            <author>Reverchon, Frédérique [Red de Estudios Moleculares Avanzados, Instituto de Ecología, A.C. Carretera antigua a Coatepec 351, Col. El Haya, 91070, Xalapa, Veracruz, Mexico] (ORCID:0000000258647494)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/69195.32/1647032</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-01-01T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>CONACYT – Centro de Investigación y Desarrollo en Agrobiotecnología Alimentaria, Centro de Investigación y Desarrollo, A.C., Blvd. Sta. Catarina s/n, Col. Santiago Tlapacoya, 42110, San Agustín Tlaxiaca, Hidalgo, Mexico</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>SEP/CONACyT</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>metagenomics, taxonomic classification</subject>
+            </subjects>
+        <doe_contract_number>tbd</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-06-25T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1647032" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1647032" />
+            </links>
+    </record>
+    </records>

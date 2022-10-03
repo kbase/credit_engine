@@ -1,11 +1,13 @@
 import base64
 from json import JSONDecodeError
-import requests
 from typing import Any, Optional, Union
 from urllib.parse import quote
 
+import requests
 from pydantic import validate_arguments
+
 import credit_engine.constants as CE
+from credit_engine.errors import make_error
 
 FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.XML]}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.DATACITE}"
@@ -13,21 +15,37 @@ DEFAULT_FORMAT = CE.JSON
 
 
 @validate_arguments
-def get_endpoint(doi: CE.TrimmedString) -> str:
+def get_endpoint(
+    doi: CE.TrimmedString, output_format: Optional[CE.TrimmedString] = None
+) -> str:
     """Get the URL for the DataCite endpoint.
 
     :param doi: DOI to retrieve
     :type doi: str
+    :param output_format: format to receive data in (N.b. URL is the
+        same regardless of format)
+    :type output_format: str
     :return: endpoint URI
     :rtype: str
     """
+    if not output_format:
+        output_format = DEFAULT_FORMAT
+    lc_output_format = output_format.lower()
+    if lc_output_format not in FILE_EXTENSIONS:
+        raise ValueError(
+            make_error(
+                "invalid_param",
+                {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
+            )
+        )
+
     return f"https://api.datacite.org/dois/{quote(doi)}?affiliation=true"
 
 
 @validate_arguments
 def retrieve_doi(
     doi: CE.TrimmedString,
-    output_format_list: Optional[list[str]] = None,
+    output_format_list: Optional[list[CE.TrimmedString]] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from DataCite.
 

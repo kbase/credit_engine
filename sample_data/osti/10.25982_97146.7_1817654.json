@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Division of Natural Sciences, Maryville College, Maryville, TN, USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA\",\"last_name\":\"Buongiorno\",\"orcid\":\"0000000274420599\",\"middle_name\":\"\",\"first_name\":\"Joy\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Division of Natural Sciences, Maryville College, Maryville, TN, USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA",
-        "contributor_type": "",
-        "first_name": "Joy",
-        "last_name": "Buongiorno",
-        "middle_name": "",
-        "orcid": "0000000274420599",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Buongiorno, Joy [Division of Natural Sciences, Maryville College, Maryville, TN, USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA] (ORCID:0000000274420599)"
     ],

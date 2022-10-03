@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1637903</osti_id>
+        <title>Ecogenomics reveals community interactions in a long-term methanogenic bioreactor and a rapid switch to sulfate-reducing conditions</title>
+        <description>&lt;p&gt;This Narrative is part of a collection used in a single publication. The paper took a metagnomic and metatranscriptomic approach to examine a bioreactor&#039;s response to the presence of sulfate, which reduces the production of methane, a valuable product, while producing hydrogen sulfide, a corrosive contaminant. &lt;/p&gt;&lt;p&gt; This Narrative collection has been created to highlight the types of analyses done for this publication. They are as follows (in order): &lt;/p&gt;&lt;ul&gt; &lt;li&gt;SJ1 Metagenomes: a metagenomic analysis of sample SJ1, the initial bioreactor. &lt;/li&gt;&lt;li&gt;SJ1 Metatranscriptomes: QC-filtered raw RNA reads were aligned to individual MAGs and assembled into transcripts. &lt;/li&gt;&lt;li&gt;Metagenome-discovered food webs in a long-term methanogenic bioreactor and rapid switch to sulfate reducing conditions (this Narrative): the public Narrative referenced in the paper, which contains several key MAGs.&lt;/li&gt;&lt;/ul&gt;</description>
+        <authors>
+            <author>St. James, Andrew [Cornell Univ., Ithaca, NY (United States)] (ORCID:0000000256072789)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/51077.6/1637903</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-07-09T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Cornell Univ., Ithaca, NY (United States)</research_org>
+            <research_org>Department of Energy Systems Biology Knowledgebase</research_org>
+            <research_org>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</research_org>
+            <research_org>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>metagenomics, metatranscriptomics, bioinformatics</subject>
+            </subjects>
+        <doe_contract_number>AC02–05CH11231</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-09-29T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1637903" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1637903" />
+            </links>
+    </record>
+    </records>

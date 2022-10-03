@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Pelletier\",\"orcid\":\"0000000243217918\",\"middle_name\":\"\",\"first_name\":\"Dale\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
-        "contributor_type": "",
-        "first_name": "Dale",
-        "last_name": "Pelletier",
-        "middle_name": "",
-        "orcid": "0000000243217918",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Pelletier, Dale [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000243217918)"
     ],

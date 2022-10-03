@@ -1,49 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA\",\"last_name\":\"Nickolson\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Grant\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA\",\"last_name\":\"Marshall\",\"orcid\":\"0000000166693231\",\"middle_name\":\"\",\"first_name\":\"Christopher\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA\",\"last_name\":\"Balasjin\",\"orcid\":\"\",\"middle_name\":\"Maghboli\",\"first_name\":\"Nasim\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA\",\"last_name\":\"Bridwell\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Sophie\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA",
-        "contributor_type": "",
-        "first_name": "Grant",
-        "last_name": "Nickolson",
-        "middle_name": "",
-        "orcid": "",
-        "role": "PRIMARY"
-      },
-      {
-        "affiliation": "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA",
-        "contributor_type": "",
-        "first_name": "Christopher",
-        "last_name": "Marshall",
-        "middle_name": "",
-        "orcid": "0000000166693231",
-        "role": ""
-      },
-      {
-        "affiliation": "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA",
-        "contributor_type": "",
-        "first_name": "Nasim",
-        "last_name": "Balasjin",
-        "middle_name": "Maghboli",
-        "orcid": "",
-        "role": ""
-      },
-      {
-        "affiliation": "Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA",
-        "contributor_type": "",
-        "first_name": "Sophie",
-        "last_name": "Bridwell",
-        "middle_name": "",
-        "orcid": "",
-        "role": ""
-      }
-    ],
     "authors": [
       "Nickolson, Grant [Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA]",
       "Marshall, Christopher [Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA] (ORCID:0000000166693231)",

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1635154</osti_id>
+        <title>Viral Annotation Pipeline in KBase</title>
+        <description>This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2.</description>
+        <authors>
+            <author>Bolduc, Benjamin [The Ohio State Univ., Columbus, OH (United States)] (ORCID:0000000324200755)</author>
+            <author>Wood-Charlson, Elisha [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)</author>
+            <author>Dehal, Paramvir [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000158102497)</author>
+            <author>Crockett, Zachary [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000328714454)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/59912.37/1635154</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-06-28T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Lawrence Livermore National Lab. (LLNL), Livermore, CA (United States)</research_org>
+            <research_org>The Ohio State Univ., Columbus, OH (United States)</research_org>
+            <research_org>U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            <research_org>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</research_org>
+            <research_org>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>Virus</subject>
+            <subject>Genomics</subject>
+            <subject>Bioinformatics</subject>
+            </subjects>
+        <doe_contract_number>AC02-05CH11231, AC02-06CH11357, AC05-00OR22725,</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2020-11-30T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1635154" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1635154" />
+            </links>
+    </record>
+    </records>

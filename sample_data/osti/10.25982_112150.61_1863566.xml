@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1863566</osti_id>
+        <title>Geochemical and sequencing data from Goff et. al. 2022</title>
+        <description></description>
+        <authors>
+            <author>Goff, Jennifer [University of Georgia, Athens, Georgia, USA] (ORCID:0000000290899632)</author>
+            <author>Putt, Andrew [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000211307134)</author>
+            <author>Fan, Yupeng [University of Oklahoma]</author>
+            <author>Michael, Jonathan [University of Oklahoma]</author>
+            <author>Wang, Yajiao [University of Oklahoma]</author>
+            <author>Ning, Daliang [University of Oklahoma]</author>
+            <author>Fu, Ying [University of Oklahoma]</author>
+            <author>Van Nostrand, Joy [University of Oklahoma]</author>
+            <author>Chandonia, John-Marc [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000251539079)</author>
+            <author>Hazen, Terry [Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000225369993)</author>
+            <author>Zhou, Jizhong [University of Oklahoma]</author>
+            <author>Arkin, Adam [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000249992931)</author>
+            <author>Adams, Michael [University of Georgia] (ORCID:0000000297965014)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/112150.61/1863566</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2022-04-19T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>University of Georgia, Athens, Georgia (United States)</research_org>
+            <research_org>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</research_org>
+            <research_org>University of Oklahoma, Norman, Oklahoma (United States)</research_org>
+            <research_org>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</research_org>
+            <research_org>Univ. of Tennessee, Knoxville, TN (United States)</research_org>
+            <research_org>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States) Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>Bacillus, metals, nitrate, amplicon sequencing, geochemistry, microbial ecology</subject>
+            </subjects>
+        <doe_contract_number>AC02-05CH11231</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-04-20T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1863566" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1863566" />
+            </links>
+    </record>
+    </records>
