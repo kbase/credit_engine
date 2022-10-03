@@ -24,6 +24,8 @@ INVALID_XML = "INVALID_XML"
 NO_XML_NODE = "NO_XML_NODE"
 
 SPACE_STR = "      \n\n   \t   "
+INVALID_JSON_STR = '{"this": "that"'
+
 
 OK = "ok"
 CODE = "status_code"
@@ -355,7 +357,7 @@ RESPONSE_DATA = {
     },
     f"https://api.crossref.org/works/{INVALID_JSON}": {
         **OK_200,
-        CONTENT: '{"this": "that"',
+        CONTENT: INVALID_JSON_STR,
     },
     f"https://api.crossref.org/works/{INVALID_DOI}": SOURCE_404[CE.CROSSREF],
     f"https://api.crossref.org/works/{NOT_FOUND}": SOURCE_404[CE.CROSSREF],
@@ -367,7 +369,7 @@ RESPONSE_DATA = {
     ],
     f"https://api.datacite.org/dois/{INVALID_JSON}?affiliation=true": {
         **OK_200,
-        CONTENT: '{"this": "that"',
+        CONTENT: INVALID_JSON_STR,
     },
     f"https://api.datacite.org/dois/{NO_XML_NODE}?affiliation=true": {
         **OK_200,
@@ -381,7 +383,7 @@ RESPONSE_DATA = {
     f"https://www.osti.gov/api/v1/records?doi={INVALID_DOI}": SOURCE_404[CE.OSTI],
     f"https://www.osti.gov/api/v1/records?doi={INVALID_JSON}": {
         **OK_200,
-        CONTENT: '{"this": "that"',
+        CONTENT: INVALID_JSON_STR,
     },
     f"https://www.osti.gov/api/v1/records?doi={INVALID_XML}": {
         **OK_200,

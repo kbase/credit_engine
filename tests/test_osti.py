@@ -1,5 +1,3 @@
-import re
-
 import pytest
 
 import credit_engine.constants as CE
@@ -9,7 +7,6 @@ from tests.conftest import (
     A_VALID_DOI,
     GET_ENDPOINT_FAIL_DATA,
     INVALID_JSON,
-    INVALID_XML,
     NOT_FOUND,
     QUOTED_DOI,
     SAMPLE_DOI,

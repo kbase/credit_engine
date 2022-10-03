@@ -1,5 +1,4 @@
 import re
-from sre_parse import WHITESPACE
 
 import pytest
 
