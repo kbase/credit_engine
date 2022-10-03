@@ -437,3 +437,46 @@ def test_retrieve_doi_list(
             tmp_path=tmp_path,
             capsys=capsys,
         )
+
+DOI_SET = set([
+    '10.25982/65526.69/1755438',
+    '10.25982/1608940',
+    '10.25982/1722943',
+    '10.25982/86723.65/1778009',
+    '10.25982/73218.75/1777998',
+    '10.25982/73221.117/1777993',
+])
+
+FILE_LIST = [
+    pytest.param({
+        "input": Path('tests') / 'data' / 'empty.txt',
+        "doi_list": set()
+    }, id="empty_file"),
+    pytest.param({
+        "input": Path('tests') / 'data' / 'doi_list_with_dupes.txt',
+        "doi_list": DOI_SET,
+    }, id="dois_with_dupes"),
+    pytest.param({
+        "input": "/does/not/exist",
+        "error_type": FileNotFoundError,
+    }, id="file_does_not_exist"),
+    pytest.param({
+        "input": "sample_data/osti",
+        "error_type": IsADirectoryError,
+    }, id="directory")
+]
+@pytest.mark.parametrize("param", FILE_LIST)
+def test_import_dois_from_file(param, monkeypatch):
+
+    def return_input(*args):
+        return args
+
+    monkeypatch.setattr(doi, 'retrieve_doi_list', return_input)
+
+    if "doi_list" in param:
+        returned_input = doi.import_dois_from_file(param["input"], CE.CROSSREF, [CE.JSON])
+        assert set(returned_input[0]) == param["doi_list"]
+
+    else:
+        with pytest.raises(param["error_type"]):
+            doi.import_dois_from_file(param["input"], CE.CROSSREF, [CE.JSON])
