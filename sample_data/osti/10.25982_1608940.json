@@ -1,39 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Allen\",\"orcid\":\"000000026325859X\",\"middle_name\":\"H\",\"first_name\":\"Benjamin\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"Land\",\"orcid\":\"0000000171020031\",\"middle_name\":\"L\",\"first_name\":\"Miriam\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Wood-Charlson\",\"orcid\":\"0000000195577715\",\"middle_name\":\"M\",\"first_name\":\"Elisha\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
-        "contributor_type": "",
-        "first_name": "Benjamin",
-        "last_name": "Allen",
-        "middle_name": "H",
-        "orcid": "000000026325859X",
-        "role": "PRIMARY"
-      },
-      {
-        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
-        "contributor_type": "",
-        "first_name": "Miriam",
-        "last_name": "Land",
-        "middle_name": "L",
-        "orcid": "0000000171020031",
-        "role": ""
-      },
-      {
-        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
-        "contributor_type": "",
-        "first_name": "Elisha",
-        "last_name": "Wood-Charlson",
-        "middle_name": "M",
-        "orcid": "0000000195577715",
-        "role": ""
-      }
-    ],
     "authors": [
       "Allen, Benjamin H [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:000000026325859X)",
       "Land, Miriam L [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000171020031)",

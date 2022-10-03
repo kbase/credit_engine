@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Argonne National Lab. (ANL), Argonne, IL (United States)\",\"last_name\":\"Henry\",\"orcid\":\"\",\"middle_name\":\"S\",\"first_name\":\"Christopher\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Argonne National Lab. (ANL), Argonne, IL (United States)",
-        "contributor_type": "",
-        "first_name": "Christopher",
-        "last_name": "Henry",
-        "middle_name": "S",
-        "orcid": "",
-        "role": ""
-      }
-    ],
     "authors": [
       "Henry, Christopher S [Argonne National Lab. (ANL), Argonne, IL (United States)]"
     ],

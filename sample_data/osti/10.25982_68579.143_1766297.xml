@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1766297</osti_id>
+        <title>KBase Silver Case Study: Determining Media Formulation Requirements for Isolation of Microbiome Constituents</title>
+        <description>KBase has powerful tools for extracting microbial genomes from metagenomes and performing phylogenomic analysis and metabolic modeling. These tools can be used to predict key media ingredients for isolating uncultured members of microbiomes. Essential to this process are high-quality genomes extracted from metagenomic assemblies, and Kbase has a tool for assessing the quality of genomes too.
+Below we identify growth factors for a myxobacteria (&#034;slime bacteria&#034;) yet to be isolated from the rhizosphere of Miscanthus xgiganteus (hybrid of &#034;Silvergrass&#034;), cultivated at the Kellogg Biological Station in Michigan. Data was transferred with Globus from JGI-IMG.
+
+This narrative and the &#034;KBase Gold Case Study: Can you find Delftia?&#034; make up the Silver and Gold Narrative Set for teaching metagenomics concepts to students in the BIT 477/577 course at North Carolina State University.
+
+This tutorial will guide the user through the process of extracting and annotating high-quality genomes from a metagenomic data, performing phylogenomic analysis, building a metabolic model, and using these to predict nutrient requirments for growth and isolation of corresponding microbes.</description>
+        <authors>
+            <author>Whitham, Jason [North Carolina State Univ., Raleigh, NC (United States)] (ORCID:0000000326236292)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/68579.143/1766297</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-02-15T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>North Carolina State Univ., Raleigh, NC (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>myxobacteria, miscanthus, silvergrass, microbiome, MAG, metagenome-assembled genome</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-02-23T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1766297" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1766297" />
+            </links>
+    </record>
+    </records>

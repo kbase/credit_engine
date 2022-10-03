@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1864845</osti_id>
+        <title>Metagenomes from Eastern Brazilian Amazonian floodplains in the wet and dry seasons</title>
+        <description>Brief sample description&lt;br&gt;
+Sediment samples from 0 to 10 cm depth were collected in triplicate from two floodplains of the Eastern Brazilian Amazon, one located on the Amazonas River (FP2, 2°28&#039;11.2&#034;S 54°38&#039;49.9&#034;W) and the other at the intersection between the Amazonas and the Tapajós rivers (FP3, 2°22&#039;44.8&#034;S 54°44&#039;21.1&#034;W), in the wet and dry seasons (May and October 2016, respectively). Total DNA was extracted in duplicate from 0.25 g of sediment using PowerLyzer PowerSoil DNA Isolation Kit. The metagenomic libraries were constructed using NEBNext Ultra II DNA Library Prep Kit for Illumina and paired-end sequenced (2 x 150 bp) on an Illumina HiSeq 2500 platform. Detailed information about the study sites, sampling, sediment physicochemical properties, DNA extraction and quantification have been previously described by Gontijo et al. (2021).&lt;br&gt;
+Sample IDs:
+&lt;ul&gt;
+&lt;li&gt;M1, M2 and M3: FP2, wet season&lt;/li&gt;
+&lt;li&gt;M4, M5 and M6: FP3, wet season&lt;/li&gt;
+&lt;li&gt;M7, M8 and M9: FP2, dry season&lt;/li&gt;
+&lt;li&gt;M10, M11 and M12: FP3, dry season&lt;/li&gt;
+&lt;/ul&gt;</description>
+        <authors>
+            <author>Gontijo, Júlia Branão [Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil] (ORCID:0000000319427242)</author>
+            <author>Venturini, Andressa [Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil; Princeton Institute for International and Regional Studies, USA] (ORCID:0000000259011658)</author>
+            <author>da França, Aline [Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil] (ORCID:0000000282323086)</author>
+            <author>Moura, José [Center for Interdisciplinary Formation, Federal University of Western Pará, Santarém, PA, Brazil] (ORCID:0000000349628870)</author>
+            <author>Nüsslein, Klaus [Univ. of Massachusetts, Amherst, MA (United States)] (ORCID:0000000206634448)</author>
+            <author>Bohannan, Brendan [Univ. of Oregon, Eugene, OR (United States)] (ORCID:0000000329071016)</author>
+            <author>Rodrigues, Jorge [Univ. of California, Davis, CA (United States)] (ORCID:0000000264466462)</author>
+            <author>Tsai, Siu [Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil] (ORCID:0000000237336312)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/113717.182/1864845</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2022-04-26T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Center for Nuclear Energy in Agriculture, University of São Paulo, Brazil</research_org>
+            <research_org>Princeton Institute for International and Regional Studies, USA.</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>Microbial Ecology</subject>
+            <subject>Metagenomics</subject>
+            <subject>Soil Microbial Ecology</subject>
+            <subject>Taxonomic annotation.</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-04-28T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1864845" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1864845" />
+            </links>
+    </record>
+    </records>

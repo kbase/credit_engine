@@ -1,29 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"ORT University, Uruguay\",\"last_name\":\"Costa\",\"orcid\":\"000000018869143X\",\"middle_name\":\"\",\"first_name\":\"Daniela\"}",
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"ORT University, Uruguay\",\"last_name\":\"Valenzuela\",\"orcid\":\"0000000302333995\",\"middle_name\":\"\",\"first_name\":\"Sebastian\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "ORT University, Uruguay",
-        "contributor_type": "",
-        "first_name": "Daniela",
-        "last_name": "Costa",
-        "middle_name": "",
-        "orcid": "000000018869143X",
-        "role": "PRIMARY"
-      },
-      {
-        "affiliation": "ORT University, Uruguay",
-        "contributor_type": "",
-        "first_name": "Sebastian",
-        "last_name": "Valenzuela",
-        "middle_name": "",
-        "orcid": "0000000302333995",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Costa, Daniela [ORT University, Uruguay] (ORCID:000000018869143X)",
       "Valenzuela, Sebastian [ORT University, Uruguay] (ORCID:0000000302333995)"

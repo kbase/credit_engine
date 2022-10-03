@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase\",\"last_name\":\"Dow\",\"orcid\":\"0000000220790260\",\"middle_name\":\"\",\"first_name\":\"Ellen\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase",
-        "contributor_type": "",
-        "first_name": "Ellen",
-        "last_name": "Dow",
-        "middle_name": "",
-        "orcid": "0000000220790260",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Dow, Ellen [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase] (ORCID:0000000220790260)"
     ],

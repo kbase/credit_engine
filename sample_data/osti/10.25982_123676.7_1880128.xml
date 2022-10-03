@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1880128</osti_id>
+        <title>KBase Narrative - Comparing Proteomes of Cupriavidus basilensis 4G11 and Cupriavidus necator H16</title>
+        <description>Species of Cupriavidus are among the best bioplastic producing microorganisms known, though intracellular poly-hydroxybutyrate (PHB) is made exclusively during unbalanced growth (e.g. nitrogen limitation), a state characterized by poor growth and cellular stress. Much work has been done studying bioplastic production in the model/type strain C. necator H16. We use an RB-TnSeq library of the closely related C. basilensis 4G11 to assess for genes which decouple PHB production from growth state. In this narrative we compute genome-wide protein homology between these two organisms, and generate a synteny plot across the genomes as well.</description>
+        <authors>
+            <author>Sander, Kyle [University of California Berkeley] (ORCID:0000000259447822)</author>
+            <author>Abel, Anthony [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical &amp; Biomolecular Engineering, University of California, Berkeley. Berkeley, CA]</author>
+            <author>Friedline, Skyler [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA]</author>
+            <author>Sharpless, Willam [Center for the Utilization of Biological Engineering in Space, Berkeley, CA
+
+Current Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA]</author>
+            <author>Skerker, Jeffrey [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA
+
+Current Affiliation: Zymergen, Emeryville, CA
+Introduction]</author>
+            <author>Deutschbauer, Adam [Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA]</author>
+            <author>Clark, Douglas [Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical &amp; Biomolecular Engineering, University of California, Berkeley. Berkeley, CA]</author>
+            <author>Arkin, Adam [Center for the Utilization of Biological Engineering in Space, Berkeley, CA
+Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA]</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/123676.7/1880128</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2022-08-08T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2022-08-10T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1880128" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1880128" />
+            </links>
+    </record>
+    </records>

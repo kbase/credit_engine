@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)\",\"last_name\":\"podar\",\"orcid\":\"0000000327760205\",\"middle_name\":\"\",\"first_name\":\"Mircea\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
-        "contributor_type": "",
-        "first_name": "Mircea",
-        "last_name": "podar",
-        "middle_name": "",
-        "orcid": "0000000327760205",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "podar, Mircea [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000327760205)"
     ],

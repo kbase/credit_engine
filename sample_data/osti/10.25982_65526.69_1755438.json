@@ -1,29 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"University of Nebraska-Lincoln\",\"last_name\":\"Song\",\"orcid\":\"0000000221546358\",\"middle_name\":\"\",\"first_name\":\"Hyun-Seob\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Lee\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Joon-Yong\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "University of Nebraska-Lincoln",
-        "contributor_type": "",
-        "first_name": "Hyun-Seob",
-        "last_name": "Song",
-        "middle_name": "",
-        "orcid": "0000000221546358",
-        "role": "PRIMARY"
-      },
-      {
-        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
-        "contributor_type": "",
-        "first_name": "Joon-Yong",
-        "last_name": "Lee",
-        "middle_name": "",
-        "orcid": "",
-        "role": ""
-      }
-    ],
     "authors": [
       "Song, Hyun-Seob [University of Nebraska-Lincoln] (ORCID:0000000221546358)",
       "Lee, Joon-Yong [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)]"

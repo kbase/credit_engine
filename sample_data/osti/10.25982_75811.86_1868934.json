@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"The Ohio State University\",\"last_name\":\"Bolduc\",\"orcid\":\"0000000324200755\",\"middle_name\":\"\",\"first_name\":\"Benjamin\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "The Ohio State University",
-        "contributor_type": "",
-        "first_name": "Benjamin",
-        "last_name": "Bolduc",
-        "middle_name": "",
-        "orcid": "0000000324200755",
-        "role": ""
-      }
-    ],
     "authors": [
       "Bolduc, Benjamin [The Ohio State University] (ORCID:0000000324200755)"
     ],

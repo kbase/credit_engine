@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1831503</osti_id>
+        <title>Moab Desert Crust - Sample 4E</title>
+        <description>Uncultivated Bacteria and Archaea comprise the vast majority of species on Earth, but obtaining their genomes directly from the environment, using shotgun sequencing, has only recently become possible. To realize the hope of capturing Earth’s microbial genetic complement, technologies that accelerate recovery of high-quality genomes are necessary. We present a series of analysis steps and data products for the extraction of high quality metagenome-assembled genomes (MAGs) from microbiomes using the U.S. Department of Energy Systems Biology Knowledgebase (KBase) platform (http://www.kbase.us/). In KBase, the process is end-to-end, allowing a user to go from the initial sequencing reads all the way through to MAG genomes, which can then be analyzed with other KBase capabilities such as phylogenetic placement, functional assignment, metabolic modeling, pangenome functional profiling, RNA-Seq, and others. While portions of such capabilities are individually available from other resources, the combination of the intuitive usability, data interoperability, and integration of tools in a freely available compute resource makes KBase a uniquely powerful platform for obtaining MAGs from microbiomes. While this workflow offers tools for each of the key steps in the genome extraction process, it also provides a scaffold that can be easily extended, with additional MAG recovery and analysis tools, via the KBase SDK (Software Development Kit).</description>
+        <authors>
+            <author>Chivian, Dylan [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000181898729)</author>
+            <author>Jungbluth, Sean P [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000192658341)</author>
+            <author>Dehal, Paramvir S [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000158102497)</author>
+            <author>Wood-Charlson, Elisha [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)</author>
+            <author>Canon, Richard S [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:000000028440738X)</author>
+            <author>Allen, Benjamin H [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:000000026325859X)</author>
+            <author>Clark, Mikayla M [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000228623416)</author>
+            <author>Gu, Tianhao [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000230531967)</author>
+            <author>Land, Miriam L [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000171020031)</author>
+            <author>Price, Gavin A [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)]</author>
+            <author>Riehl, William J [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000234052744)</author>
+            <author>Sneddon, Michael W</author>
+            <author>Sutormin, Roman</author>
+            <author>Zhang, Qizhi [Argonne National Lab. (ANL), Argonne, IL (United States)]</author>
+            <author>Cottingham, Robert W [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000227753905)</author>
+            <author>Henry, Christopher S [Argonne National Lab. (ANL), Argonne, IL (United States)] (ORCID:0000000180589123)</author>
+            <author>Arkin, Adam P [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000249992931)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/62384.253/1831503</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-11-13T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            </subjects>
+        <doe_contract_number>DE-AC02-05CH11231, DE-AC02-06CH11357, DE-AC05-00OR22725, and DE-AC02-98CH10886</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-11-24T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1831503" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1831503" />
+            </links>
+    </record>
+    </records>

@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Cornell Univ., Ithaca, NY (United States)\",\"last_name\":\"St. James\",\"orcid\":\"0000000256072789\",\"middle_name\":\"\",\"first_name\":\"Andrew\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Cornell Univ., Ithaca, NY (United States)",
-        "contributor_type": "",
-        "first_name": "Andrew",
-        "last_name": "St. James",
-        "middle_name": "",
-        "orcid": "0000000256072789",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "St. James, Andrew [Cornell Univ., Ithaca, NY (United States)] (ORCID:0000000256072789)"
     ],

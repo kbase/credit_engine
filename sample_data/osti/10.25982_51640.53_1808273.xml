@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1808273</osti_id>
+        <title>Grant_Staphylococcus_succinus</title>
+        <description>A strain of Staphylococcus succinus was sampled from the floor of the basement of a house and isolated in an undergraduate classroom in Milwaukee, WI. Here, we report the draft genome sequence of this strain.</description>
+        <authors>
+            <author>Nickolson, Grant [Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA]</author>
+            <author>Marshall, Christopher [Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA] (ORCID:0000000166693231)</author>
+            <author>Balasjin, Nasim Maghboli [Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA]</author>
+            <author>Bridwell, Sophie [Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA]</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/51640.53/1808273</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-06-08T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            <sponsor_org>Department of Biological Sciences, Marquette University, Milwaukee, Wisconsin, USA</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>Genome Announcement, Staphylococcus, MRA, Microbial Resource Announcement</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-07-19T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1808273" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1808273" />
+            </links>
+    </record>
+    </records>

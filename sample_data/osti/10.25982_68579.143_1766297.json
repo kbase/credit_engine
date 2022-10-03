@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"North Carolina State Univ., Raleigh, NC (United States)\",\"last_name\":\"Whitham\",\"orcid\":\"0000000326236292\",\"middle_name\":\"\",\"first_name\":\"Jason\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "North Carolina State Univ., Raleigh, NC (United States)",
-        "contributor_type": "",
-        "first_name": "Jason",
-        "last_name": "Whitham",
-        "middle_name": "",
-        "orcid": "0000000326236292",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Whitham, Jason [North Carolina State Univ., Raleigh, NC (United States)] (ORCID:0000000326236292)"
     ],

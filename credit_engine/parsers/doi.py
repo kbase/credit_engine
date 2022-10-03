@@ -9,13 +9,11 @@ from pydantic import validate_arguments
 import credit_engine.constants as CE
 import credit_engine.parsers.crossref as crossref
 import credit_engine.parsers.datacite as datacite
+import credit_engine.parsers.osti as osti
 import credit_engine.util as util
 from credit_engine.errors import make_error
 
-SOURCE_TO_PARSER = {
-    CE.CROSSREF: crossref,
-    CE.DATACITE: datacite,
-}
+SOURCE_TO_PARSER = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
 
 
 @validate_arguments
@@ -153,9 +151,9 @@ def _validate_retrieve_doi_list_input(
 
 @validate_arguments
 def retrieve_doi_list(
-    doi_list: CE.NonEmptyList[CE.TrimmedString],
-    source: CE.TrimmedString,
-    output_format_list: Optional[list[CE.TrimmedString]] = None,
+    doi_list: list[str],
+    source: str,
+    output_format_list: Optional[list[str]] = None,
     save_files: bool = False,
     save_dir: Optional[Union[Path, str]] = None,
 ) -> dict:

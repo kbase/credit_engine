@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)\",\"last_name\":\"Kumari\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Sunita\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)",
-        "contributor_type": "",
-        "first_name": "Sunita",
-        "last_name": "Kumari",
-        "middle_name": "",
-        "orcid": "",
-        "role": ""
-      }
-    ],
     "authors": [
       "Kumari, Sunita [Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)]"
     ],

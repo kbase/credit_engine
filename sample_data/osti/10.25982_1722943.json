@@ -1,49 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Dow\",\"orcid\":\"0000000220790260\",\"middle_name\":\"G\",\"first_name\":\"Ellen\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)\",\"last_name\":\"Wood-Charlson\",\"orcid\":\"0000000195577715\",\"middle_name\":\"M\",\"first_name\":\"Elisha\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Hess\",\"orcid\":\"0000000289309500\",\"middle_name\":\"\",\"first_name\":\"Nancy\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"Pacific Northwest National Lab. (PNNL), Richland, WA (United States)\",\"last_name\":\"Scheibe\",\"orcid\":\"0000000288645772\",\"middle_name\":\"\",\"first_name\":\"Timothy\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
-        "contributor_type": "",
-        "first_name": "Ellen",
-        "last_name": "Dow",
-        "middle_name": "G",
-        "orcid": "0000000220790260",
-        "role": ""
-      },
-      {
-        "affiliation": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
-        "contributor_type": "",
-        "first_name": "Elisha",
-        "last_name": "Wood-Charlson",
-        "middle_name": "M",
-        "orcid": "0000000195577715",
-        "role": ""
-      },
-      {
-        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
-        "contributor_type": "",
-        "first_name": "Nancy",
-        "last_name": "Hess",
-        "middle_name": "",
-        "orcid": "0000000289309500",
-        "role": ""
-      },
-      {
-        "affiliation": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
-        "contributor_type": "",
-        "first_name": "Timothy",
-        "last_name": "Scheibe",
-        "middle_name": "",
-        "orcid": "0000000288645772",
-        "role": ""
-      }
-    ],
     "authors": [
       "Dow, Ellen G [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000220790260)",
       "Wood-Charlson, Elisha M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)",

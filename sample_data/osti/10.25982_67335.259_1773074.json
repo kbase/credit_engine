@@ -1,29 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"North Carolina State Univ., Raleigh, NC (United States)\",\"last_name\":\"Krebs\",\"orcid\":\"\",\"middle_name\":\"\",\"first_name\":\"Rose\"}",
-      "{\"role\":\"\",\"contributor_type\":\"\",\"affiliation\":\"North Carolina State Univ., Raleigh, NC (United States)\",\"last_name\":\"Goller\",\"orcid\":\"0000000220130334\",\"middle_name\":\"\",\"first_name\":\"Carlos\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "North Carolina State Univ., Raleigh, NC (United States)",
-        "contributor_type": "",
-        "first_name": "Rose",
-        "last_name": "Krebs",
-        "middle_name": "",
-        "orcid": "",
-        "role": "PRIMARY"
-      },
-      {
-        "affiliation": "North Carolina State Univ., Raleigh, NC (United States)",
-        "contributor_type": "",
-        "first_name": "Carlos",
-        "last_name": "Goller",
-        "middle_name": "",
-        "orcid": "0000000220130334",
-        "role": ""
-      }
-    ],
     "authors": [
       "Krebs, Rose [North Carolina State Univ., Raleigh, NC (United States)]",
       "Goller, Carlos [North Carolina State Univ., Raleigh, NC (United States)] (ORCID:0000000220130334)"

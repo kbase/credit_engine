@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Cornell Univ., Ithaca, NY (United States)\",\"last_name\":\"Wilhelm\",\"orcid\":\"0000000311701753\",\"middle_name\":\"\",\"first_name\":\"Roland\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Cornell Univ., Ithaca, NY (United States)",
-        "contributor_type": "",
-        "first_name": "Roland",
-        "last_name": "Wilhelm",
-        "middle_name": "",
-        "orcid": "0000000311701753",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Wilhelm, Roland [Cornell Univ., Ithaca, NY (United States)] (ORCID:0000000311701753)"
     ],

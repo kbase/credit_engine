@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1637512</osti_id>
+        <title>Complete Genome Sequence of the Novel Roseimicrobium sp. Strain ORNL1, a Verrucomicrobium Isolated from the Populus deltoides Rhizosphere</title>
+        <description>Roseimicrobium sp. strain ORNL1 is a soil bacterium that belongs to the phylum Verrucomicrobia and was isolated from the rhizosphere of a forest Eastern cottonwood tree, Populus deltoides, in Tennessee. Its 7.9-Mb chromosome was completely sequenced using PacBio long reads and is predicted to encode 6,288 proteins and 76 RNAs.</description>
+        <authors>
+            <author>Podar, Mircea [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000327760205)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/56021.26/1637512</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-07-07T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States) U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>bioinformatics, genome, genome announcement</subject>
+            </subjects>
+        <doe_contract_number>AC05-00OR22725</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-10-27T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1637512" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1637512" />
+            </links>
+    </record>
+    </records>

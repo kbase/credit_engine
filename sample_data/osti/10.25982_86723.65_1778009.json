@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Univ. of Miami, Miami, FL (United States)\\nUniversity of Miami Rosenstiel School of Marine and Atmospheric Science\",\"last_name\":\"Patin\",\"orcid\":\"0000000185227682\",\"middle_name\":\"\",\"first_name\":\"Nastassia\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Univ. of Miami, Miami, FL (United States)\nUniversity of Miami Rosenstiel School of Marine and Atmospheric Science",
-        "contributor_type": "",
-        "first_name": "Nastassia",
-        "last_name": "Patin",
-        "middle_name": "",
-        "orcid": "0000000185227682",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Patin, Nastassia [Univ. of Miami, Miami, FL (United States)\nUniversity of Miami Rosenstiel School of Marine and Atmospheric Science] (ORCID:0000000185227682)"
     ],

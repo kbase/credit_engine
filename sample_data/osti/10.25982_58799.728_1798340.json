@@ -1,19 +1,5 @@
 [
   {
-    "author_details": [
-      "{\"role\":\"PRIMARY\",\"contributor_type\":\"\",\"affiliation\":\"Johannes Gutenberg Universit\u00e4t Mainz, Mainz, Rheinland-Pfalz, DE\",\"last_name\":\"Kiefer\",\"orcid\":\"0000000219682043\",\"middle_name\":\"\",\"first_name\":\"Julian\"}"
-    ],
-    "author_details_decoded": [
-      {
-        "affiliation": "Johannes Gutenberg Universit\u00e4t Mainz, Mainz, Rheinland-Pfalz, DE",
-        "contributor_type": "",
-        "first_name": "Julian",
-        "last_name": "Kiefer",
-        "middle_name": "",
-        "orcid": "0000000219682043",
-        "role": "PRIMARY"
-      }
-    ],
     "authors": [
       "Kiefer, Julian [Johannes Gutenberg Universit\u00e4t Mainz, Mainz, Rheinland-Pfalz, DE] (ORCID:0000000219682043)"
     ],

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1820944</osti_id>
+        <title>Conditional Filamentation of Paraburkholderia elongata 5N - Data Container</title>
+        <description>Overview of Dataset&lt;br&gt;This narrative contains assemblies for all Paraburkholderia discussed in Karasz et al. 2022, where their phosphate-solubilizing activity was measured. Assemblies were downloaded from NCBI and annotated with Prokka. These genomes were created in many Narratives and collected here to be more accessible  Note: The following naming of assemblies does not correspond with current taxonomic names for the following:  Paraburkholderia 5N = Paraburkholderia elongata 5NT  &lt;br&gt;Paraburkholderia 1N = Paraburkholderia solitsuga 1NT  &lt;br&gt;Paraburkholderia vancouverensis = Paraburkholderia madseniana RL16</description>
+        <authors>
+            <author>Wilhelm, Roland [Cornell Univ., Ithaca, NY (United States)] (ORCID:0000000311701753)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/26409.220/1820944</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-09-18T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Cornell Univ., Ithaca, NY (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>Paraburkholderia</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-09-22T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1820944" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1820944" />
+            </links>
+    </record>
+    </records>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1778232</osti_id>
+        <title>Leisingera sp. ANG59 &amp; Pseudoalteromonas sp. JC28 Genomes Overview</title>
+        <description>The Hawaiian bobtail squid, Euprymna scolopes, has a symbiotic bacterial consortium in the accessory nidamental gland (ANG), a female reproductive organ that protects eggs against fouling microorganisms. To test the antibacterial activity of ANG community members, 19 bacterial isolates were screened for their ability to inhibit Gram-negative and Gram-positive bacteria, of which two strains were inhibitory. These two antibacterial isolates, Leisingera sp. ANG59 and Pseudoalteromonas sp. JC28, were subjected to further genomic characterization. Genomic analysis of Leisingera sp. ANG59 revealed a biosynthetic gene cluster encoding the antimicrobial compound indigoidine. The genome of Pseudoalteromonas sp. JC28 had a 14-gene cluster with &gt;95% amino acid identity to a known bromoalterochromide (BAC) cluster. Chemical analysis confirmed production of known BACs, BAC-A/A′ (compounds 1a/1b), as well as two new derivatives, BAC-D/D′ (compounds 2a/2b). Extensive nuclear magnetic resonance (NMR) analyses allowed complete structural elucidation of compounds 2a/2b, and the absolute stereochemistry was unambiguously determined using an optimized Marfey’s method. The BACs were then investigated for in vitro antibacterial, antifungal, and nitric oxide (NO) inhibitory activity. Compounds 1a/1b were active against the marine bacteria Bacillus algicola and Vibrio fischeri, while compounds 2a/2b were active only against B. algicola. Compounds 1a/1b inhibited NO production via lipopolysaccharide (LPS)-induced inflammation in RAW264.7 macrophage cells and also inhibited the pathogenic fungus Fusarium keratoplasticum, which, coupled with their antibacterial activity, suggests that these polyketide-nonribosomal peptides may be used for squid egg defense against potential pathogens and/or fouling microorganisms. These results indicate that BACs may provide Pseudoalteromonas sp. JC28 an ecological niche, facilitating competition against nonsymbiotic microorganisms in the host’s environment.​</description>
+        <authors>
+            <author>Suria, Andrea [Univ. of Connecticut, Storrs, CT (United States)] (ORCID:0000000188008717)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/69990.6/1778232</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-01-01T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>University of Connecticut, Storrs, Connecticut, USA</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>symbiont, bobtail squid, Euprymna scolopes, Pseudalteromonas</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-05-10T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1778232" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1778232" />
+            </links>
+    </record>
+    </records>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1828592</osti_id>
+        <title>The moderately defficient enzyme: Catalysis-related damage in vivo and its repair</title>
+        <description>Enzymes have in vivo lifespans. Analysis of lifespans – lifetime totals of catalytic turnovers – suggests that non-survivable collateral chemical damage from the very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme death. Analysis also implies that many enzymes are moderately deficient in that their active-site regions are not naturally as hardened against such collateral damage as they could be, leaving room for improvement by rational design or directed evolution. Enzyme lifespan might also be improved by engineering systems that repair otherwise fatal active-site damage, of which a handful are known and more are inferred to exist. Unfortunately, the data needed to design and execute such improvements is lacking: there are too few measurements of in vivo lifespan, and existing information on the extent, nature, and mechanisms of active-site damage and repair during normal enzyme operation is too scarce, anecdotal, and speculative to act on. Fortunately, advances in proteomics, metabolomics, cheminformatics, comparative genomics, and structural biochemistry now empower a systematic, data-driven approach to identify, predict, and validate instances of active-site damage and its repair. These capabilities would be practically useful in enzyme redesign and improvement of in-use stability, and could change thinking about which enzymes die young in vivo, and why.</description>
+        <authors>
+            <author>Henry, Christopher S [Argonne National Lab. (ANL), Argonne, IL (United States)]</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/95771.20/1828592</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2021-11-02T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Argonne National Lab. (ANL), Argonne, IL (United States)</research_org>
+            <research_org>US Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            </subjects>
+        <doe_contract_number></doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-11-03T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1828592" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1828592" />
+            </links>
+    </record>
+    </records>

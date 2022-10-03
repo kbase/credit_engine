@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1722943</osti_id>
+        <title>2020 Multiscale Microbial Dynamics Modeling Course</title>
+        <description>The 2020 Multiscale Microbial Dynamics course is adapted from the virtual 2020 Mutliscale Microbial Dynamics Summer School that was hosted by Environmental Molecular Sciences Laboratory (EMSL), a U.S. Department of Energy (DOE) science user facility located on the Pacific Northwest National Laboratory (PNNL) campus, in collaboration with the Joint Genome Institute (JGI) and the DOE Systems Biology Knowledgebase (KBase). The course course covers how to incorporate microbial metagenomic and environmental metabolite data from watershed ecosystems into metabolic and community modeling using computational frameworks, such as KBase and PFLOTRAN. The curriculum includes lectures and software and data analysis tutorials. All materials are freely accessible to the community as part of the 2020 Microbial Dynamics Summer School Organization in KBase.</description>
+        <authors>
+            <author>Dow, Ellen G [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000220790260)</author>
+            <author>Wood-Charlson, Elisha M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)</author>
+            <author>Hess, Nancy [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:0000000289309500)</author>
+            <author>Scheibe, Timothy [Pacific Northwest National Lab. (PNNL), Richland, WA (United States)] (ORCID:0000000288645772)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/1722943</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-12-01T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</research_org>
+            <research_org>DOE Systems Biology Knowledgebase (KBase)</research_org>
+            <research_org>Environmental Molecular Sciences Laboratory (EMSL), Richland, WA (United States)</research_org>
+            <research_org>Pacific Northwest National Lab. (PNNL), Richland, WA (United States)</research_org>
+            <research_org>Joint Genome Institute (JGI), Berkeley, CA (United States)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org>Worldwide Hydrobiogeochemical Observation Network for Dynamic River Systems (WHONDRS); DOE Environmental Systems Science Data Infrastructure for a Virtual Ecosystem (ESS-DIVE); Subsurface Biogeochemical Research (SBR)</contributing_org>
+        <subjects>
+            <subject>96 KNOWLEDGE MANAGEMENT AND PRESERVATION</subject>
+            <subject>54 ENVIRONMENTAL SCIENCES</subject>
+            <subject>metagenomic</subject>
+            <subject>metabolomic</subject>
+            <subject>metabolic modeling</subject>
+            <subject>reactive transport model</subject>
+            <subject>microbial community</subject>
+            <subject>watershed ecosystem</subject>
+            <subject>data analysis</subject>
+            <subject>data science</subject>
+            </subjects>
+        <doe_contract_number>AC02-05CH11231; AC05-76RL01830</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2020-12-17T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1722943" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1722943" />
+            </links>
+    </record>
+    </records>

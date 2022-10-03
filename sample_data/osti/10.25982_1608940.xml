@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1608940</osti_id>
+        <title>Make the Most Out of Genome Announcements with KBase</title>
+        <description>Genomics is a dynamic field driven by new technology, massive growth in data, and changes in how scientists share knowledge. This brings new challenges for researchers looking to maximize the impact of their science and ensure the longevity of their data. These changes are especially relevant for the practice of publishing genome announcements. Genome announcements are meant to share and promote newly sequenced organisms with the larger scientific community. A few decades ago, genome announcements were highly anticipated hallmarks of novel science. But, what was once a publishing coup is now an every day event. It is harder and harder to keep abreast of all the genomes that have been sequenced and promote your own new genomes to get the attention and recognition of your research community. Fortunately, KBase can help construct genomes from your sequencing data, generate reports for your announcement, and promote your data to your research community.</description>
+        <authors>
+            <author>Allen, Benjamin H [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:000000026325859X)</author>
+            <author>Land, Miriam L [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)] (ORCID:0000000171020031)</author>
+            <author>Wood-Charlson, Elisha M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/1608940</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-04-06T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</research_org>
+            <research_org>DOE Systems Biology Knowledgebase (KBase)</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>96 KNOWLEDGE MANAGEMENT AND PRESERVATION</subject>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>genome</subject>
+            <subject>genomics</subject>
+            <subject>data science</subject>
+            <subject>assembly</subject>
+            <subject>annotation</subject>
+            <subject>comparative genomics</subject>
+            <subject>publication</subject>
+            </subjects>
+        <doe_contract_number>DE-AC02-05CH11231</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2020-12-02T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1608940" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1608940" />
+            </links>
+    </record>
+    </records>

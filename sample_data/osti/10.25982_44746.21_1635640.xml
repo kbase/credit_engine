@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <osti_id>1635640</osti_id>
+        <title>Complete Genome Sequence of Terriglobus albidus Strain ORNL, an Acidobacterium Isolated from the Populus deltoides Rhizosphere</title>
+        <description>This Narrative was used for a complete genome sequence of a new strain of Terriglobus albidus. It is a heterotrophic bacterium associated with the rhizophere of the eastern cottonwood tree (Populus deltoides).</description>
+        <authors>
+            <author>Podar, Mircea [Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)]</author>
+            </authors>
+        <product_type>Dataset</product_type>
+        <doi>https://doi.org/10.25982/44746.21/1635640</doi><journal_name></journal_name>
+        <journal_volume></journal_volume>
+        <journal_issue></journal_issue>
+        <article_type></article_type>
+        <publication_date>2020-07-02T00:00:00Z</publication_date>
+        <publisher></publisher>
+        <country_publication>United States</country_publication>
+        <format></format>
+        <language>English</language>
+        <availability></availability>
+        <research_orgs>
+            <research_org>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</research_org>
+            <research_org>U.S. Department of Energy Systems Biology Knowledgebase</research_org>
+            </research_orgs>
+        <sponsor_orgs>
+            <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+            </sponsor_orgs>
+        <contributing_org></contributing_org>
+        <subjects>
+            <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
+            <subject>Genome</subject>
+            <subject>KBase</subject>
+            <subject>Biology</subject>
+            </subjects>
+        <doe_contract_number>AC05-00OR22725; AC02-05CH11231</doe_contract_number>
+        <report_number></report_number>
+                <entry_date>2021-09-29T00:00:00Z</entry_date>
+        <links>
+            <link rel="citation" href="https://www.osti.gov/biblio/1635640" />
+            <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1635640" />
+            </links>
+    </record>
+    </records>
