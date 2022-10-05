@@ -112,7 +112,7 @@ def save_data_to_file(
     doi: CE.TrimmedString,
     save_dir: Union[Path, str],
     suffix: str,
-    data: Union[dict, list, str, bytes],
+    data: Union[bytes, str, list, dict],
 ) -> Optional[Path]:
     # ensure we don't have an extra full stop
     if suffix.startswith("."):

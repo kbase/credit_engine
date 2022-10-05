@@ -441,75 +441,21 @@ def test_retrieve_doi_list(
         )
 
 
-DOI_SET = set(
-    [
-        "10.25982/65526.69/1755438",
-        "10.25982/1608940",
-        "10.25982/1722943",
-        "10.25982/86723.65/1778009",
-        "10.25982/73218.75/1777998",
-        "10.25982/73221.117/1777993",
-    ]
-)
-
-FILE_LIST = [
-    pytest.param(
-        {"input": Path("tests") / "data" / "empty.txt", "doi_list": set()},
-        id="empty_file",
-    ),
-    pytest.param(
-        {
-            "input": Path("tests") / "data" / "doi_list_with_dupes.txt",
-            "doi_list": DOI_SET,
-        },
-        id="dois_with_dupes",
-    ),
-    pytest.param(
-        {
-            "input": "/does/not/exist",
-            "error_type": FileNotFoundError,
-        },
-        id="file_does_not_exist",
-    ),
-    pytest.param(
-        {
-            "input": "sample_data/osti",
-            "error_type": IsADirectoryError,
-        },
-        id="directory",
-    ),
-]
-
-
-@pytest.mark.parametrize("param", FILE_LIST)
-def test_import_dois_from_file(param, monkeypatch):
-    def return_input(*args):
-        return args
-
-    monkeypatch.setattr(base, "retrieve_doi_list", return_input)
-
-    if "doi_list" in param:
-        returned_input = base.import_dois_from_file(param["input"])
-        assert set(returned_input) == param["doi_list"]
-
-    else:
-        with pytest.raises(param["error_type"]):
-            base.import_dois_from_file(param["input"])
-
-
+SEARCHING_XR = "Searching Crossref..."
+SEARCHING_DC = "Searching Datacite..."
 RETRIEVE_DOIS_FROM_UNKNOWN_DATA = [
     pytest.param(
         {
             "input": [NOT_FOUND, INVALID_DOI],
             "expected": {doi: {CE.JSON: None} for doi in [NOT_FOUND, INVALID_DOI]},
             "stdout": [
-                "Searching Crossref...",
+                SEARCHING_XR,
                 "Found 0 DOIs at Crossref",
-                "Searching Datacite...",
+                SEARCHING_DC,
                 "Found 0 DOIs at Datacite",
                 "The following DOIs could not be found:",
-                "INVALID_DOI",
-                "NOT_FOUND",
+                INVALID_DOI,
+                NOT_FOUND,
             ],
         },
         id="none_found",
@@ -522,7 +468,7 @@ RETRIEVE_DOIS_FROM_UNKNOWN_DATA = [
                 for doi in [A_VALID_DOI, ANOTHER_VALID_DOI]
             },
             "stdout": [
-                "Searching Crossref...",
+                SEARCHING_XR,
                 "Found 2 DOIs at Crossref",
             ],
         },
@@ -546,13 +492,13 @@ RETRIEVE_DOIS_FROM_UNKNOWN_DATA = [
                 NOT_FOUND: {CE.JSON: None},
             },
             "stdout": [
-                "Searching Crossref...",
+                SEARCHING_XR,
                 "Found 1 DOI at Crossref",
-                "Searching Datacite...",
+                SEARCHING_DC,
                 "Found 1 DOI at Datacite",
                 "The following DOIs could not be found:",
-                "INVALID_DOI",
-                "NOT_FOUND",
+                INVALID_DOI,
+                NOT_FOUND,
             ],
         },
         id="one_xr_one_dc",
@@ -571,8 +517,6 @@ def test_retrieve_doi_list_from_unknown(param, capsys, _mock_response):
     for doi in param["expected"]:
         assert results[CE.DATA][doi] == param["expected"][doi]
 
-    print(results[CE.DATA].keys())
-    print(param["expected"].keys())
     assert results == {CE.DATA: param["expected"]}
     if "stdout" in param:
         common.check_stdout_for_errs(capsys, param["stdout"])

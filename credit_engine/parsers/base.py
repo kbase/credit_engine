@@ -1,6 +1,6 @@
 import types
 from pathlib import Path
-from typing import Any, Callable, Optional, Union
+from typing import Any, Optional, Union
 from urllib.parse import quote
 
 import requests

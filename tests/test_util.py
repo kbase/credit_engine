@@ -6,9 +6,9 @@ import pytest
 from pydantic import ValidationError
 
 import credit_engine.util as util
-from tests.common import run_file_contents_check
+from tests.common import check_stdout_for_errs, run_file_contents_check
 
-from .conftest import CLEAN_DOI_LIST_DATA, MockResponse
+from .conftest import A_VALID_DOI, CLEAN_DOI_LIST_DATA, MockResponse
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
 
@@ -170,43 +170,50 @@ SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
     # dir does not exist
     pytest.param(
         {
-            "doi": "A_VALID_DOI",
+            "doi": A_VALID_DOI,
             "save_dir": "no/dir/found",
             "suffix": "json",
             "data": {"this": "that"},
-            "error": f"No such file or directory: '{util.full_path('no/dir/found')}/A_VALID_DOI.json'",
+            "error": f"[Errno 2] No such file or directory: '{util.full_path('no/dir/found')}/{A_VALID_DOI}.json'",
         },
         id="relative_dir_not_found",
     ),
     pytest.param(
         {
-            "doi": "A_VALID_DOI",
+            "doi": A_VALID_DOI,
             "save_dir": "/no/dir/found",
             "suffix": "json",
             "data": {"this": "that"},
-            "error": "No such file or directory: '/no/dir/found/A_VALID_DOI.json'",
+            "error": f"[Errno 2] No such file or directory: '/no/dir/found/{A_VALID_DOI}.json'",
         },
         id="absolute_dir_not_found",
+    ),
+    pytest.param(
+        {
+            "doi": A_VALID_DOI,
+            "suffix": "json",
+            "data": {"this": set(["that", "the", "other"])},
+            "error": "Object of type set is not JSON serializable",
+        },
+        id="json_encode_error",
     ),
 ]
 
 
 @pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_FAIL_TEST_DATA)
-def test_save_data_to_file_fail(param, capsys):
+def test_save_data_to_file_fail(param, capsys, tmp_path):
+
+    if "save_dir" not in param:
+        param["save_dir"] = tmp_path
+
     assert (
         util.save_data_to_file(
             param["doi"], param["save_dir"], param["suffix"], param["data"]
         )
         is None
     )
-    readouterr = capsys.readouterr()
-    sys_out = readouterr.out.split("\n")
-    match_found = False
-    for line in sys_out:
-        if line.find(param["error"]) != -1:
-            match_found = True
-            break
-    assert match_found is True
+
+    check_stdout_for_errs(capsys, [param["error"]])
 
 
 FILES = {
@@ -293,3 +300,55 @@ def test_dir_scanner_with_relative_file_input():
     got = util.dir_scanner(KBASE_DOI_FILE, [lambda x: x.find("kbase-dois") != -1])
     assert len(got) == 1
     assert got[0].endswith(KBASE_DOI_FILE)
+
+
+DOI_SET = set(
+    [
+        "10.25982/65526.69/1755438",
+        "10.25982/1608940",
+        "10.25982/1722943",
+        "10.25982/86723.65/1778009",
+        "10.25982/73218.75/1777998",
+        "10.25982/73221.117/1777993",
+    ]
+)
+
+FILE_LIST = [
+    pytest.param(
+        {"input": Path("tests") / "data" / "empty.txt", "doi_list": set()},
+        id="empty_file",
+    ),
+    pytest.param(
+        {
+            "input": Path("tests") / "data" / "doi_list_with_dupes.txt",
+            "doi_list": DOI_SET,
+        },
+        id="dois_with_dupes",
+    ),
+    pytest.param(
+        {
+            "input": "/does/not/exist",
+            "error_type": FileNotFoundError,
+        },
+        id="file_does_not_exist",
+    ),
+    pytest.param(
+        {
+            "input": "sample_data/osti",
+            "error_type": IsADirectoryError,
+        },
+        id="directory",
+    ),
+]
+
+
+@pytest.mark.parametrize("param", FILE_LIST)
+def test_read_unique_lines(param):
+
+    if "doi_list" in param:
+        returned_input = util.read_unique_lines(param["input"])
+        assert set(returned_input) == param["doi_list"]
+
+    else:
+        with pytest.raises(param["error_type"]):
+            util.read_unique_lines(param["input"])
