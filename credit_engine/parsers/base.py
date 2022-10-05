@@ -216,6 +216,7 @@ def retrieve_doi_list(
 
     return results
 
+
 # TODO: move to util file AND/OR convert to decorator
 @validate_arguments
 def import_dois_from_file(
