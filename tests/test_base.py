@@ -46,14 +46,14 @@ DATA_FORMAT = {
 CHECK_DOI_SOURCE_TEST_DATA = [
     pytest.param(
         {
-            "doi": "DATACITE_DOI",
+            "doi": A_VALID_DC_DOI,
             "expected": "datacite",
         },
         id="datacite",
     ),
     pytest.param(
         {
-            "doi": "CROSSREF_DOI",
+            "doi": A_VALID_XR_DOI,
             "expected": "crossref",
         },
         id="crossref",
@@ -73,15 +73,15 @@ GET_EXTENSION_TEST_DATA = [
         {
             "parser": datacite,
             "output_format": "JSON",
-            "expected": datacite.FILE_EXTENSIONS["json"],
+            "expected": datacite.FILE_EXTENSIONS[CE.JSON],
         },
         id="datacite_json",
     ),
     pytest.param(
         {
             "parser": crossref,
-            "output_format": "json",
-            "expected": crossref.FILE_EXTENSIONS["json"],
+            "output_format": CE.JSON,
+            "expected": crossref.FILE_EXTENSIONS[CE.JSON],
         },
         id="crossref_json",
     ),
@@ -89,7 +89,7 @@ GET_EXTENSION_TEST_DATA = [
         {
             "parser": osti,
             "output_format": "Json",
-            "expected": osti.FILE_EXTENSIONS["json"],
+            "expected": osti.FILE_EXTENSIONS[CE.JSON],
         },
         id="osti_json",
     ),
@@ -97,14 +97,14 @@ GET_EXTENSION_TEST_DATA = [
         {
             "parser": crossref,
             "output_format": "UNIXREF",
-            "expected": crossref.FILE_EXTENSIONS["unixref"],
+            "expected": crossref.FILE_EXTENSIONS[CE.UNIXREF],
         },
         id="crossref_unixref",
     ),
     pytest.param(
         {
             "parser": crossref,
-            "output_format": "xml",
+            "output_format": CE.XML,
             "error": True,
         },
         id="crossref_xml",
@@ -112,7 +112,7 @@ GET_EXTENSION_TEST_DATA = [
     pytest.param(
         {
             "parser": datacite,
-            "output_format": "unixsd",
+            "output_format": "UnixSD",
             "error": True,
         },
         id="datacite_unixsd",
@@ -120,7 +120,7 @@ GET_EXTENSION_TEST_DATA = [
     pytest.param(
         {
             "parser": osti,
-            "output_format": "unixref",
+            "output_format": "UnixRef",
             "error": True,
         },
         id="osti_unixref",
@@ -168,15 +168,15 @@ INVALID_SOURCE_TEST_DATA = [
 
 OUTPUT_FORMAT_LIST = [
     # valid for Crossref, Datacite, OSTI
-    pytest.param(["json"], id="json"),
+    pytest.param([CE.JSON], id="json"),
     # valid for Datacite, OSTI
-    pytest.param(["json", "xml"], id="json_xml"),
+    pytest.param([CE.JSON, CE.XML], id="json_xml"),
     # valid for Datacite, OSTI
-    pytest.param(["xml"], id="xml"),
+    pytest.param([CE.XML], id="xml"),
     # valid for Crossref
-    pytest.param(["json", "unixref", "json", "json"], id="json_unixref"),
+    pytest.param([CE.JSON, CE.UNIXREF, CE.JSON, CE.JSON], id="json_unixref"),
     # valid for Crossref
-    pytest.param(["unixsd", "unixref"], id="unixref_unixsd"),
+    pytest.param([CE.UNIXSD, CE.UNIXREF], id="unixref_unixsd"),
 ]
 
 
@@ -214,7 +214,7 @@ INVALID_OUTPUT_FORMAT_LIST_TEST_DATA = [
     ),
     pytest.param(
         {
-            "input": ["rdfxml", "xml", "json", "duck types"],
+            "input": ["rdfxml", CE.XML, CE.JSON, "duck types"],
             "error": make_error(
                 "invalid_param",
                 {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: ["rdfxml", "duck types"]},
@@ -224,7 +224,7 @@ INVALID_OUTPUT_FORMAT_LIST_TEST_DATA = [
     ),
     pytest.param(
         {
-            "input": ["json"],
+            "input": [CE.JSON],
         },
         id="valid_fmt",
     ),

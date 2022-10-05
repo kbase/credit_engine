@@ -7,6 +7,7 @@ from typing import Pattern, Union
 import _pytest.capture
 import pytest
 
+import credit_engine.constants as CE
 from credit_engine.parsers import base
 from credit_engine.util import dir_scanner
 
@@ -69,9 +70,9 @@ def run_file_contents_check(
     suffix = path_to_file.suffix
     content = None
 
-    if suffix == ".xml":
+    if suffix == f".{CE.XML}":
         content = path_to_file.read_bytes()
-    elif suffix == ".json":
+    elif suffix == f".{CE.JSON}":
         with Path.open(path_to_file) as fh:
             content = json.load(fh)
     elif suffix == ".txt":

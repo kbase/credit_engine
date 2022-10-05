@@ -28,6 +28,9 @@ NO_XML_NODE = "NO_XML_NODE"
 SPACE_STR = "      \n\n   \t   "
 INVALID_JSON_STR = '{"this": "that"'
 
+DATACITE_URI = "https://api.datacite.org/dois"
+CROSSREF_URI = "https://api.crossref.org/works"
+OSTI_URI = "https://www.osti.gov/api/v1/records"
 
 OK = "ok"
 CODE = "status_code"
@@ -320,46 +323,46 @@ SOURCE_404 = {
 
 RESPONSE_DATA = {
     # check_doi_source at crossref
-    "https://api.crossref.org/works/DATACITE_DOI/agency": {
+    f"{CROSSREF_URI}/{A_VALID_DC_DOI}/agency": {
         **OK_200,
         JSON: {"message": {"agency": {"id": "datacite"}}},
     },
-    "https://api.crossref.org/works/CROSSREF_DOI/agency": {
+    f"{CROSSREF_URI}/{A_VALID_XR_DOI}/agency": {
         **OK_200,
         JSON: {"message": {"agency": {"id": "crossref"}}},
     },
-    f"https://api.crossref.org/works/{INVALID_JSON}": {
+    f"{CROSSREF_URI}/{INVALID_JSON}": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
     },
     # crossref
-    f"https://api.crossref.org/works/{A_VALID_XR_DOI}": {
+    f"{CROSSREF_URI}/{A_VALID_XR_DOI}": {
         **OK_200,
         JSON: generate_response_for_doi(CE.CROSSREF, A_VALID_XR_DOI, CE.JSON),
     },
     # datacite
-    f"https://api.datacite.org/dois/{A_VALID_DC_DOI}?affiliation=true": {
+    f"{DATACITE_URI}/{A_VALID_DC_DOI}?affiliation=true": {
         **OK_200,
         JSON: generate_response_for_doi(CE.DATACITE, A_VALID_DC_DOI, CE.JSON),
     },
-    f"https://api.datacite.org/dois/{INVALID_JSON}?affiliation=true": {
+    f"{DATACITE_URI}/{INVALID_JSON}?affiliation=true": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
     },
-    f"https://api.datacite.org/dois/{NO_XML_NODE}?affiliation=true": {
+    f"{DATACITE_URI}/{NO_XML_NODE}?affiliation=true": {
         **OK_200,
         JSON: {"this": "that"},
     },
-    f"https://api.datacite.org/dois/{INVALID_XML}?affiliation=true": {
+    f"{DATACITE_URI}/{INVALID_XML}?affiliation=true": {
         **OK_200,
         JSON: {"data": {"attributes": {"xml": "abcdefghijklmopqrst"}}},
     },
     # osti
-    f"https://www.osti.gov/api/v1/records?doi={INVALID_JSON}": {
+    f"{OSTI_URI}?doi={INVALID_JSON}": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
     },
-    f"https://www.osti.gov/api/v1/records?doi={INVALID_XML}": {
+    f"{OSTI_URI}?doi={INVALID_XML}": {
         **OK_200,
         CONTENT: "TODO",
     },
@@ -368,17 +371,17 @@ RESPONSE_DATA = {
 # JSON responses
 for doi in [A_VALID_DOI, ANOTHER_VALID_DOI]:
     # crossref retrieve_doi
-    RESPONSE_DATA[f"https://api.crossref.org/works/{doi}"] = {
+    RESPONSE_DATA[f"{CROSSREF_URI}/{doi}"] = {
         **OK_200,
         JSON: generate_response_for_doi(CE.CROSSREF, doi, CE.JSON),
     }
     # datacite retrieve_doi
-    RESPONSE_DATA[f"https://api.datacite.org/dois/{doi}?affiliation=true"] = {
+    RESPONSE_DATA[f"{DATACITE_URI}/{doi}?affiliation=true"] = {
         **OK_200,
         JSON: generate_response_for_doi(CE.DATACITE, doi, CE.JSON),
     }
     # osti
-    RESPONSE_DATA[f"https://www.osti.gov/api/v1/records?doi={doi}"] = {
+    RESPONSE_DATA[f"{OSTI_URI}?doi={doi}"] = {
         **OK_200,
         JSON: generate_response_for_doi(CE.OSTI, doi, CE.JSON),
     }

@@ -94,7 +94,7 @@ def extract_data_from_resp(
     :return: _description_
     :rtype: Union[dict, list, bytes, None]
     """
-    if fmt == "json":
+    if fmt == CE.JSON:
         try:
             return resp.json()
         except JSONDecodeError as e:

@@ -88,11 +88,11 @@ def extract_data_from_resp(
         print(f"Error decoding JSON for {doi}: " + str(e))
         return doi_data
 
-    if "json" in output_format_list:
-        doi_data["json"] = resp_json
+    if CE.JSON in output_format_list:
+        doi_data[CE.JSON] = resp_json
 
-    if "xml" in output_format_list:
-        doi_data["xml"] = decode_xml(doi, resp_json)
+    if CE.XML in output_format_list:
+        doi_data[CE.XML] = decode_xml(doi, resp_json)
 
     return doi_data
 
