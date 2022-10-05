@@ -19,6 +19,8 @@ NOT_FOUND = "NOT_FOUND"
 INVALID_DOI = "INVALID_DOI"
 A_VALID_DOI = "A_VALID_DOI"
 ANOTHER_VALID_DOI = "ANOTHER_VALID_DOI"
+A_VALID_DC_DOI = "a_valid_datacite_doi"
+A_VALID_XR_DOI = "a_valid_crossref_doi"
 INVALID_JSON = "INVALID_JSON"
 INVALID_XML = "INVALID_XML"
 NO_XML_NODE = "NO_XML_NODE"
@@ -220,6 +222,10 @@ DATA_FILES = {
             CE.JSON: "sample_data/datacite/10.25585_1487554.json",
             CE.XML: "sample_data/datacite/10.25585_1487554.xml",
         },
+        A_VALID_DC_DOI: {
+            CE.JSON: "sample_data/datacite/10.25585_1487730.json",
+            CE.XML: "sample_data/datacite/10.25585_14877730.xml",
+        },
     },
     CE.CROSSREF: {
         A_VALID_DOI: {
@@ -231,6 +237,11 @@ DATA_FILES = {
             CE.JSON: "sample_data/crossref/10.46936_10.25585_60007530.json",
             CE.UNIXREF: "sample_data/crossref/10.46936_10.25585_60007530.unixref.xml",
             CE.UNIXSD: "sample_data/crossref/10.46936_10.25585_60007530.unixsd.xml",
+        },
+        A_VALID_XR_DOI: {
+            CE.JSON: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.json",
+            CE.UNIXREF: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixref.xml",
+            CE.UNIXSD: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
         },
     },
     CE.OSTI: {
@@ -306,67 +317,31 @@ SOURCE_404 = {
     },
 }
 
-RESPONSE_JSON = {
-    # check_doi_source at crossref
-    "https://api.crossref.org/works/DATACITE_DOI/agency": {
-        "message": {"agency": {"id": "datacite"}},
-    },
-    "https://api.crossref.org/works/CROSSREF_DOI/agency": {
-        "message": {"agency": {"id": "crossref"}},
-    },
-    # crossref retrieve_doi
-    f"https://api.crossref.org/works/{A_VALID_DOI}": generate_response_for_doi(
-        CE.CROSSREF, A_VALID_DOI, CE.JSON
-    ),
-    f"https://api.crossref.org/works/{ANOTHER_VALID_DOI}": generate_response_for_doi(
-        CE.CROSSREF, ANOTHER_VALID_DOI, CE.JSON
-    ),
-    # datacite retrieve_doi
-    f"https://api.datacite.org/dois/{A_VALID_DOI}?affiliation=true": generate_response_for_doi(
-        CE.DATACITE, A_VALID_DOI, CE.JSON
-    ),
-    f"https://api.datacite.org/dois/{ANOTHER_VALID_DOI}?affiliation=true": generate_response_for_doi(
-        CE.DATACITE, ANOTHER_VALID_DOI, CE.JSON
-    ),
-    f"https://www.osti.gov/api/v1/records?doi={A_VALID_DOI}": generate_response_for_doi(
-        CE.OSTI, A_VALID_DOI, CE.JSON
-    ),
-    f"https://www.osti.gov/api/v1/records?doi={ANOTHER_VALID_DOI}": generate_response_for_doi(
-        CE.OSTI, ANOTHER_VALID_DOI, CE.JSON
-    ),
-}
-
 
 RESPONSE_DATA = {
-    f"https://api.crossref.org/works/{NOT_FOUND}/agency": SOURCE_404[CE.CROSSREF],
-    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixsd&id={A_VALID_DOI}": {
+    # check_doi_source at crossref
+    "https://api.crossref.org/works/DATACITE_DOI/agency": {
         **OK_200,
-        CONTENT: generate_response_for_doi(CE.CROSSREF, A_VALID_DOI, CE.UNIXSD),
+        JSON: {"message": {"agency": {"id": "datacite"}}},
     },
-    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixref&id={A_VALID_DOI}": {
+    "https://api.crossref.org/works/CROSSREF_DOI/agency": {
         **OK_200,
-        CONTENT: generate_response_for_doi(CE.CROSSREF, A_VALID_DOI, CE.UNIXREF),
-    },
-    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixsd&id={ANOTHER_VALID_DOI}": {
-        **OK_200,
-        CONTENT: generate_response_for_doi(CE.CROSSREF, ANOTHER_VALID_DOI, CE.UNIXSD),
-    },
-    f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format=unixref&id={ANOTHER_VALID_DOI}": {
-        **OK_200,
-        CONTENT: generate_response_for_doi(CE.CROSSREF, ANOTHER_VALID_DOI, CE.UNIXREF),
+        JSON: {"message": {"agency": {"id": "crossref"}}},
     },
     f"https://api.crossref.org/works/{INVALID_JSON}": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
     },
-    f"https://api.crossref.org/works/{INVALID_DOI}": SOURCE_404[CE.CROSSREF],
-    f"https://api.crossref.org/works/{NOT_FOUND}": SOURCE_404[CE.CROSSREF],
-    f"https://api.datacite.org/dois/{NOT_FOUND}?affiliation=true": SOURCE_404[
-        CE.DATACITE
-    ],
-    f"https://api.datacite.org/dois/{INVALID_DOI}?affiliation=true": SOURCE_404[
-        CE.DATACITE
-    ],
+    # crossref
+    f"https://api.crossref.org/works/{A_VALID_XR_DOI}": {
+        **OK_200,
+        JSON: generate_response_for_doi(CE.CROSSREF, A_VALID_XR_DOI, CE.JSON),
+    },
+    # datacite
+    f"https://api.datacite.org/dois/{A_VALID_DC_DOI}?affiliation=true": {
+        **OK_200,
+        JSON: generate_response_for_doi(CE.DATACITE, A_VALID_DC_DOI, CE.JSON),
+    },
     f"https://api.datacite.org/dois/{INVALID_JSON}?affiliation=true": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
@@ -379,8 +354,7 @@ RESPONSE_DATA = {
         **OK_200,
         JSON: {"data": {"attributes": {"xml": "abcdefghijklmopqrst"}}},
     },
-    f"https://www.osti.gov/api/v1/records?doi={NOT_FOUND}": SOURCE_404[CE.OSTI],
-    f"https://www.osti.gov/api/v1/records?doi={INVALID_DOI}": SOURCE_404[CE.OSTI],
+    # osti
     f"https://www.osti.gov/api/v1/records?doi={INVALID_JSON}": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
@@ -390,6 +364,34 @@ RESPONSE_DATA = {
         CONTENT: "TODO",
     },
 }
+
+# JSON responses
+for doi in [A_VALID_DOI, ANOTHER_VALID_DOI]:
+    # crossref retrieve_doi
+    RESPONSE_DATA[f"https://api.crossref.org/works/{doi}"] = {
+        **OK_200,
+        JSON: generate_response_for_doi(CE.CROSSREF, doi, CE.JSON),
+    }
+    # datacite retrieve_doi
+    RESPONSE_DATA[f"https://api.datacite.org/dois/{doi}?affiliation=true"] = {
+        **OK_200,
+        JSON: generate_response_for_doi(CE.DATACITE, doi, CE.JSON),
+    }
+    # osti
+    RESPONSE_DATA[f"https://www.osti.gov/api/v1/records?doi={doi}"] = {
+        **OK_200,
+        JSON: generate_response_for_doi(CE.OSTI, doi, CE.JSON),
+    }
+
+# crossref XML responses
+for doi in [A_VALID_DOI, ANOTHER_VALID_DOI, A_VALID_XR_DOI]:
+    for fmt in [CE.UNIXREF, CE.UNIXSD]:
+        RESPONSE_DATA[
+            f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format={fmt}&id={doi}"
+        ] = {
+            **OK_200,
+            CONTENT: generate_response_for_doi(CE.CROSSREF, doi, fmt),
+        }
 
 
 # custom class to be the mock return value of requests.get()
@@ -411,13 +413,11 @@ class MockResponse:
                         }
                         return
 
-            if kwargs["url"] in RESPONSE_JSON:
-                self.response = {**OK_200, JSON: RESPONSE_JSON[kwargs["url"]]}
-                return
             if kwargs["url"] in RESPONSE_DATA:
                 self.response = RESPONSE_DATA[kwargs["url"]]
                 return
 
+            # 404s for any other URLs in the crossref/datacite/osti namespaces
             if kwargs["url"].find("crossref") != -1:
                 self.response = SOURCE_404[CE.CROSSREF]
             elif kwargs["url"].find("datacite") != -1:

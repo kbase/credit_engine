@@ -7,7 +7,7 @@ from typing import Pattern, Union
 import _pytest.capture
 import pytest
 
-from credit_engine.parsers import doi
+from credit_engine.parsers import base
 from credit_engine.util import dir_scanner
 
 VERBOSE = False
@@ -116,7 +116,7 @@ def run_retrieve_doi_list(
         # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in expected["file_list"]]
 
-        retrieval_results = doi.retrieve_doi_list(*list_params)
+        retrieval_results = base.retrieve_doi_list(*list_params)
         assert retrieval_results["data"] == expected["output"]["data"]
         assert set(dir_scanner(save_dir)) == set(file_list)
 
@@ -132,7 +132,7 @@ def run_retrieve_doi_list(
                         retrieval_results["data"][f][fmt],
                     )
     else:
-        retrieval_results = doi.retrieve_doi_list(
+        retrieval_results = base.retrieve_doi_list(
             param["doi_list"],
             source=param["source"],
             output_format_list=param["output_format_list"],
