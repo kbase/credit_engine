@@ -7,7 +7,8 @@ from typing import Pattern, Union
 import _pytest.capture
 import pytest
 
-from credit_engine.parsers import doi
+import credit_engine.constants as CE
+from credit_engine.parsers import base
 from credit_engine.util import dir_scanner
 
 VERBOSE = False
@@ -69,9 +70,9 @@ def run_file_contents_check(
     suffix = path_to_file.suffix
     content = None
 
-    if suffix == ".xml":
+    if suffix == f".{CE.XML}":
         content = path_to_file.read_bytes()
-    elif suffix == ".json":
+    elif suffix == f".{CE.JSON}":
         with Path.open(path_to_file) as fh:
             content = json.load(fh)
     elif suffix == ".txt":
@@ -103,12 +104,6 @@ def run_retrieve_doi_list(
     :type capsys: _type_
     """
     output_format_list = list(set(param["output_format_list"]))
-    # compile params as a list
-    list_params = [param["doi_list"]]
-    for p in ["source", "output_format_list", "save_files", "save_dir"]:
-        if p not in param:
-            break
-        list_params.append(param[p])
 
     if "save_files" in param and param["save_files"]:
         save_dir = param["save_dir"] if "save_dir" in param else default_dir
@@ -116,7 +111,7 @@ def run_retrieve_doi_list(
         # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in expected["file_list"]]
 
-        retrieval_results = doi.retrieve_doi_list(*list_params)
+        retrieval_results = base.retrieve_doi_list(**param)
         assert retrieval_results["data"] == expected["output"]["data"]
         assert set(dir_scanner(save_dir)) == set(file_list)
 
@@ -132,11 +127,7 @@ def run_retrieve_doi_list(
                         retrieval_results["data"][f][fmt],
                     )
     else:
-        retrieval_results = doi.retrieve_doi_list(
-            param["doi_list"],
-            source=param["source"],
-            output_format_list=param["output_format_list"],
-        )
+        retrieval_results = base.retrieve_doi_list(**param)
         assert retrieval_results == expected["output"]
         assert dir_scanner(tmp_path) == []
 

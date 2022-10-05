@@ -15,6 +15,13 @@ CROSSREF = "crossref"
 DATACITE = "datacite"
 OSTI = "osti"
 KBASE = "kbase"
+UNKNOWN = "unknown"
+
+PARSERS = {
+    CROSSREF: 1,
+    DATACITE: 1,
+    OSTI: 1,
+}
 
 # file formats and extensions
 JSON = "json"

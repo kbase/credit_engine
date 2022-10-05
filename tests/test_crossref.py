@@ -91,7 +91,7 @@ GET_ENDPOINT_DATA = [
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "unixref"],
+            "input": [SAMPLE_DOI, "Unixref"],
             "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format=unixref&id={QUOTED_DOI}",
         },
         id="fmt_unixref",

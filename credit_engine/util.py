@@ -51,7 +51,7 @@ def doi_to_file_name(doi: str) -> str:
 def full_path(file_path: Union[Path, str]) -> Path:
     """Generate the full path for a file.
 
-    :param file_path: path relative to the credit_engine repo
+    :param file_path: path, either absolute or relative to the credit_engine repo
     :type file_path: string or Path object
     :return: full path
     :rtype: Path
@@ -112,7 +112,7 @@ def save_data_to_file(
     doi: CE.TrimmedString,
     save_dir: Union[Path, str],
     suffix: str,
-    data: Union[dict, list, str, bytes],
+    data: Union[bytes, str, list, dict],
 ) -> Optional[Path]:
     # ensure we don't have an extra full stop
     if suffix.startswith("."):
@@ -138,7 +138,7 @@ def save_data_to_file(
 def read_json_file(file_path: Union[Path, str]) -> dict[str, Union[str, list, dict]]:
     """Read in JSON from a stored data file.
 
-    :param file_path: path relative to the credit_engine repo
+    :param file_path: path, either absolute or relative to the credit_engine repo
     :type file_path: string or Path object
     :return: parsed JSON data
     :rtype: dict
@@ -150,7 +150,7 @@ def read_json_file(file_path: Union[Path, str]) -> dict[str, Union[str, list, di
 def read_text_file(file_path: Union[Path, str]) -> list[str]:
     """Read in text from a stored data file.
 
-    :param file_path: path relative to the credit_engine repo
+    :param file_path: path, either absolute or relative to the credit_engine repo
     :type file_path: string or Path object
     :return: lines in the file with endings trimmed
     :rtype: list
@@ -159,10 +159,22 @@ def read_text_file(file_path: Union[Path, str]) -> list[str]:
         return [line.rstrip() for line in fh]
 
 
+def read_unique_lines(file_path: Union[Path, str]) -> list[str]:
+    """Retrieve all unique, non-blank lines from a file.
+
+    :param file_path: path, either absolute or relative to the credit_engine repo
+    :type file_path: Union[Path, str]
+    :return: _description_
+    :rtype: list[str]
+    """
+    all_lines = read_text_file(file_path)
+    return [line for line in list(set(all_lines)) if line]
+
+
 def write_to_file(file_path: Union[Path, str], lines: Union[list, dict, str]):
     """Write a list of lines of text to a file.
 
-    :param file_path: path relative to the credit_engine repo
+    :param file_path: path, either absolute or relative to the credit_engine repo
     :type file_path: string or Path object
     :param lines: content to be written to the file
     :type lines: list / dict / str
@@ -191,7 +203,7 @@ def write_to_file(file_path: Union[Path, str], lines: Union[list, dict, str]):
 def write_bytes_to_file(file_path: Union[Path, str], file_bytes: bytes):
     """Write bytes to a file.
 
-    :param file_path: path relative to the credit_engine repo
+    :param file_path: path, either absolute or relative to the credit_engine repo
     :type file_path: string or Path object
     :param file_bytes: bytes to be written to the file
     :type file_bytes: bytes

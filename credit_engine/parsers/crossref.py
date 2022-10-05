@@ -42,7 +42,7 @@ def get_endpoint(
             )
         )
 
-    if lc_output_format == "json":
+    if lc_output_format == CE.JSON:
         return f"https://api.crossref.org/works/{quote(doi)}"
 
     if not email_address:
@@ -88,7 +88,7 @@ def retrieve_doi(
 def extract_data_from_resp(
     doi: str, resp: requests.Response, fmt: str
 ) -> Union[dict, list, bytes, None]:
-    if fmt == "json":
+    if fmt == CE.JSON:
         try:
             return resp.json()
         except JSONDecodeError as e:

@@ -217,21 +217,82 @@ def retrieve_doi_list(
     return results
 
 
+# TODO: move to util file AND/OR convert to decorator
+@validate_arguments
 def import_dois_from_file(
     file: Union[Path, str],
-    source: CE.TrimmedString,
-    output_format_list: Optional[list[CE.TrimmedString]] = None,
+) -> list[str]:
+    return util.read_unique_lines(file)
+
+
+def _check_for_missing_dois(
+    doi_list: list[str],
+    results_dict: dict,
+) -> list[str]:
+    """Check for DOIs that do not have data associated with them.
+
+    :param doi_list: list of DOIs
+    :type doi_list: list[str]
+    :param results_dict: DOI data, indexed by DOI and then format
+    :type results_dict: dict
+    :return: list of DOIs without any associated data
+    :rtype: list[str]
+    """
+    not_found = set()
+    for doi in doi_list:
+        if doi not in results_dict:
+            # this should never happen!
+            not_found.add(doi)
+            print(f"{doi} is not in the results!")
+            continue
+
+        data_found = False
+        for val in results_dict[doi].values():
+            if val is not None:
+                data_found = True
+                break
+
+        if not data_found:
+            not_found.add(doi)
+
+    return list(not_found)
+
+
+def retrieve_doi_list_from_unknown(
+    doi_list: list[str],
+    output_format_list: Optional[list[str]] = None,
     save_files: bool = False,
     save_dir: Optional[Union[Path, str]] = None,
-) -> dict:
+):
 
-    doi_list = util.read_text_file(file)
-    no_blanks = [line for line in list(set(doi_list)) if line]
-
-    return retrieve_doi_list(
-        no_blanks,
-        source,
-        output_format_list,
-        save_files,
-        save_dir,
+    print("Searching Crossref...")
+    crossref_results = retrieve_doi_list(
+        doi_list, CE.CROSSREF, output_format_list, save_files, save_dir
     )
+
+    not_found = _check_for_missing_dois(doi_list, crossref_results[CE.DATA])
+    n_found = len(doi_list) - len(not_found)
+    print(f"Found {n_found} DOI{'' if n_found == 1 else 's'} at Crossref")
+
+    if not not_found:
+        return crossref_results
+
+    print(f"Searching Datacite...")
+    # now retry these DOIs at datacite
+    datacite_results = retrieve_doi_list(
+        not_found, CE.DATACITE, output_format_list, save_files, save_dir
+    )
+
+    still_not_found = _check_for_missing_dois(not_found, datacite_results[CE.DATA])
+    n_now_found = len(not_found) - len(still_not_found)
+    print(f"Found {n_now_found} DOI{'' if n_now_found == 1 else 's'} at Datacite")
+
+    still_not_found.sort()
+
+    # print out a warning about the dois that could not be located
+    if still_not_found:
+        print("The following DOIs could not be found:\n" + "\n".join(still_not_found))
+
+    for key in crossref_results:
+        crossref_results[key].update(datacite_results[key])
+    return crossref_results
