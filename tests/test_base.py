@@ -372,7 +372,9 @@ def test_retrieve_doi_list(
     no_format = [fmt for fmt in output_format_list if fmt not in DATA_FORMAT[source]]
     if no_format:
         with pytest.raises(ValueError, match="Invalid output format"):
-            base.retrieve_doi_list(doi_list, source, output_format_list)
+            base.retrieve_doi_list(
+                doi_list=doi_list, source=source, output_format_list=output_format_list
+            )
         return
 
     # pytest's tmp_path does not create a new dir for each run of the tests, hence the use of tempfile
@@ -510,7 +512,7 @@ RETRIEVE_DOIS_FROM_UNKNOWN_DATA = [
 def test_retrieve_doi_list_from_unknown(param, capsys, _mock_response):
 
     results = base.retrieve_doi_list_from_unknown(
-        param["input"],
+        doi_list=param["input"],
         output_format_list=[CE.JSON],
         save_files=False,
     )
@@ -520,3 +522,17 @@ def test_retrieve_doi_list_from_unknown(param, capsys, _mock_response):
     assert results == {CE.DATA: param["expected"]}
     if "stdout" in param:
         common.check_stdout_for_errs(capsys, param["stdout"])
+
+
+# this is unlikely to happen unless there is some trickery afoot
+def test__check_for_missing_dois_unlikely_error(capsys):
+    doi_list = [INVALID_DOI, NOT_FOUND]
+    results_dict = {
+        A_VALID_DOI: {CE.JSON: None},
+        ANOTHER_VALID_DOI: {CE.JSON: None},
+    }
+
+    assert set(base._check_for_missing_dois(doi_list, results_dict)) == set(doi_list)
+    common.check_stdout_for_errs(
+        capsys, [f"{doi} is not in the results!" for doi in doi_list]
+    )
