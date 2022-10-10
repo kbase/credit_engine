@@ -11,25 +11,27 @@ import credit_engine.constants as CE
 
 
 @validate_arguments
-def clean_doi_list(doi_list: CE.NonEmptyList[CE.TrimmedString]) -> list[str]:
+def clean_doi_list(doi_list: Optional[list[str]]) -> list[str]:
     """Clean up a list of DOIs.
 
     Dedupe and remove blanks.
 
     :param doi_list: list of putative DOIs
     :type doi_list: list[str]
-    :raises ValueError: if DOI list is not a list or is empty
+    :raises ValueError: if DOI list is not a list
     :return: list (possibly empty) of cleaned-up DOIs
     :rtype: list[str]
     """
-    clean_doi_list = set()
-    for putative_doi in doi_list:
+    clean_doi_list = []
+    if not doi_list:
+        return clean_doi_list
+    for putative_doi in set(doi_list):
         if putative_doi:
-            clean_doi = str(putative_doi).strip()
+            clean_doi = putative_doi.strip()
             if clean_doi:
-                clean_doi_list.add(clean_doi)
+                clean_doi_list.append(clean_doi)
 
-    return list(clean_doi_list)
+    return clean_doi_list
 
 
 def doi_to_file_name(doi: str) -> str:
@@ -156,7 +158,7 @@ def read_text_file(file_path: Union[Path, str]) -> list[str]:
     :rtype: list
     """
     with open(full_path(file_path)) as fh:
-        return [line.rstrip() for line in fh]
+        return [line.strip() for line in fh]
 
 
 def read_unique_lines(file_path: Union[Path, str]) -> list[str]:

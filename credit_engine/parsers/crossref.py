@@ -15,9 +15,9 @@ DEFAULT_FORMAT = CE.JSON
 
 @validate_arguments
 def get_endpoint(
-    doi: CE.TrimmedString,
-    output_format: Optional[CE.TrimmedString] = None,
-    email_address: Optional[CE.TrimmedString] = None,
+    doi: str,
+    output_format: Optional[str] = None,
+    email_address: Optional[str] = None,
 ) -> str:
     """Get the appropriate endpoint for a CrossRef query.
 
@@ -53,9 +53,9 @@ def get_endpoint(
 
 @validate_arguments
 def retrieve_doi(
-    doi: CE.TrimmedString,
-    output_format_list: Optional[list[CE.TrimmedString]] = None,
-    email_address: Optional[CE.TrimmedString] = None,
+    doi: str,
+    output_format_list: Optional[list[str]] = None,
+    email_address: Optional[str] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from Crossref.
 

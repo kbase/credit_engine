@@ -6,7 +6,6 @@ import credit_engine.constants as CE
 from credit_engine.parsers.crossref import get_endpoint, retrieve_doi
 from tests.common import check_stdout_for_errs
 from tests.conftest import (
-    A_VALID_DOI,
     GET_ENDPOINT_FAIL_DATA,
     INVALID_JSON,
     NOT_FOUND,
@@ -14,6 +13,7 @@ from tests.conftest import (
     SAMPLE_DOI,
     SAMPLE_EMAIL,
     SPACE_STR,
+    VALID_DOI_A,
     generate_response_for_doi,
 )
 
@@ -49,14 +49,14 @@ GET_ENDPOINT_DATA = [
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UnixSd"],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format=unixsd&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format={CE.UNIXSD}&id={QUOTED_DOI}",
         },
         id="fmt_unixsd",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UnixSd", None],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format=unixsd&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format={CE.UNIXSD}&id={QUOTED_DOI}",
         },
         id="fmt_unixsd_email_None",
     ),
@@ -85,21 +85,21 @@ GET_ENDPOINT_DATA = [
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UNIXSD", SAMPLE_EMAIL],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={SAMPLE_EMAIL}&format=unixsd&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?pid={SAMPLE_EMAIL}&format={CE.UNIXSD}&id={QUOTED_DOI}",
         },
         id="fmt_unixsd_with_email",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "Unixref"],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format=unixref&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format={CE.UNIXREF}&id={QUOTED_DOI}",
         },
         id="fmt_unixref",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UNIXref", SAMPLE_EMAIL],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={SAMPLE_EMAIL}&format=unixref&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?pid={SAMPLE_EMAIL}&format={CE.UNIXREF}&id={QUOTED_DOI}",
         },
         id="fmt_unixref_with_email",
     ),
@@ -119,18 +119,18 @@ fmt_list = [CE.JSON, CE.UNIXREF, CE.UNIXSD]
 RETRIEVE_DOI_TEST_DATA = [
     pytest.param(
         {
-            "input": [A_VALID_DOI],
+            "input": [VALID_DOI_A],
             "expected": {
-                CE.JSON: generate_response_for_doi(CE.CROSSREF, A_VALID_DOI, CE.JSON)
+                CE.JSON: generate_response_for_doi(CE.CROSSREF, VALID_DOI_A, CE.JSON)
             },
         },
         id="ok_default_format",
     ),
     pytest.param(
         {
-            "input": [A_VALID_DOI, fmt_list],
+            "input": [VALID_DOI_A, fmt_list],
             "expected": {
-                fmt: generate_response_for_doi(CE.CROSSREF, A_VALID_DOI, fmt)
+                fmt: generate_response_for_doi(CE.CROSSREF, VALID_DOI_A, fmt)
                 for fmt in fmt_list
             },
         },

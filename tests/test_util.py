@@ -1,5 +1,6 @@
 import json
 import os.path
+import re
 from pathlib import Path, PurePath
 
 import pytest
@@ -8,25 +9,25 @@ from pydantic import ValidationError
 import credit_engine.util as util
 from tests.common import check_stdout_for_errs, run_file_contents_check
 
-from .conftest import A_VALID_DOI, CLEAN_DOI_LIST_DATA, MockResponse
+from .conftest import (
+    CLEAN_DOI_LIST_DATA,
+    FILE_LIST_TEST_DATA,
+    FILE_NAME,
+    VALID_DOI_A,
+    MockResponse,
+)
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
 
 DOI_TEST_DATA = [
     pytest.param(
         {
-            "doi": "10.1000/123%45.6#789",
-            "file_name": "10.1000_123_45.6_789",
+            "doi": doi,
+            "file_name": FILE_NAME[doi],
         },
-        id="percent_hashtag",
-    ),
-    pytest.param(
-        {
-            "doi": '10.100/%"# ?.<>{}^[]`|\\+',
-            "file_name": "10.100_._",
-        },
-        id="all_special_uri_chars",
-    ),
+        id=doi,
+    )
+    for doi in FILE_NAME
 ]
 
 FILE_READ_WRITE_JSON_TEST_DATA = [
@@ -58,7 +59,7 @@ def test_clean_doi_list(param):
         clean_dois = util.clean_doi_list(param["input"])
         assert set(clean_dois) == set(param["output"])
     else:
-        with pytest.raises(ValidationError, match=param["error"]):
+        with pytest.raises(ValidationError, match=re.escape(param["error"])):
             util.clean_doi_list(param["input"])
 
 
@@ -170,27 +171,27 @@ SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
     # dir does not exist
     pytest.param(
         {
-            "doi": A_VALID_DOI,
+            "doi": VALID_DOI_A,
             "save_dir": "no/dir/found",
             "suffix": "json",
             "data": {"this": "that"},
-            "error": f"[Errno 2] No such file or directory: '{util.full_path('no/dir/found')}/{A_VALID_DOI}.json'",
+            "error": f"[Errno 2] No such file or directory: '{util.full_path('no/dir/found')}/{FILE_NAME[VALID_DOI_A]}.json'",
         },
         id="relative_dir_not_found",
     ),
     pytest.param(
         {
-            "doi": A_VALID_DOI,
+            "doi": VALID_DOI_A,
             "save_dir": "/no/dir/found",
             "suffix": "json",
             "data": {"this": "that"},
-            "error": f"[Errno 2] No such file or directory: '/no/dir/found/{A_VALID_DOI}.json'",
+            "error": f"[Errno 2] No such file or directory: '/no/dir/found/{FILE_NAME[VALID_DOI_A]}.json'",
         },
         id="absolute_dir_not_found",
     ),
     pytest.param(
         {
-            "doi": A_VALID_DOI,
+            "doi": VALID_DOI_A,
             "suffix": "json",
             "data": {"this": set(["that", "the", "other"])},
             "error": "Object of type set is not JSON serializable",
@@ -302,53 +303,14 @@ def test_dir_scanner_with_relative_file_input():
     assert got[0].endswith(KBASE_DOI_FILE)
 
 
-DOI_SET = set(
-    [
-        "10.25982/65526.69/1755438",
-        "10.25982/1608940",
-        "10.25982/1722943",
-        "10.25982/86723.65/1778009",
-        "10.25982/73218.75/1777998",
-        "10.25982/73221.117/1777993",
-    ]
-)
-
-FILE_LIST = [
-    pytest.param(
-        {"input": Path("tests") / "data" / "empty.txt", "doi_list": set()},
-        id="empty_file",
-    ),
-    pytest.param(
-        {
-            "input": Path("tests") / "data" / "doi_list_with_dupes.txt",
-            "doi_list": DOI_SET,
-        },
-        id="dois_with_dupes",
-    ),
-    pytest.param(
-        {
-            "input": "/does/not/exist",
-            "error_type": FileNotFoundError,
-        },
-        id="file_does_not_exist",
-    ),
-    pytest.param(
-        {
-            "input": "sample_data/osti",
-            "error_type": IsADirectoryError,
-        },
-        id="directory",
-    ),
-]
-
-
-@pytest.mark.parametrize("param", FILE_LIST)
+@pytest.mark.parametrize("param", FILE_LIST_TEST_DATA)
 def test_read_unique_lines(param):
+    import re
 
-    if "doi_list" in param:
+    if "output" in param:
         returned_input = util.read_unique_lines(param["input"])
-        assert set(returned_input) == param["doi_list"]
+        assert set(returned_input) == set(param["output"])
 
     else:
-        with pytest.raises(param["error_type"]):
+        with pytest.raises(param["error_type"], match=re.escape(param["error"])):
             util.read_unique_lines(param["input"])

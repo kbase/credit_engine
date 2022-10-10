@@ -4,12 +4,12 @@ import credit_engine.constants as CE
 from credit_engine.parsers.osti import get_endpoint, retrieve_doi
 from tests.common import check_stdout_for_errs
 from tests.conftest import (
-    A_VALID_DOI,
     GET_ENDPOINT_FAIL_DATA,
     INVALID_JSON,
     NOT_FOUND,
     QUOTED_DOI,
     SAMPLE_DOI,
+    VALID_DOI_A,
     generate_response_for_doi,
 )
 
@@ -51,18 +51,18 @@ fmt_list = [CE.JSON, CE.XML]
 RETRIEVE_DOI_TEST_DATA = [
     pytest.param(
         {
-            "input": [A_VALID_DOI],
+            "input": [VALID_DOI_A],
             "expected": {
-                CE.JSON: generate_response_for_doi(CE.OSTI, A_VALID_DOI, CE.JSON)
+                CE.JSON: generate_response_for_doi(CE.OSTI, VALID_DOI_A, CE.JSON)
             },
         },
         id="ok_default_format",
     ),
     pytest.param(
         {
-            "input": [A_VALID_DOI, fmt_list],
+            "input": [VALID_DOI_A, fmt_list],
             "expected": {
-                fmt: generate_response_for_doi(CE.OSTI, A_VALID_DOI, fmt)
+                fmt: generate_response_for_doi(CE.OSTI, VALID_DOI_A, fmt)
                 for fmt in fmt_list
             },
         },
