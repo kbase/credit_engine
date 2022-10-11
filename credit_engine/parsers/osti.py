@@ -27,9 +27,8 @@ def get_endpoint(
     :return: endpoint URI
     :rtype: str
     """
-    if not output_format:
-        output_format = DEFAULT_FORMAT
-    lc_output_format = output_format.lower()
+    lc_output_format = output_format.lower() if output_format else DEFAULT_FORMAT
+
     if lc_output_format not in FILE_EXTENSIONS:
         raise ValueError(
             make_error(
@@ -43,8 +42,8 @@ def get_endpoint(
 
 @validate_arguments
 def retrieve_doi(
-    doi: CE.TrimmedString,
-    output_format_list: Optional[list[CE.TrimmedString]] = None,
+    doi: str,
+    output_format_list: Optional[list[str]] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from OSTI.
 

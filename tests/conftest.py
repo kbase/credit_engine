@@ -14,7 +14,7 @@ SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
 QUOTED_DOI = quote(SAMPLE_DOI)
 SAMPLE_EMAIL = "me@home.com"
 QUOTED_EMAIL = quote(SAMPLE_EMAIL)
-DEFAULT_EMAIL = "credit_engine@kbase.us"
+QUOTED_DEFAULT_EMAIL = quote(CE.DEFAULT_EMAIL)
 
 INVALID_DOI = "INVALID_DOI"
 INVALID_JSON = "INVALID_JSON"
@@ -452,7 +452,7 @@ for doi in [VALID_DOI_A, VALID_DOI_B]:
 for doi in [VALID_DOI_A, VALID_DOI_B, VALID_XR_DOI]:
     for fmt in [CE.UNIXREF, CE.UNIXSD]:
         RESPONSE_DATA[
-            f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format={fmt}&id={URI[doi]}"
+            f"https://doi.crossref.org/servlet/query?id={URI[doi]}&format={fmt}&pid={QUOTED_DEFAULT_EMAIL}"
         ] = {
             **OK_200,
             CONTENT: generate_response_for_doi(CE.CROSSREF, doi, fmt),

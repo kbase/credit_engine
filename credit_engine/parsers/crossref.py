@@ -15,9 +15,9 @@ DEFAULT_FORMAT = CE.JSON
 
 @validate_arguments
 def get_endpoint(
-    doi: str,
-    output_format: Optional[str] = None,
-    email_address: Optional[str] = None,
+    doi: CE.TrimmedString,
+    output_format: Optional[CE.TrimmedString] = None,
+    email_address: Optional[CE.TrimmedString] = None,
 ) -> str:
     """Get the appropriate endpoint for a CrossRef query.
 
@@ -30,10 +30,8 @@ def get_endpoint(
     :return: full URL to query
     :rtype: str
     """
-    if not output_format:
-        output_format = CE.JSON
+    lc_output_format = output_format.lower() if output_format else DEFAULT_FORMAT
 
-    lc_output_format = output_format.lower()
     if lc_output_format not in FILE_EXTENSIONS:
         raise ValueError(
             make_error(
@@ -45,10 +43,11 @@ def get_endpoint(
     if lc_output_format == CE.JSON:
         return f"https://api.crossref.org/works/{quote(doi)}"
 
-    if not email_address:
-        email_address = CE.DEFAULT_EMAIL
+    quoted_email_address = (
+        quote(email_address) if email_address else quote(CE.DEFAULT_EMAIL)
+    )
 
-    return f"https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}"
+    return f"https://doi.crossref.org/servlet/query?id={quote(doi)}&format={lc_output_format}&pid={quoted_email_address}"
 
 
 @validate_arguments

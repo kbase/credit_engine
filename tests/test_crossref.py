@@ -9,7 +9,9 @@ from tests.conftest import (
     GET_ENDPOINT_FAIL_DATA,
     INVALID_JSON,
     NOT_FOUND,
+    QUOTED_DEFAULT_EMAIL,
     QUOTED_DOI,
+    QUOTED_EMAIL,
     SAMPLE_DOI,
     SAMPLE_EMAIL,
     SPACE_STR,
@@ -49,14 +51,14 @@ GET_ENDPOINT_DATA = [
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UnixSd"],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format={CE.UNIXSD}&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXSD}&pid={QUOTED_DEFAULT_EMAIL}",
         },
         id="fmt_unixsd",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UnixSd", None],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format={CE.UNIXSD}&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXSD}&pid={QUOTED_DEFAULT_EMAIL}",
         },
         id="fmt_unixsd_email_None",
     ),
@@ -80,26 +82,26 @@ GET_ENDPOINT_DATA = [
                 "(type=value_error.any_str.min_length; limit_value=1)"
             ),
         },
-        id="fmt_unixsd_email_len_0",
+        id="fmt_unixsd_email_whitespace",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UNIXSD", SAMPLE_EMAIL],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={SAMPLE_EMAIL}&format={CE.UNIXSD}&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXSD}&pid={QUOTED_EMAIL}",
         },
         id="fmt_unixsd_with_email",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "Unixref"],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={CE.DEFAULT_EMAIL}&format={CE.UNIXREF}&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXREF}&pid={QUOTED_DEFAULT_EMAIL}",
         },
         id="fmt_unixref",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UNIXref", SAMPLE_EMAIL],
-            "expected": f"https://doi.crossref.org/servlet/query?pid={SAMPLE_EMAIL}&format={CE.UNIXREF}&id={QUOTED_DOI}",
+            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXREF}&pid={QUOTED_EMAIL}",
         },
         id="fmt_unixref_with_email",
     ),
