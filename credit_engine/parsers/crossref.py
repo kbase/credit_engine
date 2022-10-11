@@ -30,10 +30,8 @@ def get_endpoint(
     :return: full URL to query
     :rtype: str
     """
-    if not output_format:
-        output_format = CE.JSON
+    lc_output_format = output_format.lower() if output_format else DEFAULT_FORMAT
 
-    lc_output_format = output_format.lower()
     if lc_output_format not in FILE_EXTENSIONS:
         raise ValueError(
             make_error(
@@ -45,17 +43,18 @@ def get_endpoint(
     if lc_output_format == CE.JSON:
         return f"https://api.crossref.org/works/{quote(doi)}"
 
-    if not email_address:
-        email_address = CE.DEFAULT_EMAIL
+    quoted_email_address = (
+        quote(email_address) if email_address else quote(CE.DEFAULT_EMAIL)
+    )
 
-    return f"https://doi.crossref.org/servlet/query?pid={email_address}&format={lc_output_format}&id={quote(doi)}"
+    return f"https://doi.crossref.org/servlet/query?id={quote(doi)}&format={lc_output_format}&pid={quoted_email_address}"
 
 
 @validate_arguments
 def retrieve_doi(
-    doi: CE.TrimmedString,
-    output_format_list: Optional[list[CE.TrimmedString]] = None,
-    email_address: Optional[CE.TrimmedString] = None,
+    doi: str,
+    output_format_list: Optional[list[str]] = None,
+    email_address: Optional[str] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from Crossref.
 
@@ -88,6 +87,17 @@ def retrieve_doi(
 def extract_data_from_resp(
     doi: str, resp: requests.Response, fmt: str
 ) -> Union[dict, list, bytes, None]:
+    """Extract the data from a response object.
+
+    :param doi: the relevant DOI
+    :type doi: str
+    :param resp: response object for the DOI
+    :type resp: requests.Response
+    :param fmt: format that the response was requested in
+    :type fmt: str
+    :return: decoded response content
+    :rtype: Union[dict, list, bytes, None]
+    """
     if fmt == CE.JSON:
         try:
             return resp.json()

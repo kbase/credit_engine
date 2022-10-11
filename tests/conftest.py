@@ -8,22 +8,45 @@ import pytest
 import requests
 
 import credit_engine.constants as CE
+import credit_engine.util as util
 
 SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
 QUOTED_DOI = quote(SAMPLE_DOI)
 SAMPLE_EMAIL = "me@home.com"
 QUOTED_EMAIL = quote(SAMPLE_EMAIL)
-DEFAULT_EMAIL = "credit_engine@kbase.us"
+QUOTED_DEFAULT_EMAIL = quote(CE.DEFAULT_EMAIL)
 
-NOT_FOUND = "NOT_FOUND"
 INVALID_DOI = "INVALID_DOI"
-A_VALID_DOI = "A_VALID_DOI"
-ANOTHER_VALID_DOI = "ANOTHER_VALID_DOI"
-A_VALID_DC_DOI = "a_valid_datacite_doi"
-A_VALID_XR_DOI = "a_valid_crossref_doi"
 INVALID_JSON = "INVALID_JSON"
 INVALID_XML = "INVALID_XML"
 NO_XML_NODE = "NO_XML_NODE"
+NOT_FOUND = "NOT_FOUND"
+# hashtag, question mark, percent sign
+VALID_DOI_A = r"10.1000/12%34?56.78#90"
+# all possible special characters
+# N.b. syntax highlighting may be wrong
+VALID_DOI_B = r'10.100/%"# ?.<>{}^[]`|\+'
+VALID_DC_DOI = r"10.12345/d@*c1t3.(uri)"
+VALID_XR_DOI = r"10.12345/†r05{2}?ef*(uri)"
+
+FILE_NAME = {
+    VALID_DC_DOI: "10.12345_d_c1t3._uri_",
+    VALID_XR_DOI: "10.12345_r05_2_ef_uri_",
+    VALID_DOI_A: "10.1000_12_34_56.78_90",
+    VALID_DOI_B: "10.100_._",
+}
+
+URI = {
+    NOT_FOUND: quote(NOT_FOUND),
+    INVALID_DOI: quote(INVALID_DOI),
+    VALID_DOI_A: quote(VALID_DOI_A),
+    VALID_DOI_B: quote(VALID_DOI_B),
+    VALID_DC_DOI: quote(VALID_DC_DOI),
+    VALID_XR_DOI: quote(VALID_XR_DOI),
+    INVALID_JSON: quote(INVALID_JSON),
+    INVALID_XML: quote(INVALID_XML),
+    NO_XML_NODE: quote(NO_XML_NODE),
+}
 
 SPACE_STR = "      \n\n   \t   "
 INVALID_JSON_STR = '{"this": "that"'
@@ -42,72 +65,69 @@ CLEAN_DOI_LIST_DATA = [
     pytest.param(
         {
             "input": None,
-            "error": re.escape(
-                "1 validation error for CleanDoiList\ndoi_list\n  none is not an allowed value (type=type_error.none.not_allowed)"
-            ),
+            "output": [],
         },
         id="None_input",
     ),
     pytest.param(
         {
-            "input": A_VALID_DOI,
-            "error": re.escape(
-                "1 validation error for CleanDoiList\ndoi_list\n  value is not a valid list (type=type_error.list)"
-            ),
+            "input": VALID_DOI_A,
+            "error": "1 validation error for CleanDoiList\ndoi_list\n  value is not a valid list (type=type_error.list)",
         },
         id="invalid_input_type",
     ),
     pytest.param(
         {
             "input": [],
-            "error": re.escape(
-                "1 validation error for CleanDoiList\ndoi_list\n  ensure this value has at least 1 items (type=value_error.list.min_items; limit_value=1)",
-            ),
+            "output": [],
         },
         id="zero_length_list_input",
     ),
     pytest.param(
         {
             "input": [""],
-            "error": re.escape(
-                "1 validation error for CleanDoiList\ndoi_list -> 0\n  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)"
-            ),
+            "output": [],
         },
         id="zero_str_length",
     ),
     pytest.param(
         {
-            "input": [None, "       ", "    ", "  \t  \n\n", ""],
-            "error": re.escape(
-                "5 validation errors for CleanDoiList\ndoi_list -> 0\n  none is not an allowed value (type=type_error.none.not_allowed)"
-            ),
+            "input": [None, None, None, None],
+            "error": "4 validation errors for CleanDoiList\ndoi_list -> 0\n  none is not an allowed value (type=type_error.none.not_allowed)\ndoi_list -> 1\n  none is not an allowed value (type=type_error.none.not_allowed)\ndoi_list -> 2\n  none is not an allowed value (type=type_error.none.not_allowed)\ndoi_list -> 3\n  none is not an allowed value (type=type_error.none.not_allowed)",
+        },
+        id="list_of_None",
+    ),
+    pytest.param(
+        {
+            "input": ["       ", "    ", "  \t  \n\n", ""],
+            "output": [],
         },
         id="spaced_out",
     ),
     pytest.param(
         {
-            "input": [10.12345, 12345, f"     {ANOTHER_VALID_DOI}       "],
-            "output": ["10.12345", "12345", ANOTHER_VALID_DOI],
+            "input": [10.12345, 12345, f"     {VALID_DOI_B}       "],
+            "output": ["10.12345", "12345", VALID_DOI_B],
         },
         id="format_conversion",
     ),
     pytest.param(
         {
             "input": [
-                f"  {A_VALID_DOI} ",
+                f"  {VALID_DOI_A} ",
                 INVALID_DOI,
-                A_VALID_DOI,
+                VALID_DOI_A,
                 INVALID_DOI,
-                f"   {A_VALID_DOI}\n\n",
+                f"   {VALID_DOI_A}\n\n",
             ],
-            "output": [A_VALID_DOI, INVALID_DOI],
+            "output": [VALID_DOI_A, INVALID_DOI],
         },
         id="duplicates",
     ),
     pytest.param(
         {
-            "input": [A_VALID_DOI, ANOTHER_VALID_DOI, INVALID_DOI, NOT_FOUND],
-            "output": [A_VALID_DOI, ANOTHER_VALID_DOI, INVALID_DOI, NOT_FOUND],
+            "input": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND],
+            "output": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND],
         },
         id="all_ok",
     ),
@@ -215,44 +235,86 @@ GET_ENDPOINT_FAIL_DATA = [
 ]
 
 
+FILE_LIST_TEST_DATA = [
+    pytest.param(
+        {"input": Path("tests") / "data" / "empty.txt", "output": []},
+        id="empty_file",
+    ),
+    pytest.param(
+        {"input": Path("tests") / "data" / "whitespace.txt", "output": []},
+        id="whitespace",
+    ),
+    pytest.param(
+        {
+            "input": Path("tests") / "data" / "doi_list_with_dupes.txt",
+            "output": FILE_NAME.keys(),
+        },
+        id="dois_with_dupes",
+    ),
+    pytest.param(
+        {
+            "input": Path("tests") / "data" / "valid_and_invalid.txt",
+            "output": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND],
+        },
+        id="valid_named_dois",
+    ),
+    pytest.param(
+        {
+            "input": "/does/not/exist",
+            "error_type": FileNotFoundError,
+            "error": f"[Errno 2] No such file or directory: '/does/not/exist'",
+        },
+        id="file_does_not_exist",
+    ),
+    pytest.param(
+        {
+            "input": "sample_data/osti",
+            "error_type": IsADirectoryError,
+            "error": f"[Errno 21] Is a directory: '{util.full_path('sample_data/osti')}'",
+        },
+        id="directory",
+    ),
+]
+
+
 DATA_FILES = {
     CE.DATACITE: {
-        A_VALID_DOI: {
+        VALID_DOI_A: {
             CE.JSON: "sample_data/datacite/10.25585_1487552.json",
             CE.XML: "sample_data/datacite/10.25585_1487552.xml",
         },
-        ANOTHER_VALID_DOI: {
+        VALID_DOI_B: {
             CE.JSON: "sample_data/datacite/10.25585_1487554.json",
             CE.XML: "sample_data/datacite/10.25585_1487554.xml",
         },
-        A_VALID_DC_DOI: {
+        VALID_DC_DOI: {
             CE.JSON: "sample_data/datacite/10.25585_1487730.json",
             CE.XML: "sample_data/datacite/10.25585_14877730.xml",
         },
     },
     CE.CROSSREF: {
-        A_VALID_DOI: {
+        VALID_DOI_A: {
             CE.JSON: "sample_data/crossref/10.46936_10.25585_60007526.json",
             CE.UNIXREF: "sample_data/crossref/10.46936_10.25585_60007526.unixref.xml",
             CE.UNIXSD: "sample_data/crossref/10.46936_10.25585_60007526.unixsd.xml",
         },
-        ANOTHER_VALID_DOI: {
+        VALID_DOI_B: {
             CE.JSON: "sample_data/crossref/10.46936_10.25585_60007530.json",
             CE.UNIXREF: "sample_data/crossref/10.46936_10.25585_60007530.unixref.xml",
             CE.UNIXSD: "sample_data/crossref/10.46936_10.25585_60007530.unixsd.xml",
         },
-        A_VALID_XR_DOI: {
+        VALID_XR_DOI: {
             CE.JSON: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.json",
             CE.UNIXREF: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixref.xml",
             CE.UNIXSD: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
         },
     },
     CE.OSTI: {
-        A_VALID_DOI: {
+        VALID_DOI_A: {
             CE.JSON: "sample_data/osti/10.25982_1668075.json",
             CE.XML: "sample_data/osti/10.25982_1668075.xml",
         },
-        ANOTHER_VALID_DOI: {
+        VALID_DOI_B: {
             CE.JSON: "sample_data/osti/10.25982_1722943.json",
             CE.XML: "sample_data/osti/10.25982_1722943.xml",
         },
@@ -323,74 +385,74 @@ SOURCE_404 = {
 
 RESPONSE_DATA = {
     # check_doi_source at crossref
-    f"{CROSSREF_URI}/{A_VALID_DC_DOI}/agency": {
+    f"{CROSSREF_URI}/{URI[VALID_DC_DOI]}/agency": {
         **OK_200,
         JSON: {"message": {"agency": {"id": "datacite"}}},
     },
-    f"{CROSSREF_URI}/{A_VALID_XR_DOI}/agency": {
+    f"{CROSSREF_URI}/{URI[VALID_XR_DOI]}/agency": {
         **OK_200,
         JSON: {"message": {"agency": {"id": "crossref"}}},
     },
-    f"{CROSSREF_URI}/{INVALID_JSON}": {
+    f"{CROSSREF_URI}/{URI[INVALID_JSON]}": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
     },
     # crossref
-    f"{CROSSREF_URI}/{A_VALID_XR_DOI}": {
+    f"{CROSSREF_URI}/{URI[VALID_XR_DOI]}": {
         **OK_200,
-        JSON: generate_response_for_doi(CE.CROSSREF, A_VALID_XR_DOI, CE.JSON),
+        JSON: generate_response_for_doi(CE.CROSSREF, VALID_XR_DOI, CE.JSON),
     },
     # datacite
-    f"{DATACITE_URI}/{A_VALID_DC_DOI}?affiliation=true": {
+    f"{DATACITE_URI}/{URI[VALID_DC_DOI]}?affiliation=true": {
         **OK_200,
-        JSON: generate_response_for_doi(CE.DATACITE, A_VALID_DC_DOI, CE.JSON),
+        JSON: generate_response_for_doi(CE.DATACITE, VALID_DC_DOI, CE.JSON),
     },
-    f"{DATACITE_URI}/{INVALID_JSON}?affiliation=true": {
+    f"{DATACITE_URI}/{URI[INVALID_JSON]}?affiliation=true": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
     },
-    f"{DATACITE_URI}/{NO_XML_NODE}?affiliation=true": {
+    f"{DATACITE_URI}/{URI[NO_XML_NODE]}?affiliation=true": {
         **OK_200,
         JSON: {"this": "that"},
     },
-    f"{DATACITE_URI}/{INVALID_XML}?affiliation=true": {
+    f"{DATACITE_URI}/{URI[INVALID_XML]}?affiliation=true": {
         **OK_200,
         JSON: {"data": {"attributes": {"xml": "abcdefghijklmopqrst"}}},
     },
     # osti
-    f"{OSTI_URI}?doi={INVALID_JSON}": {
+    f"{OSTI_URI}?doi={URI[INVALID_JSON]}": {
         **OK_200,
         CONTENT: INVALID_JSON_STR,
     },
-    f"{OSTI_URI}?doi={INVALID_XML}": {
+    f"{OSTI_URI}?doi={URI[INVALID_XML]}": {
         **OK_200,
         CONTENT: "TODO",
     },
 }
 
 # JSON responses
-for doi in [A_VALID_DOI, ANOTHER_VALID_DOI]:
+for doi in [VALID_DOI_A, VALID_DOI_B]:
     # crossref retrieve_doi
-    RESPONSE_DATA[f"{CROSSREF_URI}/{doi}"] = {
+    RESPONSE_DATA[f"{CROSSREF_URI}/{URI[doi]}"] = {
         **OK_200,
         JSON: generate_response_for_doi(CE.CROSSREF, doi, CE.JSON),
     }
     # datacite retrieve_doi
-    RESPONSE_DATA[f"{DATACITE_URI}/{doi}?affiliation=true"] = {
+    RESPONSE_DATA[f"{DATACITE_URI}/{URI[doi]}?affiliation=true"] = {
         **OK_200,
         JSON: generate_response_for_doi(CE.DATACITE, doi, CE.JSON),
     }
     # osti
-    RESPONSE_DATA[f"{OSTI_URI}?doi={doi}"] = {
+    RESPONSE_DATA[f"{OSTI_URI}?doi={URI[doi]}"] = {
         **OK_200,
         JSON: generate_response_for_doi(CE.OSTI, doi, CE.JSON),
     }
 
 # crossref XML responses
-for doi in [A_VALID_DOI, ANOTHER_VALID_DOI, A_VALID_XR_DOI]:
+for doi in [VALID_DOI_A, VALID_DOI_B, VALID_XR_DOI]:
     for fmt in [CE.UNIXREF, CE.UNIXSD]:
         RESPONSE_DATA[
-            f"https://doi.crossref.org/servlet/query?pid={DEFAULT_EMAIL}&format={fmt}&id={doi}"
+            f"https://doi.crossref.org/servlet/query?id={URI[doi]}&format={fmt}&pid={QUOTED_DEFAULT_EMAIL}"
         ] = {
             **OK_200,
             CONTENT: generate_response_for_doi(CE.CROSSREF, doi, fmt),
@@ -408,8 +470,8 @@ class MockResponse:
                 and kwargs["headers"]["Accept"] == "application/xml"
                 and kwargs["url"].find("osti") != -1
             ):
-                for doi in [A_VALID_DOI, ANOTHER_VALID_DOI]:
-                    if kwargs["url"].find(doi) != -1:
+                for doi in [VALID_DOI_A, VALID_DOI_B]:
+                    if kwargs["url"].find(URI[doi]) != -1:
                         self.response = {
                             **OK_200,
                             CONTENT: generate_response_for_doi(CE.OSTI, doi, CE.XML),
