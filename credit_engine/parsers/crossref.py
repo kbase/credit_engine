@@ -87,6 +87,17 @@ def retrieve_doi(
 def extract_data_from_resp(
     doi: str, resp: requests.Response, fmt: str
 ) -> Union[dict, list, bytes, None]:
+    """Extract the data from a response object.
+
+    :param doi: the relevant DOI
+    :type doi: str
+    :param resp: response object for the DOI
+    :type resp: requests.Response
+    :param fmt: format that the response was requested in
+    :type fmt: str
+    :return: decoded response content
+    :rtype: Union[dict, list, bytes, None]
+    """
     if fmt == CE.JSON:
         try:
             return resp.json()

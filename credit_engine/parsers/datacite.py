@@ -78,6 +78,17 @@ def retrieve_doi(
 def extract_data_from_resp(
     doi: str, resp: requests.Response, output_format_list: list[str]
 ) -> dict[str, Union[dict, list, bytes, None]]:
+    """Extract the data from a Response object.
+
+    :param doi: the DOI that has been fetched
+    :type doi: str
+    :param resp: response object for the DOI
+    :type resp: requests.Response
+    :param output_format_list: formats requested for the DOI
+    :type output_format_list: list[str]
+    :return: decoded response content
+    :rtype: dict[str, Union[dict, list, bytes, None]]
+    """
 
     doi_data: dict[str, Any] = {fmt: None for fmt in output_format_list}
     resp_json = None
@@ -97,6 +108,15 @@ def extract_data_from_resp(
 
 
 def decode_xml(doi: str, json_data: dict[str, Any]) -> Optional[bytes]:
+    """Decode the encoded XML string in a DataCite response.
+
+    :param doi: the relevant DOI
+    :type doi: str
+    :param json_data: the JSON response data
+    :type json_data: dict[str, Any]
+    :return: decoded XML (if it exists)
+    :rtype: Optional[bytes]
+    """
     if json_data.get("data", {}).get("attributes", {}).get("xml", None) is None:
         print(f"Error decoding XML for {doi}: XML node not found")
         return None

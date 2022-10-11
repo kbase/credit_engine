@@ -112,19 +112,6 @@ def run_retrieve_doi_list(
         file_list = [os.path.join(save_dir, doi) for doi in expected["file_list"]]
 
         retrieval_results = base.retrieve_doi_list(**param)
-        # assert set(retrieval_results["data"].keys()) == set(expected["output"]["data"].keys())
-        # for key in expected["output"]["data"]:
-        #     if retrieval_results["data"][key] != expected["output"]["data"][key]:
-        #         for subkey in retrieval_results["data"][key]:
-        #             if retrieval_results["data"][key][subkey] != expected["output"]["data"][key][subkey]:
-        #                 print("\n\n")
-        #                 print({"mismatched results: " + key + ":" + subkey})
-        #                 print({"got": retrieval_results["data"][key][subkey]})
-        #                 print("\n")
-        #                 print({"exp": expected["output"]["data"][key][subkey]})
-        #                 print("\n\n")
-        #     assert retrieval_results["data"][key] == expected["output"]["data"][key]
-
         assert retrieval_results["data"] == expected["output"]["data"]
         assert set(dir_scanner(save_dir)) == set(file_list)
 

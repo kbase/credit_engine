@@ -644,7 +644,6 @@ def test_retrieve_doi_list_from_unknown(
     doi_params = copy.deepcopy(param)
     del doi_params["id"]
 
-    # TODO: include doi_file as a test param
     results = base.retrieve_doi_list_from_unknown(
         **doi_params,
         output_format_list=output_format_list,

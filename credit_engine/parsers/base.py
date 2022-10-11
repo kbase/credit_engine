@@ -78,6 +78,17 @@ def _validate_dois(
     doi_list: Optional[list[str]],
     input_errors: list[str],
 ) -> list[str]:
+    """Merge and validate the input DOIs.
+
+    :param doi_file: file containing DOIs to be fetched
+    :type doi_file: Optional[str]
+    :param doi_list: list of DOIs to fetch
+    :type doi_list: Optional[list[str]]
+    :param input_errors: list of param validation errors
+    :type input_errors: list[str]
+    :return: unique DOIs to be fetched
+    :rtype: list[str]
+    """
 
     proto_doi_list: list[str] = []
 
@@ -104,6 +115,17 @@ def _validate_dois(
 def _validate_output_format_list(
     output_format_list: Optional[list[str]], source: str, input_errors: list[str]
 ) -> list[str]:
+    """Validate the output formats requested
+
+    :param output_format_list: list of output formats to fetch
+    :type output_format_list: Optional[list[str]]
+    :param source: data source
+    :type source: str
+    :param input_errors: list of param validation errors
+    :type input_errors: list[str]
+    :return: validated output format list
+    :rtype: list[str]
+    """
     parser = SOURCE_TO_PARSER[source]
     if output_format_list:
         output_format_list = list(set(output_format_list))
@@ -130,6 +152,17 @@ def _validate_save_dir(
     parser: Optional[types.ModuleType],
     input_errors: list[str],
 ) -> Union[Path, None]:
+    """Validate save-related parameters
+
+    :param save_dir: directory in which to save files
+    :type save_dir: Optional[Union[Path, str]]
+    :param parser: parser object (if it exists)
+    :type parser: Optional[types.ModuleType]
+    :param input_errors: list of param validation errors
+    :type input_errors: list[str]
+    :return: validated path to the save dir or None
+    :rtype: Union[Path, None]
+    """
     if not save_dir:
         if not parser:
             input_errors.append("No save_dir specified")
@@ -307,7 +340,22 @@ def retrieve_doi_list_from_unknown(
     output_format_list: Optional[list[str]] = None,
     save_files: bool = False,
     save_dir: Optional[Union[Path, str]] = None,
-):
+) -> dict[str, Any]:
+    """Retrieve a list of DOIs of unknown origin
+
+    :param doi_file: file containing a list of DOIs to retrieve, defaults to None
+    :type doi_file: Optional[str], optional
+    :param doi_list: list of DOIs to retrieve, defaults to None
+    :type doi_list: Optional[list[str]], optional
+    :param output_format_list: list of formats to request data in, defaults to None
+    :type output_format_list: Optional[list[str]], optional
+    :param save_files: whether or not to save files, defaults to False
+    :type save_files: bool, optional
+    :param save_dir: directory location for saving files, defaults to None
+    :type save_dir: Optional[Union[Path, str]], optional
+    :return: data structure of fetched DOIs keyed by DOI and then format
+    :rtype: dict[str, Any]
+    """
 
     input_errors = []
     all_doi_list = _validate_dois(
