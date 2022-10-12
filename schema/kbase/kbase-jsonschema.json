@@ -1,0 +1,264 @@
+{
+   "$defs": {
+      "DateType": {
+         "description": "The type of date being represented",
+         "enum": [
+            "accessed",
+            "available",
+            "updated"
+         ],
+         "title": "DateType",
+         "type": "string"
+      },
+      "EventDate": {
+         "additionalProperties": false,
+         "description": "The date of a specified event.",
+         "properties": {
+            "date": {
+               "description": "the date upon which the event occurred",
+               "type": "string"
+            },
+            "date_type": {
+               "$ref": "#/$defs/DateType",
+               "description": "the nature of the resource-related event that occurred on that date"
+            }
+         },
+         "required": [
+            "date",
+            "date_type"
+         ],
+         "title": "EventDate",
+         "type": "object"
+      },
+      "FundingReference": {
+         "additionalProperties": false,
+         "description": "funding information about a single funding source",
+         "properties": {
+            "award_id": {
+               "description": "code assigned by the funder to the grant or award",
+               "type": "string"
+            },
+            "award_title": {
+               "description": "human-readable title of the grant or award",
+               "type": "string"
+            },
+            "award_uri": {
+               "description": "URI for the award",
+               "type": "string"
+            },
+            "funder_id": {
+               "description": "ID for the funding entity - acceptable formats include crossref funder ID, DOI, ROR, ISNI, others?",
+               "type": "string"
+            },
+            "funder_name": {
+               "description": "human-readable funding body name",
+               "type": "string"
+            }
+         },
+         "required": [
+            "funder_name"
+         ],
+         "title": "FundingReference",
+         "type": "object"
+      },
+      "Organisation": {
+         "additionalProperties": false,
+         "description": "an organization such as a company, university, or consortium",
+         "properties": {
+            "organisation_id": {
+               "description": "unique identifier for the organisation -- ROR / ISNI, etc.",
+               "type": "string"
+            },
+            "organisation_name": {
+               "description": "name of the organisation",
+               "type": "string"
+            }
+         },
+         "required": [
+            "organisation_id"
+         ],
+         "title": "Organisation",
+         "type": "object"
+      },
+      "Person": {
+         "additionalProperties": false,
+         "description": "A human or human-like entity.",
+         "properties": {
+            "affiliations": {
+               "description": "organisation(s) that the contributor is associated with",
+               "items": {
+                  "$ref": "#/$defs/Organisation"
+               },
+               "type": "array"
+            },
+            "contributor_roles": {
+               "description": "List of one or more terms indicating the type of contribution. Should be a term from either CRedIT or DataCite's role vocabulary.",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "first_name": {
+               "description": "given name",
+               "type": "string"
+            },
+            "full_name": {
+               "description": "Full name of the contributor",
+               "type": "string"
+            },
+            "last_name": {
+               "description": "family name",
+               "type": "string"
+            },
+            "orcid": {
+               "description": "ORCID",
+               "type": "string"
+            }
+         },
+         "required": [
+            "orcid"
+         ],
+         "title": "Person",
+         "type": "object"
+      },
+      "ResolvablePID": {
+         "additionalProperties": false,
+         "description": "a resolvable permanent ID",
+         "properties": {
+            "description": {
+               "description": "brief description of what the ID links to",
+               "type": "string"
+            },
+            "id": {
+               "description": "a resolvable URI or CURIE (compact URI) for a resource",
+               "type": "string"
+            },
+            "relationship_type": {
+               "description": "how the resource represented by this ID relates to the original resource, as described by DataCite relation types",
+               "type": "string"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "ResolvablePID",
+         "type": "object"
+      },
+      "Resource": {
+         "additionalProperties": false,
+         "description": "A data source of some type.",
+         "properties": {
+            "contributors": {
+               "description": "people and/or organisations responsible for generating the resource",
+               "items": {
+                  "$ref": "#/$defs/Person"
+               },
+               "type": "array"
+            },
+            "dates": {
+               "description": "lifecycle dates for the resource",
+               "items": {
+                  "$ref": "#/$defs/EventDate"
+               },
+               "type": "array"
+            },
+            "funding": {
+               "description": "funding sources for the resource",
+               "items": {
+                  "$ref": "#/$defs/FundingReference"
+               },
+               "type": "array"
+            },
+            "identifier": {
+               "description": "resolvable persistent unique ID for the resource",
+               "type": "string"
+            },
+            "license": {
+               "description": "license under which the data is made available",
+               "type": "string"
+            },
+            "related_identifiers": {
+               "description": "other resolvable persistent unique IDs used to access the resource or related resources",
+               "items": {
+                  "$ref": "#/$defs/ResolvablePID"
+               },
+               "type": "array"
+            },
+            "resource_type": {
+               "$ref": "#/$defs/ResourceType",
+               "description": "the type of resource being described"
+            },
+            "title": {
+               "description": "formal title(s) of the data set",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "version": {
+               "description": "resource version (if available)",
+               "type": "string"
+            }
+         },
+         "required": [
+            "identifier",
+            "resource_type"
+         ],
+         "title": "Resource",
+         "type": "object"
+      },
+      "ResourceMetadata": {
+         "additionalProperties": false,
+         "description": "metadata for the resource being represented",
+         "properties": {
+            "citation_metadata_schema_version": {
+               "description": "the version of the citation metadata schema used",
+               "type": "string"
+            },
+            "date": {
+               "description": "the date that this version of the metadata was added",
+               "type": "string"
+            },
+            "language": {
+               "description": "language in which the metadata is written; a two- or three-letter code as described in RFC5646, https://datatracker.ietf.org/doc/html/rfc5646",
+               "type": "string"
+            },
+            "metadata": {
+               "description": "the metadata itself",
+               "type": "string"
+            },
+            "user": {
+               "description": "the ID of the workspace user who submitted the metadata",
+               "type": "string"
+            }
+         },
+         "required": [
+            "user",
+            "citation_metadata_schema_version",
+            "date",
+            "metadata"
+         ],
+         "title": "ResourceMetadata",
+         "type": "object"
+      },
+      "ResourceType": {
+         "description": "The type of resource being represented",
+         "enum": [
+            "dataset",
+            "report"
+         ],
+         "title": "ResourceType",
+         "type": "string"
+      }
+   },
+   "$id": "https://kbase/credit_engine/schema/metadata",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": true,
+   "metamodel_version": "1.7.0",
+   "properties": {},
+   "required": [],
+   "title": "metadata",
+   "type": "object",
+   "version": "0.0.1"
+}
+
