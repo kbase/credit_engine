@@ -1,16 +1,21 @@
+# yaml-language-server: $schema=/Users/gwg/code/kbase/credit-engine/.venv/lib/python3.10/site-packages/linkml_runtime/linkml_model/jsonschema/meta.schema.json
 id: https://kbase/credit_engine/schema/metadata
 name: metadata
 description: Schema for KBase resource metadata
+version: 0.0.1
 prefixes:
+  bioportal: https://bioportal.bioontology.org/ontologies/
   biolink: https://w3id.org/biolink/vocab/
   credit: https://casrai.org/credit/
   crossref: https://crossref.org/
-  datacite: https://purl.org/datacite/v4.4
+  datacite: https://purl.org/datacite/v4.4/
   DOI: http://identifiers.org/doi/
+  gdmt: http://vocab.fairdatacollective.org/fdc-gdmt/en/page/
   linkml: https://w3id.org/linkml/
   ORCID: http://identifiers.org/orcid/
   OSTI: https://www.osti.gov/biblio/
   ROR: https://ror.org/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
   schema: http://schema.org/
 imports:
   - linkml:types
@@ -18,24 +23,46 @@ default_range: string
 
 classes:
 
+  ResourceMetadata:
+    description: metadata for the resource being represented
+    attributes:
+      user:
+        description: the ID of the workspace user who submitted the metadata
+        required: true
+
+      citation_metadata_schema_version:
+        description: the version of the citation metadata schema used
+        required: true
+
+      timestamp:
+        description: unix timestamp for the addition of this set of metadata
+        required: true
+        range: integer
+
+      metadata:
+        description: the metadata itself
+        required: true
+        range: Resource
+
   Resource:
     description: A data source of some type.
     attributes:
       identifier:
         description: resolvable persistent unique ID for the resource
-        identifier: true
-        range: ResolvablePID
+        range: uriorcurie
         required: true
+        examples:
+        - value: DOI:10.25982/1722943
         exact_mappings:
         - DataCite:id
           # from: DataCite:id
-          # via: { id: "DOI:{DataCite:id}" }
+          # via: "DOI:{DataCite:id}"
         - OSTI:osti_id
           # from: OSTI:osti_id
-          # via: { id: "OSTI:{OSTI:osti_id}"}
-        - JGI:organisms[].grouped_by
+          # via: "OSTI:{OSTI:osti_id}"
+        # - JGI:organisms[].grouped_by
           # from JGI:organisms[].grouped_by
-          # via: { id: JGI:organisms[].files[].{JGI:organisms[].grouped_by} }
+          # via: JGI:organisms[].files[].{JGI:organisms[].grouped_by}
 
       resource_type:
         description: the type of resource being described
@@ -49,16 +76,18 @@ classes:
         - value: dataset
         - value: report
 
-      title:
+      titles:
         description: formal title(s) of the data set
         multivalued: true
+        range: Title
         exact_mappings:
-        - DataCite:attributes.titles[].title
+        - DataCite:attributes.titles[]
         - OSTI:title
           # from: OSTI:title
           # via: [OSTI:title]
         examples:
-        - value: Viral Annotation Pipeline in KBase
+        - value: { title: Viral Annotation Pipeline in KBase }
+        - value: { title: Virale annotatiepijplijn in KBase, title_type: translated_title, title_language: nl }
 
       version:
         description: resource version (if available)
@@ -71,27 +100,35 @@ classes:
         multivalued: true
         range: EventDate
         examples:
-        - value: { date: 2022-05-10, date_type: available }
+        - value: { date: 2022-05-10, date_type: available, date_format: YYYY-MM-DD }
         close_mappings:
         - DataCite:attributes.published
           # from DataCite:attributes.published
-          # via { date: DataCite:attributes.published, date_type: published }
+          # via { date: DataCite:attributes.published, date_type: published, date_format: YYYY }
+        - DataCite:attributes.updated
+          # from DataCite:attributes.updated
+          # via { date: DataCite:attributes.updated, date_type: updated, date_format: YYYY-MM-DDTHH:MM:SS.fffZ }
+        - DataCite:attributes.dates[]
+          # from DataCite:attributes.dates[]
+          # via { date: DataCite:attributes.dates[].date, date_type: DataCite:attributes.dates[].dateType, date_format: YYYY }
         - OSTI:publication_date
           # from: OSTI:publication_date
-          # via { date: OSTI:publication_date, date_type: published }
+          # via { date: OSTI:publication_date, date_type: published, date_format: YYYY-MM-DDTHH:MM:SSZ }
+        - Crossref:message.deposited
+          # from: Crossref:message.deposited
+          # via { date: Crossref:message.deposited.date-time, date_type: deposited, date_format: YYYY-MM-DDTHH:MM:SS.ffZ }
 
       contributors:
         description: people and/or organisations responsible for generating the resource
         inlined_as_list: true
         multivalued: true
-        range: Person
+        range: Contributor
         narrow_mappings:
         - DataCite:attributes.contributors
         - DataCite:attributes.creators
         - OSTI:contributors
         - OSTI:authors
-        - JGI:organisms[].pi
-        todos: this should include organisations as well as people
+        # - JGI:organisms[].pi
 
       related_identifiers:
         description: other resolvable persistent unique IDs used to access the resource or related resources
@@ -127,21 +164,34 @@ classes:
         - DataCite:attributes.rights_list
 
 
-  Person:
-    description: A human or human-like entity.
+  Contributor:
+    description: A human, a human-like entity, or an organisation that contributed to the resource.
     attributes:
-      orcid:
+      contributor_type:
+        description: the type of the contributor, person or organisation
+        range: ContributorType
+        examples:
+        - value: person
+        - value: organization
+        exact_mappings:
+        - DataCite:attributes.contributors[].name_type
+        - DataCite:attributes.creators[].name_type
+
+      contributor_id:
         identifier: true
-        description: ORCID
+        description: Unique identifier (such as an ORCID or ROR ID) for a person or organisation
         range: uriorcurie
         examples:
         - value: ORCID:0000-0001-9557-7715
+        - value: ROR:01znn6x10
         exact_mappings:
-        - DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
-        - DataCite:attributes.creators[].name_identifiers[].name_identifier_scheme == 'ORCID'
+        - DataCite:attributes.contributors[].name_identifiers[].name_identifier
+        - DataCite:attributes.creators[].name_identifiers[].name_identifier
           # from: DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
           # via: "ORCID:{ DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '') }"
+        narrow_mappings:
         - OSTI:orcid
+        - CrossRef:Message.project.funding.funder.name
 
       first_name:
         description: given name
@@ -151,7 +201,7 @@ classes:
         - DataCite:attributes.creators[].given_name
         - DataCite:attributes.contributors[].given_name
         - OSTI:first_name
-        - JGI:organisms[].pi.first_name
+        # - JGI:organisms[].pi.first_name
 
       last_name:
         description: family name
@@ -161,22 +211,21 @@ classes:
         - DataCite:attributes.creators[].family_name
         - DataCite:attributes.contributors[].family_name
         - OSTI:last_name
-        - JGI:organisms[].pi.last_name
+        # - JGI:organisms[].pi.last_name
 
       full_name:
-        description: Full name of the contributor
-        # slot_uri: schema:name
-        equals_expression: "{first_name} + {last_name}"
+        description: Full name of the contributor. It is suggested that organisations use this field.
         examples:
-        - value: Ellen Dow
         - value: Vlad the Impaler
         - value: Madonna
+        - value: KBase
+        - value: The Borg
         related_mappings:
         # these have the names comma-separated and inverted
         - DataCite:attributes.creators[].name
         - DataCite:attributes.contributors[].name
-        exact_mappings:
-        - JGI:organisms[].pi.name
+        # exact_mappings:
+        # - JGI:organisms[].pi.name
 
       affiliations:
         description: organisation(s) that the contributor is associated with
@@ -194,7 +243,7 @@ classes:
           # via: {
           #   organisation_name: "DataCite:attributes.creators[].affiliation[].name"
           # }
-        - JGI:organisms[].pi.institution
+        # - JGI:organisms[].pi.institution
           # from: JGI:organisms[].pi.institution
           # via: {
           #   organisation_name: "JGI:organisms[].pi.institution"
@@ -207,9 +256,10 @@ classes:
         exact_mappings:
         - DataCite:attributes.contributors[].contributor_type
         - DataCite:attributes.creators[].contributor_type
-        todos: add DataCite and Credit roles as enums
-        related_mappings:
-        - JGI:organisms[].pi
+        todos:
+        - add DataCite and Credit roles as enums
+        # related_mappings:
+        # - JGI:organisms[].pi
         # from: JGI:organisms[].pi
         # via: "DataCite:ProjectLeader"
 
@@ -235,7 +285,7 @@ classes:
         - DataCite:attributes.contributors[].affiliation.name
         - DataCite:attributes.creators[].affiliation.name
         - OSTI:research_organization
-        - JGI:organisms[].pi.institution
+        # - JGI:organisms[].pi.institution
         examples:
         - value: U.S. Department of Energy Systems Biology Knowledgebase
         - value: Lawrence Berkeley National Laboratory
@@ -316,11 +366,9 @@ classes:
 
       relationship_type:
         description: how the resource represented by this ID relates to the original resource, as described by DataCite relation types
+        range: RelationshipType
         exact_mappings:
-        # for the primary ID, we also need to represent the resource itself
         - DataCite:attributes.related_identifiers[].relation_type
-        todos: add DataCite relation types as an enum
-
 
   EventDate:
     description: The date of a specified event.
@@ -331,6 +379,7 @@ classes:
         required: true
         examples:
         - value: 2022-05-10
+        - value: '2020'
 
       date_type:
         description: the nature of the resource-related event that occurred on that date
@@ -340,27 +389,120 @@ classes:
         - value: available
         - value: updated
 
+      date_format:
+        description: the format of the date
+        range: DateFormat
+        required: true
+        examples:
+        - value: YYYY
+        - value: YYYY-MM-DD
+        - value: YYYY-MM-DDTHH:MM:SS.ffZ
+
+  Title:
+    description: a title for the resource
+    attributes:
+      title:
+        description: a string used as a title for a resource
+        required: true
+        examples:
+        - value: Viral Annotation Pipeline in KBase
+        exact_mappings:
+        - DataCite:attributes.titles.title
+        - Crossref:message.project.project-title.title
+
+      title_type:
+        description: a descriptor for the title. The default value is 'title'.
+        range: TitleType
+        # ifabsent: 'title'
+        examples:
+        - value: title
+        - value: subtitle
+        - value: alternative_title
+        - value: translated_title
+        - value: other
+        exact_mappings:
+        - DataCite:attributes.title.titleType
+
+      title_language:
+        description: language in which the title element is written; a two- or three-letter code as described in RFC5646, https://datatracker.ietf.org/doc/html/rfc5646
+        examples:
+        - value: zh-cmn
+        - value: de
+        - value: en-GB
 
 enums:
+  ContributorType:
+    description: The type of contributor being represented
+    reachable_from:
+      source_ontology: bioportal:DATACITE-VOCAB
+      source_nodes:
+        - datacite:ResourceCreatorType
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  ContributorRole:
+    description: The type of contribution made by a contributor
+    reachable_from:
+      source_ontology: bioportal:DATACITE-VOCAB
+      source_nodes:
+      - datacite:ContributorRole
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  DateType:
+    description: The type of date being represented
+    reachable_from:
+      source_ontology: bioportal:DATACITE-VOCAB
+      source_nodes:
+        - datacite:DateType
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+    # permissible_values:
+    #   accessed:
+    #     description: The date that the resource was accessed.
+    #   available:
+    #     description: The date the resource is made publicly available. To indicate the end of an embargo period, use Available.
+    #   updated:
+    #     description: The date of the last update to the resource, when the resource is being added to.
+
+  DateFormat:
+    description: The format used for the date
+    permissible_values:
+      YYYY:
+        description: Year
+      YYYY-MM-DD:
+        description: Year, month, day (zero-padded)
+      YYYY-MM-DDTHH:MM:SS.fffZ:
+        description: date time in ISO 8601. Precision for milliseconds varies.
+
+  RelationshipType:
+    description: the relationship between two entities
+    reachable_from:
+      source_ontology: bioportal:DATACITE-VOCAB
+      source_nodes:
+        - datacite:RelationType
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+
   ResourceType:
     description: The type of resource being represented
     permissible_values:
       dataset:
+        description: a dataset
       report:
+        description: a report
 
-  DateType:
-    description: The type of date being represented
+  TitleType:
+    description: The type of title being represented
     permissible_values:
-      accessed:
-        description: The date that the resource was accessed.
-      available:
-        description: The date the resource is made publicly available. To indicate the end of an embargo period, use Available.
-      updated:
-        description: The date of the last update to the resource, when the resource is being added to.
-
-  # TODO: use as range for 'contributors'
-  # ContributorType:
-  #   description: The type of contributor being represented
-  #   permissible_values:
-  #     Person:
-  #     Organisation:
+      title:
+        description: the default title
+      subtitle:
+      alternative_title:
+      translated_title:
+        description: title_language must be specified if this value is used
+      other:

@@ -1,47 +1,65 @@
-identifier:
-  id: DOI:10.25982/1722943
-resource_type: dataset
-contributors:
-  -
-    orcid: 0000-0002-2079-0260
-    first_name: Ellen
-    last_name: Dow
-    affiliations:
+user: metadata_bot
+citation_metadata_schema_version: 0.0.1
+timestamp: 1234567890
+metadata:
+  identifier: DOI:10.25982/1722943
+
+  resource_type: dataset
+
+  alternate_identifiers:
+  - id: OSTI:1722943
+    relation_type: IsIdenticalTo
+
+  - id: AC02-05CH11231; AC05-76RL01830; AC02-05CH11231
+    description: DOE Contract Number
+
+  contributors:
+    -
+      contributor_id: ORCID:0000-0002-2079-0260
+      first_name: Ellen
+      last_name: Dow
+      affiliations:
+        - organisation_name: Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)
+      contributor_roles:
+        - creator
+    -
+      first_name: Elisha
+      last_name: Wood-Charlson
+      contributor_id: ORCID:0000-0001-9557-7715
+      affiliations:
       - organisation_name: Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)
-    contributor_roles:
-      - creator
-  -
-    first_name: Elisha
-    last_name: Wood-Charlson
-    orcid: 0000-0001-9557-7715
-    affiliations:
-    - organisation_name: Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)
-    contributor_roles:
-      - creator
-  -
-    orcid: 0000-0002-8930-9500
-    first_name: Nancy
-    last_name: Hess
-    affiliations:
-    - organisation_name: Pacific Northwest National Lab. (PNNL), Richland, WA (United States)
-    contributor_roles:
-      - creator
-  -
-    orcid: 0000-0002-8864-5772
-    first_name: Timothy
-    last_name: Scheibe
-    affiliations:
-    - organisation_name: Pacific Northwest National Lab. (PNNL), Richland, WA (United States)
-    contributor_roles:
-      - creator
-title:
-  - 2020 Multiscale Microbial Dynamics Modeling Course
+      contributor_roles:
+        - creator
+    -
+      contributor_id: ORCID:0000-0002-8930-9500
+      first_name: Nancy
+      last_name: Hess
+      affiliations:
+      - organisation_name: Pacific Northwest National Lab. (PNNL), Richland, WA (United States)
+      contributor_roles:
+        - creator
+    -
+      contributor_id: ORCID:0000-0002-8864-5772
+      first_name: Timothy
+      last_name: Scheibe
+      affiliations:
+      - organisation_name: Pacific Northwest National Lab. (PNNL), Richland, WA (United States)
+      contributor_roles:
+        - creator
 
-alternate_identifiers:
-- id: OSTI:1722943
-  relation_type:
+  titles:
+    - title: 2020 Multiscale Microbial Dynamics Modeling Course
+      title_type: title
 
-- id: AC02-05CH11231; AC05-76RL01830; AC02-05CH11231
-  description: DOE Contract Number
+  dates:
+    - date: 2020
+      date_format: YYYY
+      date_type: Issued
 
-# <publicationYear>2020</publicationYear>
+    - date: 2020
+      date_format: YYYY
+      date_type: Published
+
+    - date: 2022-05-25T20:56:32.000Z
+      date_format: YYYY-MM-DDTHH:MM:SS.SSSZ
+      date_type: Updated
