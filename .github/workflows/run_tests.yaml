@@ -36,6 +36,13 @@ jobs:
         poetry run linkml-lint ./schema/kbase/linkml/metadata.yaml --ignore-warnings
       continue-on-error: true
     -
+      name: Validate kbase sample data against the schema
+      id: validate_kbase_data
+      run: |
+        # disable for now as validator can't handle reachable_from
+        # poetry run linkml-validate -s schema/kbase/linkml/metadata.yaml sample_data/kbase/10.25982_1722943.yaml
+      continue-on-error: true
+    -
       name: poetry run pytest -rP tests/
       id: run_pytest
       run: |
