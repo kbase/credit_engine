@@ -202,12 +202,21 @@ classes:
     description: |
       Represents a contributor to the resource.
 
-      Contributors must have a 'contributor_type', either 'person' or 'organization'.
+      Contributors must have a 'contributor_type', either 'person' or 'organization', and
+      a 'name'.
 
-      If the contributor is an organization, the 'name' field must be populated.
+      The 'credit_name' field is used to store the name of a person as it would appear in
+      a citation. If there is no 'credit_name' supplied, the 'name' field would be used
+      in citations.
+      For example:
+        name:		Hubert George Wells
+        credit_name:	Wells, HG
 
-      A person must have either 'given_name' and 'family_name' or a 'name'
-      if the name is not in the binomial format.
+        name:		Alexandria Ocasio-Cortez
+        credit_name:	Ocasio-Cortez, A
+
+        name:		Helena Bonham Carter
+        credit_name:	Bonham Carter, H
 
       The 'contributor_role' field takes values from the DataCite and CRediT contributor
       roles vocabularies. For more information on these resources and choosing the
@@ -245,40 +254,31 @@ classes:
         - OSTI:orcid
         - Crossref:message.project.funding.funder.name
 
-      given_name:
-        description: first name, for individuals whose names can be split into given and surnames
-        examples:
-        - value: Dolly
-        - value: Marionetta
-        exact_mappings:
-        - DataCite:attributes.creators[].given_name
-        - DataCite:attributes.contributors[].given_name
-        - OSTI:first_name
-        - JGI:organisms[].pi.first_name
-
-      family_name:
-        description: family name, for individuals whose names can be split into given and surnames.
-        examples:
-        - value: Parton
-        - value: de la Carte-Postale
-        exact_mappings:
-        - DataCite:attributes.creators[].family_name
-        - DataCite:attributes.contributors[].family_name
-        - OSTI:last_name
-        - JGI:organisms[].pi.last_name
-
       name:
-        description: contributor name, in cases where the contributor is an organization or a person whose name cannot easily fit into the given/family name structure.
+        description: contributor name. For organizations, this should be the full (unabbreviated) name; for a person, the full name should be entered.
         examples:
-        - value: Madonna
-        - value: Monarch Initiative
-        - value: The Incredible Hulk
+          - value: Helena Bonham Carter
+          - value: Hubert Wells
+          - value: Madonna
+          - value: Marionetta Cecille de la Carte-Postale
+          - value: National Institute of Mental Health
+          - value: Ransome the Clown
+        required: true
         related_mappings:
         # these have the names comma-separated and inverted
         - DataCite:attributes.creators[].name
         - DataCite:attributes.contributors[].name
         exact_mappings:
         - JGI:organisms[].pi.name
+
+      credit_name:
+        description: for a person, how the name should appear in a citation.
+        examples:
+          - value: Carte-Postale, MC
+          - value: Bonham Carter, H
+          - value: Wells, HG
+        exact_mappings:
+          - ORCID:credit_name
 
       affiliations:
         description: list of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).
