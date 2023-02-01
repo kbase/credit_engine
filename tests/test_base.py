@@ -371,7 +371,6 @@ def test_get_extension_fail_bad_source():
 @pytest.mark.parametrize("output_format", [CE.JSON, CE.XML, CE.UNIXREF, CE.UNIXSD])
 @pytest.mark.parametrize("source", SOURCE_TEST_DATA)
 def test_get_extension(source, output_format):
-
     expected = DATA_FORMAT.get(source, {}).get(output_format, None)
     if expected is None:
         error_text = make_error(
@@ -391,7 +390,6 @@ def test_get_extension(source, output_format):
 @pytest.mark.parametrize("doi_list", CLEAN_DOI_LIST_DATA)
 @pytest.mark.parametrize("doi_file", FILE_LIST_TEST_DATA)
 def test__validate_dois(doi_file, doi_list):
-
     all_dois = set()
     if "output" in doi_file:
         all_dois = set(doi_file["output"])
@@ -638,7 +636,6 @@ RETRIEVE_DOIS_FROM_UNKNOWN_DATA = [
 def test_retrieve_doi_list_from_unknown(
     param, output_format_list, capsys, _mock_response
 ):
-
     expected = EXPECTED[param["id"]]
     stdout = STDOUT_MESSAGES[param["id"]]
     doi_params = copy.deepcopy(param)

@@ -203,7 +203,6 @@ SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
 
 @pytest.mark.parametrize("param", SAVE_DATA_TO_FILE_FAIL_TEST_DATA)
 def test_save_data_to_file_fail(param, capsys, tmp_path):
-
     if "save_dir" not in param:
         param["save_dir"] = tmp_path
 
