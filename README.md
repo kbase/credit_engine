@@ -65,15 +65,15 @@ linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
 
 validate data (in file `data.yaml`) against the schema:
 ```sh
-linkml-validate -s schema/metadata.yaml data.yaml
+linkml-validate -s schema/kbase/linkml/metadata.yaml data.yaml
 ```
 
 generate Python models:
 ```sh
-gen-python schema/metadata.yaml > src/metadata.py
+gen-python schema/kbase/linkml/metadata.yaml > src/metadata.py
 ```
 
 generate a schema diagram (can be visualised at yuml.me):
 ```sh
-gen-yuml schema/metadata.yaml
+gen-yuml schema/kbase/linkml/metadata.yaml
 ```
