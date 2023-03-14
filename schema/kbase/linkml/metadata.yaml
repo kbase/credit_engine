@@ -40,11 +40,11 @@ classes:
           - value: 1.1.0
 
       saved_by:
-        description: KBase workspace ID of the user who submitted the metadata
+        description: KBase workspace ID of the user who added this entry
         required: true
 
       timestamp:
-        description: unix timestamp for the addition of this set of metadata
+        description: unix timestamp for the addition of this set of credit metadata
         required: true
         range: integer
 
@@ -53,25 +53,41 @@ classes:
     description: |
       Represents the credit metadata associated with a workspace object.
 
-      The 'resource_type' field should be filled using values from the DataCite resourceTypeGeneral field:
+      In the following documentation, 'Resource' is used to refer to the workspace object
+      that the CM pertains to.
+
+      The 'resource_type' field should be filled using values from the DataCite
+      resourceTypeGeneral field:
 
       https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
 
-      Currently the KBase workspace only supports credit metadata for objects of type 'dataset'; anything else will return an error.
+      Currently the KBase workspace only supports credit metadata for objects of type
+      'dataset'; anything else will return an error.
+
+      The license may be supplied either as an URL pointing to licensing information for
+      the resource, or using a license name. See https://choosealicense.com/appendix/ for
+      a list of common open source licenses.
 
       Required fields are:
       - identifier
-      - resource_type
-      - versioning information: if the resource does not have an explicit version number, one or more dates should be supplied: ideally the date of resource publication and the last update (if applicable).
+      - versioning information: if the resource does not have an explicit version number,
+      one or more dates should be supplied: ideally the date of resource publication and
+      the last update (if applicable).
       - contributors (one or more required)
       - titles (one or more required)
+
+      The resource_type field is required, but as there is currently only a single valid
+      value, 'dataset', it is automatically populated if no value is supplied.
 
     attributes:
 
       comment:
-        description: freeform text providing extra information about this credit metadata.
+        description: list of strings of freeform text providing extra information about this credit metadata.
+        inlined_as_list: true
+        multivalued: true
         examples:
-        - value: Credit metadata generated automatically from DOI:10.13039/100000015
+        - value:
+          - ["Credit metadata generated automatically from DOI:10.13039/100000015"]
 
       identifier:
         description: resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.
@@ -94,7 +110,7 @@ classes:
           # via: JGI:organisms[].files[].{JGI:organisms[].grouped_by}
 
       license:
-        description: usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. "Creative Commons 4.0" instead of "CC-BY-4.0").
+        description: usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. "http://"; "https://"; "ftp://".
         slot_uri: biolink:license
         examples:
         - value: Creative Commons 4.0
@@ -104,7 +120,7 @@ classes:
         - DataCite:attributes.rights_list
 
       resource_type:
-        description: the broad type of resource.
+        description: the broad type of the source data for this workspace object. 'dataset' is the only valid value currently.
         range: ResourceType
         required: true
         exact_mappings:
@@ -209,14 +225,14 @@ classes:
       a citation. If there is no 'credit_name' supplied, the 'name' field would be used
       in citations.
       For example:
-        name:		Hubert George Wells
-        credit_name:	Wells, HG
+        name:         Hubert George Wells
+        credit_name:  Wells, HG
 
-        name:		Alexandria Ocasio-Cortez
-        credit_name:	Ocasio-Cortez, A
+        name:         Alexandria Ocasio-Cortez
+        credit_name:  Ocasio-Cortez, A
 
-        name:		Helena Bonham Carter
-        credit_name:	Bonham Carter, H
+        name:         Helena Bonham Carter
+        credit_name:  Bonham Carter, H
 
       The 'contributor_role' field takes values from the DataCite and CRediT contributor
       roles vocabularies. For more information on these resources and choosing the
@@ -350,6 +366,7 @@ classes:
         - Research Organization Registry, http://ror.org
         - International Standard Name Identifier, https://isni.org
         - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/
+
       Some organizations may have a digital object identifier (DOI).
 
     attributes:
@@ -388,14 +405,14 @@ classes:
         - value: DOI:10.46936/10.25585/60000745
 
       award_title:
-        description: human-readable title of the grant or award
+        description: title for the award
         exact_mappings:
         - DataCite:attributes.funding_references[].award_title
         examples:
         - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the KBS intensive site
 
       award_url:
-        description: URI for the award
+        description: URL for the award
         exact_mappings:
         - DataCite:attributes.funding_references[].award_url
         range: uriorcurie
@@ -435,6 +452,7 @@ classes:
 
       organization_name:
         description: common name of the organization; use the name recommended by ROR if possible.
+        required: true
         exact_mappings:
         - DataCite:attributes.contributors[].affiliation.name
         - DataCite:attributes.creators[].affiliation.name
@@ -494,7 +512,7 @@ classes:
 
       relationship_type:
         description: |
-          the relationship between the ID and some other entity.
+          The relationship between the ID and some other entity.
           For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the CreditMetadata and this ID.
         range: RelationshipType
         exact_mappings:
@@ -506,10 +524,14 @@ classes:
       Represents the title or name of a resource.
 
       The 'title_string' field is required; if no value is supplied for 'title_type', it
-      defaults to 'title'. If the 'title_type' is set to 'translated_title', the appropriate
-      BCP-47 tag must be supplied in the 'title_language' field.
+      defaults to 'title'.
 
-      Note that the workspace checks that the title_language field adheres to IETF BCP-47 syntax rules, but it does not check the validity of the tag.
+      If the title is in a language other than English, the 'title_type' should be set to
+      'translated_title', and the appropriate BCP-47 tag supplied in the 'title_language'
+      field.
+
+      Note that the workspace checks that the 'title_language' field adheres to IETF
+      BCP-47 syntax rules, but it does not check the validity of the tag.
 
     attributes:
       title:
