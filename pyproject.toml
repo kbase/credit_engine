@@ -8,7 +8,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-json2python-models = "^0.2.7"
+json2python-models = "^0.3.0"
 linkml = "^1.4.8"
 linkml-runtime = "^1.4.9"
 pydantic = "^1.10.6"
