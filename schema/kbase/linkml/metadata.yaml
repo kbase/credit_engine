@@ -188,7 +188,7 @@ classes:
         description: other resolvable persistent unique IDs related to the resource.
         inlined_as_list: true
         multivalued: true
-        range: ResolvablePID
+        range: PermanentID
         close_mappings:
         - DataCite:attributes.identifiers
         - DataCite:attributes.related_identifiers
@@ -210,8 +210,12 @@ classes:
           # from: OSTI:title
           # via: [OSTI:title]
         examples:
-        - value: { title: Amaranthus hypochondriacus genome }
-        - value: { title: Геном амаранта ипохондрического, title_type: translated_title, title_language: ru-Cyrl }
+        - value:
+          - title: Amaranthus hypochondriacus genome
+        - value:
+          - title: Геном амаранта ипохондрического
+            title_type: translated_title
+            title_language: ru-Cyrl
 
 
   Contributor:
@@ -340,7 +344,8 @@ classes:
     attributes:
       date:
         description: the date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.
-        range: date_or_datetime
+        range: string
+        pattern: \d{4}(-\d{2}){0,2}
         required: true
         examples:
         - value: '2001'

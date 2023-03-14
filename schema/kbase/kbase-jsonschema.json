@@ -1,13 +1,70 @@
 {
    "$defs": {
-      "DateType": {
-         "description": "The type of date being represented",
-         "enum": [
-            "accessed",
-            "available",
-            "updated"
+      "Contributor": {
+         "additionalProperties": false,
+         "description": "A human, a human-like entity, or an organisation that contributed to the resource.",
+         "properties": {
+            "affiliations": {
+               "description": "organisation(s) that the contributor is associated with",
+               "items": {
+                  "$ref": "#/$defs/Organisation"
+               },
+               "type": "array"
+            },
+            "contributor_id": {
+               "description": "Unique identifier (such as an ORCID or ROR ID) for a person or organisation",
+               "type": "string"
+            },
+            "contributor_roles": {
+               "description": "List of one or more terms indicating the type of contribution. Should be a term from either CRedIT or DataCite's role vocabulary.",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "contributor_type": {
+               "$ref": "#/$defs/ContributorType",
+               "description": "the type of the contributor, person or organisation"
+            },
+            "first_name": {
+               "description": "given name",
+               "type": "string"
+            },
+            "last_name": {
+               "description": "family name",
+               "type": "string"
+            },
+            "name": {
+               "description": "Full name of the contributor. It is suggested that organisations use this field.",
+               "type": "string"
+            }
+         },
+         "required": [
+            "contributor_id"
          ],
-         "title": "DateType",
+         "title": "Contributor",
+         "type": "object"
+      },
+      "ContributorRole": {
+         "description": "The type of contribution made by a contributor",
+         "enum": [],
+         "title": "ContributorRole",
+         "type": "string"
+      },
+      "ContributorType": {
+         "description": "The type of contributor being represented",
+         "enum": [],
+         "title": "ContributorType",
+         "type": "string"
+      },
+      "DateFormat": {
+         "description": "The format used for the date",
+         "enum": [
+            "YYYY",
+            "YYYY-MM-DD",
+            "YYYY-MM-DDTHH:MM:SS.fffZ"
+         ],
+         "title": "DateFormat",
          "type": "string"
       },
       "EventDate": {
@@ -18,17 +75,28 @@
                "description": "the date upon which the event occurred",
                "type": "string"
             },
-            "date_type": {
-               "$ref": "#/$defs/DateType",
+            "date_format": {
+               "$ref": "#/$defs/DateFormat",
+               "description": "the format of the date"
+            },
+            "event": {
+               "$ref": "#/$defs/EventType",
                "description": "the nature of the resource-related event that occurred on that date"
             }
          },
          "required": [
             "date",
-            "date_type"
+            "date_format",
+            "event"
          ],
          "title": "EventDate",
          "type": "object"
+      },
+      "EventType": {
+         "description": "The type of date being represented",
+         "enum": [],
+         "title": "EventType",
+         "type": "string"
       },
       "FundingReference": {
          "additionalProperties": false,
@@ -47,7 +115,7 @@
                "type": "string"
             },
             "funder_id": {
-               "description": "ID for the funding entity - acceptable formats include crossref funder ID, DOI, ROR, ISNI, others?",
+               "description": "ID for the funding entity - acceptable formats include Crossref funder ID, DOI, ROR, ISNI, others?",
                "type": "string"
             },
             "funder_name": {
@@ -80,46 +148,11 @@
          "title": "Organisation",
          "type": "object"
       },
-      "Person": {
-         "additionalProperties": false,
-         "description": "A human or human-like entity.",
-         "properties": {
-            "affiliations": {
-               "description": "organisation(s) that the contributor is associated with",
-               "items": {
-                  "$ref": "#/$defs/Organisation"
-               },
-               "type": "array"
-            },
-            "contributor_roles": {
-               "description": "List of one or more terms indicating the type of contribution. Should be a term from either CRedIT or DataCite's role vocabulary.",
-               "items": {
-                  "type": "string"
-               },
-               "type": "array"
-            },
-            "first_name": {
-               "description": "given name",
-               "type": "string"
-            },
-            "full_name": {
-               "description": "Full name of the contributor",
-               "type": "string"
-            },
-            "last_name": {
-               "description": "family name",
-               "type": "string"
-            },
-            "orcid": {
-               "description": "ORCID",
-               "type": "string"
-            }
-         },
-         "required": [
-            "orcid"
-         ],
-         "title": "Person",
-         "type": "object"
+      "RelationshipType": {
+         "description": "the relationship between two entities",
+         "enum": [],
+         "title": "RelationshipType",
+         "type": "string"
       },
       "ResolvablePID": {
          "additionalProperties": false,
@@ -134,8 +167,8 @@
                "type": "string"
             },
             "relationship_type": {
-               "description": "how the resource represented by this ID relates to the original resource, as described by DataCite relation types",
-               "type": "string"
+               "$ref": "#/$defs/RelationshipType",
+               "description": "how the resource represented by this ID relates to the original resource, as described by DataCite relation types"
             }
          },
          "required": [
@@ -151,7 +184,7 @@
             "contributors": {
                "description": "people and/or organisations responsible for generating the resource",
                "items": {
-                  "$ref": "#/$defs/Person"
+                  "$ref": "#/$defs/Contributor"
                },
                "type": "array"
             },
@@ -188,10 +221,10 @@
                "$ref": "#/$defs/ResourceType",
                "description": "the type of resource being described"
             },
-            "title": {
+            "titles": {
                "description": "formal title(s) of the data set",
                "items": {
-                  "type": "string"
+                  "$ref": "#/$defs/Title"
                },
                "type": "array"
             },
@@ -215,17 +248,13 @@
                "description": "the version of the citation metadata schema used",
                "type": "string"
             },
-            "date": {
-               "description": "the date that this version of the metadata was added",
-               "type": "string"
-            },
-            "language": {
-               "description": "language in which the metadata is written; a two- or three-letter code as described in RFC5646, https://datatracker.ietf.org/doc/html/rfc5646",
-               "type": "string"
-            },
             "metadata": {
-               "description": "the metadata itself",
-               "type": "string"
+               "$ref": "#/$defs/Resource",
+               "description": "the metadata itself"
+            },
+            "timestamp": {
+               "description": "unix timestamp for the addition of this set of metadata",
+               "type": "integer"
             },
             "user": {
                "description": "the ID of the workspace user who submitted the metadata",
@@ -235,7 +264,7 @@
          "required": [
             "user",
             "citation_metadata_schema_version",
-            "date",
+            "timestamp",
             "metadata"
          ],
          "title": "ResourceMetadata",
@@ -249,15 +278,50 @@
          ],
          "title": "ResourceType",
          "type": "string"
+      },
+      "Title": {
+         "additionalProperties": false,
+         "description": "a title for the resource",
+         "properties": {
+            "title": {
+               "description": "a string used as a title for a resource",
+               "type": "string"
+            },
+            "title_language": {
+               "description": "language in which the title element is written; a two- or three-letter code as described in RFC5646, https://datatracker.ietf.org/doc/html/rfc5646",
+               "type": "string"
+            },
+            "title_type": {
+               "$ref": "#/$defs/TitleType",
+               "description": "a descriptor for the title. The default value is 'title'."
+            }
+         },
+         "required": [
+            "title"
+         ],
+         "title": "Title",
+         "type": "object"
+      },
+      "TitleType": {
+         "description": "The type of title being represented",
+         "enum": [
+            "title",
+            "subtitle",
+            "alternative_title",
+            "translated_title",
+            "other"
+         ],
+         "title": "TitleType",
+         "type": "string"
       }
    },
-   "$id": "https://kbase/credit_engine/schema/metadata",
+   "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml/",
    "$schema": "http://json-schema.org/draft-07/schema#",
-   "additionalProperties": true,
+   "additionalProperties": false,
    "metamodel_version": "1.7.0",
    "properties": {},
    "required": [],
-   "title": "metadata",
+   "title": "credit_metadata",
    "type": "object",
    "version": "0.0.1"
 }
