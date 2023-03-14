@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.9", "3.10", "3.11"]
 
     steps:
     -
@@ -39,8 +39,8 @@ jobs:
       name: Validate kbase sample data against the schema
       id: validate_kbase_data
       run: |
-        # disable for now as validator can't handle reachable_from
-        # poetry run linkml-validate -s schema/kbase/linkml/metadata.yaml sample_data/kbase/10.25982_1722943.yaml
+        poetry run linkml-validate -s schema/kbase/linkml/metadata.yaml sample_data/kbase/10.25982_1722943.yaml
+        poetry run linkml-validate -s schema/kbase/linkml/metadata.yaml sample_data/kbase/10.6084/m9.figshare.12644081.v1.yaml
       continue-on-error: true
     -
       name: poetry run pytest -rP tests/

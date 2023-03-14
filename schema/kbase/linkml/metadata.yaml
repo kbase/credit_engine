@@ -258,7 +258,6 @@ classes:
         - DataCite:attributes.creators[].name_type
 
       contributor_id:
-        identifier: true
         description: persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.
         range: uriorcurie
         pattern: "^[a-zA-Z0-9.]+:\\S"
