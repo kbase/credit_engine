@@ -55,12 +55,12 @@ These assume that you have already run `poetry shell` to activate the credit eng
 
 generate derived files in all formats:
 ```sh
-gen-project -d schema/ schema/linkml/metadata.yaml
+gen-project -d schema/ schema/kbase/linkml/metadata.yaml
 ```
 
 lint the KBase linkml schema file:
 ```sh
-linkml-lint -f terminal ./schema/kbase/linkml/metadata.yaml
+linkml-lint -f terminal schema/kbase/linkml/metadata.yaml
 ```
 
 validate data (in file `data.yaml`) against the schema:
