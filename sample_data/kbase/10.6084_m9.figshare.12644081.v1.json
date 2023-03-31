@@ -6,10 +6,18 @@
     "comment": [
       "manually mapped from FigShare"
     ],
-    "identifier": "DOI:10.6084/m9.figshare.12644081.v1",
+    "description": {
+      "format": "text",
+      "content": "Shotgun metagenome of the Amberjack Blue Hole water column at 106 m depth sampled in May 2019. Sequencing performed on an Illumina MiSeq with a 2 x 300 bp paired-end protocol."
+    },
+    "identifier": "DOI:10.6084/m9.figshare.12644048.v1",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "resource_type": "dataset",
     "version": "v1",
+    "repository": {
+      "organization_id": "ROR:041mxqs23",
+      "organization_name": "Figshare (United Kingdom)"
+    },
     "contributors": [
       {
         "contributor_type": "person",
@@ -60,7 +68,7 @@
         "name": "Zoe Dietrich",
         "affiliations": [
           {
-            "organization_name": "Bowdoin College, Brunswick ME 04011",
+            "organization_name": "BowDOIn College, Brunswick ME 04011",
             "organization_id": "ISNI:0000000121099845"
           }
         ]
@@ -79,17 +87,23 @@
     ],
     "dates": [
       {
+        "date": "2019-05",
+        "event": "collected"
+      },
+      {
         "date": "2020-07-11",
         "event": "available"
       }
     ],
     "funding": [
       {
-        "funder_id": "ROR:02z5nhe81",
-        "funder_name": "National Oceanic and Atmospheric Administration (NOAA)",
-        "award_id": "NA18OAR0110291",
-        "award_title": "Development of innovative techniques for exploring novel submarine springs on the Gulf of Mexico Outer Continental Shelf",
-        "award_url": "https://app.dimensions.ai/details/grant/grant.7615666"
+        "grant_id": "NA18OAR0110291",
+        "grant_title": "Development of innovative techniques for exploring novel submarine springs on the Gulf of Mexico Outer Continental Shelf",
+        "grant_url": "https://app.dimensions.ai/details/grant/grant.7615666",
+        "funder": {
+          "organization_id": "ROR:02z5nhe81",
+          "organization_name": "National Oceanic and Atmospheric Administration (NOAA)"
+        }
       }
     ],
     "related_identifiers": [
@@ -106,7 +120,7 @@
     ],
     "titles": [
       {
-        "title": "Blue Hole Metagenome-assembled Genomes",
+        "title": "Blue Hole Shotgun Metagenome: May 2019, 106 M.",
         "title_type": "title",
         "title_language": "en-US"
       }

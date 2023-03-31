@@ -34,6 +34,7 @@ classes:
         range: CreditMetadata
 
       credit_metadata_schema_version:
+        slot_uri: schema:version
         description: the version of the credit metadata schema used
         required: true
         examples:
@@ -87,9 +88,15 @@ classes:
         multivalued: true
         examples:
         - value:
-          - ["Credit metadata generated automatically from DOI:10.13039/100000015"]
+          - "Credit metadata generated automatically from DOI:10.13039/100000015"
+
+      description:
+        slot_uri: schema:description
+        description: A brief description or abstract for the resource being represented.
+        range: FormattedText
 
       identifier:
+        slot_uri: schema:identifier
         description: resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.
         range: uriorcurie
         required: true
@@ -102,20 +109,32 @@ classes:
         - DataCite:id
           # from: DataCite:id
           # via: "DOI:{DataCite:id}"
-        - OSTI:osti_id
-          # from: OSTI:osti_id
-          # via: "OSTI:{OSTI:osti_id}"
         - JGI:organisms[].grouped_by
           # from JGI:organisms[].grouped_by
           # via: JGI:organisms[].files[].{JGI:organisms[].grouped_by}
+        narrow_mappings:
+          - OSTI:osti_id
+            # from: OSTI:osti_id
+            # via: "OSTI:{OSTI:osti_id}"
+          - OSTI:doi
+          - ORCID:doi
+          # it should be possible to generate an URL from a curie
+          - ORCID:url
 
       license:
-        description: usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. "http://"; "https://"; "ftp://".
-        slot_uri: biolink:license
+        slot_uri: schema:license
+        description: |
+          usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. "http://"; "https://"; "ftp://".
+
+          All data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.
+
         examples:
+        - value: Creative Commons 0
         - value: Creative Commons 4.0
         - value: MIT
         - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
+        exact_mappings:
+          - biolink:license
         related_mappings:
         - DataCite:attributes.rights_list
 
@@ -124,13 +143,19 @@ classes:
         range: ResourceType
         required: true
         exact_mappings:
+        # OSTI:DA is used for dataset
         - OSTI:product_type
+        # ORCID:data-set
+        - OSTI:workType
         # see DataCite:attributes.types
         - DataCite:attributes.types.schema_org
+        narrow_mappings:
+          - OSTI:dataset_type
         examples:
         - value: dataset
 
       version:
+        slot_uri: schema:version
         description: the version of the resource. This must be an absolute version, not a relative version like 'latest'.
         exact_mappings:
         - DataCite:attributes.version
@@ -147,6 +172,7 @@ classes:
         narrow_mappings:
         - DataCite:attributes.contributors
         - DataCite:attributes.creators
+        - ORCID:contributors
         - OSTI:contributors
         - OSTI:authors
         - JGI:organisms[].pi
@@ -161,21 +187,25 @@ classes:
         close_mappings:
         - DataCite:attributes.published
           # from DataCite:attributes.published
-          # via { date: DataCite:attributes.published, date_type: published, date_format: YYYY }
+          # via { date: DataCite:attributes.published, event: available }
         - DataCite:attributes.updated
           # from DataCite:attributes.updated
-          # via { date: DataCite:attributes.updated, date_type: updated, date_format: YYYY-MM-DDTHH:MM:SS.fffZ }
+          # via { date: DataCite:attributes.updated, event: updated }
         - DataCite:attributes.dates[]
           # from DataCite:attributes.dates[]
-          # via { date: DataCite:attributes.dates[].date, date_type: DataCite:attributes.dates[].dateType, date_format: YYYY }
+          # via { date: DataCite:attributes.dates[].date, event: DataCite:attributes.dates[].dateType }
+        - ORCID:publicationDate
+          # from: ORCID:publicationDate
+          # via { date: ORCID:publicationDate, event: available }
         - OSTI:publication_date
           # from: OSTI:publication_date
-          # via { date: OSTI:publication_date, date_type: published, date_format: YYYY-MM-DDTHH:MM:SSZ }
+          # via { date: OSTI:publication_date, event: available }
         - Crossref:message.deposited
           # from: Crossref:message.deposited
-          # via { date: Crossref:message.deposited.date-time, date_type: deposited, date_format: YYYY-MM-DDTHH:MM:SS.ffZ }
+          # via { date: Crossref:message.deposited.date-time, event: available }
 
       funding:
+        slot_uri: schema:fundingScheme
         description: funding sources for the resource.
         inlined_as_list: true
         multivalued: true
@@ -183,6 +213,7 @@ classes:
         close_mappings:
         - DataCite:attributes.funding_references
         - Crossref:Message.project.funding
+        - OSTI:awards
 
       related_identifiers:
         description: other resolvable persistent unique IDs related to the resource.
@@ -193,22 +224,38 @@ classes:
         - DataCite:attributes.identifiers
         - DataCite:attributes.related_identifiers
         - DataCite:attributes.alternate_identifiers
+        - ORCID:externalIds
         - OSTI:related_identifiers
+        narrow_mappings:
+        - ORCID:doi
+        # from ORCID:doi
+        # via: { id: "DOI:{ORCID:doi}" }
         - OSTI:doi
-          # from: OSTI:doi
-          # via: { id: "DOI:{OSTI:doi}"}
+        # from: OSTI:doi
+        # via: { id: "DOI:{OSTI:doi}"}
+
+      repository:
+        description: online repository for a dataset.
+        range: Organization
+        required: true
+        narrow_mappings:
+          - ORCID:url
+          - OSTI:site_url
 
       titles:
-        description: one or more titles for the resource.
+        description: one or more titles for the resource. At least one title of title_type "title" must be provided.
         inlined_as_list: true
         multivalued: true
         range: Title
         required: true
         exact_mappings:
         - DataCite:attributes.titles[]
+        - ORCID:title
+          # from: ORCID:title
+          # via: [{ title: ORCID:title, title_type: title }]
         - OSTI:title
           # from: OSTI:title
-          # via: [OSTI:title]
+          # via: [{ title: OSTI:title, title_type: title }]
         examples:
         - value:
           - title: Amaranthus hypochondriacus genome
@@ -258,6 +305,7 @@ classes:
         - DataCite:attributes.creators[].name_type
 
       contributor_id:
+        slot_uri: schema:identifier
         description: persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.
         range: uriorcurie
         pattern: "^[a-zA-Z0-9.]+:\\S"
@@ -268,12 +316,15 @@ classes:
         - DataCite:attributes.contributors[].name_identifiers[].name_identifier
         - DataCite:attributes.creators[].name_identifiers[].name_identifier
           # from: DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
-          # via: "ORCID:{ DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '') }"
+          # via: "ORCID:{DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '')}"
         narrow_mappings:
-        - OSTI:orcid
+        - ORCID:contributor.orcidId
+        - OSTI:author.orcid_id
+        - OSTI:contributor.orcid_id
         - Crossref:message.project.funding.funder.name
 
       name:
+        slot_uri: schema:name
         description: contributor name. For organizations, this should be the full (unabbreviated) name; for a person, the full name should be entered.
         examples:
           - value: Helena Bonham Carter
@@ -289,6 +340,14 @@ classes:
         - DataCite:attributes.contributors[].name
         exact_mappings:
         - JGI:organisms[].pi.name
+        - ORCID:name
+        close_mappings:
+          - OSTI:author
+          # from OSTI:author
+          # via: "{OSTI:author.first_name} {OSTI:author.last_name}"
+          - OSTI:contributor
+          # from OSTI:contributor
+          # via: "{OSTI:contributor.first_name} {OSTI:contributor.last_name}"
 
       credit_name:
         description: for a person, how the name should appear in a citation.
@@ -300,6 +359,7 @@ classes:
           - ORCID:credit_name
 
       affiliations:
+        slot_uri: schema:affiliation
         description: list of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).
         inlined_as_list: true
         multivalued: true
@@ -308,32 +368,39 @@ classes:
         - DataCite:attributes.contributors[].affiliation[]
           # from: DataCite:attributes.contributors[].affiliation[]
           # via: {
-          #   organization_name: "DataCite:attributes.contributors[].affiliation[].name"
+          #   organization_name: "{DataCite:attributes.contributors[].affiliation[].name}"
           # }
         - DataCite:attributes.creators[].affiliation[]
           # from: DataCite:attributes.creators[].affiliation[]
           # via: {
-          #   organization_name: "DataCite:attributes.creators[].affiliation[].name"
+          #   organization_name: "{DataCite:attributes.creators[].affiliation[].name}"
           # }
         - JGI:organisms[].pi.institution
           # from: JGI:organisms[].pi.institution
           # via: {
-          #   organization_name: "JGI:organisms[].pi.institution"
+          #   organization_name: "{JGI:organisms[].pi.institution}"
           #}
+        narrow_mappings:
+          - OSTI:contributor.affiliation_name
+          # via { organization_name: "{OSTI:contributor.affiliation_name}"}
 
       contributor_roles:
         description: list of roles played by the contributor when working on the resource.
+        range: ContributorRole
         inlined_as_list: true
         multivalued: true
         exact_mappings:
         - DataCite:attributes.contributors[].contributor_type
         - DataCite:attributes.creators[].contributor_type
-        todos:
-        - add DataCite and Credit roles as enums
         related_mappings:
         - JGI:organisms[].pi
         # from: JGI:organisms[].pi
         # via: "DataCite:ProjectLeader"
+        close_mappings:
+          # TODO: mappings to CRediT/DataCite roles
+          - ORCID:contributor.role
+          - OSTI:contributor.contributorType
+
 
   EventDate:
     description: |
@@ -360,7 +427,29 @@ classes:
         - value: updated
 
 
+  FormattedText:
+    description: some text and a specification of the text type
+    attributes:
+      format:
+        description: the format of the text
+        required: true
+        range: TextFormat
+        examples:
+        - value: text
+        - value: html
+
+      text:
+        description: the text itself
+        required: true
+        examples:
+        - value: |
+            'Twas brillig, and the slithy toves
+            Did gyre and gimble in the wabe:
+        - value: |
+            <p>"Beware the Jabberwock, my son!"</p>
+
   FundingReference:
+    class_uri: schema:Grant
     description: |
       Represents a funding source for a resource, including the funding body and the grant awarded.
 
@@ -372,43 +461,23 @@ classes:
         - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/
 
       Some organizations may have a digital object identifier (DOI).
-
     attributes:
-      funder_id:
-        description: persistent unique identifier for the funder in the format <database name>:<identifier within database>
-        exact_mappings:
-        - DataCite:attributes.funding_references[].funder_identifier
-        - Crossref:message.project.funding.funder.id.id
-        range: uriorcurie
-        pattern: "^[a-zA-Z0-9.]+:\\S"
-        examples:
-        - value: DOI:10.13039/100000015
-        - value: ISNI:0000000405337147
-        - value: ROR:04xm1d337
-
-      funder_name:
-        description: common name for the funder
-        required: true
-        exact_mappings:
-        - DataCite:attributes.funding_references[].funder_name
-        - Crossref:message.project.funding.funder.name
-        - OSTI:sponsoring_organization
-        examples:
-        - value: Joint Genome Institute
-        - value: National Science Foundation
-        - value: US DOE Office of Science (SC), Biological and Environmental Research (BER)
-
       award_id:
+        slot_uri: schema:identifier
         description: code for the award, assigned by the funder
         exact_mappings:
         - DataCite:attributes.funding_references[].award_number
         - Crossref:message.award
+        narrow_mappings:
+        - OSTI:award_doi
+        - OSTI:award_number
         examples:
         - value: '1296'
         - value: CBET-0756451
         - value: DOI:10.46936/10.25585/60000745
 
       award_title:
+        slot_uri: schema:name
         description: title for the award
         exact_mappings:
         - DataCite:attributes.funding_references[].award_title
@@ -416,16 +485,55 @@ classes:
         - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the KBS intensive site
 
       award_url:
+        slot_uri: schema:url
         description: URL for the award
         exact_mappings:
         - DataCite:attributes.funding_references[].award_url
+        close_mappings:
+        - OSTI:award_doi
         range: uriorcurie
         pattern: "^[a-zA-Z0-9.]+:\\S"
         examples:
         - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
 
+      funder:
+        slot_uri: schema:funder
+        description: the funder for the grant or award
+        range: Organization
+
+          # funder_id:
+          #   # grant.funder = { identifier: funder_id, name: funder_name }
+          #   slot_uri: schema:identifier
+          #   description: persistent unique identifier for the funder in the format <database name>:<identifier within database>
+          #   exact_mappings:
+          #   - DataCite:attributes.funding_references[].funder_identifier
+          #   - Crossref:message.project.funding.funder.id.id
+          #   range: uriorcurie
+          #   pattern: "^[a-zA-Z0-9.]+:\\S"
+          #   examples:
+          #   - value: DOI:10.13039/100000015
+          #   - value: ISNI:0000000405337147
+          #   - value: ROR:04xm1d337
+
+          # funder_name:
+          #   # grant.funder = { identifier: funder_id, name: funder_name }
+          #   slot_uri: schema:name
+          #   description: common name for the funder
+          #   required: true
+          #   exact_mappings:
+          #   - DataCite:attributes.funding_references[].funder_name
+          #   - Crossref:message.project.funding.funder.name
+          #   - OSTI:sponsoring_organization
+          #   - OSTI:award.funder_name
+          #   examples:
+          #   - value: Joint Genome Institute
+          #   - value: National Science Foundation
+          #   - value: US DOE Office of Science (SC), Biological and Environmental Research (BER)
+
+
 
   Organization:
+    class_uri: schema:Organization
     description: |
       Represents an organization.
 
@@ -438,10 +546,9 @@ classes:
         organization_name: United States Department of Energy
         organization_id:   ROR:01bj3aw27
 
-    class_uri: schema:Organization
-
     attributes:
       organization_id:
+        slot_uri: schema:identifier
         description: persistent unique identifier for the organization in the format <database name>:<identifier within database>
         identifier: true
         examples:
@@ -455,6 +562,7 @@ classes:
         pattern: "^[a-zA-Z0-9.]+:\\S"
 
       organization_name:
+        slot_uri: schema:name
         description: common name of the organization; use the name recommended by ROR if possible.
         required: true
         exact_mappings:
@@ -466,7 +574,6 @@ classes:
         - value: KBase
         - value: Lawrence Berkeley National Laboratory
         - value: The Ohio State University
-
 
   PermanentID:
     description: |
@@ -482,6 +589,7 @@ classes:
 
     attributes:
       id:
+        slot_uri: schema:identifier
         identifier: true
         description: persistent unique ID for an entity. Should be in the format <database name>:<identifier within database>.
         required: true
@@ -539,6 +647,7 @@ classes:
 
     attributes:
       title:
+        slot_uri: schema:name
         description: a string used as a title for a resource
         required: true
         examples:
@@ -568,6 +677,7 @@ classes:
         - value: en-Latn-GB
         - value: mn-Cyrl
 
+
 enums:
   ContributorType:
     description: The type of contributor being represented
@@ -588,40 +698,75 @@ enums:
     description: The type of contribution made by a contributor
     permissible_values:
       DataCite:ContactPerson:
+        title: contact person
       DataCite:DataCollector:
+        title: data collector
       DataCite:DataCurator:
+        title: data curator
       DataCite:DataManager:
+        title: data manager
       DataCite:Distributor:
+        title: distributor
       DataCite:Editor:
+        title: editor
       DataCite:HostingInstitution:
+        title: hosting institution
       DataCite:Producer:
+        title: producer
       DataCite:ProjectLeader:
+        title: project leader
       DataCite:ProjectManager:
+        title: project manager
       DataCite:ProjectMember:
+        title: project member
       DataCite:RegistrationAgency:
+        title: registration agency
       DataCite:RegistrationAuthority:
+        title: registration authority
       DataCite:RelatedPerson:
+        title: related person
       DataCite:Researcher:
+        title: researcher
       DataCite:ResearchGroup:
+        title: research group
       DataCite:RightsHolder:
+        title: rights holder
       DataCite:Sponsor:
+        title: sponsor
       DataCite:Supervisor:
+        title: supervisor
       DataCite:WorkPackageLeader:
+        title: work package leader
       DataCite:Other:
+        title: other
       CRediT:conceptualization:
+        title: conceptualization
       CRediT:data-curation:
+        title: data curation
       CRediT:formal-analysis:
+        title: formal analysis
       CRediT:funding-acquisition:
+        title: funding acquisition
       CRediT:investigation:
+        title: investigation
       CRediT:methodology:
+        title: methodology
       CRediT:project-administration:
+        title: project administration
       CRediT:resources:
+        title: resources
       CRediT:software:
+        title: software
       CRediT:supervision:
+        title: supervision
       CRediT:validation:
+        title: validation
       CRediT:visualization:
+        title: visualization
       CRediT:writing-original-draft:
+        title: writing, original draft
       CRediT:writing-review-editing:
+        title: writing, review and/or editing
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
@@ -630,12 +775,12 @@ enums:
       relationship_types:
         - rdfs:subClassOf
 
-
   EventType:
     description: The type of date being represented
     permissible_values:
       accepted:
       available:
+        description: when the resource was made available to the public
       copyrighted:
       collected:
       created:
@@ -657,68 +802,131 @@ enums:
     description: the relationship between two entities
     permissible_values:
       DataCite:Cites:
+        title: cites
       DataCite:Compiles:
+        title: compiles
       DataCite:Continues:
+        title: continues
       DataCite:Describes:
+        title: describes
       DataCite:Documents:
+        title: documents
       DataCite:HasMetadata:
+        title: has metadata
       DataCite:HasPart:
+        title: has part
       DataCite:HasVersion:
+        title: has version
       DataCite:IsCitedBy:
+        title: is cited by
       DataCite:isCompiledBy:
+        title: is compiled by
       DataCite:IsContinuedBy:
+        title: is continued by
       DataCite:IsDerivedFrom:
+        title: is derived from
       DataCite:IsDescribedBy:
+        title: is described by
       DataCite:IsDocumentedBy:
+        title: is documented by
       DataCite:IsIdenticalTo:
+        title: is identical to
       DataCite:IsMetadataFor:
+        title: is metadata for
       DataCite:IsNewVersionOf:
+        title: is new version of
       DataCite:IsOriginalFormOf:
+        title: is original form of
       DataCite:IsPartOf:
+        title: is part of
       DataCite:IsPreviousVersionOf:
+        title: is previous version of
       DataCite:IsPublishedIn:
+        title: is published in
       DataCite:IsReferencedBy:
+        title: is referenced by
       DataCite:IsRequiredBy:
+        title: is required by
       DataCite:IsReviewedBy:
+        title: is reviewed by
       DataCite:IsSourceOf:
+        title: is source of
       DataCite:IsSupplementTo:
+        title: is supplement to
       DataCite:IsSupplementedBy:
+        title: is supplemented by
       DataCite:IsVariantFormOf:
+        title: is variant form of
       DataCite:IsVersionOf:
+        title: is version of
       DataCite:Obsoletes:
+        title: obsoletes
       DataCite:References:
+        title: references
       DataCite:Requires:
+        title: requires
       DataCite:Reviews:
+        title: reviews
       Crossref:BasedOnData:
+        title: based on data
       Crossref:Finances:
+        title: finances
       Crossref:HasComment:
+        title: has comment
       Crossref:HasDerivation:
+        title: has derivation
       Crossref:HasExpression:
+        title: has expression
       Crossref:HasFormat:
+        title: has format
       Crossref:HasManifestation:
+        title: has manifestation
       Crossref:HasManuscript:
+        title: has manuscript
       Crossref:HasPreprint:
+        title: has preprint
       Crossref:HasRelatedMaterial:
+        title: has related material
       Crossref:HasReply:
+        title: has reply
       Crossref:HasReview:
+        title: has review
       Crossref:HasTranslation:
+        title: has translation
       Crossref:IsBasedOn:
+        title: is based on
       Crossref:IsBasisFor:
+        title: is basis for
       Crossref:IsCommentOn:
+        title: is comment on
       Crossref:IsDataBasisFor:
+        title: is data basis for
       Crossref:IsExpressionOf:
+        title: is expression of
       Crossref:IsFinancedBy:
+        title: is financed by
       Crossref:IsFormatOf:
+        title: is format of
       Crossref:IsManifestationOf:
+        title: is manifestation of
       Crossref:IsManuscriptOf:
+        title: is manuscript of
       Crossref:IsPreprintOf:
+        title: is preprint of
       Crossref:IsRelatedMaterial:
+        title: is related material
       Crossref:IsReplacedBy:
+        title: is replaced by
       Crossref:IsReplyTo:
+        title: is reply to
       Crossref:IsReviewOf:
+        title: is review of
       Crossref:IsSameAs:
+        title: is same as
       Crossref:IsTranslationOf:
+        title: is translation of
       Crossref:Replaces:
+        title: replaces
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
@@ -727,12 +935,19 @@ enums:
       relationship_types:
         - rdfs:subClassOf
 
-
   ResourceType:
     description: The type of resource being represented
     permissible_values:
       dataset:
         description: a dataset
+
+  TextFormat:
+    description: The format of a text string.
+    permissible_values:
+      text:
+        description: plain text
+      html:
+        description: hypertext markup language
 
   TitleType:
     description: The type of title being represented
@@ -744,6 +959,6 @@ enums:
       alternative_title:
         description: other title(s) or names for the resource
       translated_title:
-        description: title_language must be specified if this value is used
+        description: translation of the title into another language; title_language must be specified if this value is used
       other:
         description: anything that doesn't fit into the above categories
