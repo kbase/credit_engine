@@ -15,7 +15,7 @@ credit_metadata:
     organization_id: ROR:041mxqs23
     organization_name: Figshare (United Kingdom)
   contributors:
-    - contributor_type: person
+    - contributor_type: Person
       contributor_id: ORCID:0000-0001-8522-7682
       name: Nastassia Patin
       affiliations:
@@ -27,25 +27,25 @@ credit_metadata:
       contributor_roles:
         - DataCite:DataCurator
         - DataCite:ContactPerson
-    - contributor_type: person
+    - contributor_type: Person
       name: Frank Stewart
       affiliations:
         - organization_name: Montana State University
           organization_id: ROR:02w0trx84
         - organization_name: Georgia Institute of Technology
           organization_id: ROR:01zkghx44
-    - contributor_type: person
+    - contributor_type: Person
       contributor_id: ORCID:0000-0002-1785-2352
       name: Jordan Beckler
       affiliations:
         - organization_name: Harbor Branch Oceanographic Institute
           organization_id: ROR:05gzqyx59
-    - contributor_type: person
+    - contributor_type: Person
       name: Zoe Dietrich
       affiliations:
         - organization_name: BowDOIn College, Brunswick ME 04011
           organization_id: ISNI:0000000121099845
-    - contributor_type: person
+    - contributor_type: Person
       contributor_id: ORCID:0000-0002-9218-6097
       name: Emily Hall
       affiliations:
@@ -57,10 +57,10 @@ credit_metadata:
     - date: 2020-07-11
       event: available
   funding:
-    - grant_id: NA18OAR0110291
-      grant_title: Development of innovative techniques for exploring novel submarine
+    - award_id: NA18OAR0110291
+      award_title: Development of innovative techniques for exploring novel submarine
         springs on the Gulf of Mexico Outer Continental Shelf
-      grant_url: https://app.dimensions.ai/details/grant/grant.7615666
+      award_url: https://app.dimensions.ai/details/grant/grant.7615666
       funder:
         organization_id: ROR:02z5nhe81
         organization_name: National Oceanic and Atmospheric Administration (NOAA)

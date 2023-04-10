@@ -19,6 +19,7 @@ credit_metadata:
   contributors:
     -
       contributor_id: ORCID:0000-0002-2079-0260
+      contributor_type: Person
       name: Ellen Dow
       credit_name: Dow, EG
       affiliations:
@@ -28,9 +29,10 @@ credit_metadata:
         - CRediT:writing-original-draft
         - CRediT:writing-review-editing
     -
+      contributor_id: ORCID:0000-0001-9557-7715
+      contributor_type: Person
       name: Elisha Wood-Charlson
       credit_name: Wood-Charlson, E
-      contributor_id: ORCID:0000-0001-9557-7715
       affiliations:
         - organization_name: Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)
           organization_id: ROR:02jbv0t02
@@ -39,6 +41,7 @@ credit_metadata:
         - CRediT:writing-review-editing
     -
       contributor_id: ORCID:0000-0002-8930-9500
+      contributor_type: Person
       name: Nancy Hess
       credit_name: Hess, N
       affiliations:
@@ -49,6 +52,7 @@ credit_metadata:
         - CRediT:writing-review-editing
     -
       contributor_id: ORCID:0000-0002-8864-5772
+      contributor_type: Person
       name: Timothy Scheibe
       credit_name: Scheibe, T
       affiliations:
@@ -57,6 +61,10 @@ credit_metadata:
       contributor_roles:
         - CRediT:writing-original-draft
         - CRediT:writing-review-editing
+
+  repository:
+    organization_id: ROR:01znn6x10
+    organization_name: KBase
 
   titles:
     - title: 2020 Multiscale Microbial Dynamics Modeling Course
