@@ -3,6 +3,10 @@ name = "credit_engine"
 version = "0.1.0"
 description = "Credit Metadata for Data Citation"
 authors = ["ialarmedalien <ialarmedalien@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+include = ["README.md", "schema/kbase"]
+
 packages = [
     { include = 'credit_engine' }
 ]
