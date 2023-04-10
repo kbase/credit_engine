@@ -1,0 +1,5 @@
+---
+name: credit_engine
+author: ialarmedalien <ialarmedalien@gmail.com>
+description: Schema to represent credit metadata for the citation of data objects
+source_schema_path: schema/kbase/linkml/metadata.yaml
