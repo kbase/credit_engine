@@ -1,11 +1,12 @@
 # yaml-language-server: $schema=https://linkml.io/linkml-model/linkml_model/jsonschema/meta.schema.json
-id: https://github.com/kbase/credit_engine/schema/kbase/linkml/
+id: https://github.com/kbase/credit_engine/schema/kbase/linkml
 name: credit_metadata
 description: Schema for KBase resource credit metadata
 version: 0.0.1
 prefixes:
   bioportal: https://bioportal.bioontology.org/ontologies/
   biolink: https://w3id.org/biolink/vocab/
+  cm: https://github.com/kbase/credit_engine/schema/kbase/linkml/
   CRediT: https://credit.niso.org/contributor-roles/
   Crossref: https://crossref.org/
   DataCite: https://purl.org/datacite/v4.4/
@@ -21,6 +22,9 @@ prefixes:
 imports:
   - linkml:types
 default_range: string
+default_curi_maps:
+  - semweb_context
+default_prefix: cm
 
 classes:
 
@@ -97,6 +101,7 @@ classes:
 
       identifier:
         slot_uri: schema:identifier
+        # can generate schema:url from this ID
         description: resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.
         range: uriorcurie
         required: true
@@ -123,6 +128,7 @@ classes:
 
       license:
         slot_uri: schema:license
+        # also slot_uri:isAccessibleForFree
         description: |
           usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. "http://"; "https://"; "ftp://".
 
@@ -139,6 +145,7 @@ classes:
         - DataCite:attributes.rights_list
 
       resource_type:
+        slot_uri: schema:@type
         description: the broad type of the source data for this workspace object. 'dataset' is the only valid value currently.
         range: ResourceType
         required: true
@@ -178,6 +185,7 @@ classes:
         - JGI:organisms[].pi
 
       dates:
+        slot_uri: schema:creator
         description: a list of relevant lifecycle events for the resource.
         inlined_as_list: true
         multivalued: true
@@ -236,8 +244,8 @@ classes:
 
       repository:
         description: online repository for a dataset.
+        slot_uri: schema:provider
         range: Organization
-        required: true
         narrow_mappings:
           - ORCID:url
           - OSTI:site_url
@@ -269,7 +277,7 @@ classes:
     description: |
       Represents a contributor to the resource.
 
-      Contributors must have a 'contributor_type', either 'person' or 'organization', and
+      Contributors must have a 'contributor_type', either 'Person' or 'Organization', and
       a 'name'.
 
       The 'credit_name' field is used to store the name of a person as it would appear in
@@ -295,11 +303,12 @@ classes:
 
     attributes:
       contributor_type:
-        description: must be either 'person' or 'organization'
+        slot_uri: schema:@type
+        description: must be either 'Person' or 'Organization'
         range: ContributorType
         examples:
-        - value: person
-        - value: organization
+        - value: Person
+        - value: Organization
         exact_mappings:
         - DataCite:attributes.contributors[].name_type
         - DataCite:attributes.creators[].name_type
@@ -387,7 +396,7 @@ classes:
       contributor_roles:
         description: list of roles played by the contributor when working on the resource.
         range: ContributorRole
-        inlined_as_list: true
+        # inlined_as_list: true
         multivalued: true
         exact_mappings:
         - DataCite:attributes.contributors[].contributor_type
@@ -431,6 +440,7 @@ classes:
     description: some text and a specification of the text type
     attributes:
       format:
+        slot_uri: schema:@type
         description: the format of the text
         required: true
         range: TextFormat
@@ -438,7 +448,8 @@ classes:
         - value: text
         - value: html
 
-      text:
+      content:
+        slot_uri: schema:@value
         description: the text itself
         required: true
         examples:
@@ -449,7 +460,7 @@ classes:
             <p>"Beware the Jabberwock, my son!"</p>
 
   FundingReference:
-    class_uri: schema:Grant
+    class_uri: schema:MonetaryGrant
     description: |
       Represents a funding source for a resource, including the funding body and the grant awarded.
 
@@ -550,7 +561,6 @@ classes:
       organization_id:
         slot_uri: schema:identifier
         description: persistent unique identifier for the organization in the format <database name>:<identifier within database>
-        identifier: true
         examples:
         - value: ROR:01bj3aw27
         - value: ISNI:0000000123423717
@@ -682,10 +692,12 @@ enums:
   ContributorType:
     description: The type of contributor being represented
     permissible_values:
-      person:
+      Person:
         description: a person
-      organization:
+        # slot_uri: schema:@type:Person
+      Organization:
         description: an organization
+        # slot_uri: schema:@type:Organization
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
@@ -780,6 +792,7 @@ enums:
     permissible_values:
       accepted:
       available:
+        # schema:datePublished
         description: when the resource was made available to the public
       copyrighted:
       collected:
