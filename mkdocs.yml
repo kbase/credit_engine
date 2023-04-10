@@ -1,0 +1,26 @@
+---
+site_name: "credit-engine"
+theme:
+  name: material
+  palette:
+   scheme: slate
+   primary: teal
+   accent: indigo
+  features:
+    - content.tabs.link
+plugins:
+  - search
+  - mermaid2
+nav:
+  # - Home: home.md
+  - Index: index.md
+  - About: about.md
+site_url: https://kbase.github.io/credit_engine
+repo_url: https://github.com/kbase/credit_engine
+
+# Uncomment this block to enable use of Google Analytics.
+# Replace the property value with your own ID.
+# extra:
+#   analytics:
+#     provider: google
+#     property: G-XXXXXXXXXX
