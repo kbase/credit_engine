@@ -29,26 +29,30 @@ default_prefix: cm
 classes:
 
   CreditMetadataEntry:
+    tree_root: true
     description: Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata.
 
     attributes:
       credit_metadata:
+        slot_uri: schema:dataset
         description: the credit metadata itself
         required: true
         range: CreditMetadata
 
       credit_metadata_schema_version:
-        slot_uri: schema:version
+        slot_uri: schema:schemaVersion
         description: the version of the credit metadata schema used
         required: true
         examples:
           - value: 1.1.0
 
       saved_by:
+        slot_uri: schema:sdPublisher
         description: KBase workspace ID of the user who added this entry
         required: true
 
       timestamp:
+        slot_uri: schema:sdDatePublished
         description: unix timestamp for the addition of this set of credit metadata
         required: true
         range: integer
@@ -87,6 +91,7 @@ classes:
     attributes:
 
       comment:
+        slot_uri: schema:comment
         description: list of strings of freeform text providing extra information about this credit metadata.
         inlined_as_list: true
         multivalued: true
@@ -97,7 +102,7 @@ classes:
       description:
         slot_uri: schema:description
         description: A brief description or abstract for the resource being represented.
-        range: FormattedText
+        range: string
 
       identifier:
         slot_uri: schema:identifier
@@ -172,6 +177,7 @@ classes:
         - value: '20220405'
 
       contributors:
+        slot_uri: schema:creator
         description: a list of people and/or organizations who contributed to the resource.
         inlined_as_list: true
         multivalued: true
@@ -185,7 +191,6 @@ classes:
         - JGI:organisms[].pi
 
       dates:
-        slot_uri: schema:creator
         description: a list of relevant lifecycle events for the resource.
         inlined_as_list: true
         multivalued: true
@@ -213,7 +218,7 @@ classes:
           # via { date: Crossref:message.deposited.date-time, event: available }
 
       funding:
-        slot_uri: schema:fundingScheme
+        slot_uri: schema:funding
         description: funding sources for the resource.
         inlined_as_list: true
         multivalued: true
@@ -394,6 +399,7 @@ classes:
           # via { organization_name: "{OSTI:contributor.affiliation_name}"}
 
       contributor_roles:
+        slot_uri: schema:Role
         description: list of roles played by the contributor when working on the resource.
         range: ContributorRole
         # inlined_as_list: true
@@ -473,9 +479,9 @@ classes:
 
       Some organizations may have a digital object identifier (DOI).
     attributes:
-      award_id:
+      grant_id:
         slot_uri: schema:identifier
-        description: code for the award, assigned by the funder
+        description: code for the grant, assigned by the funder
         exact_mappings:
         - DataCite:attributes.funding_references[].award_number
         - Crossref:message.award
@@ -487,17 +493,17 @@ classes:
         - value: CBET-0756451
         - value: DOI:10.46936/10.25585/60000745
 
-      award_title:
+      grant_title:
         slot_uri: schema:name
-        description: title for the award
+        description: title for the grant
         exact_mappings:
         - DataCite:attributes.funding_references[].award_title
         examples:
         - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the KBS intensive site
 
-      award_url:
+      grant_url:
         slot_uri: schema:url
-        description: URL for the award
+        description: URL for the grant
         exact_mappings:
         - DataCite:attributes.funding_references[].award_url
         close_mappings:
@@ -658,6 +664,8 @@ classes:
     attributes:
       title:
         slot_uri: schema:name
+        # could also be schema:headline if title type is 'title'
+        # subtitle/alternative title: schema:alternativeHeadline
         description: a string used as a title for a resource
         required: true
         examples:
@@ -694,10 +702,10 @@ enums:
     permissible_values:
       Person:
         description: a person
-        # slot_uri: schema:@type:Person
+        meaning: schema:Person
       Organization:
         description: an organization
-        # slot_uri: schema:@type:Organization
+        meaning: schema:Organization
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
@@ -707,78 +715,151 @@ enums:
         - rdfs:subClassOf
 
   ContributorRole:
+    enum_uri: roleName
     description: The type of contribution made by a contributor
     permissible_values:
+
       DataCite:ContactPerson:
+        meaning: DataCite:ContactPerson
         title: contact person
+        description: Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource. May also be “Point of Contact” in organisation that controls access to the resource, if that organisation is different from Publisher, Distributor, Data Manager.
       DataCite:DataCollector:
+        meaning: DataCite:DataCollector
         title: data collector
+        description: Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). May also use when crediting survey conductors, interviewers, event or condition observers, person responsible for monitoring key instrument data.
       DataCite:DataCurator:
+        meaning: DataCite:DataCurator
         title: data curator
+        description: Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository. While the “DataManager” is concerned with digital maintenance, the DataCurator's role encompasses quality assurance focused on content and metadata. This includes checking whether the submitted dataset is complete, with all files and components as described by submitter, whether the metadata is standardized to appropriate systems and schema, whether specialized metadata is needed to add value and ensure access across disciplines, and determining how the metadata might map to search engines, database products, and automated feeds.
       DataCite:DataManager:
+        meaning: DataCite:DataManager
         title: data manager
+        description: Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource. The work done by this person or organisation ensures that the resource is periodically “refreshed” in terms of software/hardware support, is kept available or is protected from unauthorized access, is stored in accordance with industry standards, and is handled in accordance with the records management requirements applicable to it.
       DataCite:Distributor:
+        meaning: DataCite:Distributor
         title: distributor
+        description: Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form. Works stored in more than one archive/repository may credit each as a distributor.
       DataCite:Editor:
+        meaning: DataCite:Editor
         title: editor
+        description: |
+          A person who oversees the details related to the publication format of the resource. Note: if the Editor is to be credited in place of multiple creators, the Editor's name may be supplied as Creator, with “(Ed.)” appended to the name.
       DataCite:HostingInstitution:
+        meaning: DataCite:HostingInstitution
         title: hosting institution
+        description: Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support. May also be used for an organisation that stores the data offline. Often a data centre (if that data centre is not the “publisher” of the resource.)
       DataCite:Producer:
+        meaning: DataCite:Producer
         title: producer
+        description: Typically a person or organisation responsible for the artistry and form of a media product. In the data industry, this may be a company “producing” DVDs that package data for future dissemination by a distributor.
       DataCite:ProjectLeader:
+        meaning: DataCite:ProjectLeader
         title: project leader
+        description: Person officially designated as head of project team or sub- project team instrumental in the work necessary to development of the resource. The Project Leader is not “removed” from the work that resulted in the resource; he or she remains intimately involved throughout the life of the particular project team.
       DataCite:ProjectManager:
+        meaning: DataCite:ProjectManager
         title: project manager
+        description: Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams. The manager of a project normally has more administrative responsibility than actual work involvement.
       DataCite:ProjectMember:
+        meaning: DataCite:ProjectMember
         title: project member
+        description: Person on the membership list of a designated project/project team. This vocabulary may or may not indicate the quality, quantity, or substance of the person's involvement.
       DataCite:RegistrationAgency:
+        meaning: DataCite:RegistrationAgency
         title: registration agency
+        description: Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility. DataCite is a Registration Agency for the International DOI Foundation (IDF). One of DataCite's tasks is to assign DOI prefixes to the allocating agents who then assign the full, specific character string to data clients, provide metadata back to the DataCite registry, etc.
       DataCite:RegistrationAuthority:
+        meaning: DataCite:RegistrationAuthority
         title: registration authority
+        description: A standards-setting body from which Registration Agencies obtain official recognition and guidance. The IDF serves as the Registration Authority for the International Standards Organisation (ISO) in the area/domain of Digital Object Identifiers.
       DataCite:RelatedPerson:
+        meaning: DataCite:RelatedPerson
         title: related person
+        description: A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize. This person could be an author's intellectual mentor, a person providing intellectual leadership in the discipline or subject domain, etc.
       DataCite:Researcher:
+        meaning: DataCite:Researcher
         title: researcher
+        description: A person involved in analyzing data or the results of an experiment or formal study. May indicate an intern or assistant to one of the authors who helped with research but who was not so “key” as to be listed as an author. Should be a person, not an institution. Note that a person involved in the gathering of data would fall under the contributorType “DataCollector.” The researcher may find additional data online and correlate it to the data collected for the experiment or study, for example.
       DataCite:ResearchGroup:
+        meaning: DataCite:ResearchGroup
         title: research group
+        description: Typically refers to a group of individuals with a lab, department, or division; the group has a particular, defined focus of activity. May operate at a narrower level of scope; may or may not hold less administrative responsibility than a project team.
       DataCite:RightsHolder:
+        meaning: DataCite:RightsHolder
         title: rights holder
+        description: Person or institution owning or managing property rights, including intellectual property rights over the resource.
       DataCite:Sponsor:
+        meaning: DataCite:Sponsor
         title: sponsor
+        description: Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc. Includes organisations that provide in-kind support, through donation, provision of people or a facility or instrumentation necessary for the development of the resource, etc.
       DataCite:Supervisor:
+        meaning: DataCite:Supervisor
         title: supervisor
+        description: Designated administrator over one or more groups/teams working to produce a resource or over one or more steps of a development process.
       DataCite:WorkPackageLeader:
+        meaning: DataCite:WorkPackageLeader
         title: work package leader
+        description: A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource.
       DataCite:Other:
+        meaning: DataCite:Other
         title: other
+        description: Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution does not “fit” other controlled vocabulary for contributorType. Could be a photographer, artist, or writer whose contribution helped to publicize the resource (as opposed to creating it), a reviewer of the resource, someone providing administrative services to the author (such as depositing updates into an online repository, analysing usage, etc.), or one of many other roles.
       CRediT:conceptualization:
+        meaning: CRediT:conceptualization
         title: conceptualization
+        description: Ideas; formulation or evolution of overarching research goals and aims.
       CRediT:data-curation:
+        meaning: CRediT:data-curation
         title: data curation
+        description: Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later re-use.
       CRediT:formal-analysis:
+        meaning: CRediT:formal-analysis
         title: formal analysis
+        description: Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data.
       CRediT:funding-acquisition:
+        meaning: CRediT:funding-acquisition
         title: funding acquisition
+        description: Acquisition of the financial support for the project leading to this publication.
       CRediT:investigation:
+        meaning: CRediT:investigation
         title: investigation
+        description: Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.
       CRediT:methodology:
+        meaning: CRediT:methodology
         title: methodology
+        description: Development or design of methodology; creation of models.
       CRediT:project-administration:
+        meaning: CRediT:project-administration
         title: project administration
+        description: Management and coordination responsibility for the research activity planning and execution.
       CRediT:resources:
+        meaning: CRediT:resources
         title: resources
+        description: Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.
       CRediT:software:
+        meaning: CRediT:software
         title: software
+        description: Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.
       CRediT:supervision:
+        meaning: CRediT:supervision
         title: supervision
+        description: Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.
       CRediT:validation:
+        meaning: CRediT:validation
         title: validation
+        description: Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.
       CRediT:visualization:
+        meaning: CRediT:visualization
         title: visualization
+        description: Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.
       CRediT:writing-original-draft:
+        meaning: CRediT:writing-original-draft
         title: writing, original draft
+        description: Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).
       CRediT:writing-review-editing:
+        meaning: CRediT:writing-review-editing
         title: writing, review and/or editing
+        description: Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages.
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
@@ -791,18 +872,51 @@ enums:
     description: The type of date being represented
     permissible_values:
       accepted:
+        meaning: DataCite:accepted
+        description: |
+          The date that the publisher accepted the resource into their system.
+          To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
       available:
         # schema:datePublished
-        description: when the resource was made available to the public
+        meaning: DataCite:available
+        description: |
+          The date the resource is made publicly available.
+          To indicate the end of an embargo period, use Available.
       copyrighted:
+        meaning: DataCite:copyrighted
+        description: |
+          The specific, documented date at which the resource receives a copyrighted status, if applicable.
       collected:
+        meaning: DataCite:collected
+        description: |
+          The date or date range in which the resource content was collected.
+          To indicate precise or particular timeframes in which research was conducted.
       created:
+        meaning: DataCite:created
+        description: |
+          The date the resource itself was put together; this could refer to a timeframe in ancient history, be a date range or a single date for a final component, e.g., the finalized file with all of the data.
       issued:
+        meaning: DataCite:issued
+        description: |
+          The date that the resource is published or distributed e.g. to a data centre
       submitted:
+        meaning: DataCite:submitted
+        description: |
+          The date the creator submits the resource to the publisher. This could be different from Accepted if the publisher then applies a selection process. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
       updated:
+        meaning: DataCite:updated
+        description: |
+          The date of the last update to the resource, when the resource is being added to.
       valid:
+        meaning: DataCite:valid
+        description: |
+          The date (or date range) during which the dataset or resource is accurate.
       withdrawn:
+        meaning: DataCite:withdrawn
+        description: |
+          The date the resource is removed.
       other:
+        meaning: DataCite:other
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
@@ -815,130 +929,193 @@ enums:
     description: the relationship between two entities
     permissible_values:
       DataCite:Cites:
+        meaning: DataCite:Cites
         title: cites
       DataCite:Compiles:
+        meaning: DataCite:Compiles
         title: compiles
       DataCite:Continues:
+        meaning: DataCite:Continues
         title: continues
       DataCite:Describes:
+        meaning: DataCite:Describes
         title: describes
       DataCite:Documents:
+        meaning: DataCite:Documents
         title: documents
       DataCite:HasMetadata:
+        meaning: DataCite:HasMetadata
         title: has metadata
       DataCite:HasPart:
+        meaning: DataCite:HasPart
         title: has part
       DataCite:HasVersion:
+        meaning: DataCite:HasVersion
         title: has version
       DataCite:IsCitedBy:
+        meaning: DataCite:IsCitedBy
         title: is cited by
       DataCite:isCompiledBy:
+        meaning: DataCite:isCompiledBy
         title: is compiled by
       DataCite:IsContinuedBy:
+        meaning: DataCite:IsContinuedBy
         title: is continued by
       DataCite:IsDerivedFrom:
+        meaning: DataCite:IsDerivedFrom
         title: is derived from
       DataCite:IsDescribedBy:
+        meaning: DataCite:IsDescribedBy
         title: is described by
       DataCite:IsDocumentedBy:
+        meaning: DataCite:IsDocumentedBy
         title: is documented by
       DataCite:IsIdenticalTo:
+        meaning: DataCite:IsIdenticalTo
         title: is identical to
       DataCite:IsMetadataFor:
+        meaning: DataCite:IsMetadataFor
         title: is metadata for
       DataCite:IsNewVersionOf:
+        meaning: DataCite:IsNewVersionOf
         title: is new version of
       DataCite:IsOriginalFormOf:
+        meaning: DataCite:IsOriginalFormOf
         title: is original form of
       DataCite:IsPartOf:
+        meaning: DataCite:IsPartOf
         title: is part of
       DataCite:IsPreviousVersionOf:
+        meaning: DataCite:IsPreviousVersionOf
         title: is previous version of
       DataCite:IsPublishedIn:
+        meaning: DataCite:IsPublishedIn
         title: is published in
       DataCite:IsReferencedBy:
+        meaning: DataCite:IsReferencedBy
         title: is referenced by
       DataCite:IsRequiredBy:
+        meaning: DataCite:IsRequiredBy
         title: is required by
       DataCite:IsReviewedBy:
+        meaning: DataCite:IsReviewedBy
         title: is reviewed by
       DataCite:IsSourceOf:
+        meaning: DataCite:IsSourceOf
         title: is source of
       DataCite:IsSupplementTo:
+        meaning: DataCite:IsSupplementTo
         title: is supplement to
       DataCite:IsSupplementedBy:
+        meaning: DataCite:IsSupplementedBy
         title: is supplemented by
       DataCite:IsVariantFormOf:
+        meaning: DataCite:IsVariantFormOf
         title: is variant form of
       DataCite:IsVersionOf:
+        meaning: DataCite:IsVersionOf
         title: is version of
       DataCite:Obsoletes:
+        meaning: DataCite:Obsoletes
         title: obsoletes
       DataCite:References:
+        meaning: DataCite:References
         title: references
       DataCite:Requires:
+        meaning: DataCite:Requires
         title: requires
       DataCite:Reviews:
+        meaning: DataCite:Reviews
         title: reviews
       Crossref:BasedOnData:
+        meaning: Crossref:BasedOnData
         title: based on data
       Crossref:Finances:
+        meaning: Crossref:Finances
         title: finances
       Crossref:HasComment:
+        meaning: Crossref:HasComment
         title: has comment
       Crossref:HasDerivation:
+        meaning: Crossref:HasDerivation
         title: has derivation
       Crossref:HasExpression:
+        meaning: Crossref:HasExpression
         title: has expression
       Crossref:HasFormat:
+        meaning: Crossref:HasFormat
         title: has format
       Crossref:HasManifestation:
+        meaning: Crossref:HasManifestation
         title: has manifestation
       Crossref:HasManuscript:
+        meaning: Crossref:HasManuscript
         title: has manuscript
       Crossref:HasPreprint:
+        meaning: Crossref:HasPreprint
         title: has preprint
       Crossref:HasRelatedMaterial:
+        meaning: Crossref:HasRelatedMaterial
         title: has related material
       Crossref:HasReply:
+        meaning: Crossref:HasReply
         title: has reply
       Crossref:HasReview:
+        meaning: Crossref:HasReview
         title: has review
       Crossref:HasTranslation:
+        meaning: Crossref:HasTranslation
         title: has translation
       Crossref:IsBasedOn:
+        meaning: Crossref:IsBasedOn
         title: is based on
       Crossref:IsBasisFor:
+        meaning: Crossref:IsBasisFor
         title: is basis for
       Crossref:IsCommentOn:
+        meaning: Crossref:IsCommentOn
         title: is comment on
       Crossref:IsDataBasisFor:
+        meaning: Crossref:IsDataBasisFor
         title: is data basis for
       Crossref:IsExpressionOf:
+        meaning: Crossref:IsExpressionOf
         title: is expression of
       Crossref:IsFinancedBy:
+        meaning: Crossref:IsFinancedBy
         title: is financed by
       Crossref:IsFormatOf:
+        meaning: Crossref:IsFormatOf
         title: is format of
       Crossref:IsManifestationOf:
+        meaning: Crossref:IsManifestationOf
         title: is manifestation of
       Crossref:IsManuscriptOf:
+        meaning: Crossref:IsManuscriptOf
         title: is manuscript of
       Crossref:IsPreprintOf:
+        meaning: Crossref:IsPreprintOf
         title: is preprint of
       Crossref:IsRelatedMaterial:
+        meaning: Crossref:IsRelatedMaterial
         title: is related material
       Crossref:IsReplacedBy:
+        meaning: Crossref:IsReplacedBy
         title: is replaced by
       Crossref:IsReplyTo:
+        meaning: Crossref:IsReplyTo
         title: is reply to
       Crossref:IsReviewOf:
+        meaning: Crossref:IsReviewOf
         title: is review of
       Crossref:IsSameAs:
+        meaning: Crossref:IsSameAs
         title: is same as
       Crossref:IsTranslationOf:
+        meaning: Crossref:IsTranslationOf
         title: is translation of
       Crossref:Replaces:
+        meaning: Crossref:Replaces
         title: replaces
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
@@ -953,14 +1130,7 @@ enums:
     permissible_values:
       dataset:
         description: a dataset
-
-  TextFormat:
-    description: The format of a text string.
-    permissible_values:
-      text:
-        description: plain text
-      html:
-        description: hypertext markup language
+        meaning: schema:Dataset
 
   TitleType:
     description: The type of title being represented
