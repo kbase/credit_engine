@@ -118,14 +118,14 @@ classes:
         exact_mappings:
         - DataCite:id
           # from: DataCite:id
-          # via: "DOI:{DataCite:id}"
+          # via: f"DOI:{src.id}"
         - JGI:organisms[].grouped_by
-          # from JGI:organisms[].grouped_by
-          # via: JGI:organisms[].files[].{JGI:organisms[].grouped_by}
+          # from src.organisms[].grouped_by
+          # via: src.organisms[].files[][src.organisms[].grouped_by]
         narrow_mappings:
           - OSTI:osti_id
             # from: OSTI:osti_id
-            # via: "OSTI:{OSTI:osti_id}"
+            # via: f"OSTI:{src.osti_id}"
           - OSTI:doi
           - ORCID:doi
           # it should be possible to generate an URL from a curie
@@ -200,22 +200,22 @@ classes:
         close_mappings:
         - DataCite:attributes.published
           # from DataCite:attributes.published
-          # via { date: DataCite:attributes.published, event: available }
+          # via { date: src.attributes.published, event: 'available' }
         - DataCite:attributes.updated
           # from DataCite:attributes.updated
-          # via { date: DataCite:attributes.updated, event: updated }
+          # via { date: src.attributes.updated, event: 'updated' }
         - DataCite:attributes.dates[]
           # from DataCite:attributes.dates[]
-          # via { date: DataCite:attributes.dates[].date, event: DataCite:attributes.dates[].dateType }
+          # via { date: src.attributes.dates[].date, event: src.attributes.dates[].dateType }
         - ORCID:publicationDate
           # from: ORCID:publicationDate
-          # via { date: ORCID:publicationDate, event: available }
+          # via { date: src.publicationDate, event: 'available' }
         - OSTI:publication_date
           # from: OSTI:publication_date
-          # via { date: OSTI:publication_date, event: available }
+          # via { date: src.publication_date, event: 'available' }
         - Crossref:message.deposited
           # from: Crossref:message.deposited
-          # via { date: Crossref:message.deposited.date-time, event: available }
+          # via { date: src.message.deposited.date-time, event: 'available' }
 
       funding:
         slot_uri: schema:funding
@@ -242,10 +242,10 @@ classes:
         narrow_mappings:
         - ORCID:doi
         # from ORCID:doi
-        # via: { id: "DOI:{ORCID:doi}" }
+        # via: { id: f"DOI:{src.doi}" }
         - OSTI:doi
         # from: OSTI:doi
-        # via: { id: "DOI:{OSTI:doi}"}
+        # via: { id: f"DOI:{src.doi}"}
 
       repository:
         description: online repository for a dataset.
@@ -265,10 +265,10 @@ classes:
         - DataCite:attributes.titles[]
         - ORCID:title
           # from: ORCID:title
-          # via: [{ title: ORCID:title, title_type: title }]
+          # via: [{ title: src.title, title_type: 'title' }]
         - OSTI:title
           # from: OSTI:title
-          # via: [{ title: OSTI:title, title_type: title }]
+          # via: [{ title: src.title, title_type: 'title' }]
         examples:
         - value:
           - title: Amaranthus hypochondriacus genome
@@ -330,7 +330,7 @@ classes:
         - DataCite:attributes.contributors[].name_identifiers[].name_identifier
         - DataCite:attributes.creators[].name_identifiers[].name_identifier
           # from: DataCite:attributes.contributors[].name_identifiers[].name_identifier_scheme == 'ORCID'
-          # via: "ORCID:{DataCite:attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '')}"
+          # via: f"ORCID:{src.attributes.contributors[].name_identifiers[].name_identifier.replace('https://orcid.org/', '')}"
         narrow_mappings:
         - ORCID:contributor.orcidId
         - OSTI:author.orcid_id
@@ -358,10 +358,10 @@ classes:
         close_mappings:
           - OSTI:author
           # from OSTI:author
-          # via: "{OSTI:author.first_name} {OSTI:author.last_name}"
+          # via: f"{src.author.first_name} {src.author.last_name}"
           - OSTI:contributor
           # from OSTI:contributor
-          # via: "{OSTI:contributor.first_name} {OSTI:contributor.last_name}"
+          # via: f"{src.contributor.first_name} {src.contributor.last_name}"
 
       credit_name:
         description: for a person, how the name should appear in a citation.
@@ -382,21 +382,21 @@ classes:
         - DataCite:attributes.contributors[].affiliation[]
           # from: DataCite:attributes.contributors[].affiliation[]
           # via: {
-          #   organization_name: "{DataCite:attributes.contributors[].affiliation[].name}"
+          #   organization_name: src.attributes.contributors[].affiliation[].name
           # }
         - DataCite:attributes.creators[].affiliation[]
           # from: DataCite:attributes.creators[].affiliation[]
           # via: {
-          #   organization_name: "{DataCite:attributes.creators[].affiliation[].name}"
+          #   organization_name: src.attributes.creators[].affiliation[].name
           # }
         - JGI:organisms[].pi.institution
           # from: JGI:organisms[].pi.institution
           # via: {
-          #   organization_name: "{JGI:organisms[].pi.institution}"
+          #   organization_name: src.organisms[].pi.institution
           #}
         narrow_mappings:
           - OSTI:contributor.affiliation_name
-          # via { organization_name: "{OSTI:contributor.affiliation_name}"}
+          # via { organization_name: src.contributor.affiliation_name }
 
       contributor_roles:
         slot_uri: schema:Role
@@ -440,30 +440,6 @@ classes:
         examples:
         - value: available
         - value: updated
-
-
-  FormattedText:
-    description: some text and a specification of the text type
-    attributes:
-      format:
-        slot_uri: schema:@type
-        description: the format of the text
-        required: true
-        range: TextFormat
-        examples:
-        - value: text
-        - value: html
-
-      content:
-        slot_uri: schema:@value
-        description: the text itself
-        required: true
-        examples:
-        - value: |
-            'Twas brillig, and the slithy toves
-            Did gyre and gimble in the wabe:
-        - value: |
-            <p>"Beware the Jabberwock, my son!"</p>
 
   FundingReference:
     class_uri: schema:MonetaryGrant
@@ -617,13 +593,13 @@ classes:
         - DataCite:attributes.identifier.value
         - DataCite:attributes.alternate_identifiers[]
           # from: DataCite:attributes.alternate_identifiers[]
-          # via: "{DataCite:attributes.alternate_identifiers[].alternate_identifier_type}:{DataCite:attributes.alternate_identifiers[].alternate_identifier}"
+          # via: f"{src.attributes.alternate_identifiers[].alternate_identifier_type}:{src.attributes.alternate_identifiers[].alternate_identifier}"
         - DataCite:attributes.related_identifiers[]
           # from: DataCite:attributes.related_identifiers[]
-          # via: "{DataCite:attributes.related_identifiers[].related_identifier_type}:{DataCite:attributes.related_identifiers[].related_identifier}"
+          # via: f"{src.attributes.related_identifiers[].related_identifier_type}:{src.attributes.related_identifiers[].related_identifier}"
         - DataCite:attributes.identifiers[]
           # from: DataCite:attributes.identifiers[]
-          # via: "{DataCite:attributes.identifiers[].identifier_type}:{DataCite:attributes.identifiers[].identifier}"
+          # via: f"{src.attributes.identifiers[].identifier_type}:{src.attributes.identifiers[].identifier}"
         related_mappings:
         - OSTI:site_url
         range: uriorcurie
