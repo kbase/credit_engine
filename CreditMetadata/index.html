@@ -233,8 +233,6 @@ _</p>
 
       CreditMetadata : description
 
-          CreditMetadata ..&gt; FormattedText : description
-
       CreditMetadata : funding
 
           CreditMetadata ..&gt; FundingReference : funding
@@ -457,6 +455,7 @@ attributes:
     - value: '[''Credit metadata generated automatically from DOI:10.13039/100000015'']'
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:comment
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -466,7 +465,7 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:description
-    range: FormattedText
+    range: string
   identifier:
     name: identifier
     description: resolvable persistent unique identifier for the resource. Should
@@ -556,6 +555,7 @@ attributes:
     - OSTI:authors
     - JGI:organisms[].pi
     rank: 1000
+    slot_uri: schema:creator
     multivalued: true
     range: Contributor
     inlined: true
@@ -574,7 +574,6 @@ attributes:
     - OSTI:publication_date
     - Crossref:message.deposited
     rank: 1000
-    slot_uri: schema:creator
     multivalued: true
     range: EventDate
     inlined: true
@@ -588,7 +587,7 @@ attributes:
     - Crossref:Message.project.funding
     - OSTI:awards
     rank: 1000
-    slot_uri: schema:fundingScheme
+    slot_uri: schema:funding
     multivalued: true
     range: FundingReference
     inlined: true
@@ -706,6 +705,7 @@ attributes:
     - value: '[''Credit metadata generated automatically from DOI:10.13039/100000015'']'
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:comment
     multivalued: true
     alias: comment
     owner: CreditMetadata
@@ -725,7 +725,7 @@ attributes:
     domain_of:
     - CreditMetadata
     - PermanentID
-    range: FormattedText
+    range: string
   identifier:
     name: identifier
     description: resolvable persistent unique identifier for the resource. Should
@@ -833,6 +833,7 @@ attributes:
     - OSTI:authors
     - JGI:organisms[].pi
     rank: 1000
+    slot_uri: schema:creator
     multivalued: true
     alias: contributors
     owner: CreditMetadata
@@ -855,7 +856,6 @@ attributes:
     - OSTI:publication_date
     - Crossref:message.deposited
     rank: 1000
-    slot_uri: schema:creator
     multivalued: true
     alias: dates
     owner: CreditMetadata
@@ -873,7 +873,7 @@ attributes:
     - Crossref:Message.project.funding
     - OSTI:awards
     rank: 1000
-    slot_uri: schema:fundingScheme
+    slot_uri: schema:funding
     multivalued: true
     alias: funding
     owner: CreditMetadata

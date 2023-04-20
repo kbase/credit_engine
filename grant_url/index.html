@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kbase.github.io/credit_engine/format/">
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/grant_url/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>Slot: format - credit-engine</title>
+        <title>Slot: grant_url - credit-engine</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-format" class="md-skip">
+        <a href="#slot-grant_url" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: format
+              Slot: grant_url
             
           </span>
         </div>
@@ -324,9 +324,9 @@
   
 
 
-<h1 id="slot-format">Slot: format</h1>
-<p><em>the format of the text</em></p>
-<p>URI: <a href="http://schema.org/@type">schema:@type</a></p>
+<h1 id="slot-grant_url">Slot: grant_url</h1>
+<p><em>URL for the grant</em></p>
+<p>URI: <a href="http://schema.org/url">schema:url</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -339,15 +339,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../FormattedText/">FormattedText</a></td>
-<td>some text and a specification of the text type</td>
+<td><a href="../FundingReference/">FundingReference</a></td>
+<td>Represents a funding source for a resource, including the funding body and th...</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../TextFormat/">TextFormat</a></li>
-<li>Required: True</li>
+<li>Range: <a href="../Uriorcurie/">Uriorcurie</a></li>
 </ul>
 <h2 id="examples">Examples</h2>
 <table>
@@ -358,10 +357,7 @@
 </thead>
 <tbody>
 <tr>
-<td>text</td>
-</tr>
-<tr>
-<td>html</td>
+<td>https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html</td>
 </tr>
 </tbody>
 </table>
@@ -373,20 +369,23 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: format
-description: the format of the text
+<pre><code class="language-yaml">name: grant_url
+description: URL for the grant
 examples:
-- value: text
-- value: html
+- value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+exact_mappings:
+- DataCite:attributes.funding_references[].award_url
+close_mappings:
+- OSTI:award_doi
 rank: 1000
-slot_uri: schema:@type
-alias: format
-owner: FormattedText
+slot_uri: schema:url
+alias: grant_url
+owner: FundingReference
 domain_of:
-- FormattedText
-range: TextFormat
-required: true
+- FundingReference
+range: uriorcurie
+pattern: ^[a-zA-Z0-9.]+:\S
 
 </code></pre>
 

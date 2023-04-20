@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kbase.github.io/credit_engine/award_url/">
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/grant_id/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>Slot: award_url - credit-engine</title>
+        <title>Slot: grant_id - credit-engine</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-award_url" class="md-skip">
+        <a href="#slot-grant_id" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: award_url
+              Slot: grant_id
             
           </span>
         </div>
@@ -324,9 +324,9 @@
   
 
 
-<h1 id="slot-award_url">Slot: award_url</h1>
-<p><em>URL for the award</em></p>
-<p>URI: <a href="http://schema.org/url">schema:url</a></p>
+<h1 id="slot-grant_id">Slot: grant_id</h1>
+<p><em>code for the grant, assigned by the funder</em></p>
+<p>URI: <a href="http://schema.org/identifier">schema:identifier</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -346,7 +346,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Uriorcurie/">Uriorcurie</a></li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="examples">Examples</h2>
 <table>
@@ -357,7 +357,13 @@
 </thead>
 <tbody>
 <tr>
-<td>https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html</td>
+<td>1296</td>
+</tr>
+<tr>
+<td>CBET-0756451</td>
+</tr>
+<tr>
+<td>DOI:10.46936/10.25585/60000745</td>
 </tr>
 </tbody>
 </table>
@@ -369,23 +375,26 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: award_url
-description: URL for the award
+<pre><code class="language-yaml">name: grant_id
+description: code for the grant, assigned by the funder
 examples:
-- value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
+- value: '1296'
+- value: CBET-0756451
+- value: DOI:10.46936/10.25585/60000745
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.funding_references[].award_url
-close_mappings:
+- DataCite:attributes.funding_references[].award_number
+- Crossref:message.award
+narrow_mappings:
 - OSTI:award_doi
+- OSTI:award_number
 rank: 1000
-slot_uri: schema:url
-alias: award_url
+slot_uri: schema:identifier
+alias: grant_id
 owner: FundingReference
 domain_of:
 - FundingReference
-range: uriorcurie
-pattern: ^[a-zA-Z0-9.]+:\S
+range: string
 
 </code></pre>
 

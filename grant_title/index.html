@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kbase.github.io/credit_engine/award_id/">
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/grant_title/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>Slot: award_id - credit-engine</title>
+        <title>Slot: grant_title - credit-engine</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-award_id" class="md-skip">
+        <a href="#slot-grant_title" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: award_id
+              Slot: grant_title
             
           </span>
         </div>
@@ -324,9 +324,9 @@
   
 
 
-<h1 id="slot-award_id">Slot: award_id</h1>
-<p><em>code for the award, assigned by the funder</em></p>
-<p>URI: <a href="http://schema.org/identifier">schema:identifier</a></p>
+<h1 id="slot-grant_title">Slot: grant_title</h1>
+<p><em>title for the grant</em></p>
+<p>URI: <a href="http://schema.org/name">schema:name</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -357,13 +357,7 @@
 </thead>
 <tbody>
 <tr>
-<td>1296</td>
-</tr>
-<tr>
-<td>CBET-0756451</td>
-</tr>
-<tr>
-<td>DOI:10.46936/10.25585/60000745</td>
+<td>Metagenomic analysis of the rhizosphere of three biofuel crops at the KBS intensive site</td>
 </tr>
 </tbody>
 </table>
@@ -375,22 +369,17 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: award_id
-description: code for the award, assigned by the funder
+<pre><code class="language-yaml">name: grant_title
+description: title for the grant
 examples:
-- value: '1296'
-- value: CBET-0756451
-- value: DOI:10.46936/10.25585/60000745
+- value: Metagenomic analysis of the rhizosphere of three biofuel crops at the KBS
+    intensive site
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.funding_references[].award_number
-- Crossref:message.award
-narrow_mappings:
-- OSTI:award_doi
-- OSTI:award_number
+- DataCite:attributes.funding_references[].award_title
 rank: 1000
-slot_uri: schema:identifier
-alias: award_id
+slot_uri: schema:name
+alias: grant_title
 owner: FundingReference
 domain_of:
 - FundingReference

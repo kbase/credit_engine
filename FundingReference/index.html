@@ -208,15 +208,15 @@ _</p>
 <p>URI: <a href="http://schema.org/MonetaryGrant">schema:MonetaryGrant</a></p>
 <div class="mermaid"> classDiagram
     class FundingReference
-      FundingReference : award_id
-
-      FundingReference : award_title
-
-      FundingReference : award_url
-
       FundingReference : funder
 
           FundingReference ..&gt; Organization : funder
+
+      FundingReference : grant_id
+
+      FundingReference : grant_title
+
+      FundingReference : grant_url
 
 
 </div>
@@ -233,21 +233,21 @@ _</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../award_id/">award_id</a></td>
+<td><a href="../grant_id/">grant_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>code for the award, assigned by the funder</td>
+<td>code for the grant, assigned by the funder</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../award_title/">award_title</a></td>
+<td><a href="../grant_title/">grant_title</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>title for the award</td>
+<td>title for the grant</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../award_url/">award_url</a></td>
+<td><a href="../grant_url/">grant_url</a></td>
 <td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>URL for the award</td>
+<td>URL for the grant</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -315,9 +315,9 @@ description: "Represents a funding source for a resource, including the funding 
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 rank: 1000
 attributes:
-  award_id:
-    name: award_id
-    description: code for the award, assigned by the funder
+  grant_id:
+    name: grant_id
+    description: code for the grant, assigned by the funder
     examples:
     - value: '1296'
     - value: CBET-0756451
@@ -331,9 +331,9 @@ attributes:
     - OSTI:award_number
     rank: 1000
     slot_uri: schema:identifier
-  award_title:
-    name: award_title
-    description: title for the award
+  grant_title:
+    name: grant_title
+    description: title for the grant
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
@@ -342,9 +342,9 @@ attributes:
     - DataCite:attributes.funding_references[].award_title
     rank: 1000
     slot_uri: schema:name
-  award_url:
-    name: award_url
-    description: URL for the award
+  grant_url:
+    name: grant_url
+    description: URL for the grant
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
@@ -379,9 +379,9 @@ description: "Represents a funding source for a resource, including the funding 
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 rank: 1000
 attributes:
-  award_id:
-    name: award_id
-    description: code for the award, assigned by the funder
+  grant_id:
+    name: grant_id
+    description: code for the grant, assigned by the funder
     examples:
     - value: '1296'
     - value: CBET-0756451
@@ -395,14 +395,14 @@ attributes:
     - OSTI:award_number
     rank: 1000
     slot_uri: schema:identifier
-    alias: award_id
+    alias: grant_id
     owner: FundingReference
     domain_of:
     - FundingReference
     range: string
-  award_title:
-    name: award_title
-    description: title for the award
+  grant_title:
+    name: grant_title
+    description: title for the grant
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
@@ -411,14 +411,14 @@ attributes:
     - DataCite:attributes.funding_references[].award_title
     rank: 1000
     slot_uri: schema:name
-    alias: award_title
+    alias: grant_title
     owner: FundingReference
     domain_of:
     - FundingReference
     range: string
-  award_url:
-    name: award_url
-    description: URL for the award
+  grant_url:
+    name: grant_url
+    description: URL for the grant
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
@@ -428,7 +428,7 @@ attributes:
     - OSTI:award_doi
     rank: 1000
     slot_uri: schema:url
-    alias: award_url
+    alias: grant_url
     owner: FundingReference
     domain_of:
     - FundingReference

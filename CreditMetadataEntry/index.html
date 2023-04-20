@@ -285,6 +285,7 @@ attributes:
     description: the credit metadata itself
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:dataset
     range: CreditMetadata
     required: true
   credit_metadata_schema_version:
@@ -294,21 +295,24 @@ attributes:
     - value: 1.1.0
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
-    slot_uri: schema:version
+    slot_uri: schema:schemaVersion
     required: true
   saved_by:
     name: saved_by
     description: KBase workspace ID of the user who added this entry
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:sdPublisher
     required: true
   timestamp:
     name: timestamp
     description: unix timestamp for the addition of this set of credit metadata
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:sdDatePublished
     range: integer
     required: true
+tree_root: true
 
 </code></pre>
 </details>
@@ -325,6 +329,7 @@ attributes:
     description: the credit metadata itself
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:dataset
     alias: credit_metadata
     owner: CreditMetadataEntry
     domain_of:
@@ -338,7 +343,7 @@ attributes:
     - value: 1.1.0
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
-    slot_uri: schema:version
+    slot_uri: schema:schemaVersion
     alias: credit_metadata_schema_version
     owner: CreditMetadataEntry
     domain_of:
@@ -350,6 +355,7 @@ attributes:
     description: KBase workspace ID of the user who added this entry
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:sdPublisher
     alias: saved_by
     owner: CreditMetadataEntry
     domain_of:
@@ -361,12 +367,14 @@ attributes:
     description: unix timestamp for the addition of this set of credit metadata
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
+    slot_uri: schema:sdDatePublished
     alias: timestamp
     owner: CreditMetadataEntry
     domain_of:
     - CreditMetadataEntry
     range: integer
     required: true
+tree_root: true
 
 </code></pre>
 </details>

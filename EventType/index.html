@@ -332,57 +332,57 @@
 <tbody>
 <tr>
 <td>accepted</td>
-<td>None</td>
-<td></td>
+<td>DataCite:accepted</td>
+<td>The date that the publisher accepted the resource into their system</td>
 </tr>
 <tr>
 <td>available</td>
-<td>None</td>
-<td>when the resource was made available to the public</td>
+<td>DataCite:available</td>
+<td>The date the resource is made publicly available</td>
 </tr>
 <tr>
 <td>copyrighted</td>
-<td>None</td>
-<td></td>
+<td>DataCite:copyrighted</td>
+<td>The specific, documented date at which the resource receives a copyrighted st...</td>
 </tr>
 <tr>
 <td>collected</td>
-<td>None</td>
-<td></td>
+<td>DataCite:collected</td>
+<td>The date or date range in which the resource content was collected</td>
 </tr>
 <tr>
 <td>created</td>
-<td>None</td>
-<td></td>
+<td>DataCite:created</td>
+<td>The date the resource itself was put together; this could refer to a timefram...</td>
 </tr>
 <tr>
 <td>issued</td>
-<td>None</td>
-<td></td>
+<td>DataCite:issued</td>
+<td>The date that the resource is published or distributed e</td>
 </tr>
 <tr>
 <td>submitted</td>
-<td>None</td>
-<td></td>
+<td>DataCite:submitted</td>
+<td>The date the creator submits the resource to the publisher</td>
 </tr>
 <tr>
 <td>updated</td>
-<td>None</td>
-<td></td>
+<td>DataCite:updated</td>
+<td>The date of the last update to the resource, when the resource is being added...</td>
 </tr>
 <tr>
 <td>valid</td>
-<td>None</td>
-<td></td>
+<td>DataCite:valid</td>
+<td>The date (or date range) during which the dataset or resource is accurate</td>
 </tr>
 <tr>
 <td>withdrawn</td>
-<td>None</td>
-<td></td>
+<td>DataCite:withdrawn</td>
+<td>The date the resource is removed</td>
 </tr>
 <tr>
 <td>other</td>
-<td>None</td>
+<td>DataCite:other</td>
 <td></td>
 </tr>
 </tbody>
@@ -417,27 +417,81 @@ rank: 1000
 permissible_values:
   accepted:
     text: accepted
+    description: 'The date that the publisher accepted the resource into their system.
+
+      To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
+
+      '
+    meaning: DataCite:accepted
   available:
     text: available
-    description: when the resource was made available to the public
+    description: 'The date the resource is made publicly available.
+
+      To indicate the end of an embargo period, use Available.
+
+      '
+    meaning: DataCite:available
   copyrighted:
     text: copyrighted
+    description: 'The specific, documented date at which the resource receives a copyrighted
+      status, if applicable.
+
+      '
+    meaning: DataCite:copyrighted
   collected:
     text: collected
+    description: 'The date or date range in which the resource content was collected.
+
+      To indicate precise or particular timeframes in which research was conducted.
+
+      '
+    meaning: DataCite:collected
   created:
     text: created
+    description: 'The date the resource itself was put together; this could refer
+      to a timeframe in ancient history, be a date range or a single date for a final
+      component, e.g., the finalized file with all of the data.
+
+      '
+    meaning: DataCite:created
   issued:
     text: issued
+    description: 'The date that the resource is published or distributed e.g. to a
+      data centre
+
+      '
+    meaning: DataCite:issued
   submitted:
     text: submitted
+    description: 'The date the creator submits the resource to the publisher. This
+      could be different from Accepted if the publisher then applies a selection process.
+      To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
+
+      '
+    meaning: DataCite:submitted
   updated:
     text: updated
+    description: 'The date of the last update to the resource, when the resource is
+      being added to.
+
+      '
+    meaning: DataCite:updated
   valid:
     text: valid
+    description: 'The date (or date range) during which the dataset or resource is
+      accurate.
+
+      '
+    meaning: DataCite:valid
   withdrawn:
     text: withdrawn
+    description: 'The date the resource is removed.
+
+      '
+    meaning: DataCite:withdrawn
   other:
     text: other
+    meaning: DataCite:other
 reachable_from:
   source_ontology: bioportal:DATACITE-VOCAB
   source_nodes:

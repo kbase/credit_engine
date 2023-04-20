@@ -332,12 +332,12 @@
 <tbody>
 <tr>
 <td>Person</td>
-<td>None</td>
+<td>schema:Person</td>
 <td>a person</td>
 </tr>
 <tr>
 <td>Organization</td>
-<td>None</td>
+<td>schema:Organization</td>
 <td>an organization</td>
 </tr>
 </tbody>
@@ -373,9 +373,11 @@ permissible_values:
   Person:
     text: Person
     description: a person
+    meaning: schema:Person
   Organization:
     text: Organization
     description: an organization
+    meaning: schema:Organization
 reachable_from:
   source_ontology: bioportal:DATACITE-VOCAB
   source_nodes:
