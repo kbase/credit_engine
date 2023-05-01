@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kbase.github.io/credit_engine/FundingReference/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.6" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.8" name="generator"/>
 <title>Class: FundingReference - credit-engine</title>
 <link href="../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
@@ -197,20 +197,23 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-fundingreference">Class: FundingReference</h1>
-<p>_Represents a funding source for a resource, including the funding body and the grant awarded.</p>
-<p>The 'funder_name' field is required; all others are optional.</p>
-<p>Recommended resources for organization identifiers include:
-  - Research Organization Registry, http://ror.org
-  - International Standard Name Identifier, https://isni.org
-  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/</p>
-<p>Some organizations may have a digital object identifier (DOI).
-_</p>
+<p><em>Represents a funding source for a resource, including the funding body and the grant awarded.</em></p>
+<p>__</p>
+<p><em>The 'funder_name' field is required; all others are optional.</em></p>
+<p>__</p>
+<p><em>Recommended resources for organization identifiers include:</em></p>
+<p>_  - Research Organization Registry, http://ror.org_</p>
+<p>_  - International Standard Name Identifier, https://isni.org_</p>
+<p>_  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/_</p>
+<p>__</p>
+<p><em>Some organizations may have a digital object identifier (DOI).</em></p>
+<p>__</p>
 <p>URI: <a href="http://schema.org/MonetaryGrant">schema:MonetaryGrant</a></p>
 <div class="mermaid"> classDiagram
     class FundingReference
       FundingReference : funder
 
-          FundingReference ..&gt; Organization : funder
+          FundingReference --|&gt; Organization : funder
 
       FundingReference : grant_id
 

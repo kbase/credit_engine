@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kbase.github.io/credit_engine/EventDate/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.6" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.8" name="generator"/>
 <title>Class: EventDate - credit-engine</title>
 <link href="../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
@@ -197,9 +197,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-eventdate">Class: EventDate</h1>
-<p>_Represents an event in the lifecycle of a resource and the date it occurred on.</p>
-<p>See https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date for more information on the events.
-_</p>
+<p><em>Represents an event in the lifecycle of a resource and the date it occurred on.</em></p>
+<p>__</p>
+<p><em>See https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date for more information on the events.</em></p>
+<p>__</p>
 <p>URI: <a href="https://github.com/kbase/credit_engine/schema/kbase/linkml/EventDate">cm:EventDate</a></p>
 <div class="mermaid"> classDiagram
     class EventDate
@@ -207,7 +208,7 @@ _</p>
 
       EventDate : event
 
-          EventDate ..&gt; EventType : event
+          EventDate --|&gt; EventType : event
 
 
 </div>

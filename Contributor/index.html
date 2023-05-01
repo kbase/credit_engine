@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kbase.github.io/credit_engine/Contributor/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.6" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.8" name="generator"/>
 <title>Class: Contributor - credit-engine</title>
 <link href="../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
@@ -197,41 +197,48 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-contributor">Class: Contributor</h1>
-<p>_Represents a contributor to the resource.</p>
-<p>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and
-a 'name'.</p>
-<p>The 'credit_name' field is used to store the name of a person as it would appear in
-a citation. If there is no 'credit_name' supplied, the 'name' field would be used
-in citations.
-For example:
-  name:         Hubert George Wells
-  credit_name:  Wells, HG</p>
-<p>name:         Alexandria Ocasio-Cortez
-  credit_name:  Ocasio-Cortez, A</p>
-<p>name:         Helena Bonham Carter
-  credit_name:  Bonham Carter, H</p>
-<p>The 'contributor_role' field takes values from the DataCite and CRediT contributor
-roles vocabularies. For more information on these resources and choosing the
-appropriate roles, please see the following links:</p>
-<p>DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</p>
-<p>CRediT contributor role taxonomy: https://credit.niso.org
-_</p>
+<p><em>Represents a contributor to the resource.</em></p>
+<p>__</p>
+<p><em>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and</em></p>
+<p><em>a 'name'.</em></p>
+<p>__</p>
+<p><em>The 'credit_name' field is used to store the name of a person as it would appear in</em></p>
+<p><em>a citation. If there is no 'credit_name' supplied, the 'name' field would be used</em></p>
+<p><em>in citations.</em></p>
+<p><em>For example:</em></p>
+<p>_  name:         Hubert George Wells_</p>
+<p>_  credit_name:  Wells, HG_</p>
+<p>__</p>
+<p>_  name:         Alexandria Ocasio-Cortez_</p>
+<p>_  credit_name:  Ocasio-Cortez, A_</p>
+<p>__</p>
+<p>_  name:         Helena Bonham Carter_</p>
+<p>_  credit_name:  Bonham Carter, H_</p>
+<p>__</p>
+<p><em>The 'contributor_role' field takes values from the DataCite and CRediT contributor</em></p>
+<p><em>roles vocabularies. For more information on these resources and choosing the</em></p>
+<p><em>appropriate roles, please see the following links:</em></p>
+<p>__</p>
+<p><em>DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</em></p>
+<p>__</p>
+<p><em>CRediT contributor role taxonomy: https://credit.niso.org</em></p>
+<p>__</p>
 <p>URI: <a href="https://github.com/kbase/credit_engine/schema/kbase/linkml/Contributor">cm:Contributor</a></p>
 <div class="mermaid"> classDiagram
     class Contributor
       Contributor : affiliations
 
-          Contributor ..&gt; Organization : affiliations
+          Contributor --|&gt; Organization : affiliations
 
       Contributor : contributor_id
 
       Contributor : contributor_roles
 
-          Contributor ..&gt; ContributorRole : contributor_roles
+          Contributor --|&gt; ContributorRole : contributor_roles
 
       Contributor : contributor_type
 
-          Contributor ..&gt; ContributorType : contributor_type
+          Contributor --|&gt; ContributorType : contributor_type
 
       Contributor : credit_name
 

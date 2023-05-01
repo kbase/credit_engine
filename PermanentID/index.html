@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kbase.github.io/credit_engine/PermanentID/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.6" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.8" name="generator"/>
 <title>Class: PermanentID - credit-engine</title>
 <link href="../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
@@ -197,12 +197,16 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-permanentid">Class: PermanentID</h1>
-<p>_Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.</p>
-<p>The 'id' field is required; all other fields are optional.</p>
-<p>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.</p>
-<p>DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype</p>
-<p>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/
-_</p>
+<p><em>Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.</em></p>
+<p>__</p>
+<p><em>The 'id' field is required; all other fields are optional.</em></p>
+<p>__</p>
+<p><em>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.</em></p>
+<p>__</p>
+<p><em>DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype</em></p>
+<p>__</p>
+<p><em>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/</em></p>
+<p>__</p>
 <p>URI: <a href="https://github.com/kbase/credit_engine/schema/kbase/linkml/PermanentID">cm:PermanentID</a></p>
 <div class="mermaid"> classDiagram
     class PermanentID
@@ -212,7 +216,7 @@ _</p>
 
       PermanentID : relationship_type
 
-          PermanentID ..&gt; RelationshipType : relationship_type
+          PermanentID --|&gt; RelationshipType : relationship_type
 
 
 </div>
@@ -237,7 +241,7 @@ _</p>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>description of that entity</td>
 <td>direct</td>
 </tr>
 <tr>
