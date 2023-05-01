@@ -33,14 +33,14 @@ jobs:
       name: Lint linkml file
       id: lint_linkml
       run: |
-        poetry run linkml-lint ./schema/kbase/linkml/metadata.yaml --ignore-warnings
+        poetry run linkml-lint ./schema/kbase/linkml/credit_metadata.yaml --ignore-warnings
       continue-on-error: true
     -
       name: Validate kbase sample data against the schema
       id: validate_kbase_data
       run: |
-        poetry run linkml-validate -s schema/kbase/linkml/metadata.yaml sample_data/kbase/10.25982_1722943.yaml
-        poetry run linkml-validate -s schema/kbase/linkml/metadata.yaml sample_data/kbase/10.6084_m9.figshare.12644081.v1.yaml
+        poetry run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.25982_1722943.yaml
+        poetry run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.6084_m9.figshare.12644081.v1.yaml
       continue-on-error: true
     -
       name: poetry run pytest -rP tests/
