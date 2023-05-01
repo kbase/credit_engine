@@ -239,7 +239,7 @@ _</p>
 </tr>
 <tr>
 <td><a href="../title_type/">title_type</a></td>
-<td>0..1 <br/> <a href="../TitleType/">TitleType</a></td>
+<td>1..1 <br/> <a href="../TitleType/">TitleType</a></td>
 <td>a descriptor for the title</td>
 <td>direct</td>
 </tr>
@@ -350,6 +350,7 @@ attributes:
     - DataCite:attributes.title.titleType
     rank: 1000
     range: TitleType
+    required: true
   title_language:
     name: title_language
     description: language that the title is in, as a IETF BCP-47 tag.
@@ -427,6 +428,7 @@ attributes:
     domain_of:
     - Title
     range: TitleType
+    required: true
   title_language:
     name: title_language
     description: language that the title is in, as a IETF BCP-47 tag.
