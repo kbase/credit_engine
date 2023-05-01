@@ -850,15 +850,13 @@ enums:
     permissible_values:
       accepted:
         meaning: DataCite:accepted
-        description: >+
-          The date that the publisher accepted the resource into their system.
-          To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
+        description: |
+          The date that the publisher accepted the resource into their system. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
       available:
         # schema:datePublished
         meaning: DataCite:available
         description: |
-          The date the resource is made publicly available.
-          To indicate the end of an embargo period, use Available.
+          The date the resource is made publicly available. To indicate the end of an embargo period, use Available.
       copyrighted:
         meaning: DataCite:copyrighted
         description: |
@@ -866,8 +864,7 @@ enums:
       collected:
         meaning: DataCite:collected
         description: |
-          The date or date range in which the resource content was collected.
-          To indicate precise or particular timeframes in which research was conducted.
+          The date or date range in which the resource content was collected. To indicate precise or particular timeframes in which research was conducted.
       created:
         meaning: DataCite:created
         description: |
