@@ -28,5 +28,5 @@ jobs:
         run: |
           mkdir -p docs
           touch docs/.nojekyll
-          poetry run gen-doc -d docs schema/kbase/linkml/metadata.yaml
+          poetry run gen-doc -d docs schema/kbase/linkml/credit_metadata.yaml
           poetry run mkdocs gh-deploy

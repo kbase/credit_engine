@@ -39,7 +39,7 @@ poetry run pytest tests/
 
 ## Metadata Schema
 
-The metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/kbase/linkml/metadata.yaml).
+The metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/kbase/linkml/credit_metadata.yaml).
 
 See the [linkml documentation](https://linkml.io/linkml/index.html) for full details on using the linkml format and the related tools.
 
@@ -55,25 +55,25 @@ These assume that you have already run `poetry shell` to activate the credit eng
 
 generate derived files in all formats:
 ```sh
-gen-project -d schema/kbase/ schema/kbase/linkml/metadata.yaml
+gen-project -d schema/kbase/ schema/kbase/linkml/credit_metadata.yaml
 ```
 
 lint the KBase linkml schema file:
 ```sh
-linkml-lint -f terminal schema/kbase/linkml/metadata.yaml
+linkml-lint -f terminal schema/kbase/linkml/credit_metadata.yaml
 ```
 
 validate data (in file `data.yaml`) against the schema:
 ```sh
-linkml-validate -s schema/kbase/linkml/metadata.yaml data.yaml
+linkml-validate -s schema/kbase/linkml/credit_metadata.yaml data.yaml
 ```
 
 generate Python models:
 ```sh
-gen-python schema/kbase/linkml/metadata.yaml > src/metadata.py
+gen-python schema/kbase/linkml/credit_metadata.yaml > src/metadata.py
 ```
 
 generate a schema diagram (can be visualised at yuml.me):
 ```sh
-gen-yuml schema/kbase/linkml/metadata.yaml
+gen-yuml schema/kbase/linkml/credit_metadata.yaml
 ```

@@ -6,10 +6,7 @@
     "comment": [
       "manually mapped from FigShare"
     ],
-    "description": {
-      "format": "text",
-      "content": "Shotgun metagenome of the Amberjack Blue Hole water column at 106 m depth sampled in May 2019. Sequencing performed on an Illumina MiSeq with a 2 x 300 bp paired-end protocol."
-    },
+    "description": "Shotgun metagenome of the Amberjack Blue Hole water column at 106 m depth sampled in May 2019. Sequencing performed on an Illumina MiSeq with a 2 x 300 bp paired-end protocol.",
     "identifier": "DOI:10.6084/m9.figshare.12644048.v1",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "resource_type": "dataset",

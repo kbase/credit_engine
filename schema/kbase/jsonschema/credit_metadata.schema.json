@@ -2,7 +2,7 @@
     "$defs": {
         "Contributor": {
             "additionalProperties": false,
-            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'person' or 'organization', and\na 'name'.\n\nThe 'credit_name' field is used to store the name of a person as it would appear in\na citation. If there is no 'credit_name' supplied, the 'name' field would be used\nin citations.\nFor example:\n  name:         Hubert George Wells\n  credit_name:  Wells, HG\n\n  name:         Alexandria Ocasio-Cortez\n  credit_name:  Ocasio-Cortez, A\n\n  name:         Helena Bonham Carter\n  credit_name:  Bonham Carter, H\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing the\nappropriate roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\nCRediT contributor role taxonomy: https://credit.niso.org",
+            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'Person' or 'Organization', and\na 'name'.\n\nThe 'credit_name' field is used to store the name of a person as it would appear in\na citation. If there is no 'credit_name' supplied, the 'name' field would be used\nin citations.\nFor example:\n  name:         Hubert George Wells\n  credit_name:  Wells, HG\n\n  name:         Alexandria Ocasio-Cortez\n  credit_name:  Ocasio-Cortez, A\n\n  name:         Helena Bonham Carter\n  credit_name:  Bonham Carter, H\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing the\nappropriate roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\nCRediT contributor role taxonomy: https://credit.niso.org",
             "properties": {
                 "affiliations": {
                     "description": "list of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).",
@@ -25,7 +25,7 @@
                 },
                 "contributor_type": {
                     "$ref": "#/$defs/ContributorType",
-                    "description": "must be either 'person' or 'organization'"
+                    "description": "must be either 'Person' or 'Organization'"
                 },
                 "credit_name": {
                     "description": "for a person, how the name should appear in a citation.",
@@ -87,8 +87,8 @@
         "ContributorType": {
             "description": "The type of contributor being represented",
             "enum": [
-                "person",
-                "organization"
+                "Person",
+                "Organization"
             ],
             "title": "ContributorType",
             "type": "string"
@@ -119,8 +119,8 @@
                     "type": "array"
                 },
                 "description": {
-                    "$ref": "#/$defs/FormattedText",
-                    "description": "A brief description or abstract for the resource being represented."
+                    "description": "A brief description or abstract for the resource being represented.",
+                    "type": "string"
                 },
                 "funding": {
                     "description": "funding sources for the resource.",
@@ -146,8 +146,8 @@
                     "type": "array"
                 },
                 "repository": {
-                    "description": "online repository for a dataset.",
-                    "type": "string"
+                    "$ref": "#/$defs/Organization",
+                    "description": "online repository for a dataset."
                 },
                 "resource_type": {
                     "$ref": "#/$defs/ResourceType",
@@ -168,7 +168,6 @@
             "required": [
                 "identifier",
                 "resource_type",
-                "repository",
                 "titles"
             ],
             "title": "CreditMetadata",
@@ -243,45 +242,25 @@
             "title": "EventType",
             "type": "string"
         },
-        "FormattedText": {
-            "additionalProperties": false,
-            "description": "some text and a specification of the text type",
-            "properties": {
-                "format": {
-                    "$ref": "#/$defs/TextFormat",
-                    "description": "the format of the text"
-                },
-                "text": {
-                    "description": "the text itself",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "format",
-                "text"
-            ],
-            "title": "FormattedText",
-            "type": "object"
-        },
         "FundingReference": {
             "additionalProperties": false,
             "description": "Represents a funding source for a resource, including the funding body and the grant awarded.\n\nThe 'funder_name' field is required; all others are optional.\n\nRecommended resources for organization identifiers include:\n  - Research Organization Registry, http://ror.org\n  - International Standard Name Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\n\nSome organizations may have a digital object identifier (DOI).",
             "properties": {
-                "award_id": {
-                    "description": "code for the award, assigned by the funder",
-                    "type": "string"
-                },
-                "award_title": {
-                    "description": "title for the award",
-                    "type": "string"
-                },
-                "award_url": {
-                    "description": "URL for the award",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
-                    "type": "string"
-                },
                 "funder": {
-                    "description": "the funder for the grant or award",
+                    "$ref": "#/$defs/Organization",
+                    "description": "the funder for the grant or award"
+                },
+                "grant_id": {
+                    "description": "code for the grant, assigned by the funder",
+                    "type": "string"
+                },
+                "grant_title": {
+                    "description": "title for the grant",
+                    "type": "string"
+                },
+                "grant_url": {
+                    "description": "URL for the grant",
+                    "pattern": "^[a-zA-Z0-9.]+:\\S",
                     "type": "string"
                 }
             },
@@ -303,7 +282,6 @@
                 }
             },
             "required": [
-                "organization_id",
                 "organization_name"
             ],
             "title": "Organization",
@@ -411,15 +389,6 @@
             "title": "ResourceType",
             "type": "string"
         },
-        "TextFormat": {
-            "description": "The format of a text string.",
-            "enum": [
-                "text",
-                "html"
-            ],
-            "title": "TextFormat",
-            "type": "string"
-        },
         "Title": {
             "additionalProperties": false,
             "description": "Represents the title or name of a resource.\n\nThe 'title_string' field is required; if no value is supplied for 'title_type', it\ndefaults to 'title'.\n\nIf the title is in a language other than English, the 'title_type' should be set to\n'translated_title', and the appropriate BCP-47 tag supplied in the 'title_language'\nfield.\n\nNote that the workspace checks that the 'title_language' field adheres to IETF\nBCP-47 syntax rules, but it does not check the validity of the tag.",
@@ -438,7 +407,8 @@
                 }
             },
             "required": [
-                "title"
+                "title",
+                "title_type"
             ],
             "title": "Title",
             "type": "object"
@@ -456,10 +426,34 @@
             "type": "string"
         }
     },
-    "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml/",
+    "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
+    "properties": {
+        "credit_metadata": {
+            "$ref": "#/$defs/CreditMetadata",
+            "description": "the credit metadata itself"
+        },
+        "credit_metadata_schema_version": {
+            "description": "the version of the credit metadata schema used",
+            "type": "string"
+        },
+        "saved_by": {
+            "description": "KBase workspace ID of the user who added this entry",
+            "type": "string"
+        },
+        "timestamp": {
+            "description": "unix timestamp for the addition of this set of credit metadata",
+            "type": "integer"
+        }
+    },
+    "required": [
+        "credit_metadata",
+        "credit_metadata_schema_version",
+        "saved_by",
+        "timestamp"
+    ],
     "title": "credit_metadata",
     "type": "object",
     "version": "0.0.1"
