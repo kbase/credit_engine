@@ -6,13 +6,29 @@
 
 This repo holds the schema and associated scripts used by the KBase Credit Engine.
 
+The KBase Credit Engine is a project aimed at ensuring that appropriate citation information exists for data entering and/or produced by the [KBase software and data science platform](https://kbase.us) to allow credit to be attributed to those who produced the data.
+
 - [KBase Credit Engine](#kbase-credit-engine)
-  - [Installation](#installation)
   - [Metadata Schema](#metadata-schema)
     - [Schema Diagram](#schema-diagram)
+  - [Software Installation](#software-installation)
     - [Useful commands](#useful-commands)
 
-## Installation
+## Metadata Schema
+
+The KBase credit metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/kbase/linkml/credit_metadata.yaml).
+
+See the [linkml documentation](https://linkml.io/linkml/index.html) for full details on using the linkml format and the related tools.
+
+Full schema documentation can be found at [https://kbase.github.io/credit_engine/](https://kbase.github.io/credit_engine/).
+
+### Schema Diagram
+
+Generated using [erdantic](https://erdantic.drivendata.org/stable/)
+
+![KBase metadata schema diagram](schema/kbase/kbase-schema.png "Entity-relationship diagram for KBase metadata schema")
+
+## Software Installation
 
 This repo uses [poetry](https://python-poetry.org/) to manage the python environment and dependencies.
 
@@ -36,18 +52,6 @@ Run tests or other scripts:
 poetry run <command>
 poetry run pytest tests/
 ```
-
-## Metadata Schema
-
-The metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/kbase/linkml/credit_metadata.yaml).
-
-See the [linkml documentation](https://linkml.io/linkml/index.html) for full details on using the linkml format and the related tools.
-
-### Schema Diagram
-
-Generated using [erdantic](https://erdantic.drivendata.org/stable/)
-
-![KBase metadata schema diagram](schema/kbase/kbase-schema.png "Entity-relationship diagram for KBase metadata schema")
 
 ### Useful commands
 

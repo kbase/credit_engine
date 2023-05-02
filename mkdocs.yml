@@ -1,20 +1,20 @@
 ---
-site_name: "credit-engine"
+site_name: "KBase Credit Engine Metadata Schema"
 theme:
   name: material
   palette:
    scheme: slate
-   primary: teal
-   accent: indigo
+   primary: light blue
+   accent: light blue
   features:
     - content.tabs.link
 plugins:
   - search
   - mermaid2
 nav:
-  # - Home: home.md
   - Index: index.md
-  - About: about.md
+  - GitHub Repo: https://github.com/kbase/credit_engine
+
 site_url: https://kbase.github.io/credit_engine
 repo_url: https://github.com/kbase/credit_engine
 

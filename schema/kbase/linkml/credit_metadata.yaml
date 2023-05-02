@@ -6,7 +6,7 @@ version: 0.0.1
 prefixes:
   bioportal: https://bioportal.bioontology.org/ontologies/
   biolink: https://w3id.org/biolink/vocab/
-  cm: https://github.com/kbase/credit_engine/schema/kbase/linkml/
+  kbcm: https://kbase.github.io/credit_engine/
   CRediT: https://credit.niso.org/contributor-roles/
   Crossref: https://crossref.org/
   DataCite: https://purl.org/datacite/v4.4/
