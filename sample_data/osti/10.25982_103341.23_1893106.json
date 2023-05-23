@@ -1,0 +1,34 @@
+[
+  {
+    "authors": [
+      "Shaffer, Michael [Colorado State University Fort Collins] (ORCID:0000000217833709)"
+    ],
+    "country_publication": "United States",
+    "description": "Here we are annotating a E. coli K-12 genome using both DRAM and RAST then using those annotations to build models. The genome is from NCBI RefSeq ID NC_000913.",
+    "doe_contract_number": "DE-SC0019746; DE-SC0021350",
+    "doi": "https://doi.org/10.25982/103341.23/1893106",
+    "entry_date": "2022-10-18T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1893106",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1893106",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1893106",
+    "product_type": "Dataset",
+    "publication_date": "2022-01-05T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "KBase Narrative - kb_DRAM E. coli annotation"
+  }
+]

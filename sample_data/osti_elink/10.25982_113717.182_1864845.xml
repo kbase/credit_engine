@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1864845</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Metagenomes from Eastern Brazilian Amazonian floodplains in the wet and dry seasons</title>
+        <authors>
+            <author role="primary">
+                <first_name>Júlia</first_name>
+                <middle_name>Branão</middle_name>
+                <last_name>Gontijo</last_name>
+                <private_email>juliabrandao@usp.br</private_email>
+                <affiliation_name>Center for Nuclear Energy in Agriculture, University of São Paulo,
+                    Brazil</affiliation_name>
+                <orcid_id>0000000319427242</orcid_id>
+            </author>
+            <author role="primary">
+                <first_name>Andressa</first_name>
+                <last_name>Venturini</last_name>
+                <private_email>andressa.venturini@alumni.usp.br</private_email>
+                <affiliation_name>Center for Nuclear Energy in Agriculture, University of São Paulo,
+                    Brazil; Princeton Institute for International and Regional Studies, USA</affiliation_name>
+                <orcid_id>0000000259011658</orcid_id>
+            </author>
+            <author>
+                <first_name>Aline</first_name>
+                <last_name>da França</last_name>
+                <private_email>alinegifranca@gmail.com</private_email>
+                <affiliation_name>Center for Nuclear Energy in Agriculture, University of São Paulo,
+                    Brazil</affiliation_name>
+                <orcid_id>0000000282323086</orcid_id>
+            </author>
+            <author>
+                <first_name>José</first_name>
+                <last_name>Moura</last_name>
+                <private_email>jmaurosm@gmail.com</private_email>
+                <affiliation_name>Center for Interdisciplinary Formation, Federal University of
+                    Western Pará, Santarém, PA, Brazil</affiliation_name>
+                <orcid_id>0000000349628870</orcid_id>
+            </author>
+            <author>
+                <first_name>Klaus</first_name>
+                <last_name>Nüsslein</last_name>
+                <private_email>nusslein@microbio.umass.edu</private_email>
+                <affiliation_name>Univ. of Massachusetts, Amherst, MA (United States)</affiliation_name>
+                <orcid_id>0000000206634448</orcid_id>
+            </author>
+            <author>
+                <first_name>Brendan</first_name>
+                <last_name>Bohannan</last_name>
+                <private_email>bohannan@uoregon.edu</private_email>
+                <affiliation_name>Univ. of Oregon, Eugene, OR (United States)</affiliation_name>
+                <orcid_id>0000000329071016</orcid_id>
+            </author>
+            <author>
+                <first_name>Jorge</first_name>
+                <last_name>Rodrigues</last_name>
+                <private_email>jmrodriques@ucdavis.edu</private_email>
+                <affiliation_name>Univ. of California, Davis, CA (United States)</affiliation_name>
+                <orcid_id>0000000264466462</orcid_id>
+            </author>
+            <author>
+                <first_name>Siu</first_name>
+                <last_name>Tsai</last_name>
+                <private_email>tsai@cena.usp.br</private_email>
+                <affiliation_name>Center for Nuclear Energy in Agriculture, University of São Paulo,
+                    Brazil</affiliation_name>
+                <orcid_id>0000000237336312</orcid_id>
+            </author>
+        </authors>
+        <related_resource>In review</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>N/A</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Center for Nuclear Energy in Agriculture, University of São Paulo,
+            Brazil; Princeton Institute for International and Regional
+            Studies, USA.</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>04/26/2022</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>Microbial Ecology; Metagenomics; Soil Microbial Ecology; Taxonomic annotation.</keywords>
+        <accession_num></accession_num>
+        <description>Brief sample description&lt;br&gt;
+            Sediment samples from 0 to 10 cm depth were collected in triplicate from two floodplains
+            of the Eastern Brazilian Amazon, one located on the Amazonas River (FP2,
+            2°28&apos;11.2&quot;S 54°38&apos;49.9&quot;W) and the other at the intersection between
+            the Amazonas and the Tapajós rivers (FP3, 2°22&apos;44.8&quot;S 54°44&apos;21.1&quot;W),
+            in the wet and dry seasons (May and October 2016, respectively). Total DNA was extracted
+            in duplicate from 0.25 g of sediment using PowerLyzer PowerSoil DNA Isolation Kit. The
+            metagenomic libraries were constructed using NEBNext Ultra II DNA Library Prep Kit for
+            Illumina and paired-end sequenced (2 x 150 bp) on an Illumina HiSeq 2500 platform.
+            Detailed information about the study sites, sampling, sediment physicochemical
+            properties, DNA extraction and quantification have been previously described by Gontijo
+            et al. (2021).&lt;br&gt;
+            Sample IDs:
+            &lt;ul&gt;
+            &lt;li&gt;M1, M2 and M3: FP2, wet season&lt;/li&gt;
+            &lt;li&gt;M4, M5 and M6: FP3, wet season&lt;/li&gt;
+            &lt;li&gt;M7, M8 and M9: FP2, dry season&lt;/li&gt;
+            &lt;li&gt;M10, M11 and M12: FP3, dry season&lt;/li&gt;
+            &lt;/ul&gt;</description>
+        <site_url>https://kbase.us/n/113717/183/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu170</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/ncomms11257</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-12-385</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <geolocations>
+            <geolocation>
+                <place>FP2</place>
+                <point latitude="-2.469778" longitude="-54.64719" />
+            </geolocation>
+            <geolocation>
+                <place>FP3</place>
+                <point latitude="-2.379111" longitude="-54.73919" />
+            </geolocation>
+        </geolocations>
+        <date_first_submitted>2022-04-27</date_first_submitted>
+        <date_last_submitted>2022-04-27</date_last_submitted>
+        <entry_date>2022-04-26</entry_date>
+        <doi status="COMPLETED">10.25982/113717.182/1864845</doi>
+        <doi_infix>113717.182</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos>This work was supported by the São Paulo Research Foundation
+            (FAPESP, grant numbers #2014/50320-4, #2015/19979-2, #2018/14974-0, #2019/25924-7, and
+            #2019/25931-3), the National Council for Scientific and Technological Development (CNPq,
+            grant numbers #133769/2015-1 and #311008/2016-0), the Coordination for the Improvement
+            of Higher Education Personnel - Brasil (CAPES) - Finance Code 001, and the National
+            Science Foundation - Dimensions of Biodiversity (DEB 1442214). AMV’s research is
+            currently funded by the Fung Global Fellows Program of the Princeton Institute for
+            International and Regional Studies (PIIRS, Princeton University).</othnondoe_contract_nos>
+    </record>
+</records>

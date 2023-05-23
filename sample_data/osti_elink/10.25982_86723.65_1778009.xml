@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1778009</osti_id>
+        <dataset_type></dataset_type>
+        <title>Gulf of Mexico blue hole harbors high levels of novel microbial lineages</title>
+        <authors>
+            <author role="primary">
+                <first_name>Nastassia</first_name>
+                <last_name>Patin</last_name>
+                <affiliation_name>Univ. of Miami, Miami, FL (United States)
+                    University of Miami Rosenstiel School of Marine and Atmospheric Science</affiliation_name>
+                <orcid_id>0000000185227682</orcid_id>
+            </author>
+        </authors>
+        <related_resource>Patin, N.V., Dietrich, Z.A., Stancil, A. et al. Gulf of Mexico blue hole
+            harbors high levels of novel microbial lineages. ISME J (2021).
+            https://doi.org/10.1038/s41396-021-00917-x</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>N/A</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Center for Microbial Dynamics and Infection, Georgia Institute of
+            Technology, Atlanta, GA, USA; School of Biological
+            Sciences, Georgia Institute of Technology, Atlanta, GA, USA; Southwest Fisheries Science
+            Center, National Marine
+            Fisheries Service, National Oceanic and Atmospheric Administration, La Jolla, CA, USA;
+            Cooperative Institute for Marine
+            and Atmospheric Studies, Rosenstiel School of Marine and Atmospheric Science, University
+            of Miami, Miami, FL, USA;
+            Ocean Chemistry and Ecosystems Division, Atlantic Oceanographic and Meteorological
+            Laboratory, National Oceanic and
+            Atmospheric Administration, Miami, FL, USA</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>02/21/2021</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>National Oceanic and Atmospheric Administration Office of Exploration and
+            Research</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>metagenomics, marine microbial communities, MAGs, metagenome-assembled genomes,</keywords>
+        <accession_num></accession_num>
+        <description>xploration of oxygen-depleted marine environments has consistently revealed
+            novel microbial taxa and metabolic capabilities that expand our understanding of
+            microbial evolution and ecology. Marine blue holes are shallow karst formations
+            characterized by low oxygen and high organic matter content. They are logistically
+            challenging to sample, and thus our understanding of their biogeochemistry and microbial
+            ecology is limited. We present a metagenomic and geochemical characterization of
+            Amberjack Hole on the Florida continental shelf (Gulf of Mexico). Dissolved oxygen
+            became depleted at the hole’s rim (32 m water depth), remained low but detectable in an
+            intermediate hypoxic zone (40–75 m), and then increased to a secondary peak before
+            falling below detection in the bottom layer (80–110 m), concomitant with increases in
+            nutrients, dissolved iron, and a series of sequentially more reduced sulfur species.
+            Microbial communities in the bottom layer contained heretofore undocumented levels of
+            the recently discovered phylum Woesearchaeota (up to 58% of the community), along with
+            lineages in the bacterial Candidate Phyla Radiation (CPR). Thirty-one high-quality
+            metagenome-assembled genomes (MAGs) showed extensive biochemical capabilities for sulfur
+            and nitrogen cycling, as well as for resisting and respiring arsenic. One
+            uncharacterized gene associated with a CPR lineage differentiated hypoxic from anoxic
+            zone communities. Overall, microbial communities and geochemical profiles were stable
+            across two sampling dates in the spring and fall of 2019. The blue hole habitat is a
+            natural marine laboratory that provides opportunities for sampling taxa with
+            under-characterized but potentially important roles in redox-stratified microbial
+            processes.</description>
+        <site_url>https://kbase.us/n/86723/65/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.6084/m9.figshare.12644045.v1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsIdenticalTo</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41396-021-00917-x</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.6084/m9.figshare.12644081.v1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsIdenticalTo</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.6084/m9.figshare.12644042.v1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsIdenticalTo</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.6084/m9.figshare.12644048.v1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsIdenticalTo</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.6084/m9.figshare.12644018.v3</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsIdenticalTo</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.6084/m9.figshare.12644060.v1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsIdenticalTo</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.6084/m9.figshare.12644051.v1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsIdenticalTo</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-04-19</date_first_submitted>
+        <date_last_submitted>2021-04-19</date_last_submitted>
+        <entry_date>2021-04-19</entry_date>
+        <doi status="COMPLETED">10.25982/86723.65/1778009</doi>
+        <doi_infix>86723.65</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett, KBase Outreach Team</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

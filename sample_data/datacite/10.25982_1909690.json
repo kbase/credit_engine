@@ -1,0 +1,209 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1909690",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "AC02-05CH11231",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2023-01-19T03:22:30.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            {
+              "name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            }
+          ],
+          "familyName": "Dow",
+          "givenName": "Ellen",
+          "name": "Dow, Ellen",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2079-0260",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+            }
+          ],
+          "familyName": "Wood-Charlson",
+          "givenName": "Elisha",
+          "name": "Wood-Charlson, Elisha",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-9557-7715",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2022",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The KBase Educators Handbook is a community resource for educators teaching biology, computational biology, and bioinformatics using KBase. The Handbook includes supporting documentation on how to join and access community-developed resources for teaching with KBase, best practices, and guidelines on how to contribute to the KBase Educators Community.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/1909690",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1909690",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "AC02-05CH11231",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2022,
+      "published": "2022",
+      "publisher": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-01-19T03:22:30.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "1828227",
+          "relatedIdentifierType": "URL",
+          "relationType": "IsDescribedBy"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "96 KNOWLEDGE MANAGEMENT AND PRESERVATION"
+        },
+        {
+          "subject": "computational biology"
+        },
+        {
+          "subject": "bioinformatics"
+        },
+        {
+          "subject": "data science"
+        },
+        {
+          "subject": "STEM education and learning"
+        },
+        {
+          "subject": "undergraduate education"
+        },
+        {
+          "subject": "workforce development"
+        }
+      ],
+      "suffix": "1909690",
+      "titles": [
+        {
+          "title": "KBase Educators Handbook"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Multimedia",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2023-01-19T03:22:30.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1909690/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xOTA5NjkwPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Eb3csIEVsbGVuPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTIwNzktMDI2MDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V29vZC1DaGFybHNvbiwgRWxpc2hhPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTk1NTctNzcxNTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPktCYXNlIEVkdWNhdG9ycyBIYW5kYm9vazwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWJvcmF0b3J5IChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMjwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+NTkgQkFTSUMgQklPTE9HSUNBTCBTQ0lFTkNFUzwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pjk2IEtOT1dMRURHRSBNQU5BR0VNRU5UIEFORCBQUkVTRVJWQVRJT048L3N1YmplY3Q+CiAgICA8c3ViamVjdD5jb21wdXRhdGlvbmFsIGJpb2xvZ3k8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5iaW9pbmZvcm1hdGljczwvc3ViamVjdD4KICAgIDxzdWJqZWN0PmRhdGEgc2NpZW5jZTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PlNURU0gZWR1Y2F0aW9uIGFuZCBsZWFybmluZzwvc3ViamVjdD4KICAgIDxzdWJqZWN0PnVuZGVyZ3JhZHVhdGUgZWR1Y2F0aW9uPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+d29ya2ZvcmNlIGRldmVsb3BtZW50PC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9Ik9TVEkgSUQiPjE5MDk2OTA8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iRE9FIENvbnRyYWN0IE51bWJlciI+QUMwMi0wNUNIMTEyMzE8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPk11bHRpbWVkaWE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IklzRGVzY3JpYmVkQnkiPjE4MjgyMjc8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+VGhlIEtCYXNlIEVkdWNhdG9ycyBIYW5kYm9vayBpcyBhIGNvbW11bml0eSByZXNvdXJjZSBmb3IgZWR1Y2F0b3JzIHRlYWNoaW5nIGJpb2xvZ3ksIGNvbXB1dGF0aW9uYWwgYmlvbG9neSwKYW5kIGJpb2luZm9ybWF0aWNzIHVzaW5nIEtCYXNlLiBUaGUgSGFuZGJvb2sgaW5jbHVkZXMgc3VwcG9ydGluZyBkb2N1bWVudGF0aW9uIG9uIGhvdyB0byBqb2luIGFuZCBhY2Nlc3MgY29tbXVuaXR5LWRldmVsb3BlZCByZXNvdXJjZXMgZm9yIHRlYWNoaW5nIHdpdGggS0Jhc2UsIGJlc3QgcHJhY3RpY2VzLCBhbmQgZ3VpZGVsaW5lcyBvbiBob3cgdG8gY29udHJpYnV0ZSB0byB0aGUgS0Jhc2UgRWR1Y2F0b3JzIENvbW11bml0eS48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+    },
+    "id": "10.25982/1909690",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/1909690",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

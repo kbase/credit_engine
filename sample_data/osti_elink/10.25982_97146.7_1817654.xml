@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1817654</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Narrative for Bioproject PRJNA623111</title>
+        <authors>
+            <author role="primary">
+                <first_name>Joy</first_name>
+                <last_name>Buongiorno</last_name>
+                <private_email>joy.buongiorno@maryvillecollege.edu</private_email>
+                <affiliation_name>Division of Natural Sciences, Maryville College, Maryville, TN,
+                    USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA</affiliation_name>
+                <orcid_id>0000000274420599</orcid_id>
+            </author>
+        </authors>
+        <related_resource>Flieder, M., Buongiorno, J., Herbold, C.W. et al. Novel taxa of
+            Acidobacteriota implicated in seafloor sulfur cycling. ISME J (2021).
+            https://doi.org/10.1038/s41396-021-00992-0</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>N/A</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Department of Microbiology, University of Tennessee, Knoxville,
+            TN, USA</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>08/21/2021</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>acidobacteriota, MAGs, metagenome-assembled genomes, amplicon sequencing,
+            16SDefulfobacterota, marine sediment, Candidatus</keywords>
+        <accession_num></accession_num>
+        <description>&lt;p&gt;This Narrative is part of a collection used in publications focused on
+            the microbial ecology of fjord sediment in the high Arctic, Svalbard. This paper took a
+            genome-centric approach to uncover novel metabolic capabilities of the Acidobacteriota
+            clade. Metagenomic data was coupled with amplicon sequencing of 16S rRNA and
+            dissimilatory sulfite reductase (dsrB) genes, and transcripts (available under
+            NCBI-Genbank Bioproject PRJNA623111), and gene expression analyses of
+            tetrathionate-amended microcosms.&lt;/p&gt;&lt;p&gt; This Narrative contains the
+            metagenomic assemblies that were constructed within KBase for reproducibility. These
+            include: &lt;ul&gt;&lt;li&gt;stnF metagenome assembly &lt;/li&gt;&lt;li&gt; stnAB
+            metagenome assembly &lt;/li&gt;&lt;li&gt; stnAC metagenome assembly
+            &lt;/li&gt;&lt;/ul&gt;&lt;p&gt; These metagenome assemblies served as the launching
+            point for an additional publication focused on a different clade of bacteria (Buongiorno
+            et al., 2020). Link to that Narrative landing page here. &lt;/p&gt;&lt;p&gt; Please
+            cite: Flieder, Mathias, Joy Buongiorno, Craig W. Herbold, Bela Hausmann, Thomas Rattei,
+            Karen G. Lloyd, Alexander Loy, and Kenneth Wasmund. &quot;Novel taxa of Acidobacteriota
+            implicated in seafloor sulfur cycling.&quot; The ISME Journal (2021): 1-22.&lt;/p&gt;</description>
+        <site_url>https://kbase.us/n/97146/7/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv033</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pone.0234839</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/bts174</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1111/1758-2229.12538</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.3389/fmicb.2019.00849</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu170</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/2049-2618-2-26</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.213959.116</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.1923</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.186072.114</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/ismej.2014.208</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv638</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/ismej.2011.141</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1126/science.207.4437.1355</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-3-r25</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-08-30</date_first_submitted>
+        <date_last_submitted>2021-09-01</date_last_submitted>
+        <entry_date>2021-08-30</entry_date>
+        <doi status="COMPLETED">10.25982/97146.7/1817654</doi>
+        <doi_infix>97146.7</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett, KBase Outreach Team</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

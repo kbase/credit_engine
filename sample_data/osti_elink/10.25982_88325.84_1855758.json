@@ -1,0 +1,131 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Colorado State Univ., Fort Collins, CO (United States)",
+        "first_name": "Michael",
+        "last_name": "Shaffer",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "michael.t.shaffer@colostate.edu",
+        "role": "primary"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "4235062084",
+    "contract_nos": "TBD",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-12-13",
+    "date_last_submitted": "2022-12-13",
+    "description": "<h1> DRAM example narrative </h1>\r\nDRAM on KBase let's anyone run annotations using DRAM in the cloud. DRAM is an annotation tool that can annotate bacterial, archaeal and viral genomes and distills those annotatios into represetations of the functional genomic potential of those organisms. If you want to read more about DRAM you can check out the GitHub, wiki and journal article.\r\n\r\n<h1> DRAM annotate assemblies </h1>\r\nIn KBase Assembly objects contain nucleotide sequences from genomes or metagenomes. DRAM can predict genes and annotate their function from KBase Assembly objects which may be microbial isolate genomes, metagenome assembled genomes or metagenomes. This is done with the Annotate and Distill Assemblies with DRAM app. This app can also anntoate AssemblySet objects which contain collection of Assembly objects. It also generates a Genome object and a GenomeSet object which can be used for further analysis with other KBase apps. The full annotations and other DRAM files are also available for download in the app.",
+    "doi": "10.25982/88325.84/1855758",
+    "doi_infix": "88325.84",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-03-21",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "DRAM, genome annotation",
+    "language": "English",
+    "originating_research_org": "Colorado State Univ., Fort Collins, CO (United States)",
+    "osti_id": 1855758,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2021-12-10",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.3389/fgene.2015.00119",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkaa621",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/s12864-018-5221-9",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.7717/peerj.985",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1042/BJ20091328",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1007/s10142-015-0433-4",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkaa1143",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1672",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Michael Shaffer, Mikayla A Borton, Ben Bolduc, Parsa Ghadermazi, Janaka N Edirisinghe, Jos\u00e9 P Faria, Christopher S Miller, Siu Hung Joshua Chan, Matt B Sullivan, Christopher S Henry, Kelly C. Wrighton\r\nbioRxiv 2022.03.13.484145; doi: https://doi.org/10.1101/2022.03.13.484145",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/88325/84/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "DRAM example narrative",
+    "work_authorization_number": ""
+  }
+]

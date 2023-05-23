@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1608940</osti_id>
+        <dataset_type>SM</dataset_type>
+        <title>Make the Most Out of Genome Announcements with KBase</title>
+        <authors>
+            <author role="primary">
+                <first_name>Benjamin</first_name>
+                <middle_name>H</middle_name>
+                <last_name>Allen</last_name>
+                <private_email>allenbh@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>000000026325859X</orcid_id>
+            </author>
+            <author>
+                <first_name>Miriam</first_name>
+                <middle_name>L</middle_name>
+                <last_name>Land</last_name>
+                <private_email>landml@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000171020031</orcid_id>
+            </author>
+            <author>
+                <first_name>Elisha</first_name>
+                <middle_name>M</middle_name>
+                <last_name>Wood-Charlson</last_name>
+                <private_email>elishawc@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000195577715</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>DE-AC02-05CH11231</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United
+            States); DOE Systems Biology Knowledgebase (KBase)</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>04/06/2020</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)
+            (SC-23)</sponsor_org>
+        <subject_categories_code>96 KNOWLEDGE MANAGEMENT AND PRESERVATION; 59 BASIC BIOLOGICAL
+            SCIENCES</subject_categories_code>
+        <keywords>genome; genomics; data science; assembly; annotation; comparative genomics;
+            publication</keywords>
+        <accession_num></accession_num>
+        <description>Genomics is a dynamic field driven by new technology, massive growth in data,
+            and changes in how scientists share knowledge. This brings new challenges for
+            researchers looking to maximize the impact of their science and ensure the longevity of
+            their data. These changes are especially relevant for the practice of publishing genome
+            announcements. Genome announcements are meant to share and promote newly sequenced
+            organisms with the larger scientific community. A few decades ago, genome announcements
+            were highly anticipated hallmarks of novel science. But, what was once a publishing coup
+            is now an every day event. It is harder and harder to keep abreast of all the genomes
+            that have been sequenced and promote your own new genomes to get the attention and
+            recognition of your research community. Fortunately, KBase can help construct genomes
+            from your sequencing data, generate reports for your announcement, and promote your data
+            to your research community.</description>
+        <site_url>https://www.kbase.us/genome-announcements-with-kbase/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1002/cpmc.37</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2020-04-10</date_first_submitted>
+        <date_last_submitted>2020-12-01</date_last_submitted>
+        <entry_date>2020-04-10</entry_date>
+        <doi status="COMPLETED">10.25982/1608940</doi>
+        <doi_infix></doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson</contact_name>
+        <contact_org>KBase</contact_org>
+        <contact_email>elishawc@lbl.gov</contact_email>
+        <contact_phone></contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

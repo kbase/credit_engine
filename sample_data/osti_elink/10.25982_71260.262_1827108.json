@@ -1,0 +1,159 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Subsurface Insights, LLC",
+        "first_name": "Rebecca",
+        "last_name": "Rubinstein",
+        "middle_name": "L",
+        "orcid_id": "0000000181426713",
+        "private_email": "rebecca.rubinstein@subsurfaceinsights.com"
+      },
+      {
+        "affiliation_names": "Colorado State Univ., Fort Collins, CO (United States)",
+        "first_name": "Mikayla",
+        "last_name": "Borton",
+        "middle_name": "",
+        "orcid_id": "0000000180374253",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Subsurface Insights, LLC",
+        "first_name": "Haiyan",
+        "last_name": "Zhou",
+        "middle_name": "",
+        "orcid_id": "000000031569532X",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Colorado State Univ., Fort Collins, CO (United States)",
+        "first_name": "Michael",
+        "last_name": "Shaffer",
+        "middle_name": "",
+        "orcid_id": "0000000217833709",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+        "first_name": "David",
+        "last_name": "Hoyt",
+        "middle_name": "",
+        "orcid_id": "000000022857719X",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+        "first_name": "James",
+        "last_name": "Stegen",
+        "middle_name": "",
+        "orcid_id": "0000000191357424",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "first_name": "Christopher",
+        "last_name": "Henry",
+        "middle_name": "",
+        "orcid_id": "0000000180589123",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Colorado State Univ., Fort Collins, CO (United States)",
+        "first_name": "Kelly",
+        "last_name": "Wrighton",
+        "middle_name": "",
+        "orcid_id": "0000000304344217",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Subsurface Insights, LLC",
+        "first_name": "Roelof",
+        "last_name": "Versteeg",
+        "middle_name": "",
+        "orcid_id": "0000000267671082",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson",
+    "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+    "contact_phone": "808-286-9547",
+    "contract_nos": "DE-SC0019619; DE-SC0018020;",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2021-10-25",
+    "date_last_submitted": "2021-10-27",
+    "description": "Motivation: Nutrient and contaminant behavior in the subsurface are governed by multiple coupled hydrobiogeochemical processes which occur across different temporal and spatial scales. Accurate description of macroscopic system behavior requires accounting for the effects of microscopic and especially microbial processes. Microbial processes mediate precipitation and dissolution and change aqueous geochemistry, all of which impacts macroscopic system behavior. As `omics data describing microbial processes is increasingly affordable and available, novel methods for using this data quickly and effectively for improved ecosystem models are needed. Results: We propose a workflow (`Omics to Reactive Transport \u2013 ORT) for utilizing metagenomic and environmental data to describe the effect of microbiological processes in macroscopic reactive transport models. This workflow utilizes and couples two open-source software packages: KBase (a software platform for systems biology) and PFLOTRAN (a reactive transport modeling code). We describe the architecture of ORT and demonstrate an implementation using metagenomic and geochemical data from a river system. Our demonstration uses microbiological drivers of nitrification and denitrification to predict nitrogen cycling patterns which agree with those provided with generalized stoichiometries. While our example uses data from a single measurement, our workflow can be applied to spatiotemporal metagenomic datasets to allow for iterative coupling between KBASE and PFLOTRAN. Live, interactive models, which incorporate the results from this narrative into a PFLOTRAN simulation, are available (without login) at https://pflotranmodeling.paf.subsurfaceinsights.com/pflotran-simple-model/.",
+    "doi": "10.25982/71260.262/1827108",
+    "doi_infix": "71260.262",
+    "doi_status": "COMPLETED",
+    "entry_date": "2021-10-25",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1827108,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2021-03-12",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-6-r69",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/71260/262/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "",
+    "title": "Omics-to-Reactive-Transport (ORT): A workflow linking genome-scale metabolic models with reactive transport codes",
+    "work_authorization_number": ""
+  }
+]

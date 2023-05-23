@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1855758</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>DRAM example narrative</title>
+        <authors>
+            <author role="primary">
+                <first_name>Michael</first_name>
+                <last_name>Shaffer</last_name>
+                <private_email>michael.t.shaffer@colostate.edu</private_email>
+                <affiliation_name>Colorado State Univ., Fort Collins, CO (United States)</affiliation_name>
+            </author>
+        </authors>
+        <related_resource>Michael Shaffer, Mikayla A Borton, Ben Bolduc, Parsa Ghadermazi, Janaka N
+            Edirisinghe, José P Faria, Christopher S Miller, Siu Hung Joshua Chan, Matt B Sullivan,
+            Christopher S Henry, Kelly C. Wrighton
+            bioRxiv 2022.03.13.484145; doi: https://doi.org/10.1101/2022.03.13.484145</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>TBD</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Colorado State Univ., Fort Collins, CO (United States)</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>12/10/2021</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>DRAM, genome annotation</keywords>
+        <accession_num></accession_num>
+        <description>&lt;h1&gt; DRAM example narrative &lt;/h1&gt;
+            DRAM on KBase let&apos;s anyone run annotations using DRAM in the cloud. DRAM is an
+            annotation tool that can annotate bacterial, archaeal and viral genomes and distills
+            those annotatios into represetations of the functional genomic potential of those
+            organisms. If you want to read more about DRAM you can check out the GitHub, wiki and
+            journal article.
+
+            &lt;h1&gt; DRAM annotate assemblies &lt;/h1&gt;
+            In KBase Assembly objects contain nucleotide sequences from genomes or metagenomes. DRAM
+            can predict genes and annotate their function from KBase Assembly objects which may be
+            microbial isolate genomes, metagenome assembled genomes or metagenomes. This is done
+            with the Annotate and Distill Assemblies with DRAM app. This app can also anntoate
+            AssemblySet objects which contain collection of Assembly objects. It also generates a
+            Genome object and a GenomeSet object which can be used for further analysis with other
+            KBase apps. The full annotations and other DRAM files are also available for download in
+            the app.</description>
+        <site_url>https://kbase.us/n/88325/84/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.3389/fgene.2015.00119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkaa621</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/s12864-018-5221-9</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.7717/peerj.985</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1042/BJ20091328</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1007/s10142-015-0433-4</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkaa1143</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1672</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2022-12-13</date_first_submitted>
+        <date_last_submitted>2022-12-13</date_last_submitted>
+        <entry_date>2022-03-21</entry_date>
+        <doi status="COMPLETED">10.25982/88325.84/1855758</doi>
+        <doi_infix>88325.84</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

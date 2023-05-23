@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1722943</osti_id>
+        <dataset_type>SM</dataset_type>
+        <title>2020 Multiscale Microbial Dynamics Modeling Course</title>
+        <authors>
+            <author>
+                <first_name>Ellen</first_name>
+                <middle_name>G</middle_name>
+                <last_name>Dow</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000220790260</orcid_id>
+            </author>
+            <author>
+                <first_name>Elisha</first_name>
+                <middle_name>M</middle_name>
+                <last_name>Wood-Charlson</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000195577715</orcid_id>
+            </author>
+            <author>
+                <first_name>Nancy</first_name>
+                <last_name>Hess</last_name>
+                <affiliation_name>Pacific Northwest National Lab. (PNNL), Richland, WA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000289309500</orcid_id>
+            </author>
+            <author>
+                <first_name>Timothy</first_name>
+                <last_name>Scheibe</last_name>
+                <affiliation_name>Pacific Northwest National Lab. (PNNL), Richland, WA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000288645772</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>AC02-05CH11231; AC05-76RL01830; AC02-05CH11231</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United
+            States); DOE Systems Biology Knowledgebase
+            (KBase); Environmental Molecular Sciences Laboratory (EMSL), Richland, WA (United
+            States); Pacific Northwest National
+            Laboratory (PNNL), Richland, WA (United States); Joint Genome Institute (JGI), Berkeley,
+            CA (United States)</originating_research_org>
+        <availability></availability>
+        <collaboration_names>Worldwide Hydrobiogeochemical Observation Network for Dynamic River
+            Systems (WHONDRS); DOE Environmental Systems Science Data Infrastructure for a Virtual
+            Ecosystem (ESS-DIVE); Subsurface Biogeochemical Research (SBR)</collaboration_names>
+        <publication_date>2020 December</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)
+            (SC-23)</sponsor_org>
+        <subject_categories_code>96 KNOWLEDGE MANAGEMENT AND PRESERVATION; 54 ENVIRONMENTAL SCIENCES</subject_categories_code>
+        <keywords>metagenomic; metabolomic; metabolic modeling; reactive transport model; microbial
+            community; watershed ecosystem; data analysis; data science;</keywords>
+        <accession_num></accession_num>
+        <description>The 2020 Multiscale Microbial Dynamics course is adapted from the virtual 2020
+            Mutliscale Microbial Dynamics Summer School that was hosted by Environmental Molecular
+            Sciences Laboratory (EMSL), a U.S. Department of Energy (DOE) science user facility
+            located on the Pacific Northwest National Laboratory (PNNL) campus, in collaboration
+            with the Joint Genome Institute (JGI) and the DOE Systems Biology Knowledgebase (KBase).
+            The course course covers how to incorporate microbial metagenomic and environmental
+            metabolite data from watershed ecosystems into metabolic and community modeling using
+            computational frameworks, such as KBase and PFLOTRAN. The curriculum includes lectures
+            and software and data analysis tutorials. All materials are freely accessible to the
+            community as part of the 2020 Microbial Dynamics Summer School Organization in KBase.</description>
+        <site_url>https://www.kbase.us/multiscale-microbial-dynamics-modeling/</site_url>
+        <date_first_submitted>2020-12-16</date_first_submitted>
+        <date_last_submitted>2020-12-16</date_last_submitted>
+        <entry_date>2020-11-24</entry_date>
+        <doi status="COMPLETED">10.25982/1722943</doi>
+        <doi_infix></doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson, User Engagement Lead</contact_name>
+        <contact_org>KBase</contact_org>
+        <contact_email>elishawc@lbl.gov</contact_email>
+        <contact_phone></contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

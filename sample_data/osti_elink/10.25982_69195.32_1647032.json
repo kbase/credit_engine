@@ -1,0 +1,105 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "CONACYT \u2013 Centro de Investigaci\u00f3n y Desarrollo en Agrobiotecnolog\u00eda Alimentaria, Centro de Investigaci\u00f3n y Desarrollo, A.C., Blvd. Sta. Catarina s/n, Col. Santiago Tlapacoya, 42110, San Agust\u00edn Tlaxiaca, Hidalgo, Mexico",
+        "first_name": "Eneas",
+        "last_name": "Aguirre von Wobeser",
+        "middle_name": "",
+        "orcid_id": "0000000256040525",
+        "private_email": "eneas.aguirre@ciad.mx",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Red de Estudios Moleculares Avanzados, Instituto de Ecolog\u00eda, A.C. Carretera antigua a Coatepec 351, Col. El Haya, 91070, Xalapa, Veracruz, Mexico",
+        "first_name": "Alexandro",
+        "last_name": "Alfonso-S\u00e1nchez",
+        "middle_name": "",
+        "orcid_id": "0000000270102032",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "CONACYT \u2013 Escuela Nacional de Estudios Superiores, Laboratorio Nacional de An\u00e1lisis y S\u00edntesis Ecol\u00f3gica, Universidad Nacional Aut\u00f3noma de M\u00e9xico, Antigua Carretera a P\u00e1tzcuaro 8701, Col. Ex-Hacienda de San Jos\u00e9 de La Huerta, 58190, Morelia, Michoac\u00e1n, Mexico",
+        "first_name": "Alfonso",
+        "last_name": "M\u00e9ndez-Bravo",
+        "middle_name": "",
+        "orcid_id": "0000000209915464",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Red de Estudios Moleculares Avanzados, Instituto de Ecolog\u00eda, A.C. Carretera antigua a Coatepec 351, Col. El Haya, 91070, Xalapa, Veracruz, Mexico",
+        "first_name": "Fr\u00e9d\u00e9rique",
+        "last_name": "Reverchon",
+        "middle_name": "",
+        "orcid_id": "0000000258647494",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zach Crockett, KBase Outreach Team",
+    "contact_org": "Oak Ridge National Laboratory",
+    "contact_phone": "",
+    "contract_nos": "tbd",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2021-06-24",
+    "date_last_submitted": "2021-06-24",
+    "description": "Bark is a permanent surface for microbial colonization at the interface of trees and the surrounding air. However, little is known about the microbial communities harbored on these tissues. Studies on bark microbial ecology show a dominance of bacteria from a few phyla. Bark microbial communities of avocado (Persea americana) could have implications for tree health, as a first barrier for defense against certain pests and diseases in this economically important species. We used shotgun metagenomic sequencing to analyze the bark microbial communities of avocado trees from two orchards, and compared one of them to rhizospheric soil. Our results show that the microbial communities of avocado bark have a well-defined taxonomic structure, with consistent patterns of abundance of bacteria, fungi and archaea, even in trees from two different locations. Bacteria in avocado bark were dominated by Proteobacteria (particularly Alphaproteobacteria), Actinobacteria and Bacteroidetes, consistently with bark communities in other trees. Fungal members were dominated by Ascomycota and Basidiomycota, while most Archaea in bark were Euryarchaeota. We can conclude that avocado bark is a well-defined environment, providing niches for specific taxonomic groups. The present in-depth characterization of bark microbial communities can form a basis for their future manipulation for agronomical purposes.",
+    "doi": "10.25982/69195.32/1647032",
+    "doi_infix": "69195.32",
+    "doi_status": "COMPLETED",
+    "entry_date": "2020-08-11",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "metagenomics, taxonomic classification",
+    "language": "English",
+    "originating_research_org": "CONACYT \u2013 Centro de Investigaci\u00f3n y Desarrollo en Agrobiotecnolog\u00eda Alimentaria, Centro de Investigaci\u00f3n y Desarrollo, \r\nA.C., Blvd. Sta. Catarina s/n, Col. Santiago Tlapacoya, 42110, San Agust\u00edn Tlaxiaca, Hidalgo, Mexico",
+    "osti_id": 1647032,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "SEP/CONACyT grant number CB-2014-01-242956",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-01-01",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1093/bioinformatics/btu170",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/ncomms11257",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-12-385",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Aguirre-von-Wobeser, E., Alonso-S\u00e1nchez, A., M\u00e9ndez-Bravo, A. et al. Barks from avocado trees of different geographic locations have consistent microbial communities. Arch Microbiol (2021). https://doi.org/10.1007/s00203-021-02449-6",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/69195/32/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "SEP/CONACyT",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Avocado_Bark_Diversity",
+    "work_authorization_number": ""
+  }
+]

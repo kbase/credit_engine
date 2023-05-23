@@ -1,0 +1,333 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1960315",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "DE-AC05-00OR22725;DE-AC05-00OR22725",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2023-03-09T03:20:33.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            {
+              "name": "Oak Ridge National Laboratory ORNL"
+            }
+          ],
+          "familyName": "Cashman",
+          "givenName": "Mikaela",
+          "name": "Cashman, Mikaela",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Iowa State University"
+            }
+          ],
+          "familyName": "Marsh",
+          "givenName": "Alexis",
+          "name": "Marsh, Alexis",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Oak Ridge National Laboratory ORNL"
+            }
+          ],
+          "familyName": "Cottingham",
+          "givenName": "Bob",
+          "name": "Cottingham, Bob",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0002-2775-3905",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Iowa State University"
+            }
+          ],
+          "familyName": "Cohen",
+          "givenName": "Myra",
+          "name": "Cohen, Myra",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-2443-2425",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2023",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "A systems view in the biological context is a useful approach to study complex and potentially interacting systems. In this narrative (accompanying an associated manuscript), we take a systems view of software tools themselves. Instead of using software as a single tool, we demonstrate how users can approach software with the same mindset as the organisms they study; as a complex system that can be optimized based on one\u2019s environment and goals. We demonstrate this idea with an example KBase narrative showing how application parameters in KBase tools can change how a researcher perceives and interacts with bioinformatics tools while conducting a common experimental scenario. In this scenario we are trying to understand how different chemical compounds in a growth media change the metabolic pathways utilized in Escherichia coli.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/135473.103/1960315",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1960315",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "DE-AC05-00OR22725;DE-AC05-00OR22725",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2023,
+      "published": "2023",
+      "publisher": "U.S. Department of Energy Systems Biology Knowledgebase",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-03-09T03:20:34.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1101/2022.12.20.521257",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-15-225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-9-75",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1672",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-15-225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkp698",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1529/biophysj.107.124784",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.229202",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gks406",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1614",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1101/2022.12.20.521257v1",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/25.17.3389",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-12-120",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/gb-2009-10-6-r69",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1529/biophysj.105.071720",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/srep08365",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/gb-2009-10-6-r69",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkt1226",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btm009",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-9-75",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-12-120",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1007/s00792-012-0482-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [],
+      "suffix": "135473.103/1960315",
+      "titles": [
+        {
+          "title": "KBase Narrative - SOMATA - Motivating Example"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2023-03-09T03:20:34.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1960315/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMzU0NzMuMTAzLzE5NjAzMTU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkNhc2htYW4sIE1pa2FlbGE8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+T2FrIFJpZGdlIE5hdGlvbmFsIExhYm9yYXRvcnkgT1JOTDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TWFyc2gsIEFsZXhpczwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5Jb3dhIFN0YXRlIFVuaXZlcnNpdHk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkNvdHRpbmdoYW0sIEJvYjwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0yNzc1LTM5MDU8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+T2FrIFJpZGdlIE5hdGlvbmFsIExhYm9yYXRvcnkgT1JOTDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Q29oZW4sIE15cmE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMjQ0My0yNDI1PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPklvd2EgU3RhdGUgVW5pdmVyc2l0eTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPktCYXNlIE5hcnJhdGl2ZSAtIFNPTUFUQSAtIE1vdGl2YXRpbmcgRXhhbXBsZTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5VLlMuIERlcGFydG1lbnQgb2YgRW5lcmd5IFN5c3RlbXMgQmlvbG9neSBLbm93bGVkZ2ViYXNlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIzPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdC8+CiAgICA8c3ViamVjdC8+CiAgPC9zdWJqZWN0cz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iT1NUSSBJRCI+MTk2MDMxNTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJET0UgQ29udHJhY3QgTnVtYmVyIj5ERS1BQzA1LTAwT1IyMjcyNTtERS1BQzA1LTAwT1IyMjcyNTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExMDEvMjAyMi4xMi4yMC41MjEyNTc8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEzNzEvam91cm5hbC5wY2JpLjEwMDMxMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjEwNS0xNS0yMjU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjE2NC05LTc1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMTY3MjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni8xNDcxLTIxMDUtMTUtMjI1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9uYXIvZ2twNjk4PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTUyOS9iaW9waHlzai4xMDcuMTI0Nzg0PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTEwMS9nci4yMjkyMDI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci9na3M0MDY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC4xNjE0PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTAxLzIwMjIuMTIuMjAuNTIxMjU3djE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci8yNS4xNy4zMzg5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni8xNDcxLTIxMDUtMTEtMTE5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2LzE0NzEtMjE2NC0xMi0xMjA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2L2diLTIwMDktMTAtNi1yNjk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTA1LTExLTExOTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjE1MjkvYmlvcGh5c2ouMTA1LjA3MTcyMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvc3JlcDA4MzY1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2L2diLTIwMDktMTAtNi1yNjk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci9na3QxMjI2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTA5My9iaW9pbmZvcm1hdGljcy9idG0wMDk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTY0LTktNzU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjE2NC0xMi0xMjA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDA3L3MwMDc5Mi0wMTItMDQ4Mi04PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwMzEyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5BIHN5c3RlbXMgdmlldyBpbiB0aGUgYmlvbG9naWNhbCBjb250ZXh0IGlzIGEgdXNlZnVsIGFwcHJvYWNoIHRvIHN0dWR5IGNvbXBsZXggYW5kIHBvdGVudGlhbGx5IGludGVyYWN0aW5nIHN5c3RlbXMuIEluIHRoaXMgbmFycmF0aXZlIChhY2NvbXBhbnlpbmcgYW4gYXNzb2NpYXRlZCBtYW51c2NyaXB0KSwgd2UgdGFrZSBhIHN5c3RlbXMgdmlldyBvZiBzb2Z0d2FyZSB0b29scyB0aGVtc2VsdmVzLiBJbnN0ZWFkIG9mIHVzaW5nIHNvZnR3YXJlIGFzIGEgc2luZ2xlIHRvb2wsIHdlIGRlbW9uc3RyYXRlIGhvdyB1c2VycyBjYW4gYXBwcm9hY2ggc29mdHdhcmUgd2l0aCB0aGUgc2FtZSBtaW5kc2V0IGFzIHRoZSBvcmdhbmlzbXMgdGhleSBzdHVkeTsgYXMgYSBjb21wbGV4IHN5c3RlbSB0aGF0IGNhbiBiZSBvcHRpbWl6ZWQgYmFzZWQgb24gb25l4oCZcyBlbnZpcm9ubWVudCBhbmQgZ29hbHMuIFdlIGRlbW9uc3RyYXRlIHRoaXMgaWRlYSB3aXRoIGFuIGV4YW1wbGUgS0Jhc2UgbmFycmF0aXZlIHNob3dpbmcgaG93IGFwcGxpY2F0aW9uIHBhcmFtZXRlcnMgaW4gS0Jhc2UgdG9vbHMgY2FuIGNoYW5nZSBob3cgYSByZXNlYXJjaGVyIHBlcmNlaXZlcyBhbmQgaW50ZXJhY3RzIHdpdGggYmlvaW5mb3JtYXRpY3MgdG9vbHMgd2hpbGUgY29uZHVjdGluZyBhIGNvbW1vbiBleHBlcmltZW50YWwgc2NlbmFyaW8uIEluIHRoaXMgc2NlbmFyaW8gd2UgYXJlIHRyeWluZyB0byB1bmRlcnN0YW5kIGhvdyBkaWZmZXJlbnQgY2hlbWljYWwgY29tcG91bmRzIGluIGEgZ3Jvd3RoIG1lZGlhIGNoYW5nZSB0aGUgbWV0YWJvbGljIHBhdGh3YXlzIHV0aWxpemVkIGluIEVzY2hlcmljaGlhIGNvbGkuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4="
+    },
+    "id": "10.25982/135473.103/1960315",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/135473.103/1960315",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

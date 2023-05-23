@@ -1,0 +1,122 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "University of California Berkeley",
+        "first_name": "Kyle",
+        "last_name": "Sander",
+        "middle_name": "",
+        "orcid_id": "0000000259447822",
+        "private_email": "kyle.b.sander@gmail.com",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA",
+        "first_name": "Anthony",
+        "last_name": "Abel",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA",
+        "first_name": "Skyler",
+        "last_name": "Friedline",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA\n\nCurrent Affiliation: Department of Bioengineering, University of San Diego, San Diego, CA",
+        "first_name": "Willam",
+        "last_name": "Sharpless",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA\n\nCurrent Affiliation: Zymergen, Emeryville, CA\nIntroduction",
+        "first_name": "Jeffrey",
+        "last_name": "Skerker",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "first_name": "Adam",
+        "last_name": "Deutschbauer",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA; Department of Chemical & Biomolecular Engineering, University of California, Berkeley. Berkeley, CA",
+        "first_name": "Douglas",
+        "last_name": "Clark",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Center for the Utilization of Biological Engineering in Space, Berkeley, CA\nDepartment of Bioengineering, University of California, Berkeley. Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "first_name": "Adam",
+        "last_name": "Arkin",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson",
+    "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+    "contact_phone": "808-286-9547",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-08-09",
+    "date_last_submitted": "2022-08-09",
+    "description": "Species of Cupriavidus are among the best bioplastic producing microorganisms known, though intracellular poly-hydroxybutyrate (PHB) is made exclusively during unbalanced growth (e.g. nitrogen limitation), a state characterized by poor growth and cellular stress. Much work has been done studying bioplastic production in the model/type strain C. necator H16. We use an RB-TnSeq library of the closely related C. basilensis 4G11 to assess for genes which decouple PHB production from growth state. In this narrative we compute genome-wide protein homology between these two organisms, and generate a synteny plot across the genomes as well.",
+    "doi": "10.25982/123676.7/1880128",
+    "doi_infix": "123676.7",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-08-08",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1880128,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-08-08",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1089/1066527041410319",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/123676/8/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "",
+    "title": "KBase Narrative - Comparing Proteomes of Cupriavidus basilensis 4G11 and Cupriavidus necator H16",
+    "work_authorization_number": ""
+  }
+]

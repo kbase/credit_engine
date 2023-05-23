@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1897514</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>KBase Narrative - O&apos;Toole et al Citricoccus MRA Genome Announcement Analysis
+            Narrative</title>
+        <authors>
+            <author role="primary">
+                <first_name>Bridget</first_name>
+                <middle_name>B</middle_name>
+                <last_name>McGivern</last_name>
+                <private_email>bridget.mcgivern@gmail.com</private_email>
+                <affiliation_name>Colorado State Univ., Fort Collins, CO (United States)</affiliation_name>
+                <orcid_id>0000000190230018</orcid_id>
+            </author>
+            <author>
+                <first_name>Paul</first_name>
+                <last_name>O&apos;Toole</last_name>
+                <affiliation_name>Colorado State Univ., Fort Collins, CO (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Kelly</first_name>
+                <middle_name>C</middle_name>
+                <last_name>Wrighton</last_name>
+                <affiliation_name>Colorado State Univ., Fort Collins, CO (United States)</affiliation_name>
+                <orcid_id>0000000304344217</orcid_id>
+            </author>
+        </authors>
+        <related_resource>Pending publication</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>N/A</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Systems Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>11/09/2022</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>Citricoccus, Agricultural Soil, Microbiome</keywords>
+        <accession_num></accession_num>
+        <description>Members of the genus Citricoccus are recognized as salt tolerant soil
+            microoorganisms. Here we report the metagenome assembled genome of a novel Citricoccus
+            species recoverd from untilled, surface agricultural soils in Western Colorado.</description>
+        <site_url>https://kbase.us/n/130581/14/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1093/nar/gkaa621</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2022-11-15</date_first_submitted>
+        <date_last_submitted>2022-11-15</date_last_submitted>
+        <entry_date>2022-11-09</entry_date>
+        <doi status="COMPLETED">10.25982/130581.14/1897514</doi>
+        <doi_infix>130581.14</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson</contact_name>
+        <contact_org>Lawrence Berkeley National Laboratory (LBNL)</contact_org>
+        <contact_email>EMWOOD-CHARLSON@lbl.gov</contact_email>
+        <contact_phone>808-286-9547</contact_phone>
+        <othnondoe_contract_nos>B.B.M and K.C.W were fully or partially supported by an Early Career
+            Award to K.C.W from the National Science Foundation under Award Number 1750189.</othnondoe_contract_nos>
+    </record>
+</records>

@@ -1,0 +1,44 @@
+[
+  {
+    "authors": [
+      "Dow, Ellen G [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000220790260)",
+      "Wood-Charlson, Elisha M [Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)] (ORCID:0000000195577715)"
+    ],
+    "country_publication": "United States",
+    "description": "The KBase Educators Handbook is a community resource for educators teaching biology, computational biology,\r\nand bioinformatics using KBase. The Handbook includes supporting documentation on how to join and access community-developed resources for teaching with KBase, best practices, and guidelines on how to contribute to the KBase Educators Community.",
+    "doe_contract_number": "AC02-05CH11231",
+    "doi": "https://doi.org/10.25982/1909690",
+    "entry_date": "2023-01-19T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1909690",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1909690",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1909690",
+    "product_type": "Dataset",
+    "publication_date": "2022-07-02T00:00:00Z",
+    "research_orgs": [
+      "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "96 KNOWLEDGE MANAGEMENT AND PRESERVATION",
+      "computational biology",
+      "bioinformatics",
+      "data science",
+      "STEM education and learning",
+      "undergraduate education",
+      "workforce development"
+    ],
+    "title": "KBase Educators Handbook"
+  }
+]

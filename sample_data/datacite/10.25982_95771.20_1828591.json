@@ -178,7 +178,7 @@
       ],
       "isActive": true,
       "language": "en",
-      "metadataVersion": 3,
+      "metadataVersion": 4,
       "partCount": 0,
       "partOfCount": 0,
       "prefix": "10.25982",
@@ -186,50 +186,61 @@
       "published": "2021",
       "publisher": "U.S. Department of Energy Systems Biology Knowledgebase; Argonne National Laboratory (ANL), Argonne, IL (United States); US Department of Energy Systems Biology Knowledgebase",
       "reason": null,
-      "referenceCount": 0,
+      "referenceCount": 10,
       "registered": "2021-11-03T02:34:45.000Z",
       "relatedIdentifiers": [
         {
+          "relatedIdentifier": "10.1111/1751-7915.12461",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1042/bst20160073",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1016/j.sbi.2020.06.004",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1016/j.csbj.2021.03.034",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1021/acs.chemrev.8b00008",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1021/acs.analchem.7b01134",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1002/pmic.200300744",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1038/nbt.4163",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1186/s13321-015-0087-1",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         },
         {
+          "relatedIdentifier": "10.1038/s12276-018-0116-z",
           "relatedIdentifierType": "DOI",
           "relationType": "Cites"
         }
       ],
+      "relatedItems": [],
       "rightsList": [],
       "schemaVersion": "http://datacite.org/schema/kernel-4",
       "sizes": [],
@@ -254,359 +265,14 @@
         "ris": "DATA",
         "schemaOrg": "Dataset"
       },
-      "updated": "2022-05-25T20:59:48.000Z",
+      "updated": "2023-05-17T02:10:48.000Z",
       "url": "https://www.osti.gov/servlets/purl/1828591/",
       "version": null,
       "versionCount": 0,
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi85NTc3MS4yMC8xODI4NTkxPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5IZW5yeSwgQ2hyaXN0b3BoZXI8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtODA1OC05MTIzPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkFyZ29ubmUgTmF0aW9uYWwgTGFib3JhdG9yeTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V2lsc29uLCBNYXJrPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTYzMTctOTAwWDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5EZXBhcnRtZW50IG9mIEJpb2NoZW1pc3RyeSBhbmQgUmVkb3ggQmlvbG9neSBDZW50ZXIsIFVuaXZlcnNpdHkgb2YgTmVicmFza2E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkhhbnNvbiwgQW5kcmV3PC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTI1ODUtOTM0MDwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QWJyYWhhbSwsIFBhdWw8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMjY4NS05MTIzPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkJpb3NjaWVuY2VzIERpdmlzaW9uLCBPYWsgUmlkZ2UgTmF0aW9uYWwgTGFib3JhdG9yeTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TGVvbmcsIEJyeWFuPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTQwNDItMTE2MDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Ib3J0aWN1bHR1cmFsIFNjaWVuY2VzIERlcGFydG1lbnQsIFVuaXZlcnNpdHkgb2YgRmxvcmlkYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TWNDYXJ0eSwgRG9uYWxkPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTg2OTQtNTExNzwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Ib3J0aWN1bHR1cmFsIFNjaWVuY2VzIERlcGFydG1lbnQsIFVuaXZlcnNpdHkgb2YgRmxvcmlkYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QmF0aGUsIFVsc2NoYW48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItMDQ1NC01MDJYPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkhvcnRpY3VsdHVyYWwgU2NpZW5jZXMgRGVwYXJ0bWVudCwgVW5pdmVyc2l0eSBvZiBGbG9yaWRhPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+VGhlIG1vZGVyYXRlbHkgZGVmZmljaWVudCBlbnp5bWU6IENhdGFseXNpcy1yZWxhdGVkIGRhbWFnZSBpbiB2aXZvIGFuZCBpdHMgcmVwYWlyPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U7IEFyZ29ubmUgTmF0aW9uYWwgTGFib3JhdG9yeSAoQU5MKSwgQXJnb25uZSwgSUwgKFVuaXRlZCBTdGF0ZXMpOyBVUyBEZXBhcnRtZW50IG9mIEVuZXJneSBTeXN0ZW1zIEJpb2xvZ3kgS25vd2xlZGdlYmFzZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMTwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+NTkgQkFTSUMgQklPTE9HSUNBTCBTQ0lFTkNFUzwvc3ViamVjdD4KICAgIDxzdWJqZWN0Lz4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODI4NTkxPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk5TRjogSU9TLTE0NDQyMDI7IE5JSDogUjAxR00xMzk5Nzg8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkdlbm9tZS9HZW5ldGljcyBEYXRhPC9yZXNvdXJjZVR5cGU+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+OiAxMC4xMDQyL2JzdDIwMTYwMDczPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+OiAxMC4xMDIxL2Fjcy5jaGVtcmV2LjhiMDAwMDg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj46IDEwLjEwMTYvai5zYmkuMjAyMC4wNi4wMDQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj46IDEwLjEwMDIvcG1pYy4yMDAzMDA3NDQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj46IDEwLjEwMjEvYWNzLmFuYWxjaGVtLjdiMDExMzQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj46IDEwLjEwMzgvczEyMjc2LTAxOC0wMTE2LXo8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj46IDEwLjExMTEvMTc1MS03OTE1LjEyNDYxPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+OiAxMC4xMDM4L25idC40MTYzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+OiAxMC4xMDE2L2ouY3Niai4yMDIxLjAzLjAzNDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjogMTAuMTE4Ni9zMTMzMjEtMDE1LTAwODctMTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5Fbnp5bWVzIGhhdmUgaW4gdml2byBsaWZlc3BhbnMuIEFuYWx5c2lzIG9mIGxpZmVzcGFucyDigJMgbGlmZXRpbWUgdG90YWxzIG9mIGNhdGFseXRpYyB0dXJub3ZlcnMg4oCTIHN1Z2dlc3RzIHRoYXQgbm9uLXN1cnZpdmFibGUgY29sbGF0ZXJhbCBjaGVtaWNhbCBkYW1hZ2UgZnJvbSB0aGUgdmVyeSByZWFjdGlvbnMgdGhhdCBlbnp5bWVzIGNhdGFseXplIGlzIGEgY29tbW9uIGJ1dCB1bmRlcmRpYWdub3NlZCBjYXVzZSBvZiBlbnp5bWUgZGVhdGguIEFuYWx5c2lzIGFsc28gaW1wbGllcyB0aGF0IG1hbnkgZW56eW1lcyBhcmUgbW9kZXJhdGVseSBkZWZpY2llbnQgaW4gdGhhdCB0aGVpciBhY3RpdmUtc2l0ZSByZWdpb25zIGFyZSBub3QgbmF0dXJhbGx5IGFzIGhhcmRlbmVkIGFnYWluc3Qgc3VjaCBjb2xsYXRlcmFsIGRhbWFnZSBhcyB0aGV5IGNvdWxkIGJlLCBsZWF2aW5nIHJvb20gZm9yIGltcHJvdmVtZW50IGJ5IHJhdGlvbmFsIGRlc2lnbiBvciBkaXJlY3RlZCBldm9sdXRpb24uIEVuenltZSBsaWZlc3BhbiBtaWdodCBhbHNvIGJlIGltcHJvdmVkIGJ5IGVuZ2luZWVyaW5nIHN5c3RlbXMgdGhhdCByZXBhaXIgb3RoZXJ3aXNlIGZhdGFsIGFjdGl2ZS1zaXRlIGRhbWFnZSwgb2Ygd2hpY2ggYSBoYW5kZnVsIGFyZSBrbm93biBhbmQgbW9yZSBhcmUgaW5mZXJyZWQgdG8gZXhpc3QuIFVuZm9ydHVuYXRlbHksIHRoZSBkYXRhIG5lZWRlZCB0byBkZXNpZ24gYW5kIGV4ZWN1dGUgc3VjaCBpbXByb3ZlbWVudHMgaXMgbGFja2luZzogdGhlcmUgYXJlIHRvbyBmZXcgbWVhc3VyZW1lbnRzIG9mIGluIHZpdm8gbGlmZXNwYW4sIGFuZCBleGlzdGluZyBpbmZvcm1hdGlvbiBvbiB0aGUgZXh0ZW50LCBuYXR1cmUsIGFuZCBtZWNoYW5pc21zIG9mIGFjdGl2ZS1zaXRlIGRhbWFnZSBhbmQgcmVwYWlyIGR1cmluZyBub3JtYWwgZW56eW1lIG9wZXJhdGlvbiBpcyB0b28gc2NhcmNlLCBhbmVjZG90YWwsIGFuZCBzcGVjdWxhdGl2ZSB0byBhY3Qgb24uIEZvcnR1bmF0ZWx5LCBhZHZhbmNlcyBpbiBwcm90ZW9taWNzLCBtZXRhYm9sb21pY3MsIGNoZW1pbmZvcm1hdGljcywgY29tcGFyYXRpdmUgZ2Vub21pY3MsIGFuZCBzdHJ1Y3R1cmFsIGJpb2NoZW1pc3RyeSBub3cgZW1wb3dlciBhIHN5c3RlbWF0aWMsIGRhdGEtZHJpdmVuIGFwcHJvYWNoIHRvIGlkZW50aWZ5LCBwcmVkaWN0LCBhbmQgdmFsaWRhdGUgaW5zdGFuY2VzIG9mIGFjdGl2ZS1zaXRlIGRhbWFnZSBhbmQgaXRzIHJlcGFpci4gVGhlc2UgY2FwYWJpbGl0aWVzIHdvdWxkIGJlIHByYWN0aWNhbGx5IHVzZWZ1bCBpbiBlbnp5bWUgcmVkZXNpZ24gYW5kIGltcHJvdmVtZW50IG9mIGluLXVzZSBzdGFiaWxpdHksIGFuZCBjb3VsZCBjaGFuZ2UgdGhpbmtpbmcgYWJvdXQgd2hpY2ggZW56eW1lcyBkaWUgeW91bmcgaW4gdml2bywgYW5kIHdoeS48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
-      "xml_data": {
-        "alternateIdentifiers": {
-          "alternateIdentifier": [
-            {
-              "alternateIdentifierType": "OSTI ID",
-              "value": "1828591"
-            },
-            {
-              "alternateIdentifierType": "DOE Contract Number",
-              "value": "NSF: IOS-1444202; NIH: R01GM139978"
-            },
-            {
-              "alternateIdentifierType": "Product Number",
-              "value": "None"
-            }
-          ]
-        },
-        "contributors": null,
-        "creators": {
-          "creator": [
-            {
-              "affiliation": [
-                "Argonne National Laboratory"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Henry, Christopher"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0001-8058-9123"
-                }
-              ]
-            },
-            {
-              "affiliation": [
-                "Department of Biochemistry and Redox Biology Center, University of Nebraska"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Wilson, Mark"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0001-6317-900X"
-                }
-              ]
-            },
-            {
-              "affiliation": [],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Hanson, Andrew"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0003-2585-9340"
-                }
-              ]
-            },
-            {
-              "affiliation": [
-                "Biosciences Division, Oak Ridge National Laboratory"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Abraham,, Paul"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0003-2685-9123"
-                }
-              ]
-            },
-            {
-              "affiliation": [
-                "Horticultural Sciences Department, University of Florida"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Leong, Bryan"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0003-4042-1160"
-                }
-              ]
-            },
-            {
-              "affiliation": [
-                "Horticultural Sciences Department, University of Florida"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "McCarty, Donald"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0001-8694-5117"
-                }
-              ]
-            },
-            {
-              "affiliation": [
-                "Horticultural Sciences Department, University of Florida"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Bathe, Ulschan"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0002-0454-502X"
-                }
-              ]
-            }
-          ]
-        },
-        "dates": null,
-        "descriptions": {
-          "description": [
-            {
-              "content": [
-                "Enzymes have in vivo lifespans. Analysis of lifespans \u2013 lifetime totals of catalytic turnovers \u2013 suggests that non-survivable collateral chemical damage from the very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme death. Analysis also implies that many enzymes are moderately deficient in that their active-site regions are not naturally as hardened against such collateral damage as they could be, leaving room for improvement by rational design or directed evolution. Enzyme lifespan might also be improved by engineering systems that repair otherwise fatal active-site damage, of which a handful are known and more are inferred to exist. Unfortunately, the data needed to design and execute such improvements is lacking: there are too few measurements of in vivo lifespan, and existing information on the extent, nature, and mechanisms of active-site damage and repair during normal enzyme operation is too scarce, anecdotal, and speculative to act on. Fortunately, advances in proteomics, metabolomics, cheminformatics, comparative genomics, and structural biochemistry now empower a systematic, data-driven approach to identify, predict, and validate instances of active-site damage and its repair. These capabilities would be practically useful in enzyme redesign and improvement of in-use stability, and could change thinking about which enzymes die young in vivo, and why."
-              ],
-              "descriptionType": "Abstract",
-              "lang": null
-            }
-          ]
-        },
-        "formats": null,
-        "fundingReferences": null,
-        "geoLocations": null,
-        "identifier": {
-          "identifierType": "DOI",
-          "value": "10.25982/95771.20/1828591"
-        },
-        "language": "en",
-        "publicationYear": "2021",
-        "publisher": {
-          "lang": null,
-          "value": "U.S. Department of Energy Systems Biology Knowledgebase; Argonne National Laboratory (ANL), Argonne, IL (United States); US Department of Energy Systems Biology Knowledgebase"
-        },
-        "relatedIdentifiers": {
-          "relatedIdentifier": [
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1042/bst20160073"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1021/acs.chemrev.8b00008"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1016/j.sbi.2020.06.004"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1002/pmic.200300744"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1021/acs.analchem.7b01134"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1038/s12276-018-0116-z"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1111/1751-7915.12461"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1038/nbt.4163"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1016/j.csbj.2021.03.034"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": ": 10.1186/s13321-015-0087-1"
-            }
-          ]
-        },
-        "relatedItems": null,
-        "resourceType": {
-          "resourceTypeGeneral": "Dataset",
-          "value": "Genome/Genetics Data"
-        },
-        "rightsList": null,
-        "sizes": null,
-        "subjects": {
-          "subject": [
-            {
-              "classificationCode": null,
-              "lang": null,
-              "schemeURI": null,
-              "subjectScheme": null,
-              "value": "59 BASIC BIOLOGICAL SCIENCES",
-              "valueURI": null
-            },
-            {
-              "classificationCode": null,
-              "lang": null,
-              "schemeURI": null,
-              "subjectScheme": null,
-              "value": "",
-              "valueURI": null
-            }
-          ]
-        },
-        "titles": {
-          "title": [
-            {
-              "lang": null,
-              "titleType": null,
-              "value": "The moderately defficient enzyme: Catalysis-related damage in vivo and its repair"
-            }
-          ]
-        },
-        "version": null
-      }
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi85NTc3MS4yMC8xODI4NTkxPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5IZW5yeSwgQ2hyaXN0b3BoZXI8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtODA1OC05MTIzPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkFyZ29ubmUgTmF0aW9uYWwgTGFib3JhdG9yeTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+V2lsc29uLCBNYXJrPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTYzMTctOTAwWDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5EZXBhcnRtZW50IG9mIEJpb2NoZW1pc3RyeSBhbmQgUmVkb3ggQmlvbG9neSBDZW50ZXIsIFVuaXZlcnNpdHkgb2YgTmVicmFza2E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkhhbnNvbiwgQW5kcmV3PC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTI1ODUtOTM0MDwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QWJyYWhhbSwsIFBhdWw8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMjY4NS05MTIzPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkJpb3NjaWVuY2VzIERpdmlzaW9uLCBPYWsgUmlkZ2UgTmF0aW9uYWwgTGFib3JhdG9yeTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TGVvbmcsIEJyeWFuPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTQwNDItMTE2MDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Ib3J0aWN1bHR1cmFsIFNjaWVuY2VzIERlcGFydG1lbnQsIFVuaXZlcnNpdHkgb2YgRmxvcmlkYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TWNDYXJ0eSwgRG9uYWxkPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTg2OTQtNTExNzwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Ib3J0aWN1bHR1cmFsIFNjaWVuY2VzIERlcGFydG1lbnQsIFVuaXZlcnNpdHkgb2YgRmxvcmlkYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QmF0aGUsIFVsc2NoYW48L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItMDQ1NC01MDJYPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkhvcnRpY3VsdHVyYWwgU2NpZW5jZXMgRGVwYXJ0bWVudCwgVW5pdmVyc2l0eSBvZiBGbG9yaWRhPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+VGhlIG1vZGVyYXRlbHkgZGVmZmljaWVudCBlbnp5bWU6IENhdGFseXNpcy1yZWxhdGVkIGRhbWFnZSBpbiB2aXZvIGFuZCBpdHMgcmVwYWlyPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlUuUy4gRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U7IEFyZ29ubmUgTmF0aW9uYWwgTGFib3JhdG9yeSAoQU5MKSwgQXJnb25uZSwgSUwgKFVuaXRlZCBTdGF0ZXMpOyBVUyBEZXBhcnRtZW50IG9mIEVuZXJneSBTeXN0ZW1zIEJpb2xvZ3kgS25vd2xlZGdlYmFzZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMTwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+NTkgQkFTSUMgQklPTE9HSUNBTCBTQ0lFTkNFUzwvc3ViamVjdD4KICAgIDxzdWJqZWN0Lz4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODI4NTkxPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk5TRjogSU9TLTE0NDQyMDI7IE5JSDogUjAxR00xMzk5Nzg8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkdlbm9tZS9HZW5ldGljcyBEYXRhPC9yZXNvdXJjZVR5cGU+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTExMS8xNzUxLTc5MTUuMTI0NjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDQyL2JzdDIwMTYwMDczPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAxNi9qLnNiaS4yMDIwLjA2LjAwNDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMTYvai5jc2JqLjIwMjEuMDMuMDM0PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAyMS9hY3MuY2hlbXJldi44YjAwMDA4PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAyMS9hY3MuYW5hbGNoZW0uN2IwMTEzNDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMDIvcG1pYy4yMDAzMDA3NDQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC40MTYzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9zMTMzMjEtMDE1LTAwODctMTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvczEyMjc2LTAxOC0wMTE2LXo8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+RW56eW1lcyBoYXZlIGluIHZpdm8gbGlmZXNwYW5zLiBBbmFseXNpcyBvZiBsaWZlc3BhbnMg4oCTIGxpZmV0aW1lIHRvdGFscyBvZiBjYXRhbHl0aWMgdHVybm92ZXJzIOKAkyBzdWdnZXN0cyB0aGF0IG5vbi1zdXJ2aXZhYmxlIGNvbGxhdGVyYWwgY2hlbWljYWwgZGFtYWdlIGZyb20gdGhlIHZlcnkgcmVhY3Rpb25zIHRoYXQgZW56eW1lcyBjYXRhbHl6ZSBpcyBhIGNvbW1vbiBidXQgdW5kZXJkaWFnbm9zZWQgY2F1c2Ugb2YgZW56eW1lIGRlYXRoLiBBbmFseXNpcyBhbHNvIGltcGxpZXMgdGhhdCBtYW55IGVuenltZXMgYXJlIG1vZGVyYXRlbHkgZGVmaWNpZW50IGluIHRoYXQgdGhlaXIgYWN0aXZlLXNpdGUgcmVnaW9ucyBhcmUgbm90IG5hdHVyYWxseSBhcyBoYXJkZW5lZCBhZ2FpbnN0IHN1Y2ggY29sbGF0ZXJhbCBkYW1hZ2UgYXMgdGhleSBjb3VsZCBiZSwgbGVhdmluZyByb29tIGZvciBpbXByb3ZlbWVudCBieSByYXRpb25hbCBkZXNpZ24gb3IgZGlyZWN0ZWQgZXZvbHV0aW9uLiBFbnp5bWUgbGlmZXNwYW4gbWlnaHQgYWxzbyBiZSBpbXByb3ZlZCBieSBlbmdpbmVlcmluZyBzeXN0ZW1zIHRoYXQgcmVwYWlyIG90aGVyd2lzZSBmYXRhbCBhY3RpdmUtc2l0ZSBkYW1hZ2UsIG9mIHdoaWNoIGEgaGFuZGZ1bCBhcmUga25vd24gYW5kIG1vcmUgYXJlIGluZmVycmVkIHRvIGV4aXN0LiBVbmZvcnR1bmF0ZWx5LCB0aGUgZGF0YSBuZWVkZWQgdG8gZGVzaWduIGFuZCBleGVjdXRlIHN1Y2ggaW1wcm92ZW1lbnRzIGlzIGxhY2tpbmc6IHRoZXJlIGFyZSB0b28gZmV3IG1lYXN1cmVtZW50cyBvZiBpbiB2aXZvIGxpZmVzcGFuLCBhbmQgZXhpc3RpbmcgaW5mb3JtYXRpb24gb24gdGhlIGV4dGVudCwgbmF0dXJlLCBhbmQgbWVjaGFuaXNtcyBvZiBhY3RpdmUtc2l0ZSBkYW1hZ2UgYW5kIHJlcGFpciBkdXJpbmcgbm9ybWFsIGVuenltZSBvcGVyYXRpb24gaXMgdG9vIHNjYXJjZSwgYW5lY2RvdGFsLCBhbmQgc3BlY3VsYXRpdmUgdG8gYWN0IG9uLiBGb3J0dW5hdGVseSwgYWR2YW5jZXMgaW4gcHJvdGVvbWljcywgbWV0YWJvbG9taWNzLCBjaGVtaW5mb3JtYXRpY3MsIGNvbXBhcmF0aXZlIGdlbm9taWNzLCBhbmQgc3RydWN0dXJhbCBiaW9jaGVtaXN0cnkgbm93IGVtcG93ZXIgYSBzeXN0ZW1hdGljLCBkYXRhLWRyaXZlbiBhcHByb2FjaCB0byBpZGVudGlmeSwgcHJlZGljdCwgYW5kIHZhbGlkYXRlIGluc3RhbmNlcyBvZiBhY3RpdmUtc2l0ZSBkYW1hZ2UgYW5kIGl0cyByZXBhaXIuIFRoZXNlIGNhcGFiaWxpdGllcyB3b3VsZCBiZSBwcmFjdGljYWxseSB1c2VmdWwgaW4gZW56eW1lIHJlZGVzaWduIGFuZCBpbXByb3ZlbWVudCBvZiBpbi11c2Ugc3RhYmlsaXR5LCBhbmQgY291bGQgY2hhbmdlIHRoaW5raW5nIGFib3V0IHdoaWNoIGVuenltZXMgZGllIHlvdW5nIGluIHZpdm8sIGFuZCB3aHkuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4="
     },
     "id": "10.25982/95771.20/1828591",
     "relationships": {
@@ -638,7 +304,48 @@
         }
       },
       "references": {
-        "data": []
+        "data": [
+          {
+            "id": "10.1111/1751-7915.12461",
+            "type": "dois"
+          },
+          {
+            "id": "10.1042/bst20160073",
+            "type": "dois"
+          },
+          {
+            "id": "10.1016/j.sbi.2020.06.004",
+            "type": "dois"
+          },
+          {
+            "id": "10.1016/j.csbj.2021.03.034",
+            "type": "dois"
+          },
+          {
+            "id": "10.1021/acs.chemrev.8b00008",
+            "type": "dois"
+          },
+          {
+            "id": "10.1021/acs.analchem.7b01134",
+            "type": "dois"
+          },
+          {
+            "id": "10.1002/pmic.200300744",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/nbt.4163",
+            "type": "dois"
+          },
+          {
+            "id": "10.1186/s13321-015-0087-1",
+            "type": "dois"
+          },
+          {
+            "id": "10.1038/s12276-018-0116-z",
+            "type": "dois"
+          }
+        ]
       },
       "versionOf": {
         "data": []

@@ -1,0 +1,230 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "San Diego State University",
+        "first_name": "Kiarash",
+        "last_name": "Rastegar",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "krastegar8533@sdsu.edu"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson",
+    "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+    "contact_phone": "808-286-9547",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-09-15",
+    "date_last_submitted": "2022-09-15",
+    "description": "Upon investigating the gut microbiome of mice for microbes related to Polycystic Ovary Syndrome (PCOS), our team found 2 metagenomes that could not be classified using alignment based methods. To further investigate microbial species from these samples, we used common MAGs workflow to create draft genomes which were then later taxonomically classified using GTDB-tk app.",
+    "doi": "10.25982/116829.47/1887425",
+    "doi_infix": "116829.47",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-09-15",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1887425,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-09-14",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1038/s41564-018-0171-1",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/s41564-018-0171-1",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkaa621",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btz848",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btz848",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1101/gr.186072.114",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4229",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/bti054",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkp698",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.229202",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gks406",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nmeth.3176",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/25.17.3389",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-538",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/2049-2618-2-26",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btv638",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4229",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/srep08365",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btv638",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/2049-2618-2-26",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btm009",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-10-421",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkaa621",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pone.0009490",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1007/s00792-012-0482-8",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/116829/47/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "",
+    "title": "KBase Narrative - Mse_Genome_Assembly",
+    "work_authorization_number": ""
+  }
+]

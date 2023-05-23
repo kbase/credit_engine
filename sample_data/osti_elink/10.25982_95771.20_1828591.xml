@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1828591</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>The moderately defficient enzyme: Catalysis-related damage in vivo and its repair</title>
+        <authors>
+            <author>
+                <first_name>Christopher</first_name>
+                <middle_name>Scott</middle_name>
+                <last_name>Henry</last_name>
+                <private_email>chenry@anl.gov</private_email>
+                <affiliation_name>Argonne National Laboratory</affiliation_name>
+                <orcid_id>0000000180589123</orcid_id>
+            </author>
+            <author>
+                <first_name>Mark</first_name>
+                <last_name>Wilson</last_name>
+                <affiliation_name>Department of Biochemistry and Redox Biology Center, University of
+                    Nebraska</affiliation_name>
+                <orcid_id>000000016317900X</orcid_id>
+            </author>
+            <author>
+                <first_name>Andrew</first_name>
+                <last_name>Hanson</last_name>
+                <orcid_id>0000000325859340</orcid_id>
+            </author>
+            <author>
+                <first_name>Paul</first_name>
+                <last_name>Abraham,</last_name>
+                <affiliation_name>Biosciences Division, Oak Ridge National Laboratory</affiliation_name>
+                <orcid_id>0000000326859123</orcid_id>
+            </author>
+            <author>
+                <first_name>Bryan</first_name>
+                <last_name>Leong</last_name>
+                <affiliation_name>Horticultural Sciences Department, University of Florida</affiliation_name>
+                <orcid_id>0000000340421160</orcid_id>
+            </author>
+            <author>
+                <first_name>Donald</first_name>
+                <last_name>McCarty</last_name>
+                <affiliation_name>Horticultural Sciences Department, University of Florida</affiliation_name>
+                <orcid_id>0000000186945117</orcid_id>
+            </author>
+            <author>
+                <first_name>Ulschan</first_name>
+                <last_name>Bathe</last_name>
+                <affiliation_name>Horticultural Sciences Department, University of Florida</affiliation_name>
+                <orcid_id>000000020454502X</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>NSF: IOS-1444202; NIH: R01GM139978</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Systems Biology Knowledgebase; Argonne
+            National Laboratory (ANL), Argonne, IL (United States); US Department of Energy Systems
+            Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>2021/11/02</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords></keywords>
+        <accession_num></accession_num>
+        <description>Enzymes have in vivo lifespans. Analysis of lifespans – lifetime totals of
+            catalytic turnovers – suggests that non-survivable collateral chemical damage from the
+            very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme
+            death. Analysis also implies that many enzymes are moderately deficient in that their
+            active-site regions are not naturally as hardened against such collateral damage as they
+            could be, leaving room for improvement by rational design or directed evolution. Enzyme
+            lifespan might also be improved by engineering systems that repair otherwise fatal
+            active-site damage, of which a handful are known and more are inferred to exist.
+            Unfortunately, the data needed to design and execute such improvements is lacking: there
+            are too few measurements of in vivo lifespan, and existing information on the extent,
+            nature, and mechanisms of active-site damage and repair during normal enzyme operation
+            is too scarce, anecdotal, and speculative to act on. Fortunately, advances in
+            proteomics, metabolomics, cheminformatics, comparative genomics, and structural
+            biochemistry now empower a systematic, data-driven approach to identify, predict, and
+            validate instances of active-site damage and its repair. These capabilities would be
+            practically useful in enzyme redesign and improvement of in-use stability, and could
+            change thinking about which enzymes die young in vivo, and why.</description>
+        <site_url>https://kbase.us/n/95771/20/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1111/1751-7915.12461</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1042/bst20160073</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1016/j.sbi.2020.06.004</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1016/j.csbj.2021.03.034</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1021/acs.chemrev.8b00008</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1021/acs.analchem.7b01134</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1002/pmic.200300744</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/s13321-015-0087-1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s12276-018-0116-z</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-11-02</date_first_submitted>
+        <date_last_submitted>2023-05-16</date_last_submitted>
+        <entry_date>2021-11-02</entry_date>
+        <doi status="COMPLETED">10.25982/95771.20/1828591</doi>
+        <doi_infix>95771.20</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett, KBase Outreach Team</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

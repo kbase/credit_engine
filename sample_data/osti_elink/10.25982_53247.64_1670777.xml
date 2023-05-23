@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1670777</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>A Genomic Catalogue of Earth’s Microbiomes - Introductory KBase Narrative</title>
+        <authors>
+            <author role="primary">
+                <first_name>Stephen</first_name>
+                <last_name>Nayfach</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Simon</first_name>
+                <last_name>Roux</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Rekha</first_name>
+                <last_name>Seshadri</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Daniel</first_name>
+                <last_name>Udwary</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000234910198</orcid_id>
+            </author>
+            <author>
+                <first_name>Neha</first_name>
+                <last_name>Varghese</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Frederik</first_name>
+                <last_name>Schulz</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000249324677</orcid_id>
+            </author>
+            <author>
+                <first_name>Dongying</first_name>
+                <last_name>Wu</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>David</first_name>
+                <last_name>Paez-Espino</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000229395398</orcid_id>
+            </author>
+            <author>
+                <first_name>I-Min</first_name>
+                <last_name>Chen</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000320269798</orcid_id>
+            </author>
+            <author>
+                <first_name>Marcel</first_name>
+                <last_name>Huntemann</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000212843748</orcid_id>
+            </author>
+            <author>
+                <first_name>Krishna</first_name>
+                <last_name>Palaniappan</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Joshua</first_name>
+                <last_name>Ladau</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Supratim</first_name>
+                <last_name>Mukherjee</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000263222271</orcid_id>
+            </author>
+            <author>
+                <first_name>T.B.K.</first_name>
+                <last_name>Reddy</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000208715567</orcid_id>
+            </author>
+            <author>
+                <first_name>Torben</first_name>
+                <last_name>Nielsen</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Edward</first_name>
+                <last_name>Kirton</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>José</first_name>
+                <last_name>P. Faria</last_name>
+                <affiliation_name>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation_name>
+                <orcid_id>0000000193027250</orcid_id>
+            </author>
+            <author>
+                <first_name>Janaka</first_name>
+                <last_name>N. Edirisinghe</last_name>
+                <affiliation_name>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation_name>
+                <orcid_id>000000032493234X</orcid_id>
+            </author>
+            <author>
+                <first_name>Christopher</first_name>
+                <last_name>S. Henry</last_name>
+                <affiliation_name>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation_name>
+                <orcid_id>0000000180589123</orcid_id>
+            </author>
+            <author>
+                <first_name>Sean</first_name>
+                <last_name>P. Jungbluth</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000192658341</orcid_id>
+            </author>
+            <author>
+                <first_name>Dylan</first_name>
+                <last_name>Chivian</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000181898729</orcid_id>
+            </author>
+            <author>
+                <first_name>Paramvir</first_name>
+                <last_name>Dehal</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000158102497</orcid_id>
+            </author>
+            <author>
+                <first_name>Elisha</first_name>
+                <last_name>M. Wood-Charlson</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000195577715</orcid_id>
+            </author>
+            <author>
+                <first_name>Adam</first_name>
+                <last_name>P. Arkin</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000249992931</orcid_id>
+            </author>
+            <author>
+                <first_name>Susannah</first_name>
+                <last_name>Tringe</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000164798427</orcid_id>
+            </author>
+            <author>
+                <first_name>Axel</first_name>
+                <last_name>Visel</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000241307784</orcid_id>
+            </author>
+            <author>
+                <first_name>Tanja</first_name>
+                <last_name>Woyke</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000294855637</orcid_id>
+            </author>
+            <author>
+                <first_name>Nigel</first_name>
+                <last_name>J. Mouncey</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000153801256</orcid_id>
+            </author>
+            <author>
+                <first_name>Natalia</first_name>
+                <last_name>N. Ivanova</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000258029485</orcid_id>
+            </author>
+            <author>
+                <first_name>Nikos</first_name>
+                <last_name>C. Kyrpides</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000261310462</orcid_id>
+            </author>
+            <author>
+                <first_name>Emiley</first_name>
+                <middle_name>A.</middle_name>
+                <last_name>Eloe-Fadrosh</last_name>
+                <private_email>eaeloefadrosh@lbl.gov</private_email>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+                <orcid_id>0000000281621276</orcid_id>
+            </author>
+        </authors>
+        <related_resource>Nayfach, S., Roux, S., Seshadri, R. et al. A genomic catalog of Earth’s
+            microbiomes. Nat Biotechnol (2020). https://doi.org/10.1038/s41587-020-0718-6</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>None</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Joint Genome Institute (JGI)
+            U.S. Department of Energy Systems Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>2020</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>MAGs, metagenome-assembled genomes, metagenomics, metabolic reconstruction,
+            metabolic modeling</keywords>
+        <accession_num></accession_num>
+        <description>The reconstruction of bacterial and archaeal genomes from shotgun metagenomes
+            has enabled unprecedented insights into the ecology and evolution of environmental and
+            host-associated microbiomes. Here we applied this powerful approach to over 10,000
+            metagenomes collected from diverse habitats covering all of Earth’s continents and
+            oceans, human- and animal-host associated microbiomes, engineered environments, and
+            natural and agricultural soils to capture extant microbial metabolic and functional
+            potential. We present a comprehensive catalogue of 52,515 metagenome-assembled genomes
+            representing 12,556 novel candidate species-level operational taxonomic units (OTUs),
+            spanning 135 phyla, which expand the known phylogenetic diversity of Bacteria and
+            Archaea by 44%. We also demonstrate the utility of this collection for secondary
+            metabolite biosynthetic potential and predicting host-virus linkage, which can provide a
+            view into the global distribution of lysogenic viruses. This resource underscores the
+            value of leveraging genome-centric approaches to reveal genomic properties of
+            uncultivated microbes that impact on ecosystem processes.</description>
+        <site_url>https://kbase.us/n/53247/64/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1038/s41587-020-0718-6</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsSupplementTo</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2020-10-26</date_first_submitted>
+        <date_last_submitted>2022-02-18</date_last_submitted>
+        <entry_date>2020-10-07</entry_date>
+        <doi status="COMPLETED">10.25982/53247.64/1670777</doi>
+        <doi_infix>53247.64</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson</contact_name>
+        <contact_org>Lawrence Berkeley National Laboratory (LBNL)</contact_org>
+        <contact_email>EMWOOD-CHARLSON@lbl.gov</contact_email>
+        <contact_phone></contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

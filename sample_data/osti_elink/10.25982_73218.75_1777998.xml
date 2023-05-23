@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1777998</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in MOPS
+            Medium</title>
+        <authors>
+            <author role="primary">
+                <first_name>Jia</first_name>
+                <last_name>Wang</last_name>
+                <private_email>wangj@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000187099709</orcid_id>
+            </author>
+        </authors>
+        <related_resource>Jia Wang, Dana L. Carper, Leah H. Burdick, Him K. Shrestha, Manasa R.
+            Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel
+            J. Doktycz,
+            Formation, characterization and modeling of emergent synthetic microbial communities,
+            Computational and Structural Biotechnology Journal,
+            Volume 19,
+            2021,
+            Pages 1917-1927,
+            ISSN 2001-0370,
+            https://doi.org/10.1016/j.csbj.2021.03.034.</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>AC05-00OR22725</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United
+            States)</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>2021</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>community model, flux balance analysis, bacterial community, synthetic microbial
+            community, plant-microbe interactions</keywords>
+        <accession_num></accession_num>
+        <description>
+            This narrative was used for the 4-member community modeling using MOPS medium
+            for the bacteria isolated from Populus deltoides (PD). 10 bacterial strains isolated
+            from PD were co-cultured as a synthetic microbial community in MOPS minimal medium.
+            After 15 passages there were 4 members survived in MOPS medium.
+
+            The genome of each community member was sequenced and uploaded into KBase for genome
+            annotation and metabolic modeling. To simulate the metabolic interactions among the
+            finally surviving community members, the individual metabolic models of each strain were
+            merged into a compartmentalized community model, and then the community model was
+            gapfilled using MOPS medium. The FBA modeling was performed and the metabolites exchange
+            among community members was proposed.
+
+            The publication by Jia Wang, Dana L. Carper, Leah H. Burdick, Him Shrestha, Manasa
+            Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel
+            J. Doktycz can be found here: &lt;a
+            href=&apos;https://doi.org/10.​1016/​j.​csbj.​2021.​03.​034&apos;&gt;https://doi.org/10.​1016/​j.​csbj.​2021.​03.​034&lt;/a&gt;</description>
+        <site_url>https://kbase.us/n/73218/75/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1529/biophysj.105.071720</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1672</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1529/biophysj.107.124784</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-6-r69</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-6-r69</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1614</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-04-19</date_first_submitted>
+        <date_last_submitted>2021-04-19</date_last_submitted>
+        <entry_date>2021-04-19</entry_date>
+        <doi status="COMPLETED">10.25982/73218.75/1777998</doi>
+        <doi_infix>73218.75</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett, KBase Outreach Team</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>423-506-2084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

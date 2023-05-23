@@ -1,0 +1,110 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "The Ohio State Univ., Columbus, OH (United States)",
+        "first_name": "Benjamin",
+        "last_name": "Bolduc",
+        "middle_name": "",
+        "orcid_id": "0000000324200755",
+        "private_email": "bolduc.10@osu.edu",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Elisha",
+        "last_name": "Wood-Charlson",
+        "middle_name": "",
+        "orcid_id": "0000000195577715",
+        "private_email": "elishawc@lbl.gov"
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Paramvir",
+        "last_name": "Dehal",
+        "middle_name": "",
+        "orcid_id": "0000000158102497",
+        "private_email": "psdehal@lbl.gov"
+      },
+      {
+        "affiliation_names": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "first_name": "Zachary",
+        "last_name": "Crockett",
+        "middle_name": "",
+        "orcid_id": "0000000328714454",
+        "private_email": "crockettzr@ornl.gov"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "elishawc@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson, KBase user engagement lead",
+    "contact_org": "Lawrence Berkeley National Lab",
+    "contact_phone": "",
+    "contract_nos": "AC02-05CH11231, AC02-06CH11357, AC05-00OR22725,",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2020-06-28",
+    "date_last_submitted": "2020-11-27",
+    "description": "This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2.",
+    "doi": "10.25982/59912.37/1635154",
+    "doi_infix": "59912.37",
+    "doi_status": "COMPLETED",
+    "entry_date": "2020-06-28",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "Virus; Genomics; Bioinformatics",
+    "language": "English",
+    "originating_research_org": "Lawrence Livermore National Laboratory (LLNL), Livermore, CA (United States); The Ohio State University; U.S. Department of Energy Systems Biology Knowledgebase; Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States); Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)",
+    "osti_id": 1635154,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-06-28",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1093/bioinformatics/btu153",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/s41587-019-0100-8",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.7717/peerj.985",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.7717/peerj.985",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/59912/37/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER) (SC-23)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Viral Annotation Pipeline in KBase",
+    "work_authorization_number": ""
+  }
+]

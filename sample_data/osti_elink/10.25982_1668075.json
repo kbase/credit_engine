@@ -1,0 +1,71 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase",
+        "first_name": "Ellen",
+        "last_name": "Dow",
+        "middle_name": "",
+        "orcid_id": "0000000220790260",
+        "private_email": "egdow@lbl.gov",
+        "role": "primary"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "elishawc@lbl.gov",
+    "contact_name": "Elisha M Wood-Charlson, KBase User Engagement Lead",
+    "contact_org": "KBase",
+    "contact_phone": "",
+    "contract_nos": "AC02-05CH11231",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2020-12-11",
+    "date_last_submitted": "2022-08-05",
+    "description": "KBase worked with a community of instructors to create a connected workflow that integrates genomics, metagenomics, phylogenetics, and pangenomic concepts in a \u201cchoose your own adventure\u201d framework. Each concept is stand alone, while complementing one another as they flow from one topic to another across concepts. The pace of each workflow can be adjusted with the flexibility of modules that are shareable and allow students to copy and interact with data and analyses.",
+    "doi": "10.25982/1668075",
+    "doi_infix": "",
+    "doi_status": "COMPLETED",
+    "entry_date": "2020-09-28",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "Data science, Education, Training, Genomics, Metagenomics, Phylogenetics, Transcriptomics, Metabolic Modeling",
+    "language": "English",
+    "originating_research_org": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)",
+    "osti_id": 1668075,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-01-01",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.25982/90997.49/1783189",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.25982/90997.49/1783189",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/68286/66/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER). Biological Systems Science Division",
+    "subjects": "",
+    "title": "KBase Educators Overview",
+    "work_authorization_number": ""
+  }
+]

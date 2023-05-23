@@ -1,0 +1,116 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "first_name": "Jia",
+        "last_name": "Wang",
+        "middle_name": "",
+        "orcid_id": "0000000187099709",
+        "private_email": "wangj@ornl.gov",
+        "role": "primary"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett, KBase Outreach Team",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "423-506-2084",
+    "contract_nos": "AC05-00OR22725",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2021-04-19",
+    "date_last_submitted": "2021-04-19",
+    "description": "This narrative was used for the 4-member community modeling using MOPS medium for the bacteria isolated from Populus deltoides (PD). 10 bacterial strains isolated from PD were co-cultured as a synthetic microbial community in MOPS minimal medium. After 15 passages there were 4 members survived in MOPS medium.\r\n\r\nThe genome of each community member was sequenced and uploaded into KBase for genome annotation and metabolic modeling. To simulate the metabolic interactions among the finally surviving community members, the individual metabolic models of each strain were merged into a compartmentalized community model, and then the community model was gapfilled using MOPS medium. The FBA modeling was performed and the metabolites exchange among community members was proposed.\r\n\r\nThe publication by Jia Wang, Dana L. Carper, Leah H. Burdick, Him Shrestha, Manasa Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel J. Doktycz can be found here: <a href='https://doi.org/10.\u200b1016/\u200bj.\u200bcsbj.\u200b2021.\u200b03.\u200b034'>https://doi.org/10.\u200b1016/\u200bj.\u200bcsbj.\u200b2021.\u200b03.\u200b034</a>",
+    "doi": "10.25982/73218.75/1777998",
+    "doi_infix": "73218.75",
+    "doi_status": "COMPLETED",
+    "entry_date": "2021-04-19",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "community model, flux balance analysis, bacterial community, synthetic microbial community, plant-microbe interactions",
+    "language": "English",
+    "originating_research_org": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)",
+    "osti_id": 1777998,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2021-01-01",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1529/biophysj.105.071720",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1672",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1529/biophysj.107.124784",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-6-r69",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-6-r69",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1614",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Jia Wang, Dana L. Carper, Leah H. Burdick, Him K. Shrestha, Manasa R. Appidi, Paul E. Abraham, Collin M. Timm, Robert L. Hettich, Dale A. Pelletier, Mitchel J. Doktycz,\r\nFormation, characterization and modeling of emergent synthetic microbial communities,\r\nComputational and Structural Biotechnology Journal,\r\nVolume 19,\r\n2021,\r\nPages 1917-1927,\r\nISSN 2001-0370,\r\nhttps://doi.org/10.1016/j.csbj.2021.03.034.",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/73218/75/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in MOPS Medium",
+    "work_authorization_number": ""
+  }
+]

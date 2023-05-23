@@ -74,7 +74,7 @@ linkml-validate -s schema/kbase/linkml/credit_metadata.yaml data.yaml
 
 generate Python models:
 ```sh
-gen-python schema/kbase/linkml/credit_metadata.yaml > src/metadata.py
+gen-python schema/kbase/linkml/credit_metadata.yaml > schema/kbase/linkml/credit_metadata.py
 ```
 
 generate a schema diagram (can be visualised at yuml.me):

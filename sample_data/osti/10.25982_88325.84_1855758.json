@@ -1,0 +1,37 @@
+[
+  {
+    "authors": [
+      "Shaffer, Michael [Colorado State Univ., Fort Collins, CO (United States)]"
+    ],
+    "country_publication": "United States",
+    "description": "<h1> DRAM example narrative </h1>\r\nDRAM on KBase let's anyone run annotations using DRAM in the cloud. DRAM is an annotation tool that can annotate bacterial, archaeal and viral genomes and distills those annotatios into represetations of the functional genomic potential of those organisms. If you want to read more about DRAM you can check out the GitHub, wiki and journal article.\r\n\r\n<h1> DRAM annotate assemblies </h1>\r\nIn KBase Assembly objects contain nucleotide sequences from genomes or metagenomes. DRAM can predict genes and annotate their function from KBase Assembly objects which may be microbial isolate genomes, metagenome assembled genomes or metagenomes. This is done with the Annotate and Distill Assemblies with DRAM app. This app can also anntoate AssemblySet objects which contain collection of Assembly objects. It also generates a Genome object and a GenomeSet object which can be used for further analysis with other KBase apps. The full annotations and other DRAM files are also available for download in the app.",
+    "doe_contract_number": "TBD",
+    "doi": "https://doi.org/10.25982/88325.84/1855758",
+    "entry_date": "2022-12-14T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1855758",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1855758",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1855758",
+    "product_type": "Dataset",
+    "publication_date": "2021-12-10T00:00:00Z",
+    "research_orgs": [
+      "Colorado State Univ., Fort Collins, CO (United States)"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "DRAM, genome annotation"
+    ],
+    "title": "DRAM example narrative"
+  }
+]

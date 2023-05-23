@@ -1,0 +1,267 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1924621",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "TBD",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2023-02-22T03:14:23.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            {
+              "name": "MES, Abasaheb Garware College, Pune, India"
+            }
+          ],
+          "familyName": "Rodge",
+          "givenName": "Seema",
+          "name": "Rodge, Seema",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2023",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The genome sequence revealed PHB synthase gene in Natrialba swarupiae. The genome-scale metabolic model was built based on the ModelSEED pipeline using the Build Metabolic Model App in KBase.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/106247.14/1924621",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1924621",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "TBD",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2023,
+      "published": "2023",
+      "publisher": "U.S. Department of Energy Systems Biology Knowledgebase",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2023-02-22T03:14:24.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1093/nar/25.17.3389",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-12-120",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-15-225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-11-119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4163",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-9-75",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1672",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-15-225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/srep08365",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkp698",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkt1226",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1101/gr.229202",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btm009",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gks406",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1614",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-9-75",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2164-12-120",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1007/s00792-012-0482-8",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "PHB synthase, Butanoate metabolism"
+        }
+      ],
+      "suffix": "106247.14/1924621",
+      "titles": [
+        {
+          "title": "KBase Narrative - natrialba"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2023-02-22T03:14:24.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1924621/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMDYyNDcuMTQvMTkyNDYyMTwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Um9kZ2UsIFNlZW1hPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPk1FUywgQWJhc2FoZWIgR2Fyd2FyZSBDb2xsZWdlLCBQdW5lLCBJbmRpYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPktCYXNlIE5hcnJhdGl2ZSAtIG5hdHJpYWxiYTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5VLlMuIERlcGFydG1lbnQgb2YgRW5lcmd5IFN5c3RlbXMgQmlvbG9neSBLbm93bGVkZ2ViYXNlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIzPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+UEhCIHN5bnRoYXNlLCBCdXRhbm9hdGUgbWV0YWJvbGlzbTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xOTI0NjIxPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPlRCRDwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci8yNS4xNy4zMzg5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni8xNDcxLTIxMDUtMTEtMTE5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMzcxL2pvdXJuYWwucGNiaS4xMDAzMTI2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMTg2LzE0NzEtMjE2NC0xMi0xMjA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjEwNS0xNS0yMjU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTA1LTExLTExOTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjQxNjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjE2NC05LTc1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuMTY3MjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTE4Ni8xNDcxLTIxMDUtMTUtMjI1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9zcmVwMDgzNjU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci9na3A2OTg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci9na3QxMjI2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTEwMS9nci4yMjkyMDI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL2Jpb2luZm9ybWF0aWNzL2J0bTAwOTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvbmFyL2drczQwNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjE2MTQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTY0LTktNzU8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMTg2LzE0NzEtMjE2NC0xMi0xMjA8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDA3L3MwMDc5Mi0wMTItMDQ4Mi04PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTM3MS9qb3VybmFsLnBjYmkuMTAwMzEyNjwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5UaGUgZ2Vub21lIHNlcXVlbmNlIHJldmVhbGVkIFBIQiBzeW50aGFzZSBnZW5lIGluIE5hdHJpYWxiYSBzd2FydXBpYWUuIFRoZSBnZW5vbWUtc2NhbGUgbWV0YWJvbGljIG1vZGVsIHdhcyBidWlsdCBiYXNlZCBvbiB0aGUgTW9kZWxTRUVEIHBpcGVsaW5lIHVzaW5nIHRoZSBCdWlsZCBNZXRhYm9saWMgTW9kZWwgQXBwIGluIEtCYXNlLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+"
+    },
+    "id": "10.25982/106247.14/1924621",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/106247.14/1924621",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

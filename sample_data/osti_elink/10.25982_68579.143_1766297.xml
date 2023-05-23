@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1766297</osti_id>
+        <dataset_type></dataset_type>
+        <title>KBase Silver Case Study: Determining Media Formulation Requirements for Isolation of
+            Microbiome Constituents</title>
+        <authors>
+            <author role="primary">
+                <first_name>Jason</first_name>
+                <last_name>Whitham</last_name>
+                <private_email>jmwhitha@ncsu.edu</private_email>
+                <affiliation_name>North Carolina State Univ., Raleigh, NC (United States)</affiliation_name>
+                <orcid_id>0000000326236292</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>none</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>North Carolina State University</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>02/15/2021</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>myxobacteria, miscanthus, silvergrass, microbiome, MAG, metagenome-assembled
+            genome</keywords>
+        <accession_num></accession_num>
+        <description>KBase has powerful tools for extracting microbial genomes from metagenomes and
+            performing phylogenomic analysis and metabolic modeling. These tools can be used to
+            predict key media ingredients for isolating uncultured members of microbiomes. Essential
+            to this process are high-quality genomes extracted from metagenomic assemblies, and
+            Kbase has a tool for assessing the quality of genomes too.
+            Below we identify growth factors for a myxobacteria (&quot;slime bacteria&quot;) yet to
+            be isolated from the rhizosphere of Miscanthus xgiganteus (hybrid of
+            &quot;Silvergrass&quot;), cultivated at the Kellogg Biological Station in Michigan. Data
+            was transferred with Globus from JGI-IMG.
+
+            This narrative and the &quot;KBase Gold Case Study: Can you find Delftia?&quot; make up
+            the Silver and Gold Narrative Set for teaching metagenomics concepts to students in the
+            BIT 477/577 course at North Carolina State University.
+
+            This tutorial will guide the user through the process of extracting and annotating
+            high-quality genomes from a metagenomic data, performing phylogenomic analysis, building
+            a metabolic model, and using these to predict nutrient requirments for growth and
+            isolation of corresponding microbes.</description>
+        <site_url>https://kbase.us/n/68579/143/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/bts174</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu170</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.186072.114</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1672</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.229202</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gks406</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/ncomms11257</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-12-385</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv033</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/25.17.3389</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkp698.</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/2049-2618-2-26</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.213959.116</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.7717/peerj.1165</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1099/ijs.0.063198-0</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.7717/peerj.1165</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/srep08365</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv638</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/2049-2618-2-26</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btm009</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pone.0009490</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1007/s00792-012-0482-8</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-02-19</date_first_submitted>
+        <date_last_submitted>2021-02-23</date_last_submitted>
+        <entry_date>2021-02-19</entry_date>
+        <doi status="COMPLETED">10.25982/68579.143/1766297</doi>
+        <doi_infix>68579.143</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zach Crockett, KBase Outreach Team</contact_name>
+        <contact_org>Oak Ridge National Laboratory</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

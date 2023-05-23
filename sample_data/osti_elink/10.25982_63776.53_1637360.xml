@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1637360</osti_id>
+        <dataset_type></dataset_type>
+        <title>Isolate genomes from &quot;Ecogenomics of groundwater viruses suggests niche
+            differentiation linked to specific environmental tolerance&quot;</title>
+        <authors>
+            <author>
+                <first_name>Ankita</first_name>
+                <last_name>Kothari</last_name>
+            </author>
+            <author>
+                <first_name>Simon</first_name>
+                <last_name>Roux</last_name>
+                <affiliation_name>USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Hanqiao</first_name>
+                <last_name>Zhang</last_name>
+            </author>
+            <author>
+                <first_name>Anatori</first_name>
+                <last_name>Prieto</last_name>
+            </author>
+            <author>
+                <first_name>John-Marc</first_name>
+                <last_name>Chandonia</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Sarah</first_name>
+                <last_name>Spencer</last_name>
+            </author>
+            <author>
+                <first_name>Xiaoqin</first_name>
+                <last_name>Wu</last_name>
+            </author>
+            <author>
+                <first_name>Adam</first_name>
+                <middle_name>M</middle_name>
+                <last_name>Deutschbauer</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Adam</first_name>
+                <middle_name>P</middle_name>
+                <last_name>Arkin</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Eric</first_name>
+                <middle_name>J</middle_name>
+                <last_name>Alm</last_name>
+                <affiliation_name>Massachusetts Inst. of Technology (MIT), Cambridge, MA (United
+                    States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Romy</first_name>
+                <last_name>Chakraborty</last_name>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Aindrila</first_name>
+                <last_name>Mukhopadhyay</last_name>
+            </author>
+        </authors>
+        <related_resource>.Kothari, A. et al. Ecogenomics of Groundwater Phages Suggests Niche
+            Differentiation Linked to Specific Environmental Tolerance. mSystems vol. 6 (2021). doi:
+            10.1128/mSystems.00537-21</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>AC02-05CH11231</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United
+            States)</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>07/06/2020</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code></subject_categories_code>
+        <keywords>Virus; Genome; Biology; Environment</keywords>
+        <accession_num></accession_num>
+        <description>Ecogenomics of groundwater viruses suggests niche differentiation linked to
+            specific environmental tolerance. This Narrative contains data for the 261 ENIGMA
+            isolates described in the paper. See Table S2 for a complete list.</description>
+        <site_url>https://kbase.us/n/63776/35/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu153</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41467-018-07641-9</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-538</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btz848</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu170</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1002195</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.14806/ej.17.1.200</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1089/cmb.2012.0021</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.14806/ej.17.1.200</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btz848</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4229</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4229</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41587-020-0501-8</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pone.0009490</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/mSystems.00537-21</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsSupplementedBy</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-05-06</date_first_submitted>
+        <date_last_submitted>2023-05-16</date_last_submitted>
+        <entry_date>2020-07-06</entry_date>
+        <doi status="COMPLETED">10.25982/63776.53/1637360</doi>
+        <doi_infix>63776.53</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson, KBase User Engagement Lead</contact_name>
+        <contact_org>KBase</contact_org>
+        <contact_email>elishawc@lbl.gov</contact_email>
+        <contact_phone></contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

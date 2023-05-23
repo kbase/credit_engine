@@ -1,0 +1,35 @@
+[
+  {
+    "authors": [
+      "Flynn, Rory [Colorado State University Fort Collins]",
+      "Faria, Jos\u00e9 Pedro Lopes [Argonne National Laboratory ANL] (ORCID:0000000193027250)"
+    ],
+    "country_publication": "United States",
+    "description": "Here we are annotating a P. normanii metagenome assembled genome using both DRAM and RAST then using those annotations to build models. The genome is from NCBI genome ID GCA_000398025.1",
+    "doe_contract_number": "DE-SC0019746; DE-SC0021350",
+    "doi": "https://doi.org/10.25982/128174.5/1893104",
+    "entry_date": "2022-10-18T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1893104",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1893104",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1893104",
+    "product_type": "Dataset",
+    "publication_date": "2022-10-11T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "KBase Narrative - kb_DRAM P. normanii annotation with model"
+  }
+]

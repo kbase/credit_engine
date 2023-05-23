@@ -1,0 +1,158 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Argonne National Laboratory",
+        "first_name": "Christopher",
+        "last_name": "Henry",
+        "middle_name": "Scott",
+        "orcid_id": "0000000180589123",
+        "private_email": "chenry@anl.gov"
+      },
+      {
+        "affiliation_names": "Department of Biochemistry and Redox Biology Center, University of Nebraska",
+        "first_name": "Mark",
+        "last_name": "Wilson",
+        "middle_name": "",
+        "orcid_id": "000000016317900X",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "",
+        "first_name": "Andrew",
+        "last_name": "Hanson",
+        "middle_name": "",
+        "orcid_id": "0000000325859340",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Biosciences Division, Oak Ridge National Laboratory",
+        "first_name": "Paul",
+        "last_name": "Abraham,",
+        "middle_name": "",
+        "orcid_id": "0000000326859123",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Horticultural Sciences Department, University of Florida",
+        "first_name": "Bryan",
+        "last_name": "Leong",
+        "middle_name": "",
+        "orcid_id": "0000000340421160",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Horticultural Sciences Department, University of Florida",
+        "first_name": "Donald",
+        "last_name": "McCarty",
+        "middle_name": "",
+        "orcid_id": "0000000186945117",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Horticultural Sciences Department, University of Florida",
+        "first_name": "Ulschan",
+        "last_name": "Bathe",
+        "middle_name": "",
+        "orcid_id": "000000020454502X",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett, KBase Outreach Team",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "4235062084",
+    "contract_nos": "NSF: IOS-1444202; NIH: R01GM139978",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2021-11-02",
+    "date_last_submitted": "2023-05-16",
+    "description": "Enzymes have in vivo lifespans. Analysis of lifespans \u2013 lifetime totals of catalytic turnovers \u2013 suggests that non-survivable collateral chemical damage from the very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme death. Analysis also implies that many enzymes are moderately deficient in that their active-site regions are not naturally as hardened against such collateral damage as they could be, leaving room for improvement by rational design or directed evolution. Enzyme lifespan might also be improved by engineering systems that repair otherwise fatal active-site damage, of which a handful are known and more are inferred to exist. Unfortunately, the data needed to design and execute such improvements is lacking: there are too few measurements of in vivo lifespan, and existing information on the extent, nature, and mechanisms of active-site damage and repair during normal enzyme operation is too scarce, anecdotal, and speculative to act on. Fortunately, advances in proteomics, metabolomics, cheminformatics, comparative genomics, and structural biochemistry now empower a systematic, data-driven approach to identify, predict, and validate instances of active-site damage and its repair. These capabilities would be practically useful in enzyme redesign and improvement of in-use stability, and could change thinking about which enzymes die young in vivo, and why.",
+    "doi": "10.25982/95771.20/1828591",
+    "doi_infix": "95771.20",
+    "doi_status": "COMPLETED",
+    "entry_date": "2021-11-02",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase; Argonne National Laboratory (ANL), Argonne, IL (United States); US Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1828591,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2021-11-02",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1111/1751-7915.12461",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1042/bst20160073",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1016/j.sbi.2020.06.004",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1016/j.csbj.2021.03.034",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1021/acs.chemrev.8b00008",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1021/acs.analchem.7b01134",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1002/pmic.200300744",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/s13321-015-0087-1",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/s12276-018-0116-z",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/95771/20/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "The moderately defficient enzyme: Catalysis-related damage in vivo and its repair",
+    "work_authorization_number": ""
+  }
+]

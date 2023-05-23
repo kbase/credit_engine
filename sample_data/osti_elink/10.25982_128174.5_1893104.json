@@ -1,0 +1,188 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Colorado State University Fort Collins",
+        "first_name": "Rory",
+        "last_name": "Flynn",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "rmflynn@colostate.edu"
+      },
+      {
+        "affiliation_names": "Argonne National Laboratory ANL",
+        "first_name": "Jos\u00e9",
+        "last_name": "Faria",
+        "middle_name": "Pedro Lopes",
+        "orcid_id": "0000000193027250",
+        "private_email": "jplfaria@gmail.com"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson",
+    "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+    "contact_phone": "808-286-9547",
+    "contract_nos": "DE-SC0019746;DE-SC0021350",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-10-17",
+    "date_last_submitted": "2022-10-17",
+    "description": "Here we are annotating a P. normanii metagenome assembled genome using both DRAM and RAST then using those annotations to build models. The genome is from NCBI genome ID GCA_000398025.1",
+    "doi": "10.25982/128174.5/1893104",
+    "doi_infix": "128174.5",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-10-17",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1893104,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-10-11",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.3389/fgene.2015.00119",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/25.17.3389",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/s12864-018-5221-9",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1042/bj20091328",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1007/s10142-015-0433-4",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkaa1143",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1672",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/srep08365",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkp698",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.229202",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btm009",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gks406",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1007/s00792-012-0482-8",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/128174/5/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "",
+    "title": "KBase Narrative - kb_DRAM P. normanii annotation with model",
+    "work_authorization_number": ""
+  }
+]
