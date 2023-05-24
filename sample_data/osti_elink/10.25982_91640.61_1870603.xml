@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1870603</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>KBase Narrative - Genome-resolved metagenomics reveals novel archaeal and bacterial
+            genomes from Amazonian forest and pasture soils</title>
+        <authors>
+            <author>
+                <first_name>Andressa</first_name>
+                <middle_name>Monteiro</middle_name>
+                <last_name>Venturini</last_name>
+                <private_email>andressa.venturini@alumni.usp.br</private_email>
+                <affiliation_name>Cell and Molecular Biology Laboratory, Center for Nuclear Energy
+                    in Agriculture, University of São Paulo, Piracicaba, SP, Brazil; Princeton
+                    Institute for International and Regional Studies, Princeton University,
+                    Princeton, NJ, USA</affiliation_name>
+                <orcid_id>0000000259011658</orcid_id>
+            </author>
+            <author>
+                <first_name>Júlia</first_name>
+                <middle_name>Brandão</middle_name>
+                <last_name>Gontijo</last_name>
+                <private_email>juliabrandaogontijo@gmail.com</private_email>
+                <affiliation_name>Cell and Molecular Biology Laboratory, Center for Nuclear Energy
+                    in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation_name>
+                <orcid_id>0000000319427242</orcid_id>
+            </author>
+            <author>
+                <first_name>Jéssica</first_name>
+                <middle_name>Adriele</middle_name>
+                <last_name>Mandro</last_name>
+                <private_email>jessica.mandro@usp.br</private_email>
+                <affiliation_name>Cell and Molecular Biology Laboratory, Center for Nuclear Energy
+                    in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation_name>
+                <orcid_id>0000000334540702</orcid_id>
+            </author>
+            <author>
+                <first_name>Fabiana</first_name>
+                <middle_name>daSilva</middle_name>
+                <last_name>Paula</last_name>
+                <private_email>fabianaspaula@gmail.com</private_email>
+                <affiliation_name>Cell and Molecular Biology Laboratory, Center for Nuclear Energy
+                    in Agriculture, University of São Paulo, Piracicaba, SP, Brazil; Department of
+                    Biological Oceanography, Oceanographic Institute, University of São Paulo, São
+                    Paulo, SP, Brazil</affiliation_name>
+                <orcid_id>0000000200101552</orcid_id>
+            </author>
+            <author>
+                <first_name>Caio</first_name>
+                <middle_name>Augusto</middle_name>
+                <last_name>Yoshiura</last_name>
+                <private_email>ca.yoshiura@gmail.com</private_email>
+                <affiliation_name>Cell and Molecular Biology Laboratory, Center for Nuclear Energy
+                    in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation_name>
+                <orcid_id>0000000210166456</orcid_id>
+            </author>
+            <author>
+                <first_name>Aline</first_name>
+                <middle_name>Giovana</middle_name>
+                <last_name>daFrança</last_name>
+                <private_email>alinegifranca@gmail.com</private_email>
+                <affiliation_name>Cell and Molecular Biology Laboratory, Center for Nuclear Energy
+                    in Agriculture, University of São Paulo, Piracicaba, SP, Brazil</affiliation_name>
+                <orcid_id>0000000282323086</orcid_id>
+            </author>
+        </authors>
+        <related_resource>Venturini, A. M. et al. Genome-resolved metagenomics reveals novel
+            archaeal and bacterial genomes from Amazonian forest and pasture soils. Microbial
+            Genomics vol. 8 (2022). doi:10.1099/mgen.0.000853</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>N/A</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Systems Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>05/30/2022</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code></subject_categories_code>
+        <keywords></keywords>
+        <accession_num></accession_num>
+        <description>Genome-resolved metagenomics was applied to recover archaeal and bacterial
+            metagenome-assembled genomes (MAGs) from forest and pasture soils of the Brazilian
+            Eastern Amazon, which were subjected to different soil moisture levels (Venturini et
+            al., 2022).</description>
+        <site_url>https://kbase.us/n/91640/625</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1038/s41564-018-0171-1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41564-018-0171-1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1099/mgen.0.000853</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsSupplementedBy</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btz848</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu170</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.1923</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1016/j.envres.2022.113139</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/225342</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btz848</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.186072.114</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4229</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.3103</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-3-r25</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.3176</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv033</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1099/mgen.0.000853</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-538</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/2049-2618-2-26</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1099/ijs.0.64483-0</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.7717/peerj.1165</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4229</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.3103</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1111/1758-2229.12880</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/225342</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.7717/peerj.1165</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1111/1758-2229.12880</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv638</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/2049-2618-2-26</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-10-421</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1016/j.envres.2022.113139</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-3-r25</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2022-06-01</date_first_submitted>
+        <date_last_submitted>2022-07-28</date_last_submitted>
+        <entry_date>2022-06-01</entry_date>
+        <doi status="COMPLETED">10.25982/91640.61/1870603</doi>
+        <doi_infix>91640.61</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson</contact_name>
+        <contact_org>Lawrence Berkeley National Laboratory (LBNL)</contact_org>
+        <contact_email>EMWOOD-CHARLSON@lbl.gov</contact_email>
+        <contact_phone>808-286-9547</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

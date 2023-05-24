@@ -1,0 +1,50 @@
+[
+  {
+    "authors": [
+      "McLoon, Anna [Sienna College, Loudonville, NY, USA] (ORCID:0000000187210630)",
+      "Awad, Thomas [Sienna College, Loudonville, NY, USA]",
+      "Bogardus, Molly [Sienna College, Loudonville, NY, USA]",
+      "Buono, Meredith [Sienna College, Loudonville, NY, USA]",
+      "Devine, Kaitlyn [Sienna College, Loudonville, NY, USA]",
+      "Draper, Rebecca [Sienna College, Loudonville, NY, USA]",
+      "Femenella, Brianna [Sienna College, Loudonville, NY, USA]",
+      "Gallagher, Hannah [Sienna College, Loudonville, NY, USA]",
+      "Morelock, Laura [Sienna College, Loudonville, NY, USA]",
+      "Razi, Mishal [Sienna College, Loudonville, NY, USA]",
+      "Rennick, Jacqueline [Sienna College, Loudonville, NY, USA]",
+      "Sheridan, Abigail [Sienna College, Loudonville, NY, USA]",
+      "Thibault, Righlee [Sienna College, Loudonville, NY, USA]",
+      "Touchette, Katie [Sienna College, Loudonville, NY, USA]",
+      "Zuchowski, Grace [Sienna College, Loudonville, NY, USA]"
+    ],
+    "country_publication": "United States",
+    "description": "Soil bacteria and endospore forming bacteria in particular play critical environmental roles in biomass degradation, plant health, and many have also been sources for commercially important secondary metabolites including antibiotics. Sequencing multiple isolates of known species also can identify new genes and gene clusters not found in other members of the same species, increasing our understanding of microbial diversity.",
+    "doi": "https://doi.org/10.25982/122484.28/1877390",
+    "entry_date": "2022-08-24T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1877390",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1877390",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1877390",
+    "product_type": "Dataset",
+    "publication_date": "2022-01-01T00:00:00Z",
+    "research_orgs": [
+      "Sienna College, Loudonville, NY, USA"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "Bacillus pseudomycoides, Rossellomorea, Peribacillus frigoritolerans, Priestia megaterium, Paenibacillus, Lysinibacillus fusiformis"
+    ],
+    "title": "Siena College 2022 MRA Genome Announcement Narrative - 6 Isolates"
+  }
+]

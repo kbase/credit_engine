@@ -1,0 +1,232 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1855758",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "TBD",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2022-12-14T03:08:55.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            {
+              "name": "Colorado State Univ., Fort Collins, CO (United States)"
+            }
+          ],
+          "familyName": "Shaffer",
+          "givenName": "Michael",
+          "name": "Shaffer, Michael",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2021",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "DRAM example narrative DRAM on KBase let's anyone run annotations using DRAM in the cloud. DRAM is an annotation tool that can annotate bacterial, archaeal and viral genomes and distills those annotatios into represetations of the functional genomic potential of those organisms. If you want to read more about DRAM you can check out the GitHub, wiki and journal article. DRAM annotate assemblies In KBase Assembly objects contain nucleotide sequences from genomes or metagenomes. DRAM can predict genes and annotate their function from KBase Assembly objects which may be microbial isolate genomes, metagenome assembled genomes or metagenomes. This is done with the Annotate and Distill Assemblies with DRAM app. This app can also anntoate AssemblySet objects which contain collection of Assembly objects. It also generates a Genome object and a GenomeSet object which can be used for further analysis with other KBase apps. The full annotations and other DRAM files are also available for download in the app.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/88325.84/1855758",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1855758",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "TBD",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2021,
+      "published": "2021",
+      "publisher": "Colorado State Univ., Fort Collins, CO (United States)",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-12-14T03:08:55.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.3389/fgene.2015.00119",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkaa621",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1186/s12864-018-5221-9",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.7717/peerj.985",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-15-225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4163",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1042/bj20091328",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1007/s10142-015-0433-4",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkaa1143",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.1672",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1186/1471-2105-15-225",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkt1226",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1371/journal.pcbi.1003126",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "DRAM, genome annotation"
+        }
+      ],
+      "suffix": "88325.84/1855758",
+      "titles": [
+        {
+          "title": "DRAM example narrative"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-12-14T03:08:55.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1855758/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi84ODMyNS44NC8xODU1NzU4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TaGFmZmVyLCBNaWNoYWVsPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkNvbG9yYWRvIFN0YXRlIFVuaXYuLCBGb3J0IENvbGxpbnMsIENPIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRSQU0gZXhhbXBsZSBuYXJyYXRpdmU8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+Q29sb3JhZG8gU3RhdGUgVW5pdi4sIEZvcnQgQ29sbGlucywgQ08gKFVuaXRlZCBTdGF0ZXMpPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDIxPC9wdWJsaWNhdGlvblllYXI+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD41OSBCQVNJQyBCSU9MT0dJQ0FMIFNDSUVOQ0VTPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+RFJBTSwgZ2Vub21lIGFubm90YXRpb248L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iT1NUSSBJRCI+MTg1NTc1ODwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJET0UgQ29udHJhY3QgTnVtYmVyIj5UQkQ8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkdlbm9tZS9HZW5ldGljcyBEYXRhPC9yZXNvdXJjZVR5cGU+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMzM4OS9mZ2VuZS4yMDE1LjAwMTE5PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMDkzL25hci9na2FhNjIxPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC4xMzcxL2pvdXJuYWwucGNiaS4xMDAzMTI2PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni9zMTI4NjQtMDE4LTUyMjEtOTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjc3MTcvcGVlcmouOTg1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTE4Ni8xNDcxLTIxMDUtMTUtMjI1PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuNDE2MzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwNDIvQkoyMDA5MTMyODwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMDcvczEwMTQyLTAxNS0wNDMzLTQ8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci9na2FhMTE0MzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwMzgvbmJ0LjE2NzI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjExODYvMTQ3MS0yMTA1LTE1LTIyNTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvbmFyL2drdDEyMjY8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMzcxL2pvdXJuYWwucGNiaS4xMDAzMTI2PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPiZsdDtoMSZndDsgRFJBTSBleGFtcGxlIG5hcnJhdGl2ZSAmbHQ7L2gxJmd0OwpEUkFNIG9uIEtCYXNlIGxldCdzIGFueW9uZSBydW4gYW5ub3RhdGlvbnMgdXNpbmcgRFJBTSBpbiB0aGUgY2xvdWQuIERSQU0gaXMgYW4gYW5ub3RhdGlvbiB0b29sIHRoYXQgY2FuIGFubm90YXRlIGJhY3RlcmlhbCwgYXJjaGFlYWwgYW5kIHZpcmFsIGdlbm9tZXMgYW5kIGRpc3RpbGxzIHRob3NlIGFubm90YXRpb3MgaW50byByZXByZXNldGF0aW9ucyBvZiB0aGUgZnVuY3Rpb25hbCBnZW5vbWljIHBvdGVudGlhbCBvZiB0aG9zZSBvcmdhbmlzbXMuIElmIHlvdSB3YW50IHRvIHJlYWQgbW9yZSBhYm91dCBEUkFNIHlvdSBjYW4gY2hlY2sgb3V0IHRoZSBHaXRIdWIsIHdpa2kgYW5kIGpvdXJuYWwgYXJ0aWNsZS4KCiZsdDtoMSZndDsgRFJBTSBhbm5vdGF0ZSBhc3NlbWJsaWVzICZsdDsvaDEmZ3Q7CkluIEtCYXNlIEFzc2VtYmx5IG9iamVjdHMgY29udGFpbiBudWNsZW90aWRlIHNlcXVlbmNlcyBmcm9tIGdlbm9tZXMgb3IgbWV0YWdlbm9tZXMuIERSQU0gY2FuIHByZWRpY3QgZ2VuZXMgYW5kIGFubm90YXRlIHRoZWlyIGZ1bmN0aW9uIGZyb20gS0Jhc2UgQXNzZW1ibHkgb2JqZWN0cyB3aGljaCBtYXkgYmUgbWljcm9iaWFsIGlzb2xhdGUgZ2Vub21lcywgbWV0YWdlbm9tZSBhc3NlbWJsZWQgZ2Vub21lcyBvciBtZXRhZ2Vub21lcy4gVGhpcyBpcyBkb25lIHdpdGggdGhlIEFubm90YXRlIGFuZCBEaXN0aWxsIEFzc2VtYmxpZXMgd2l0aCBEUkFNIGFwcC4gVGhpcyBhcHAgY2FuIGFsc28gYW5udG9hdGUgQXNzZW1ibHlTZXQgb2JqZWN0cyB3aGljaCBjb250YWluIGNvbGxlY3Rpb24gb2YgQXNzZW1ibHkgb2JqZWN0cy4gSXQgYWxzbyBnZW5lcmF0ZXMgYSBHZW5vbWUgb2JqZWN0IGFuZCBhIEdlbm9tZVNldCBvYmplY3Qgd2hpY2ggY2FuIGJlIHVzZWQgZm9yIGZ1cnRoZXIgYW5hbHlzaXMgd2l0aCBvdGhlciBLQmFzZSBhcHBzLiBUaGUgZnVsbCBhbm5vdGF0aW9ucyBhbmQgb3RoZXIgRFJBTSBmaWxlcyBhcmUgYWxzbyBhdmFpbGFibGUgZm9yIGRvd25sb2FkIGluIHRoZSBhcHAuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4="
+    },
+    "id": "10.25982/88325.84/1855758",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/88325.84/1855758",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

@@ -1,0 +1,136 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "first_name": "Mircea",
+        "last_name": "Podar",
+        "middle_name": "",
+        "orcid_id": "0000000327760205",
+        "private_email": "podarm@ornl.gov",
+        "role": "primary"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "elishawc@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson, KBase User Engagement Lead",
+    "contact_org": "Lawrence Berkeley National Laboratory",
+    "contact_phone": "",
+    "contract_nos": "AC05-00OR22725",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2020-07-07",
+    "date_last_submitted": "2021-10-27",
+    "description": "Roseimicrobium sp. strain ORNL1 is a soil bacterium that belongs to the phylum Verrucomicrobia and was isolated from the rhizosphere of a forest Eastern cottonwood tree, Populus deltoides, in Tennessee. Its 7.9-Mb chromosome was completely sequenced using PacBio long reads and is predicted to encode 6,288 proteins and 76 RNAs.",
+    "doi": "10.25982/56021.26/1637512",
+    "doi_infix": "56021.26",
+    "doi_status": "COMPLETED",
+    "entry_date": "2020-07-07",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "bioinformatics, genome, genome announcement",
+    "language": "English",
+    "originating_research_org": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)\r\nU.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1637512,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-07-07",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1099/ijs.0.64483-0",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/225342",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1672",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/225342",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/srep08365",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkw569",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Complete Genome Sequence of the Novel Roseimicrobium sp. Strain ORNL1, a Verrucomicrobium Isolated from the Populus deltoides Rhizosphere\r\nMircea Podar, Joel Turner, Leah H. Burdick, Dale A. Pelletier\r\nMicrobiology Resource Announcements Jul 2020, 9 (27) e00617-20; DOI: 10.1128/MRA.00617-20",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/56021/27/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Complete Genome Sequence of the Novel Roseimicrobium sp. Strain ORNL1, a Verrucomicrobium Isolated from the Populus deltoides Rhizosphere",
+    "work_authorization_number": ""
+  }
+]

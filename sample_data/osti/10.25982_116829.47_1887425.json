@@ -1,0 +1,33 @@
+[
+  {
+    "authors": [
+      "Rastegar, Kiarash [San Diego State University]"
+    ],
+    "country_publication": "United States",
+    "description": "Upon investigating the gut microbiome of mice for microbes related to Polycystic Ovary Syndrome (PCOS), our team found 2 metagenomes that could not be classified using alignment based methods. To further investigate microbial species from these samples, we used common MAGs workflow to create draft genomes which were then later taxonomically classified using GTDB-tk app.",
+    "doi": "https://doi.org/10.25982/116829.47/1887425",
+    "entry_date": "2022-09-16T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1887425",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1887425",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1887425",
+    "product_type": "Dataset",
+    "publication_date": "2022-09-14T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [],
+    "title": "KBase Narrative - Mse_Genome_Assembly"
+  }
+]

@@ -1,0 +1,175 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)",
+        "first_name": "Sunita",
+        "last_name": "Kumari",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett, KBase Outreach Team",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "4235062084",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2021-11-01",
+    "date_last_submitted": "2021-12-15",
+    "description": "A better understanding of the genetic and metabolic mechanisms that confer stress resistance and tolerance in plants is key to engineering new crops through advanced breeding technologies. This requires a systems biology approach that builds on a genome-wide understanding of the regulation of gene expression, plant metabolism, physiology and growth. In this study, we examine the response to drought stress in Sorghum, as we leverage the tools for transcriptomics and plant metabolic modeling we have implemented at the U.S. Department of Energy Systems Biology Knowledgebase (KBase). KBase enables researchers worldwide to collaborate and advance research by allowing them to upload private or public data into the KBase Narrative Interface, empowering them to analyze this data using a rich, extensible array of computational and data-analytics tools, and allows them to securely share scientific workflows and conclusions. We demonstrate how to use the current RNA-seq tools in KBase, applicable to both plants and microbes, to assemble and quantify long transcripts and identify differentially expressed genes effectively. More specifically, we demonstrate the utility of the platform by identifying key genes that are differentially expressed during drought-stress in Sorghum bicolor, which is an important sustainable production crop plant. We then show how to use KBase tools to predict the membership of genes in metabolic pathways and examine expression data in the context of metabolic subsystems. We demonstrate the power of the platform by making the data analysis and interpretation available to the biologists in the reproducible, re-usable, point-and-click format of a KBase Narrative thus promoting FAIR (Findable, Accessible, Interoperable and Reusable) guiding principles for scientific data management and stewardship.",
+    "doi": "10.25982/101788.79/1828290",
+    "doi_infix": "101788.79",
+    "doi_status": "COMPLETED",
+    "entry_date": "2021-11-01",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "transcriptomics, metabolism, sorghum",
+    "language": "English",
+    "originating_research_org": "Cold Spring Harbor Laboratory Cold Spring Harbor, NY (United States)",
+    "osti_id": 1828290,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2021-11-01",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1186/s12918-018-0607-5",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1073/pnas.1401329111",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1004321",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btp120",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.3122",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.3172",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.416",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nmeth.3317",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1672",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/s13059-014-0550-8",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.3389/fpls.2015.00142",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/gb-2013-14-4-r36",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/gb-2013-14-4-r36",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nprot.2012.016",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1111/tpj.14003",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/s13059-014-0550-8",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/s13059-015-0721-2",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Sunita Kumari, Vivek Kumar, Kathleen Beilsmith, Samuel M.D. Seaver, Shane Canon, Paramvir Dehal, Tian Gu, Marcin Joachimiak, Claudia Lerma-Ortiz, Filipe Liu, Zhenyuan Lu, Eric Pearson, Priya Ranjan, William Riel, Christopher S. Henry, Adam P. Arkin, Doreen Ware,\r\nA KBase case study on genome-wide transcriptomics and plant primary metabolism in response to drought stress in Sorghum.,\r\nCurrent Plant Biology,\r\nVolume 28,\r\n2021,\r\n100229,\r\nISSN 2214-6628,\r\nhttps://doi.org/10.1016/j.cpb.2021.100229.",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/101788/79/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "A KBase Case Study on Genome-wide Transcriptomics and Plant Primary Metabolism in Sorghum",
+    "work_authorization_number": ""
+  }
+]

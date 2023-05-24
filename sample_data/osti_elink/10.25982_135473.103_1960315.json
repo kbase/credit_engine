@@ -1,0 +1,214 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Oak Ridge National Laboratory ORNL",
+        "first_name": "Mikaela",
+        "last_name": "Cashman",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "mikaela.cashman@huskers.unl.edu"
+      },
+      {
+        "affiliation_names": "Iowa State University",
+        "first_name": "Alexis",
+        "last_name": "Marsh",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "almarsh@iastate.edu"
+      },
+      {
+        "affiliation_names": "Oak Ridge National Laboratory ORNL",
+        "first_name": "Bob",
+        "last_name": "Cottingham",
+        "middle_name": "",
+        "orcid_id": "0000000227753905",
+        "private_email": "cottinghamrw@ornl.gov"
+      },
+      {
+        "affiliation_names": "Iowa State University",
+        "first_name": "Myra",
+        "last_name": "Cohen",
+        "middle_name": "",
+        "orcid_id": "0000000324432425",
+        "private_email": "mcohen@iastate.edu"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zach Crockett",
+    "contact_org": "Oak Ridge National Laboratory",
+    "contact_phone": "808-286-9547",
+    "contract_nos": "DE-AC05-00OR22725;DE-AC05-00OR22725",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2023-03-08",
+    "date_last_submitted": "2023-03-08",
+    "description": "A systems view in the biological context is a useful approach to study complex and potentially interacting systems. In this narrative (accompanying an associated manuscript), we take a systems view of software tools themselves. Instead of using software as a single tool, we demonstrate how users can approach software with the same mindset as the organisms they study; as a complex system that can be optimized based on one\u2019s environment and goals. We demonstrate this idea with an example KBase narrative showing how application parameters in KBase tools can change how a researcher perceives and interacts with bioinformatics tools while conducting a common experimental scenario. In this scenario we are trying to understand how different chemical compounds in a growth media change the metabolic pathways utilized in Escherichia coli.",
+    "doi": "10.25982/135473.103/1960315",
+    "doi_infix": "135473.103",
+    "doi_status": "COMPLETED",
+    "entry_date": "2023-03-08",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1960315,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2023-02-17",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1101/2022.12.20.521257",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1672",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkp698",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1529/biophysj.107.124784",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.229202",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gks406",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1614",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/2022.12.20.521257v1",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/nar/25.17.3389",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-6-r69",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1529/biophysj.105.071720",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/srep08365",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-6-r69",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btm009",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-12-120",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1007/s00792-012-0482-8",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/135473/103/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "",
+    "title": "KBase Narrative - SOMATA - Motivating Example",
+    "work_authorization_number": ""
+  }
+]

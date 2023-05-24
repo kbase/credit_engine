@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1827108</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Omics-to-Reactive-Transport (ORT): A workflow linking genome-scale metabolic models
+            with reactive transport codes</title>
+        <authors>
+            <author>
+                <first_name>Rebecca</first_name>
+                <middle_name>L</middle_name>
+                <last_name>Rubinstein</last_name>
+                <private_email>rebecca.rubinstein@subsurfaceinsights.com</private_email>
+                <affiliation_name>Subsurface Insights, LLC</affiliation_name>
+                <orcid_id>0000000181426713</orcid_id>
+            </author>
+            <author>
+                <first_name>Mikayla</first_name>
+                <last_name>Borton</last_name>
+                <affiliation_name>Colorado State Univ., Fort Collins, CO (United States)</affiliation_name>
+                <orcid_id>0000000180374253</orcid_id>
+            </author>
+            <author>
+                <first_name>Haiyan</first_name>
+                <last_name>Zhou</last_name>
+                <affiliation_name>Subsurface Insights, LLC</affiliation_name>
+                <orcid_id>000000031569532X</orcid_id>
+            </author>
+            <author>
+                <first_name>Michael</first_name>
+                <last_name>Shaffer</last_name>
+                <affiliation_name>Colorado State Univ., Fort Collins, CO (United States)</affiliation_name>
+                <orcid_id>0000000217833709</orcid_id>
+            </author>
+            <author>
+                <first_name>David</first_name>
+                <last_name>Hoyt</last_name>
+                <affiliation_name>Pacific Northwest National Lab. (PNNL), Richland, WA (United
+                    States)</affiliation_name>
+                <orcid_id>000000022857719X</orcid_id>
+            </author>
+            <author>
+                <first_name>James</first_name>
+                <last_name>Stegen</last_name>
+                <affiliation_name>Pacific Northwest National Lab. (PNNL), Richland, WA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000191357424</orcid_id>
+            </author>
+            <author>
+                <first_name>Christopher</first_name>
+                <last_name>Henry</last_name>
+                <affiliation_name>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation_name>
+                <orcid_id>0000000180589123</orcid_id>
+            </author>
+            <author>
+                <first_name>Kelly</first_name>
+                <last_name>Wrighton</last_name>
+                <affiliation_name>Colorado State Univ., Fort Collins, CO (United States)</affiliation_name>
+                <orcid_id>0000000304344217</orcid_id>
+            </author>
+            <author>
+                <first_name>Roelof</first_name>
+                <last_name>Versteeg</last_name>
+                <affiliation_name>Subsurface Insights, LLC</affiliation_name>
+                <orcid_id>0000000267671082</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>DE-SC0019619; DE-SC0018020;</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Systems Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>2021/03/12</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code></subject_categories_code>
+        <keywords></keywords>
+        <accession_num></accession_num>
+        <description>Motivation: Nutrient and contaminant behavior in the subsurface are governed by
+            multiple coupled hydrobiogeochemical processes which occur across different temporal and
+            spatial scales. Accurate description of macroscopic system behavior requires accounting
+            for the effects of microscopic and especially microbial processes. Microbial processes
+            mediate precipitation and dissolution and change aqueous geochemistry, all of which
+            impacts macroscopic system behavior. As `omics data describing microbial processes is
+            increasingly affordable and available, novel methods for using this data quickly and
+            effectively for improved ecosystem models are needed. Results: We propose a workflow
+            (`Omics to Reactive Transport – ORT) for utilizing metagenomic and environmental data to
+            describe the effect of microbiological processes in macroscopic reactive transport
+            models. This workflow utilizes and couples two open-source software packages: KBase (a
+            software platform for systems biology) and PFLOTRAN (a reactive transport modeling
+            code). We describe the architecture of ORT and demonstrate an implementation using
+            metagenomic and geochemical data from a river system. Our demonstration uses
+            microbiological drivers of nitrification and denitrification to predict nitrogen cycling
+            patterns which agree with those provided with generalized stoichiometries. While our
+            example uses data from a single measurement, our workflow can be applied to
+            spatiotemporal metagenomic datasets to allow for iterative coupling between KBASE and
+            PFLOTRAN. Live, interactive models, which incorporate the results from this narrative
+            into a PFLOTRAN simulation, are available (without login) at
+            https://pflotranmodeling.paf.subsurfaceinsights.com/pflotran-simple-model/.</description>
+        <site_url>https://kbase.us/n/71260/262/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-6-r69</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-10-25</date_first_submitted>
+        <date_last_submitted>2021-10-27</date_last_submitted>
+        <entry_date>2021-10-25</entry_date>
+        <doi status="COMPLETED">10.25982/71260.262/1827108</doi>
+        <doi_infix>71260.262</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson</contact_name>
+        <contact_org>Lawrence Berkeley National Laboratory (LBNL)</contact_org>
+        <contact_email>EMWOOD-CHARLSON@lbl.gov</contact_email>
+        <contact_phone>808-286-9547</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

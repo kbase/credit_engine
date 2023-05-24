@@ -1,0 +1,228 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "",
+        "first_name": "Ankita",
+        "last_name": "Kothari",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Simon",
+        "last_name": "Roux",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "",
+        "first_name": "Hanqiao",
+        "last_name": "Zhang",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "",
+        "first_name": "Anatori",
+        "last_name": "Prieto",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "John-Marc",
+        "last_name": "Chandonia",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "",
+        "first_name": "Sarah",
+        "last_name": "Spencer",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "",
+        "first_name": "Xiaoqin",
+        "last_name": "Wu",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Adam",
+        "last_name": "Deutschbauer",
+        "middle_name": "M",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Adam",
+        "last_name": "Arkin",
+        "middle_name": "P",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Massachusetts Inst. of Technology (MIT), Cambridge, MA (United States)",
+        "first_name": "Eric",
+        "last_name": "Alm",
+        "middle_name": "J",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Romy",
+        "last_name": "Chakraborty",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "",
+        "first_name": "Aindrila",
+        "last_name": "Mukhopadhyay",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "elishawc@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson, KBase User Engagement Lead",
+    "contact_org": "KBase",
+    "contact_phone": "",
+    "contract_nos": "AC02-05CH11231",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "",
+    "date_first_submitted": "2021-05-06",
+    "date_last_submitted": "2023-05-16",
+    "description": "Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance. This Narrative contains data for the 261 ENIGMA isolates described in the paper. See Table S2 for a complete list.",
+    "doi": "10.25982/63776.53/1637360",
+    "doi_infix": "63776.53",
+    "doi_status": "COMPLETED",
+    "entry_date": "2020-07-06",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "Virus; Genome; Biology; Environment",
+    "language": "English",
+    "originating_research_org": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)",
+    "osti_id": 1637360,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-07-06",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1093/bioinformatics/btu153",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/s41467-018-07641-9",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-119",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-11-538",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btz848",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btu170",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1002195",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.14806/ej.17.1.200",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1089/cmb.2012.0021",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.14806/ej.17.1.200",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btz848",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4229",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4229",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/s41587-020-0501-8",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pone.0009490",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1128/mSystems.00537-21",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsSupplementedBy"
+      }
+    ],
+    "related_resource": ".Kothari, A. et al. Ecogenomics of Groundwater Phages Suggests Niche Differentiation Linked to Specific Environmental Tolerance. mSystems vol. 6 (2021). doi: 10.1128/mSystems.00537-21",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/63776/35/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "",
+    "title": "Isolate genomes from \"Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance\"",
+    "work_authorization_number": ""
+  }
+]

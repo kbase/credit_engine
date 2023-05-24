@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1635639</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Draft Genome Sequence of Larkinella sp. Strain BK230, Isolated from Populus deltoides
+            Roots</title>
+        <authors>
+            <author role="primary">
+                <first_name>Dale</first_name>
+                <last_name>Pelletier</last_name>
+                <private_email>pelletierda@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000243217918</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>AC05-00OR22725; AC02-05CH11231; AC02-05CH11231; AC05-00OR22725</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United
+            States); U.S. Department of Energy Systems Biology
+            Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>07/02/2020</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>Genome; KBase; Biology</keywords>
+        <accession_num></accession_num>
+        <description>This narrative was used for a draft genome of a Larkinella species. This genus
+            contains 9 identified species, of which only 5 have genome sequence data. This specimen
+            was collected from a root sample of an eastern cottonwood (Populus deltoides) from a
+            field site in Bellville, Georgia.</description>
+        <site_url>https://kbase.us/n/54100/28/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/bts199</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1089/cmb.2012.0021</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1672</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.186072.114</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/MRA.00159-20</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1672</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1614</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/srep08365</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1517/14622416.5.4.433</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pone.0009490</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1016/j.ymben.2003.09.002</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/mra.00159-20</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsSupplementTo</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.186072.114</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/MRA.00159-20</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/srep08365</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1614</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>0.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>URL</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1016/j.ymben.2003.09.002</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pone.0009490</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/AEM.01285-16</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/mra.00159-20</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>IsCitedBy</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2020-07-02</date_first_submitted>
+        <date_last_submitted>2021-09-28</date_last_submitted>
+        <entry_date>2020-07-02</entry_date>
+        <doi status="COMPLETED">10.25982/54100.27/1635639</doi>
+        <doi_infix>54100.27</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson, KBase User Engagement Lead</contact_name>
+        <contact_org>KBase, Lawrence Berkeley National Lab</contact_org>
+        <contact_email>elishawc@lbl.gov</contact_email>
+        <contact_phone></contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

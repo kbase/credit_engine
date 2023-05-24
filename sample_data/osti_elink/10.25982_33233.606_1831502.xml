@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1831502</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Genome Extraction from Shotgun Metagenome Sequence Data</title>
+        <authors>
+            <author role="primary">
+                <first_name>Dylan</first_name>
+                <last_name>Chivian</last_name>
+                <private_email>dcchivian@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000326236292</orcid_id>
+            </author>
+            <author>
+                <first_name>Sean</first_name>
+                <middle_name>P</middle_name>
+                <last_name>Jungbluth</last_name>
+                <private_email>sjungbluth@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States). Accelerator &amp; Fusion Research Division</affiliation_name>
+                <orcid_id>0000000192658341</orcid_id>
+            </author>
+            <author>
+                <first_name>Paramvir</first_name>
+                <middle_name>S</middle_name>
+                <last_name>Dehal</last_name>
+                <private_email>psdehal@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000158102497</orcid_id>
+            </author>
+            <author>
+                <first_name>Richard</first_name>
+                <middle_name>S</middle_name>
+                <last_name>Canon</last_name>
+                <private_email>scanon@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>000000028440738X</orcid_id>
+            </author>
+            <author>
+                <first_name>Benjamin</first_name>
+                <middle_name>H</middle_name>
+                <last_name>Allen</last_name>
+                <private_email>allenbh@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>000000026325859X</orcid_id>
+            </author>
+            <author>
+                <first_name>Mikayla</first_name>
+                <middle_name>M</middle_name>
+                <last_name>Clark</last_name>
+                <private_email>mclark58@vols.utk.edu</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000228623416</orcid_id>
+            </author>
+            <author>
+                <first_name>Tianhao</first_name>
+                <last_name>Gu</last_name>
+                <private_email>tgu@anl.gov</private_email>
+                <affiliation_name>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation_name>
+                <orcid_id>0000000230531967</orcid_id>
+            </author>
+            <author>
+                <first_name>Miriam</first_name>
+                <middle_name>L</middle_name>
+                <last_name>Land</last_name>
+                <private_email>landml@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000171020031</orcid_id>
+            </author>
+            <author>
+                <first_name>Gavin</first_name>
+                <middle_name>A</middle_name>
+                <last_name>Price</last_name>
+                <private_email>gaprice@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>William</first_name>
+                <middle_name>J</middle_name>
+                <last_name>Riehl</last_name>
+                <private_email>wjriehl@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000234052744</orcid_id>
+            </author>
+            <author>
+                <first_name>Michael</first_name>
+                <middle_name>W</middle_name>
+                <last_name>Sneddon</last_name>
+                <private_email>michaelsneddon@gmail.com</private_email>
+            </author>
+            <author>
+                <first_name>Roman</first_name>
+                <last_name>Sutormin</last_name>
+                <private_email>rsutormin@gmail.com</private_email>
+            </author>
+            <author>
+                <first_name>Qizhi</first_name>
+                <last_name>Zhang</last_name>
+                <private_email>qzhang@anl.gov</private_email>
+                <affiliation_name>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation_name>
+            </author>
+            <author>
+                <first_name>Robert</first_name>
+                <middle_name>W</middle_name>
+                <last_name>Cottingham</last_name>
+                <private_email>cottinghamrw@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000227753905</orcid_id>
+            </author>
+            <author>
+                <first_name>Christopher</first_name>
+                <middle_name>S</middle_name>
+                <last_name>Henry</last_name>
+                <private_email>chenry@anl.gov</private_email>
+                <affiliation_name>Argonne National Lab. (ANL), Argonne, IL (United States)</affiliation_name>
+                <orcid_id>0000000180589123</orcid_id>
+            </author>
+            <author>
+                <first_name>Adam</first_name>
+                <middle_name>P</middle_name>
+                <last_name>Arkin</last_name>
+                <private_email>APArkin@lbl.gov</private_email>
+                <orcid_id>0000000249992931</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>DE-AC02-05CH11231, DE-AC02-06CH11357, DE-AC05-00OR22725, and DE-AC02-98CH10886</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Systems Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>2021/11/09</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code></subject_categories_code>
+        <keywords></keywords>
+        <accession_num></accession_num>
+        <description>Uncultivated Bacteria and Archaea comprise the vast majority of species on
+            Earth, but obtaining their genomes directly from the environment, using shotgun
+            sequencing, has only recently become possible. To realize the hope of capturing Earth’s
+            microbial genetic complement, technologies that accelerate recovery of high-quality
+            genomes are necessary. We present a series of analysis steps and data products for the
+            extraction of high quality metagenome-assembled genomes (MAGs) from microbiomes using
+            the U.S. Department of Energy Systems Biology Knowledgebase (KBase) platform
+            (http://www.kbase.us/). In KBase, the process is end-to-end, allowing a user to go from
+            the initial sequencing reads all the way through to MAG genomes, which can then be
+            analyzed with other KBase capabilities such as phylogenetic placement, functional
+            assignment, metabolic modeling, pangenome functional profiling, RNA-Seq, and others.
+            While portions of such capabilities are individually available from other resources, the
+            combination of the intuitive usability, data interoperability, and integration of tools
+            in a freely available compute resource makes KBase a uniquely powerful platform for
+            obtaining MAGs from microbiomes. While this workflow offers tools for each of the key
+            steps in the genome extraction process, it also provides a scaffold that can be easily
+            extended, with additional MAG recovery and analysis tools, via the KBase SDK (Software
+            Development Kit).</description>
+        <site_url>https://kbase.us/n/33233/615/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1038/s41564-018-0171-1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41564-018-0171-1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/bts174</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btz848</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1002195</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu170</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4163</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btz848</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1002195</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4229</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.186072.114</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.3103</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.229202</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gks406</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1002/cpbi.102.</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.3176</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv033</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/25.17.3389</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41587-020-0501-8.</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41467-018-07641-9</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-538</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkp698.</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/2049-2618-2-26</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.213959.116</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.7717/peerj.1165</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1002/cpbi.102</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4229</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.3103</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41564-021-00918-8</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.7717/peerj.1165</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/srep08365</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btv638</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/2049-2618-2-26</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btm009</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-10-421</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pone.0009490</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1007/s00792-012-0482-8</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-11-23</date_first_submitted>
+        <date_last_submitted>2022-02-18</date_last_submitted>
+        <entry_date>2021-11-19</entry_date>
+        <doi status="COMPLETED">10.25982/33233.606/1831502</doi>
+        <doi_infix>33233.606</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson</contact_name>
+        <contact_org>Lawrence Berkeley National Laboratory (LBNL)</contact_org>
+        <contact_email>EMWOOD-CHARLSON@lbl.gov</contact_email>
+        <contact_phone>808-286-9547</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

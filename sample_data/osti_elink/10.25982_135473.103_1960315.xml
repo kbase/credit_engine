@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1960315</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>KBase Narrative - SOMATA - Motivating Example</title>
+        <authors>
+            <author>
+                <first_name>Mikaela</first_name>
+                <last_name>Cashman</last_name>
+                <private_email>mikaela.cashman@huskers.unl.edu</private_email>
+                <affiliation_name>Oak Ridge National Laboratory ORNL</affiliation_name>
+            </author>
+            <author>
+                <first_name>Alexis</first_name>
+                <last_name>Marsh</last_name>
+                <private_email>almarsh@iastate.edu</private_email>
+                <affiliation_name>Iowa State University</affiliation_name>
+            </author>
+            <author>
+                <first_name>Bob</first_name>
+                <last_name>Cottingham</last_name>
+                <private_email>cottinghamrw@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Laboratory ORNL</affiliation_name>
+                <orcid_id>0000000227753905</orcid_id>
+            </author>
+            <author>
+                <first_name>Myra</first_name>
+                <last_name>Cohen</last_name>
+                <private_email>mcohen@iastate.edu</private_email>
+                <affiliation_name>Iowa State University</affiliation_name>
+                <orcid_id>0000000324432425</orcid_id>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>DE-AC05-00OR22725;DE-AC05-00OR22725</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Systems Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>02/17/2023</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code></subject_categories_code>
+        <keywords></keywords>
+        <accession_num></accession_num>
+        <description>A systems view in the biological context is a useful approach to study complex
+            and potentially interacting systems. In this narrative (accompanying an associated
+            manuscript), we take a systems view of software tools themselves. Instead of using
+            software as a single tool, we demonstrate how users can approach software with the same
+            mindset as the organisms they study; as a complex system that can be optimized based on
+            one’s environment and goals. We demonstrate this idea with an example KBase narrative
+            showing how application parameters in KBase tools can change how a researcher perceives
+            and interacts with bioinformatics tools while conducting a common experimental scenario.
+            In this scenario we are trying to understand how different chemical compounds in a
+            growth media change the metabolic pathways utilized in Escherichia coli.</description>
+        <site_url>https://kbase.us/n/135473/103/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1101/2022.12.20.521257</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1672</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-15-225</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkp698</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1529/biophysj.107.124784</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.229202</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gks406</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.1614</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/2022.12.20.521257v1</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/25.17.3389</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-6-r69</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1529/biophysj.105.071720</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/srep08365</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/gb-2009-10-6-r69</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btm009</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1007/s00792-012-0482-8</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pcbi.1003126</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2023-03-08</date_first_submitted>
+        <date_last_submitted>2023-03-08</date_last_submitted>
+        <entry_date>2023-03-08</entry_date>
+        <doi status="COMPLETED">10.25982/135473.103/1960315</doi>
+        <doi_infix>135473.103</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zach Crockett</contact_name>
+        <contact_org>Oak Ridge National Laboratory</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>808-286-9547</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

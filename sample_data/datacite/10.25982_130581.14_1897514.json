@@ -1,0 +1,218 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1897514",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "N/A",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 1,
+      "citationsOverTime": [
+        {
+          "total": 1,
+          "year": "2023"
+        }
+      ],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2022-11-16T03:21:44.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            {
+              "name": "Colorado State Univ., Fort Collins, CO (United States)"
+            }
+          ],
+          "familyName": "McGivern",
+          "givenName": "Bridget",
+          "name": "McGivern, Bridget",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-9023-0018",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Colorado State Univ., Fort Collins, CO (United States)"
+            }
+          ],
+          "familyName": "O'Toole",
+          "givenName": "Paul",
+          "name": "O'Toole, Paul",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Colorado State Univ., Fort Collins, CO (United States)"
+            }
+          ],
+          "familyName": "Wrighton",
+          "givenName": "Kelly",
+          "name": "Wrighton, Kelly",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0003-0434-4217",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2022",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Members of the genus Citricoccus are recognized as salt tolerant soil microoorganisms. Here we report the metagenome assembled genome of a novel Citricoccus species recoverd from untilled, surface agricultural soils in Western Colorado.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/130581.14/1897514",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1897514",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "N/A",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2022,
+      "published": "2022",
+      "publisher": "U.S. Department of Energy Systems Biology Knowledgebase",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-11-16T03:21:45.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1093/nar/gkaa621",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1038/nbt.4163",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "Citricoccus, Agricultural Soil, Microbiome"
+        }
+      ],
+      "suffix": "130581.14/1897514",
+      "titles": [
+        {
+          "title": "KBase Narrative - O'Toole et al Citricoccus MRA Genome Announcement Analysis Narrative"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2023-01-25T08:56:10.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1897514/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMzA1ODEuMTQvMTg5NzUxNDwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TWNHaXZlcm4sIEJyaWRnZXQ8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDEtOTAyMy0wMDE4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPkNvbG9yYWRvIFN0YXRlIFVuaXYuLCBGb3J0IENvbGxpbnMsIENPIChVbml0ZWQgU3RhdGVzKTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TydUb29sZSwgUGF1bDwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5Db2xvcmFkbyBTdGF0ZSBVbml2LiwgRm9ydCBDb2xsaW5zLCBDTyAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPldyaWdodG9uLCBLZWxseTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMy0wNDM0LTQyMTc8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+Q29sb3JhZG8gU3RhdGUgVW5pdi4sIEZvcnQgQ29sbGlucywgQ08gKFVuaXRlZCBTdGF0ZXMpPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+S0Jhc2UgTmFycmF0aXZlIC0gTydUb29sZSBldCBhbCBDaXRyaWNvY2N1cyBNUkEgR2Vub21lIEFubm91bmNlbWVudCBBbmFseXNpcyBOYXJyYXRpdmU8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+VS5TLiBEZXBhcnRtZW50IG9mIEVuZXJneSBTeXN0ZW1zIEJpb2xvZ3kgS25vd2xlZGdlYmFzZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMjwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+NTkgQkFTSUMgQklPTE9HSUNBTCBTQ0lFTkNFUzwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkNpdHJpY29jY3VzLCBBZ3JpY3VsdHVyYWwgU29pbCwgTWljcm9iaW9tZTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODk3NTE0PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDkzL25hci9na2FhNjIxPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJDaXRlcyI+MTAuMTAzOC9uYnQuNDE2MzwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5NZW1iZXJzIG9mIHRoZSBnZW51cyBDaXRyaWNvY2N1cyBhcmUgcmVjb2duaXplZCBhcyBzYWx0IHRvbGVyYW50IHNvaWwgbWljcm9vb3JnYW5pc21zLiBIZXJlIHdlIHJlcG9ydCB0aGUgbWV0YWdlbm9tZSBhc3NlbWJsZWQgZ2Vub21lIG9mIGEgbm92ZWwgQ2l0cmljb2NjdXMgc3BlY2llcyByZWNvdmVyZCBmcm9tIHVudGlsbGVkLCBzdXJmYWNlIGFncmljdWx0dXJhbCBzb2lscyBpbiBXZXN0ZXJuIENvbG9yYWRvLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+"
+    },
+    "id": "10.25982/130581.14/1897514",
+    "relationships": {
+      "citations": {
+        "data": [
+          {
+            "id": "10.1128/mra.00359-22",
+            "type": "dois"
+          }
+        ]
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/130581.14/1897514",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

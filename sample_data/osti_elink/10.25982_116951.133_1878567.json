@@ -1,0 +1,145 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "University of S\u00e3o Paulo",
+        "first_name": "Jessica",
+        "last_name": "Mandro",
+        "middle_name": "Adriele",
+        "orcid_id": "",
+        "private_email": "jessica.mandro@usp.br"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson",
+    "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+    "contact_phone": "808-286-9547",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-07-29",
+    "date_last_submitted": "2022-07-29",
+    "description": "We report 17 metagenome-assembled genomes (MAGs) recovered from microbial consortia of forest and pasture soils, in the Brazilian Eastern Amazon. Recovered MAGs constitute novel genomes with the potential to act in important ecological processes, including the degradation of carbohydrate and sulfur and nitrogen cycling.",
+    "doi": "10.25982/116951.133/1878567",
+    "doi_infix": "116951.133",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-07-29",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1878567,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-07-29",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1186/1471-2105-11-538",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btz848",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btu170",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/2049-2618-2-26",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nmeth.1923",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.213959.116",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btz848",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1002/cpbi.102",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.186072.114",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4229",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1002/cpbi.102",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4229",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-3-r25",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btv638",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/2049-2618-2-26",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-3-r25",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/116951/133/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "",
+    "title": "KBase Narrative - Metagenome-assembled genomes from Amazonian soil microbial consortia",
+    "work_authorization_number": ""
+  }
+]

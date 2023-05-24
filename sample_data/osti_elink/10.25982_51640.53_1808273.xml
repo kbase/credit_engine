@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1808273</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Grant_Staphylococcus_succinus</title>
+        <authors>
+            <author role="primary">
+                <first_name>Grant</first_name>
+                <last_name>Nickolson</last_name>
+                <affiliation_name>Department of Biological Sciences, Marquette University,
+                    Milwaukee, Wisconsin, USA</affiliation_name>
+            </author>
+            <author>
+                <first_name>Christopher</first_name>
+                <last_name>Marshall</last_name>
+                <private_email>christopher.marshall@marquette.edu</private_email>
+                <affiliation_name>Department of Biological Sciences, Marquette University,
+                    Milwaukee, Wisconsin, USA</affiliation_name>
+                <orcid_id>0000000166693231</orcid_id>
+            </author>
+            <author>
+                <first_name>Nasim</first_name>
+                <middle_name>Maghboli</middle_name>
+                <last_name>Balasjin</last_name>
+                <affiliation_name>Department of Biological Sciences, Marquette University,
+                    Milwaukee, Wisconsin, USA</affiliation_name>
+            </author>
+            <author>
+                <first_name>Sophie</first_name>
+                <last_name>Bridwell</last_name>
+                <affiliation_name>Department of Biological Sciences, Marquette University,
+                    Milwaukee, Wisconsin, USA</affiliation_name>
+            </author>
+        </authors>
+        <related_resource>Nickolson GP, Maghboli Balasjin N, Marshall CW. 2021. Draft genome
+            sequence of Staphylococcus succinus strain GN1, isolated from a basement floor in
+            Milwaukee, WI. Microbiol Resour Announc 10:e00580-21.
+            https://doi.org/10.1128/MRA.00580-21.</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>N/A</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>Department of Biological Sciences, Marquette University,
+            Milwaukee, Wisconsin, USA</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>06/08/2021</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER);
+            Department of Biological Sciences, Marquette
+            University, Milwaukee, Wisconsin, USA</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>Genome Announcement, Staphylococcus, MRA, Microbial Resource Announcement</keywords>
+        <accession_num></accession_num>
+        <description>A strain of Staphylococcus succinus was sampled from the floor of the basement
+            of a house and isolated in an undergraduate classroom in Milwaukee, WI. Here, we report
+            the draft genome sequence of this strain.</description>
+        <site_url>https://kbase.us/n/51640/53/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1093/nar/25.17.3389</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btu153</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-12-120</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1371/journal.pone.0009490</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1007/s00792-012-0482-8</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1016/j.gde.2005.09.006</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.229202</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btm009</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gks406</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-119</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/JB.00619-08</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1073/pnas.0506758102</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2105-11-538</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gkt1226</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/bioinformatics/btz848</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nbt.4229</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>0.1093/nar/gkp698</related_identifier>
+                <related_identifier_type>URL</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1101/gr.1224503</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/1471-2164-9-75</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/srep08365</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2021-07-16</date_first_submitted>
+        <date_last_submitted>2021-07-16</date_last_submitted>
+        <entry_date>2021-07-16</entry_date>
+        <doi status="COMPLETED">10.25982/51640.53/1808273</doi>
+        <doi_infix>51640.53</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett, KBase Outreach Team</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

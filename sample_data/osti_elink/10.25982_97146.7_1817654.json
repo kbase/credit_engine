@@ -1,0 +1,136 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Division of Natural Sciences, Maryville College, Maryville, TN, USA; Department of Microbiology, University of Tennessee, Knoxville, TN, USA",
+        "first_name": "Joy",
+        "last_name": "Buongiorno",
+        "middle_name": "",
+        "orcid_id": "0000000274420599",
+        "private_email": "joy.buongiorno@maryvillecollege.edu",
+        "role": "primary"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett, KBase Outreach Team",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "4235062084",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2021-08-30",
+    "date_last_submitted": "2021-09-01",
+    "description": "<p>This Narrative is part of a collection used in publications focused on the microbial ecology of fjord sediment in the high Arctic, Svalbard. This paper took a genome-centric approach to uncover novel metabolic capabilities of the Acidobacteriota clade. Metagenomic data was coupled with amplicon sequencing of 16S rRNA and dissimilatory sulfite reductase (dsrB) genes, and transcripts (available under NCBI-Genbank Bioproject PRJNA623111), and gene expression analyses of tetrathionate-amended microcosms.</p><p>  This Narrative contains the metagenomic assemblies that were constructed within KBase for reproducibility. These include: <ul><li>stnF metagenome assembly </li><li> stnAB metagenome assembly </li><li> stnAC metagenome assembly </li></ul><p> These metagenome assemblies served as the launching point for an additional publication focused on a different clade of bacteria (Buongiorno et al., 2020). Link to that Narrative landing page here. </p><p> Please cite: Flieder, Mathias, Joy Buongiorno, Craig W. Herbold, Bela Hausmann, Thomas Rattei, Karen G. Lloyd, Alexander Loy, and Kenneth Wasmund. \"Novel taxa of Acidobacteriota implicated in seafloor sulfur cycling.\" The ISME Journal (2021): 1-22.</p>",
+    "doi": "10.25982/97146.7/1817654",
+    "doi_infix": "97146.7",
+    "doi_status": "COMPLETED",
+    "entry_date": "2021-08-30",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "acidobacteriota, MAGs, metagenome-assembled genomes, amplicon sequencing, 16SDefulfobacterota, marine sediment, Candidatus",
+    "language": "English",
+    "originating_research_org": "Department of Microbiology, University of Tennessee, Knoxville, TN, USA",
+    "osti_id": 1817654,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2021-08-21",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1093/bioinformatics/btv033",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1371/journal.pone.0234839",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/bts174",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1111/1758-2229.12538",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.3389/fmicb.2019.00849",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btu170",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/2049-2618-2-26",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.213959.116",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nmeth.1923",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.186072.114",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/ismej.2014.208",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btv638",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/ismej.2011.141",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1126/science.207.4437.1355",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-3-r25",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Flieder, M., Buongiorno, J., Herbold, C.W. et al. Novel taxa of Acidobacteriota implicated in seafloor sulfur cycling. ISME J (2021). https://doi.org/10.1038/s41396-021-00992-0",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/97146/7/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Narrative for Bioproject PRJNA623111",
+    "work_authorization_number": ""
+  }
+]

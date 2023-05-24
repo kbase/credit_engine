@@ -109,6 +109,7 @@
           "relationType": "Cites"
         }
       ],
+      "relatedItems": [],
       "rightsList": [],
       "schemaVersion": "http://datacite.org/schema/kernel-4",
       "sizes": [],
@@ -146,150 +147,7 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi82NTUyNi42OS8xNzU1NDM4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Tb25nLCBIeXVuLVNlb2I8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItMjE1NC02MzU4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVuaXZlcnNpdHkgb2YgTmVicmFza2EtTGluY29sbjwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TGVlLCBKb29uLVlvbmc8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+UGFjaWZpYyBOb3J0aHdlc3QgTmF0aW9uYWwgTGFiLiAoUE5OTCksIFJpY2hsYW5kLCBXQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5TdWJzdHJhdGUtZXhwbGljaXQgTW9kZWxpbmcgVHV0b3JpYWw8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+UGFjaWZpYyBOb3J0aHdlc3QgTmF0aW9uYWwgTGFib3JhdG9yeSAoUE5OTCksIFJpY2hsYW5kLCBXQSAoVW5pdGVkIFN0YXRlcylVbml2ZXJzaXR5IG9mIE5lYnJhc2thLUxpbmNvbG4sIExpbmNvbG4sIE5FIChVbml0ZWQgU3RhdGVzKTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+OTYgS05PV0xFREdFIE1BTkFHRU1FTlQgQU5EIFBSRVNFUlZBVElPTjwvc3ViamVjdD4KICAgIDxzdWJqZWN0PjU0IEVOVklST05NRU5UQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5GVElDUi1NUywgYmF0Y2ggcmVhY3RvcnMsIGNvbnRpbnVvdXMgc3RpcnJlZCB0YW5rIHJlYWN0b3JzIChDU1RSKTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xNzU1NDM4PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPm5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkRhdGFzZXQ8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC40MTYzPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoaXMgdHV0b3JpYWwgTmFycmF0aXZlIGRlbW9uc3RyYXRlcyBob3cgdG8gYXBwbHkgdGhlcm1vZHluYW1pYyB0aGVvcnksIGFsc28ga25vd24gYXMgbGFtYmRhIHRoZW9yeSwgdG8gY29udmVydCBtb2xlY3VsYXIgZm9ybXVsYXMgb2YgY29tcG91bmRzIChkZXJpdmVkIGZyb20gRlRJQ1ItTVMgcGVha3MgdXNpbmcgRm9ybXVsYXRpcnkgYW5kIFIgY29kZXMpIGludG8gc3RvaWNoaW9tZXRyaWMgYW5kIGtpbmV0aWMgZm9ybXMgb2YgYmlvZ2VvY2hlbWljYWwgcmVhY3Rpb25zIGFuZCBob3cgdG8gdXNlIHRoZSByZXN1bHRpbmcga2luZXRpYyBlcXVhdGlvbnMgdG8gc2ltdWxhdGUgZHluYW1pYyBjb252ZXJzaW9uIG9mIGNvbXBvdW5kcyBpbiBiYXRjaCBhbmQgY29udGludW91cyBzdGlycmVkIHRhbmsgcmVhY3RvcnMuIEl0IHdpbGwgYWRkcmVzcyB1bmRlciB3aGF0IGNvbmRpdGlvbnMgcmVzcGlyYXRpb24gcmF0ZXMgYXJlIGRyaXZlbiBieSB0aGVybW9keW5hbWljcywgYW5kIGhvdyByZXNwaXJhdGlvbiByYXRlcyByZXNwb25kIHRvIHRoZSB2YXJpYXRpb25zIGluIHBhcmFtZXRlcnMgYW5kIGlucHV0IHZhcmlhYmxlcyBhbmQgaG93IHRvIGludGVycHJldCB0aGUgcmVzdWx0cy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
-      "xml_data": {
-        "alternateIdentifiers": {
-          "alternateIdentifier": [
-            {
-              "alternateIdentifierType": "OSTI ID",
-              "value": "1755438"
-            },
-            {
-              "alternateIdentifierType": "DOE Contract Number",
-              "value": "none"
-            },
-            {
-              "alternateIdentifierType": "Product Number",
-              "value": "None"
-            }
-          ]
-        },
-        "contributors": null,
-        "creators": {
-          "creator": [
-            {
-              "affiliation": [
-                "University of Nebraska-Lincoln"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Song, Hyun-Seob"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0002-2154-6358"
-                }
-              ]
-            },
-            {
-              "affiliation": [
-                "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Lee, Joon-Yong"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": []
-            }
-          ]
-        },
-        "dates": null,
-        "descriptions": {
-          "description": [
-            {
-              "content": [
-                "This tutorial Narrative demonstrates how to apply thermodynamic theory, also known as lambda theory, to convert molecular formulas of compounds (derived from FTICR-MS peaks using Formulatiry and R codes) into stoichiometric and kinetic forms of biogeochemical reactions and how to use the resulting kinetic equations to simulate dynamic conversion of compounds in batch and continuous stirred tank reactors. It will address under what conditions respiration rates are driven by thermodynamics, and how respiration rates respond to the variations in parameters and input variables and how to interpret the results."
-              ],
-              "descriptionType": "Abstract",
-              "lang": null
-            }
-          ]
-        },
-        "formats": null,
-        "fundingReferences": null,
-        "geoLocations": null,
-        "identifier": {
-          "identifierType": "DOI",
-          "value": "10.25982/65526.69/1755438"
-        },
-        "language": "en",
-        "publicationYear": "2020",
-        "publisher": {
-          "lang": null,
-          "value": "Pacific Northwest National Laboratory (PNNL), Richland, WA (United States)University of Nebraska-Lincoln, Lincoln, NE (United States)"
-        },
-        "relatedIdentifiers": {
-          "relatedIdentifier": [
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "Cites",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": "10.1038/nbt.4163"
-            }
-          ]
-        },
-        "relatedItems": null,
-        "resourceType": {
-          "resourceTypeGeneral": "Dataset",
-          "value": "Dataset"
-        },
-        "rightsList": null,
-        "sizes": null,
-        "subjects": {
-          "subject": [
-            {
-              "classificationCode": null,
-              "lang": null,
-              "schemeURI": null,
-              "subjectScheme": null,
-              "value": "96 KNOWLEDGE MANAGEMENT AND PRESERVATION",
-              "valueURI": null
-            },
-            {
-              "classificationCode": null,
-              "lang": null,
-              "schemeURI": null,
-              "subjectScheme": null,
-              "value": "54 ENVIRONMENTAL SCIENCES",
-              "valueURI": null
-            },
-            {
-              "classificationCode": null,
-              "lang": null,
-              "schemeURI": null,
-              "subjectScheme": null,
-              "value": "FTICR-MS, batch reactors, continuous stirred tank reactors (CSTR)",
-              "valueURI": null
-            }
-          ]
-        },
-        "titles": {
-          "title": [
-            {
-              "lang": null,
-              "titleType": null,
-              "value": "Substrate-explicit Modeling Tutorial"
-            }
-          ]
-        },
-        "version": null
-      }
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi82NTUyNi42OS8xNzU1NDM4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Tb25nLCBIeXVuLVNlb2I8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItMjE1NC02MzU4PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPlVuaXZlcnNpdHkgb2YgTmVicmFza2EtTGluY29sbjwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TGVlLCBKb29uLVlvbmc8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+UGFjaWZpYyBOb3J0aHdlc3QgTmF0aW9uYWwgTGFiLiAoUE5OTCksIFJpY2hsYW5kLCBXQSAoVW5pdGVkIFN0YXRlcyk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5TdWJzdHJhdGUtZXhwbGljaXQgTW9kZWxpbmcgVHV0b3JpYWw8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+UGFjaWZpYyBOb3J0aHdlc3QgTmF0aW9uYWwgTGFib3JhdG9yeSAoUE5OTCksIFJpY2hsYW5kLCBXQSAoVW5pdGVkIFN0YXRlcylVbml2ZXJzaXR5IG9mIE5lYnJhc2thLUxpbmNvbG4sIExpbmNvbG4sIE5FIChVbml0ZWQgU3RhdGVzKTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+OTYgS05PV0xFREdFIE1BTkFHRU1FTlQgQU5EIFBSRVNFUlZBVElPTjwvc3ViamVjdD4KICAgIDxzdWJqZWN0PjU0IEVOVklST05NRU5UQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5GVElDUi1NUywgYmF0Y2ggcmVhY3RvcnMsIGNvbnRpbnVvdXMgc3RpcnJlZCB0YW5rIHJlYWN0b3JzIChDU1RSKTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xNzU1NDM4PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPm5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iUHJvZHVjdCBOdW1iZXIiPk5vbmU8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkRhdGFzZXQ8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L25idC40MTYzPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoaXMgdHV0b3JpYWwgTmFycmF0aXZlIGRlbW9uc3RyYXRlcyBob3cgdG8gYXBwbHkgdGhlcm1vZHluYW1pYyB0aGVvcnksIGFsc28ga25vd24gYXMgbGFtYmRhIHRoZW9yeSwgdG8gY29udmVydCBtb2xlY3VsYXIgZm9ybXVsYXMgb2YgY29tcG91bmRzIChkZXJpdmVkIGZyb20gRlRJQ1ItTVMgcGVha3MgdXNpbmcgRm9ybXVsYXRpcnkgYW5kIFIgY29kZXMpIGludG8gc3RvaWNoaW9tZXRyaWMgYW5kIGtpbmV0aWMgZm9ybXMgb2YgYmlvZ2VvY2hlbWljYWwgcmVhY3Rpb25zIGFuZCBob3cgdG8gdXNlIHRoZSByZXN1bHRpbmcga2luZXRpYyBlcXVhdGlvbnMgdG8gc2ltdWxhdGUgZHluYW1pYyBjb252ZXJzaW9uIG9mIGNvbXBvdW5kcyBpbiBiYXRjaCBhbmQgY29udGludW91cyBzdGlycmVkIHRhbmsgcmVhY3RvcnMuIEl0IHdpbGwgYWRkcmVzcyB1bmRlciB3aGF0IGNvbmRpdGlvbnMgcmVzcGlyYXRpb24gcmF0ZXMgYXJlIGRyaXZlbiBieSB0aGVybW9keW5hbWljcywgYW5kIGhvdyByZXNwaXJhdGlvbiByYXRlcyByZXNwb25kIHRvIHRoZSB2YXJpYXRpb25zIGluIHBhcmFtZXRlcnMgYW5kIGlucHV0IHZhcmlhYmxlcyBhbmQgaG93IHRvIGludGVycHJldCB0aGUgcmVzdWx0cy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
     },
     "id": "10.25982/65526.69/1755438",
     "relationships": {

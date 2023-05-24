@@ -1,0 +1,306 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Stephen",
+        "last_name": "Nayfach",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Simon",
+        "last_name": "Roux",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Rekha",
+        "last_name": "Seshadri",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Daniel",
+        "last_name": "Udwary",
+        "middle_name": "",
+        "orcid_id": "0000000234910198",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Neha",
+        "last_name": "Varghese",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Frederik",
+        "last_name": "Schulz",
+        "middle_name": "",
+        "orcid_id": "0000000249324677",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Dongying",
+        "last_name": "Wu",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "David",
+        "last_name": "Paez-Espino",
+        "middle_name": "",
+        "orcid_id": "0000000229395398",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "I-Min",
+        "last_name": "Chen",
+        "middle_name": "",
+        "orcid_id": "0000000320269798",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Marcel",
+        "last_name": "Huntemann",
+        "middle_name": "",
+        "orcid_id": "0000000212843748",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Krishna",
+        "last_name": "Palaniappan",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Joshua",
+        "last_name": "Ladau",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Supratim",
+        "last_name": "Mukherjee",
+        "middle_name": "",
+        "orcid_id": "0000000263222271",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "T.B.K.",
+        "last_name": "Reddy",
+        "middle_name": "",
+        "orcid_id": "0000000208715567",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Torben",
+        "last_name": "Nielsen",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Edward",
+        "last_name": "Kirton",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "first_name": "Jos\u00e9",
+        "last_name": "P. Faria",
+        "middle_name": "",
+        "orcid_id": "0000000193027250",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "first_name": "Janaka",
+        "last_name": "N. Edirisinghe",
+        "middle_name": "",
+        "orcid_id": "000000032493234X",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Argonne National Lab. (ANL), Argonne, IL (United States)",
+        "first_name": "Christopher",
+        "last_name": "S. Henry",
+        "middle_name": "",
+        "orcid_id": "0000000180589123",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Sean",
+        "last_name": "P. Jungbluth",
+        "middle_name": "",
+        "orcid_id": "0000000192658341",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Dylan",
+        "last_name": "Chivian",
+        "middle_name": "",
+        "orcid_id": "0000000181898729",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Paramvir",
+        "last_name": "Dehal",
+        "middle_name": "",
+        "orcid_id": "0000000158102497",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Elisha",
+        "last_name": "M. Wood-Charlson",
+        "middle_name": "",
+        "orcid_id": "0000000195577715",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Adam",
+        "last_name": "P. Arkin",
+        "middle_name": "",
+        "orcid_id": "0000000249992931",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Susannah",
+        "last_name": "Tringe",
+        "middle_name": "",
+        "orcid_id": "0000000164798427",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Axel",
+        "last_name": "Visel",
+        "middle_name": "",
+        "orcid_id": "0000000241307784",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Tanja",
+        "last_name": "Woyke",
+        "middle_name": "",
+        "orcid_id": "0000000294855637",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Nigel",
+        "last_name": "J. Mouncey",
+        "middle_name": "",
+        "orcid_id": "0000000153801256",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Natalia",
+        "last_name": "N. Ivanova",
+        "middle_name": "",
+        "orcid_id": "0000000258029485",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Nikos",
+        "last_name": "C. Kyrpides",
+        "middle_name": "",
+        "orcid_id": "0000000261310462",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "USDOE Joint Genome Institute (JGI), Berkeley, CA (United States)",
+        "first_name": "Emiley",
+        "last_name": "Eloe-Fadrosh",
+        "middle_name": "A.",
+        "orcid_id": "0000000281621276",
+        "private_email": "eaeloefadrosh@lbl.gov"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson",
+    "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+    "contact_phone": "",
+    "contract_nos": "None",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2020-10-26",
+    "date_last_submitted": "2022-02-18",
+    "description": "The reconstruction of bacterial and archaeal genomes from shotgun metagenomes has enabled unprecedented insights into the ecology and evolution of environmental and host-associated microbiomes. Here we applied this powerful approach to over 10,000 metagenomes collected from diverse habitats covering all of Earth\u2019s continents and oceans, human- and animal-host associated microbiomes, engineered environments, and natural and agricultural soils to capture extant microbial metabolic and functional potential. We present a comprehensive catalogue of 52,515 metagenome-assembled genomes representing 12,556 novel candidate species-level operational taxonomic units (OTUs), spanning 135 phyla, which expand the known phylogenetic diversity of Bacteria and Archaea by 44%. We also demonstrate the utility of this collection for secondary metabolite biosynthetic potential and predicting host-virus linkage, which can provide a view into the global distribution of lysogenic viruses. This resource underscores the value of leveraging genome-centric approaches to reveal genomic properties of uncultivated microbes that impact on ecosystem processes.",
+    "doi": "10.25982/53247.64/1670777",
+    "doi_infix": "53247.64",
+    "doi_status": "COMPLETED",
+    "entry_date": "2020-10-07",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "MAGs, metagenome-assembled genomes, metagenomics, metabolic reconstruction, metabolic modeling",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Joint Genome Institute (JGI)\r\nU.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1670777,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-01-01",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1038/s41587-020-0718-6",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsSupplementTo"
+      }
+    ],
+    "related_resource": "Nayfach, S., Roux, S., Seshadri, R. et al. A genomic catalog of Earth\u2019s microbiomes. Nat Biotechnol (2020). https://doi.org/10.1038/s41587-020-0718-6",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/53247/64/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "A Genomic Catalogue of Earth\u2019s Microbiomes - Introductory KBase Narrative",
+    "work_authorization_number": ""
+  }
+]

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1880128</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>KBase Narrative - Comparing Proteomes of Cupriavidus basilensis 4G11 and Cupriavidus
+            necator H16</title>
+        <authors>
+            <author role="primary">
+                <first_name>Kyle</first_name>
+                <last_name>Sander</last_name>
+                <private_email>kyle.b.sander@gmail.com</private_email>
+                <affiliation_name>University of California Berkeley</affiliation_name>
+                <orcid_id>0000000259447822</orcid_id>
+            </author>
+            <author>
+                <first_name>Anthony</first_name>
+                <last_name>Abel</last_name>
+                <affiliation_name>Center for the Utilization of Biological Engineering in Space,
+                    Berkeley, CA; Department of Chemical &amp; Biomolecular Engineering, University
+                    of California, Berkeley. Berkeley, CA</affiliation_name>
+            </author>
+            <author>
+                <first_name>Skyler</first_name>
+                <last_name>Friedline</last_name>
+                <affiliation_name>Center for the Utilization of Biological Engineering in Space,
+                    Berkeley, CA; Department of Bioengineering, University of California, Berkeley.
+                    Berkeley, CA</affiliation_name>
+            </author>
+            <author>
+                <first_name>Willam</first_name>
+                <last_name>Sharpless</last_name>
+                <affiliation_name>Center for the Utilization of Biological Engineering in Space,
+                    Berkeley, CA
+
+                    Current Affiliation: Department of Bioengineering, University of San Diego, San
+                    Diego, CA</affiliation_name>
+            </author>
+            <author>
+                <first_name>Jeffrey</first_name>
+                <last_name>Skerker</last_name>
+                <affiliation_name>Center for the Utilization of Biological Engineering in Space,
+                    Berkeley, CA; Department of Bioengineering, University of California, Berkeley.
+                    Berkeley, CA; Environmental Genomics and Systems Biology Division, Lawrence
+                    Berkeley National Laboratory, Berkeley, CA
+
+                    Current Affiliation: Zymergen, Emeryville, CA
+                    Introduction</affiliation_name>
+            </author>
+            <author>
+                <first_name>Adam</first_name>
+                <last_name>Deutschbauer</last_name>
+                <affiliation_name>Environmental Genomics and Systems Biology Division, Lawrence
+                    Berkeley National Laboratory, Berkeley, CA</affiliation_name>
+            </author>
+            <author>
+                <first_name>Douglas</first_name>
+                <last_name>Clark</last_name>
+                <affiliation_name>Center for the Utilization of Biological Engineering in Space,
+                    Berkeley, CA; Department of Chemical &amp; Biomolecular Engineering, University
+                    of California, Berkeley. Berkeley, CA</affiliation_name>
+            </author>
+            <author>
+                <first_name>Adam</first_name>
+                <last_name>Arkin</last_name>
+                <affiliation_name>Center for the Utilization of Biological Engineering in Space,
+                    Berkeley, CA
+                    Department of Bioengineering, University of California, Berkeley. Berkeley, CA;
+                    Environmental Genomics and Systems Biology Division, Lawrence Berkeley National
+                    Laboratory, Berkeley, CA</affiliation_name>
+            </author>
+        </authors>
+        <related_resource></related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>N/A</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>U.S. Department of Energy Systems Biology Knowledgebase</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>08/08/2022</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code></subject_categories_code>
+        <keywords></keywords>
+        <accession_num></accession_num>
+        <description>Species of Cupriavidus are among the best bioplastic producing microorganisms
+            known, though intracellular poly-hydroxybutyrate (PHB) is made exclusively during
+            unbalanced growth (e.g. nitrogen limitation), a state characterized by poor growth and
+            cellular stress. Much work has been done studying bioplastic production in the
+            model/type strain C. necator H16. We use an RB-TnSeq library of the closely related C.
+            basilensis 4G11 to assess for genes which decouple PHB production from growth state. In
+            this narrative we compute genome-wide protein homology between these two organisms, and
+            generate a synteny plot across the genomes as well.</description>
+        <site_url>https://kbase.us/n/123676/8/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1089/1066527041410319</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2022-08-09</date_first_submitted>
+        <date_last_submitted>2022-08-09</date_last_submitted>
+        <entry_date>2022-08-08</entry_date>
+        <doi status="COMPLETED">10.25982/123676.7/1880128</doi>
+        <doi_infix>123676.7</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Elisha Wood-Charlson</contact_name>
+        <contact_org>Lawrence Berkeley National Laboratory (LBNL)</contact_org>
+        <contact_email>EMWOOD-CHARLSON@lbl.gov</contact_email>
+        <contact_phone>808-286-9547</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>

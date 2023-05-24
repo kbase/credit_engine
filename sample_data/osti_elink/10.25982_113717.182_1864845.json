@@ -1,0 +1,154 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil",
+        "first_name": "J\u00falia",
+        "last_name": "Gontijo",
+        "middle_name": "Bran\u00e3o",
+        "orcid_id": "0000000319427242",
+        "private_email": "juliabrandao@usp.br",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil; Princeton Institute for International and Regional Studies, USA",
+        "first_name": "Andressa",
+        "last_name": "Venturini",
+        "middle_name": "",
+        "orcid_id": "0000000259011658",
+        "private_email": "andressa.venturini@alumni.usp.br",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil",
+        "first_name": "Aline",
+        "last_name": "da Fran\u00e7a",
+        "middle_name": "",
+        "orcid_id": "0000000282323086",
+        "private_email": "alinegifranca@gmail.com"
+      },
+      {
+        "affiliation_names": "Center for Interdisciplinary Formation, Federal University of Western Par\u00e1, Santar\u00e9m, PA, Brazil",
+        "first_name": "Jos\u00e9",
+        "last_name": "Moura",
+        "middle_name": "",
+        "orcid_id": "0000000349628870",
+        "private_email": "jmaurosm@gmail.com"
+      },
+      {
+        "affiliation_names": "Univ. of Massachusetts, Amherst, MA (United States)",
+        "first_name": "Klaus",
+        "last_name": "N\u00fcsslein",
+        "middle_name": "",
+        "orcid_id": "0000000206634448",
+        "private_email": "nusslein@microbio.umass.edu"
+      },
+      {
+        "affiliation_names": "Univ. of Oregon, Eugene, OR (United States)",
+        "first_name": "Brendan",
+        "last_name": "Bohannan",
+        "middle_name": "",
+        "orcid_id": "0000000329071016",
+        "private_email": "bohannan@uoregon.edu"
+      },
+      {
+        "affiliation_names": "Univ. of California, Davis, CA (United States)",
+        "first_name": "Jorge",
+        "last_name": "Rodrigues",
+        "middle_name": "",
+        "orcid_id": "0000000264466462",
+        "private_email": "jmrodriques@ucdavis.edu"
+      },
+      {
+        "affiliation_names": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil",
+        "first_name": "Siu",
+        "last_name": "Tsai",
+        "middle_name": "",
+        "orcid_id": "0000000237336312",
+        "private_email": "tsai@cena.usp.br"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "4235062084",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-04-27",
+    "date_last_submitted": "2022-04-27",
+    "description": "Brief sample description<br>\r\nSediment samples from 0 to 10 cm depth were collected in triplicate from two floodplains of the Eastern Brazilian Amazon, one located on the Amazonas River (FP2, 2\u00b028'11.2\"S 54\u00b038'49.9\"W) and the other at the intersection between the Amazonas and the Tapaj\u00f3s rivers (FP3, 2\u00b022'44.8\"S 54\u00b044'21.1\"W), in the wet and dry seasons (May and October 2016, respectively). Total DNA was extracted in duplicate from 0.25 g of sediment using PowerLyzer PowerSoil DNA Isolation Kit. The metagenomic libraries were constructed using NEBNext Ultra II DNA Library Prep Kit for Illumina and paired-end sequenced (2 x 150 bp) on an Illumina HiSeq 2500 platform. Detailed information about the study sites, sampling, sediment physicochemical properties, DNA extraction and quantification have been previously described by Gontijo et al. (2021).<br>\r\nSample IDs:\r\n<ul>\r\n<li>M1, M2 and M3: FP2, wet season</li>\r\n<li>M4, M5 and M6: FP3, wet season</li>\r\n<li>M7, M8 and M9: FP2, dry season</li>\r\n<li>M10, M11 and M12: FP3, dry season</li>\r\n</ul>",
+    "doi": "10.25982/113717.182/1864845",
+    "doi_infix": "113717.182",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-04-26",
+    "file_extension": "",
+    "geolocations": [
+      {
+        "place": "FP2",
+        "point": {
+          "latitude": -2.469778,
+          "longitude": -54.64719
+        }
+      },
+      {
+        "place": "FP3",
+        "point": {
+          "latitude": -2.379111,
+          "longitude": -54.73919
+        }
+      }
+    ],
+    "hidden": false,
+    "keywords": "Microbial Ecology; Metagenomics; Soil Microbial Ecology; Taxonomic annotation.",
+    "language": "English",
+    "originating_research_org": "Center for Nuclear Energy in Agriculture, University of S\u00e3o Paulo, Brazil; Princeton Institute for International and Regional \r\nStudies, USA.",
+    "osti_id": 1864845,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "This work was supported by the S\u00e3o Paulo Research Foundation (FAPESP, grant numbers #2014/50320-4, #2015/19979-2, #2018/14974-0, #2019/25924-7, and #2019/25931-3), the National Council for Scientific and Technological Development (CNPq, grant numbers #133769/2015-1 and #311008/2016-0), the Coordination for the Improvement of Higher Education Personnel - Brasil (CAPES) - Finance Code 001, and the National Science Foundation - Dimensions of Biodiversity (DEB 1442214). AMV\u2019s research is currently funded by the Fung Global Fellows Program of the Princeton Institute for International and Regional Studies (PIIRS, Princeton University).",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-04-26",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1093/bioinformatics/btu170",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/ncomms11257",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-12-385",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "In review",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/113717/183/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Metagenomes from Eastern Brazilian Amazonian floodplains in the wet and dry seasons",
+    "work_authorization_number": ""
+  }
+]

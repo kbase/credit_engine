@@ -1,0 +1,356 @@
+{
+  "data": {
+    "attributes": {
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifier": "1877390",
+          "alternateIdentifierType": "OSTI ID"
+        },
+        {
+          "alternateIdentifier": "N/A",
+          "alternateIdentifierType": "DOE Contract Number"
+        },
+        {
+          "alternateIdentifier": "None",
+          "alternateIdentifierType": "Product Number"
+        }
+      ],
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "container": {},
+      "contentUrl": null,
+      "contributors": [],
+      "created": "2022-08-24T02:14:48.000Z",
+      "creators": [
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "McLoon",
+          "givenName": "Anna",
+          "name": "McLoon, Anna",
+          "nameIdentifiers": [
+            {
+              "nameIdentifier": "https://orcid.org/0000-0001-8721-0630",
+              "nameIdentifierScheme": "ORCID",
+              "schemeUri": "https://orcid.org"
+            }
+          ],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Awad",
+          "givenName": "Thomas",
+          "name": "Awad, Thomas",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Bogardus",
+          "givenName": "Molly",
+          "name": "Bogardus, Molly",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Buono",
+          "givenName": "Meredith",
+          "name": "Buono, Meredith",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Devine",
+          "givenName": "Kaitlyn",
+          "name": "Devine, Kaitlyn",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Draper",
+          "givenName": "Rebecca",
+          "name": "Draper, Rebecca",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Femenella",
+          "givenName": "Brianna",
+          "name": "Femenella, Brianna",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Gallagher",
+          "givenName": "Hannah",
+          "name": "Gallagher, Hannah",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Morelock",
+          "givenName": "Laura",
+          "name": "Morelock, Laura",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Razi",
+          "givenName": "Mishal",
+          "name": "Razi, Mishal",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Rennick",
+          "givenName": "Jacqueline",
+          "name": "Rennick, Jacqueline",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Sheridan",
+          "givenName": "Abigail",
+          "name": "Sheridan, Abigail",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Thibault",
+          "givenName": "Righlee",
+          "name": "Thibault, Righlee",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Touchette",
+          "givenName": "Katie",
+          "name": "Touchette, Katie",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        },
+        {
+          "affiliation": [
+            {
+              "name": "Sienna College, Loudonville, NY, USA"
+            }
+          ],
+          "familyName": "Zuchowski",
+          "givenName": "Grace",
+          "name": "Zuchowski, Grace",
+          "nameIdentifiers": [],
+          "nameType": "Personal"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2022",
+          "dateType": "Issued"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Soil bacteria and endospore forming bacteria in particular play critical environmental roles in biomass degradation, plant health, and many have also been sources for commercially important secondary metabolites including antibiotics. Sequencing multiple isolates of known species also can identify new genes and gene clusters not found in other members of the same species, increasing our understanding of microbial diversity.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "doi": "10.25982/122484.28/1877390",
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "formats": [],
+      "fundingReferences": [],
+      "geoLocations": [],
+      "identifiers": [
+        {
+          "identifier": "1877390",
+          "identifierType": "OSTI ID"
+        },
+        {
+          "identifier": "N/A",
+          "identifierType": "DOE Contract Number"
+        },
+        {
+          "identifier": "None",
+          "identifierType": "Product Number"
+        }
+      ],
+      "isActive": true,
+      "language": "en",
+      "metadataVersion": 0,
+      "partCount": 0,
+      "partOfCount": 0,
+      "prefix": "10.25982",
+      "publicationYear": 2022,
+      "published": "2022",
+      "publisher": "Sienna College, Loudonville, NY, USA",
+      "reason": null,
+      "referenceCount": 0,
+      "registered": "2022-08-24T02:14:49.000Z",
+      "relatedIdentifiers": [
+        {
+          "relatedIdentifier": "10.1038/nbt.4229",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        },
+        {
+          "relatedIdentifier": "10.1038/s41467-019-10210-3",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/nar/gkab902",
+          "relatedIdentifierType": "DOI",
+          "relationType": "Cites"
+        },
+        {
+          "relatedIdentifier": "10.1093/bioinformatics/btz848",
+          "relatedIdentifierType": "DOI",
+          "relationType": "References"
+        }
+      ],
+      "relatedItems": [],
+      "rightsList": [],
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "sizes": [],
+      "source": "mds",
+      "state": "findable",
+      "subjects": [
+        {
+          "subject": "59 BASIC BIOLOGICAL SCIENCES"
+        },
+        {
+          "subject": "Bacillus pseudomycoides, Rossellomorea, Peribacillus frigoritolerans, Priestia megaterium, Paenibacillus, Lysinibacillus fusiformis"
+        }
+      ],
+      "suffix": "122484.28/1877390",
+      "titles": [
+        {
+          "title": "Siena College 2022 MRA Genome Announcement Narrative - 6 Isolates"
+        }
+      ],
+      "types": {
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "resourceType": "Genome/Genetics Data",
+        "resourceTypeGeneral": "Dataset",
+        "ris": "DATA",
+        "schemaOrg": "Dataset"
+      },
+      "updated": "2022-08-24T02:14:49.000Z",
+      "url": "https://www.osti.gov/servlets/purl/1877390/",
+      "version": null,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xMjI0ODQuMjgvMTg3NzM5MDwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TWNMb29uLCBBbm5hPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTg3MjEtMDYzMDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkF3YWQsIFRob21hczwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkJvZ2FyZHVzLCBNb2xseTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkJ1b25vLCBNZXJlZGl0aDwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkRldmluZSwgS2FpdGx5bjwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkRyYXBlciwgUmViZWNjYTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZlbWVuZWxsYSwgQnJpYW5uYTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkdhbGxhZ2hlciwgSGFubmFoPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlNpZW5uYSBDb2xsZWdlLCBMb3Vkb252aWxsZSwgTlksIFVTQTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TW9yZWxvY2ssIExhdXJhPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlNpZW5uYSBDb2xsZWdlLCBMb3Vkb252aWxsZSwgTlksIFVTQTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+UmF6aSwgTWlzaGFsPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlNpZW5uYSBDb2xsZWdlLCBMb3Vkb252aWxsZSwgTlksIFVTQTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+UmVubmljaywgSmFjcXVlbGluZTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlNoZXJpZGFuLCBBYmlnYWlsPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlNpZW5uYSBDb2xsZWdlLCBMb3Vkb252aWxsZSwgTlksIFVTQTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+VGhpYmF1bHQsIFJpZ2hsZWU8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+U2llbm5hIENvbGxlZ2UsIExvdWRvbnZpbGxlLCBOWSwgVVNBPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Ub3VjaGV0dGUsIEthdGllPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlNpZW5uYSBDb2xsZWdlLCBMb3Vkb252aWxsZSwgTlksIFVTQTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+WnVjaG93c2tpLCBHcmFjZTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5TaWVuYSBDb2xsZWdlIDIwMjIgTVJBIEdlbm9tZSBBbm5vdW5jZW1lbnQgTmFycmF0aXZlIC0gNiBJc29sYXRlczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5TaWVubmEgQ29sbGVnZSwgTG91ZG9udmlsbGUsIE5ZLCBVU0E8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjI8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PjU5IEJBU0lDIEJJT0xPR0lDQUwgU0NJRU5DRVM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5CYWNpbGx1cyBwc2V1ZG9teWNvaWRlcywgUm9zc2VsbG9tb3JlYSwgUGVyaWJhY2lsbHVzIGZyaWdvcml0b2xlcmFucywgUHJpZXN0aWEgbWVnYXRlcml1bSwgUGFlbmliYWNpbGx1cywgTHlzaW5pYmFjaWxsdXMgZnVzaWZvcm1pczwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJPU1RJIElEIj4xODc3MzkwPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9IkRPRSBDb250cmFjdCBOdW1iZXIiPk4vQTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwMzgvbmJ0LjQyMjk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IkNpdGVzIj4xMC4xMDM4L3M0MTQ2Ny0wMTktMTAyMTAtMzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiPjEwLjEwOTMvbmFyL2drYWI5MDI8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjEwOTMvYmlvaW5mb3JtYXRpY3MvYnR6ODQ4PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlNvaWwgYmFjdGVyaWEgYW5kIGVuZG9zcG9yZSBmb3JtaW5nIGJhY3RlcmlhIGluIHBhcnRpY3VsYXIgcGxheSBjcml0aWNhbCBlbnZpcm9ubWVudGFsIHJvbGVzIGluIGJpb21hc3MgZGVncmFkYXRpb24sIHBsYW50IGhlYWx0aCwgYW5kIG1hbnkgaGF2ZSBhbHNvIGJlZW4gc291cmNlcyBmb3IgY29tbWVyY2lhbGx5IGltcG9ydGFudCBzZWNvbmRhcnkgbWV0YWJvbGl0ZXMgaW5jbHVkaW5nIGFudGliaW90aWNzLiBTZXF1ZW5jaW5nIG11bHRpcGxlIGlzb2xhdGVzIG9mIGtub3duIHNwZWNpZXMgYWxzbyBjYW4gaWRlbnRpZnkgbmV3IGdlbmVzIGFuZCBnZW5lIGNsdXN0ZXJzIG5vdCBmb3VuZCBpbiBvdGhlciBtZW1iZXJzIG9mIHRoZSBzYW1lIHNwZWNpZXMsIGluY3JlYXNpbmcgb3VyIHVuZGVyc3RhbmRpbmcgb2YgbWljcm9iaWFsIGRpdmVyc2l0eS48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg=="
+    },
+    "id": "10.25982/122484.28/1877390",
+    "relationships": {
+      "citations": {
+        "data": []
+      },
+      "client": {
+        "data": {
+          "id": "doe.lbnl",
+          "type": "clients"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.25982/122484.28/1877390",
+          "type": "media"
+        }
+      },
+      "partOf": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "provider": {
+        "data": {
+          "id": "doe",
+          "type": "providers"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      }
+    },
+    "type": "dois"
+  }
+}

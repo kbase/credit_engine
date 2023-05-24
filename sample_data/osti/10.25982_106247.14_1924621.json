@@ -1,0 +1,37 @@
+[
+  {
+    "authors": [
+      "Rodge, Seema [MES, Abasaheb Garware College, Pune, India]"
+    ],
+    "country_publication": "United States",
+    "description": "The genome sequence revealed PHB synthase gene in Natrialba swarupiae. The genome-scale metabolic model was built based on the ModelSEED pipeline using the Build Metabolic Model App in KBase.",
+    "doe_contract_number": "TBD",
+    "doi": "https://doi.org/10.25982/106247.14/1924621",
+    "entry_date": "2023-02-22T00:00:00Z",
+    "language": "English",
+    "links": [
+      {
+        "href": "https://www.osti.gov/biblio/1924621",
+        "rel": "citation"
+      },
+      {
+        "href": "https://www.osti.gov/servlets/purl/1924621",
+        "rel": "fulltext"
+      }
+    ],
+    "osti_id": "1924621",
+    "product_type": "Dataset",
+    "publication_date": "2023-01-12T00:00:00Z",
+    "research_orgs": [
+      "U.S. Department of Energy Systems Biology Knowledgebase"
+    ],
+    "sponsor_orgs": [
+      "USDOE Office of Science (SC), Biological and Environmental Research (BER)"
+    ],
+    "subjects": [
+      "59 BASIC BIOLOGICAL SCIENCES",
+      "PHB synthase, Butanoate metabolism"
+    ],
+    "title": "KBase Narrative - natrialba"
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Colorado State Univ., Fort Collins, CO (United States)",
+        "first_name": "Bridget",
+        "last_name": "McGivern",
+        "middle_name": "B",
+        "orcid_id": "0000000190230018",
+        "private_email": "bridget.mcgivern@gmail.com",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Colorado State Univ., Fort Collins, CO (United States)",
+        "first_name": "Paul",
+        "last_name": "O'Toole",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": ""
+      },
+      {
+        "affiliation_names": "Colorado State Univ., Fort Collins, CO (United States)",
+        "first_name": "Kelly",
+        "last_name": "Wrighton",
+        "middle_name": "C",
+        "orcid_id": "0000000304344217",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson",
+    "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+    "contact_phone": "808-286-9547",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-11-15",
+    "date_last_submitted": "2022-11-15",
+    "description": "Members of the genus Citricoccus are recognized as salt tolerant soil microoorganisms. Here we report the metagenome assembled genome of a novel Citricoccus species recoverd from untilled, surface agricultural soils in Western Colorado.",
+    "doi": "10.25982/130581.14/1897514",
+    "doi_infix": "130581.14",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-11-09",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "Citricoccus, Agricultural Soil, Microbiome",
+    "language": "English",
+    "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1897514,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "B.B.M and K.C.W were fully or partially supported by an Early Career Award to K.C.W from the National Science Foundation under Award Number 1750189.",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-11-09",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1093/nar/gkaa621",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.4163",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Pending publication",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/130581/14/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "KBase Narrative - O'Toole et al Citricoccus MRA Genome Announcement Analysis Narrative",
+    "work_authorization_number": ""
+  }
+]

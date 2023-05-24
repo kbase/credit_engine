@@ -1,0 +1,74 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Ellen",
+        "last_name": "Dow",
+        "middle_name": "G",
+        "orcid_id": "0000000220790260",
+        "private_email": "egdow@lbl.gov",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Elisha",
+        "last_name": "Wood-Charlson",
+        "middle_name": "M",
+        "orcid_id": "0000000195577715",
+        "private_email": ""
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "egdow@lbl.gov",
+    "contact_name": "Ellen Dow, KBase Educators Lead",
+    "contact_org": "KBase, LBNL",
+    "contact_phone": "",
+    "contract_nos": "AC02-05CH11231",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "MM",
+    "date_first_submitted": "2023-01-18",
+    "date_last_submitted": "2023-01-18",
+    "description": "The KBase Educators Handbook is a community resource for educators teaching biology, computational biology,\r\nand bioinformatics using KBase. The Handbook includes supporting documentation on how to join and access community-developed resources for teaching with KBase, best practices, and guidelines on how to contribute to the KBase Educators Community.",
+    "doi": "10.25982/1909690",
+    "doi_infix": "",
+    "doi_status": "COMPLETED",
+    "entry_date": "2023-01-18",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "computational biology; bioinformatics; data science; STEM education and learning; undergraduate education; workforce development",
+    "language": "English",
+    "originating_research_org": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)",
+    "osti_id": 1909690,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-07-02",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "1828227",
+        "related_identifier_type": "URL",
+        "relation_type": "IsDescribedBy"
+      }
+    ],
+    "related_resource": "",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://drive.google.com/file/d/17VCjkKJBa6rdz5BL_RLkvaq8Isc0hveV/preview"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES; 96 KNOWLEDGE MANAGEMENT AND PRESERVATION",
+    "title": "KBase Educators Handbook",
+    "work_authorization_number": ""
+  }
+]

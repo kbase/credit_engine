@@ -1,0 +1,146 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "first_name": "Mircea",
+        "last_name": "podar",
+        "middle_name": "",
+        "orcid_id": "0000000327760205",
+        "private_email": "podarm@ornl.gov",
+        "role": "primary"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "elishawc@lbl.gov",
+    "contact_name": "Elisha Wood-Charlson, KBase User Engagement Lead",
+    "contact_org": "Lawrence Berkeley National Laboratory",
+    "contact_phone": "",
+    "contract_nos": "AC05-00OR22725",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2020-07-07",
+    "date_last_submitted": "2021-10-27",
+    "description": "Starkeya sp. strain ORNL1 is an alphaproteobacterium isolated from the rhizosphere of an Eastern cottonwood tree. Starkeya spp. are physiologically versatile, using a wide range of nutritional and energetic resources and serving important ecological roles in carbon and sulfur cycling. The 6.3-Mb chromosome of Starkeya sp. strain ORNL1 was completely sequenced and will help in understanding nutrient cycles.",
+    "doi": "10.25982/55377.22/1637507",
+    "doi_infix": "55377.22",
+    "doi_status": "COMPLETED",
+    "entry_date": "2020-07-07",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "Bioinformatics; genome; genome announcement",
+    "language": "English",
+    "originating_research_org": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)\r\nU.S. Department of Energy Systems Biology Knowledgebase",
+    "osti_id": 1637507,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-07-07",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1099/00207713-50-5-1797",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1099/ijs.0.64093-0",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1099/ijs.0.64483-0",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/225342",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1101/gr.186072.114",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btn322",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2164-9-75",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nbt.1672",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/1471-2105-15-225",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.1101/225342",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/srep08365",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkw569",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gkt1226",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.4056/sogs.3006378",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1371/journal.pcbi.1003126",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Complete Genome Sequence of Starkeya sp. Strain ORNL1, a Soil Alphaproteobacterium Isolated from the Rhizosphere of Populus deltoides\r\nMircea Podar, Joel Turner, Leah H. Burdick, Dale A. Pelletier\r\nMicrobiology Resource Announcements Jul 2020, 9 (27) e00644-20; DOI: 10.1128/MRA.00644-20",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/55377/24/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Complete Genome Sequence of Starkeya sp. Strain ORNL1, a Soil Alphaproteobacterium Isolated from the Rhizosphere of Populus deltoides",
+    "work_authorization_number": ""
+  }
+]

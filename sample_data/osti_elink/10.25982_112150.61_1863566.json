@@ -1,0 +1,212 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "University of Georgia, Athens, Georgia, USA",
+        "first_name": "Jennifer",
+        "last_name": "Goff",
+        "middle_name": "",
+        "orcid_id": "0000000290899632",
+        "private_email": "jlgoff@uga.edu",
+        "role": "primary"
+      },
+      {
+        "affiliation_names": "Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "first_name": "Andrew",
+        "last_name": "Putt",
+        "middle_name": "",
+        "orcid_id": "0000000211307134",
+        "private_email": "puttad@ornl.gov"
+      },
+      {
+        "affiliation_names": "University of Oklahoma",
+        "first_name": "Yupeng",
+        "last_name": "Fan",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "yupeng.fan-1@ou.edu"
+      },
+      {
+        "affiliation_names": "University of Oklahoma",
+        "first_name": "Jonathan",
+        "last_name": "Michael",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "Jonathan.P.Michael@ou.edu"
+      },
+      {
+        "affiliation_names": "University of Oklahoma",
+        "first_name": "Yajiao",
+        "last_name": "Wang",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "yajiao.wang-1@ou.edu"
+      },
+      {
+        "affiliation_names": "University of Oklahoma",
+        "first_name": "Daliang",
+        "last_name": "Ning",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "ningdaliang@ou.edu"
+      },
+      {
+        "affiliation_names": "University of Oklahoma",
+        "first_name": "Ying",
+        "last_name": "Fu",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "yfu@ou.edu"
+      },
+      {
+        "affiliation_names": "University of Oklahoma",
+        "first_name": "Joy",
+        "last_name": "Van Nostrand",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "joy.vannostrand@ou.edu"
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "John-Marc",
+        "last_name": "Chandonia",
+        "middle_name": "",
+        "orcid_id": "0000000251539079",
+        "private_email": "JMChandonia@lbl.gov"
+      },
+      {
+        "affiliation_names": "Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)",
+        "first_name": "Terry",
+        "last_name": "Hazen",
+        "middle_name": "",
+        "orcid_id": "0000000225369993",
+        "private_email": "tchazen@utk.edu"
+      },
+      {
+        "affiliation_names": "University of Oklahoma",
+        "first_name": "Jizhong",
+        "last_name": "Zhou",
+        "middle_name": "",
+        "orcid_id": "",
+        "private_email": "jzhou@ou.edu"
+      },
+      {
+        "affiliation_names": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+        "first_name": "Adam",
+        "last_name": "Arkin",
+        "middle_name": "",
+        "orcid_id": "0000000249992931",
+        "private_email": "aparkin@lbl.gov"
+      },
+      {
+        "affiliation_names": "University of Georgia",
+        "first_name": "Michael",
+        "last_name": "Adams",
+        "middle_name": "",
+        "orcid_id": "0000000297965014",
+        "private_email": "adamsm@uga.edu"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "4235062084",
+    "contract_nos": "AC02-05CH11231",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "GD",
+    "date_first_submitted": "2022-04-19",
+    "date_last_submitted": "2022-04-19",
+    "description": "",
+    "doi": "10.25982/112150.61/1863566",
+    "doi_infix": "112150.61",
+    "doi_status": "COMPLETED",
+    "entry_date": "2022-04-19",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "Bacillus, metals, nitrate, amplicon sequencing, geochemistry, microbial ecology",
+    "language": "English",
+    "originating_research_org": "University of Georgia, Athens, Georgia (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States); \r\nUniversity of Oklahoma, Norman, Oklahoma (United States); Lawrence Berkeley National Lab. (LBNL), Berkeley, CA \r\n(United States); Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National Lab. (ORNL), Oak Ridge, TN \r\n(United States)\r\n\r\n Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)",
+    "osti_id": 1863566,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2022-04-19",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1128/AEM.00062-07",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/s41587-019-0209-9",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/ismej.2012.8",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1038/nmeth.3869",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/s12866-015-0450-4",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      },
+      {
+        "related_identifier": "10.25982/105874.55/1844990",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1128/aem.62.2.316-322.1996",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/s12866-015-0450-4",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/nar/gks1219",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.5281/zenodo.3891931",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1128/aem.62.2.316-322.1996",
+        "related_identifier_type": "DOI",
+        "relation_type": "References"
+      }
+    ],
+    "related_resource": "submitted for publication",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/112150/61/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Geochemical and sequencing data from Goff et. al. 2022",
+    "work_authorization_number": ""
+  }
+]

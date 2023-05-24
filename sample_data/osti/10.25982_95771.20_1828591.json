@@ -13,7 +13,7 @@
     "description": "Enzymes have in vivo lifespans. Analysis of lifespans \u2013 lifetime totals of catalytic turnovers \u2013 suggests that non-survivable collateral chemical damage from the very reactions that enzymes catalyze is a common but underdiagnosed cause of enzyme death. Analysis also implies that many enzymes are moderately deficient in that their active-site regions are not naturally as hardened against such collateral damage as they could be, leaving room for improvement by rational design or directed evolution. Enzyme lifespan might also be improved by engineering systems that repair otherwise fatal active-site damage, of which a handful are known and more are inferred to exist. Unfortunately, the data needed to design and execute such improvements is lacking: there are too few measurements of in vivo lifespan, and existing information on the extent, nature, and mechanisms of active-site damage and repair during normal enzyme operation is too scarce, anecdotal, and speculative to act on. Fortunately, advances in proteomics, metabolomics, cheminformatics, comparative genomics, and structural biochemistry now empower a systematic, data-driven approach to identify, predict, and validate instances of active-site damage and its repair. These capabilities would be practically useful in enzyme redesign and improvement of in-use stability, and could change thinking about which enzymes die young in vivo, and why.",
     "doe_contract_number": "NSF: IOS-1444202; NIH: R01GM139978",
     "doi": "https://doi.org/10.25982/95771.20/1828591",
-    "entry_date": "2021-11-04T00:00:00Z",
+    "entry_date": "2023-05-17T00:00:00Z",
     "language": "English",
     "links": [
       {

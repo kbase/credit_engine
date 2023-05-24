@@ -1,0 +1,96 @@
+[
+  {
+    "accession_num": "",
+    "authorization_revision_number": "",
+    "authors": [
+      {
+        "affiliation_names": "Univ. of Connecticut, Storrs, CT (United States)",
+        "first_name": "Andrea",
+        "last_name": "Suria",
+        "middle_name": "",
+        "orcid_id": "0000000188008717",
+        "private_email": "",
+        "role": "primary"
+      }
+    ],
+    "availability": "",
+    "collaboration_names": "",
+    "contact_email": "crockettzr@ornl.gov",
+    "contact_name": "Zachary Crockett, KBase Outreach Team",
+    "contact_org": "Department of Energy Systems Biology Knowledgebase (KBase)",
+    "contact_phone": "4235062084",
+    "contract_nos": "N/A",
+    "contributors": [],
+    "country": "US",
+    "dataset_size": "",
+    "dataset_type": "",
+    "date_first_submitted": "2021-05-06",
+    "date_last_submitted": "2021-05-07",
+    "description": "The Hawaiian bobtail squid, Euprymna scolopes, has a symbiotic bacterial consortium in the accessory nidamental gland (ANG), a female reproductive organ that protects eggs against fouling microorganisms. To test the antibacterial activity of ANG community members, 19 bacterial isolates were screened for their ability to inhibit Gram-negative and Gram-positive bacteria, of which two strains were inhibitory. These two antibacterial isolates, Leisingera sp. ANG59 and Pseudoalteromonas sp. JC28, were subjected to further genomic characterization. Genomic analysis of Leisingera sp. ANG59 revealed a biosynthetic gene cluster encoding the antimicrobial compound indigoidine. The genome of Pseudoalteromonas sp. JC28 had a 14-gene cluster with >95% amino acid identity to a known bromoalterochromide (BAC) cluster. Chemical analysis confirmed production of known BACs, BAC-A/A\u2032 (compounds 1a/1b), as well as two new derivatives, BAC-D/D\u2032 (compounds 2a/2b). Extensive nuclear magnetic resonance (NMR) analyses allowed complete structural elucidation of compounds 2a/2b, and the absolute stereochemistry was unambiguously determined using an optimized Marfey\u2019s method. The BACs were then investigated for in vitro antibacterial, antifungal, and nitric oxide (NO) inhibitory activity. Compounds 1a/1b were active against the marine bacteria Bacillus algicola and Vibrio fischeri, while compounds 2a/2b were active only against B. algicola. Compounds 1a/1b inhibited NO production via lipopolysaccharide (LPS)-induced inflammation in RAW264.7 macrophage cells and also inhibited the pathogenic fungus Fusarium keratoplasticum, which, coupled with their antibacterial activity, suggests that these polyketide-nonribosomal peptides may be used for squid egg defense against potential pathogens and/or fouling microorganisms. These results indicate that BACs may provide Pseudoalteromonas sp. JC28 an ecological niche, facilitating competition against nonsymbiotic microorganisms in the host\u2019s environment.\u200b",
+    "doi": "10.25982/69990.6/1778232",
+    "doi_infix": "69990.6",
+    "doi_status": "COMPLETED",
+    "entry_date": "2021-04-20",
+    "file_extension": "",
+    "hidden": false,
+    "keywords": "symbiont, bobtail squid, Euprymna scolopes, Pseudalteromonas",
+    "language": "English",
+    "originating_research_org": "University of Connecticut, Storrs, Connecticut, USA",
+    "osti_id": 1778232,
+    "other_identifying_numbers": "",
+    "othnondoe_contract_nos": "NSF IOS-1557914",
+    "product_nos": "None",
+    "product_type": "DA",
+    "project_ids": "",
+    "publication_date": "2020-01-01",
+    "record_status": "Completed",
+    "related_identifiers": [
+      {
+        "related_identifier": "10.1101/gr.186072.114",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btt086",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btu170",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1101/gr.074492.107",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1186/gb-2009-10-3-r25",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btw379",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      },
+      {
+        "related_identifier": "10.1093/bioinformatics/btu661",
+        "related_identifier_type": "DOI",
+        "relation_type": "Cites"
+      }
+    ],
+    "related_resource": "Hawaiian Bobtail Squid Symbionts Inhibit Marine Bacteria via Production of Specialized Metabolites, Including New Bromoalterochromides BAC-D/D\u2032 Andrea M. Suria, Karen C. Tan, Allison H. Kerwin, Lucas Gitzel, Lydia Abini-Agbomson, Jessica M. Bertenshaw, Jaydeen Sewell, Spencer V. Nyholm, Marcy J. Balunas mSphere Jul 2020, 5 (4) e00166-20; DOI: 10.1128/mSphere.00166-20.",
+    "released": "Y",
+    "site_ownership_code": "KBASE",
+    "site_url": [
+      "https://kbase.us/n/69990/6/"
+    ],
+    "software_needed": "",
+    "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+    "subjects": "59 BASIC BIOLOGICAL SCIENCES",
+    "title": "Leisingera sp. ANG59 & Pseudoalteromonas sp. JC28 Genomes Overview",
+    "work_authorization_number": ""
+  }
+]

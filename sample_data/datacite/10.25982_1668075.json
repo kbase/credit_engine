@@ -102,6 +102,7 @@
           "relationType": "IsCitedBy"
         }
       ],
+      "relatedItems": [],
       "rightsList": [],
       "schemaVersion": "http://datacite.org/schema/kernel-4",
       "sizes": [],
@@ -133,138 +134,7 @@
       "versionOfCount": 0,
       "viewCount": 0,
       "viewsOverTime": [],
-      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xNjY4MDc1PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Eb3csIEVsbGVuPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTIwNzktMDI2MDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKSwgVVMgRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5LQmFzZSBFZHVjYXRvcnMgT3ZlcnZpZXc8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+TGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFib3JhdG9yeSAoTEJOTCksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjA8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0Lz4KICAgIDxzdWJqZWN0PkRhdGEgc2NpZW5jZSwgRWR1Y2F0aW9uLCBUcmFpbmluZywgR2Vub21pY3MsIE1ldGFnZW5vbWljcywgUGh5bG9nZW5ldGljcywgVHJhbnNjcmlwdG9taWNzLCBNZXRhYm9saWMgTW9kZWxpbmc8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iT1NUSSBJRCI+MTY2ODA3NTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJET0UgQ29udHJhY3QgTnVtYmVyIj5BQzAyLTA1Q0gxMTIzMTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjI1OTgyLzkwOTk3LjQ5LzE3ODMxODk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzQ2l0ZWRCeSI+MTAuMjU5ODIvOTA5OTcuNDkvMTc4MzE4OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5LQmFzZSB3b3JrZWQgd2l0aCBhIGNvbW11bml0eSBvZiBpbnN0cnVjdG9ycyB0byBjcmVhdGUgYSBjb25uZWN0ZWQgd29ya2Zsb3cgdGhhdCBpbnRlZ3JhdGVzIGdlbm9taWNzLCBtZXRhZ2Vub21pY3MsIHBoeWxvZ2VuZXRpY3MsIGFuZCBwYW5nZW5vbWljIGNvbmNlcHRzIGluIGEg4oCcY2hvb3NlIHlvdXIgb3duIGFkdmVudHVyZeKAnSBmcmFtZXdvcmsuIEVhY2ggY29uY2VwdCBpcyBzdGFuZCBhbG9uZSwgd2hpbGUgY29tcGxlbWVudGluZyBvbmUgYW5vdGhlciBhcyB0aGV5IGZsb3cgZnJvbSBvbmUgdG9waWMgdG8gYW5vdGhlciBhY3Jvc3MgY29uY2VwdHMuIFRoZSBwYWNlIG9mIGVhY2ggd29ya2Zsb3cgY2FuIGJlIGFkanVzdGVkIHdpdGggdGhlIGZsZXhpYmlsaXR5IG9mIG1vZHVsZXMgdGhhdCBhcmUgc2hhcmVhYmxlIGFuZCBhbGxvdyBzdHVkZW50cyB0byBjb3B5IGFuZCBpbnRlcmFjdCB3aXRoIGRhdGEgYW5kIGFuYWx5c2VzLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+",
-      "xml_data": {
-        "alternateIdentifiers": {
-          "alternateIdentifier": [
-            {
-              "alternateIdentifierType": "OSTI ID",
-              "value": "1668075"
-            },
-            {
-              "alternateIdentifierType": "DOE Contract Number",
-              "value": "AC02-05CH11231"
-            },
-            {
-              "alternateIdentifierType": "Product Number",
-              "value": "None"
-            }
-          ]
-        },
-        "contributors": null,
-        "creators": {
-          "creator": [
-            {
-              "affiliation": [
-                "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States), US Department of Energy Systems Biology Knowledgebase"
-              ],
-              "creatorName": {
-                "lang": null,
-                "nameType": "Personal",
-                "value": "Dow, Ellen"
-              },
-              "familyName": null,
-              "givenName": null,
-              "nameIdentifier": [
-                {
-                  "attributes": {
-                    "nameIdentifierScheme": "ORCID",
-                    "schemeURI": "http://orcid.org/"
-                  },
-                  "children": [],
-                  "qname": "{http://datacite.org/schema/kernel-4}nameIdentifier",
-                  "tail": null,
-                  "text": "https://orcid.org/0000-0002-2079-0260"
-                }
-              ]
-            }
-          ]
-        },
-        "dates": null,
-        "descriptions": {
-          "description": [
-            {
-              "content": [
-                "KBase worked with a community of instructors to create a connected workflow that integrates genomics, metagenomics, phylogenetics, and pangenomic concepts in a \u201cchoose your own adventure\u201d framework. Each concept is stand alone, while complementing one another as they flow from one topic to another across concepts. The pace of each workflow can be adjusted with the flexibility of modules that are shareable and allow students to copy and interact with data and analyses."
-              ],
-              "descriptionType": "Abstract",
-              "lang": null
-            }
-          ]
-        },
-        "formats": null,
-        "fundingReferences": null,
-        "geoLocations": null,
-        "identifier": {
-          "identifierType": "DOI",
-          "value": "10.25982/1668075"
-        },
-        "language": "en",
-        "publicationYear": "2020",
-        "publisher": {
-          "lang": null,
-          "value": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)"
-        },
-        "relatedIdentifiers": {
-          "relatedIdentifier": [
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "References",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": "10.25982/90997.49/1783189"
-            },
-            {
-              "relatedIdentifierType": "DOI",
-              "relatedMetadataScheme": null,
-              "relationType": "IsCitedBy",
-              "resourceTypeGeneral": null,
-              "schemeType": null,
-              "schemeURI": null,
-              "value": "10.25982/90997.49/1783189"
-            }
-          ]
-        },
-        "relatedItems": null,
-        "resourceType": {
-          "resourceTypeGeneral": "Dataset",
-          "value": "Genome/Genetics Data"
-        },
-        "rightsList": null,
-        "sizes": null,
-        "subjects": {
-          "subject": [
-            {
-              "classificationCode": null,
-              "lang": null,
-              "schemeURI": null,
-              "subjectScheme": null,
-              "value": "",
-              "valueURI": null
-            },
-            {
-              "classificationCode": null,
-              "lang": null,
-              "schemeURI": null,
-              "subjectScheme": null,
-              "value": "Data science, Education, Training, Genomics, Metagenomics, Phylogenetics, Transcriptomics, Metabolic Modeling",
-              "valueURI": null
-            }
-          ]
-        },
-        "titles": {
-          "title": [
-            {
-              "lang": null,
-              "titleType": null,
-              "value": "KBase Educators Overview"
-            }
-          ]
-        },
-        "version": null
-      }
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4yNTk4Mi8xNjY4MDc1PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Eb3csIEVsbGVuPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTIwNzktMDI2MDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5MYXdyZW5jZSBCZXJrZWxleSBOYXRpb25hbCBMYWIuIChMQk5MKSwgQmVya2VsZXksIENBIChVbml0ZWQgU3RhdGVzKSwgVVMgRGVwYXJ0bWVudCBvZiBFbmVyZ3kgU3lzdGVtcyBCaW9sb2d5IEtub3dsZWRnZWJhc2U8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5LQmFzZSBFZHVjYXRvcnMgT3ZlcnZpZXc8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+TGF3cmVuY2UgQmVya2VsZXkgTmF0aW9uYWwgTGFib3JhdG9yeSAoTEJOTCksIEJlcmtlbGV5LCBDQSAoVW5pdGVkIFN0YXRlcyk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjA8L3B1YmxpY2F0aW9uWWVhcj4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0Lz4KICAgIDxzdWJqZWN0PkRhdGEgc2NpZW5jZSwgRWR1Y2F0aW9uLCBUcmFpbmluZywgR2Vub21pY3MsIE1ldGFnZW5vbWljcywgUGh5bG9nZW5ldGljcywgVHJhbnNjcmlwdG9taWNzLCBNZXRhYm9saWMgTW9kZWxpbmc8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iT1NUSSBJRCI+MTY2ODA3NTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJET0UgQ29udHJhY3QgTnVtYmVyIj5BQzAyLTA1Q0gxMTIzMTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJQcm9kdWN0IE51bWJlciI+Tm9uZTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+R2Vub21lL0dlbmV0aWNzIERhdGE8L3Jlc291cmNlVHlwZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjI1OTgyLzkwOTk3LjQ5LzE3ODMxODk8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzQ2l0ZWRCeSI+MTAuMjU5ODIvOTA5OTcuNDkvMTc4MzE4OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5LQmFzZSB3b3JrZWQgd2l0aCBhIGNvbW11bml0eSBvZiBpbnN0cnVjdG9ycyB0byBjcmVhdGUgYSBjb25uZWN0ZWQgd29ya2Zsb3cgdGhhdCBpbnRlZ3JhdGVzIGdlbm9taWNzLCBtZXRhZ2Vub21pY3MsIHBoeWxvZ2VuZXRpY3MsIGFuZCBwYW5nZW5vbWljIGNvbmNlcHRzIGluIGEg4oCcY2hvb3NlIHlvdXIgb3duIGFkdmVudHVyZeKAnSBmcmFtZXdvcmsuIEVhY2ggY29uY2VwdCBpcyBzdGFuZCBhbG9uZSwgd2hpbGUgY29tcGxlbWVudGluZyBvbmUgYW5vdGhlciBhcyB0aGV5IGZsb3cgZnJvbSBvbmUgdG9waWMgdG8gYW5vdGhlciBhY3Jvc3MgY29uY2VwdHMuIFRoZSBwYWNlIG9mIGVhY2ggd29ya2Zsb3cgY2FuIGJlIGFkanVzdGVkIHdpdGggdGhlIGZsZXhpYmlsaXR5IG9mIG1vZHVsZXMgdGhhdCBhcmUgc2hhcmVhYmxlIGFuZCBhbGxvdyBzdHVkZW50cyB0byBjb3B5IGFuZCBpbnRlcmFjdCB3aXRoIGRhdGEgYW5kIGFuYWx5c2VzLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+"
     },
     "id": "10.25982/1668075",
     "relationships": {

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records start="0" rows="1" numfound="1">
+    <record status="Completed" released="Y">
+        <site_input_code>KBASE</site_input_code>
+        <hidden>false</hidden>
+        <osti_id>1863566</osti_id>
+        <dataset_type>GD</dataset_type>
+        <title>Geochemical and sequencing data from Goff et. al. 2022</title>
+        <authors>
+            <author role="primary">
+                <first_name>Jennifer</first_name>
+                <last_name>Goff</last_name>
+                <private_email>jlgoff@uga.edu</private_email>
+                <affiliation_name>University of Georgia, Athens, Georgia, USA</affiliation_name>
+                <orcid_id>0000000290899632</orcid_id>
+            </author>
+            <author>
+                <first_name>Andrew</first_name>
+                <last_name>Putt</last_name>
+                <private_email>puttad@ornl.gov</private_email>
+                <affiliation_name>Oak Ridge National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000211307134</orcid_id>
+            </author>
+            <author>
+                <first_name>Yupeng</first_name>
+                <last_name>Fan</last_name>
+                <private_email>yupeng.fan-1@ou.edu</private_email>
+                <affiliation_name>University of Oklahoma</affiliation_name>
+            </author>
+            <author>
+                <first_name>Jonathan</first_name>
+                <last_name>Michael</last_name>
+                <private_email>Jonathan.P.Michael@ou.edu</private_email>
+                <affiliation_name>University of Oklahoma</affiliation_name>
+            </author>
+            <author>
+                <first_name>Yajiao</first_name>
+                <last_name>Wang</last_name>
+                <private_email>yajiao.wang-1@ou.edu</private_email>
+                <affiliation_name>University of Oklahoma</affiliation_name>
+            </author>
+            <author>
+                <first_name>Daliang</first_name>
+                <last_name>Ning</last_name>
+                <private_email>ningdaliang@ou.edu</private_email>
+                <affiliation_name>University of Oklahoma</affiliation_name>
+            </author>
+            <author>
+                <first_name>Ying</first_name>
+                <last_name>Fu</last_name>
+                <private_email>yfu@ou.edu</private_email>
+                <affiliation_name>University of Oklahoma</affiliation_name>
+            </author>
+            <author>
+                <first_name>Joy</first_name>
+                <last_name>Van Nostrand</last_name>
+                <private_email>joy.vannostrand@ou.edu</private_email>
+                <affiliation_name>University of Oklahoma</affiliation_name>
+            </author>
+            <author>
+                <first_name>John-Marc</first_name>
+                <last_name>Chandonia</last_name>
+                <private_email>JMChandonia@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000251539079</orcid_id>
+            </author>
+            <author>
+                <first_name>Terry</first_name>
+                <last_name>Hazen</last_name>
+                <private_email>tchazen@utk.edu</private_email>
+                <affiliation_name>Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge
+                    National Lab. (ORNL), Oak Ridge, TN (United States)</affiliation_name>
+                <orcid_id>0000000225369993</orcid_id>
+            </author>
+            <author>
+                <first_name>Jizhong</first_name>
+                <last_name>Zhou</last_name>
+                <private_email>jzhou@ou.edu</private_email>
+                <affiliation_name>University of Oklahoma</affiliation_name>
+            </author>
+            <author>
+                <first_name>Adam</first_name>
+                <last_name>Arkin</last_name>
+                <private_email>aparkin@lbl.gov</private_email>
+                <affiliation_name>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United
+                    States)</affiliation_name>
+                <orcid_id>0000000249992931</orcid_id>
+            </author>
+            <author>
+                <first_name>Michael</first_name>
+                <last_name>Adams</last_name>
+                <private_email>adamsm@uga.edu</private_email>
+                <affiliation_name>University of Georgia</affiliation_name>
+                <orcid_id>0000000297965014</orcid_id>
+            </author>
+        </authors>
+        <related_resource>submitted for publication</related_resource>
+        <product_nos>None</product_nos>
+        <product_type>DA</product_type>
+        <contract_nos>AC02-05CH11231</contract_nos>
+        <other_identifying_numbers></other_identifying_numbers>
+        <originating_research_org>University of Georgia, Athens, Georgia (United States); Oak Ridge
+            National Lab. (ORNL), Oak Ridge, TN (United States);
+            University of Oklahoma, Norman, Oklahoma (United States); Lawrence Berkeley National
+            Lab. (LBNL), Berkeley, CA
+            (United States); Univ. of Tennessee, Knoxville, TN (United States); Oak Ridge National
+            Lab. (ORNL), Oak Ridge, TN
+            (United States)
+
+            Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)</originating_research_org>
+        <availability></availability>
+        <collaboration_names></collaboration_names>
+        <publication_date>04/19/2022</publication_date>
+        <language>English</language>
+        <country>US</country>
+        <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
+        <subject_categories_code>59 BASIC BIOLOGICAL SCIENCES</subject_categories_code>
+        <keywords>Bacillus, metals, nitrate, amplicon sequencing, geochemistry, microbial ecology</keywords>
+        <accession_num></accession_num>
+        <description></description>
+        <site_url>https://kbase.us/n/112150/61/</site_url>
+        <related_identifiers>
+            <detail>
+                <related_identifier>10.1128/AEM.00062-07</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/s41587-019-0209-9</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/ismej.2012.8</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1038/nmeth.3869</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/s12866-015-0450-4</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.25982/105874.55/1844990</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/aem.62.2.316-322.1996</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1186/s12866-015-0450-4</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1093/nar/gks1219</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.5281/zenodo.3891931</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>Cites</relation_type>
+            </detail>
+            <detail>
+                <related_identifier>10.1128/aem.62.2.316-322.1996</related_identifier>
+                <related_identifier_type>DOI</related_identifier_type>
+                <relation_type>References</relation_type>
+            </detail>
+        </related_identifiers>
+        <date_first_submitted>2022-04-19</date_first_submitted>
+        <date_last_submitted>2022-04-19</date_last_submitted>
+        <entry_date>2022-04-19</entry_date>
+        <doi status="COMPLETED">10.25982/112150.61/1863566</doi>
+        <doi_infix>112150.61</doi_infix>
+        <file_extension></file_extension>
+        <software_needed></software_needed>
+        <dataset_size></dataset_size>
+        <contact_name>Zachary Crockett</contact_name>
+        <contact_org>Department of Energy Systems Biology Knowledgebase (KBase)</contact_org>
+        <contact_email>crockettzr@ornl.gov</contact_email>
+        <contact_phone>4235062084</contact_phone>
+        <othnondoe_contract_nos></othnondoe_contract_nos>
+    </record>
+</records>
