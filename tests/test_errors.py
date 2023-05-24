@@ -3,6 +3,7 @@ import pytest
 import credit_engine.constants as CE
 import credit_engine.errors as errors
 from credit_engine.errors import ERROR_STRING
+from tests.common import check_stdout_for_errs
 
 MAKE_ERROR_TEST_DATA = [
     pytest.param(
@@ -74,6 +75,20 @@ MAKE_ERROR_TEST_DATA = [
     ),
     pytest.param(
         {
+            "input": ["missing_required", {"required": ["koala", "kangaroo"]}],
+            "output": "Missing required arguments: kangaroo, koala",
+        },
+        id="missing_required_two_valid_args",
+    ),
+    pytest.param(
+        {
+            "input": ["missing_required", {"required": []}],
+            "output": "Missing required arguments: ",
+        },
+        id="missing_required_empty_list",
+    ),
+    pytest.param(
+        {
             "input": ["invalid_param", {}],
             "output": ERROR_STRING["invalid_param"],
         },
@@ -123,7 +138,7 @@ MAKE_ERROR_TEST_DATA = [
     ),
     pytest.param(
         {
-            "input": ["http_error", {"doi": "my_fave_doi", "status_code": 301}],
+            "input": ["http_error", {"url": "my_fave_doi", "status_code": 301}],
             "output": "Request for my_fave_doi failed with status code 301",
         },
         id="http_error_all_args",
@@ -131,7 +146,7 @@ MAKE_ERROR_TEST_DATA = [
     pytest.param(
         {
             "input": ["http_error", {"status_code": 500}],
-            "output": "Request for DOI failed with status code 500",
+            "output": "Request for URL failed with status code 500",
         },
         id="http_error_partial_args",
     ),
@@ -139,5 +154,8 @@ MAKE_ERROR_TEST_DATA = [
 
 
 @pytest.mark.parametrize("param", MAKE_ERROR_TEST_DATA)
-def test_make_error(param):
+def test_make_error(param, capsys):
+    errors.print_error(*param["input"])
+    check_stdout_for_errs(capsys, [param["output"]])
+
     assert errors.make_error(*param["input"]) == param["output"]

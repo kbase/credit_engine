@@ -35,7 +35,7 @@ def clean_doi_list(doi_list: Optional[list[str]]) -> list[str]:
 
 
 def doi_to_file_name(doi: str) -> str:
-    """Create an OS-friendly DOI string to use as a file name.
+    """Create an OS-friendly string to use as a file name.
     Inspired by https://github.com/django/django/blob/main/django/utils/text.py
 
     :param doi: the doi
@@ -111,7 +111,7 @@ def dir_scanner(
 
 @validate_arguments
 def save_data_to_file(
-    doi: CE.TrimmedString,
+    file_name: CE.TrimmedString,
     save_dir: Union[Path, str],
     suffix: str,
     data: Union[bytes, str, list, dict],
@@ -120,13 +120,13 @@ def save_data_to_file(
     if suffix.startswith("."):
         suffix = suffix[1:]
 
-    doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.{suffix}")
+    out_file = Path(save_dir).joinpath(f"{doi_to_file_name(file_name)}.{suffix}")
     try:
         if isinstance(data, bytes):
-            write_bytes_to_file(doi_file, data)
+            write_bytes_to_file(out_file, data)
         else:
-            write_to_file(doi_file, data)
-        return doi_file
+            write_to_file(out_file, data)
+        return out_file
     except OSError as e:
         print(e)
     # includes JSON encoding errors

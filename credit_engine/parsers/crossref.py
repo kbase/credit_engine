@@ -1,16 +1,34 @@
+"""
+Crossref client
+
+access to the Crossref DOI endpoint
+does not require authentication but does require
+an email address for API access
+
+API documentation:
+    REST API (returns JSON): https://api.crossref.org/swagger-ui/index.html
+
+    XML API: https://www.crossref.org/documentation/retrieve-metadata/xml-api/doi-to-metadata-query/
+"""
+
 from json import JSONDecodeError
-from typing import Optional, Union
+from typing import Literal, Optional, Union
 from urllib.parse import quote
 
 import requests
 from pydantic import validate_arguments
 
 import credit_engine.constants as CE
-from credit_engine.errors import make_error
+from credit_engine.errors import make_error, print_error
 
+NAME = "Crossref"
 FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.UNIXREF, CE.UNIXSD]}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.CROSSREF}"
 DEFAULT_FORMAT = CE.JSON
+
+
+def requires_auth() -> Literal[False]:
+    return False
 
 
 @validate_arguments
@@ -77,8 +95,9 @@ def retrieve_doi(
         if response.status_code == 200:
             doi_data[fmt] = extract_data_from_resp(doi, response, fmt)
         else:
-            print(
-                f"Request for {doi} {fmt} failed with status code {response.status_code}"
+            print_error(
+                "http_error",
+                {"status_code": response.status_code, "url": f"{doi} {fmt} at {NAME}"},
             )
             doi_data[fmt] = None
     return doi_data

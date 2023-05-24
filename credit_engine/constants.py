@@ -14,6 +14,7 @@ class NonEmptyList(pydantic.ConstrainedList):
 CROSSREF = "crossref"
 DATACITE = "datacite"
 OSTI = "osti"
+OSTI_ELINK = "osti_elink"
 KBASE = "kbase"
 UNKNOWN = "unknown"
 

@@ -13,7 +13,11 @@ import credit_engine.parsers.osti as osti
 import credit_engine.util as util
 from credit_engine.errors import make_error
 
-SOURCE_TO_PARSER = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
+SOURCE_TO_PARSER = {
+    CE.CROSSREF: crossref,
+    CE.DATACITE: datacite,
+    CE.OSTI: osti,
+}
 
 
 @validate_arguments
@@ -195,6 +199,8 @@ def _validate_retrieve_doi_list_input(
     output_format_list: Optional[list[str]] = None,
     save_files: bool = False,
     save_dir: Optional[Union[Path, str]] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
     input_errors: Optional[list[str]] = None,
 ) -> tuple[dict, types.ModuleType]:
     """Validate the input to retrieve_doi_list.
@@ -242,6 +248,11 @@ def _validate_retrieve_doi_list_input(
             output_format_list, source, input_errors
         )
 
+    if username:
+        params["username"] = username
+    if password:
+        params["password"] = password
+
     # set up the save_dir (if appropriate)
     if save_files:
         params["save_dir"] = _validate_save_dir(save_dir, parser, input_errors)
@@ -275,9 +286,18 @@ def retrieve_doi_list(**kwargs) -> dict:
         results[CE.FILES] = {}
 
     for doi in params["doi_list"]:
-        results[CE.DATA][doi] = parser.retrieve_doi(
-            doi, output_format_list=params["output_format_list"]
-        )
+        if parser.requires_auth():
+            results[CE.DATA][doi] = parser.retrieve_doi(
+                doi,
+                username=params["username"],
+                password=params["password"],
+                output_format_list=params["output_format_list"],
+            )
+        else:
+            results[CE.DATA][doi] = parser.retrieve_doi(
+                doi, output_format_list=params["output_format_list"]
+            )
+
         if not params["save_files"]:
             continue
 
@@ -289,7 +309,7 @@ def retrieve_doi_list(**kwargs) -> dict:
                 continue
             # otherwise, save to file
             results_file = util.save_data_to_file(
-                doi=doi,
+                file_name=doi,
                 save_dir=params["save_dir"],
                 suffix=get_extension(params["source"], fmt),
                 data=results[CE.DATA][doi][fmt],
@@ -390,7 +410,7 @@ def retrieve_doi_list_from_unknown(
     if not not_found:
         return crossref_results
 
-    print(f"Searching Datacite...")
+    print("Searching Datacite...")
     # now retry these DOIs at datacite
     if output_format_list:
         valid_datacite_formats = list(

@@ -1,16 +1,30 @@
+"""
+OSTI client
+
+access to the OSTI records endpoint
+does not require authentication
+
+API documentation: https://www.osti.gov/api/v1/docs
+"""
+
 from json import JSONDecodeError
-from typing import Optional, Union
+from typing import Literal, Optional, Union
 from urllib.parse import quote
 
 import requests
 from pydantic import validate_arguments
 
 import credit_engine.constants as CE
-from credit_engine.errors import make_error
+from credit_engine.errors import make_error, print_error
 
+NAME = "OSTI"
 FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.XML]}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.OSTI}"
 DEFAULT_FORMAT = CE.JSON
+
+
+def requires_auth() -> Literal[False]:
+    return False
 
 
 @validate_arguments
@@ -71,8 +85,9 @@ def retrieve_doi(
             doi_data[fmt] = extract_data_from_resp(doi, response, fmt)
         else:
             # no results
-            print(
-                f"Request for {doi} {fmt} failed with status code {response.status_code}"
+            print_error(
+                "http_error",
+                {"url": f"{doi} {fmt} at {NAME}", "status_code": response.status_code},
             )
             doi_data[fmt] = None
 

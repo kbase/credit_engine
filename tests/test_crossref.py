@@ -3,7 +3,7 @@ import re
 import pytest
 
 import credit_engine.constants as CE
-from credit_engine.parsers.crossref import get_endpoint, retrieve_doi
+from credit_engine.parsers.crossref import NAME, get_endpoint, retrieve_doi
 from tests.common import check_stdout_for_errs
 from tests.conftest import (
     GET_ENDPOINT_FAIL_DATA,
@@ -143,7 +143,7 @@ RETRIEVE_DOI_TEST_DATA = [
             "input": [NOT_FOUND],
             "expected": {CE.JSON: None},
             "stdout": [
-                f"Request for {NOT_FOUND} {CE.JSON} failed with status code 404"
+                f"Request for {NOT_FOUND} {CE.JSON} at {NAME} failed with status code 404"
             ],
         },
         id="fail_default_format",
@@ -153,7 +153,7 @@ RETRIEVE_DOI_TEST_DATA = [
             "input": [NOT_FOUND, fmt_list],
             "expected": {fmt: None for fmt in fmt_list},
             "stdout": [
-                f"Request for {NOT_FOUND} {fmt} failed with status code 404"
+                f"Request for {NOT_FOUND} {fmt} at {NAME} failed with status code 404"
                 for fmt in fmt_list
             ],
         },

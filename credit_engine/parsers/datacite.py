@@ -1,17 +1,31 @@
+"""
+DataCite client
+
+access to the DataCite DOI endpoint
+does not require authentication
+
+API documentation: https://support.datacite.org/docs/api
+"""
+
 import base64
 from json import JSONDecodeError
-from typing import Any, Optional, Union
+from typing import Any, Literal, Optional, Union
 from urllib.parse import quote
 
 import requests
 from pydantic import validate_arguments
 
 import credit_engine.constants as CE
-from credit_engine.errors import make_error
+from credit_engine.errors import make_error, print_error
 
+NAME = "DataCite"
 FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.XML]}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.DATACITE}"
 DEFAULT_FORMAT = CE.JSON
+
+
+def requires_auth() -> Literal[False]:
+    return False
 
 
 @validate_arguments
@@ -71,7 +85,10 @@ def retrieve_doi(
 
     # no results
     for fmt in output_format_list:
-        print(f"Request for {doi} {fmt} failed with status code {response.status_code}")
+        print_error(
+            "http_error",
+            {"status_code": response.status_code, "url": f"{doi} {fmt} at {NAME}"},
+        )
     return {fmt: None for fmt in output_format_list}
 
 
