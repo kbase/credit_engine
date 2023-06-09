@@ -1,0 +1,705 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/kbase_dois/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+    
+    
+      
+        <title>KBase FAIR Narratives - KBase Credit Engine Metadata Schema</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kbase-fair-narratives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KBase Credit Engine Metadata Schema" class="md-header__button md-logo" aria-label="KBase Credit Engine Metadata Schema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KBase Credit Engine Metadata Schema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              KBase FAIR Narratives
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kbase/credit_engine" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KBase Credit Engine Metadata Schema" class="md-nav__button md-logo" aria-label="KBase Credit Engine Metadata Schema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    KBase Credit Engine Metadata Schema
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kbase/credit_engine" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/kbase/credit_engine" class="md-nav__link">
+        GitHub Repo
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="kbase-fair-narratives">KBase FAIR Narratives</h1>
+<p>Generated on 2023-06-09</p>
+<table>
+<thead>
+<tr>
+<th>DOI</th>
+<th>Title, Authors</th>
+<th>Status</th>
+<th>Submitted</th>
+<th>Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.25982/1984203</td>
+<td><a href="https://dx.doi.org/10.25982/1984203">KBase Credit Metadata Schema</a><br>Ireland, A., Wood-Charlson, E.</td>
+<td>Saved</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.25982/135473.103/1960315</td>
+<td><a href="https://dx.doi.org/10.25982/135473.103/1960315">KBase Narrative - SOMATA - Motivating Example</a><br>Cashman, M., Marsh, A., Cottingham, B., Cohen, M.</td>
+<td>Completed</td>
+<td>2023-03-08</td>
+<td>2023-03-08</td>
+</tr>
+<tr>
+<td>10.25982/106247.14/1924621</td>
+<td><a href="https://dx.doi.org/10.25982/106247.14/1924621">KBase Narrative - natrialba</a><br>Rodge, S.</td>
+<td>Completed</td>
+<td>2023-02-21</td>
+<td>2023-02-21</td>
+</tr>
+<tr>
+<td>10.25982/133260.12/1901826</td>
+<td><a href="https://dx.doi.org/10.25982/133260.12/1901826">KBase Narrative - BIT 295 MRA Isolate 106- Final</a><br>Chadha, A., Goller, C., Sjogren, C., Stanek, R., Goeuriot, S.</td>
+<td>Completed</td>
+<td>2022-12-05</td>
+<td>2022-12-05</td>
+</tr>
+<tr>
+<td>10.25982/130581.14/1897514</td>
+<td><a href="https://dx.doi.org/10.25982/130581.14/1897514">KBase Narrative - O&#39;Toole et al Citricoccus MRA Genome Announcement Analysis Narrative</a><br>McGivern, B., O&#39;Toole, P., Wrighton, K.</td>
+<td>Completed</td>
+<td>2022-11-15</td>
+<td>2022-11-15</td>
+</tr>
+<tr>
+<td>10.25982/128174.5/1893104</td>
+<td><a href="https://dx.doi.org/10.25982/128174.5/1893104">KBase Narrative - kb_DRAM P. normanii annotation with model</a><br>Flynn, R., Faria, J.</td>
+<td>Completed</td>
+<td>2022-10-17</td>
+<td>2022-10-17</td>
+</tr>
+<tr>
+<td>10.25982/116829.47/1887425</td>
+<td><a href="https://dx.doi.org/10.25982/116829.47/1887425">KBase Narrative - Mse_Genome_Assembly</a><br>Rastegar, K.</td>
+<td>Completed</td>
+<td>2022-09-15</td>
+<td>2022-09-15</td>
+</tr>
+<tr>
+<td>10.25982/123676.7/1880128</td>
+<td><a href="https://dx.doi.org/10.25982/123676.7/1880128">KBase Narrative - Comparing Proteomes of Cupriavidus basilensis 4G11 and Cupriavidus necator H16</a><br>Sander, K., Abel, A., Friedline, S., Sharpless, W., Skerker, J., Deutschbauer, A., Clark, D., Arkin, A.</td>
+<td>Completed</td>
+<td>2022-08-09</td>
+<td>2022-08-09</td>
+</tr>
+<tr>
+<td>10.25982/116951.133/1878567</td>
+<td><a href="https://dx.doi.org/10.25982/116951.133/1878567">KBase Narrative - Metagenome-assembled genomes from Amazonian soil microbial consortia</a><br>Mandro, J.</td>
+<td>Completed</td>
+<td>2022-07-29</td>
+<td>2022-07-29</td>
+</tr>
+<tr>
+<td>10.25982/1909690</td>
+<td><a href="https://dx.doi.org/10.25982/1909690">KBase Educators Handbook</a><br>Dow, E., Wood-Charlson, E.</td>
+<td>Completed</td>
+<td>2023-01-18</td>
+<td>2023-01-18</td>
+</tr>
+<tr>
+<td>10.25982/91640.61/1870603</td>
+<td><a href="https://dx.doi.org/10.25982/91640.61/1870603">KBase Narrative - Genome-resolved metagenomics reveals novel archaeal and bacterial genomes from Amazonian forest and pasture soils</a><br>Venturini, A., Gontijo, J., Mandro, J., Paula, F., Yoshiura, C., daFrança, A.</td>
+<td>Completed</td>
+<td>2022-06-01</td>
+<td>2022-07-28</td>
+</tr>
+<tr>
+<td>10.25982/75811.86/1868934</td>
+<td><a href="https://dx.doi.org/10.25982/75811.86/1868934">KBase Narrative - Viral Analysis End-to-End</a><br>Bolduc, B.</td>
+<td>Completed</td>
+<td>2022-05-20</td>
+<td>2022-05-21</td>
+</tr>
+<tr>
+<td>10.25982/113717.182/1864845</td>
+<td><a href="https://dx.doi.org/10.25982/113717.182/1864845">Metagenomes from Eastern Brazilian Amazonian floodplains in the wet and dry seasons</a><br>Gontijo, J., Venturini, A., da França, A., Moura, J., Nüsslein, K., Bohannan, B., Rodrigues, J., Tsai, S.</td>
+<td>Completed</td>
+<td>2022-04-27</td>
+<td>2022-04-27</td>
+</tr>
+<tr>
+<td>10.25982/112150.61/1863566</td>
+<td><a href="https://dx.doi.org/10.25982/112150.61/1863566">Geochemical and sequencing data from Goff et. al. 2022</a><br>Goff, J., Putt, A., Fan, Y., Michael, J., Wang, Y., Ning, D., Fu, Y., Van Nostrand, J., Chandonia, J., Hazen, T., Zhou, J., Arkin, A., Adams, M.</td>
+<td>Completed</td>
+<td>2022-04-19</td>
+<td>2022-04-19</td>
+</tr>
+<tr>
+<td>10.25982/105874.55/1844990</td>
+<td><a href="https://dx.doi.org/10.25982/105874.55/1844990">Complete Genome of ORR Isolate Bacillus cereus CPT56D-587-MTF</a><br>Goff, J.</td>
+<td>Completed</td>
+<td>2022-02-14</td>
+<td>2022-05-02</td>
+</tr>
+<tr>
+<td>10.25982/103341.23/1893106</td>
+<td><a href="https://dx.doi.org/10.25982/103341.23/1893106">KBase Narrative - kb_DRAM E. coli annotation</a><br>Shaffer, M.</td>
+<td>Completed</td>
+<td>2022-10-17</td>
+<td>2022-10-17</td>
+</tr>
+<tr>
+<td>10.25982/122484.28/1877390</td>
+<td><a href="https://dx.doi.org/10.25982/122484.28/1877390">Siena College 2022 MRA Genome Announcement Narrative - 6 Isolates</a><br>McLoon, A., Awad, T., Bogardus, M., Buono, M., Devine, K., Draper, R., Femenella, B., Gallagher, H., Morelock, L., Razi, M., Rennick, J., Sheridan, A., Thibault, R., Touchette, K., Zuchowski, G.</td>
+<td>Completed</td>
+<td>2022-08-23</td>
+<td>2022-08-23</td>
+</tr>
+<tr>
+<td>10.25982/109073.30/1895615</td>
+<td><a href="https://dx.doi.org/10.25982/109073.30/1895615">GROWdb US River Systems - Samples</a><br>Borton, M., Wrighton, K., Sadkhin, B., Henry, C., Wood-Charlson, E., Liu, F., Edirisinghe, J., Faria, J., Cannon, S.</td>
+<td>Completed</td>
+<td>2023-03-16</td>
+<td>2023-04-06</td>
+</tr>
+<tr>
+<td>10.25982/88325.84/1855758</td>
+<td><a href="https://dx.doi.org/10.25982/88325.84/1855758">DRAM example narrative</a><br>Shaffer, M.</td>
+<td>Completed</td>
+<td>2022-12-13</td>
+<td>2022-12-13</td>
+</tr>
+<tr>
+<td>10.25982/62384.253/1831503</td>
+<td><a href="https://dx.doi.org/10.25982/62384.253/1831503">Moab Desert Crust - Sample 4E</a><br>Chivian, D., Jungbluth, S., Dehal, P., Wood-Charlson, E., Canon, R., Allen, B., Clark, M., Gu, T., Land, M., Price, G., Riehl, W., Sneddon, M., Sutormin, R., Zhang, Q., Cottingham, R., Henry, C., Arkin, A.</td>
+<td>Completed</td>
+<td>2021-11-23</td>
+<td>2021-11-23</td>
+</tr>
+<tr>
+<td>10.25982/33233.606/1831502</td>
+<td><a href="https://dx.doi.org/10.25982/33233.606/1831502">Genome Extraction from Shotgun Metagenome Sequence Data</a><br>Chivian, D., Jungbluth, S., Dehal, P., Canon, R., Allen, B., Clark, M., Gu, T., Land, M., Price, G., Riehl, W., Sneddon, M., Sutormin, R., Zhang, Q., Cottingham, R., Henry, C., Arkin, A.</td>
+<td>Completed</td>
+<td>2021-11-23</td>
+<td>2022-02-18</td>
+</tr>
+<tr>
+<td>10.25982/95771.20/1828592</td>
+<td><a href="https://dx.doi.org/10.25982/95771.20/1828592">The moderately defficient enzyme: Catalysis-related damage in vivo and its repair</a><br>Henry, C.</td>
+<td>Completed</td>
+<td>2021-11-02</td>
+<td>2021-11-02</td>
+</tr>
+<tr>
+<td>10.25982/95771.20/1828591</td>
+<td><a href="https://dx.doi.org/10.25982/95771.20/1828591">The moderately defficient enzyme: Catalysis-related damage in vivo and its repair</a><br>Henry, C., Wilson, M., Hanson, A., Abraham,, P., Leong, B., McCarty, D., Bathe, U.</td>
+<td>Completed</td>
+<td>2021-11-02</td>
+<td>2023-05-16</td>
+</tr>
+<tr>
+<td>10.25982/101788.79/1828290</td>
+<td><a href="https://dx.doi.org/10.25982/101788.79/1828290">A KBase Case Study on Genome-wide Transcriptomics and Plant Primary Metabolism in Sorghum</a><br>Kumari, S.</td>
+<td>Completed</td>
+<td>2021-11-01</td>
+<td>2021-12-15</td>
+</tr>
+<tr>
+<td>10.25982/26409.220/1820944</td>
+<td><a href="https://dx.doi.org/10.25982/26409.220/1820944">Conditional Filamentation of Paraburkholderia elongata 5N - Data Container</a><br>Wilhelm, R.</td>
+<td>Completed</td>
+<td>2021-09-20</td>
+<td>2021-09-21</td>
+</tr>
+<tr>
+<td>10.25982/97146.7/1817654</td>
+<td><a href="https://dx.doi.org/10.25982/97146.7/1817654">Narrative for Bioproject PRJNA623111</a><br>Buongiorno, J.</td>
+<td>Completed</td>
+<td>2021-08-30</td>
+<td>2021-09-01</td>
+</tr>
+<tr>
+<td>10.25982/58799.728/1798340</td>
+<td><a href="https://dx.doi.org/10.25982/58799.728/1798340">Osur_paper</a><br>Kiefer, J.</td>
+<td>Completed</td>
+<td>2021-06-24</td>
+<td>2021-06-24</td>
+</tr>
+<tr>
+<td>10.25982/51640.53/1808273</td>
+<td><a href="https://dx.doi.org/10.25982/51640.53/1808273">Grant_Staphylococcus_succinus</a><br>Nickolson, G., Marshall, C., Balasjin, N., Bridwell, S.</td>
+<td>Completed</td>
+<td>2021-07-16</td>
+<td>2021-07-16</td>
+</tr>
+<tr>
+<td>10.25982/90997.49/1783189</td>
+<td><a href="https://dx.doi.org/10.25982/90997.49/1783189">Bioinformatic teaching resources - for educators, by educators - using KBase, a free, user-friendly, open source platform</a><br>Dow, E., Wood-Charlson, E., Biller, S., Paustian, T., Schimer, A., Sheik, C., Whitham, J., Krebs, R., Goller, C., Allen, B., Crockett, Z., Arkin, A.</td>
+<td>Completed</td>
+<td>2021-05-17</td>
+<td>2021-07-27</td>
+</tr>
+<tr>
+<td>10.25982/71260.262/1827108</td>
+<td><a href="https://dx.doi.org/10.25982/71260.262/1827108">Omics-to-Reactive-Transport (ORT): A workflow linking genome-scale metabolic models with reactive transport codes</a><br>Rubinstein, R., Borton, M., Zhou, H., Shaffer, M., Hoyt, D., Stegen, J., Henry, C., Wrighton, K., Versteeg, R.</td>
+<td>Completed</td>
+<td>2021-10-25</td>
+<td>2021-10-27</td>
+</tr>
+<tr>
+<td>10.25982/1764746</td>
+<td><a href="https://dx.doi.org/10.25982/1764746">KBase partners with community developers from several Department of Energy Science Focus Areas to increase functionality of tools and analysis</a><br>Wood-Charlson, E., Drake, M.</td>
+<td>Saved</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10.25982/86723.65/1778009</td>
+<td><a href="https://dx.doi.org/10.25982/86723.65/1778009">Gulf of Mexico blue hole harbors high levels of novel microbial lineages</a><br>Patin, N.</td>
+<td>Completed</td>
+<td>2021-04-19</td>
+<td>2021-04-19</td>
+</tr>
+<tr>
+<td>10.25982/68579.143/1766297</td>
+<td><a href="https://dx.doi.org/10.25982/68579.143/1766297">KBase Silver Case Study: Determining Media Formulation Requirements for Isolation of Microbiome Constituents</a><br>Whitham, J.</td>
+<td>Completed</td>
+<td>2021-02-19</td>
+<td>2021-02-23</td>
+</tr>
+<tr>
+<td>10.25982/73218.75/1777998</td>
+<td><a href="https://dx.doi.org/10.25982/73218.75/1777998">Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in MOPS Medium</a><br>Wang, J.</td>
+<td>Completed</td>
+<td>2021-04-19</td>
+<td>2021-04-19</td>
+</tr>
+<tr>
+<td>10.25982/73221.117/1777993</td>
+<td><a href="https://dx.doi.org/10.25982/73221.117/1777993">Community Modeling and Flux Balance Analysis of Synthetic Bacterial Community in R2A Medium</a><br>Wang, J.</td>
+<td>Completed</td>
+<td>2021-04-19</td>
+<td>2021-04-19</td>
+</tr>
+<tr>
+<td>10.25982/77705.1341/1779218</td>
+<td><a href="https://dx.doi.org/10.25982/77705.1341/1779218">Impact of BBDuk metagenomic read trimming and decontamination</a><br>Whitham, J.</td>
+<td>Completed</td>
+<td>2021-04-26</td>
+<td>2021-05-14</td>
+</tr>
+<tr>
+<td>10.25982/62657.1515/1779219</td>
+<td><a href="https://dx.doi.org/10.25982/62657.1515/1779219">JGI QC impact on assembly, binning, phylogenomics, and functional analysis</a><br>Whitham, J.</td>
+<td>Completed</td>
+<td>2021-05-06</td>
+<td>2021-05-14</td>
+</tr>
+<tr>
+<td>10.25982/1722943</td>
+<td><a href="https://dx.doi.org/10.25982/1722943">2020 Multiscale Microbial Dynamics Modeling Course</a><br>Dow, E., Wood-Charlson, E., Hess, N., Scheibe, T.</td>
+<td>Completed</td>
+<td>2020-12-16</td>
+<td>2020-12-16</td>
+</tr>
+<tr>
+<td>10.25982/65526.69/1755438</td>
+<td><a href="https://dx.doi.org/10.25982/65526.69/1755438">Substrate-explicit Modeling Tutorial</a><br>Song, H., Lee, J.</td>
+<td>Completed</td>
+<td>2021-01-04</td>
+<td>2021-01-04</td>
+</tr>
+<tr>
+<td>10.25982/67335.259/1773074</td>
+<td><a href="https://dx.doi.org/10.25982/67335.259/1773074">Case Study: Can you find Delftia?</a><br>Krebs, R., Goller, C.</td>
+<td>Completed</td>
+<td>2021-03-30</td>
+<td>2021-03-30</td>
+</tr>
+<tr>
+<td>10.25982/51077.6/1637903</td>
+<td><a href="https://dx.doi.org/10.25982/51077.6/1637903">Ecogenomics reveals community interactions in a long-term methanogenic bioreactor and a rapid switch to sulfate-reducing conditions</a><br>St. James, A.</td>
+<td>Completed</td>
+<td>2020-07-09</td>
+<td>2021-09-28</td>
+</tr>
+<tr>
+<td>10.25982/55377.22/1637507</td>
+<td><a href="https://dx.doi.org/10.25982/55377.22/1637507">Complete Genome Sequence of Starkeya sp. Strain ORNL1, a Soil Alphaproteobacterium Isolated from the Rhizosphere of Populus deltoides</a><br>podar, M.</td>
+<td>Completed</td>
+<td>2020-07-07</td>
+<td>2021-10-27</td>
+</tr>
+<tr>
+<td>10.25982/56021.26/1637512</td>
+<td><a href="https://dx.doi.org/10.25982/56021.26/1637512">Complete Genome Sequence of the Novel Roseimicrobium sp. Strain ORNL1, a Verrucomicrobium Isolated from the Populus deltoides Rhizosphere</a><br>Podar, M.</td>
+<td>Completed</td>
+<td>2020-07-07</td>
+<td>2021-10-27</td>
+</tr>
+<tr>
+<td>10.25982/63776.53/1637360</td>
+<td><a href="https://dx.doi.org/10.25982/63776.53/1637360">Isolate genomes from &#34;Ecogenomics of groundwater viruses suggests niche differentiation linked to specific environmental tolerance&#34;</a><br>Kothari, A., Roux, S., Zhang, H., Prieto, A., Chandonia, J., Spencer, S., Wu, X., Deutschbauer, A., Arkin, A., Alm, E., Chakraborty, R., Mukhopadhyay, A.</td>
+<td>Completed</td>
+<td>2021-05-06</td>
+<td>2023-05-16</td>
+</tr>
+<tr>
+<td>10.25982/54100.27/1635639</td>
+<td><a href="https://dx.doi.org/10.25982/54100.27/1635639">Draft Genome Sequence of Larkinella sp. Strain BK230, Isolated from Populus deltoides Roots</a><br>Pelletier, D.</td>
+<td>Completed</td>
+<td>2020-07-02</td>
+<td>2021-09-28</td>
+</tr>
+<tr>
+<td>10.25982/44746.21/1635640</td>
+<td><a href="https://dx.doi.org/10.25982/44746.21/1635640">Complete Genome Sequence of Terriglobus albidus Strain ORNL, an Acidobacterium Isolated from the Populus deltoides Rhizosphere</a><br>Podar, M.</td>
+<td>Completed</td>
+<td>2020-07-08</td>
+<td>2021-09-28</td>
+</tr>
+<tr>
+<td>10.25982/59912.37/1635154</td>
+<td><a href="https://dx.doi.org/10.25982/59912.37/1635154">Viral Annotation Pipeline in KBase</a><br>Bolduc, B., Wood-Charlson, E., Dehal, P., Crockett, Z.</td>
+<td>Completed</td>
+<td>2020-06-28</td>
+<td>2020-11-27</td>
+</tr>
+<tr>
+<td>10.25982/1608940</td>
+<td><a href="https://dx.doi.org/10.25982/1608940">Make the Most Out of Genome Announcements with KBase</a><br>Allen, B., Land, M., Wood-Charlson, E.</td>
+<td>Completed</td>
+<td>2020-04-10</td>
+<td>2020-12-01</td>
+</tr>
+<tr>
+<td>10.25982/69990.6/1778232</td>
+<td><a href="https://dx.doi.org/10.25982/69990.6/1778232">Leisingera sp. ANG59 &amp; Pseudoalteromonas sp. JC28 Genomes Overview</a><br>Suria, A.</td>
+<td>Completed</td>
+<td>2021-05-06</td>
+<td>2021-05-07</td>
+</tr>
+<tr>
+<td>10.25982/69195.32/1647032</td>
+<td><a href="https://dx.doi.org/10.25982/69195.32/1647032">Avocado_Bark_Diversity</a><br>Aguirre von Wobeser, E., Alfonso-Sánchez, A., Méndez-Bravo, A., Reverchon, F.</td>
+<td>Completed</td>
+<td>2021-06-24</td>
+<td>2021-06-24</td>
+</tr>
+<tr>
+<td>10.25982/53247.64/1670777</td>
+<td><a href="https://dx.doi.org/10.25982/53247.64/1670777">A Genomic Catalogue of Earth’s Microbiomes - Introductory KBase Narrative</a><br>Nayfach, S., Roux, S., Seshadri, R., Udwary, D., Varghese, N., Schulz, F., Wu, D., Paez-Espino, D., Chen, I., Huntemann, M., Palaniappan, K., Ladau, J., Mukherjee, S., Reddy, T., Nielsen, T., Kirton, E., P. Faria, J., N. Edirisinghe, J., S. Henry, C., P. Jungbluth, S., Chivian, D., Dehal, P., M. Wood-Charlson, E., P. Arkin, A., Tringe, S., Visel, A., Woyke, T., J. Mouncey, N., N. Ivanova, N., C. Kyrpides, N., Eloe-Fadrosh, E.</td>
+<td>Completed</td>
+<td>2020-10-26</td>
+<td>2022-02-18</td>
+</tr>
+<tr>
+<td>10.25982/1668075</td>
+<td><a href="https://dx.doi.org/10.25982/1668075">KBase Educators Overview</a><br>Dow, E.</td>
+<td>Completed</td>
+<td>2020-12-11</td>
+<td>2022-08-05</td>
+</tr>
+<tr>
+<td>10.25982/57422.59/1778919</td>
+<td><a href="https://dx.doi.org/10.25982/57422.59/1778919">Análisis de la secuencia de un aislamiento de coronavirus Covid-19</a><br>Costa, D., Valenzuela, S.</td>
+<td>Completed</td>
+<td>2021-05-06</td>
+<td>2022-06-01</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
