@@ -16,15 +16,16 @@ prefixes:
   linkml: https://w3id.org/linkml/
   ORCID: http://identifiers.org/orcid/
   OSTI: https://www.osti.gov/biblio/
-  ROR: https://ror.org/
-  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  ROR: http://identifiers.org/ror/
+  RDFS: http://www.w3.org/2000/01/rdf-schema#
   schema: http://schema.org/
+  xsd: http://www.w3.org/2001/XMLSchema#
 imports:
   - linkml:types
 default_range: string
 default_curi_maps:
   - semweb_context
-default_prefix: cm
+default_prefix: kbcm
 
 classes:
 
@@ -690,7 +691,7 @@ enums:
         - DataCite:ResourceCreatorType
       include_self: false
       relationship_types:
-        - rdfs:subClassOf
+        - RDFS:subClassOf
 
   ContributorRole:
     enum_uri: roleName
@@ -843,7 +844,7 @@ enums:
       - DataCite:ContributorRole
       include_self: false
       relationship_types:
-        - rdfs:subClassOf
+        - RDFS:subClassOf
 
   EventType:
     description: The type of date being represented
@@ -897,7 +898,7 @@ enums:
         - DataCite:DateType
       include_self: false
       relationship_types:
-        - rdfs:subClassOf
+        - RDFS:subClassOf
 
   RelationshipType:
     description: the relationship between two entities
@@ -1097,7 +1098,7 @@ enums:
         - DataCite:RelationType
       include_self: false
       relationship_types:
-        - rdfs:subClassOf
+        - RDFS:subClassOf
 
   ResourceType:
     description: The type of resource being represented
