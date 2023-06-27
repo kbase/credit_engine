@@ -66,7 +66,8 @@ GET_ENDPOINT_DATA = [
         {
             "input": [SAMPLE_DOI, "UNIXSD", ""],
             "error": re.escape(
-                "1 validation error for GetEndpoint\nemail_address\n  value is not a valid email address "
+                "1 validation error for GetEndpoint\nemail_address\n"
+                "  value is not a valid email address "
                 "(type=value_error.email)"
             ),
         },
@@ -76,7 +77,8 @@ GET_ENDPOINT_DATA = [
         {
             "input": [SAMPLE_DOI, "UNIXSD", SPACE_STR],
             "error": re.escape(
-                "1 validation error for GetEndpoint\nemail_address\n  value is not a valid email address "
+                "1 validation error for GetEndpoint\nemail_address\n"
+                "  value is not a valid email address "
                 "(type=value_error.email)"
             ),
         },
@@ -86,7 +88,8 @@ GET_ENDPOINT_DATA = [
         {
             "input": [SAMPLE_DOI, "UNIXSD", "fake email address"],
             "error": re.escape(
-                "1 validation error for GetEndpoint\nemail_address\n  value is not a valid email address "
+                "1 validation error for GetEndpoint\nemail_address\n"
+                "  value is not a valid email address "
                 "(type=value_error.email)"
             ),
         },
