@@ -8,26 +8,23 @@ from pydantic import validate_arguments
 import credit_engine.constants as CE
 from credit_engine.errors import make_error
 
-FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.UNIXREF, CE.UNIXSD]}
-SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.CROSSREF}"
+FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.XML]}
+SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.OSTI}"
 DEFAULT_FORMAT = CE.JSON
 
 
 @validate_arguments
 def get_endpoint(
-    doi: CE.TrimmedString,
-    output_format: Optional[CE.TrimmedString] = None,
-    email_address: Optional[CE.TrimmedString] = None,
+    doi: CE.TrimmedString, output_format: Optional[CE.TrimmedString] = None
 ) -> str:
-    """Get the appropriate endpoint for a CrossRef query.
+    """Get the URL for the OSTI endpoint.
 
     :param doi: DOI to retrieve
     :type doi: str
-    :param output_format: desired format; one of 'unixsd', 'unixref', or 'json'; defaults to 'json'
-    :type output_format: str, optional
-    :param email_address: email address to query from, defaults to 'credit_engine@kbase.us'
-    :type email_address: str, optional
-    :return: full URL to query
+    :param output_format: format to receive data in (N.b. URL is the
+        same regardless of format)
+    :type output_format: str
+    :return: endpoint URI
     :rtype: str
     """
     lc_output_format = output_format.lower() if output_format else DEFAULT_FORMAT
@@ -40,30 +37,20 @@ def get_endpoint(
             )
         )
 
-    if lc_output_format == CE.JSON:
-        return f"https://api.crossref.org/works/{quote(doi)}"
-
-    quoted_email_address = (
-        quote(email_address) if email_address else quote(CE.DEFAULT_EMAIL)
-    )
-
-    return f"https://doi.crossref.org/servlet/query?id={quote(doi)}&format={lc_output_format}&pid={quoted_email_address}"
+    return f"https://www.osti.gov/api/v1/records?doi={quote(doi)}"
 
 
 @validate_arguments
 def retrieve_doi(
-    doi: str,
-    output_format_list: Optional[list[str]] = None,
-    email_address: Optional[str] = None,
+    doi: CE.TrimmedString,
+    output_format_list: Optional[list[CE.TrimmedString]] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
-    """Fetch DOI data from Crossref.
+    """Fetch DOI data from OSTI.
 
     :param doi: the DOI to retrieve
     :type doi: str
     :param output_format_list: formats to retrieve the data in, defaults to None (i.e. JSON)
     :type output_format_list: list of strings, optional
-    :param email_address: email address to query from, defaults to 'credit_engine@kbase.us'
-    :type email_address: str, optional
     :raises ValueError: if the request returned anything other than a 200
     :return: the decoded JSON response
     :rtype: dict
@@ -73,29 +60,37 @@ def retrieve_doi(
 
     doi_data = {}
     for fmt in output_format_list:
-        response = requests.get(get_endpoint(doi, fmt, email_address))
+        response = requests.get(
+            get_endpoint(doi),
+            headers={
+                "Accept": f"application/{fmt}",
+            },
+        )
+
         if response.status_code == 200:
             doi_data[fmt] = extract_data_from_resp(doi, response, fmt)
         else:
+            # no results
             print(
                 f"Request for {doi} {fmt} failed with status code {response.status_code}"
             )
             doi_data[fmt] = None
+
     return doi_data
 
 
 def extract_data_from_resp(
     doi: str, resp: requests.Response, fmt: str
 ) -> Union[dict, list, bytes, None]:
-    """Extract the data from a response object.
+    """Extract data from the API response.
 
-    :param doi: the relevant DOI
+    :param doi: DOI being fetched
     :type doi: str
-    :param resp: response object for the DOI
+    :param resp: response data
     :type resp: requests.Response
-    :param fmt: format that the response was requested in
+    :param fmt: format of the response
     :type fmt: str
-    :return: decoded response content
+    :return: _description_
     :rtype: Union[dict, list, bytes, None]
     """
     if fmt == CE.JSON:

@@ -8,7 +8,7 @@ import _pytest.capture
 import pytest
 
 import credit_engine.constants as CE
-from credit_engine.parsers import base
+from credit_engine.clients import base
 from credit_engine.util import dir_scanner
 
 VERBOSE = False

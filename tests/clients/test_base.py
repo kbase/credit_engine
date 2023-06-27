@@ -7,7 +7,7 @@ import pytest
 import credit_engine.constants as CE
 import tests.common as common
 from credit_engine.errors import make_error
-from credit_engine.parsers import base, crossref, datacite, osti
+from credit_engine.clients import base, crossref, datacite, osti
 from tests.conftest import (
     CLEAN_DOI_LIST_DATA,
     FILE_LIST_TEST_DATA,

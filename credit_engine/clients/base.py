@@ -7,9 +7,9 @@ import requests
 from pydantic import validate_arguments
 
 import credit_engine.constants as CE
-import credit_engine.parsers.crossref as crossref
-import credit_engine.parsers.datacite as datacite
-import credit_engine.parsers.osti as osti
+import credit_engine.clients.crossref as crossref
+import credit_engine.clients.datacite as datacite
+import credit_engine.clients.osti as osti
 import credit_engine.util as util
 from credit_engine.errors import make_error
 

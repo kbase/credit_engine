@@ -21,10 +21,10 @@ def get_endpoint(
     """Get the URL for the DataCite endpoint.
 
     :param doi: DOI to retrieve
-    :type doi: str
+    :type doi: CE.TrimmedString
     :param output_format: format to receive data in (N.b. URL is the
         same regardless of format)
-    :type output_format: str
+    :type output_format: CE.TrimmedString
     :return: endpoint URI
     :rtype: str
     """
@@ -43,15 +43,15 @@ def get_endpoint(
 
 @validate_arguments
 def retrieve_doi(
-    doi: str,
-    output_format_list: Optional[list[str]] = None,
+    doi: CE.TrimmedString,
+    output_format_list: Optional[list[CE.TrimmedString]] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """Fetch DOI data from DataCite.
 
     :param doi: the DOI to retrieve
-    :type doi: str
+    :type doi: CE.TrimmedString
     :param output_format_list: format(s) for the DOI
-    :type output_format_list: list[str]
+    :type output_format_list: list[CE.TrimmedString]
     :raises ValueError: if the request returned anything other than a 200
     :return: the decoded JSON response
     :rtype: dict
