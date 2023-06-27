@@ -6,11 +6,11 @@ from urllib.parse import quote
 import requests
 from pydantic import validate_arguments
 
-import credit_engine.constants as CE
-import credit_engine.clients.crossref as crossref
-import credit_engine.clients.datacite as datacite
-import credit_engine.clients.osti as osti
-import credit_engine.util as util
+from credit_engine import constants as CE
+from credit_engine import util
+from credit_engine.clients import crossref
+from credit_engine.clients import datacite
+from credit_engine.clients import osti
 from credit_engine.errors import make_error
 
 SOURCE_TO_PARSER = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
