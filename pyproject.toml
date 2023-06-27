@@ -17,7 +17,7 @@ enable = true
 [tool.poetry.dependencies]
 json2python-models = "^0.3.0"
 linkml = "1.5.1"
-linkml-runtime = "1.5.1"
+linkml-runtime = "1.5.4"
 pydantic = {extras = ["email"], version = "^1.10.9"}
 pytest = "7.3.1"
 pytest-cases = "^3.6.14"
