@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -384,8 +384,8 @@
 
 <h1 id="credit_metadata">credit_metadata</h1>
 <p>Schema for KBase resource credit metadata</p>
-<p>URI: https://github.com/kbase/credit_engine/schema/kbase/linkml
-Name: credit_metadata</p>
+<p>URI: https://github.com/kbase/credit_engine/schema/kbase/linkml</p>
+<p>Name: credit_metadata</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -397,38 +397,85 @@ Name: credit_metadata</p>
 <tbody>
 <tr>
 <td><a href="Contributor/">Contributor</a></td>
-<td>Represents a contributor to the resource</td>
-</tr>
-<tr>
-<td><a href="CreditMetadata/">CreditMetadata</a></td>
-<td>Represents the credit metadata associated with a workspace object</td>
-</tr>
-<tr>
-<td><a href="CreditMetadataEntry/">CreditMetadataEntry</a></td>
-<td>Container for an instance of credit metadata; includes the credit metadata it...</td>
-</tr>
-<tr>
-<td><a href="EventDate/">EventDate</a></td>
-<td>Represents an event in the lifecycle of a resource and the date it occurred o...</td>
-</tr>
-<tr>
-<td><a href="FundingReference/">FundingReference</a></td>
-<td>Represents a funding source for a resource, including the funding body and th...</td>
-</tr>
-<tr>
-<td><a href="Organization/">Organization</a></td>
-<td>Represents an organization</td>
-</tr>
-<tr>
-<td><a href="PermanentID/">PermanentID</a></td>
-<td>Represents a persistent unique identifier for an entity, with an optional rel...</td>
-</tr>
-<tr>
-<td><a href="Title/">Title</a></td>
-<td>Represents the title or name of a resource</td>
+<td>Represents a contributor to the resource.</td>
 </tr>
 </tbody>
 </table>
+<p>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and
+a 'name'.</p>
+<p>The 'credit_name' field is used to store the name of a person as it would appear in
+a citation. If there is no 'credit_name' supplied, the 'name' field would be used
+in citations.
+For example:
+  name:         Hubert George Wells
+  credit_name:  Wells, HG</p>
+<p>name:         Alexandria Ocasio-Cortez
+  credit_name:  Ocasio-Cortez, A</p>
+<p>name:         Helena Bonham Carter
+  credit_name:  Bonham Carter, H</p>
+<p>The 'contributor_role' field takes values from the DataCite and CRediT contributor
+roles vocabularies. For more information on these resources and choosing the
+appropriate roles, please see the following links:</p>
+<p>DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</p>
+<p>CRediT contributor role taxonomy: https://credit.niso.org
+ |
+| <a href="CreditMetadata/">CreditMetadata</a> | Represents the credit metadata associated with a workspace object.</p>
+<p>In the following documentation, 'Resource' is used to refer to the workspace object
+that the CM pertains to.</p>
+<p>The 'resource_type' field should be filled using values from the DataCite
+resourceTypeGeneral field:</p>
+<p>https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral</p>
+<p>Currently the KBase workspace only supports credit metadata for objects of type
+'dataset'; anything else will return an error.</p>
+<p>The license may be supplied either as an URL pointing to licensing information for
+the resource, or using a license name. See https://choosealicense.com/appendix/ for
+a list of common open source licenses.</p>
+<p>Required fields are:
+- identifier
+- versioning information: if the resource does not have an explicit version number,
+one or more dates should be supplied: ideally the date of resource publication and
+the last update (if applicable).
+- contributors (one or more required)
+- titles (one or more required)</p>
+<p>The resource_type field is required, but as there is currently only a single valid
+value, 'dataset', it is automatically populated if no value is supplied.
+ |
+| <a href="CreditMetadataEntry/">CreditMetadataEntry</a> | Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata. |
+| <a href="EventDate/">EventDate</a> | Represents an event in the lifecycle of a resource and the date it occurred on.</p>
+<p>See https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date for more information on the events.
+ |
+| <a href="FundingReference/">FundingReference</a> | Represents a funding source for a resource, including the funding body and the grant awarded.</p>
+<p>The 'funder_name' field is required; all others are optional.</p>
+<p>Recommended resources for organization identifiers include:
+  - Research Organization Registry, http://ror.org
+  - International Standard Name Identifier, https://isni.org
+  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/</p>
+<p>Some organizations may have a digital object identifier (DOI).
+ |
+| <a href="Organization/">Organization</a> | Represents an organization.</p>
+<p>Recommended resources for organization identifiers and canonical organization names include:
+  - Research Organization Registry, http://ror.org
+  - International Standard Name Identifier, https://isni.org
+  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/</p>
+<p>For example, the US DOE would be entered as:
+  organization_name: United States Department of Energy
+  organization_id:   ROR:01bj3aw27
+ |
+| <a href="PermanentID/">PermanentID</a> | Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.</p>
+<p>The 'id' field is required; all other fields are optional.</p>
+<p>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.</p>
+<p>DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype</p>
+<p>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/
+ |
+| <a href="Title/">Title</a> | Represents the title or name of a resource.</p>
+<p>The 'title_string' field is required; if no value is supplied for 'title_type', it
+defaults to 'title'.</p>
+<p>If the title is in a language other than English, the 'title_type' should be set to
+'translated_title', and the appropriate BCP-47 tag supplied in the 'title_language'
+field.</p>
+<p>Note that the workspace checks that the 'title_language' field adheres to IETF
+BCP-47 syntax rules, but it does not check the validity of the tag.
+ |</p>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -747,7 +794,7 @@ Name: credit_metadata</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>
