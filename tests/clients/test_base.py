@@ -6,14 +6,14 @@ import pytest
 
 import credit_engine.constants as CE
 import tests.common as common
-from credit_engine.errors import make_error
 from credit_engine.clients import base, crossref, datacite, osti
+from credit_engine.errors import make_error
 from tests.conftest import (
-    CLEAN_DOI_LIST_DATA,
     FILE_LIST_TEST_DATA,
     FILE_NAME,
     INVALID_DOI,
     NOT_FOUND,
+    TRIM_DEDUPE_LIST_DATA,
     VALID_DC_DOI,
     VALID_DOI_A,
     VALID_DOI_B,
@@ -21,7 +21,7 @@ from tests.conftest import (
     generate_response_for_doi,
 )
 
-PARSER = {
+CLIENT = {
     CE.CROSSREF: crossref,
     CE.DATACITE: datacite,
     CE.OSTI: osti,
@@ -33,7 +33,7 @@ VALID_AND_INVALID_DOI_FILE = "tests/data/valid_and_invalid.txt"
 XR_DC_DOI_FILE = "tests/data/xr_dc.txt"
 
 
-SOURCE_TEST_DATA = [pytest.param(src, id=src) for src in PARSER]
+SOURCE_TEST_DATA = [pytest.param(src, id=src) for src in CLIENT]
 
 DATA_FORMAT = {
     CE.CROSSREF: {
@@ -80,7 +80,7 @@ CHECK_DOI_SOURCE_TEST_DATA = [
 GET_EXTENSION_TEST_DATA = [
     pytest.param(
         {
-            "parser": datacite,
+            "client": datacite,
             "output_format": "JSON",
             "expected": datacite.FILE_EXTENSIONS[CE.JSON],
         },
@@ -88,7 +88,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
     pytest.param(
         {
-            "parser": crossref,
+            "client": crossref,
             "output_format": CE.JSON,
             "expected": crossref.FILE_EXTENSIONS[CE.JSON],
         },
@@ -96,7 +96,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
     pytest.param(
         {
-            "parser": osti,
+            "client": osti,
             "output_format": "Json",
             "expected": osti.FILE_EXTENSIONS[CE.JSON],
         },
@@ -104,7 +104,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
     pytest.param(
         {
-            "parser": crossref,
+            "client": crossref,
             "output_format": "UNIXREF",
             "expected": crossref.FILE_EXTENSIONS[CE.UNIXREF],
         },
@@ -112,7 +112,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
     pytest.param(
         {
-            "parser": crossref,
+            "client": crossref,
             "output_format": CE.XML,
             "error": True,
         },
@@ -120,7 +120,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
     pytest.param(
         {
-            "parser": datacite,
+            "client": datacite,
             "output_format": "UnixSD",
             "error": True,
         },
@@ -128,7 +128,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
     pytest.param(
         {
-            "parser": osti,
+            "client": osti,
             "output_format": "UnixRef",
             "error": True,
         },
@@ -363,7 +363,7 @@ def test_check_doi_source(param, _mock_response):
 
 def test_get_extension_fail_bad_source():
     SOURCE = "not a real source"
-    error_text = f"No parser for source {SOURCE}"
+    error_text = f"No client for source {SOURCE}"
     with pytest.raises(ValueError, match=error_text):
         base.get_extension(SOURCE, CE.JSON)
 
@@ -387,7 +387,7 @@ def test_get_extension(source, output_format):
         assert base.get_extension(source, output_format.title().swapcase()) == expected
 
 
-@pytest.mark.parametrize("doi_list", CLEAN_DOI_LIST_DATA)
+@pytest.mark.parametrize("doi_list", TRIM_DEDUPE_LIST_DATA)
 @pytest.mark.parametrize("doi_file", FILE_LIST_TEST_DATA)
 def test__validate_dois(doi_file, doi_list):
     all_dois = set()
@@ -416,7 +416,7 @@ def test__validate_dois(doi_file, doi_list):
 @pytest.mark.parametrize("output_format_list", INVALID_OUTPUT_FORMAT_LIST_TEST_DATA)
 @pytest.mark.parametrize("save_dir", INVALID_SAVE_DIR_TEST_DATA)
 @pytest.mark.parametrize("source", INVALID_SOURCE_TEST_DATA)
-@pytest.mark.parametrize("doi_list", CLEAN_DOI_LIST_DATA)
+@pytest.mark.parametrize("doi_list", TRIM_DEDUPE_LIST_DATA)
 @pytest.mark.parametrize("doi_file", FILE_LIST_TEST_DATA)
 def test_retrieve_doi_list_errors(
     doi_file, doi_list, source, save_dir, output_format_list, capsys
@@ -468,8 +468,8 @@ def test_retrieve_doi_list(
         tmp_path = Path(tmp_dir)
         default_dir = tmp_path / "default_dir"
         specified_dir = tmp_path / "specified_dir"
-        for parser in PARSER.values():
-            monkeypatch.setattr(parser, "SAMPLE_DATA_DIR", default_dir)
+        for client in CLIENT.values():
+            monkeypatch.setattr(client, "SAMPLE_DATA_DIR", default_dir)
 
         # set up the expected output
         output_data = {}

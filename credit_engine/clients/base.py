@@ -8,12 +8,10 @@ from pydantic import validate_arguments
 
 from credit_engine import constants as CE
 from credit_engine import util
-from credit_engine.clients import crossref
-from credit_engine.clients import datacite
-from credit_engine.clients import osti
+from credit_engine.clients import crossref, datacite, osti
 from credit_engine.errors import make_error
 
-SOURCE_TO_PARSER = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
+SOURCE_TO_CLIENT = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
 
 
 @validate_arguments
@@ -43,22 +41,22 @@ def get_extension(source: str, output_format: str = CE.JSON) -> str:
     :type source: str
     :param output_format: format of data to be saved, defaults to 'json'
     :type output_format: str, optional
-    :raises ValueError: if the output format is not valid for that parser
+    :raises ValueError: if the output format is not valid for that client
     :return: file extension
     :rtype: str
     """
     lc_output_format = output_format.lower()
-    if source not in SOURCE_TO_PARSER:
-        raise ValueError(f"No parser for source {source}")
-    parser = SOURCE_TO_PARSER[source]
-    if lc_output_format not in parser.FILE_EXTENSIONS:
+    if source not in SOURCE_TO_CLIENT:
+        raise ValueError(f"No client for source {source}")
+    client = SOURCE_TO_CLIENT[source]
+    if lc_output_format not in client.FILE_EXTENSIONS:
         raise ValueError(
             make_error(
                 "invalid_param",
                 {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
             )
         )
-    return parser.FILE_EXTENSIONS[lc_output_format]
+    return client.FILE_EXTENSIONS[lc_output_format]
 
 
 def die_with_errors(error_list: list[str]):
@@ -75,9 +73,9 @@ def die_with_errors(error_list: list[str]):
 
 def _validate_dois(
     doi_file: Optional[str],
-    doi_list: Optional[list[str]],
+    doi_list: Optional[Union[list[str], set[str]]],
     input_errors: list[str],
-) -> list[str]:
+) -> set[str]:
     """Merge and validate the input DOIs.
 
     :param doi_file: file containing DOIs to be fetched
@@ -87,29 +85,29 @@ def _validate_dois(
     :param input_errors: list of param validation errors
     :type input_errors: list[str]
     :return: unique DOIs to be fetched
-    :rtype: list[str]
+    :rtype: set[str]
     """
 
-    proto_doi_list: list[str] = []
+    proto_doi_list: set[str] = set()
 
     if doi_file:
         try:
             file_lines = util.read_unique_lines(doi_file)
             if file_lines:
-                proto_doi_list = util.clean_doi_list(file_lines)
+                proto_doi_list = file_lines
             print({"proto doi list from file": proto_doi_list})
         except OSError as e:
             input_errors.append(str(e))
 
     if doi_list:  # and isinstance(doi_list, list):
         try:
-            cleaned_list = util.clean_doi_list(doi_list)
-            proto_doi_list = proto_doi_list + cleaned_list
+            cleaned_list = util.trim_dedupe_list(doi_list)
+            proto_doi_list = proto_doi_list | cleaned_list
         except Exception as e:
             print(e)
             input_errors.append(str(e))
 
-    return list(set(proto_doi_list))
+    return proto_doi_list
 
 
 def _validate_output_format_list(
@@ -126,12 +124,12 @@ def _validate_output_format_list(
     :return: validated output format list
     :rtype: list[str]
     """
-    parser = SOURCE_TO_PARSER[source]
+    client = SOURCE_TO_CLIENT[source]
     if output_format_list:
         output_format_list = list(set(output_format_list))
         # ensure the validity of the file format(s)
         invalid_formats = [
-            fmt for fmt in output_format_list if fmt not in parser.FILE_EXTENSIONS
+            fmt for fmt in output_format_list if fmt not in client.FILE_EXTENSIONS
         ]
         if invalid_formats:
             for fmt in invalid_formats:
@@ -142,33 +140,32 @@ def _validate_output_format_list(
                     )
                 )
     else:
-        output_format_list = [parser.DEFAULT_FORMAT]
+        output_format_list = [client.DEFAULT_FORMAT]
 
     return output_format_list
 
 
 def _validate_save_dir(
     save_dir: Optional[Union[Path, str]],
-    parser: Optional[types.ModuleType],
+    client: Optional[types.ModuleType],
     input_errors: list[str],
-) -> Union[Path, None]:
+) -> Optional[Path]:
     """Validate save-related parameters
 
     :param save_dir: directory in which to save files
     :type save_dir: Optional[Union[Path, str]]
-    :param parser: parser object (if it exists)
-    :type parser: Optional[types.ModuleType]
+    :param client: client object (if it exists)
+    :type client: Optional[types.ModuleType]
     :param input_errors: list of param validation errors
     :type input_errors: list[str]
     :return: validated path to the save dir or None
-    :rtype: Union[Path, None]
+    :rtype: Optional[Path]
     """
     if not save_dir:
-        if not parser:
+        if not client:
             input_errors.append("No save_dir specified")
             return None
-        else:
-            save_dir = parser.SAMPLE_DATA_DIR
+        save_dir = client.SAMPLE_DATA_DIR
 
     save_dir_path = util.full_path(save_dir)
 
@@ -212,7 +209,7 @@ def _validate_retrieve_doi_list_input(
     :param save_dir: path to the save directory, defaults to None
     :type save_dir: Optional[Union[Path, str]], optional
     :raises ValueError: if there are any input parameter errors
-    :return: tuple containing a dict of validated params and the parser module
+    :return: tuple containing a dict of validated params and the client module
     :rtype: tuple
     """
     if not input_errors:
@@ -221,13 +218,13 @@ def _validate_retrieve_doi_list_input(
     params: dict[str, Any] = {
         "save_files": save_files,
     }
-    parser: Optional[types.ModuleType] = None
+    client: Optional[types.ModuleType] = None
 
     params["doi_list"] = _validate_dois(
         doi_file=doi_file, doi_list=doi_list, input_errors=input_errors
     )
 
-    if source not in SOURCE_TO_PARSER:
+    if source not in SOURCE_TO_CLIENT:
         input_errors.append(
             make_error(
                 "invalid_param", {"param": CE.DATA_SOURCE, CE.DATA_SOURCE: source}
@@ -235,7 +232,7 @@ def _validate_retrieve_doi_list_input(
         )
     else:
         params["source"] = source
-        parser = SOURCE_TO_PARSER[source]
+        client = SOURCE_TO_CLIENT[source]
 
         # only validate the output formats if there is a valid source
         params["output_format_list"] = _validate_output_format_list(
@@ -244,14 +241,14 @@ def _validate_retrieve_doi_list_input(
 
     # set up the save_dir (if appropriate)
     if save_files:
-        params["save_dir"] = _validate_save_dir(save_dir, parser, input_errors)
+        params["save_dir"] = _validate_save_dir(save_dir, client, input_errors)
 
     if input_errors:
         die_with_errors(input_errors)
 
     # keep type checker happy
-    if parser is not None:
-        return (params, parser)
+    if client is not None:
+        return (params, client)
 
 
 def retrieve_doi_list(**kwargs) -> dict:
@@ -265,7 +262,7 @@ def retrieve_doi_list(**kwargs) -> dict:
     :rtype: dict
     """
 
-    (params, parser) = _validate_retrieve_doi_list_input(**kwargs)
+    (params, client) = _validate_retrieve_doi_list_input(**kwargs)
 
     results = {
         CE.DATA: {},
@@ -275,7 +272,7 @@ def retrieve_doi_list(**kwargs) -> dict:
         results[CE.FILES] = {}
 
     for doi in params["doi_list"]:
-        results[CE.DATA][doi] = parser.retrieve_doi(
+        results[CE.DATA][doi] = client.retrieve_doi(
             doi, output_format_list=params["output_format_list"]
         )
         if not params["save_files"]:
@@ -289,7 +286,7 @@ def retrieve_doi_list(**kwargs) -> dict:
                 continue
             # otherwise, save to file
             results_file = util.save_data_to_file(
-                doi=doi,
+                file_name=doi,
                 save_dir=params["save_dir"],
                 suffix=get_extension(params["source"], fmt),
                 data=results[CE.DATA][doi][fmt],
@@ -341,7 +338,8 @@ def retrieve_doi_list_from_unknown(
     save_files: bool = False,
     save_dir: Optional[Union[Path, str]] = None,
 ) -> dict[str, Any]:
-    """Retrieve a list of DOIs of unknown origin
+    """
+    Retrieve a list of DOIs of unknown origin.
 
     :param doi_file: file containing a list of DOIs to retrieve, defaults to None
     :type doi_file: Optional[str], optional
@@ -369,11 +367,11 @@ def retrieve_doi_list_from_unknown(
     if output_format_list:
         valid_crossref_formats = list(
             set(output_format_list).intersection(
-                set(SOURCE_TO_PARSER[CE.CROSSREF].FILE_EXTENSIONS.keys())
+                set(SOURCE_TO_CLIENT[CE.CROSSREF].FILE_EXTENSIONS.keys())
             )
         )
     else:
-        valid_crossref_formats = [SOURCE_TO_PARSER[CE.CROSSREF].DEFAULT_FORMAT]
+        valid_crossref_formats = [SOURCE_TO_CLIENT[CE.CROSSREF].DEFAULT_FORMAT]
 
     crossref_results = retrieve_doi_list(
         doi_list=all_doi_list,
@@ -390,16 +388,16 @@ def retrieve_doi_list_from_unknown(
     if not not_found:
         return crossref_results
 
-    print(f"Searching Datacite...")
+    print("Searching Datacite...")
     # now retry these DOIs at datacite
     if output_format_list:
         valid_datacite_formats = list(
             set(output_format_list).intersection(
-                set(SOURCE_TO_PARSER[CE.DATACITE].FILE_EXTENSIONS.keys())
+                set(SOURCE_TO_CLIENT[CE.DATACITE].FILE_EXTENSIONS.keys())
             )
         )
     else:
-        valid_datacite_formats = [SOURCE_TO_PARSER[CE.DATACITE].DEFAULT_FORMAT]
+        valid_datacite_formats = [SOURCE_TO_CLIENT[CE.DATACITE].DEFAULT_FORMAT]
     datacite_results = retrieve_doi_list(
         doi_list=not_found,
         source=CE.DATACITE,
