@@ -3,7 +3,7 @@ from typing import Optional, Union
 from urllib.parse import quote
 
 import requests
-from pydantic import validate_arguments, EmailStr
+from pydantic import EmailStr, validate_arguments
 
 import credit_engine.constants as CE
 from credit_engine.errors import make_error

@@ -10,9 +10,9 @@ import credit_engine.util as util
 from tests.common import check_stdout_for_errs, run_file_contents_check
 
 from .conftest import (
-    CLEAN_DOI_LIST_DATA,
     FILE_LIST_TEST_DATA,
     FILE_NAME,
+    TRIM_DEDUPE_LIST_DATA,
     VALID_DOI_A,
     MockResponse,
 )
@@ -49,18 +49,18 @@ TEXT_LINES = """Write a list of lines of text to a file.
 
 
 @pytest.mark.parametrize("param", DOI_TEST_DATA)
-def test_doi_to_file_name(param):
-    assert util.doi_to_file_name(param["doi"]) == param["file_name"]
+def test_make_safe_file_name(param):
+    assert util.make_safe_file_name(param["doi"]) == param["file_name"]
 
 
-@pytest.mark.parametrize("param", CLEAN_DOI_LIST_DATA)
-def test_clean_doi_list(param):
+@pytest.mark.parametrize("param", TRIM_DEDUPE_LIST_DATA)
+def test_trim_dedupe_list(param):
     if "output" in param:
-        clean_dois = util.clean_doi_list(param["input"])
-        assert set(clean_dois) == set(param["output"])
+        clean_dois = util.trim_dedupe_list(param["input"])
+        assert clean_dois == param["output"]
     else:
         with pytest.raises(ValidationError, match=re.escape(param["error"])):
-            util.clean_doi_list(param["input"])
+            util.trim_dedupe_list(param["input"])
 
 
 def test_full_path():
@@ -158,7 +158,7 @@ SAVE_DATA_TO_FILE_TEST_DATA = [
 def test_save_data_to_file(param, tmp_path):
     doi_file = (
         tmp_path
-        / f'{util.doi_to_file_name(param["doi"])}.{param["trimmed_suffix"]if "trimmed_suffix" in param else param["suffix"]}'
+        / f'{util.make_safe_file_name(param["doi"])}.{param["trimmed_suffix"]if "trimmed_suffix" in param else param["suffix"]}'
     )
     assert (
         util.save_data_to_file(param["doi"], tmp_path, param["suffix"], param["data"])
@@ -304,11 +304,9 @@ def test_dir_scanner_with_relative_file_input():
 
 @pytest.mark.parametrize("param", FILE_LIST_TEST_DATA)
 def test_read_unique_lines(param):
-    import re
-
     if "output" in param:
         returned_input = util.read_unique_lines(param["input"])
-        assert set(returned_input) == set(param["output"])
+        assert returned_input == param["output"]
 
     else:
         with pytest.raises(param["error_type"], match=re.escape(param["error"])):

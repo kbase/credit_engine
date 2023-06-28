@@ -59,55 +59,76 @@ OK = "ok"
 CODE = "status_code"
 CONTENT = "content"
 JSON = CE.JSON
+ES = set()
+
 
 # input for cleaning up DOI lists
-CLEAN_DOI_LIST_DATA = [
+TRIM_DEDUPE_LIST_DATA = [
     pytest.param(
         {
             "input": None,
-            "output": [],
+            "output": ES,
         },
         id="None_input",
     ),
     pytest.param(
         {
             "input": VALID_DOI_A,
-            "error": "1 validation error for CleanDoiList\ndoi_list\n  value is not a valid list (type=type_error.list)",
+            "error": (
+                "1 validation error for TrimDedupeList\n"
+                "list_items\n  value is not a valid list (type=type_error.list)"
+            ),
         },
         id="invalid_input_type",
     ),
     pytest.param(
         {
             "input": [],
-            "output": [],
+            "output": ES,
         },
         id="zero_length_list_input",
     ),
     pytest.param(
         {
             "input": [""],
-            "output": [],
+            "error": (
+                "1 validation error for TrimDedupeList\n"
+                "list_items -> 0\n"
+                "  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)"
+            ),
         },
         id="zero_str_length",
     ),
     pytest.param(
         {
-            "input": [None, None, None, None],
-            "error": "4 validation errors for CleanDoiList\ndoi_list -> 0\n  none is not an allowed value (type=type_error.none.not_allowed)\ndoi_list -> 1\n  none is not an allowed value (type=type_error.none.not_allowed)\ndoi_list -> 2\n  none is not an allowed value (type=type_error.none.not_allowed)\ndoi_list -> 3\n  none is not an allowed value (type=type_error.none.not_allowed)",
+            "input": [None, None],
+            "error": (
+                "2 validation errors for TrimDedupeList\n"
+                "list_items -> 0\n  none is not an allowed value (type=type_error.none.not_allowed)\n"
+                "list_items -> 1\n  none is not an allowed value (type=type_error.none.not_allowed)"
+            ),
         },
         id="list_of_None",
     ),
     pytest.param(
         {
-            "input": ["       ", "    ", "  \t  \n\n", ""],
-            "output": [],
+            "input": ["       ", "  \t  \n\n", ""],
+            "error": (
+                "3 validation errors for TrimDedupeList\n"
+                "list_items -> 0\n"
+                "  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)\n"
+                "list_items -> 1\n"
+                "  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)\n"
+                "list_items -> 2\n"
+                "  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)"
+            ),
         },
         id="spaced_out",
     ),
     pytest.param(
         {
             "input": [10.12345, 12345, f"     {VALID_DOI_B}       "],
-            "output": ["10.12345", "12345", VALID_DOI_B],
+            "output": {"10.12345", "12345", VALID_DOI_B},
         },
         id="format_conversion",
     ),
@@ -115,19 +136,19 @@ CLEAN_DOI_LIST_DATA = [
         {
             "input": [
                 f"  {VALID_DOI_A} ",
-                INVALID_DOI,
+                f"\t\t\t{INVALID_DOI}\t\t\t",
                 VALID_DOI_A,
                 INVALID_DOI,
                 f"   {VALID_DOI_A}\n\n",
             ],
-            "output": [VALID_DOI_A, INVALID_DOI],
+            "output": {VALID_DOI_A, INVALID_DOI},
         },
         id="duplicates",
     ),
     pytest.param(
         {
             "input": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND],
-            "output": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND],
+            "output": {VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND},
         },
         id="all_ok",
     ),
@@ -237,24 +258,24 @@ GET_ENDPOINT_FAIL_DATA = [
 
 FILE_LIST_TEST_DATA = [
     pytest.param(
-        {"input": Path("tests") / "data" / "empty.txt", "output": []},
+        {"input": Path("tests") / "data" / "empty.txt", "output": ES},
         id="empty_file",
     ),
     pytest.param(
-        {"input": Path("tests") / "data" / "whitespace.txt", "output": []},
+        {"input": Path("tests") / "data" / "whitespace.txt", "output": ES},
         id="whitespace",
     ),
     pytest.param(
         {
             "input": Path("tests") / "data" / "doi_list_with_dupes.txt",
-            "output": FILE_NAME.keys(),
+            "output": set(FILE_NAME.keys()),
         },
         id="dois_with_dupes",
     ),
     pytest.param(
         {
             "input": Path("tests") / "data" / "valid_and_invalid.txt",
-            "output": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND],
+            "output": {VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND},
         },
         id="valid_named_dois",
     ),

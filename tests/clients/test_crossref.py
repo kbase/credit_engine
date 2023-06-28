@@ -19,6 +19,11 @@ from tests.conftest import (
     generate_response_for_doi,
 )
 
+EMAIL_VALIDATION_ERROR = (
+    "1 validation error for GetEndpoint\nemail_address\n"
+    "  value is not a valid email address (type=value_error.email)"
+)
+
 GET_ENDPOINT_DATA = [
     pytest.param(
         {
@@ -65,33 +70,21 @@ GET_ENDPOINT_DATA = [
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UNIXSD", ""],
-            "error": re.escape(
-                "1 validation error for GetEndpoint\nemail_address\n"
-                "  value is not a valid email address "
-                "(type=value_error.email)"
-            ),
+            "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
         id="fmt_unixsd_email_len_0",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UNIXSD", SPACE_STR],
-            "error": re.escape(
-                "1 validation error for GetEndpoint\nemail_address\n"
-                "  value is not a valid email address "
-                "(type=value_error.email)"
-            ),
+            "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
         id="fmt_unixsd_email_whitespace",
     ),
     pytest.param(
         {
             "input": [SAMPLE_DOI, "UNIXSD", "fake email address"],
-            "error": re.escape(
-                "1 validation error for GetEndpoint\nemail_address\n"
-                "  value is not a valid email address "
-                "(type=value_error.email)"
-            ),
+            "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
         id="fmt_unixsd_email_fake_email",
     ),

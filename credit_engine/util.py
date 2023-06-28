@@ -8,34 +8,30 @@ from typing import Callable, Optional, Union
 from pydantic import validate_arguments
 
 import credit_engine.constants as CE
+from credit_engine.errors import make_error
 
 
 @validate_arguments
-def clean_doi_list(doi_list: Optional[list[str]]) -> list[str]:
-    """Clean up a list of DOIs.
+def trim_dedupe_list(list_items: Optional[list[CE.TrimmedString]]) -> set[str]:
+    """Clean up a list of strings.
 
-    Dedupe and remove blanks.
+    Dedupes, trims whitespace, and removes blanks.
 
-    :param doi_list: list of putative DOIs
-    :type doi_list: list[str]
-    :raises ValueError: if DOI list is not a list
-    :return: list (possibly empty) of cleaned-up DOIs
-    :rtype: list[str]
+    :param list_items: list of strings, possibly containing blanks or whitespace-padded entries
+    :type list_items: list[str]
+    :raises ValueError: if the list is not a list
+    :return: set (possibly empty) of cleaned-up strings
+    :rtype: set[str]
     """
-    clean_doi_list = []
-    if not doi_list:
-        return clean_doi_list
-    for putative_doi in set(doi_list):
-        if putative_doi:
-            clean_doi = putative_doi.strip()
-            if clean_doi:
-                clean_doi_list.append(clean_doi)
+    if not list_items:
+        return set()
 
-    return clean_doi_list
+    return {item for item in list_items if item}
 
 
-def doi_to_file_name(doi: str) -> str:
-    """Create an OS-friendly DOI string to use as a file name.
+def make_safe_file_name(doi: str) -> str:
+    """Create an OS-friendly string to use as a file name.
+
     Inspired by https://github.com/django/django/blob/main/django/utils/text.py
 
     :param doi: the doi
@@ -71,6 +67,7 @@ def dir_scanner(
     dir_path: Union[Path, str], conditions: Optional[list[Callable]] = None
 ) -> list[str]:
     """Scan a directory and return the paths of files that meet the conditions.
+
     If no conditions are given, returns all files except `.DS_Store`.
 
     :param dir_path: path to directory
@@ -111,22 +108,37 @@ def dir_scanner(
 
 @validate_arguments
 def save_data_to_file(
-    doi: CE.TrimmedString,
+    file_name: CE.TrimmedString,
     save_dir: Union[Path, str],
     suffix: str,
-    data: Union[bytes, str, list, dict],
+    data: Optional[Union[bytes, str, list, dict]],
 ) -> Optional[Path]:
     # ensure we don't have an extra full stop
     if suffix.startswith("."):
         suffix = suffix[1:]
 
-    doi_file = Path(save_dir).joinpath(f"{doi_to_file_name(doi)}.{suffix}")
+    out_file = Path(save_dir).joinpath(f"{make_safe_file_name(file_name)}.{suffix}")
+
+    return save_data_to_file_full_path(out_file, data)
+
+
+@validate_arguments
+def save_data_to_file_full_path(
+    file_path: Path | str, data: Optional[bytes | str | list | dict]
+) -> Optional[Path]:
+    if isinstance(file_path, str):
+        file_path = Path(file_path)
+
+    if data is None:
+        print(f"{file_path}: no data to print")
+        return None
+
     try:
         if isinstance(data, bytes):
-            write_bytes_to_file(doi_file, data)
+            write_bytes_to_file(file_path, data)
         else:
-            write_to_file(doi_file, data)
-        return doi_file
+            write_to_file(file_path, data)
+        return file_path
     except OSError as e:
         print(e)
     # includes JSON encoding errors
@@ -155,22 +167,22 @@ def read_text_file(file_path: Union[Path, str]) -> list[str]:
     :param file_path: path, either absolute or relative to the credit_engine repo
     :type file_path: string or Path object
     :return: lines in the file with endings trimmed
-    :rtype: list
+    :rtype: list[str]
     """
     with open(full_path(file_path)) as fh:
         return [line.strip() for line in fh]
 
 
-def read_unique_lines(file_path: Union[Path, str]) -> list[str]:
+def read_unique_lines(file_path: Union[Path, str]) -> set[str]:
     """Retrieve all unique, non-blank lines from a file.
 
     :param file_path: path, either absolute or relative to the credit_engine repo
     :type file_path: Union[Path, str]
-    :return: _description_
-    :rtype: list[str]
+    :return: all unique, non-blank lines in the file
+    :rtype: set[str]
     """
     all_lines = read_text_file(file_path)
-    return [line for line in list(set(all_lines)) if line]
+    return {line for line in all_lines if line}
 
 
 def write_to_file(file_path: Union[Path, str], lines: Union[list, dict, str]):
@@ -199,7 +211,8 @@ def write_to_file(file_path: Union[Path, str], lines: Union[list, dict, str]):
                 fh.write(str(line) + "\n")
         else:
             fh.write(str(lines))
-    assert fh.closed
+    if not fh.closed:
+        fh.close()
 
 
 def write_bytes_to_file(file_path: Union[Path, str], file_bytes: bytes):
@@ -212,3 +225,52 @@ def write_bytes_to_file(file_path: Union[Path, str], file_bytes: bytes):
     """
     p = full_path(file_path)
     p.write_bytes(file_bytes)
+
+
+def fix_line_endings(content: Optional[str | bytes]) -> Optional[str | bytes]:
+    """Ensure that all line endings are the same.
+
+    :param content: text with line endings to be normalized
+    :type content: Optional[str | bytes]
+    :return: text with normalized line endings
+    :rtype: Optional[str | bytes]
+    """
+    if content is None:
+        return None
+    if isinstance(content, bytes):
+        return content.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+    return content.replace("\r\n", "\n").replace("\r", "\n")
+
+
+@validate_arguments
+def get_extension(fmt: str | CE.OutputFormat = CE.OutputFormat.JSON) -> str:
+    """Get the appropriate file extension for saving data.
+
+    :param fmt: format of data to be saved, defaults to 'json'
+    :type fmt: str | CE.OutputFormat, optional
+    :raises ValueError: if the output format is not valid for that client
+    :return: file extension
+    :rtype: str
+    """
+    output_format = fmt
+    if not isinstance(fmt, CE.OutputFormat):
+        try:
+            output_format = CE.OutputFormat[fmt.upper()]
+        except KeyError:
+            raise ValueError(
+                make_error(
+                    "invalid_param",
+                    {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
+                )
+            ) from None
+
+    if output_format in CE.EXT:
+        return CE.EXT[output_format]
+
+    raise ValueError(
+        make_error(
+            "invalid_param",
+            {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
+        )
+    )
