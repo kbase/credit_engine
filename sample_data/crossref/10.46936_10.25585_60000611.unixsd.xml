@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<crossref_result xmlns="http://www.crossref.org/qrschema/3.0" version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/3.0 http://www.crossref.org/schemas/crossref_query_output3.0.xsd">
+<crossref_result xmlns="http://www.crossref.org/qrschema/3.0" version="3.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.crossref.org/qrschema/3.0 http://www.crossref.org/schemas/crossref_query_output3.0.xsd">
   <query_result>
     <head>
       <doi_batch_id>none</doi_batch_id>
@@ -7,7 +9,8 @@
     <body>
       <query status="resolved">
         <doi type="grant">10.46936/10.25585/60000611</doi>
-        <crm-item name="publisher-name" type="string">Office of Scientific and Technical Information (OSTI)</crm-item>
+        <crm-item name="publisher-name" type="string">Office of Scientific and Technical Information
+          (OSTI)</crm-item>
         <crm-item name="prefix-name" type="string">US Department of Energy</crm-item>
         <crm-item name="member-id" type="number">960</crm-item>
         <crm-item name="citation-id" type="number">130021499</crm-item>
@@ -18,10 +21,12 @@
         <crm-item name="created" type="date">2021-09-07T17:44:59Z</crm-item>
         <crm-item name="citedby-count" type="number">0</crm-item>
         <doi_record>
-          <crossref xmlns="http://www.crossref.org/xschema/1.1" xsi:schemaLocation="http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd">
+          <crossref xmlns="http://www.crossref.org/xschema/1.1"
+            xsi:schemaLocation="http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd">
             <grant xmlns="http://www.crossref.org/grant_id/0.0.1">
               <project>
-                <project-title>Mediterranean Grassland Soil Metagenome (MGSM): Enabling a systems view of soil carbon and nitrogen biogeochemistry under a changing climate.</project-title>
+                <project-title>Mediterranean Grassland Soil Metagenome (MGSM): Enabling a systems
+                  view of soil carbon and nitrogen biogeochemistry under a changing climate.</project-title>
                 <investigators>
                   <person role="lead_investigator">
                     <givenName>Eoin</givenName>

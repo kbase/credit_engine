@@ -9,15 +9,20 @@ import tests.common as common
 from credit_engine.clients import base, crossref, datacite, osti
 from credit_engine.errors import make_error
 from tests.conftest import (
+    DOI_FILE,
     FILE_LIST_TEST_DATA,
     FILE_NAME,
-    INVALID_DOI,
-    NOT_FOUND,
+    NOT_FOUND_DOI_A,
+    NOT_FOUND_DOI_B,
     TRIM_DEDUPE_LIST_DATA,
     VALID_DC_DOI,
+    VALID_DC_DOI_A,
+    VALID_DC_DOI_B,
     VALID_DOI_A,
     VALID_DOI_B,
     VALID_XR_DOI,
+    VALID_XR_DOI_A,
+    VALID_XR_DOI_B,
     generate_response_for_doi,
 )
 
@@ -69,7 +74,7 @@ CHECK_DOI_SOURCE_TEST_DATA = [
     ),
     pytest.param(
         {
-            "doi": NOT_FOUND,
+            "doi": NOT_FOUND_DOI_A,
             "expected": None,
         },
         id="not_found",
@@ -147,7 +152,7 @@ INVALID_SOURCE_TEST_DATA = [
                 {"param": CE.DATA_SOURCE, CE.DATA_SOURCE: "THE BOWELS OF HELL"},
             ),
         },
-        id="invalid_source",
+        id="invalid_source_string",
     ),
     pytest.param(
         {
@@ -251,14 +256,14 @@ INVALID_SAVE_DIR_TEST_DATA = [
             "input": "/does/not/exist",
             "error": "invalid save_dir: '/does/not/exist' does not exist or is not a directory",
         },
-        id="absolute_save_dir",
+        id="invalid_save_dir_abs",
     ),
     pytest.param(
         {
             "input": "does/not/exist",
             "error": "invalid save_dir: 'does/not/exist' does not exist or is not a directory",
         },
-        id="relative_save_dir",
+        id="invalid_save_dir_rel",
     ),
     pytest.param(
         {
@@ -295,54 +300,51 @@ SAVE_PARAMS = [
     ),
 ]
 
-DOI_LIST = [
-    pytest.param([VALID_DOI_A, VALID_DOI_B], id="all_valid"),
-    pytest.param([VALID_DOI_A, INVALID_DOI], id="some_valid"),
-    pytest.param([NOT_FOUND, INVALID_DOI], id="all_invalid"),
-]
 
+A = "a"
+B = "b"
 DOI_INPUT_TEST_DATA = [
     pytest.param(
         {
-            "doi_list": [VALID_DOI_A, VALID_DOI_B],
-            "all_dois": [VALID_DOI_A, VALID_DOI_B],
+            "doi_list": [A, B],
+            "all_dois": [A, B],
         },
         id="list_all_valid",
     ),
     pytest.param(
         {
-            "doi_list": [VALID_DOI_A, INVALID_DOI],
-            "all_dois": [VALID_DOI_A, INVALID_DOI],
+            "doi_list": [A, NOT_FOUND_DOI_B],
+            "all_dois": [A, NOT_FOUND_DOI_B],
         },
         id="list_some_valid",
     ),
     pytest.param(
         {
-            "doi_list": [NOT_FOUND, INVALID_DOI],
-            "all_dois": [NOT_FOUND, INVALID_DOI],
+            "doi_list": [NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
+            "all_dois": [NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
         },
         id="list_all_invalid",
     ),
     pytest.param(
         {
-            "doi_file": VALID_AND_INVALID_DOI_FILE,
-            "all_dois": [VALID_DOI_A, VALID_DOI_B, NOT_FOUND, INVALID_DOI],
+            "doi_file": "VALID_INVALID",
+            "all_dois": [A, B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
         },
         id="file_some_valid",
     ),
     pytest.param(
         {
-            "doi_list": [VALID_DOI_A, VALID_DOI_B],
-            "doi_file": INVALID_DOI_FILE,
-            "all_dois": [VALID_DOI_A, VALID_DOI_B, NOT_FOUND, INVALID_DOI],
+            "doi_list": [A, B],
+            "doi_file": "INVALID",
+            "all_dois": [A, B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
         },
         id="list_valid_file_invalid",
     ),
     pytest.param(
         {
-            "doi_list": [VALID_DOI_A, INVALID_DOI],
-            "doi_file": VALID_DOI_FILE,
-            "all_dois": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI],
+            "doi_list": [A, NOT_FOUND_DOI_B],
+            "doi_file": "VALID",
+            "all_dois": [A, B, NOT_FOUND_DOI_B],
         },
         id="mixed_sources",
     ),
@@ -441,15 +443,62 @@ def test_retrieve_doi_list_errors(
             save_dir=save_dir["input"],
         )
 
+    # common.check_stdout_for_errs(capsys, error_list)
+
 
 @pytest.mark.parametrize("output_format_list", OUTPUT_FORMAT_LIST)
 @pytest.mark.parametrize("save_to", SAVE_PARAMS)
 @pytest.mark.parametrize("source", SOURCE_TEST_DATA)
-@pytest.mark.parametrize("doi_input", DOI_INPUT_TEST_DATA)
+@pytest.mark.parametrize("doi_input_test_data", DOI_INPUT_TEST_DATA)
 def test_retrieve_doi_list(
-    doi_input, source, save_to, output_format_list, capsys, monkeypatch, _mock_response
+    doi_input_test_data,
+    source,
+    save_to,
+    output_format_list,
+    capsys,
+    monkeypatch,
+    _mock_response,
 ):
+    """Test the retrieval of a list of DOIs from a source.
+
+    :param doi_input: list of two test DOIs
+    :type doi_input: list[str]
+    :param source: data source
+    :type source: str
+    :param save_to: instructions on where to save downloaded data (if applicable)
+    :type save_to: dict[str, str]
+    :param output_format_set: formats to fetch the data in
+    :type output_format_set: set[str]
+    :param capsys: capture stdout/stderr
+    :type capsys: pytest innards
+    :param monkeypatch: monkeypatch functions
+    :type monkeypatch: pytest monkeypatch
+    """
     deduped_output_format_list = list(set(output_format_list))
+    doi_input = copy.deepcopy(doi_input_test_data)
+
+    # "doi_list": [A, B],
+    # "doi_file": DOI_FILE["INVALID"],
+    # "all_dois": [A, B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
+    is_crossref = True if source == CE.CROSSREF else False
+    TR_NOT_FOUND_DOI = {
+        NOT_FOUND_DOI_A: NOT_FOUND_DOI_A,
+        NOT_FOUND_DOI_B: NOT_FOUND_DOI_B,
+    }
+    TRANSLATED_DOI = {
+        True: {A: VALID_XR_DOI_A, B: VALID_XR_DOI_B, **TR_NOT_FOUND_DOI},
+        False: {A: VALID_DC_DOI_A, B: VALID_DC_DOI_B, **TR_NOT_FOUND_DOI},
+    }
+
+    if "doi_file" in doi_input:
+        prefix = "XR" if is_crossref else "DC"
+        doi_input["doi_file"] = DOI_FILE[f"{prefix}_{doi_input['doi_file']}"]
+
+    for list_name in ["doi_list", "all_dois"]:
+        if list_name in doi_input:
+            doi_input[list_name] = [
+                TRANSLATED_DOI[is_crossref][li] for li in doi_input[list_name]
+            ]
 
     doi_params = copy.deepcopy(doi_input)
     del doi_params["all_dois"]
@@ -539,8 +588,8 @@ STDOUT_MESSAGES = {
         SEARCHING_DC,
         "Found 0 DOIs at Datacite",
         "The following DOIs could not be found:",
-        INVALID_DOI,
-        NOT_FOUND,
+        NOT_FOUND_DOI_A,
+        NOT_FOUND_DOI_B,
     ],
     "all_crossref": [
         SEARCHING_XR,
@@ -552,75 +601,114 @@ STDOUT_MESSAGES = {
         SEARCHING_DC,
         "Found 1 DOI at Datacite",
         "The following DOIs could not be found:",
-        INVALID_DOI,
-        NOT_FOUND,
+        NOT_FOUND_DOI_A,
+        NOT_FOUND_DOI_B,
+    ],
+    "all_datacite_and_none": [
+        SEARCHING_XR,
+        "Found 0 DOIs at Crossref",
+        SEARCHING_DC,
+        "Found 2 DOIs at Datacite",
+        "The following DOIs could not be found:",
+        NOT_FOUND_DOI_A,
+        NOT_FOUND_DOI_B,
     ],
 }
 
 EXPECTED = {
-    "none_found": {doi: {CE.JSON: None} for doi in [NOT_FOUND, INVALID_DOI]},
+    "none_found": {doi: {CE.JSON: None} for doi in [NOT_FOUND_DOI_A, NOT_FOUND_DOI_B]},
     "all_crossref": {
         doi: {CE.JSON: generate_response_for_doi(CE.CROSSREF, doi, CE.JSON)}
-        for doi in [VALID_DOI_A, VALID_DOI_B]
+        for doi in [VALID_XR_DOI_A, VALID_XR_DOI_B]
+    },
+    "all_datacite_and_none": {
+        **{
+            doi: {CE.JSON: generate_response_for_doi(CE.DATACITE, doi, CE.JSON)}
+            for doi in [VALID_DC_DOI_A, VALID_DC_DOI_B]
+        },
+        **{doi: {CE.JSON: None} for doi in [NOT_FOUND_DOI_A, NOT_FOUND_DOI_B]},
     },
     "one_xr_one_dc": {
-        VALID_XR_DOI: {
-            CE.JSON: generate_response_for_doi(CE.CROSSREF, VALID_XR_DOI, CE.JSON)
+        VALID_XR_DOI_A: {
+            CE.JSON: generate_response_for_doi(CE.CROSSREF, VALID_XR_DOI_A, CE.JSON)
         },
-        VALID_DC_DOI: {
-            CE.JSON: generate_response_for_doi(CE.DATACITE, VALID_DC_DOI, CE.JSON)
+        VALID_DC_DOI_A: {
+            CE.JSON: generate_response_for_doi(CE.DATACITE, VALID_DC_DOI_A, CE.JSON)
         },
-        INVALID_DOI: {CE.JSON: None},
-        NOT_FOUND: {CE.JSON: None},
+        NOT_FOUND_DOI_A: {CE.JSON: None},
+        NOT_FOUND_DOI_B: {CE.JSON: None},
     },
 }
 
 RETRIEVE_DOIS_FROM_UNKNOWN_DATA = [
     pytest.param(
         {
-            "doi_list": [NOT_FOUND, INVALID_DOI],
+            "doi_list": [NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
             "id": "none_found",
         },
         id="list_none_found",
     ),
     pytest.param(
         {
-            "doi_file": INVALID_DOI_FILE,
+            "doi_file": DOI_FILE["INVALID"],
             "id": "none_found",
         },
         id="file_none_found",
     ),
     pytest.param(
-        {"doi_list": [VALID_DOI_A, VALID_DOI_B], "id": "all_crossref"},
+        {"doi_list": [VALID_XR_DOI_A, VALID_XR_DOI_B], "id": "all_crossref"},
         id="list_all_crossref",
     ),
     pytest.param(
-        {"doi_file": VALID_DOI_FILE, "id": "all_crossref"},
+        {"doi_file": DOI_FILE["XR_VALID"], "id": "all_crossref"},
         id="file_all_crossref",
     ),
     pytest.param(
-        {"doi_list": [VALID_DOI_A], "doi_file": VALID_DOI_FILE, "id": "all_crossref"},
+        {
+            "doi_list": [VALID_XR_DOI_A],
+            "doi_file": DOI_FILE["XR_VALID"],
+            "id": "all_crossref",
+        },
         id="both_all_crossref",
     ),
     pytest.param(
         {
-            "doi_list": [VALID_XR_DOI, VALID_DC_DOI, NOT_FOUND, INVALID_DOI],
+            "doi_list": [VALID_DC_DOI_B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
+            "doi_file": DOI_FILE["DC_VALID"],
+            "id": "all_datacite_and_none",
+        },
+        id="both_all_datacite_and_none",
+    ),
+    pytest.param(
+        {
+            "doi_list": [
+                VALID_XR_DOI_A,
+                VALID_DC_DOI_A,
+                NOT_FOUND_DOI_A,
+                NOT_FOUND_DOI_B,
+            ],
             "id": "one_xr_one_dc",
         },
         id="list_one_xr_one_dc",
     ),
     pytest.param(
         {
-            "doi_file": XR_DC_DOI_FILE,
-            "doi_list": [INVALID_DOI, INVALID_DOI, INVALID_DOI, NOT_FOUND, NOT_FOUND],
+            "doi_file": DOI_FILE["XR_DC_VALID"],
+            "doi_list": [
+                NOT_FOUND_DOI_B,
+                NOT_FOUND_DOI_B,
+                NOT_FOUND_DOI_B,
+                NOT_FOUND_DOI_A,
+                NOT_FOUND_DOI_A,
+            ],
             "id": "one_xr_one_dc",
         },
         id="both_file_one_xr_one_dc",
     ),
     pytest.param(
         {
-            "doi_file": INVALID_DOI_FILE,
-            "doi_list": [VALID_XR_DOI, VALID_DC_DOI],
+            "doi_file": DOI_FILE["INVALID"],
+            "doi_list": [VALID_XR_DOI_A, VALID_DC_DOI_A],
             "id": "one_xr_one_dc",
         },
         id="both_one_xr_one_dc",
@@ -655,10 +743,10 @@ def test_retrieve_doi_list_from_unknown(
 
 # this is unlikely to happen unless there is some trickery afoot
 def test__check_for_missing_dois_unlikely_error(capsys):
-    doi_list = [INVALID_DOI, NOT_FOUND]
+    doi_list = [NOT_FOUND_DOI_A, NOT_FOUND_DOI_B]
     results_dict = {
-        VALID_DOI_A: {CE.JSON: None},
-        VALID_DOI_B: {CE.JSON: None},
+        VALID_DC_DOI_A: {CE.JSON: None},
+        VALID_XR_DOI_B: {CE.JSON: None},
     }
 
     assert set(base._check_for_missing_dois(doi_list, results_dict)) == set(doi_list)

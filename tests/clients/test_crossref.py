@@ -8,14 +8,14 @@ from tests.common import check_stdout_for_errs
 from tests.conftest import (
     GET_ENDPOINT_FAIL_DATA,
     INVALID_JSON,
-    NOT_FOUND,
+    NOT_FOUND_DOI_A,
     QUOTED_DEFAULT_EMAIL,
     QUOTED_DOI,
     QUOTED_EMAIL,
     SAMPLE_DOI,
     SAMPLE_EMAIL,
     SPACE_STR,
-    VALID_DOI_A,
+    VALID_XR_DOI_A,
     generate_response_for_doi,
 )
 
@@ -125,18 +125,18 @@ fmt_list = [CE.JSON, CE.UNIXREF, CE.UNIXSD]
 RETRIEVE_DOI_TEST_DATA = [
     pytest.param(
         {
-            "input": [VALID_DOI_A],
+            "input": [VALID_XR_DOI_A],
             "expected": {
-                CE.JSON: generate_response_for_doi(CE.CROSSREF, VALID_DOI_A, CE.JSON)
+                CE.JSON: generate_response_for_doi(CE.CROSSREF, VALID_XR_DOI_A, CE.JSON)
             },
         },
         id="ok_default_format",
     ),
     pytest.param(
         {
-            "input": [VALID_DOI_A, fmt_list],
+            "input": [VALID_XR_DOI_A, fmt_list],
             "expected": {
-                fmt: generate_response_for_doi(CE.CROSSREF, VALID_DOI_A, fmt)
+                fmt: generate_response_for_doi(CE.CROSSREF, VALID_XR_DOI_A, fmt)
                 for fmt in fmt_list
             },
         },
@@ -144,20 +144,20 @@ RETRIEVE_DOI_TEST_DATA = [
     ),
     pytest.param(
         {
-            "input": [NOT_FOUND],
+            "input": [NOT_FOUND_DOI_A],
             "expected": {CE.JSON: None},
             "stdout": [
-                f"Request for {NOT_FOUND} {CE.JSON} failed with status code 404"
+                f"Request for {NOT_FOUND_DOI_A} {CE.JSON} failed with status code 404"
             ],
         },
         id="fail_default_format",
     ),
     pytest.param(
         {
-            "input": [NOT_FOUND, fmt_list],
+            "input": [NOT_FOUND_DOI_A, fmt_list],
             "expected": {fmt: None for fmt in fmt_list},
             "stdout": [
-                f"Request for {NOT_FOUND} {fmt} failed with status code 404"
+                f"Request for {NOT_FOUND_DOI_A} {fmt} failed with status code 404"
                 for fmt in fmt_list
             ],
         },

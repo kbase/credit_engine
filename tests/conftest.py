@@ -8,7 +8,7 @@ import pytest
 import requests
 
 import credit_engine.constants as CE
-import credit_engine.util as util
+from credit_engine.util import full_path
 
 SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
 QUOTED_DOI = quote(SAMPLE_DOI)
@@ -16,12 +16,11 @@ SAMPLE_EMAIL = "me@home.com"
 QUOTED_EMAIL = quote(SAMPLE_EMAIL)
 QUOTED_DEFAULT_EMAIL = quote(CE.DEFAULT_EMAIL)
 
-INVALID_DOI = "INVALID_DOI"
 INVALID_JSON = "INVALID_JSON"
 INVALID_XML = "INVALID_XML"
 NO_XML_NODE = "NO_XML_NODE"
-NOT_FOUND = "NOT_FOUND"
-# hashtag, question mark, percent sign
+
+# hashtag, question mark, percent sign -- valid / common URI characters
 VALID_DOI_A = r"10.1000/12%34?56.78#90"
 # all possible special characters
 # N.b. syntax highlighting may be wrong
@@ -29,7 +28,20 @@ VALID_DOI_B = r'10.100/%"# ?.<>{}^[]`|\+'
 VALID_DC_DOI = r"10.12345/d@*c1t3.(uri)"
 VALID_XR_DOI = r"10.12345/†r05{2}?ef*(uri)"
 
+VALID_DC_DOI_A = r"10.25982/90997.49/1783189"
+VALID_DC_DOI_B = r"10.25982/54100.27/1635639"
+VALID_XR_DOI_A = r"10.46936/jejc.proj.2013.48086/60005298"
+VALID_XR_DOI_B = r"10.46936/10.25585/60001190"
+NOT_FOUND_DOI_A = "10.25585/0000000000"
+NOT_FOUND_DOI_B = "00.00000/0000000000"
+
 FILE_NAME = {
+    VALID_DC_DOI_A: "10.25982_90997.49_1783189",
+    VALID_DC_DOI_B: "10.25982_54100.27_1635639",
+    VALID_XR_DOI_A: "10.46936_jejc.proj.2013.48086_60005298",
+    VALID_XR_DOI_B: "10.46936_10.25585_60001190",
+    NOT_FOUND_DOI_A: "10.25585_0000000000",
+    NOT_FOUND_DOI_B: "00.00000_0000000000",
     VALID_DC_DOI: "10.12345_d_c1t3._uri_",
     VALID_XR_DOI: "10.12345_r05_2_ef_uri_",
     VALID_DOI_A: "10.1000_12_34_56.78_90",
@@ -37,12 +49,16 @@ FILE_NAME = {
 }
 
 URI = {
-    NOT_FOUND: quote(NOT_FOUND),
-    INVALID_DOI: quote(INVALID_DOI),
+    NOT_FOUND_DOI_A: quote(NOT_FOUND_DOI_A),
+    NOT_FOUND_DOI_B: quote(NOT_FOUND_DOI_B),
     VALID_DOI_A: quote(VALID_DOI_A),
     VALID_DOI_B: quote(VALID_DOI_B),
     VALID_DC_DOI: quote(VALID_DC_DOI),
+    VALID_DC_DOI_A: quote(VALID_DC_DOI_A),
+    VALID_DC_DOI_B: quote(VALID_DC_DOI_B),
     VALID_XR_DOI: quote(VALID_XR_DOI),
+    VALID_XR_DOI_A: quote(VALID_XR_DOI_A),
+    VALID_XR_DOI_B: quote(VALID_XR_DOI_B),
     INVALID_JSON: quote(INVALID_JSON),
     INVALID_XML: quote(INVALID_XML),
     NO_XML_NODE: quote(NO_XML_NODE),
@@ -60,6 +76,20 @@ CODE = "status_code"
 CONTENT = "content"
 JSON = CE.JSON
 ES = set()
+
+
+DOI_FILE = {
+    "INVALID": "tests/data/doi_files/doi_list_invalid.txt",
+    "VALID": "tests/data/doi_files/doi_list_valid.txt",
+    "VALID_INVALID": "tests/data/doi_files/doi_list_valid_invalid.txt",
+    "XR_DC_VALID": "tests/data/doi_files/doi_list_xr_dc.txt",
+    "XR_VALID": "tests/data/doi_files/doi_list_xr_valid.txt",
+    "XR_VALID_INVALID": "tests/data/doi_files/doi_list_xr_valid_invalid.txt",
+    "XR_INVALID": "tests/data/doi_files/doi_list_invalid.txt",
+    "DC_VALID": "tests/data/doi_files/doi_list_dc_valid.txt",
+    "DC_VALID_INVALID": "tests/data/doi_files/doi_list_dc_valid_invalid.txt",
+    "DC_INVALID": "tests/data/doi_files/doi_list_invalid.txt",
+}
 
 
 # input for cleaning up DOI lists
@@ -136,19 +166,19 @@ TRIM_DEDUPE_LIST_DATA = [
         {
             "input": [
                 f"  {VALID_DOI_A} ",
-                f"\t\t\t{INVALID_DOI}\t\t\t",
+                f"\t\t\t{NOT_FOUND_DOI_B}\t\t\t",
                 VALID_DOI_A,
-                INVALID_DOI,
+                NOT_FOUND_DOI_B,
                 f"   {VALID_DOI_A}\n\n",
             ],
-            "output": {VALID_DOI_A, INVALID_DOI},
+            "output": {VALID_DOI_A, NOT_FOUND_DOI_B},
         },
         id="duplicates",
     ),
     pytest.param(
         {
-            "input": [VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND],
-            "output": {VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND},
+            "input": [VALID_DOI_A, VALID_DOI_B, NOT_FOUND_DOI_B, NOT_FOUND_DOI_A],
+            "output": {VALID_DOI_A, VALID_DOI_B, NOT_FOUND_DOI_B, NOT_FOUND_DOI_A},
         },
         id="all_ok",
     ),
@@ -258,42 +288,50 @@ GET_ENDPOINT_FAIL_DATA = [
 
 FILE_LIST_TEST_DATA = [
     pytest.param(
-        {"input": Path("tests") / "data" / "empty.txt", "output": ES},
-        id="empty_file",
+        {"input": Path("tests") / "data" / "empty.txt", "output": set()},
+        id="invalid_doi_file_empty",
     ),
     pytest.param(
-        {"input": Path("tests") / "data" / "whitespace.txt", "output": ES},
-        id="whitespace",
-    ),
-    pytest.param(
-        {
-            "input": Path("tests") / "data" / "doi_list_with_dupes.txt",
-            "output": set(FILE_NAME.keys()),
-        },
-        id="dois_with_dupes",
+        {"input": Path("tests") / "data" / "whitespace.txt", "output": set()},
+        id="invalid_doi_file_whitespace",
     ),
     pytest.param(
         {
-            "input": Path("tests") / "data" / "valid_and_invalid.txt",
-            "output": {VALID_DOI_A, VALID_DOI_B, INVALID_DOI, NOT_FOUND},
+            "input": Path("tests") / "data" / "doi_files" / "doi_list_with_dupes.txt",
+            "output": {
+                '10.100/%"# ?.<>{}^[]`|\\+',
+                "10.1000/12%34?56.78#90",
+                "10.12345/†r05{2}?ef*(uri)",
+                "10.12345/d@*c1t3.(uri)",
+            },
         },
-        id="valid_named_dois",
+        id="valid_doi_file_dupes",
+    ),
+    pytest.param(
+        {
+            "input": Path("tests")
+            / "data"
+            / "doi_files"
+            / "doi_list_valid_invalid.txt",
+            "output": {VALID_DOI_A, VALID_DOI_B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B},
+        },
+        id="valid_doi_file_named_dois",
     ),
     pytest.param(
         {
             "input": "/does/not/exist",
             "error_type": FileNotFoundError,
-            "error": f"[Errno 2] No such file or directory: '/does/not/exist'",
+            "error": "[Errno 2] No such file or directory: '/does/not/exist'",
         },
-        id="file_does_not_exist",
+        id="invalid_doi_file_does_not_exist",
     ),
     pytest.param(
         {
-            "input": "sample_data/osti",
+            "input": "tests/data",
             "error_type": IsADirectoryError,
-            "error": f"[Errno 21] Is a directory: '{util.full_path('sample_data/osti')}'",
+            "error": f"[Errno 21] Is a directory: '{full_path('tests/data')}'",
         },
-        id="directory",
+        id="invalid_doi_file_directory",
     ),
 ]
 
@@ -312,6 +350,14 @@ DATA_FILES = {
             CE.JSON: "sample_data/datacite/10.25585_1487730.json",
             CE.XML: "sample_data/datacite/10.25585_14877730.xml",
         },
+        VALID_DC_DOI_A: {
+            CE.JSON: "sample_data/datacite/10.25982_90997.49_1783189.json",
+            CE.XML: "sample_data/datacite/10.25982_90997.49_1783189.xml",
+        },
+        VALID_DC_DOI_B: {
+            CE.JSON: "sample_data/datacite/10.25982_54100.27_1635639.json",
+            CE.XML: "sample_data/datacite/10.25982_54100.27_1635639.xml",
+        },
     },
     CE.CROSSREF: {
         VALID_DOI_A: {
@@ -329,6 +375,16 @@ DATA_FILES = {
             CE.UNIXREF: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixref.xml",
             CE.UNIXSD: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
         },
+        VALID_XR_DOI_A: {
+            CE.JSON: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.json",
+            CE.UNIXREF: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixref.xml",
+            CE.UNIXSD: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
+        },
+        VALID_XR_DOI_B: {
+            CE.JSON: "sample_data/crossref/10.46936_10.25585_60001190.json",
+            CE.UNIXREF: "sample_data/crossref/10.46936_10.25585_60001190.unixref.xml",
+            CE.UNIXSD: "sample_data/crossref/10.46936_10.25585_60001190.unixsd.xml",
+        },
     },
     CE.OSTI: {
         VALID_DOI_A: {
@@ -338,6 +394,14 @@ DATA_FILES = {
         VALID_DOI_B: {
             CE.JSON: "sample_data/osti/10.25982_1722943.json",
             CE.XML: "sample_data/osti/10.25982_1722943.xml",
+        },
+        VALID_DC_DOI_A: {
+            CE.JSON: "sample_data/osti/10.25982_90997.49_1783189.json",
+            CE.XML: "sample_data/osti/10.25982_90997.49_1783189.xml",
+        },
+        VALID_DC_DOI_B: {
+            CE.JSON: "sample_data/osti/10.25982_54100.27_1635639.json",
+            CE.XML: "sample_data/osti/10.25982_54100.27_1635639.xml",
         },
     },
 }
@@ -374,6 +438,8 @@ def generate_response_for_doi(
         and fmt in DATA_FILES[source][doi]
     ):
         return generate_response(DATA_FILES[source][doi][fmt])
+
+    print(f"No response found for {source} {doi} {fmt}; returning None")
     return None
 
 
@@ -452,12 +518,15 @@ RESPONSE_DATA = {
 }
 
 # JSON responses
-for doi in [VALID_DOI_A, VALID_DOI_B]:
+for doi in [VALID_DOI_A, VALID_DOI_B, VALID_XR_DOI_A, VALID_XR_DOI_B]:
     # crossref retrieve_doi
     RESPONSE_DATA[f"{CROSSREF_URI}/{URI[doi]}"] = {
         **OK_200,
         JSON: generate_response_for_doi(CE.CROSSREF, doi, CE.JSON),
     }
+
+# JSON responses
+for doi in [VALID_DOI_A, VALID_DOI_B, VALID_DC_DOI_A, VALID_DC_DOI_B]:
     # datacite retrieve_doi
     RESPONSE_DATA[f"{DATACITE_URI}/{URI[doi]}?affiliation=true"] = {
         **OK_200,
@@ -470,7 +539,7 @@ for doi in [VALID_DOI_A, VALID_DOI_B]:
     }
 
 # crossref XML responses
-for doi in [VALID_DOI_A, VALID_DOI_B, VALID_XR_DOI]:
+for doi in [VALID_DOI_A, VALID_DOI_B, VALID_XR_DOI, VALID_XR_DOI_A, VALID_XR_DOI_B]:
     for fmt in [CE.UNIXREF, CE.UNIXSD]:
         RESPONSE_DATA[
             f"https://doi.crossref.org/servlet/query?id={URI[doi]}&format={fmt}&pid={QUOTED_DEFAULT_EMAIL}"
@@ -491,7 +560,7 @@ class MockResponse:
                 and kwargs["headers"]["Accept"] == "application/xml"
                 and kwargs["url"].find("osti") != -1
             ):
-                for doi in [VALID_DOI_A, VALID_DOI_B]:
+                for doi in [VALID_DOI_A, VALID_DOI_B, VALID_DC_DOI_A, VALID_DC_DOI_B]:
                     if kwargs["url"].find(URI[doi]) != -1:
                         self.response = {
                             **OK_200,
