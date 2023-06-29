@@ -2,24 +2,59 @@
 <records>
     <record>
         <osti_id>1783189</osti_id>
-        <title>Bioinformatic teaching resources - for educators, by educators - using KBase, a free, user-friendly, open source platform</title>
-        <description>Over the past year, biology educators and staff at the Department of Energy Systems Biology Knowledgebase (KBase) initiated a collaborative effort to develop a curriculum for bioinformatics education. KBase is a free and easily accessible data science platform that integrates many bioinformatics resources into a graphical user interface built upon reproducible analysis notebooks. KBase held conversations with college and high school instructors to understand how KBase could potentially support their educational goals. These conversations morphed into a working group of biological and data science instructors that adapted the KBase platform to their curriculum needs, specifically around concepts in Genomics, Metagenomics, Pangenomics, and Phylogenetics. The KBase Educators Working Group developed modular, adaptable, and customizable instructional units. Each instructional module contains teaching resources, publicly available data, analysis tools, and markdown capability to tailor instructions and learning goals for each class. The online user interface enables students to conduct hands-on data science research and analyses without requiring programming skills or their own computational resources (these are provided by KBase). Alongside these resources, KBase continues to work with instructors, supporting the development of additional curriculum modules. For anyone new to the platform, KBase, and the growing KBase Educators Organization, provides a community network, accompanied by community-sourced guidelines, instructional templates, and peer support to use KBase within a classroom whether virtual or in-person.</description>
+        <title>Bioinformatic teaching resources - for educators, by educators - using KBase, a free,
+            user-friendly, open source platform</title>
+        <description>Over the past year, biology educators and staff at the Department of Energy
+            Systems Biology Knowledgebase (KBase) initiated a collaborative effort to develop a
+            curriculum for bioinformatics education. KBase is a free and easily accessible data
+            science platform that integrates many bioinformatics resources into a graphical user
+            interface built upon reproducible analysis notebooks. KBase held conversations with
+            college and high school instructors to understand how KBase could potentially support
+            their educational goals. These conversations morphed into a working group of biological
+            and data science instructors that adapted the KBase platform to their curriculum needs,
+            specifically around concepts in Genomics, Metagenomics, Pangenomics, and Phylogenetics.
+            The KBase Educators Working Group developed modular, adaptable, and customizable
+            instructional units. Each instructional module contains teaching resources, publicly
+            available data, analysis tools, and markdown capability to tailor instructions and
+            learning goals for each class. The online user interface enables students to conduct
+            hands-on data science research and analyses without requiring programming skills or
+            their own computational resources (these are provided by KBase). Alongside these
+            resources, KBase continues to work with instructors, supporting the development of
+            additional curriculum modules. For anyone new to the platform, KBase, and the growing
+            KBase Educators Organization, provides a community network, accompanied by
+            community-sourced guidelines, instructional templates, and peer support to use KBase
+            within a classroom whether virtual or in-person.</description>
         <authors>
-            <author>Dow, Ellen [Environmental Genomics and Systems Biology Division, E.O. Lawrence Berkeley National Laboratory, Berkeley, CA, USA] (ORCID:0000000220790260)</author>
-            <author>Wood-Charlson, Elisha [Environmental Genomics and Systems Biology Division, E.O. Lawrence Berkeley National Laboratory, Berkeley, CA, USA] (ORCID:0000000195577715)</author>
-            <author>Biller, Steven [Department of Biological Sciences, Wellesley College, Wellesley, MA, USA] (ORCID:000000022638823X)</author>
-            <author>Paustian, Timothy [Department of Bacteriology, University of Wisconsin Madison, Madison, WI, USA] (ORCID:0000000297010189)</author>
-            <author>Schimer, Aaron [Department of Biology, Northeastern Illinois University, Chicago, IL, USA] (ORCID:0000000174542345)</author>
-            <author>Sheik, Cody [Department of Biology and the Large Lakes Observatory, University of Minnesota Duluth, Duluth, MN, USA] (ORCID:0000000304131924)</author>
-            <author>Whitham, Jason [Department of Plant and Microbial Biology, North Carolina State University, Raleigh, NC, USA] (ORCID:0000000326236292)</author>
-            <author>Krebs, Rose [Department of Biological Sciences, North Carolina State University, Raleigh, NC, USA]</author>
-            <author>Goller, Carlos [Department of Biological Sciences, North Carolina State University, Raleigh, NC, USA; Biotechnology Program (BIT), North Carolina State University, Raleigh, NC, USA] (ORCID:0000000220130334)</author>
-            <author>Allen, Benjamin [Biosciences Division, Oak Ridge National Laboratory, Oak Ridge, TN, USA] (ORCID:000000026325859X)</author>
-            <author>Crockett, Zachary [Biosciences Division, Oak Ridge National Laboratory, Oak Ridge, TN, USA] (ORCID:0000000328714454)</author>
-            <author>Arkin, Adam [Environmental Genomics and Systems Biology Division, E.O. Lawrence Berkeley National Laboratory, Berkeley, CA, USA; Department of Bioengineering, University of California, Berkeley, CA, USA] (ORCID:0000000249992931)</author>
-            </authors>
+            <author>Dow, Ellen [Environmental Genomics and Systems Biology Division, E.O. Lawrence
+                Berkeley National Laboratory, Berkeley, CA, USA] (ORCID:0000000220790260)</author>
+            <author>Wood-Charlson, Elisha [Environmental Genomics and Systems Biology Division, E.O.
+                Lawrence Berkeley National Laboratory, Berkeley, CA, USA] (ORCID:0000000195577715)</author>
+            <author>Biller, Steven [Department of Biological Sciences, Wellesley College, Wellesley,
+                MA, USA] (ORCID:000000022638823X)</author>
+            <author>Paustian, Timothy [Department of Bacteriology, University of Wisconsin Madison,
+                Madison, WI, USA] (ORCID:0000000297010189)</author>
+            <author>Schimer, Aaron [Department of Biology, Northeastern Illinois University,
+                Chicago, IL, USA] (ORCID:0000000174542345)</author>
+            <author>Sheik, Cody [Department of Biology and the Large Lakes Observatory, University
+                of Minnesota Duluth, Duluth, MN, USA] (ORCID:0000000304131924)</author>
+            <author>Whitham, Jason [Department of Plant and Microbial Biology, North Carolina State
+                University, Raleigh, NC, USA] (ORCID:0000000326236292)</author>
+            <author>Krebs, Rose [Department of Biological Sciences, North Carolina State University,
+                Raleigh, NC, USA]</author>
+            <author>Goller, Carlos [Department of Biological Sciences, North Carolina State
+                University, Raleigh, NC, USA; Biotechnology Program (BIT), North Carolina State
+                University, Raleigh, NC, USA] (ORCID:0000000220130334)</author>
+            <author>Allen, Benjamin [Biosciences Division, Oak Ridge National Laboratory, Oak Ridge,
+                TN, USA] (ORCID:000000026325859X)</author>
+            <author>Crockett, Zachary [Biosciences Division, Oak Ridge National Laboratory, Oak
+                Ridge, TN, USA] (ORCID:0000000328714454)</author>
+            <author>Arkin, Adam [Environmental Genomics and Systems Biology Division, E.O. Lawrence
+                Berkeley National Laboratory, Berkeley, CA, USA; Department of Bioengineering,
+                University of California, Berkeley, CA, USA] (ORCID:0000000249992931)</author>
+        </authors>
         <product_type>Dataset</product_type>
-        <doi>https://doi.org/10.25982/90997.49/1783189</doi><journal_name></journal_name>
+        <doi>https://doi.org/10.25982/90997.49/1783189</doi>
+        <journal_name></journal_name>
         <journal_volume></journal_volume>
         <journal_issue></journal_issue>
         <article_type></article_type>
@@ -31,20 +66,20 @@
         <availability></availability>
         <research_orgs>
             <research_org>Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)</research_org>
-            </research_orgs>
+        </research_orgs>
         <sponsor_orgs>
             <sponsor_org>USDOE Office of Science (SC), Biological and Environmental Research (BER)</sponsor_org>
-            </sponsor_orgs>
+        </sponsor_orgs>
         <contributing_org></contributing_org>
         <subjects>
             <subject>59 BASIC BIOLOGICAL SCIENCES</subject>
-            </subjects>
+        </subjects>
         <doe_contract_number></doe_contract_number>
         <report_number></report_number>
-                <entry_date>2021-07-27T00:00:00Z</entry_date>
+        <entry_date>2021-07-27T00:00:00Z</entry_date>
         <links>
             <link rel="citation" href="https://www.osti.gov/biblio/1783189" />
             <link rel="fulltext" href="https://www.osti.gov/servlets/purl/1783189" />
-            </links>
+        </links>
     </record>
-    </records>
+</records>

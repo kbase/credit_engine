@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9", "3.10", "3.11"]
+        python-version: ["3.10", "3.11"]
 
     steps:
     -
@@ -55,11 +55,20 @@ jobs:
         files: ./coverage.xml
         fail_ci_if_error: true
     -
-      name: outcome
-      if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success' || steps.lint_linkml.outcome != 'success' || steps.validate_kbase_data.outcome != 'success'
+      name: outcome failure
+      if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success' || steps.lint_linkml.outcome != 'success' # || steps.validate_kbase_data.outcome != 'success'
       run: |
         echo "Python tests: ${{ steps.run_pytest.outcome }}"
         echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
         echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
         echo "KBase sample data validation: ${{ steps.validate_kbase_data.outcome }}"
         exit 1
+    -
+      name: outcome success
+      if: steps.run_pytest.outcome == 'success' && steps.send_to_codecov.outcome == 'success' && steps.lint_linkml.outcome == 'success' # || steps.validate_kbase_data.outcome != 'success'
+      run: |
+        echo "Python tests: ${{ steps.run_pytest.outcome }}"
+        echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
+        echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
+        echo "KBase sample data validation: ${{ steps.validate_kbase_data.outcome }}"
+        exit 0

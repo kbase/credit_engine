@@ -19,12 +19,8 @@ def check_stdout_for_errs(
     error_list: list[str],
 ):
     readouterr = capsys.readouterr()
-    out_errors = readouterr.out.split("\n")
-    if VERBOSE:
-        print({"STDOUT": out_errors})
-        print(error_list)
-    for error in error_list:
-        assert error in out_errors
+    stdout_errors = readouterr.out.split("\n")
+    check_for_errors(stdout_errors, error_list, "STDOUT")
 
 
 def check_stderr_for_errs(
@@ -32,15 +28,27 @@ def check_stderr_for_errs(
     error_list: list[str],
 ):
     readouterr = capsys.readouterr()
-    out_errors = readouterr.err.split("\n")
+    stderr_errors = readouterr.err.split("\n")
+    check_for_errors(stderr_errors, error_list, "STDERR")
+
+
+def check_for_errors(
+    string_list: list[str], error_list: list[str], source: str
+) -> None:
+    """
+    Compare stdout/stderr output to expected output.
+
+    :param string_list: list of strings emitted by STDERR / STDOUT
+    :type string_list: list[str]
+    :param error_list: the expected emissions from STDERR / STDOUT
+    :type error_list: list[str]
+    :param source: source, either STDERR or STDOUT
+    :type source: str
+    """
     if VERBOSE:
-        print({"STDERR": out_errors})
-        print(error_list)
-    for error in error_list:
-        assert error in out_errors
+        print({source: string_list})
+        print({"expected errors": error_list})
 
-
-def check_for_errors(string_list, error_list):
     for error in error_list:
         if isinstance(error, Pattern):
             # error is a regular expression
@@ -70,9 +78,9 @@ def run_file_contents_check(
     suffix = path_to_file.suffix
     content = None
 
-    if suffix == f".{CE.XML}":
+    if suffix == ".xml":
         content = path_to_file.read_bytes()
-    elif suffix == f".{CE.JSON}":
+    elif suffix == ".json":
         with Path.open(path_to_file) as fh:
             content = json.load(fh)
     elif suffix == ".txt":

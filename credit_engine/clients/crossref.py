@@ -7,6 +7,7 @@ from pydantic import EmailStr, validate_arguments
 
 import credit_engine.constants as CE
 from credit_engine.errors import make_error
+from credit_engine.util import fix_line_endings
 
 FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.UNIXREF, CE.UNIXSD]}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.CROSSREF}"
@@ -104,4 +105,4 @@ def extract_data_from_resp(
         except JSONDecodeError as e:
             print(f"Error decoding JSON for {doi}: " + str(e))
             return None
-    return resp.content
+    return fix_line_endings(resp.content)
