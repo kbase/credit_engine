@@ -2,337 +2,337 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kbase.github.io/credit_engine/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Boolean/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Contributor/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/ContributorRole/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/ContributorType/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/CreditMetadata/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/CreditMetadataEntry/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Curie/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Date/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/DateOrDatetime/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Datetime/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Decimal/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Double/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/EventDate/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/EventType/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Float/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/FundingReference/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Integer/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Ncname/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Nodeidentifier/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Objectidentifier/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Organization/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/PermanentID/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/RelationshipType/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/ResourceType/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/String/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Time/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Title/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/TitleType/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Uri/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/Uriorcurie/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/affiliations/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/comment/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/contributor_id/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/contributor_roles/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/contributor_type/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/contributors/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/credit_metadata/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/credit_metadata_schema_version/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/credit_name/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/date/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/dates/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/description/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/event/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/funder/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/funding/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/grant_id/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/grant_title/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/grant_url/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/id/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/identifier/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/kbase_dois/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/license/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/name/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/organization_id/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/organization_name/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/related_identifiers/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/relationship_type/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/repository/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/resource_type/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/saved_by/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/timestamp/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/title/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/title_language/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/title_type/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/titles/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kbase.github.io/credit_engine/version/</loc>
-         <lastmod>2023-06-28</lastmod>
+         <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
