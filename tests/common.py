@@ -32,7 +32,19 @@ def check_stderr_for_errs(
     check_for_errors(stderr_errors, error_list, "STDERR")
 
 
-def check_for_errors(string_list, error_list, source):
+def check_for_errors(
+    string_list: list[str], error_list: list[str], source: str
+) -> None:
+    """
+    Compare stdout/stderr output to expected output.
+
+    :param string_list: list of strings emitted by STDERR / STDOUT
+    :type string_list: list[str]
+    :param error_list: the expected emissions from STDERR / STDOUT
+    :type error_list: list[str]
+    :param source: source, either STDERR or STDOUT
+    :type source: str
+    """
     if VERBOSE:
         print({source: string_list})
         print({"expected errors": error_list})

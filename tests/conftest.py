@@ -77,18 +77,18 @@ CONTENT = "content"
 JSON = CE.JSON
 ES = set()
 
-
+DOI_FILE_INVALID = "tests/data/doi_files/doi_list_invalid.txt"
 DOI_FILE = {
-    "INVALID": "tests/data/doi_files/doi_list_invalid.txt",
+    "INVALID": DOI_FILE_INVALID,
     "VALID": "tests/data/doi_files/doi_list_valid.txt",
     "VALID_INVALID": "tests/data/doi_files/doi_list_valid_invalid.txt",
     "XR_DC_VALID": "tests/data/doi_files/doi_list_xr_dc.txt",
     "XR_VALID": "tests/data/doi_files/doi_list_xr_valid.txt",
     "XR_VALID_INVALID": "tests/data/doi_files/doi_list_xr_valid_invalid.txt",
-    "XR_INVALID": "tests/data/doi_files/doi_list_invalid.txt",
+    "XR_INVALID": DOI_FILE_INVALID,
     "DC_VALID": "tests/data/doi_files/doi_list_dc_valid.txt",
     "DC_VALID_INVALID": "tests/data/doi_files/doi_list_dc_valid_invalid.txt",
-    "DC_INVALID": "tests/data/doi_files/doi_list_invalid.txt",
+    "DC_INVALID": DOI_FILE_INVALID,
 }
 
 
@@ -560,11 +560,11 @@ class MockResponse:
                 and kwargs["headers"]["Accept"] == "application/xml"
                 and kwargs["url"].find("osti") != -1
             ):
-                for doi in [VALID_DOI_A, VALID_DOI_B, VALID_DC_DOI_A, VALID_DC_DOI_B]:
-                    if kwargs["url"].find(URI[doi]) != -1:
+                for id in [VALID_DOI_A, VALID_DOI_B, VALID_DC_DOI_A, VALID_DC_DOI_B]:
+                    if kwargs["url"].find(URI[id]) != -1:
                         self.response = {
                             **OK_200,
-                            CONTENT: generate_response_for_doi(CE.OSTI, doi, CE.XML),
+                            CONTENT: generate_response_for_doi(CE.OSTI, id, CE.XML),
                         }
                         return
 

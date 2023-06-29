@@ -349,6 +349,16 @@ DOI_INPUT_TEST_DATA = [
         id="mixed_sources",
     ),
 ]
+# mappings of A and B to the appropriate Crossref or Datacite DOI
+TR_NOT_FOUND_DOI = {
+    NOT_FOUND_DOI_A: NOT_FOUND_DOI_A,
+    NOT_FOUND_DOI_B: NOT_FOUND_DOI_B,
+}
+TRANSLATED_DOI = {
+    # True = crossref DOI, False = datacite DOI
+    True: {A: VALID_XR_DOI_A, B: VALID_XR_DOI_B, **TR_NOT_FOUND_DOI},
+    False: {A: VALID_DC_DOI_A, B: VALID_DC_DOI_B, **TR_NOT_FOUND_DOI},
+}
 
 
 @pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
@@ -443,8 +453,6 @@ def test_retrieve_doi_list_errors(
             save_dir=save_dir["input"],
         )
 
-    # common.check_stdout_for_errs(capsys, error_list)
-
 
 @pytest.mark.parametrize("output_format_list", OUTPUT_FORMAT_LIST)
 @pytest.mark.parametrize("save_to", SAVE_PARAMS)
@@ -477,18 +485,7 @@ def test_retrieve_doi_list(
     deduped_output_format_list = list(set(output_format_list))
     doi_input = copy.deepcopy(doi_input_test_data)
 
-    # "doi_list": [A, B],
-    # "doi_file": DOI_FILE["INVALID"],
-    # "all_dois": [A, B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
-    is_crossref = True if source == CE.CROSSREF else False
-    TR_NOT_FOUND_DOI = {
-        NOT_FOUND_DOI_A: NOT_FOUND_DOI_A,
-        NOT_FOUND_DOI_B: NOT_FOUND_DOI_B,
-    }
-    TRANSLATED_DOI = {
-        True: {A: VALID_XR_DOI_A, B: VALID_XR_DOI_B, **TR_NOT_FOUND_DOI},
-        False: {A: VALID_DC_DOI_A, B: VALID_DC_DOI_B, **TR_NOT_FOUND_DOI},
-    }
+    is_crossref = source == CE.CROSSREF
 
     if "doi_file" in doi_input:
         prefix = "XR" if is_crossref else "DC"
@@ -580,6 +577,7 @@ def test_retrieve_doi_list(
 
 SEARCHING_XR = "Searching Crossref..."
 SEARCHING_DC = "Searching Datacite..."
+DOIS_NOT_FOUND = "The following DOIs could not be found:"
 
 STDOUT_MESSAGES = {
     "none_found": [
@@ -587,7 +585,7 @@ STDOUT_MESSAGES = {
         "Found 0 DOIs at Crossref",
         SEARCHING_DC,
         "Found 0 DOIs at Datacite",
-        "The following DOIs could not be found:",
+        DOIS_NOT_FOUND,
         NOT_FOUND_DOI_A,
         NOT_FOUND_DOI_B,
     ],
@@ -600,7 +598,7 @@ STDOUT_MESSAGES = {
         "Found 1 DOI at Crossref",
         SEARCHING_DC,
         "Found 1 DOI at Datacite",
-        "The following DOIs could not be found:",
+        DOIS_NOT_FOUND,
         NOT_FOUND_DOI_A,
         NOT_FOUND_DOI_B,
     ],
@@ -609,7 +607,7 @@ STDOUT_MESSAGES = {
         "Found 0 DOIs at Crossref",
         SEARCHING_DC,
         "Found 2 DOIs at Datacite",
-        "The following DOIs could not be found:",
+        DOIS_NOT_FOUND,
         NOT_FOUND_DOI_A,
         NOT_FOUND_DOI_B,
     ],

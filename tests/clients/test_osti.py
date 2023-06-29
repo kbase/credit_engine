@@ -106,7 +106,6 @@ RETRIEVE_DOI_TEST_DATA = [
 
 @pytest.mark.parametrize("param", RETRIEVE_DOI_TEST_DATA)
 def test_retrieve_doi(param, _mock_response, capsys):
-    output = retrieve_doi(*param["input"])
     assert retrieve_doi(*param["input"]) == param["expected"]
     if "output" in param:
         check_stdout_for_errs(capsys, param["output"])
