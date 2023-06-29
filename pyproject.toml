@@ -23,7 +23,7 @@ pytest-cases = "^3.6.14"
 python = "^3.10"
 requests = "2.29.0"
 xmlschema = "2.3.0"
-xsdata = {extras = ["cli", "lxml", "soap"], version = "^22.12"}
+xsdata = {extras = ["cli", "lxml", "soap"], version = "^23.6"}
 
 [tool.poetry.dev-dependencies]
 black = "^23.3.0"
