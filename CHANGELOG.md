@@ -1,5 +1,16 @@
 # Changelog
 
+## [#152](https://github.com/kbase/credit_engine/pull/152) - 2023-06-30
+
+### Changed
+
+- XML now refers to Crossref's unixsd format.
+
+### Removed
+
+- Remove support Crossref unixref format as it contains less information.
+
+
 ## [#150](https://github.com/kbase/credit_engine/pull/150) - 2023-06-29
 
 ### Changed
