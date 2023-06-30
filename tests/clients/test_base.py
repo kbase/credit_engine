@@ -18,8 +18,6 @@ from tests.conftest import (
     VALID_DC_DOI,
     VALID_DC_DOI_A,
     VALID_DC_DOI_B,
-    VALID_DOI_A,
-    VALID_DOI_B,
     VALID_XR_DOI,
     VALID_XR_DOI_A,
     VALID_XR_DOI_B,
@@ -40,19 +38,21 @@ XR_DC_DOI_FILE = "tests/data/xr_dc.txt"
 
 SOURCE_TEST_DATA = [pytest.param(src, id=src) for src in CLIENT]
 
+DOT_JSON = ".json"
+DOT_XML = ".xml"
+
 DATA_FORMAT = {
     CE.CROSSREF: {
-        CE.JSON: CE.EXT[CE.JSON],
-        CE.UNIXREF: CE.EXT[CE.UNIXREF],
-        CE.UNIXSD: CE.EXT[CE.UNIXSD],
+        CE.JSON: DOT_JSON,
+        CE.XML: DOT_XML,
     },
     CE.DATACITE: {
-        CE.JSON: CE.EXT[CE.JSON],
-        CE.XML: CE.EXT[CE.XML],
+        CE.JSON: DOT_JSON,
+        CE.XML: DOT_XML,
     },
     CE.OSTI: {
-        CE.JSON: CE.EXT[CE.JSON],
-        CE.XML: CE.EXT[CE.XML],
+        CE.JSON: DOT_JSON,
+        CE.XML: DOT_XML,
     },
 }
 
@@ -110,34 +110,26 @@ GET_EXTENSION_TEST_DATA = [
     pytest.param(
         {
             "client": crossref,
-            "output_format": "UNIXREF",
-            "expected": crossref.FILE_EXTENSIONS[CE.UNIXREF],
-        },
-        id="crossref_unixref",
-    ),
-    pytest.param(
-        {
-            "client": crossref,
             "output_format": CE.XML,
-            "error": True,
+            "expected": crossref.FILE_EXTENSIONS[CE.XML],
         },
         id="crossref_xml",
     ),
     pytest.param(
         {
             "client": datacite,
-            "output_format": "UnixSD",
-            "error": True,
+            "output_format": "  XmL  \r",
+            "expected": datacite.FILE_EXTENSIONS[CE.XML],
         },
-        id="datacite_unixsd",
+        id="datacite_xml",
     ),
     pytest.param(
         {
             "client": osti,
-            "output_format": "UnixRef",
-            "error": True,
+            "output_format": "XML",
+            "expected": osti.FILE_EXTENSIONS[CE.XML],
         },
-        id="osti_unixref",
+        id="osti_xml",
     ),
 ]
 
@@ -183,14 +175,12 @@ INVALID_SOURCE_TEST_DATA = [
 OUTPUT_FORMAT_LIST = [
     # valid for Crossref, Datacite, OSTI
     pytest.param([CE.JSON], id="json"),
-    # valid for Datacite, OSTI
-    pytest.param([CE.JSON, CE.XML], id="json_xml"),
-    # valid for Datacite, OSTI
     pytest.param([CE.XML], id="xml"),
-    # valid for Crossref
-    pytest.param([CE.JSON, CE.UNIXREF, CE.JSON, CE.JSON], id="json_unixref"),
-    # valid for Crossref
-    pytest.param([CE.UNIXSD, CE.UNIXREF], id="unixref_unixsd"),
+    pytest.param([CE.JSON, CE.XML], id="json_xml"),
+    pytest.param(
+        [CE.JSON, CE.XML, CE.JSON, CE.JSON, CE.XML, CE.XML],
+        id="json_xml_duplicated_fmts",
+    ),
 ]
 
 
@@ -380,10 +370,10 @@ def test_get_extension_fail_bad_source():
         base.get_extension(SOURCE, CE.JSON)
 
 
-@pytest.mark.parametrize("output_format", [CE.JSON, CE.XML, CE.UNIXREF, CE.UNIXSD])
+@pytest.mark.parametrize("output_format", [CE.JSON, CE.XML])
 @pytest.mark.parametrize("source", SOURCE_TEST_DATA)
 def test_get_extension(source, output_format):
-    expected = DATA_FORMAT.get(source, {}).get(output_format, None)
+    expected = DATA_FORMAT.get(source, {}).get(output_format)
     if expected is None:
         error_text = make_error(
             "invalid_param",

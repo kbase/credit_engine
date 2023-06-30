@@ -16,7 +16,8 @@ SOURCE_TO_CLIENT = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
 
 @validate_arguments
 def check_doi_source(doi: CE.TrimmedString) -> Optional[str]:
-    """Check whether a DOI is accessible via CrossRef
+    """
+    Check whether a DOI is accessible via CrossRef.
 
     :param doi: digital object identifier
     :type doi: str
@@ -76,7 +77,8 @@ def _validate_dois(
     doi_list: Optional[Union[list[str], set[str]]],
     input_errors: list[str],
 ) -> set[str]:
-    """Merge and validate the input DOIs.
+    """
+    Merge and validate the input DOIs.
 
     :param doi_file: file containing DOIs to be fetched
     :type doi_file: Optional[str]
@@ -99,7 +101,7 @@ def _validate_dois(
         except OSError as e:
             input_errors.append(str(e))
 
-    if doi_list:  # and isinstance(doi_list, list):
+    if doi_list:
         try:
             cleaned_list = util.trim_dedupe_list(doi_list)
             proto_doi_list = proto_doi_list | cleaned_list
@@ -113,7 +115,8 @@ def _validate_dois(
 def _validate_output_format_list(
     output_format_list: Optional[list[str]], source: str, input_errors: list[str]
 ) -> list[str]:
-    """Validate the output formats requested
+    """
+    Validate the output formats requested.
 
     :param output_format_list: list of output formats to fetch
     :type output_format_list: Optional[list[str]]
@@ -125,23 +128,23 @@ def _validate_output_format_list(
     :rtype: list[str]
     """
     client = SOURCE_TO_CLIENT[source]
-    if output_format_list:
-        output_format_list = list(set(output_format_list))
-        # ensure the validity of the file format(s)
-        invalid_formats = [
-            fmt for fmt in output_format_list if fmt not in client.FILE_EXTENSIONS
-        ]
-        if invalid_formats:
-            for fmt in invalid_formats:
-                input_errors.append(
-                    make_error(
-                        "invalid_param",
-                        {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: fmt},
-                    )
-                )
-    else:
-        output_format_list = [client.DEFAULT_FORMAT]
 
+    if not output_format_list:
+        return [client.DEFAULT_FORMAT]
+
+    output_format_list = list(set(output_format_list))
+    # ensure the validity of the file format(s)
+    invalid_formats = [
+        fmt for fmt in output_format_list if fmt not in client.FILE_EXTENSIONS
+    ]
+    if invalid_formats:
+        for fmt in invalid_formats:
+            input_errors.append(
+                make_error(
+                    "invalid_param",
+                    {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: fmt},
+                )
+            )
     return output_format_list
 
 
@@ -150,7 +153,8 @@ def _validate_save_dir(
     client: Optional[types.ModuleType],
     input_errors: list[str],
 ) -> Optional[Path]:
-    """Validate save-related parameters
+    """
+    Validate save-related parameters.
 
     :param save_dir: directory in which to save files
     :type save_dir: Optional[Union[Path, str]]
@@ -194,7 +198,8 @@ def _validate_retrieve_doi_list_input(
     save_dir: Optional[Union[Path, str]] = None,
     input_errors: Optional[list[str]] = None,
 ) -> tuple[dict, types.ModuleType]:
-    """Validate the input to retrieve_doi_list.
+    """
+    Validate the input to retrieve_doi_list.
 
     :param doi_list: list of DOIs to retrieve
     :type doi_list: list[str], optional
@@ -252,7 +257,8 @@ def _validate_retrieve_doi_list_input(
 
 
 def retrieve_doi_list(**kwargs) -> dict:
-    """Retrieve a list of DOIs.
+    """
+    Retrieve a list of DOIs.
 
     See _validate_retrieve_doi_list_input for specification of kwargs.
 

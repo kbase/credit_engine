@@ -46,7 +46,8 @@ def retrieve_doi(
     doi: CE.TrimmedString,
     output_format_list: Optional[list[CE.TrimmedString]] = None,
 ) -> dict[str, Union[dict, list, bytes, None]]:
-    """Fetch DOI data from DataCite.
+    """
+    Fetch DOI data from DataCite.
 
     :param doi: the DOI to retrieve
     :type doi: CE.TrimmedString
@@ -78,7 +79,8 @@ def retrieve_doi(
 def extract_data_from_resp(
     doi: str, resp: requests.Response, output_format_list: list[str]
 ) -> dict[str, Union[dict, list, bytes, None]]:
-    """Extract the data from a Response object.
+    """
+    Extract the data from a Response object.
 
     :param doi: the DOI that has been fetched
     :type doi: str
@@ -117,7 +119,7 @@ def decode_xml(doi: str, json_data: dict[str, Any]) -> Optional[bytes]:
     :return: decoded XML (if it exists)
     :rtype: Optional[bytes]
     """
-    if json_data.get("data", {}).get("attributes", {}).get("xml", None) is None:
+    if json_data.get("data", {}).get("attributes", {}).get("xml") is None:
         print(f"Error decoding XML for {doi}: XML node not found")
         return None
     doi_xml = json_data["data"]["attributes"]["xml"]

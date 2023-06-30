@@ -1,3 +1,7 @@
+"""
+Constants used throughout the Credit Engine.
+"""
+
 from enum import Enum
 
 import pydantic as pydantic
@@ -5,14 +9,14 @@ from pydantic import EmailStr
 
 
 class TrimmedString(pydantic.ConstrainedStr):
-    """Non-zero length trimmed string"""
+    """Non-zero length trimmed string."""
 
     strip_whitespace = True
     min_length = 1
 
 
 class NonEmptyList(pydantic.ConstrainedList):
-    """Non-zero length list"""
+    """Non-zero length list."""
 
     min_items = 1
 
@@ -20,17 +24,13 @@ class NonEmptyList(pydantic.ConstrainedList):
 # file formats and extensions
 JSON = "json"
 XML = "xml"
-UNIXREF = "unixref"
-UNIXSD = "unixsd"
 
 
 class OutputFormat(str, Enum):
-    """Valid output format strings"""
+    """Valid output format strings."""
 
     JSON = "json"
     XML = "xml"
-    UNIXREF = "unixref"
-    UNIXSD = "unixsd"
 
     def __repr__(self):
         return self._value_
@@ -39,13 +39,9 @@ class OutputFormat(str, Enum):
 # file formats and extensions
 # JSON = OutputFormat.JSON
 # XML = OutputFormat.XML
-# UNIXREF = OutputFormat.UNIXREF
-# UNIXSD = OutputFormat.UNIXSD
 EXT = {
     JSON: ".json",
     XML: ".xml",
-    UNIXREF: ".unixref.xml",
-    UNIXSD: ".unixsd.xml",
 }
 
 

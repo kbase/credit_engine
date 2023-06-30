@@ -14,7 +14,6 @@ from .conftest import (
     FILE_NAME,
     TRIM_DEDUPE_LIST_DATA,
     VALID_DOI_A,
-    MockResponse,
 )
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
@@ -134,12 +133,10 @@ save_data_to_file_data = [
     },
     {
         "doi": "10.46936/10.25585/60007526",
-        "suffix": ".unixref.xml",
-        "trimmed_suffix": "unixref.xml",
+        "suffix": ".xml",
+        "trimmed_suffix": "xml",
         "data": Path.read_bytes(
-            util.full_path(
-                "sample_data/crossref/10.46936_10.25585_60007526.unixref.xml"
-            )
+            util.full_path("sample_data/crossref/10.46936_10.25585_60007526.unixsd.xml")
         ),
     },
 ]
@@ -193,7 +190,7 @@ SAVE_DATA_TO_FILE_FAIL_TEST_DATA = [
         {
             "doi": VALID_DOI_A,
             "suffix": "json",
-            "data": {"this": set(["that", "the", "other"])},
+            "data": {"this": {"that", "the", "other"}},
             "error": "Object of type set is not JSON serializable",
         },
         id="json_encode_error",
@@ -293,7 +290,7 @@ def test_dir_scanner(param, tmp_path):
     assert set(ALL_FILES + DIRECTORIES) == set(dir_contents)
 
     got = util.dir_scanner(test_dir, param["conditions"])
-    assert set(got) == set([os.path.join(test_dir, f) for f in param["expected"]])
+    assert set(got) == {os.path.join(test_dir, f) for f in param["expected"]}
 
 
 def test_dir_scanner_with_relative_file_input():

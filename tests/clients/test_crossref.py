@@ -55,59 +55,45 @@ GET_ENDPOINT_DATA = [
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "UnixSd"],
-            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXSD}&pid={QUOTED_DEFAULT_EMAIL}",
+            "input": [SAMPLE_DOI, "XmL"],
+            "expected": f"https://doi.crossref.org/servlet/query?format=unixsd&id={QUOTED_DOI}&pid={QUOTED_DEFAULT_EMAIL}",
         },
-        id="fmt_unixsd",
+        id="fmt_xml",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "UnixSd", None],
-            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXSD}&pid={QUOTED_DEFAULT_EMAIL}",
+            "input": [SAMPLE_DOI, "xml", None],
+            "expected": f"https://doi.crossref.org/servlet/query?format=unixsd&id={QUOTED_DOI}&pid={QUOTED_DEFAULT_EMAIL}",
         },
-        id="fmt_unixsd_email_None",
+        id="fmt_xml_email_None",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "UNIXSD", ""],
+            "input": [SAMPLE_DOI, "XML", ""],
             "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
-        id="fmt_unixsd_email_len_0",
+        id="fmt_xml_email_len_0",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "UNIXSD", SPACE_STR],
+            "input": [SAMPLE_DOI, "XML", SPACE_STR],
             "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
-        id="fmt_unixsd_email_whitespace",
+        id="fmt_xml_email_whitespace",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "UNIXSD", "fake email address"],
+            "input": [SAMPLE_DOI, CE.XML, "fake email address"],
             "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
-        id="fmt_unixsd_email_fake_email",
+        id="fmt_xml_email_fake_email",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "UNIXSD", SAMPLE_EMAIL],
-            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXSD}&pid={QUOTED_EMAIL}",
+            "input": [SAMPLE_DOI, "xMl", SAMPLE_EMAIL],
+            "expected": f"https://doi.crossref.org/servlet/query?format=unixsd&id={QUOTED_DOI}&pid={QUOTED_EMAIL}",
         },
-        id="fmt_unixsd_with_email",
-    ),
-    pytest.param(
-        {
-            "input": [SAMPLE_DOI, "Unixref"],
-            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXREF}&pid={QUOTED_DEFAULT_EMAIL}",
-        },
-        id="fmt_unixref",
-    ),
-    pytest.param(
-        {
-            "input": [SAMPLE_DOI, "UNIXref", SAMPLE_EMAIL],
-            "expected": f"https://doi.crossref.org/servlet/query?id={QUOTED_DOI}&format={CE.UNIXREF}&pid={QUOTED_EMAIL}",
-        },
-        id="fmt_unixref_with_email",
+        id="fmt_xml_with_email",
     ),
 ]
 
@@ -121,7 +107,7 @@ def test_get_endpoint(param):
             get_endpoint(*param["input"])  # type: ignore
 
 
-fmt_list = [CE.JSON, CE.UNIXREF, CE.UNIXSD]
+fmt_list = [CE.JSON, CE.XML]
 RETRIEVE_DOI_TEST_DATA = [
     pytest.param(
         {

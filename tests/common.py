@@ -5,9 +5,7 @@ from pathlib import Path
 from typing import Pattern, Union
 
 import _pytest.capture
-import pytest
 
-import credit_engine.constants as CE
 from credit_engine.clients import base
 from credit_engine.util import dir_scanner
 
