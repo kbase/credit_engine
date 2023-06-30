@@ -9,7 +9,7 @@ import credit_engine.constants as CE
 from credit_engine.errors import make_error
 from credit_engine.util import fix_line_endings
 
-FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.UNIXREF, CE.UNIXSD]}
+FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.XML]}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.CROSSREF}"
 DEFAULT_FORMAT = CE.JSON
 
@@ -24,7 +24,7 @@ def get_endpoint(
 
     :param doi: DOI to retrieve
     :type doi: str
-    :param output_format: desired format; one of 'unixsd', 'unixref', or 'json'; defaults to 'json'
+    :param output_format: desired format, 'json' or 'xml'; defaults to 'json'
     :type output_format: str, optional
     :param email_address: email address to query from, defaults to 'credit_engine@kbase.us'
     :type email_address: str, optional
@@ -48,7 +48,7 @@ def get_endpoint(
         quote(email_address) if email_address else quote(CE.DEFAULT_EMAIL)
     )
 
-    return f"https://doi.crossref.org/servlet/query?id={quote(doi)}&format={lc_output_format}&pid={quoted_email_address}"
+    return f"https://doi.crossref.org/servlet/query?format=unixsd&id={quote(doi)}&pid={quoted_email_address}"
 
 
 @validate_arguments
@@ -87,7 +87,7 @@ def retrieve_doi(
 
 def extract_data_from_resp(
     doi: str, resp: requests.Response, fmt: str
-) -> Union[dict, list, bytes, None]:
+) -> Union[dict, list, str, bytes, None]:
     """Extract the data from a response object.
 
     :param doi: the relevant DOI

@@ -362,28 +362,23 @@ DATA_FILES = {
     CE.CROSSREF: {
         VALID_DOI_A: {
             CE.JSON: "sample_data/crossref/10.46936_10.25585_60007526.json",
-            CE.UNIXREF: "sample_data/crossref/10.46936_10.25585_60007526.unixref.xml",
-            CE.UNIXSD: "sample_data/crossref/10.46936_10.25585_60007526.unixsd.xml",
+            CE.XML: "sample_data/crossref/10.46936_10.25585_60007526.unixsd.xml",
         },
         VALID_DOI_B: {
             CE.JSON: "sample_data/crossref/10.46936_10.25585_60007530.json",
-            CE.UNIXREF: "sample_data/crossref/10.46936_10.25585_60007530.unixref.xml",
-            CE.UNIXSD: "sample_data/crossref/10.46936_10.25585_60007530.unixsd.xml",
+            CE.XML: "sample_data/crossref/10.46936_10.25585_60007530.unixsd.xml",
         },
         VALID_XR_DOI: {
             CE.JSON: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.json",
-            CE.UNIXREF: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixref.xml",
-            CE.UNIXSD: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
+            CE.XML: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
         },
         VALID_XR_DOI_A: {
             CE.JSON: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.json",
-            CE.UNIXREF: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixref.xml",
-            CE.UNIXSD: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
+            CE.XML: "sample_data/crossref/10.46936_jejc.proj.2013.48086_60005298.unixsd.xml",
         },
         VALID_XR_DOI_B: {
             CE.JSON: "sample_data/crossref/10.46936_10.25585_60001190.json",
-            CE.UNIXREF: "sample_data/crossref/10.46936_10.25585_60001190.unixref.xml",
-            CE.UNIXSD: "sample_data/crossref/10.46936_10.25585_60001190.unixsd.xml",
+            CE.XML: "sample_data/crossref/10.46936_10.25585_60001190.unixsd.xml",
         },
     },
     CE.OSTI: {
@@ -412,8 +407,7 @@ def generate_response(file_path: str) -> Union[None, bytes, str, list, dict]:
     path_to_file = Path.resolve(current_dir.joinpath(Path(file_path)))
     if path_to_file.suffix == f".{CE.JSON}":
         with open(path_to_file, encoding="utf-8") as fh:
-            file_data = json.load(fh)
-            return file_data
+            return json.load(fh)
 
     return path_to_file.read_bytes()
 
@@ -540,13 +534,12 @@ for doi in [VALID_DOI_A, VALID_DOI_B, VALID_DC_DOI_A, VALID_DC_DOI_B]:
 
 # crossref XML responses
 for doi in [VALID_DOI_A, VALID_DOI_B, VALID_XR_DOI, VALID_XR_DOI_A, VALID_XR_DOI_B]:
-    for fmt in [CE.UNIXREF, CE.UNIXSD]:
-        RESPONSE_DATA[
-            f"https://doi.crossref.org/servlet/query?id={URI[doi]}&format={fmt}&pid={QUOTED_DEFAULT_EMAIL}"
-        ] = {
-            **OK_200,
-            CONTENT: generate_response_for_doi(CE.CROSSREF, doi, fmt),
-        }
+    RESPONSE_DATA[
+        f"https://doi.crossref.org/servlet/query?format=unixsd&id={URI[doi]}&pid={QUOTED_DEFAULT_EMAIL}"
+    ] = {
+        **OK_200,
+        CONTENT: generate_response_for_doi(CE.CROSSREF, doi, CE.XML),
+    }
 
 
 # custom class to be the mock return value of requests.get()
@@ -560,11 +553,18 @@ class MockResponse:
                 and kwargs["headers"]["Accept"] == "application/xml"
                 and kwargs["url"].find("osti") != -1
             ):
-                for id in [VALID_DOI_A, VALID_DOI_B, VALID_DC_DOI_A, VALID_DC_DOI_B]:
-                    if kwargs["url"].find(URI[id]) != -1:
+                for valid_id in [
+                    VALID_DOI_A,
+                    VALID_DOI_B,
+                    VALID_DC_DOI_A,
+                    VALID_DC_DOI_B,
+                ]:
+                    if kwargs["url"].find(URI[valid_id]) != -1:
                         self.response = {
                             **OK_200,
-                            CONTENT: generate_response_for_doi(CE.OSTI, id, CE.XML),
+                            CONTENT: generate_response_for_doi(
+                                CE.OSTI, valid_id, CE.XML
+                            ),
                         }
                         return
 

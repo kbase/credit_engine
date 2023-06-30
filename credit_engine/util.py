@@ -1,3 +1,7 @@
+"""
+General utility functions.
+"""
+
 import json
 import os
 import re

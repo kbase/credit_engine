@@ -1,3 +1,7 @@
+"""
+Error messages and message generation functions.
+"""
+
 import json
 from typing import Any, Optional
 

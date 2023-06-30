@@ -3,7 +3,7 @@ max-line-length = 88
 # E203: whitespace before ‘,’, ‘;’, or ‘:’
 # E501: line length
 # W503: line break after binary operator
-ignore = E203, E501, W503
+ignore = E203, E501, W503, S101 tests/*
 docstring-convention = google
 extend-select = B902, B903, B904
 extend-exclude = .venv, *.pyc, .github, deps, other_schema, python-coverage, sample_data
