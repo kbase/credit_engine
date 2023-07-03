@@ -109,7 +109,7 @@ def run_retrieve_doi_list(
     :param capsys: pytest stdout/stderr capture
     :type capsys: _type_
     """
-    output_format_list = list(set(param["output_format_list"]))
+    output_formats = param["output_formats"]
 
     if "save_files" in param and param["save_files"]:
         save_dir = param["save_dir"] if "save_dir" in param else default_dir
@@ -124,7 +124,7 @@ def run_retrieve_doi_list(
         # ensure file contents are as expected
         assert "files" in retrieval_results
         for f in retrieval_results["files"]:
-            for fmt in output_format_list:
+            for fmt in output_formats:
                 if retrieval_results["data"][f][fmt] is None:
                     assert retrieval_results["files"][f][fmt] is None
                 else:

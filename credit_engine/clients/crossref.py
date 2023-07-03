@@ -1,6 +1,20 @@
+"""
+Crossref client
+
+access to the Crossref DOI endpoint
+does not require authentication but does require
+an email address for API access
+
+API documentation:
+    REST API (returns JSON): https://api.crossref.org/swagger-ui/index.html
+
+    XML API: https://www.crossref.org/documentation/retrieve-metadata/xml-api/doi-to-metadata-query/
+"""
+
 from json import JSONDecodeError
 from typing import Optional, Union
 from urllib.parse import quote
+from enum import Enum
 
 import requests
 from pydantic import EmailStr, validate_arguments
@@ -9,31 +23,40 @@ import credit_engine.constants as CE
 from credit_engine.errors import make_error
 from credit_engine.util import fix_line_endings
 
-FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.XML]}
+NAME = "Crossref"
+
+VALID_OUTPUT_FORMATS = {
+    CE.OutputFormat.JSON,
+    CE.OutputFormat.XML,
+}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.CROSSREF}"
-DEFAULT_FORMAT = CE.JSON
+DEFAULT_FORMAT = CE.OutputFormat.JSON
+
+
+CROSSREF_REST_URI = "https://api.crossref.org/"
+CROSSREF_XML_URI = "https://doi.crossref.org/servlet/query"
 
 
 @validate_arguments
 def get_endpoint(
     doi: CE.TrimmedString,
-    output_format: Optional[CE.TrimmedString] = None,
+    output_format: Optional[CE.OutputFormat] = None,
     email_address: Optional[EmailStr] = None,
 ) -> str:
     """Get the appropriate endpoint for a CrossRef query.
 
     :param doi: DOI to retrieve
     :type doi: str
-    :param output_format: desired format, 'json' or 'xml'; defaults to 'json'
+    :param output_format: desired format, CE.OutputFormat.JSON or CE.OutputFormat.XML; defaults to JSON
     :type output_format: str, optional
     :param email_address: email address to query from, defaults to 'credit_engine@kbase.us'
-    :type email_address: str, optional
+    :type email_address: EmailStr, optional
     :return: full URL to query
     :rtype: str
     """
-    lc_output_format = output_format.lower() if output_format else DEFAULT_FORMAT
-
-    if lc_output_format not in FILE_EXTENSIONS:
+    if not output_format:
+        output_format = DEFAULT_FORMAT
+    elif output_format not in VALID_OUTPUT_FORMATS:
         raise ValueError(
             make_error(
                 "invalid_param",
@@ -41,7 +64,7 @@ def get_endpoint(
             )
         )
 
-    if lc_output_format == CE.JSON:
+    if output_format == CE.OutputFormat.JSON:
         return f"https://api.crossref.org/works/{quote(doi)}"
 
     quoted_email_address = (
@@ -54,32 +77,33 @@ def get_endpoint(
 @validate_arguments
 def retrieve_doi(
     doi: CE.TrimmedString,
-    output_format_list: Optional[list[CE.TrimmedString]] = None,
+    output_formats: Optional[set[CE.OutputFormat]] = None,
     email_address: Optional[EmailStr] = None,
-) -> dict[str, Union[dict, list, bytes, None]]:
+    **kwargs,
+) -> dict[str, Union[dict, list, str, bytes, None]]:
     """Fetch DOI data from Crossref.
 
     :param doi: the DOI to retrieve
     :type doi: str
-    :param output_format_list: formats to retrieve the data in, defaults to None (i.e. JSON)
-    :type output_format_list: list of strings, optional
+    :param output_formats: formats to retrieve the data in, defaults to None (i.e. JSON)
+    :type output_formats: set of strings, optional
     :param email_address: email address to query from, defaults to 'credit_engine@kbase.us'
     :type email_address: str, optional
     :raises ValueError: if the request returned anything other than a 200
     :return: the decoded JSON response
     :rtype: dict
     """
-    if not output_format_list:
-        output_format_list = [DEFAULT_FORMAT]
+    if not output_formats:
+        output_formats = {DEFAULT_FORMAT}
 
     doi_data = {}
-    for fmt in output_format_list:
+    for fmt in output_formats:
         response = requests.get(get_endpoint(doi, fmt, email_address))
         if response.status_code == 200:
             doi_data[fmt] = extract_data_from_resp(doi, response, fmt)
         else:
             print(
-                f"Request for {doi} {fmt} failed with status code {response.status_code}"
+                f"Request for {doi} {fmt.value} failed with status code {response.status_code}"
             )
             doi_data[fmt] = None
     return doi_data

@@ -6,12 +6,14 @@ from pathlib import Path, PurePath
 import pytest
 from pydantic import ValidationError
 
+import credit_engine.constants as CE
 import credit_engine.util as util
 from tests.common import check_stdout_for_errs, run_file_contents_check
 
 from .conftest import (
     FILE_LIST_TEST_DATA,
     FILE_NAME,
+    OUTPUT_FORMAT_EXT_TEST_DATA,
     TRIM_DEDUPE_LIST_DATA,
     VALID_DOI_A,
 )
@@ -308,3 +310,20 @@ def test_read_unique_lines(param):
     else:
         with pytest.raises(param["error_type"], match=re.escape(param["error"])):
             util.read_unique_lines(param["input"])
+
+
+@pytest.mark.parametrize("param", OUTPUT_FORMAT_EXT_TEST_DATA)
+def test_get_extension_string(param):
+    output_format = param["input"]
+    expected = None
+    if "expected" in param:
+        expected = param["expected"]
+
+        assert util.get_extension(output_format) == expected
+        if not isinstance(output_format, CE.OutputFormat):
+            assert util.get_extension(output_format.upper()) == expected
+            assert util.get_extension(output_format.title()) == expected
+            assert util.get_extension(output_format.title().swapcase()) == expected
+    else:
+        with pytest.raises(param["error"], match=param["error_msg"]):
+            util.get_extension(param["input"])

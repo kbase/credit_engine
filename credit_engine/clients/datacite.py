@@ -1,3 +1,12 @@
+"""
+DataCite client
+
+access to the DataCite DOI endpoint
+does not require authentication
+
+API documentation: https://support.datacite.org/docs/api
+"""
+
 import base64
 from json import JSONDecodeError
 from typing import Any, Optional, Union
@@ -9,14 +18,17 @@ from pydantic import validate_arguments
 import credit_engine.constants as CE
 from credit_engine.errors import make_error
 
-FILE_EXTENSIONS = {fmt: CE.EXT[fmt] for fmt in [CE.JSON, CE.XML]}
+NAME = "DataCite"
+VALID_OUTPUT_FORMATS = {CE.OutputFormat.JSON, CE.OutputFormat.XML}
 SAMPLE_DATA_DIR = f"{CE.SAMPLE_DATA}/{CE.DATACITE}"
-DEFAULT_FORMAT = CE.JSON
+DEFAULT_FORMAT = CE.OutputFormat.JSON
+
+DATACITE_URI = "https://api.datacite.org/dois/"
 
 
 @validate_arguments
 def get_endpoint(
-    doi: CE.TrimmedString, output_format: Optional[CE.TrimmedString] = None
+    doi: CE.TrimmedString, output_format: Optional[CE.OutputFormat] = None
 ) -> str:
     """Get the URL for the DataCite endpoint.
 
@@ -24,13 +36,11 @@ def get_endpoint(
     :type doi: CE.TrimmedString
     :param output_format: format to receive data in (N.b. URL is the
         same regardless of format)
-    :type output_format: CE.TrimmedString
+    :type output_format: CE.OutputFormat
     :return: endpoint URI
     :rtype: str
     """
-    lc_output_format = output_format.lower() if output_format else DEFAULT_FORMAT
-
-    if lc_output_format not in FILE_EXTENSIONS:
+    if output_format and output_format not in VALID_OUTPUT_FORMATS:
         raise ValueError(
             make_error(
                 "invalid_param",
@@ -44,22 +54,23 @@ def get_endpoint(
 @validate_arguments
 def retrieve_doi(
     doi: CE.TrimmedString,
-    output_format_list: Optional[list[CE.TrimmedString]] = None,
+    output_formats: Optional[set[CE.OutputFormat]] = None,
+    **kwargs,
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """
     Fetch DOI data from DataCite.
 
     :param doi: the DOI to retrieve
     :type doi: CE.TrimmedString
-    :param output_format_list: format(s) for the DOI
-    :type output_format_list: list[CE.TrimmedString]
-    :raises ValueError: if the request returned anything other than a 200
+    :param output_formats: format(s) for the DOI
+    :type output_formats: set[CE.OutputFormat], optional
+    :raises ValueError: if the request returned an error
     :return: the decoded JSON response
     :rtype: dict
     """
 
-    if not output_format_list:
-        output_format_list = [DEFAULT_FORMAT]
+    if not output_formats:
+        output_formats = {DEFAULT_FORMAT}
 
     response = requests.get(
         get_endpoint(doi),
@@ -68,16 +79,18 @@ def retrieve_doi(
         },
     )
     if response.status_code == 200:
-        return extract_data_from_resp(doi, response, output_format_list)
+        return extract_data_from_resp(doi, response, output_formats)
 
     # no results
-    for fmt in output_format_list:
-        print(f"Request for {doi} {fmt} failed with status code {response.status_code}")
-    return {fmt: None for fmt in output_format_list}
+    for fmt in output_formats:
+        print(
+            f"Request for {doi} {fmt.value} failed with status code {response.status_code}"
+        )
+    return {fmt: None for fmt in output_formats}
 
 
 def extract_data_from_resp(
-    doi: str, resp: requests.Response, output_format_list: list[str]
+    doi: str, resp: requests.Response, output_formats: set[CE.OutputFormat]
 ) -> dict[str, Union[dict, list, bytes, None]]:
     """
     Extract the data from a Response object.
@@ -86,13 +99,13 @@ def extract_data_from_resp(
     :type doi: str
     :param resp: response object for the DOI
     :type resp: requests.Response
-    :param output_format_list: formats requested for the DOI
-    :type output_format_list: list[str]
+    :param output_formats: formats requested for the DOI
+    :type output_formats: set[CE.OutputFormat]
     :return: decoded response content
     :rtype: dict[str, Union[dict, list, bytes, None]]
     """
 
-    doi_data: dict[str, Any] = {fmt: None for fmt in output_format_list}
+    doi_data: dict[str, Any] = {fmt.value: None for fmt in output_formats}
     resp_json = None
     try:
         resp_json = resp.json()
@@ -100,10 +113,10 @@ def extract_data_from_resp(
         print(f"Error decoding JSON for {doi}: " + str(e))
         return doi_data
 
-    if CE.JSON in output_format_list:
+    if CE.OutputFormat.JSON in output_formats:
         doi_data[CE.JSON] = resp_json
 
-    if CE.XML in output_format_list:
+    if CE.OutputFormat.XML in output_formats:
         doi_data[CE.XML] = decode_xml(doi, resp_json)
 
     return doi_data
