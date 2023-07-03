@@ -4,17 +4,37 @@
     "message-version": "1.0.0",
     "message": {
         "indexed": {
-            "date-parts": [[2022, 4, 2]],
+            "date-parts": [
+                [
+                    2022,
+                    4,
+                    2
+                ]
+            ],
             "date-time": "2022-04-02T17:18:27Z",
             "timestamp": 1648919907338
         },
         "publisher": "Office of Scientific and Technical Information (OSTI)",
-        "award-start": { "date-parts": [[2018, 8, 11]] },
+        "award-start": {
+            "date-parts": [
+                [
+                    2018,
+                    8,
+                    11
+                ]
+            ]
+        },
         "award": "504205",
-        "DOI": "10.46936\\/10.25585\\/60001190",
+        "DOI": "10.46936/10.25585/60001190",
         "type": "grant",
         "created": {
-            "date-parts": [[2021, 9, 8]],
+            "date-parts": [
+                [
+                    2021,
+                    9,
+                    8
+                ]
+            ],
             "date-time": "2021-09-08T20:45:47Z",
             "timestamp": 1631133947000
         },
@@ -29,17 +49,53 @@
                     }
                 ],
                 "lead-investigator": [
-                    { "given": "Kelly", "family": "Wrighton", "affiliation": [] }
+                    {
+                        "given": "Kelly",
+                        "family": "Wrighton",
+                        "affiliation": []
+                    }
                 ],
                 "co-lead-investigator": [
-                    { "given": "Christopher", "family": "Miller", "affiliation": [] },
-                    { "given": "Matthew", "family": "Sullivan", "affiliation": [] },
-                    { "given": "Christopher", "family": "Miller", "affiliation": [] },
-                    { "given": "Matthew", "family": "Sullivan", "affiliation": [] },
-                    { "given": "Gil", "family": "Bohrer", "affiliation": [] },
-                    { "given": "Lauren", "family": "Kinsman Costello", "affiliation": [] },
-                    { "given": "Tim", "family": "Morin", "affiliation": [] },
-                    { "given": "Jorge", "family": "Villa", "affiliation": [] }
+                    {
+                        "given": "Christopher",
+                        "family": "Miller",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Matthew",
+                        "family": "Sullivan",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Christopher",
+                        "family": "Miller",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Matthew",
+                        "family": "Sullivan",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Gil",
+                        "family": "Bohrer",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Lauren",
+                        "family": "Kinsman Costello",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Tim",
+                        "family": "Morin",
+                        "affiliation": []
+                    },
+                    {
+                        "given": "Jorge",
+                        "family": "Villa",
+                        "affiliation": []
+                    }
                 ],
                 "funding": [
                     {
@@ -48,7 +104,7 @@
                             "name": "US Department of Energy",
                             "id": [
                                 {
-                                    "id": "10.13039\\/100000015",
+                                    "id": "10.13039/100000015",
                                     "id-type": "DOI",
                                     "asserted-by": "publisher"
                                 }
@@ -59,18 +115,32 @@
             }
         ],
         "deposited": {
-            "date-parts": [[2021, 10, 9]],
+            "date-parts": [
+                [
+                    2021,
+                    10,
+                    9
+                ]
+            ],
             "date-time": "2021-10-09T10:10:20Z",
             "timestamp": 1633774220000
         },
         "score": 1,
         "resource": {
             "primary": {
-                "URL": "https:\\/\\/www.osti.gov\\/award-doi-service\\/biblio\\/10.46936\\/10.25585\\/60001190"
+                "URL": "https://www.osti.gov/award-doi-service/biblio/10.46936/10.25585/60001190"
             }
         },
-        "issued": { "date-parts": [[2018, 8, 11]] },
-        "URL": "http:\\/\\/dx.doi.org\\/10.46936\\/10.25585\\/60001190",
+        "issued": {
+            "date-parts": [
+                [
+                    2018,
+                    8,
+                    11
+                ]
+            ]
+        },
+        "URL": "http://dx.doi.org/10.46936/10.25585/60001190",
         "relation": {}
     }
 }

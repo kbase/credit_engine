@@ -82,14 +82,14 @@ MAKE_ERROR_TEST_DATA = [
     pytest.param(
         {
             "input": ["invalid_param", {"this": "that"}],
-            "output": 'Invalid parameter: {"this": "that"}',
+            "output": 'Invalid parameter: "{"this": "that"}"',
         },
         id="invalid_param_no_param",
     ),
     pytest.param(
         {
             "input": ["invalid_param", {"param": "koala"}],
-            "output": 'Invalid koala: {"param": "koala"}',
+            "output": 'Invalid koala: "{"param": "koala"}"',
         },
         id="invalid_param_param_no_args",
     ),
@@ -99,7 +99,7 @@ MAKE_ERROR_TEST_DATA = [
                 "invalid_param",
                 {"param": CE.OUTPUT_FORMAT, "format": "morse code"},
             ],
-            "output": 'Invalid output format: {"format": "morse code", "param": "output format"}',
+            "output": 'Invalid output format: "{"format": "morse code", "param": "output format"}"',
         },
         id="invalid_param_param_invalid_args",
     ),
@@ -109,7 +109,7 @@ MAKE_ERROR_TEST_DATA = [
                 "invalid_param",
                 {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: "elevator music"},
             ],
-            "output": "Invalid output format: elevator music",
+            "output": 'Invalid output format: "elevator music"',
         },
         id="invalid_param_valid_args",
     ),

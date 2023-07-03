@@ -20,7 +20,7 @@ def make_error(err_type: str = "", args: Optional[dict[str, Any]] = None) -> str
         ERROR_WITH_ARGS = {
             "missing_required": f"Missing required argument: {args.get('required', 'REQUIRED')}",
             "http_error": f"Request for {args.get('doi', 'DOI')} failed with status code {args.get('status_code', 'STATUS_CODE')}",
-            "invalid_param": f"Invalid {args.get('param', 'parameter')}: {args.get(args.get('param', None), json.dumps(args, sort_keys=True))}",
+            "invalid_param": f"Invalid {args.get('param', 'parameter')}: \"{args.get(args.get('param', None), json.dumps(args, sort_keys=True))}\"",
         }
         if err_type in ERROR_WITH_ARGS:
             return ERROR_WITH_ARGS[err_type]

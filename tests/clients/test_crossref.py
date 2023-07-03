@@ -41,56 +41,56 @@ GET_ENDPOINT_DATA = [
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "JSON"],
+            "input": [SAMPLE_DOI, CE.OutputFormat.JSON],
             "expected": f"https://api.crossref.org/works/{QUOTED_DOI}",
         },
         id="fmt_json",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "JSON", SAMPLE_EMAIL],
+            "input": [SAMPLE_DOI, CE.OutputFormat.JSON, SAMPLE_EMAIL],
             "expected": f"https://api.crossref.org/works/{QUOTED_DOI}",
         },
         id="fmt_json_with_email",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "XmL"],
+            "input": [SAMPLE_DOI, CE.OutputFormat.XML],
             "expected": f"https://doi.crossref.org/servlet/query?format=unixsd&id={QUOTED_DOI}&pid={QUOTED_DEFAULT_EMAIL}",
         },
         id="fmt_xml",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "xml", None],
+            "input": [SAMPLE_DOI, CE.OutputFormat.XML, None],
             "expected": f"https://doi.crossref.org/servlet/query?format=unixsd&id={QUOTED_DOI}&pid={QUOTED_DEFAULT_EMAIL}",
         },
         id="fmt_xml_email_None",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "XML", ""],
+            "input": [SAMPLE_DOI, CE.OutputFormat.XML, ""],
             "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
         id="fmt_xml_email_len_0",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "XML", SPACE_STR],
+            "input": [SAMPLE_DOI, CE.OutputFormat.XML, SPACE_STR],
             "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
         id="fmt_xml_email_whitespace",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, CE.XML, "fake email address"],
+            "input": [SAMPLE_DOI, CE.OutputFormat.XML, "fake email address"],
             "error": re.escape(EMAIL_VALIDATION_ERROR),
         },
         id="fmt_xml_email_fake_email",
     ),
     pytest.param(
         {
-            "input": [SAMPLE_DOI, "xMl", SAMPLE_EMAIL],
+            "input": [SAMPLE_DOI, CE.OutputFormat.XML, SAMPLE_EMAIL],
             "expected": f"https://doi.crossref.org/servlet/query?format=unixsd&id={QUOTED_DOI}&pid={QUOTED_EMAIL}",
         },
         id="fmt_xml_with_email",
@@ -100,6 +100,11 @@ GET_ENDPOINT_DATA = [
 
 @pytest.mark.parametrize("param", GET_ENDPOINT_DATA + GET_ENDPOINT_FAIL_DATA)
 def test_get_endpoint(param):
+    if len(param["input"]) == 0:
+        with pytest.raises(ValueError, match=param["error"]):
+            get_endpoint()  # type: ignore
+        return
+
     if "expected" in param:
         assert get_endpoint(*param["input"]) == param["expected"]
     else:

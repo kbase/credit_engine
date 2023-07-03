@@ -1,5 +1,12 @@
 # Changelog
 
+## [#151](https://github.com/kbase/credit_engine/pull/151) - 2023-06-29
+
+### Changed
+
+- Converted file formats into an enum.
+
+
 ## [#152](https://github.com/kbase/credit_engine/pull/152) - 2023-06-30
 
 ### Changed

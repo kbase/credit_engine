@@ -1,11 +1,14 @@
 import json
 import re
 from pathlib import Path
+from pydantic import ValidationError
+
 from typing import Any, Optional, Union
 from urllib.parse import quote
 
 import pytest
 import requests
+from credit_engine.clients import base, crossref, datacite, osti
 
 import credit_engine.constants as CE
 from credit_engine.util import full_path
@@ -92,6 +95,33 @@ DOI_FILE = {
 }
 
 
+CLIENT = {
+    CE.CROSSREF: crossref,
+    CE.DATACITE: datacite,
+    CE.OSTI: osti,
+}
+
+DOT_JSON = ".json"
+DOT_XML = ".xml"
+
+DATA_FORMAT = {
+    CE.CROSSREF: {
+        CE.OutputFormat.JSON: DOT_JSON,
+        CE.OutputFormat.XML: DOT_XML,
+    },
+    CE.DATACITE: {
+        CE.OutputFormat.JSON: DOT_JSON,
+        CE.OutputFormat.XML: DOT_XML,
+    },
+    CE.OSTI: {
+        CE.OutputFormat.JSON: DOT_JSON,
+    },
+    # CE.OSTI_ELINK: {
+    #     CE.OutputFormat.JSON: DOT_JSON,
+    #     CE.OutputFormat.XML: DOT_XML,
+    # },
+}
+
 # input for cleaning up DOI lists
 TRIM_DEDUPE_LIST_DATA = [
     pytest.param(
@@ -99,7 +129,7 @@ TRIM_DEDUPE_LIST_DATA = [
             "input": None,
             "output": ES,
         },
-        id="None_input",
+        id="dois_None_input",
     ),
     pytest.param(
         {
@@ -109,14 +139,14 @@ TRIM_DEDUPE_LIST_DATA = [
                 "list_items\n  value is not a valid list (type=type_error.list)"
             ),
         },
-        id="invalid_input_type",
+        id="invalid_dois_input_type",
     ),
     pytest.param(
         {
             "input": [],
             "output": ES,
         },
-        id="zero_length_list_input",
+        id="dois_zero_length_list_input",
     ),
     pytest.param(
         {
@@ -127,7 +157,7 @@ TRIM_DEDUPE_LIST_DATA = [
                 "  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)"
             ),
         },
-        id="zero_str_length",
+        id="dois_zero_str_length",
     ),
     pytest.param(
         {
@@ -138,7 +168,7 @@ TRIM_DEDUPE_LIST_DATA = [
                 "list_items -> 1\n  none is not an allowed value (type=type_error.none.not_allowed)"
             ),
         },
-        id="list_of_None",
+        id="invalid_dois_list_of_None",
     ),
     pytest.param(
         {
@@ -153,14 +183,14 @@ TRIM_DEDUPE_LIST_DATA = [
                 "  ensure this value has at least 1 characters (type=value_error.any_str.min_length; limit_value=1)"
             ),
         },
-        id="spaced_out",
+        id="dois_spaced_out",
     ),
     pytest.param(
         {
             "input": [10.12345, 12345, f"     {VALID_DOI_B}       "],
             "output": {"10.12345", "12345", VALID_DOI_B},
         },
-        id="format_conversion",
+        id="valid_dois_format_conversion",
     ),
     pytest.param(
         {
@@ -173,18 +203,122 @@ TRIM_DEDUPE_LIST_DATA = [
             ],
             "output": {VALID_DOI_A, NOT_FOUND_DOI_B},
         },
-        id="duplicates",
+        id="valid_dois_duplicates",
     ),
     pytest.param(
         {
-            "input": [VALID_DOI_A, VALID_DOI_B, NOT_FOUND_DOI_B, NOT_FOUND_DOI_A],
-            "output": {VALID_DOI_A, VALID_DOI_B, NOT_FOUND_DOI_B, NOT_FOUND_DOI_A},
+            "input": [VALID_DOI_A, VALID_DOI_B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B],
+            "output": {VALID_DOI_A, VALID_DOI_B, NOT_FOUND_DOI_A, NOT_FOUND_DOI_B},
         },
-        id="all_ok",
+        id="valid_dois_all_ok",
+    ),
+    pytest.param(
+        {
+            "input": "",
+            "error": "1 validation error for TrimDedupeList\nlist_items\n  value is not a valid list (type=type_error.list)",
+        },
+        id="invalid_dois_string_input",
+    ),
+    pytest.param(
+        {
+            "input": dict(),
+            "error": "1 validation error for TrimDedupeList\nlist_items\n  value is not a valid list (type=type_error.list)",
+        },
+        id="invalid_dois_dict_input",
     ),
 ]
 
 
+OUTPUT_FORMAT_EXT_TEST_DATA = [
+    pytest.param(
+        {
+            "input": "Json",
+            "output_format": CE.OutputFormat.JSON,
+            "expected": DOT_JSON,
+        },
+        id="Json",
+    ),
+    pytest.param(
+        {
+            "input": "XmL",
+            "output_format": CE.OutputFormat.XML,
+            "expected": DOT_XML,
+        },
+        id="XmL",
+    ),
+    pytest.param(
+        {
+            "input": CE.JSON,
+            "output_format": CE.OutputFormat.JSON,
+            "expected": DOT_JSON,
+        },
+        id="CE.JSON",
+    ),
+    pytest.param(
+        {
+            "input": CE.XML,
+            "output_format": CE.OutputFormat.XML,
+            "expected": DOT_XML,
+        },
+        id="CE.XML",
+    ),
+    pytest.param(
+        {
+            "input": CE.OutputFormat.JSON,
+            "output_format": CE.OutputFormat.JSON,
+            "expected": DOT_JSON,
+        },
+        id="CE.OutputFormat.JSON",
+    ),
+    pytest.param(
+        {
+            "input": CE.OutputFormat.XML,
+            "output_format": CE.OutputFormat.XML,
+            "expected": DOT_XML,
+        },
+        id="CE.OutputFormat.XML",
+    ),
+    pytest.param(
+        {
+            "input": None,
+            "error": ValidationError,
+            "error_msg": re.escape(
+                "1 validation error for GetExtension\n"
+                + "fmt\n  none is not an allowed value (type=type_error.none.not_allowed)"
+            ),
+            "errors": 'Invalid output format: "None"',
+        },
+        id="None",
+    ),
+    pytest.param(
+        {
+            "input": "",
+            "error": ValueError,
+            "error_msg": 'Invalid output format: ""',
+        },
+        id="0-len string",
+    ),
+    pytest.param(
+        {
+            "input": "     ",
+            "error": ValueError,
+            "error_msg": 'Invalid output format: "     "',
+        },
+        id="spaces",
+    ),
+    pytest.param(
+        {
+            "input": "something invalid",
+            "error": ValueError,
+            "error_msg": 'Invalid output format: "something invalid"',
+        },
+        id="invalid text",
+    ),
+]
+
+
+# assumed argument input order:
+# doi, output_format
 GET_ENDPOINT_FAIL_DATA = [
     pytest.param(
         {
@@ -235,8 +369,13 @@ GET_ENDPOINT_FAIL_DATA = [
                 "2 validation errors for GetEndpoint\ndoi\n  ensure this value"
                 " has at least 1 characters "
                 "(type=value_error.any_str.min_length; limit_value=1)\n"
-                "output_format\n  ensure this value has at least 1 characters "
-                "(type=value_error.any_str.min_length; limit_value=1)"
+                "output_format\n  value is not a valid enumeration member; permitted: 'json', 'xml' (type=type_error.enum; enum_values=[json, xml])"
+            ),
+            "error_dict": re.escape(
+                "2 validation errors for GetEndpoint\nquery -> doi\n  ensure this value"
+                " has at least 1 characters "
+                "(type=value_error.any_str.min_length; limit_value=1)\n"
+                "output_format\n  value is not a valid enumeration member; permitted: 'json', 'xml' (type=type_error.enum; enum_values=[json, xml])"
             ),
         },
         id="doi_len_0_fmt_len_0",
@@ -248,8 +387,13 @@ GET_ENDPOINT_FAIL_DATA = [
                 "2 validation errors for GetEndpoint\ndoi\n  ensure this value"
                 " has at least 1 characters "
                 "(type=value_error.any_str.min_length; limit_value=1)\n"
-                "output_format\n  ensure this value has at least 1 characters "
-                "(type=value_error.any_str.min_length; limit_value=1)"
+                "output_format\n  value is not a valid enumeration member; permitted: 'json', 'xml' (type=type_error.enum; enum_values=[json, xml])"
+            ),
+            "error_dict": re.escape(
+                "2 validation errors for GetEndpoint\nquery -> doi\n  ensure this value"
+                " has at least 1 characters "
+                "(type=value_error.any_str.min_length; limit_value=1)\n"
+                "output_format\n  value is not a valid enumeration member; permitted: 'json', 'xml' (type=type_error.enum; enum_values=[json, xml])"
             ),
         },
         id="doi_whitespace_fmt_whitespace",
@@ -258,9 +402,7 @@ GET_ENDPOINT_FAIL_DATA = [
         {
             "input": [SAMPLE_DOI, ""],
             "error": re.escape(
-                "1 validation error for GetEndpoint\noutput_format\n  ensure "
-                "this value has at least 1 characters "
-                "(type=value_error.any_str.min_length; limit_value=1)"
+                "1 validation error for GetEndpoint\noutput_format\n  value is not a valid enumeration member; permitted: 'json', 'xml' (type=type_error.enum; enum_values=[json, xml])"
             ),
         },
         id="fmt_len_0",
@@ -269,9 +411,7 @@ GET_ENDPOINT_FAIL_DATA = [
         {
             "input": [SAMPLE_DOI, SPACE_STR],
             "error": re.escape(
-                "1 validation error for GetEndpoint\noutput_format\n  ensure "
-                "this value has at least 1 characters "
-                "(type=value_error.any_str.min_length; limit_value=1)"
+                "1 validation error for GetEndpoint\noutput_format\n  value is not a valid enumeration member; permitted: 'json', 'xml' (type=type_error.enum; enum_values=[json, xml])"
             ),
         },
         id="fmt_whitespace",
@@ -279,7 +419,9 @@ GET_ENDPOINT_FAIL_DATA = [
     pytest.param(
         {
             "input": [SAMPLE_DOI, "TXT"],
-            "error": re.escape("Invalid output format: TXT"),
+            "error": re.escape(
+                "1 validation error for GetEndpoint\noutput_format\n  value is not a valid enumeration member; permitted: 'json', 'xml' (type=type_error.enum; enum_values=[json, xml])"
+            ),
         },
         id="fmt_invalid",
     ),
@@ -288,11 +430,11 @@ GET_ENDPOINT_FAIL_DATA = [
 
 FILE_LIST_TEST_DATA = [
     pytest.param(
-        {"input": Path("tests") / "data" / "empty.txt", "output": set()},
+        {"input": Path("tests") / "data" / "empty.txt", "output": ES},
         id="invalid_doi_file_empty",
     ),
     pytest.param(
-        {"input": Path("tests") / "data" / "whitespace.txt", "output": set()},
+        {"input": Path("tests") / "data" / "whitespace.txt", "output": ES},
         id="invalid_doi_file_whitespace",
     ),
     pytest.param(

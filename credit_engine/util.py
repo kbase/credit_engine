@@ -16,8 +16,11 @@ from credit_engine.errors import make_error
 
 
 @validate_arguments
-def trim_dedupe_list(list_items: Optional[list[CE.TrimmedString]]) -> set[str]:
-    """Clean up a list of strings.
+def trim_dedupe_list(
+    list_items: Optional[list[CE.TrimmedString]],
+) -> set[str]:
+    """
+    Clean up a collection of strings.
 
     Dedupes, trims whitespace, and removes blanks.
 

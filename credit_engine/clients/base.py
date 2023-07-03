@@ -34,32 +34,6 @@ def check_doi_source(doi: CE.TrimmedString) -> Optional[str]:
     return None
 
 
-@validate_arguments
-def get_extension(source: str, output_format: str = CE.JSON) -> str:
-    """Get the appropriate file extension for saving data.
-
-    :param source: the data source
-    :type source: str
-    :param output_format: format of data to be saved, defaults to 'json'
-    :type output_format: str, optional
-    :raises ValueError: if the output format is not valid for that client
-    :return: file extension
-    :rtype: str
-    """
-    lc_output_format = output_format.lower()
-    if source not in SOURCE_TO_CLIENT:
-        raise ValueError(f"No client for source {source}")
-    client = SOURCE_TO_CLIENT[source]
-    if lc_output_format not in client.FILE_EXTENSIONS:
-        raise ValueError(
-            make_error(
-                "invalid_param",
-                {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
-            )
-        )
-    return client.FILE_EXTENSIONS[lc_output_format]
-
-
 def die_with_errors(error_list: list[str]):
     """Die with the appropriate panache and list of errors.
 
@@ -73,8 +47,8 @@ def die_with_errors(error_list: list[str]):
 
 
 def _validate_dois(
-    doi_file: Optional[str],
-    doi_list: Optional[Union[list[str], set[str]]],
+    doi_file: Optional[Path | str],
+    doi_list: Optional[list[str]],  # set[str]],
     input_errors: list[str],
 ) -> set[str]:
     """
@@ -97,55 +71,69 @@ def _validate_dois(
             file_lines = util.read_unique_lines(doi_file)
             if file_lines:
                 proto_doi_list = file_lines
-            print({"proto doi list from file": proto_doi_list})
         except OSError as e:
             input_errors.append(str(e))
 
-    if doi_list:
+    if doi_list is not None:
         try:
             cleaned_list = util.trim_dedupe_list(doi_list)
             proto_doi_list = proto_doi_list | cleaned_list
         except Exception as e:
-            print(e)
             input_errors.append(str(e))
 
     return proto_doi_list
 
 
-def _validate_output_format_list(
-    output_format_list: Optional[list[str]], source: str, input_errors: list[str]
-) -> list[str]:
-    """
-    Validate the output formats requested.
+@validate_arguments(config={"arbitrary_types_allowed": True})
+def _validate_output_formats(
+    client: types.ModuleType,
+    output_formats: Optional[set[str]],
+    input_errors: list[str],
+) -> tuple[set[CE.OutputFormat], list[str]]:
+    """Validate the output formats requested
 
-    :param output_format_list: list of output formats to fetch
-    :type output_format_list: Optional[list[str]]
-    :param source: data source
-    :type source: str
+    :param client: client object
+    :type client: object
+    :param output_formats: output formats to fetch
+    :type output_formats: Optional[set[str]]
     :param input_errors: list of param validation errors
     :type input_errors: list[str]
     :return: validated output format list
-    :rtype: list[str]
+    :rtype: tuple[set[CE.OutputFormat], list[str]]
     """
-    client = SOURCE_TO_CLIENT[source]
+    valid_output_formats = set()
+    invalid_formats = set()
+    if output_formats:
+        for fmt in output_formats:
+            output_format = None
 
-    if not output_format_list:
-        return [client.DEFAULT_FORMAT]
+            if not isinstance(fmt, CE.OutputFormat):
+                try:
+                    # check whether it's in the enum
+                    output_format = CE.OutputFormat[fmt.upper()]
+                except KeyError:
+                    invalid_formats.add(fmt)
+                    continue
+            else:
+                output_format = fmt
 
-    output_format_list = list(set(output_format_list))
-    # ensure the validity of the file format(s)
-    invalid_formats = [
-        fmt for fmt in output_format_list if fmt not in client.FILE_EXTENSIONS
-    ]
-    if invalid_formats:
-        for fmt in invalid_formats:
-            input_errors.append(
-                make_error(
-                    "invalid_param",
-                    {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: fmt},
+            if output_format in client.VALID_OUTPUT_FORMATS:
+                valid_output_formats.add(output_format)
+            else:
+                invalid_formats.add(fmt)
+
+        if invalid_formats:
+            for fmt in invalid_formats:
+                input_errors.append(
+                    make_error(
+                        "invalid_param",
+                        {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: fmt},
+                    )
                 )
-            )
-    return output_format_list
+    else:
+        valid_output_formats.add(client.DEFAULT_FORMAT)
+
+    return (valid_output_formats, input_errors)
 
 
 def _validate_save_dir(
@@ -165,11 +153,12 @@ def _validate_save_dir(
     :return: validated path to the save dir or None
     :rtype: Optional[Path]
     """
-    if not save_dir:
-        if not client:
-            input_errors.append("No save_dir specified")
-            return None
+    if client and not save_dir:
         save_dir = client.SAMPLE_DATA_DIR
+
+    if save_dir is None:
+        input_errors.append("No save_dir specified")
+        return None
 
     save_dir_path = util.full_path(save_dir)
 
@@ -191,12 +180,13 @@ def _validate_save_dir(
 @validate_arguments
 def _validate_retrieve_doi_list_input(
     source: CE.TrimmedString,
-    doi_file: Optional[str] = None,
+    doi_file: Optional[Path | str] = None,
     doi_list: Optional[list[str]] = None,
-    output_format_list: Optional[list[str]] = None,
+    output_formats: Optional[set[str]] = None,
     save_files: bool = False,
-    save_dir: Optional[Union[Path, str]] = None,
+    save_dir: Optional[Path | str] = None,
     input_errors: Optional[list[str]] = None,
+    **kwargs,
 ) -> tuple[dict, types.ModuleType]:
     """
     Validate the input to retrieve_doi_list.
@@ -207,12 +197,12 @@ def _validate_retrieve_doi_list_input(
     :type doi_file: Path or string, optional
     :param source: DOI source (e.g. DataCite, CrossRef)
     :type source: str
-    :param output_format_list: formats to retrieve the DOIs in, defaults to None
-    :type output_format_list: Optional[list[str]], optional
+    :param output_formats: formats to retrieve the DOIs in, defaults to None
+    :type output_formats: Optional[set[str]], optional
     :param save_files: whether or not to save the files, defaults to False
     :type save_files: bool, optional
     :param save_dir: path to the save directory, defaults to None
-    :type save_dir: Optional[Union[Path, str]], optional
+    :type save_dir: Optional[Path | str], optional
     :raises ValueError: if there are any input parameter errors
     :return: tuple containing a dict of validated params and the client module
     :rtype: tuple
@@ -239,9 +229,9 @@ def _validate_retrieve_doi_list_input(
         params["source"] = source
         client = SOURCE_TO_CLIENT[source]
 
-        # only validate the output formats if there is a valid source
-        params["output_format_list"] = _validate_output_format_list(
-            output_format_list, source, input_errors
+        # only validate the output formats if there is a valid client
+        (params["output_formats"], input_errors) = _validate_output_formats(
+            client, output_formats, input_errors
         )
 
     # set up the save_dir (if appropriate)
@@ -273,20 +263,23 @@ def retrieve_doi_list(**kwargs) -> dict:
     results = {
         CE.DATA: {},
     }
-
+    file_ext_mapping = {}
     if params["save_files"]:
         results[CE.FILES] = {}
+        # make a local mapping of file extensions
+        for fmt in params["output_formats"]:
+            file_ext_mapping[fmt] = util.get_extension(fmt)
 
     for doi in params["doi_list"]:
         results[CE.DATA][doi] = client.retrieve_doi(
-            doi, output_format_list=params["output_format_list"]
+            doi, output_formats=params["output_formats"]
         )
         if not params["save_files"]:
             continue
 
         if doi not in results[CE.FILES]:
             results[CE.FILES][doi] = {}
-        for fmt in params["output_format_list"]:
+        for fmt in params["output_formats"]:
             if results[CE.DATA][doi][fmt] is None:
                 results[CE.FILES][doi][fmt] = None
                 continue
@@ -294,7 +287,7 @@ def retrieve_doi_list(**kwargs) -> dict:
             results_file = util.save_data_to_file(
                 file_name=doi,
                 save_dir=params["save_dir"],
-                suffix=get_extension(params["source"], fmt),
+                suffix=file_ext_mapping[fmt],
                 data=results[CE.DATA][doi][fmt],
             )
             if results_file:
@@ -304,20 +297,20 @@ def retrieve_doi_list(**kwargs) -> dict:
 
 
 def _check_for_missing_dois(
-    doi_list: list[str],
+    dois: set[str],
     results_dict: dict,
-) -> list[str]:
+) -> set[str]:
     """Check for DOIs that do not have data associated with them.
 
-    :param doi_list: list of DOIs
-    :type doi_list: list[str]
+    :param dois: DOIs to check
+    :type dois: set[str]
     :param results_dict: DOI data, indexed by DOI and then format
     :type results_dict: dict
-    :return: list of DOIs without any associated data
-    :rtype: list[str]
+    :return: DOIs without any associated data
+    :rtype: set[str]
     """
     not_found = set()
-    for doi in doi_list:
+    for doi in dois:
         if doi not in results_dict:
             # this should never happen!
             not_found.add(doi)
@@ -333,16 +326,17 @@ def _check_for_missing_dois(
         if not data_found:
             not_found.add(doi)
 
-    return list(not_found)
+    return not_found
 
 
 @validate_arguments
 def retrieve_doi_list_from_unknown(
     doi_file: Optional[str] = None,
     doi_list: Optional[list[str]] = None,
-    output_format_list: Optional[list[str]] = None,
+    output_formats: Optional[set[str]] = None,
     save_files: bool = False,
-    save_dir: Optional[Union[Path, str]] = None,
+    save_dir: Optional[Path | str] = None,
+    **kwargs,
 ) -> dict[str, Any]:
     """
     Retrieve a list of DOIs of unknown origin.
@@ -351,18 +345,18 @@ def retrieve_doi_list_from_unknown(
     :type doi_file: Optional[str], optional
     :param doi_list: list of DOIs to retrieve, defaults to None
     :type doi_list: Optional[list[str]], optional
-    :param output_format_list: list of formats to request data in, defaults to None
-    :type output_format_list: Optional[list[str]], optional
+    :param output_formats: formats to request data in, defaults to None
+    :type output_formats: Optional[set[str]], optional
     :param save_files: whether or not to save files, defaults to False
     :type save_files: bool, optional
     :param save_dir: directory location for saving files, defaults to None
-    :type save_dir: Optional[Union[Path, str]], optional
+    :type save_dir: Optional[Path | str], optional
     :return: data structure of fetched DOIs keyed by DOI and then format
     :rtype: dict[str, Any]
     """
 
     input_errors = []
-    all_doi_list = _validate_dois(
+    all_dois: set[str] = _validate_dois(
         doi_file=doi_file, doi_list=doi_list, input_errors=input_errors
     )
     if input_errors:
@@ -370,25 +364,24 @@ def retrieve_doi_list_from_unknown(
 
     print("Searching Crossref...")
 
-    if output_format_list:
-        valid_crossref_formats = list(
-            set(output_format_list).intersection(
-                set(SOURCE_TO_CLIENT[CE.CROSSREF].FILE_EXTENSIONS.keys())
-            )
+    # FIXME: output formats need to be converted into CE.OutputFormat.* first
+    if output_formats:
+        valid_crossref_formats = output_formats.intersection(
+            SOURCE_TO_CLIENT[CE.CROSSREF].VALID_OUTPUT_FORMATS
         )
     else:
-        valid_crossref_formats = [SOURCE_TO_CLIENT[CE.CROSSREF].DEFAULT_FORMAT]
+        valid_crossref_formats = {SOURCE_TO_CLIENT[CE.CROSSREF].DEFAULT_FORMAT}
 
     crossref_results = retrieve_doi_list(
-        doi_list=all_doi_list,
+        doi_list=list(all_dois),
         source=CE.CROSSREF,
-        output_format_list=valid_crossref_formats,
+        output_formats=valid_crossref_formats,
         save_files=save_files,
         save_dir=save_dir,
     )
 
-    not_found = _check_for_missing_dois(all_doi_list, crossref_results[CE.DATA])
-    n_found = len(all_doi_list) - len(not_found)
+    not_found: set[str] = _check_for_missing_dois(all_dois, crossref_results[CE.DATA])
+    n_found = len(all_dois) - len(not_found)
     print(f"Found {n_found} DOI{'' if n_found == 1 else 's'} at Crossref")
 
     if not not_found:
@@ -396,31 +389,34 @@ def retrieve_doi_list_from_unknown(
 
     print("Searching Datacite...")
     # now retry these DOIs at datacite
-    if output_format_list:
-        valid_datacite_formats = list(
-            set(output_format_list).intersection(
-                set(SOURCE_TO_CLIENT[CE.DATACITE].FILE_EXTENSIONS.keys())
-            )
+    if output_formats:
+        valid_datacite_formats = output_formats.intersection(
+            SOURCE_TO_CLIENT[CE.DATACITE].VALID_OUTPUT_FORMATS
         )
     else:
-        valid_datacite_formats = [SOURCE_TO_CLIENT[CE.DATACITE].DEFAULT_FORMAT]
+        valid_datacite_formats = {SOURCE_TO_CLIENT[CE.DATACITE].DEFAULT_FORMAT}
     datacite_results = retrieve_doi_list(
-        doi_list=not_found,
+        doi_list=list(not_found),
         source=CE.DATACITE,
-        output_format_list=valid_datacite_formats,
+        output_formats=valid_datacite_formats,
         save_files=save_files,
         save_dir=save_dir,
     )
 
-    still_not_found = _check_for_missing_dois(not_found, datacite_results[CE.DATA])
+    still_not_found: set[str] = _check_for_missing_dois(
+        not_found, datacite_results[CE.DATA]
+    )
     n_now_found = len(not_found) - len(still_not_found)
     print(f"Found {n_now_found} DOI{'' if n_now_found == 1 else 's'} at Datacite")
 
-    still_not_found.sort()
-
     # print out a warning about the dois that could not be located
     if still_not_found:
-        print("The following DOIs could not be found:\n" + "\n".join(still_not_found))
+        sorted_still_not_found = list(still_not_found)
+        sorted_still_not_found.sort()
+        print(
+            "The following DOIs could not be found:\n"
+            + "\n".join(sorted_still_not_found)
+        )
 
     for key in crossref_results:
         crossref_results[key].update(datacite_results[key])
