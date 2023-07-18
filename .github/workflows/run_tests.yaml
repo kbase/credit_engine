@@ -28,19 +28,6 @@ jobs:
       id: install_deps
       run: poetry install
     -
-      name: Lint linkml file
-      id: lint_linkml
-      run: |
-        poetry run linkml-lint ./schema/kbase/linkml/credit_metadata.yaml --ignore-warnings
-      continue-on-error: true
-    -
-      name: Validate kbase sample data against the schema
-      id: validate_kbase_data
-      run: |
-        poetry run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.25982_1722943.yaml
-        poetry run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.6084_m9.figshare.12644081.v1.yaml
-      continue-on-error: true
-    -
       name: poetry run pytest -rP tests/
       id: run_pytest
       run: |
@@ -56,19 +43,65 @@ jobs:
         fail_ci_if_error: true
     -
       name: outcome failure
-      if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success' || steps.lint_linkml.outcome != 'success' # || steps.validate_kbase_data.outcome != 'success'
+      if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success'
       run: |
         echo "Python tests: ${{ steps.run_pytest.outcome }}"
         echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
+        exit 1
+    -
+      name: outcome success
+      run: |
+        echo "Python tests: ${{ steps.run_pytest.outcome }}"
+        echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
+        exit 0
+
+  run_linkml_tasks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+    -
+      name: Repo checkout
+      uses: actions/checkout@v3
+    -
+      name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    -
+      name: Install Poetry
+      uses: snok/install-poetry@v1
+    -
+      name: Install dependencies
+      id: install_deps
+      run: poetry install -E docs
+    -
+      name: Lint linkml file
+      id: lint_linkml
+      run: |
+        poetry run linkml-lint ./schema/kbase/linkml/credit_metadata.yaml --ignore-warnings
+      continue-on-error: true
+    -
+      name: Validate kbase sample data against the schema
+      id: validate_kbase_data
+      run: |
+        poetry run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.25982_1722943.yaml
+        poetry run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.6084_m9.figshare.12644081.v1.yaml
+      continue-on-error: true
+    -
+      name: outcome failure
+      if: steps.lint_linkml.outcome != 'success' # || steps.validate_kbase_data.outcome != 'success'
+      run: |
         echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
         echo "KBase sample data validation: ${{ steps.validate_kbase_data.outcome }}"
         exit 1
     -
       name: outcome success
-      if: steps.run_pytest.outcome == 'success' && steps.send_to_codecov.outcome == 'success' && steps.lint_linkml.outcome == 'success' # || steps.validate_kbase_data.outcome != 'success'
+      if: steps.lint_linkml.outcome == 'success' # || steps.validate_kbase_data.outcome != 'success'
       run: |
-        echo "Python tests: ${{ steps.run_pytest.outcome }}"
-        echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
         echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
         echo "KBase sample data validation: ${{ steps.validate_kbase_data.outcome }}"
         exit 0
