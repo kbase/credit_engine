@@ -1,5 +1,12 @@
 # Changelog
 
+## [#156](https://github.com/kbase/credit_engine/pull/156) - 2023-07-18
+
+### Changed
+
+- Switching linter over to using Ruff instead of isort + a billion flake8 modules.
+
+
 ## [#151](https://github.com/kbase/credit_engine/pull/151) - 2023-06-29
 
 ### Changed
