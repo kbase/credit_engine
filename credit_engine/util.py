@@ -11,7 +11,7 @@ from typing import Callable, Optional, Union
 
 from pydantic import validate_arguments
 
-import credit_engine.constants as CE
+import credit_engine.constants as CE  # noqa: N812
 from credit_engine.errors import make_error
 
 

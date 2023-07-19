@@ -1,6 +1,6 @@
 import pytest
 
-import credit_engine.constants as CE
+import credit_engine.constants as CE  # noqa: N812
 from credit_engine.clients.datacite import get_endpoint, retrieve_doi
 from tests.common import check_stdout_for_errs
 from tests.conftest import (

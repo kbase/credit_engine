@@ -17,7 +17,7 @@ from urllib.parse import quote
 import requests
 from pydantic import validate_arguments
 
-import credit_engine.constants as CE
+import credit_engine.constants as CE  # noqa: N812
 from credit_engine.errors import make_error
 from credit_engine.util import fix_line_endings
 

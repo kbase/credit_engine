@@ -1,16 +1,15 @@
 import json
 import re
 from pathlib import Path
-from pydantic import ValidationError
-
 from typing import Any, Optional, Union
 from urllib.parse import quote
 
 import pytest
 import requests
-from credit_engine.clients import base, crossref, datacite, osti
+from pydantic import ValidationError
 
-import credit_engine.constants as CE
+import credit_engine.constants as CE  # noqa: N812
+from credit_engine.clients import crossref, datacite, osti
 from credit_engine.util import full_path
 
 SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
@@ -115,6 +114,7 @@ DATA_FORMAT = {
     },
     CE.OSTI: {
         CE.OutputFormat.JSON: DOT_JSON,
+        CE.OutputFormat.XML: DOT_XML,
     },
     # CE.OSTI_ELINK: {
     #     CE.OutputFormat.JSON: DOT_JSON,
