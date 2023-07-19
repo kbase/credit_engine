@@ -1,7 +1,7 @@
 import pytest
 
-import credit_engine.constants as CE
-import credit_engine.errors as errors
+import credit_engine.constants as CE  # noqa: N812
+from credit_engine import errors
 from credit_engine.errors import ERROR_STRING
 
 MAKE_ERROR_TEST_DATA = [

@@ -6,8 +6,8 @@ from pathlib import Path, PurePath
 import pytest
 from pydantic import ValidationError
 
-import credit_engine.constants as CE
-import credit_engine.util as util
+import credit_engine.constants as CE  # noqa: N812
+from credit_engine import util
 from tests.common import check_stdout_for_errs, run_file_contents_check
 
 from .conftest import (

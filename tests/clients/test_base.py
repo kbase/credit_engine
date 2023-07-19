@@ -4,10 +4,10 @@ from pathlib import Path
 
 import pytest
 
-import credit_engine.constants as CE
-import tests.common as common
+import credit_engine.constants as CE  # noqa: N812
 from credit_engine.clients import base, crossref, datacite, osti
 from credit_engine.errors import make_error
+from tests import common
 from tests.conftest import (
     CLIENT,
     DATA_FORMAT,
@@ -16,62 +16,18 @@ from tests.conftest import (
     FILE_NAME,
     NOT_FOUND_DOI_A,
     NOT_FOUND_DOI_B,
-    OUTPUT_FORMAT_EXT_TEST_DATA,
     TRIM_DEDUPE_LIST_DATA,
-    VALID_DC_DOI,
     VALID_DC_DOI_A,
     VALID_DC_DOI_B,
-    VALID_XR_DOI,
     VALID_XR_DOI_A,
     VALID_XR_DOI_B,
     generate_response_for_doi,
 )
 
-
 SOURCE_TEST_DATA = [pytest.param(src, id=src) for src in CLIENT]
 
 DOT_JSON = ".json"
 DOT_XML = ".xml"
-
-DATA_FORMAT = {
-    CE.CROSSREF: {
-        CE.JSON: DOT_JSON,
-        CE.XML: DOT_XML,
-    },
-    CE.DATACITE: {
-        CE.JSON: DOT_JSON,
-        CE.XML: DOT_XML,
-    },
-    CE.OSTI: {
-        CE.JSON: DOT_JSON,
-        CE.XML: DOT_XML,
-    },
-}
-
-
-CHECK_DOI_SOURCE_TEST_DATA = [
-    pytest.param(
-        {
-            "doi": VALID_DC_DOI,
-            "expected": "datacite",
-        },
-        id="datacite",
-    ),
-    pytest.param(
-        {
-            "doi": VALID_XR_DOI,
-            "expected": "crossref",
-        },
-        id="crossref",
-    ),
-    pytest.param(
-        {
-            "doi": NOT_FOUND_DOI_A,
-            "expected": None,
-        },
-        id="not_found",
-    ),
-]
 
 
 GET_EXTENSION_TEST_DATA = [
@@ -125,7 +81,7 @@ GET_EXTENSION_TEST_DATA = [
     ),
 ]
 
-# test data for retrieve_doi_list
+# test data for retrieve_dois
 
 INVALID_SOURCE_TEST_DATA = [
     pytest.param(
@@ -176,14 +132,14 @@ INVALID_OUTPUT_FORMATS_TEST_DATA = [
     pytest.param(
         {
             "input": "txt",
-            "error": "1 validation error for ValidateRetrieveDoiListInput\noutput_formats\n  value is not a valid set (type=type_error.set)",
+            "error": "1 validation error for ValidateRetrieveDoisInput\noutput_formats\n  value is not a valid set (type=type_error.set)",
         },
         id="invalid_fmt_type",
     ),
     pytest.param(
         {
             "input": {None, ""},
-            "error": "1 validation error for ValidateRetrieveDoiListInput\noutput_formats -> 1\n  none is not an allowed value (type=type_error.none.not_allowed)",
+            "error": "1 validation error for ValidateRetrieveDoisInput\noutput_formats -> 1\n  none is not an allowed value (type=type_error.none.not_allowed)",
         },
         id="invalid_fmt_list_of_empties",
     ),
@@ -331,44 +287,6 @@ TRANSLATED_DOI = {
 }
 
 
-@pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
-def test_check_doi_source(param, _mock_response):
-    """Test the DOI source function
-
-    :param param: doi: the DOI to query; expected: expected result
-    :type param: pytest.param
-    :param _mock_response: mock requests.get function
-    :type _mock_response: pytest mock
-    """
-    assert base.check_doi_source(param["doi"]) == param["expected"]
-
-
-# def test_get_extension_fail_bad_source():
-#     SOURCE = "not a real source"
-#     error_text = f"No client for source {SOURCE}"
-#     with pytest.raises(ValueError, match=error_text):
-#         base.get_extension(SOURCE, CE.JSON)
-
-
-# @pytest.mark.parametrize("output_format", [CE.JSON, CE.XML])
-# @pytest.mark.parametrize("source", SOURCE_TEST_DATA)
-# def test_get_extension(source, output_format):
-#     expected = DATA_FORMAT.get(source, {}).get(output_format)
-#     if expected is None:
-#         error_text = make_error(
-#             "invalid_param",
-#             {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: output_format},
-#         )
-#         with pytest.raises(ValueError, match=error_text):
-#             util.get_extension(source, output_format)
-
-#     else:
-#         assert util.get_extension(source, output_format) == expected
-#         assert base.get_extension(source, output_format.upper()) == expected
-#         assert base.get_extension(source, output_format.title()) == expected
-#         assert base.get_extension(source, output_format.title().swapcase()) == expected
-
-
 @pytest.mark.parametrize("doi_list", TRIM_DEDUPE_LIST_DATA)
 @pytest.mark.parametrize("doi_file", FILE_LIST_TEST_DATA)
 def test__validate_dois(doi_file, doi_list):
@@ -400,7 +318,7 @@ def test__validate_dois(doi_file, doi_list):
 @pytest.mark.parametrize("source", INVALID_SOURCE_TEST_DATA)
 @pytest.mark.parametrize("doi_list", TRIM_DEDUPE_LIST_DATA)
 @pytest.mark.parametrize("doi_file", FILE_LIST_TEST_DATA)
-def test_retrieve_doi_list_errors(
+def test_retrieve_dois_errors(
     doi_file, doi_list, output_formats, save_dir, source, capsys
 ):
     error_list = []
@@ -412,9 +330,9 @@ def test_retrieve_doi_list_errors(
         return
 
     # TODO: better error matching for tests
-    error_match = "(Please check the above errors and try again|validation errors? for ValidateRetrieveDoiListInput)"
+    error_match = "(Please check the above errors and try again|validation errors? for ValidateRetrieveDoisInput)"
     with pytest.raises(ValueError, match=error_match):
-        base.retrieve_doi_list(
+        base.retrieve_dois(
             doi_file=doi_file["input"],
             doi_list=doi_list["input"],
             output_formats=output_formats["input"],
@@ -428,7 +346,7 @@ def test_retrieve_doi_list_errors(
 @pytest.mark.parametrize("save_to", SAVE_PARAMS)
 @pytest.mark.parametrize("source", SOURCE_TEST_DATA)
 @pytest.mark.parametrize("doi_input_test_data", DOI_INPUT_TEST_DATA)
-def test_retrieve_doi_list(
+def test_retrieve_dois(
     doi_input_test_data,
     source,
     save_to,
@@ -475,7 +393,7 @@ def test_retrieve_doi_list(
     no_format = [fmt for fmt in output_formats if fmt not in DATA_FORMAT[source]]
     if no_format:
         with pytest.raises(ValueError, match="Invalid output format"):
-            base.retrieve_doi_list(
+            base.retrieve_dois(
                 **doi_params, source=source, output_formats=output_formats
             )
         return
@@ -537,7 +455,7 @@ def test_retrieve_doi_list(
         if errors:
             expected["errors"] = errors
 
-        common.run_retrieve_doi_list(
+        common.run_retrieve_dois(
             param=param,
             expected=expected,
             default_dir=default_dir,
@@ -690,13 +608,13 @@ RETRIEVE_DOIS_FROM_UNKNOWN_DATA = [
     [pytest.param({CE.JSON}, id="json"), pytest.param(set(), id="default")],
 )
 @pytest.mark.parametrize("param", RETRIEVE_DOIS_FROM_UNKNOWN_DATA)
-def test_retrieve_doi_list_from_unknown(param, output_formats, capsys):
+def test_retrieve_dois_from_unknown(param, output_formats, capsys):
     expected = EXPECTED[param["id"]]
     stdout = STDOUT_MESSAGES[param["id"]]
     doi_params = copy.deepcopy(param)
     del doi_params["id"]
 
-    results = base.retrieve_doi_list_from_unknown(
+    results = base.retrieve_dois_from_unknown(
         **doi_params,
         output_formats=output_formats,
         save_files=False,

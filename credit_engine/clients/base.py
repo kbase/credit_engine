@@ -1,37 +1,15 @@
 import types
 from pathlib import Path
 from typing import Any, Optional, Union
-from urllib.parse import quote
 
-import requests
 from pydantic import validate_arguments
 
-from credit_engine import constants as CE
+from credit_engine import constants as CE  # noqa: N812
 from credit_engine import util
 from credit_engine.clients import crossref, datacite, osti
 from credit_engine.errors import make_error
 
 SOURCE_TO_CLIENT = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
-
-
-@validate_arguments
-def check_doi_source(doi: CE.TrimmedString) -> Optional[str]:
-    """
-    Check whether a DOI is accessible via CrossRef.
-
-    :param doi: digital object identifier
-    :type doi: str
-    :return: ID of the agency from which the data can be retrieved
-    :rtype: str | None
-    """
-    resp = requests.get(f"https://api.crossref.org/works/{quote(doi)}/agency")
-    if resp.status_code == 200:
-        payload = resp.json()
-        agency = payload.get("message", {}).get("agency", {}).get("id", "unknown")
-        print(f"doi {doi} at {agency}")
-        return agency
-
-    return None
 
 
 def die_with_errors(error_list: list[str]):
@@ -178,7 +156,7 @@ def _validate_save_dir(
 
 
 @validate_arguments
-def _validate_retrieve_doi_list_input(
+def _validate_retrieve_dois_input(
     source: CE.TrimmedString,
     doi_file: Optional[Path | str] = None,
     doi_list: Optional[list[str]] = None,
@@ -189,7 +167,7 @@ def _validate_retrieve_doi_list_input(
     **kwargs,
 ) -> tuple[dict, types.ModuleType]:
     """
-    Validate the input to retrieve_doi_list.
+    Validate the input to retrieve_dois.
 
     :param doi_list: list of DOIs to retrieve
     :type doi_list: list[str], optional
@@ -213,7 +191,7 @@ def _validate_retrieve_doi_list_input(
     params: dict[str, Any] = {
         "save_files": save_files,
     }
-    client: Optional[types.ModuleType] = None
+    client: types.ModuleType | None = None
 
     params["doi_list"] = _validate_dois(
         doi_file=doi_file, doi_list=doi_list, input_errors=input_errors
@@ -246,11 +224,11 @@ def _validate_retrieve_doi_list_input(
         return (params, client)
 
 
-def retrieve_doi_list(**kwargs) -> dict:
+def retrieve_dois(**kwargs) -> dict:
     """
     Retrieve a list of DOIs.
 
-    See _validate_retrieve_doi_list_input for specification of kwargs.
+    See _validate_retrieve_dois_input for specification of kwargs.
 
     :return: dictionary of results in the format:
         data: return data keyed by DOI and format
@@ -258,7 +236,7 @@ def retrieve_doi_list(**kwargs) -> dict:
     :rtype: dict
     """
 
-    (params, client) = _validate_retrieve_doi_list_input(**kwargs)
+    (params, client) = _validate_retrieve_dois_input(**kwargs)
 
     results = {
         CE.DATA: {},
@@ -330,7 +308,7 @@ def _check_for_missing_dois(
 
 
 @validate_arguments
-def retrieve_doi_list_from_unknown(
+def retrieve_dois_from_unknown(
     doi_file: Optional[str] = None,
     doi_list: Optional[list[str]] = None,
     output_formats: Optional[set[str]] = None,
@@ -372,7 +350,7 @@ def retrieve_doi_list_from_unknown(
     else:
         valid_crossref_formats = {SOURCE_TO_CLIENT[CE.CROSSREF].DEFAULT_FORMAT}
 
-    crossref_results = retrieve_doi_list(
+    crossref_results = retrieve_dois(
         doi_list=list(all_dois),
         source=CE.CROSSREF,
         output_formats=valid_crossref_formats,
@@ -395,7 +373,7 @@ def retrieve_doi_list_from_unknown(
         )
     else:
         valid_datacite_formats = {SOURCE_TO_CLIENT[CE.DATACITE].DEFAULT_FORMAT}
-    datacite_results = retrieve_doi_list(
+    datacite_results = retrieve_dois(
         doi_list=list(not_found),
         source=CE.DATACITE,
         output_formats=valid_datacite_formats,

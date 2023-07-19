@@ -2,7 +2,8 @@ import json
 import os.path
 import re
 from pathlib import Path
-from typing import Pattern, Union
+from re import Pattern
+from typing import Union
 
 import _pytest.capture
 
@@ -89,7 +90,7 @@ def run_file_contents_check(
     assert content == expected
 
 
-def run_retrieve_doi_list(
+def run_retrieve_dois(
     param: dict,
     expected: dict,
     default_dir: Path,
@@ -117,7 +118,7 @@ def run_retrieve_doi_list(
         # interpolate the path to the save directory
         file_list = [os.path.join(save_dir, doi) for doi in expected["file_list"]]
 
-        retrieval_results = base.retrieve_doi_list(**param)
+        retrieval_results = base.retrieve_dois(**param)
         assert retrieval_results["data"] == expected["output"]["data"]
         assert set(dir_scanner(save_dir)) == set(file_list)
 
@@ -133,7 +134,7 @@ def run_retrieve_doi_list(
                         retrieval_results["data"][f][fmt],
                     )
     else:
-        retrieval_results = base.retrieve_doi_list(**param)
+        retrieval_results = base.retrieve_dois(**param)
         assert retrieval_results == expected["output"]
         assert dir_scanner(tmp_path) == []
 

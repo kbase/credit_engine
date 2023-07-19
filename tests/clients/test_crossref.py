@@ -2,8 +2,8 @@ import re
 
 import pytest
 
-import credit_engine.constants as CE
-from credit_engine.clients.crossref import get_endpoint, retrieve_doi
+import credit_engine.constants as CE  # noqa: N812
+from credit_engine.clients.crossref import check_doi_source, get_endpoint, retrieve_doi
 from tests.common import check_stdout_for_errs
 from tests.conftest import (
     GET_ENDPOINT_FAIL_DATA,
@@ -15,6 +15,8 @@ from tests.conftest import (
     SAMPLE_DOI,
     SAMPLE_EMAIL,
     SPACE_STR,
+    VALID_DC_DOI,
+    VALID_XR_DOI,
     VALID_XR_DOI_A,
     generate_response_for_doi,
 )
@@ -173,3 +175,40 @@ def test_retrieve_doi(param, _mock_response, capsys):
     assert retrieve_doi(*param["input"]) == param["expected"]
     if "output" in param:
         check_stdout_for_errs(capsys, param["output"])
+
+
+CHECK_DOI_SOURCE_TEST_DATA = [
+    pytest.param(
+        {
+            "doi": VALID_DC_DOI,
+            "expected": "datacite",
+        },
+        id="datacite",
+    ),
+    pytest.param(
+        {
+            "doi": VALID_XR_DOI,
+            "expected": "crossref",
+        },
+        id="crossref",
+    ),
+    pytest.param(
+        {
+            "doi": NOT_FOUND_DOI_A,
+            "expected": None,
+        },
+        id="not_found",
+    ),
+]
+
+
+@pytest.mark.parametrize("param", CHECK_DOI_SOURCE_TEST_DATA)
+def test_check_doi_source(param, _mock_response):
+    """Test the DOI source function
+
+    :param param: doi: the DOI to query; expected: expected result
+    :type param: pytest.param
+    :param _mock_response: mock requests.get function
+    :type _mock_response: pytest mock
+    """
+    assert check_doi_source(param["doi"]) == param["expected"]

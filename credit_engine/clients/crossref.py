@@ -11,15 +11,15 @@ API documentation:
     XML API: https://www.crossref.org/documentation/retrieve-metadata/xml-api/doi-to-metadata-query/
 """
 
+from enum import Enum
 from json import JSONDecodeError
 from typing import Optional, Union
 from urllib.parse import quote
-from enum import Enum
 
 import requests
-from pydantic import EmailStr, validate_arguments
+from pydantic import EmailStr, constr, validate_arguments
 
-import credit_engine.constants as CE
+import credit_engine.constants as CE  # noqa: N812
 from credit_engine.errors import make_error
 from credit_engine.util import fix_line_endings
 
@@ -130,3 +130,22 @@ def extract_data_from_resp(
             print(f"Error decoding JSON for {doi}: " + str(e))
             return None
     return fix_line_endings(resp.content)
+
+
+@validate_arguments
+def check_doi_source(doi: constr(strip_whitespace=True, min_length=3)) -> str | None:
+    """Check whether a DOI is accessible via CrossRef.
+
+    :param doi: digital object identifier
+    :type doi: str
+    :return: ID of the agency from which the data can be retrieved
+    :rtype: str | None
+    """
+    resp = requests.get(f"https://api.crossref.org/works/{quote(doi)}/agency")
+    if resp.status_code == 200:
+        payload = resp.json()
+        agency = payload.get("message", {}).get("agency", {}).get("id", "unknown")
+        print(f"doi {doi} at {agency}")
+        return agency
+
+    return None
