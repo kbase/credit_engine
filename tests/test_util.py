@@ -4,17 +4,15 @@ import re
 from pathlib import Path, PurePath
 
 import pytest
-from pydantic import ValidationError
 
 import credit_engine.constants as CE  # noqa: N812
 from credit_engine import util
 from tests.common import check_stdout_for_errs, run_file_contents_check
 
 from .conftest import (
-    FILE_LIST_TEST_DATA,
+    FILE_CONTENTS_TEST_DATA,
     FILE_NAME,
     OUTPUT_FORMAT_EXT_TEST_DATA,
-    TRIM_DEDUPE_LIST_DATA,
     VALID_DOI_A,
 )
 
@@ -52,16 +50,6 @@ TEXT_LINES = """Write a list of lines of text to a file.
 @pytest.mark.parametrize("param", DOI_TEST_DATA)
 def test_make_safe_file_name(param):
     assert util.make_safe_file_name(param["doi"]) == param["file_name"]
-
-
-@pytest.mark.parametrize("param", TRIM_DEDUPE_LIST_DATA)
-def test_trim_dedupe_list(param):
-    if "output" in param:
-        clean_dois = util.trim_dedupe_list(param["input"])
-        assert clean_dois == param["output"]
-    else:
-        with pytest.raises(ValidationError, match=re.escape(param["error"])):
-            util.trim_dedupe_list(param["input"])
 
 
 def test_full_path():
@@ -285,9 +273,7 @@ def set_up_test_dir(tmp_path):
 def test_dir_scanner(param, tmp_path):
     test_dir = set_up_test_dir(tmp_path)
 
-    dir_contents = []
-    for child in test_dir.iterdir():
-        dir_contents.append(child.name)
+    dir_contents = [child.name for child in test_dir.iterdir()]
     # ensure that the dir has been set up properly
     assert set(ALL_FILES + DIRECTORIES) == set(dir_contents)
 
@@ -301,23 +287,27 @@ def test_dir_scanner_with_relative_file_input():
     assert got[0].endswith(KBASE_DOI_FILE)
 
 
-@pytest.mark.parametrize("param", FILE_LIST_TEST_DATA)
+@pytest.mark.parametrize("param", FILE_CONTENTS_TEST_DATA)
 def test_read_unique_lines(param):
-    if "output" in param:
-        returned_input = util.read_unique_lines(param["input"])
-        assert returned_input == param["output"]
+    args = {}
+    if "doi_file" in param["args"]:
+        args["file_path"] = param["args"]["doi_file"]
 
-    else:
-        with pytest.raises(param["error_type"], match=re.escape(param["error"])):
-            util.read_unique_lines(param["input"])
+    if "error_type" in param:
+        with pytest.raises(param["error_type"], match=re.escape(param["error_text"])):
+            util.read_unique_lines(**args)
+        return
+
+    returned_input = util.read_unique_lines(**args)
+    assert returned_input == param["output"]
 
 
 @pytest.mark.parametrize("param", OUTPUT_FORMAT_EXT_TEST_DATA)
 def test_get_extension_string(param):
     output_format = param["input"]
     expected = None
-    if "expected" in param:
-        expected = param["expected"]
+    if "output_ext" in param:
+        expected = param["output_ext"]
 
         assert util.get_extension(output_format) == expected
         if not isinstance(output_format, CE.OutputFormat):

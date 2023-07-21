@@ -1,15 +1,25 @@
+"""Base functionality for any client retrieving data from a data source."""
 import types
-from pathlib import Path
-from typing import Any, Optional, Union
+from enum import Enum
+from typing import Any
 
 from pydantic import validate_arguments
 
 from credit_engine import constants as CE  # noqa: N812
 from credit_engine import util
-from credit_engine.clients import crossref, datacite, osti
-from credit_engine.errors import make_error
+from credit_engine.clients import crossref, datacite, osti, osti_elink
+from credit_engine.clients.args import GenericClientArgs
 
 SOURCE_TO_CLIENT = {CE.CROSSREF: crossref, CE.DATACITE: datacite, CE.OSTI: osti}
+
+
+class SourceToClient(Enum):
+    """Class representing the various data sources."""
+
+    CROSSREF = crossref
+    DATACITE = datacite
+    OSTI = osti
+    OSTI_ELINK = osti_elink
 
 
 def die_with_errors(error_list: list[str]):
@@ -24,150 +34,10 @@ def die_with_errors(error_list: list[str]):
         raise ValueError("\n".join(error_list))
 
 
-def _validate_dois(
-    doi_file: Optional[Path | str],
-    doi_list: Optional[list[str]],  # set[str]],
-    input_errors: list[str],
-) -> set[str]:
-    """
-    Merge and validate the input DOIs.
-
-    :param doi_file: file containing DOIs to be fetched
-    :type doi_file: Optional[str]
-    :param doi_list: list of DOIs to fetch
-    :type doi_list: Optional[list[str]]
-    :param input_errors: list of param validation errors
-    :type input_errors: list[str]
-    :return: unique DOIs to be fetched
-    :rtype: set[str]
-    """
-
-    proto_doi_list: set[str] = set()
-
-    if doi_file:
-        try:
-            file_lines = util.read_unique_lines(doi_file)
-            if file_lines:
-                proto_doi_list = file_lines
-        except OSError as e:
-            input_errors.append(str(e))
-
-    if doi_list is not None:
-        try:
-            cleaned_list = util.trim_dedupe_list(doi_list)
-            proto_doi_list = proto_doi_list | cleaned_list
-        except Exception as e:
-            input_errors.append(str(e))
-
-    return proto_doi_list
-
-
-@validate_arguments(config={"arbitrary_types_allowed": True})
-def _validate_output_formats(
-    client: types.ModuleType,
-    output_formats: Optional[set[str]],
-    input_errors: list[str],
-) -> tuple[set[CE.OutputFormat], list[str]]:
-    """Validate the output formats requested
-
-    :param client: client object
-    :type client: object
-    :param output_formats: output formats to fetch
-    :type output_formats: Optional[set[str]]
-    :param input_errors: list of param validation errors
-    :type input_errors: list[str]
-    :return: validated output format list
-    :rtype: tuple[set[CE.OutputFormat], list[str]]
-    """
-    valid_output_formats = set()
-    invalid_formats = set()
-    if output_formats:
-        for fmt in output_formats:
-            output_format = None
-
-            if not isinstance(fmt, CE.OutputFormat):
-                try:
-                    # check whether it's in the enum
-                    output_format = CE.OutputFormat[fmt.upper()]
-                except KeyError:
-                    invalid_formats.add(fmt)
-                    continue
-            else:
-                output_format = fmt
-
-            if output_format in client.VALID_OUTPUT_FORMATS:
-                valid_output_formats.add(output_format)
-            else:
-                invalid_formats.add(fmt)
-
-        if invalid_formats:
-            for fmt in invalid_formats:
-                input_errors.append(
-                    make_error(
-                        "invalid_param",
-                        {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: fmt},
-                    )
-                )
-    else:
-        valid_output_formats.add(client.DEFAULT_FORMAT)
-
-    return (valid_output_formats, input_errors)
-
-
-def _validate_save_dir(
-    save_dir: Optional[Union[Path, str]],
-    client: Optional[types.ModuleType],
-    input_errors: list[str],
-) -> Optional[Path]:
-    """
-    Validate save-related parameters.
-
-    :param save_dir: directory in which to save files
-    :type save_dir: Optional[Union[Path, str]]
-    :param client: client object (if it exists)
-    :type client: Optional[types.ModuleType]
-    :param input_errors: list of param validation errors
-    :type input_errors: list[str]
-    :return: validated path to the save dir or None
-    :rtype: Optional[Path]
-    """
-    if client and not save_dir:
-        save_dir = client.SAMPLE_DATA_DIR
-
-    if save_dir is None:
-        input_errors.append("No save_dir specified")
-        return None
-
-    save_dir_path = util.full_path(save_dir)
-
-    if not save_dir_path.exists() or not save_dir_path.is_dir():
-        input_errors.append(
-            make_error(
-                "invalid_param",
-                {
-                    "param": "save_dir",
-                    "save_dir": f"'{save_dir}' does not exist or is not a directory",
-                },
-            )
-        )
-        return None
-
-    return save_dir_path
-
-
-@validate_arguments
-def _validate_retrieve_dois_input(
-    source: CE.TrimmedString,
-    doi_file: Optional[Path | str] = None,
-    doi_list: Optional[list[str]] = None,
-    output_formats: Optional[set[str]] = None,
-    save_files: bool = False,
-    save_dir: Optional[Path | str] = None,
-    input_errors: Optional[list[str]] = None,
+def _validate_retrieve_dois(
     **kwargs,
-) -> tuple[dict, types.ModuleType]:
-    """
-    Validate the input to retrieve_dois.
+) -> tuple[GenericClientArgs, types.ModuleType]:
+    """Validate the input to retrieve_dois.
 
     :param doi_list: list of DOIs to retrieve
     :type doi_list: list[str], optional
@@ -185,86 +55,71 @@ def _validate_retrieve_dois_input(
     :return: tuple containing a dict of validated params and the client module
     :rtype: tuple
     """
-    if not input_errors:
-        input_errors = []
+    if "source" not in kwargs:
+        raise ValueError("Missing required parameter: source")
 
-    params: dict[str, Any] = {
-        "save_files": save_files,
-    }
-    client: types.ModuleType | None = None
-
-    params["doi_list"] = _validate_dois(
-        doi_file=doi_file, doi_list=doi_list, input_errors=input_errors
-    )
-
-    if source not in SOURCE_TO_CLIENT:
-        input_errors.append(
-            make_error(
-                "invalid_param", {"param": CE.DATA_SOURCE, CE.DATA_SOURCE: source}
-            )
-        )
+    source = kwargs["source"]
+    del kwargs["source"]
+    src = None
+    if not isinstance(source, SourceToClient):
+        try:
+            src = SourceToClient[source.strip().upper()]
+        except (AttributeError, KeyError) as e:
+            raise ValueError(f"Invalid data source: {source!r}") from e
     else:
-        params["source"] = source
-        client = SOURCE_TO_CLIENT[source]
+        src = source
 
-        # only validate the output formats if there is a valid client
-        (params["output_formats"], input_errors) = _validate_output_formats(
-            client, output_formats, input_errors
-        )
+    client: types.ModuleType = src.value
 
-    # set up the save_dir (if appropriate)
-    if save_files:
-        params["save_dir"] = _validate_save_dir(save_dir, client, input_errors)
-
-    if input_errors:
-        die_with_errors(input_errors)
-
-    # keep type checker happy
-    if client is not None:
-        return (params, client)
+    params: GenericClientArgs = client.ClientArgs(
+        source=src,
+        **kwargs,
+    )
+    return (params, client)
 
 
 def retrieve_dois(**kwargs) -> dict:
-    """
-    Retrieve a list of DOIs.
+    """Retrieve a list of DOIs.
 
-    See _validate_retrieve_dois_input for specification of kwargs.
+    See _validate_retrieve_dois for specification of kwargs.
 
     :return: dictionary of results in the format:
         data: return data keyed by DOI and format
         files: path to the saved data files, keyed by DOI and format [Optional]
     :rtype: dict
     """
-
-    (params, client) = _validate_retrieve_dois_input(**kwargs)
+    if "params" not in kwargs and "client" not in kwargs:
+        (params, client) = _validate_retrieve_dois(**kwargs)
+    else:
+        params = kwargs["params"]
+        client = kwargs["client"]
 
     results = {
         CE.DATA: {},
     }
     file_ext_mapping = {}
-    if params["save_files"]:
+    if params.save_files:
         results[CE.FILES] = {}
         # make a local mapping of file extensions
-        for fmt in params["output_formats"]:
-            file_ext_mapping[fmt] = util.get_extension(fmt)
+        for output_format in params.output_formats:
+            file_ext_mapping[output_format.value] = util.get_extension(output_format)
 
-    for doi in params["doi_list"]:
-        results[CE.DATA][doi] = client.retrieve_doi(
-            doi, output_formats=params["output_formats"]
-        )
-        if not params["save_files"]:
+    for doi in params.dois:
+        results[CE.DATA][doi] = client.retrieve_doi(params, doi=doi)
+        if not params.save_files:
             continue
 
         if doi not in results[CE.FILES]:
             results[CE.FILES][doi] = {}
-        for fmt in params["output_formats"]:
+        for output_format in params.output_formats:
+            fmt = output_format.value
             if results[CE.DATA][doi][fmt] is None:
                 results[CE.FILES][doi][fmt] = None
                 continue
             # otherwise, save to file
             results_file = util.save_data_to_file(
                 file_name=doi,
-                save_dir=params["save_dir"],
+                save_dir=params.save_dir,
                 suffix=file_ext_mapping[fmt],
                 data=results[CE.DATA][doi][fmt],
             )
@@ -309,15 +164,9 @@ def _check_for_missing_dois(
 
 @validate_arguments
 def retrieve_dois_from_unknown(
-    doi_file: Optional[str] = None,
-    doi_list: Optional[list[str]] = None,
-    output_formats: Optional[set[str]] = None,
-    save_files: bool = False,
-    save_dir: Optional[Path | str] = None,
     **kwargs,
 ) -> dict[str, Any]:
-    """
-    Retrieve a list of DOIs of unknown origin.
+    """Retrieve a list of DOIs of unknown origin.
 
     :param doi_file: file containing a list of DOIs to retrieve, defaults to None
     :type doi_file: Optional[str], optional
@@ -332,31 +181,15 @@ def retrieve_dois_from_unknown(
     :return: data structure of fetched DOIs keyed by DOI and then format
     :rtype: dict[str, Any]
     """
-
-    input_errors = []
-    all_dois: set[str] = _validate_dois(
-        doi_file=doi_file, doi_list=doi_list, input_errors=input_errors
-    )
-    if input_errors:
-        die_with_errors(input_errors)
+    (params, client) = _validate_retrieve_dois(**kwargs, source=CE.CROSSREF)
+    all_dois = params.dois
+    for doi_src in ["doi_file", "doi_list"]:
+        if doi_src in kwargs:
+            del kwargs[doi_src]
 
     print("Searching Crossref...")
 
-    # FIXME: output formats need to be converted into CE.OutputFormat.* first
-    if output_formats:
-        valid_crossref_formats = output_formats.intersection(
-            SOURCE_TO_CLIENT[CE.CROSSREF].VALID_OUTPUT_FORMATS
-        )
-    else:
-        valid_crossref_formats = {SOURCE_TO_CLIENT[CE.CROSSREF].DEFAULT_FORMAT}
-
-    crossref_results = retrieve_dois(
-        doi_list=list(all_dois),
-        source=CE.CROSSREF,
-        output_formats=valid_crossref_formats,
-        save_files=save_files,
-        save_dir=save_dir,
-    )
+    crossref_results = retrieve_dois(params=params, client=client)
 
     not_found: set[str] = _check_for_missing_dois(all_dois, crossref_results[CE.DATA])
     n_found = len(all_dois) - len(not_found)
@@ -365,27 +198,18 @@ def retrieve_dois_from_unknown(
     if not not_found:
         return crossref_results
 
-    print("Searching Datacite...")
-    # now retry these DOIs at datacite
-    if output_formats:
-        valid_datacite_formats = output_formats.intersection(
-            SOURCE_TO_CLIENT[CE.DATACITE].VALID_OUTPUT_FORMATS
-        )
-    else:
-        valid_datacite_formats = {SOURCE_TO_CLIENT[CE.DATACITE].DEFAULT_FORMAT}
+    print("Searching DataCite...")
     datacite_results = retrieve_dois(
-        doi_list=list(not_found),
+        **kwargs,
+        doi_list=not_found,
         source=CE.DATACITE,
-        output_formats=valid_datacite_formats,
-        save_files=save_files,
-        save_dir=save_dir,
     )
 
     still_not_found: set[str] = _check_for_missing_dois(
         not_found, datacite_results[CE.DATA]
     )
     n_now_found = len(not_found) - len(still_not_found)
-    print(f"Found {n_now_found} DOI{'' if n_now_found == 1 else 's'} at Datacite")
+    print(f"Found {n_now_found} DOI{'' if n_now_found == 1 else 's'} at DataCite")
 
     # print out a warning about the dois that could not be located
     if still_not_found:

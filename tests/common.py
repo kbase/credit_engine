@@ -3,10 +3,10 @@ import os.path
 import re
 from pathlib import Path
 from re import Pattern
-from typing import Union
 
 import _pytest.capture
 
+from credit_engine import constants as CE  # noqa: N812
 from credit_engine.clients import base
 from credit_engine.util import dir_scanner
 
@@ -34,8 +34,7 @@ def check_stderr_for_errs(
 def check_for_errors(
     string_list: list[str], error_list: list[str], source: str
 ) -> None:
-    """
-    Compare stdout/stderr output to expected output.
+    """Compare stdout/stderr output to expected output.
 
     :param string_list: list of strings emitted by STDERR / STDOUT
     :type string_list: list[str]
@@ -61,9 +60,7 @@ def check_for_errors(
             assert error in string_list
 
 
-def run_file_contents_check(
-    file_path: Union[Path, str], expected: Union[bytes, str, list, dict]
-):
+def run_file_contents_check(file_path: Path | str, expected: bytes | str | list | dict):
     """Assert that the contents of the file match the expected content.
 
     :param file_path: file to check
@@ -72,7 +69,8 @@ def run_file_contents_check(
     :type expected: Union[bytes, str, list, dict]
     """
     path_to_file = Path(file_path)
-    assert Path(path_to_file).exists() and Path(path_to_file).is_file()
+    assert Path(path_to_file).exists()
+    assert Path(path_to_file).is_file()
 
     suffix = path_to_file.suffix
     content = None
@@ -92,6 +90,7 @@ def run_file_contents_check(
 
 def run_retrieve_dois(
     param: dict,
+    output_formats: set[CE.OutputFormat],
     expected: dict,
     default_dir: Path,
     tmp_path: Path,
@@ -110,8 +109,6 @@ def run_retrieve_dois(
     :param capsys: pytest stdout/stderr capture
     :type capsys: _type_
     """
-    output_formats = param["output_formats"]
-
     if "save_files" in param and param["save_files"]:
         save_dir = param["save_dir"] if "save_dir" in param else default_dir
         assert Path(save_dir).exists()
@@ -125,7 +122,8 @@ def run_retrieve_dois(
         # ensure file contents are as expected
         assert "files" in retrieval_results
         for f in retrieval_results["files"]:
-            for fmt in output_formats:
+            for output_format in output_formats:
+                fmt = output_format.value
                 if retrieval_results["data"][f][fmt] is None:
                     assert retrieval_results["files"][f][fmt] is None
                 else:
