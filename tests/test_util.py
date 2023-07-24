@@ -11,12 +11,12 @@ from credit_engine import util
 from tests.common import check_stdout_for_errs, run_file_contents_check
 
 from .conftest import (
+    ERROR_MISSING_FILE_PATH,
+    ERROR_NONE_NOT_ALLOWED,
     FILE_CONTENTS_TEST_DATA,
     FILE_NAME,
     OUTPUT_FORMAT_EXT_TEST_DATA,
     VALID_DOI_A,
-    ERROR_NONE_NOT_ALLOWED,
-    ERROR_MISSING_FILE_PATH,
 )
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
