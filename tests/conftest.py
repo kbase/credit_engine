@@ -12,7 +12,7 @@ import credit_engine.constants as CE  # noqa: N812  # noqa: N812
 from credit_engine.clients import crossref, datacite, osti
 from credit_engine.util import full_path
 
-CWD: Path = full_path("")
+CWD: Path = Path.cwd()
 SAMPLE_DOI = "10.46936/jejc.proj%2013?48+08-6/60005298"
 QUOTED_DOI = quote(SAMPLE_DOI)
 SAMPLE_EMAIL = "me@home.com"
@@ -146,6 +146,7 @@ ERROR_VALUE_NOT_ENUM_MEMBER = (
 )
 
 ERROR_NOT_A_BOOLEAN = "  value could not be parsed to a boolean (type=type_error.bool)"
+ERROR_MISSING_FILE_PATH = "file_path must have at least one non-whitespace character"
 
 DOI_LIST = "doi_list"
 
@@ -360,33 +361,30 @@ FILE_CONTENTS_TEST_DATA = [
     pytest.param(
         {
             "args": {"doi_file": "\n\n\t\r"},
-            "error": [
-                DOI_FILE_N
-                + '  file or directory at path "'
-                + str(CWD)
-                + '/\n\n\t\r" does not exist '
-                + "(type=value_error.path.not_exists; path="
-                + str(CWD)
-                + "/\n\n\t\r)"
-            ],
-            "error_type": FileNotFoundError,
-            "error_text": f"[Errno 2] No such file or directory: '{CWD}/\\n\\n\\t\\r'",
+            "error": [f"{DOI_FILE_N}  {ERROR_MISSING_FILE_PATH} (type=value_error)"],
+            "error_type": ValueError,
+            "error_text": ERROR_MISSING_FILE_PATH,
         },
         id="doi_file_invalid_empty_string",
     ),
     pytest.param(
         {
-            "args": {"doi_file": ""},
+            "args": {"doi_file": "/"},
             "error": [
                 DOI_FILE_N
-                + '  path "'
-                + str(CWD)
-                + '" does not point to a file (type=value_error.path.not_a_file; path='
-                + str(CWD)
-                + ")"
+                + '  path "/" does not point to a file (type=value_error.path.not_a_file; path=/)'
             ],
             "error_type": IsADirectoryError,
-            "error_text": f"[Errno 21] Is a directory: '{CWD}'",
+            "error_text": "[Errno 21] Is a directory: '/'",
+        },
+        id="doi_file_invalid_slash_dir",
+    ),
+    pytest.param(
+        {
+            "args": {"doi_file": ""},
+            "error": [f"{DOI_FILE_N}  {ERROR_MISSING_FILE_PATH} (type=value_error)"],
+            "error_type": ValueError,
+            "error_text": ERROR_MISSING_FILE_PATH,
         },
         id="doi_file_invalid_empty_string_current_dir",
     ),

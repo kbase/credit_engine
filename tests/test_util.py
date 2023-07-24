@@ -4,6 +4,7 @@ import re
 from pathlib import Path, PurePath
 
 import pytest
+from pydantic import ValidationError
 
 import credit_engine.constants as CE  # noqa: N812
 from credit_engine import util
@@ -14,6 +15,8 @@ from .conftest import (
     FILE_NAME,
     OUTPUT_FORMAT_EXT_TEST_DATA,
     VALID_DOI_A,
+    ERROR_NONE_NOT_ALLOWED,
+    ERROR_MISSING_FILE_PATH,
 )
 
 KBASE_DOI_FILE = "sample_data/kbase/kbase-dois.txt"
@@ -53,6 +56,7 @@ def test_make_safe_file_name(param):
 
 
 def test_full_path():
+    assert isinstance(KBASE_DOI_FILE, str)
     full_path_to_file = util.full_path(KBASE_DOI_FILE)
     assert Path.is_file(full_path_to_file)
     assert Path(full_path_to_file).is_absolute()
@@ -63,6 +67,78 @@ def test_full_path():
     full_alt_path = util.full_path(aptf)
     assert full_alt_path.is_absolute()
     assert full_alt_path.samefile(full_path_to_file)
+
+
+def test_full_path_path_transformation(tmp_path) -> None:
+    """Ensure that . and / are both interpreted correctly."""
+    cwd = Path.cwd()
+    # current directory
+    dot_path = util.full_path(".")
+    assert dot_path.is_dir()
+    assert cwd.samefile(dot_path)
+
+    # root directory
+    slash_path = util.full_path("/")
+    assert slash_path.is_dir()
+    assert dot_path.samefile(slash_path) is False
+    assert str(slash_path) == "/"
+
+    # create a temp file with an absolute path just to check all is well
+    tmp_file = tmp_path / "some_random_dir" / ".." / "test_text_file"
+    tmp_dir = tmp_path / "some_random_dir"
+    assert tmp_dir.exists() is False
+    tmp_dir.mkdir()
+    assert tmp_dir.is_dir()
+
+    direct_path_to_file = tmp_path / "test_text_file"
+    full_path_to_file = util.full_path(tmp_file)
+    full_path_to_file.touch()
+    assert full_path_to_file.samefile(tmp_file)
+    assert str(direct_path_to_file) == str(full_path_to_file)
+
+
+SPACE_PATHS = [
+    pytest.param(
+        {
+            "file_path": "",
+            "error_type": ValueError,
+            "error_text": ERROR_MISSING_FILE_PATH,
+        },
+        id="empty",
+    ),
+    pytest.param(
+        {
+            "file_path": "\n\r\n\n",
+            "error_type": ValueError,
+            "error_text": ERROR_MISSING_FILE_PATH,
+        },
+        id="whitespace",
+    ),
+    pytest.param(
+        {
+            "file_path": "\t\t     \r\n        \n   ",
+            "error_type": ValueError,
+            "error_text": ERROR_MISSING_FILE_PATH,
+        },
+        id="whitespace_with_line_breaks",
+    ),
+    pytest.param(
+        {
+            "file_path": None,
+            "error_type": ValidationError,
+            "error_text": "1 validation error for FullPath\nfile_path\n"
+            + ERROR_NONE_NOT_ALLOWED,
+        },
+        id="none",
+    ),
+]
+
+
+@pytest.mark.parametrize("param", SPACE_PATHS)
+def test_full_path_fail(param) -> None:
+    """Ensure that empty strings and none return failure."""
+    with pytest.raises(param["error_type"], match=re.escape(param["error_text"])):
+        util.full_path(param["file_path"])
 
 
 def test_file_read_write_list(tmp_path):
