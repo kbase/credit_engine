@@ -1,10 +1,8 @@
-"""
-Constants used throughout the Credit Engine.
-"""
+"""Constants used throughout the Credit Engine."""
 
 from enum import Enum
 
-import pydantic as pydantic
+import pydantic
 from pydantic import EmailStr
 
 
@@ -26,19 +24,14 @@ JSON = "json"
 XML = "xml"
 
 
-class OutputFormat(str, Enum):
+class OutputFormat(Enum):
     """Valid output format strings."""
 
     JSON = "json"
     XML = "xml"
 
-    def __repr__(self):
-        return self._value_
-
 
 # file formats and extensions
-# JSON = OutputFormat.JSON
-# XML = OutputFormat.XML
 EXT = {
     JSON: ".json",
     XML: ".xml",
@@ -52,14 +45,6 @@ OSTI = "osti"
 OSTI_ELINK = "osti_elink"
 KBASE = "kbase"
 UNKNOWN = "unknown"
-
-CLIENTS = {
-    CROSSREF: 1,
-    DATACITE: 1,
-    OSTI: 1,
-    OSTI_ELINK: 1,
-}
-
 
 # misc
 DEFAULT_EMAIL: EmailStr = "credit_engine@kbase.us"
