@@ -73,7 +73,6 @@ GET_ENDPOINT_TEST_DATA = [
 
 @pytest.mark.parametrize("param", GET_ENDPOINT_TEST_DATA)
 def test_get_endpoint(param):
-    client_args = ClientArgs(source=CE.OSTI, **param["input"])
     if "expected_url" in param:
         assert get_endpoint(doi=param["input"]["doi"]) == param["expected_url"]
     else:

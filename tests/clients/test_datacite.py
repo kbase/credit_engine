@@ -41,8 +41,6 @@ GET_ENDPOINT_DATA = [
 
 @pytest.mark.parametrize("param", GET_ENDPOINT_DATA)
 def test_get_endpoint(param):
-    client_args = ClientArgs(source=CE.OSTI, **param["input"])
-
     if "expected" in param:
         assert get_endpoint(doi=param["input"]["doi"]) == param["expected"]
     else:

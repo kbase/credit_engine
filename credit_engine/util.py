@@ -39,7 +39,7 @@ def make_safe_file_name(doi: str) -> str:
 
 
 @validate_arguments
-def full_path(file_path: Path | str) -> Path:
+def full_path(file_path: str | Path) -> Path:  # type: ignore
     """Generate the full path for a file or directory.
 
     :param file_path: path, either absolute or relative to the credit_engine repo
@@ -48,14 +48,16 @@ def full_path(file_path: Path | str) -> Path:
     :rtype: Path
     """
     if isinstance(file_path, str):
-        if not len(file_path.strip()):
-            raise ValueError("a file path must be provided")
-        file_path = Path(file_path)
+        if not file_path.strip():
+            raise ValueError(
+                "file_path must have at least one non-whitespace character"
+            )
+        file_path = Path(file_path.strip())
 
-    cwd = Path.cwd()
-    path_including_cwd = os.path.join(cwd, file_path)
+    if Path(file_path).is_absolute():
+        return Path.resolve(file_path)
 
-    return Path.resolve(Path(path_including_cwd))
+    return Path.resolve(Path.joinpath(Path.cwd(), file_path))
 
 
 @validate_arguments
@@ -128,7 +130,7 @@ def read_json_file(file_path: FilePath | str) -> dict[str, str | list | dict] | 
     """Read in JSON from a stored data file.
 
     :param file_path: path, either absolute or relative to the credit_engine repo
-    :type file_path: string or Path object
+    :type file_path: Path object (automatically coerced from str if applicable)
     :return: parsed JSON data
     :rtype: dict
     """
@@ -141,7 +143,7 @@ def read_text_file(file_path: FilePath | str) -> list[str]:
     """Read in text from a stored data file.
 
     :param file_path: path, either absolute or relative to the credit_engine repo. N.b. an empty string is interpreted as '.'.
-    :type file_path: string or Path object
+    :type file_path: Path object (automatically coerced from str if applicable)
     :return: lines in the file with endings trimmed
     :rtype: list[str]
     """
@@ -154,7 +156,7 @@ def read_unique_lines(file_path: FilePath | str) -> set[str]:
     """Retrieve all unique, non-blank lines from a file.
 
     :param file_path: path, either absolute or relative to the credit_engine repo. N.b. an empty string is interpreted as '.'.
-    :type file_path: Union[Path, str]
+    :type file_path: Path object (automatically coerced from str if applicable)
     :return: all unique, non-blank lines in the file
     :rtype: set[str]
     """
@@ -170,7 +172,7 @@ def write_to_file(file_path: Path | str, lines: list | dict | str):
     """Write a list of lines of text to a file.
 
     :param file_path: path, either absolute or relative to the credit_engine repo. N.b. an empty string is interpreted as '.'.
-    :type file_path: string or Path object
+    :type file_path: Path | str
     :param lines: content to be written to the file
     :type lines: list / dict / str
     """
@@ -228,7 +230,7 @@ def fix_line_endings(content: StrictStr | StrictBytes | None) -> str | bytes | N
 
 
 @validate_arguments
-def get_extension(fmt: CE.OutputFormat | str) -> str:
+def get_extension(fmt: CE.OutputFormat | str) -> str:  # type: ignore
     """Get the appropriate file extension for saving data.
 
     :param fmt: format of data to be saved
@@ -237,11 +239,9 @@ def get_extension(fmt: CE.OutputFormat | str) -> str:
     :return: file extension
     :rtype: str
     """
-    if isinstance(fmt, CE.OutputFormat):
-        output_format = fmt
-    else:
+    if isinstance(fmt, str):
         try:
-            output_format = CE.OutputFormat[fmt.upper()]
+            output_format = CE.OutputFormat[fmt.strip().upper()]
         except KeyError:
             raise ValueError(
                 make_error(
@@ -249,6 +249,8 @@ def get_extension(fmt: CE.OutputFormat | str) -> str:
                     {"param": CE.OUTPUT_FORMAT, CE.OUTPUT_FORMAT: fmt},
                 )
             ) from KeyError
+    else:
+        output_format = fmt
 
     if output_format.value in CE.EXT:
         return CE.EXT[output_format.value]
@@ -270,7 +272,7 @@ def dir_scanner(
     If no conditions are given, returns all files except `.DS_Store`.
 
     :param dir_path: path to directory
-    :type dir_path: str or Path object
+    :type dir_path: Path object (automatically coerced from str if applicable)
     :param conditions: list of conditions that must evaluate to true
     :type conditions: list of functions
     :return file_list: list of full paths meeting the criteria
