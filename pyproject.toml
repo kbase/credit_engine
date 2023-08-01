@@ -12,7 +12,7 @@ packages = [
 ]
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.0.278"
+ruff = "^0.0.281"
 black = "^23.7.0"
 pytest-cov = "^4.1.0"
 pytest-sugar = "^0.9.7"
