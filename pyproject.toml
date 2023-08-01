@@ -19,7 +19,7 @@ pytest-sugar = "^0.9.7"
 
 [tool.poetry.group.doc.dependencies]
 mkdocs-material = "^9.1.15"
-mkdocs-mermaid2-plugin = "^0.6.0"
+mkdocs-mermaid2-plugin = "^1.0.5"
 
 [tool.poetry-dynamic-versioning]
 enable = true
