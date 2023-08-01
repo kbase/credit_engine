@@ -479,13 +479,13 @@ files = [
 
 [[package]]
 name = "elementpath"
-version = "4.1.4"
+version = "4.1.5"
 description = "XPath 1.0/2.0/3.0/3.1 parsers and selectors for ElementTree and lxml"
 optional = true
 python-versions = ">=3.7"
 files = [
-    {file = "elementpath-4.1.4-py3-none-any.whl", hash = "sha256:e7c6d25546dfb381a2c9cde3b78c0c40f52811e06eb810faf019e16c531a74bf"},
-    {file = "elementpath-4.1.4.tar.gz", hash = "sha256:f991c42ff66fa06e219141ccf65890261e6635b448e7d4c2d8b62dc5bf1de9e8"},
+    {file = "elementpath-4.1.5-py3-none-any.whl", hash = "sha256:2ac1a2fb31eb22bbbf817f8cf6752f844513216263f0e3892c8e79782fe4bb55"},
+    {file = "elementpath-4.1.5.tar.gz", hash = "sha256:c2d6dc524b29ef751ecfc416b0627668119d8812441c555d7471da41d4bacb8d"},
 ]
 
 [package.extras]
@@ -2137,7 +2137,8 @@ files = [
     {file = "ruamel.yaml.clib-0.2.7-cp310-cp310-win32.whl", hash = "sha256:763d65baa3b952479c4e972669f679fe490eee058d5aa85da483ebae2009d231"},
     {file = "ruamel.yaml.clib-0.2.7-cp310-cp310-win_amd64.whl", hash = "sha256:d000f258cf42fec2b1bbf2863c61d7b8918d31ffee905da62dede869254d3b8a"},
     {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:045e0626baf1c52e5527bd5db361bc83180faaba2ff586e763d3d5982a876a9e"},
-    {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-macosx_12_6_arm64.whl", hash = "sha256:721bc4ba4525f53f6a611ec0967bdcee61b31df5a56801281027a3a6d1c2daf5"},
+    {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-macosx_13_0_arm64.whl", hash = "sha256:1a6391a7cabb7641c32517539ca42cf84b87b667bad38b78d4d42dd23e957c81"},
+    {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-manylinux2014_aarch64.whl", hash = "sha256:9c7617df90c1365638916b98cdd9be833d31d337dbcd722485597b43c4a215bf"},
     {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:41d0f1fa4c6830176eef5b276af04c89320ea616655d01327d5ce65e50575c94"},
     {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-win32.whl", hash = "sha256:f6d3d39611ac2e4f62c3128a9eed45f19a6608670c5a2f4f07f24e8de3441d38"},
     {file = "ruamel.yaml.clib-0.2.7-cp311-cp311-win_amd64.whl", hash = "sha256:da538167284de58a52109a9b89b8f6a53ff8437dd6dc26d33b57bf6699153122"},
@@ -2621,22 +2622,22 @@ files = [
 
 [[package]]
 name = "xmlschema"
-version = "2.3.1"
+version = "2.4.0"
 description = "An XML Schema validator and decoder"
 optional = true
 python-versions = ">=3.7"
 files = [
-    {file = "xmlschema-2.3.1-py3-none-any.whl", hash = "sha256:eac0e10957723689ff0691785da4ffee1e95df3a874e685a179047f7bf07f8fb"},
-    {file = "xmlschema-2.3.1.tar.gz", hash = "sha256:2eb426c5710833a05610c22c8766713a1b87e9405e3eca0b7c658375bf7ec810"},
+    {file = "xmlschema-2.4.0-py3-none-any.whl", hash = "sha256:dc87be0caaa61f42649899189aab2fd8e0d567f2cf548433ba7b79278d231a4a"},
+    {file = "xmlschema-2.4.0.tar.gz", hash = "sha256:d74cd0c10866ac609e1ef94a5a69b018ad16e39077bc6393408b40c6babee793"},
 ]
 
 [package.dependencies]
-elementpath = ">=4.1.2,<5.0.0"
+elementpath = ">=4.1.5,<5.0.0"
 
 [package.extras]
-codegen = ["elementpath (>=4.1.2,<5.0.0)", "jinja2"]
-dev = ["Sphinx", "coverage", "elementpath (>=4.1.2,<5.0.0)", "flake8", "jinja2", "lxml", "lxml-stubs", "memory-profiler", "mypy", "sphinx-rtd-theme", "tox"]
-docs = ["Sphinx", "elementpath (>=4.1.2,<5.0.0)", "jinja2", "sphinx-rtd-theme"]
+codegen = ["elementpath (>=4.1.5,<5.0.0)", "jinja2"]
+dev = ["Sphinx", "coverage", "elementpath (>=4.1.5,<5.0.0)", "flake8", "jinja2", "lxml", "lxml-stubs", "memory-profiler", "mypy", "sphinx-rtd-theme", "tox"]
+docs = ["Sphinx", "elementpath (>=4.1.5,<5.0.0)", "jinja2", "sphinx-rtd-theme"]
 
 [[package]]
 name = "xsdata"
@@ -2687,4 +2688,4 @@ docs = ["linkml"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "9854558706e388a8e30864adfc468fe68fc4234b0f358de9def872fbcf0ebc3f"
+content-hash = "2e89f5ac2cc73ffb407bd108e905e46dd6f5282c8a31e800ddef347b84dac1e9"
