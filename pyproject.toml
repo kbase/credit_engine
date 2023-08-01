@@ -33,7 +33,7 @@ pytest-cases = "^3.6.14"
 python = "^3.10"
 requests = "2.31.0"
 xmlschema = { version = "2.3.1", optional = true }
-xsdata = { extras = ["cli", "lxml", "soap"], version = "^23.6", optional = true }
+xsdata = { extras = ["cli", "lxml", "soap"], version = "^23.7", optional = true }
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
