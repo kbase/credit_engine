@@ -1,0 +1,141 @@
+[
+    {
+        "released": "Y",
+        "record_status": "Completed",
+        "osti_id": 1878567,
+        "site_ownership_code": "KBASE",
+        "hidden": false,
+        "dataset_type": "GD",
+        "title": "KBase Narrative - Metagenome-assembled genomes from Amazonian soil microbial consortia",
+        "authors": [],
+        "contributors": [],
+        "related_resource": "Venturini AM, Gontijo JB, Mandro JA, Paula FS, Yoshiura CA, da França AG, et al. Genome-resolved metagenomics reveals novel archaeal and bacterial genomes from Amazonian forest and pasture soils. Microbial Genomics. Microbiology Society; 2022. doi:10.1099/mgen.0.000853",
+        "product_nos": "None",
+        "product_type": "DA",
+        "contract_nos": "N/A",
+        "project_ids": "",
+        "work_authorization_number": "",
+        "authorization_revision_number": "",
+        "other_identifying_numbers": "",
+        "originating_research_org": "U.S. Department of Energy Systems Biology Knowledgebase",
+        "availability": "",
+        "collaboration_names": "",
+        "publication_date": "2022-07-29",
+        "language": "English",
+        "country": "US",
+        "sponsor_org": "USDOE Office of Science (SC), Biological and Environmental Research (BER)",
+        "subjects": "",
+        "keywords": "",
+        "accession_num": "",
+        "description": "We report 17 metagenome-assembled genomes (MAGs) recovered from microbial consortia of forest and pasture soils, in the Brazilian Eastern Amazon. Recovered MAGs constitute novel genomes with the potential to act in important ecological processes, including the degradation of carbohydrate and sulfur and nitrogen cycling.",
+        "site_url": [
+            "https://kbase.us/n/116951/133/"
+        ],
+        "related_identifiers": [
+            {
+                "related_identifier": "10.1099/mgen.0.000853",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1186/1471-2105-11-538",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1093/bioinformatics/btz848",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1093/bioinformatics/btu170",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1186/2049-2618-2-26",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1038/nmeth.1923",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1101/gr.213959.116",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1038/nbt.4163",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1093/bioinformatics/btz848",
+                "relation_type": "References",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1002/cpbi.102",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1101/gr.186072.114",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1038/nbt.4229",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1002/cpbi.102",
+                "relation_type": "References",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1038/nbt.4229",
+                "relation_type": "References",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1186/gb-2009-10-3-r25",
+                "relation_type": "References",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1093/bioinformatics/btv638",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1186/2049-2618-2-26",
+                "relation_type": "References",
+                "related_identifier_type": "DOI"
+            },
+            {
+                "related_identifier": "10.1186/gb-2009-10-3-r25",
+                "relation_type": "Cites",
+                "related_identifier_type": "DOI"
+            }
+        ],
+        "doi": "10.25982/116951.133/1878567",
+        "doi_status": "COMPLETED",
+        "doi_infix": "116951.133",
+        "file_extension": "",
+        "software_needed": "",
+        "dataset_size": "",
+        "contact_name": "Elisha Wood-Charlson",
+        "contact_org": "Lawrence Berkeley National Laboratory (LBNL)",
+        "contact_email": "EMWOOD-CHARLSON@lbl.gov",
+        "contact_phone": "808-286-9547",
+        "othnondoe_contract_nos": "",
+        "date_first_submitted": "2022-07-29",
+        "date_last_submitted": "2023-08-22",
+        "entry_date": "2022-07-29"
+    }
+]

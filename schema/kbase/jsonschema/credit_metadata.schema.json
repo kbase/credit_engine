@@ -1,4 +1,11 @@
 {
+    "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "metamodel_version": "1.7.0",
+    "title": "KBase Credit Metadata Schema",
+    "type": "object",
+    "version": "0.0.1-commonmeta",
     "$defs": {
         "Contributor": {
             "additionalProperties": false,
@@ -9,11 +16,12 @@
                     "items": {
                         "$ref": "#/$defs/Organization"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "contributor_id": {
                     "description": "persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^[\\w.]+:\\S",
                     "type": "string"
                 },
                 "contributor_roles": {
@@ -21,7 +29,8 @@
                     "items": {
                         "$ref": "#/$defs/ContributorRole"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "contributor_type": {
                     "$ref": "#/$defs/ContributorType",
@@ -34,10 +43,19 @@
                 "name": {
                     "description": "contributor name. For organizations, this should be the full (unabbreviated) name; for a person, the full name should be entered.",
                     "type": "string"
+                },
+                "given_name": {
+                    "description": "the given name(s) of the contributor",
+                    "type": "string"
+                },
+                "family_name": {
+                    "description": "the family name of the contributor",
+                    "type": "string"
                 }
             },
             "required": [
-                "name"
+                "name",
+                "contributor_type"
             ],
             "title": "Contributor",
             "type": "object"
@@ -102,48 +120,93 @@
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
+                },
+                "content_url": {
+                    "description": "The URL of the content of the resource.",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
                 },
                 "contributors": {
                     "description": "a list of people and/or organizations who contributed to the resource.",
                     "items": {
                         "$ref": "#/$defs/Contributor"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "dates": {
                     "description": "a list of relevant lifecycle events for the resource.",
                     "items": {
                         "$ref": "#/$defs/EventDate"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
                 },
-                "description": {
+                "descriptions": {
                     "description": "A brief description or abstract for the resource being represented.",
-                    "type": "string"
+                    "items": {
+                        "$ref": "#/$defs/Description"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "funding": {
                     "description": "funding sources for the resource.",
                     "items": {
                         "$ref": "#/$defs/FundingReference"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "identifier": {
                     "description": "resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^[\\w.]+:\\S",
+                    "type": "string"
+                },
+                "language": {
+                    "description": "language that textual elements of the resource are in, as a IETF BCP-47 tag.",
                     "type": "string"
                 },
                 "license": {
                     "description": "usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. \"http://\"; \"https://\"; \"ftp://\".\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.\n",
-                    "type": "string"
+                    "items": {
+                        "$ref": "#/$defs/License"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
+                },
+                "provider": {
+                    "description": "The provider of the resource. This can be a DOI registration agency or a repository.",
+                    "type": "string",
+                    "enum": [
+                        "Crossref",
+                        "DataCite",
+                        "GitHub",
+                        "JaLC",
+                        "KISTI",
+                        "mEDRA",
+                        "OP"
+                    ]
+                },
+                "publisher": {
+                    "description": "The publisher of the resource.",
+                    "type": "object",
+                    "items": {
+                        "$ref": "#/$defs/Organization"
+                    }
                 },
                 "related_identifiers": {
                     "description": "other resolvable persistent unique IDs related to the resource.",
                     "items": {
                         "$ref": "#/$defs/PermanentID"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "repository": {
                     "$ref": "#/$defs/Organization",
@@ -158,7 +221,13 @@
                     "items": {
                         "$ref": "#/$defs/Title"
                     },
-                    "type": "array"
+                    "type": "array",
+                    "uniqueItems": true
+                },
+                "url": {
+                    "description": "The URL of the resource.",
+                    "type": "string",
+                    "format": "uri"
                 },
                 "version": {
                     "description": "the version of the resource. This must be an absolute version, not a relative version like 'latest'.",
@@ -169,6 +238,14 @@
                 "identifier",
                 "resource_type",
                 "titles"
+            ],
+            "oneOf": [
+                {
+                    "$ref": "#/$defs/CreditMetadata/properties/version"
+                },
+                {
+                    "$ref": "#/$defs/CreditMetadata/properties/dates"
+                }
             ],
             "title": "CreditMetadata",
             "type": "object"
@@ -203,13 +280,32 @@
             "title": "CreditMetadataEntry",
             "type": "object"
         },
+        "Description": {
+            "additionalProperties": false,
+            "description": "Textual information about the resource being represented.",
+            "properties": {
+                "description_text": {
+                    "description": "description of the resource",
+                    "type": "string"
+                },
+                "description_type": {
+                    "description": "the type of text being represented",
+                    "type": "string",
+                    "enum": [
+                        "abstract",
+                        "description",
+                        "summary"
+                    ]
+                }
+            }
+        },
         "EventDate": {
             "additionalProperties": false,
             "description": "Represents an event in the lifecycle of a resource and the date it occurred on.\n\nSee https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date for more information on the events.",
             "properties": {
                 "date": {
                     "description": "the date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.",
-                    "pattern": "\\d{4}(-\\d{2}){0,2}",
+                    "pattern": "^\\d{4}(-\\d{2}){0,2}$",
                     "type": "string"
                 },
                 "event": {
@@ -248,7 +344,7 @@
             "properties": {
                 "funder": {
                     "$ref": "#/$defs/Organization",
-                    "description": "the funder for the grant or award"
+                    "description": "the funder(s) for the grant or award"
                 },
                 "grant_id": {
                     "description": "code for the grant, assigned by the funder",
@@ -260,12 +356,28 @@
                 },
                 "grant_url": {
                     "description": "URL for the grant",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^https?:\\S",
                     "type": "string"
                 }
             },
+            "required": [
+                "funder"
+            ],
             "title": "FundingReference",
             "type": "object"
+        },
+        "License": {
+            "description": "The license for the resource",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            }
         },
         "Organization": {
             "additionalProperties": false,
@@ -273,7 +385,7 @@
             "properties": {
                 "organization_id": {
                     "description": "persistent unique identifier for the organization in the format <database name>:<identifier within database>",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^[\\w.]+:\\S",
                     "type": "string"
                 },
                 "organization_name": {
@@ -297,7 +409,7 @@
                 },
                 "id": {
                     "description": "persistent unique ID for an entity. Should be in the format <database name>:<identifier within database>.",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^[\\w.]+:\\S",
                     "type": "string"
                 },
                 "relationship_type": {
@@ -397,10 +509,6 @@
                     "description": "a string used as a title for a resource",
                     "type": "string"
                 },
-                "title_language": {
-                    "description": "language that the title is in, as a IETF BCP-47 tag.",
-                    "type": "string"
-                },
                 "title_type": {
                     "$ref": "#/$defs/TitleType",
                     "description": "a descriptor for the title. The default value is 'title'."
@@ -426,10 +534,6 @@
             "type": "string"
         }
     },
-    "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "additionalProperties": true,
-    "metamodel_version": "1.7.0",
     "properties": {
         "credit_metadata": {
             "$ref": "#/$defs/CreditMetadata",
@@ -453,8 +557,5 @@
         "credit_metadata_schema_version",
         "saved_by",
         "timestamp"
-    ],
-    "title": "credit_metadata",
-    "type": "object",
-    "version": "0.0.1"
+    ]
 }

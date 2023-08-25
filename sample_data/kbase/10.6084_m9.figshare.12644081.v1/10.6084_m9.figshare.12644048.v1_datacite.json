@@ -1,0 +1,210 @@
+{
+    "data": {
+        "id": "10.6084/m9.figshare.12644048.v1",
+        "type": "dois",
+        "attributes": {
+            "doi": "10.6084/m9.figshare.12644048.v1",
+            "prefix": "10.6084",
+            "suffix": "m9.figshare.12644048.v1",
+            "identifiers": [],
+            "alternateIdentifiers": [],
+            "creators": [
+                {
+                    "name": "Patin, Nastassia",
+                    "nameType": "Personal",
+                    "givenName": "Nastassia",
+                    "familyName": "Patin",
+                    "affiliation": [],
+                    "nameIdentifiers": []
+                },
+                {
+                    "name": "Stewart, Frank",
+                    "nameType": "Personal",
+                    "givenName": "Frank",
+                    "familyName": "Stewart",
+                    "affiliation": [],
+                    "nameIdentifiers": []
+                },
+                {
+                    "name": "Hall, Emily",
+                    "nameType": "Personal",
+                    "givenName": "Emily",
+                    "familyName": "Hall",
+                    "affiliation": [],
+                    "nameIdentifiers": []
+                },
+                {
+                    "name": "Dietrich, Zoe",
+                    "nameType": "Personal",
+                    "givenName": "Zoe",
+                    "familyName": "Dietrich",
+                    "affiliation": [],
+                    "nameIdentifiers": []
+                },
+                {
+                    "name": "Beckler, Jordon",
+                    "nameType": "Personal",
+                    "givenName": "Jordon",
+                    "familyName": "Beckler",
+                    "affiliation": [],
+                    "nameIdentifiers": []
+                }
+            ],
+            "titles": [
+                {
+                    "title": "Blue Hole Shotgun Metagenome: May 2019, 106 M"
+                }
+            ],
+            "publisher": "figshare",
+            "container": {},
+            "publicationYear": 2020,
+            "subjects": [
+                {
+                    "subject": "60102 Bioinformatics",
+                    "subjectScheme": "FOR"
+                },
+                {
+                    "subject": "FOS: Computer and information sciences",
+                    "schemeUri": "http://www.oecd.org/science/inno/38235147.pdf",
+                    "subjectScheme": "Fields of Science and Technology (FOS)"
+                },
+                {
+                    "subject": "FOS: Computer and information sciences",
+                    "subjectScheme": "Fields of Science and Technology (FOS)"
+                },
+                {
+                    "subject": "60504 Microbial Ecology",
+                    "subjectScheme": "FOR"
+                },
+                {
+                    "subject": "FOS: Biological sciences",
+                    "schemeUri": "http://www.oecd.org/science/inno/38235147.pdf",
+                    "subjectScheme": "Fields of Science and Technology (FOS)"
+                },
+                {
+                    "subject": "FOS: Biological sciences",
+                    "subjectScheme": "Fields of Science and Technology (FOS)"
+                },
+                {
+                    "subject": "Marine Biology"
+                }
+            ],
+            "contributors": [],
+            "dates": [
+                {
+                    "date": "2020-07-11",
+                    "dateType": "Created"
+                },
+                {
+                    "date": "2020-07-11",
+                    "dateType": "Updated"
+                },
+                {
+                    "date": "2020",
+                    "dateType": "Issued"
+                }
+            ],
+            "language": null,
+            "types": {
+                "ris": "DATA",
+                "bibtex": "misc",
+                "citeproc": "dataset",
+                "schemaOrg": "Dataset",
+                "resourceType": "Dataset",
+                "resourceTypeGeneral": "Dataset"
+            },
+            "relatedIdentifiers": [
+                {
+                    "relationType": "IsIdenticalTo",
+                    "relatedIdentifier": "10.6084/m9.figshare.12644048",
+                    "relatedIdentifierType": "DOI"
+                }
+            ],
+            "relatedItems": [],
+            "sizes": [
+                "1687270187 Bytes"
+            ],
+            "formats": [],
+            "version": null,
+            "rightsList": [
+                {
+                    "rights": "Creative Commons Attribution 4.0 International",
+                    "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "schemeUri": "https://spdx.org/licenses/",
+                    "rightsIdentifier": "cc-by-4.0",
+                    "rightsIdentifierScheme": "SPDX"
+                }
+            ],
+            "descriptions": [
+                {
+                    "description": "Shotgun metagenome of the Amberjack Blue Hole water column at 106 m depth sampled in May 2019. Sequencing performed on an Illumina MiSeq with a 2 x 300 bp paired-end protocol.",
+                    "descriptionType": "Abstract"
+                }
+            ],
+            "geoLocations": [],
+            "fundingReferences": [],
+            "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC42MDg0L005LkZJR1NIQVJFLjEyNjQ0MDQ4LlYxPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TmFzdGFzc2lhIFBhdGluPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RnJhbmsgU3Rld2FydDwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkVtaWx5IEhhbGw8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5ab2UgRGlldHJpY2g8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5Kb3Jkb24gQmVja2xlcjwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkJsdWUgSG9sZSBTaG90Z3VuIE1ldGFnZW5vbWU6IE1heSAyMDE5LCAxMDYgTTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5TaG90Z3VuIG1ldGFnZW5vbWUgb2YgdGhlIEFtYmVyamFjayBCbHVlIEhvbGUgd2F0ZXIgY29sdW1uIGF0IDEwNiBtIGRlcHRoIHNhbXBsZWQgaW4gTWF5IDIwMTkuIFNlcXVlbmNpbmcgcGVyZm9ybWVkIG9uIGFuIElsbHVtaW5hIE1pU2VxIHdpdGggYSAyIHggMzAwIGJwIHBhaXJlZC1lbmQgcHJvdG9jb2wuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCBzY2hlbWVVUkk9Imh0dHA6Ly93d3cuYWJzLmdvdi5hdS9hdXNzdGF0cy9hYnNALm5zZi8wLzZCQjQyN0FCOTY5NkMyMjVDQTI1NzQxODAwMDQ0NjNFIiBzdWJqZWN0U2NoZW1lPSJGT1IiPjYwMTAyIEJpb2luZm9ybWF0aWNzPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc2NoZW1lVVJJPSJodHRwOi8vd3d3LmFicy5nb3YuYXUvYXVzc3RhdHMvYWJzQC5uc2YvMC82QkI0MjdBQjk2OTZDMjI1Q0EyNTc0MTgwMDA0NDYzRSIgc3ViamVjdFNjaGVtZT0iRk9SIj42MDUwNCBNaWNyb2JpYWwgRWNvbG9neTwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pk1hcmluZSBCaW9sb2d5PC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPHB1Ymxpc2hlcj5maWdzaGFyZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJDcmVhdGVkIj4yMDIwLTA3LTExPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiPjIwMjAtMDctMTE8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkRhdGFzZXQ8L3Jlc291cmNlVHlwZT4KICA8c2l6ZXM+CiAgICA8c2l6ZT4xNjg3MjcwMTg3IEJ5dGVzPC9zaXplPgogIDwvc2l6ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc0lkZW50aWNhbFRvIj4xMC42MDg0L205LmZpZ3NoYXJlLjEyNjQ0MDQ4PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJodHRwczovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wLyI+Q0MgQlkgNC4wPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0Pgo8L3Jlc291cmNlPg==",
+            "url": "https://figshare.com/articles/Blue_Hole_Shotgun_Metagenome_May_2019_106_M/12644048/1",
+            "contentUrl": null,
+            "metadataVersion": 0,
+            "schemaVersion": "http://datacite.org/schema/kernel-4",
+            "source": "mds",
+            "isActive": true,
+            "state": "findable",
+            "reason": null,
+            "viewCount": 0,
+            "viewsOverTime": [],
+            "downloadCount": 0,
+            "downloadsOverTime": [],
+            "referenceCount": 0,
+            "citationCount": 0,
+            "citationsOverTime": [],
+            "partCount": 0,
+            "partOfCount": 0,
+            "versionCount": 0,
+            "versionOfCount": 0,
+            "created": "2020-07-11T19:55:07.000Z",
+            "registered": "2020-07-11T19:55:08.000Z",
+            "published": "2020",
+            "updated": "2020-08-25T09:46:26.000Z"
+        },
+        "relationships": {
+            "client": {
+                "data": {
+                    "id": "figshare.ars",
+                    "type": "clients"
+                }
+            },
+            "provider": {
+                "data": {
+                    "id": "otjm",
+                    "type": "providers"
+                }
+            },
+            "media": {
+                "data": {
+                    "id": "10.6084/m9.figshare.12644048.v1",
+                    "type": "media"
+                }
+            },
+            "references": {
+                "data": []
+            },
+            "citations": {
+                "data": []
+            },
+            "parts": {
+                "data": []
+            },
+            "partOf": {
+                "data": []
+            },
+            "versions": {
+                "data": []
+            },
+            "versionOf": {
+                "data": []
+            }
+        }
+    }
+}

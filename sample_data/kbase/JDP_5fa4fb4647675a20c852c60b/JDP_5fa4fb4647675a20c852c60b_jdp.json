@@ -1,0 +1,110 @@
+{
+    "organisms": [
+        {
+            "agg": "IMG_AP",
+            "agg_id": 1279887,
+            "kingdom": "img",
+            "label": "Metagenome",
+            "pi": {
+                "country": "United States",
+                "institution": "Colorado State University",
+                "email_address": "kwrighton@gmail.com",
+                "last_name": "Wrighton",
+                "middle_name": "",
+                "first_name": "Kelly",
+                "name": "Kelly Wrighton"
+            },
+            "proposal_acceptance_date": "2019-09-17",
+            "work_completion_date": "2020-11-05",
+            "status": "Complete",
+            "id": "IMG_AP-1279887",
+            "grouped_by": "metadata.analysis_project_id",
+            "grouped_count": 65,
+            "name": "Metatranscriptome of feshwater microbial communities from Wyoming, USA - littlewindriver_2019_sw_WHONDRS-S19S_0009 (Metagenome Metatranscriptome)",
+            "title": "littlewindriver_2019_sw_WHONDRS-S19S_0009 MT",
+            "file_total": 1,
+            "files": [
+                {
+                    "_id": "5fa4fb4647675a20c852c60b",
+                    "_highlight": null,
+                    "file_path": "/global/dna/dm_archive/img/submissions/242719",
+                    "file_status_id": 10,
+                    "metadata": {
+                        "proposal": {
+                            "award_doi": "10.46936/10.25585/60001289",
+                            "pi": {
+                                "country": "United States",
+                                "institution": "Colorado State University",
+                                "email_address": "kwrighton@gmail.com",
+                                "last_name": "Wrighton",
+                                "middle_name": "",
+                                "first_name": "Kelly"
+                            },
+                            "date_approved": "2019-09-17",
+                            "lay_description": "This proposal seeks to create a global census of microbial genomes across 250 of the worlds rivers, from the Amazon to the Mississippi. Our goal is to create a Genome Resolved Open Watershed (GROW) database- which will be an open access resource to advance knowledge of aquatic microbiology for the entire scientific community.",
+                            "doi": null
+                        },
+                        "data_utilization_status": "Unrestricted",
+                        "img": {
+                            "jat_key_id": "AUTO-303485",
+                            "taxon_oid": 3300041981,
+                            "gold_analysis_project_id": "Ga0451497",
+                            "database": "IMG/M ER",
+                            "add_date": "05-NOV-20",
+                            "sample_gold_id": "Gp0503312",
+                            "gold_id": "Ga0451497",
+                            "itsApId": 1279887,
+                            "domain": "*Microbiome",
+                            "taxon_display_name": "Metatranscriptome of feshwater microbial communities from Wyoming, USA - littlewindriver_2019_sw_WHONDRS-S19S_0009 (Metagenome Metatranscriptome)",
+                            "contact": 107747,
+                            "seq_coverage_file": "/global/dna/dm_archive/rqc/analyses/AUTO-303485/pairedMapped_sorted.bam.cov"
+                        },
+                        "proposal_id": 505780,
+                        "sequencing_project": {
+                            "scientific_program_name": "Metagenome"
+                        },
+                        "analysis_project": {
+                            "status_date": "2020-11-05",
+                            "status_name": "Complete"
+                        },
+                        "sequencing_project_id": 1280049,
+                        "portal": {
+                            "display_location": [
+                                "IMG Data"
+                            ]
+                        },
+                        "final_deliv_project": {
+                            "product_search_category": "Metatranscriptome"
+                        },
+                        "analysis_project_id": 1279887
+                    },
+                    "file_status": "PURGED",
+                    "added_date": "2020-11-05T23:29:10.820000",
+                    "file_name": "Ga0451497_prodigal_genes.fna",
+                    "file_owner": "gbp",
+                    "modified_date": "2023-03-27T00:55:04.812000",
+                    "dt_to_purge": "2023-03-27T00:00:00",
+                    "file_size": 121142939,
+                    "file_date": "2020-11-03T12:50:53",
+                    "md5sum": "0c63c787ecbbf0af4ec297e4a9d7d70a",
+                    "file_type": "fasta",
+                    "file_id": 12127727,
+                    "file_group": "genome",
+                    "user": "img",
+                    "file_permissions": "0100664",
+                    "data_group": "Analysis",
+                    "portal_detail_id": 3300041981
+                }
+            ],
+            "fileSize": 650709702,
+            "highlight": {},
+            "portal_detail_id": 3300041981,
+            "award_doi": "10.46936/10.25585/60001289",
+            "data_utilization_status": "Unrestricted",
+            "product_search_category": "Metatranscriptome",
+            "proposal_lay_description": "This proposal seeks to create a global census of microbial genomes across 250 of the worlds rivers, from the Amazon to the Mississippi. Our goal is to create a Genome Resolved Open Watershed (GROW) database- which will be an open access resource to advance knowledge of aquatic microbiology for the entire scientific community.",
+            "proposal_id": 505780,
+            "build_time": 0.001332998275756836
+        }
+    ]
+}

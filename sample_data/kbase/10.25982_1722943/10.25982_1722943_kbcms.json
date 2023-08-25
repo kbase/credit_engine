@@ -1,0 +1,130 @@
+{
+    "credit_metadata_schema_version": "0.0.1-commonmeta",
+    "saved_by": "ialarmedalien",
+    "timestamp": 1234567890,
+    "credit_metadata": {
+        "identifier": "DOI:10.25982/1722943",
+        "resource_type": "dataset",
+        "related_identifiers": [
+            {
+                "id": "OSTI:1722943",
+                "relationship_type": "DataCite:IsIdenticalTo"
+            },
+            {
+                "id": "DOE:DE-AC02-05CH11231",
+                "description": "DOE Contract Number"
+            },
+            {
+                "id": "DOE:DE-AC05-76RL01830",
+                "description": "DOE Contract Number"
+            }
+        ],
+        "contributors": [
+            {
+                "contributor_id": "ORCID:0000-0002-2079-0260",
+                "contributor_type": "Person",
+                "name": "Ellen Dow",
+                "credit_name": "Dow, EG",
+                "given_name": "Ellen",
+                "family_name": "Dow",
+                "affiliations": [
+                    {
+                        "organization_name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+                        "organization_id": "ROR:02jbv0t02"
+                    }
+                ],
+                "contributor_roles": [
+                    "CRediT:writing-original-draft",
+                    "CRediT:writing-review-editing"
+                ]
+            },
+            {
+                "contributor_id": "ORCID:0000-0001-9557-7715",
+                "contributor_type": "Person",
+                "name": "Elisha Wood-Charlson",
+                "credit_name": "Wood-Charlson, E",
+                "family_name": "Wood-Charlson",
+                "given_name": "Elisha",
+                "affiliations": [
+                    {
+                        "organization_name": "Lawrence Berkeley National Lab. (LBNL), Berkeley, CA (United States)",
+                        "organization_id": "ROR:02jbv0t02"
+                    }
+                ],
+                "contributor_roles": [
+                    "CRediT:writing-original-draft",
+                    "CRediT:writing-review-editing"
+                ]
+            },
+            {
+                "contributor_id": "ORCID:0000-0002-8930-9500",
+                "contributor_type": "Person",
+                "name": "Nancy Hess",
+                "credit_name": "Hess, N",
+                "given_name": "Nancy",
+                "family_name": "Hess",
+                "affiliations": [
+                    {
+                        "organization_name": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+                        "organization_id": "ROR:05h992307"
+                    }
+                ],
+                "contributor_roles": [
+                    "CRediT:writing-original-draft",
+                    "CRediT:writing-review-editing"
+                ]
+            },
+            {
+                "contributor_id": "ORCID:0000-0002-8864-5772",
+                "contributor_type": "Person",
+                "name": "Timothy Scheibe",
+                "credit_name": "Scheibe, T",
+                "given_name": "Timothy",
+                "family_name": "Scheibe",
+                "affiliations": [
+                    {
+                        "organization_name": "Pacific Northwest National Lab. (PNNL), Richland, WA (United States)",
+                        "organization_id": "ROR:05h992307"
+                    }
+                ],
+                "contributor_roles": [
+                    "CRediT:writing-original-draft",
+                    "CRediT:writing-review-editing"
+                ]
+            }
+        ],
+        "descriptions": [
+            {
+                "description_text": "The 2020 Multiscale Microbial Dynamics course is adapted from the virtual 2020 Mutliscale Microbial Dynamics Summer School that was hosted by Environmental Molecular Sciences Laboratory (EMSL), a U.S. Department of Energy (DOE) science user facility located on the Pacific Northwest National Laboratory (PNNL) campus, in collaboration with the Joint Genome Institute (JGI) and the DOE Systems Biology Knowledgebase (KBase). The course course covers how to incorporate microbial metagenomic and environmental metabolite data from watershed ecosystems into metabolic and community modeling using computational frameworks, such as KBase and PFLOTRAN. The curriculum includes lectures and software and data analysis tutorials. All materials are freely accessible to the community as part of the 2020 Microbial Dynamics Summer School Organization in KBase.",
+                "description_type": "Abstract"
+            }
+        ],
+        "repository": {
+            "organization_id": "ROR:01znn6x10",
+            "organization_name": "KBase"
+        },
+        "titles": [
+            {
+                "title": "2020 Multiscale Microbial Dynamics Modeling Course",
+                "title_type": "title"
+            }
+        ],
+        "dates": [
+            {
+                "date": "2022-12-17",
+                "event": "issued"
+            },
+            {
+                "date": "2022-05-25",
+                "event": "updated"
+            }
+        ],
+        "language": "en-US",
+        "license": [
+            {
+                "url": "https://spdx.org/licenses/CC-BY-4.0.html",
+                "id": "CC-BY-4.0"
+            }
+        ]
+    }
+}
