@@ -147,6 +147,10 @@
             {
                 "description": "ITS sequencing project ID",
                 "id": "JGI_ITS_SP_ID:1280049"
+            },
+            {
+                "description": "award doi",
+                "id": "DOI:10.46936/10.25585/60001289"
             }
         ],
         "titles": [
@@ -155,7 +159,7 @@
                 "title_type": "title"
             }
         ],
-        "repository": {
+        "publisher": {
             "organization_id": "ROR:04xm1d337",
             "organization_name": "Joint Genome Institute"
         },

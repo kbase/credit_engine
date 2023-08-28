@@ -54,8 +54,20 @@
                 }
             },
             "required": [
-                "name",
                 "contributor_type"
+            ],
+            "anyOf": [
+                {
+                    "required": [
+                        "name"
+                    ]
+                },
+                {
+                    "required": [
+                        "given_name",
+                        "family_name"
+                    ]
+                }
             ],
             "title": "Contributor",
             "type": "object"
@@ -173,7 +185,7 @@
                     "type": "string"
                 },
                 "license": {
-                    "description": "usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. \"http://\"; \"https://\"; \"ftp://\".\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.\n",
+                    "description": "usage license(s) for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. \"http://\"; \"https://\"; \"ftp://\".\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.\n",
                     "items": {
                         "$ref": "#/$defs/License"
                     },
@@ -194,11 +206,8 @@
                     ]
                 },
                 "publisher": {
-                    "description": "The publisher of the resource.",
-                    "type": "object",
-                    "items": {
-                        "$ref": "#/$defs/Organization"
-                    }
+                    "description": "The name of the entity that holds, archives, publishes. prints, distributes, releases, issues, or produces the resource. In the case of datasets, this means the repository where data is hosted.",
+                    "$ref": "#/$defs/Organization"
                 },
                 "related_identifiers": {
                     "description": "other resolvable persistent unique IDs related to the resource.",
@@ -207,10 +216,6 @@
                     },
                     "type": "array",
                     "uniqueItems": true
-                },
-                "repository": {
-                    "$ref": "#/$defs/Organization",
-                    "description": "online repository for a dataset."
                 },
                 "resource_type": {
                     "$ref": "#/$defs/ResourceType",
@@ -239,12 +244,16 @@
                 "resource_type",
                 "titles"
             ],
-            "oneOf": [
+            "anyOf": [
                 {
-                    "$ref": "#/$defs/CreditMetadata/properties/version"
+                    "required": [
+                        "version"
+                    ]
                 },
                 {
-                    "$ref": "#/$defs/CreditMetadata/properties/dates"
+                    "required": [
+                        "dates"
+                    ]
                 }
             ],
             "title": "CreditMetadata",

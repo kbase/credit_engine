@@ -96,10 +96,10 @@
         "descriptions": [
             {
                 "description_text": "The 2020 Multiscale Microbial Dynamics course is adapted from the virtual 2020 Mutliscale Microbial Dynamics Summer School that was hosted by Environmental Molecular Sciences Laboratory (EMSL), a U.S. Department of Energy (DOE) science user facility located on the Pacific Northwest National Laboratory (PNNL) campus, in collaboration with the Joint Genome Institute (JGI) and the DOE Systems Biology Knowledgebase (KBase). The course course covers how to incorporate microbial metagenomic and environmental metabolite data from watershed ecosystems into metabolic and community modeling using computational frameworks, such as KBase and PFLOTRAN. The curriculum includes lectures and software and data analysis tutorials. All materials are freely accessible to the community as part of the 2020 Microbial Dynamics Summer School Organization in KBase.",
-                "description_type": "Abstract"
+                "description_type": "abstract"
             }
         ],
-        "repository": {
+        "publisher": {
             "organization_id": "ROR:01znn6x10",
             "organization_name": "KBase"
         },

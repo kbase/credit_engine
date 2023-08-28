@@ -20,7 +20,7 @@
     ],
     "resource_type": "dataset",
     "version": "v1",
-    "repository": {
+    "publisher": {
       "organization_id": "ROR:041mxqs23",
       "organization_name": "Figshare (United Kingdom)"
     },
