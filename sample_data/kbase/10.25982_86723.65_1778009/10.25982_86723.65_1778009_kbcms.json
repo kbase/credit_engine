@@ -51,6 +51,17 @@
         "event": "issued"
       }
     ],
+    "funding": [
+      {
+        "funder": {
+          "funder_name": "National Oceanic and Atmospheric Administration Office of Exploration and Research",
+          "funder_id": "ROR:02z5nhe81"
+        },
+        "grant_id": "NA18OAR0110291",
+        "grant_title": "Development of innovative techniques for exploring novel submarine springs on the Gulf of Mexico Outer Continental Shelf",
+        "grant_url": "https://dx.doi.org/10.25923/hjf1-zj16"
+      }
+    ],
     "related_identifiers": [
       {
         "id": "OSTI:1778009",
