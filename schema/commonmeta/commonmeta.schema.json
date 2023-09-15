@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://commonmeta.org/commonmeta_v0.9.1.json",
-    "title": "Commonmeta v0.9.1",
+    "$id": "https://commonmeta.org/commonmeta_v0.10.1.json",
+    "title": "Commonmeta v0.10.1",
     "description": "JSON representation of the Commonmeta schema.",
     "additionalProperties": false,
     "definitions": {
@@ -18,11 +18,67 @@
                         "type": "string"
                     }
                 },
-                "required": [
-                    "name"
+                "anyOf": [
+                    {
+                        "required": [
+                            "id"
+                        ]
+                    },
+                    {
+                        "required": [
+                            "name"
+                        ]
+                    }
                 ]
             },
             "uniqueItems": true
+        },
+        "contributorRole": {
+            "description": "The type of contribution made by a contributor",
+            "enum": [
+                "Author",
+                "Editor",
+                "Chair",
+                "Reviewer",
+                "ReviewAssistant",
+                "StatsReviewer",
+                "ReviewerExternal",
+                "Reader",
+                "Translator",
+                "ContactPerson",
+                "DataManager",
+                "Distributor",
+                "HostingInstitution",
+                "Producer",
+                "ProjectLeader",
+                "ProjectManager",
+                "ProjectMember",
+                "RegistrationAgency",
+                "RegistrationAuthority",
+                "RelatedPerson",
+                "ResearchGroup",
+                "RightsHolder",
+                "Researcher",
+                "Sponsor",
+                "WorkPackageLeader",
+                "Conceptualization",
+                "DataCuration",
+                "FormalAnalysis",
+                "FundingAcquisition",
+                "Investigation",
+                "Methodology",
+                "ProjectAdministration",
+                "Resources",
+                "Software",
+                "Supervision",
+                "Validation",
+                "Visualization",
+                "WritingOriginalDraft",
+                "WritingReviewEditing",
+                "Maintainer",
+                "Other"
+            ],
+            "type": "string"
         },
         "latitude": {
             "type": "number",
@@ -97,41 +153,64 @@
             "type": "string",
             "format": "uri"
         },
-        "creators": {
-            "description": "The creators of the resource.",
+        "contributors": {
+            "description": "The contributors to the resource.",
             "type": "array",
             "items": {
                 "type": "object",
                 "properties": {
                     "id": {
-                        "description": "The unique identifier for the creator.",
-                        "type": "string",
-                        "format": "uri"
+                        "description": "The unique identifier for the contributor.",
+                        "type": "string"
                     },
                     "type": {
-                        "description": "The type of the creator.",
+                        "description": "The type of the contributor.",
                         "type": "string",
                         "enum": [
                             "Organization",
                             "Person"
                         ]
                     },
+                    "contributorRoles": {
+                        "description": "List of roles assumed by the contributor when working on the resource.",
+                        "items": {
+                            "$ref": "#/definitions/contributorRole"
+                        },
+                        "type": "array",
+                        "uniqueItems": true
+                    },
                     "name": {
-                        "description": "The name of the creator.",
+                        "description": "The name of the contributor.",
                         "type": "string"
                     },
                     "givenName": {
-                        "description": "The given name of the creator.",
+                        "description": "The given name of the contributor.",
                         "type": "string"
                     },
                     "familyName": {
-                        "description": "The family name of the creator.",
+                        "description": "The family name of the contributor.",
                         "type": "string"
                     },
                     "affiliation": {
                         "$ref": "#/definitions/affiliations"
                     }
-                }
+                },
+                "anyOf": [
+                    {
+                        "required": [
+                            "familyName"
+                        ]
+                    },
+                    {
+                        "required": [
+                            "name"
+                        ]
+                    }
+                ],
+                "required": [
+                    "type",
+                    "contributorRoles"
+                ]
             },
             "minItems": 1,
             "uniqueItems": true
@@ -197,51 +276,17 @@
                     "enum": [
                         "Book",
                         "BookSeries",
+                        "DataCatalog",
                         "Journal",
                         "Periodical",
                         "ProceedingsSeries",
+                        "Repository",
                         "Series"
                     ]
                 },
                 "title": {
                     "description": "The title of the container.",
                     "type": "string"
-                }
-            }
-        },
-        "contributors": {
-            "description": "The contributors to the resource.",
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "description": "The unique identifier for the contributor.",
-                        "type": "string"
-                    },
-                    "type": {
-                        "description": "The type of the contributor.",
-                        "type": "string",
-                        "enum": [
-                            "Organization",
-                            "Person"
-                        ]
-                    },
-                    "name": {
-                        "description": "The name of the contributor.",
-                        "type": "string"
-                    },
-                    "givenName": {
-                        "description": "The given name of the contributor.",
-                        "type": "string"
-                    },
-                    "familyName": {
-                        "description": "The family name of the contributor.",
-                        "type": "string"
-                    },
-                    "affiliation": {
-                        "$ref": "#/definitions/affiliations"
-                    }
                 }
             }
         },
@@ -308,7 +353,7 @@
                     "doi": {
                         "type": "string"
                     },
-                    "creator": {
+                    "contributor": {
                         "type": "string"
                     },
                     "title": {
@@ -338,15 +383,49 @@
                     "edition": {
                         "type": "string"
                     },
-                    "contributor": {
-                        "type": "string"
-                    },
                     "unstructured": {
                         "type": "string"
                     }
                 },
                 "required": [
                     "key"
+                ]
+            },
+            "uniqueItems": true
+        },
+        "related_identifiers": {
+            "description": "Other resolvable persistent unique IDs related to the resource.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "IsNewVersionOf",
+                            "IsPreviousVersionOf",
+                            "IsVersionOf",
+                            "HasVersion",
+                            "IsPartOf",
+                            "HasPart",
+                            "IsVariantFormOf",
+                            "IsOriginalFormOf",
+                            "IsIdenticalTo",
+                            "IsTranslationOf",
+                            "IsReviewedBy",
+                            "Reviews",
+                            "IsPreprintOf",
+                            "HasPreprint",
+                            "isSupplementTo"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "type"
                 ]
             },
             "uniqueItems": true
@@ -504,12 +583,35 @@
                 ]
             }
         },
-        "content_url": {
-            "description": "The URL of the content of the resource.",
+        "files": {
+            "description": "The downloadable files for the resource.",
             "type": "array",
             "items": {
-                "type": "string",
-                "format": "uri"
+                "type": "object",
+                "properties": {
+                    "bucket": {
+                        "type": "string"
+                    },
+                    "key": {
+                        "type": "string"
+                    },
+                    "checksum": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "size": {
+                        "type": "integer"
+                    },
+                    "mimeType": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "url"
+                ]
             }
         },
         "schema_version": {
@@ -533,7 +635,7 @@
         "id",
         "type",
         "url",
-        "creators",
+        "contributors",
         "titles",
         "publisher",
         "date"
