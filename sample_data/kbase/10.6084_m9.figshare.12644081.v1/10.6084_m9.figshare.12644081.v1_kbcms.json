@@ -1,25 +1,36 @@
 {
-  "credit_metadata_schema_version": "0.0.1",
+  "credit_metadata_schema_version": "0.0.1-commonmeta",
   "saved_by": "ialarmedalien",
-  "timestamp": 1678829569424,
+  "timestamp": 1234567890,
   "credit_metadata": {
     "comment": [
       "manually mapped from FigShare"
     ],
-    "description": "Shotgun metagenome of the Amberjack Blue Hole water column at 106 m depth sampled in May 2019. Sequencing performed on an Illumina MiSeq with a 2 x 300 bp paired-end protocol.",
+    "descriptions": [
+      {
+        "description_text": "Shotgun metagenome of the Amberjack Blue Hole water column at 106 m depth sampled in May 2019. Sequencing performed on an Illumina MiSeq with a 2 x 300 bp paired-end protocol.",
+        "description_type": "abstract"
+      }
+    ],
     "identifier": "DOI:10.6084/m9.figshare.12644048.v1",
-    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "license": [
+      {
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "resource_type": "dataset",
     "version": "v1",
-    "repository": {
+    "publisher": {
       "organization_id": "ROR:041mxqs23",
       "organization_name": "Figshare (United Kingdom)"
     },
     "contributors": [
       {
-        "contributor_type": "person",
+        "contributor_type": "Person",
         "contributor_id": "ORCID:0000-0001-8522-7682",
         "name": "Nastassia Patin",
+        "given_name": "Nastassia",
+        "family_name": "Patin",
         "affiliations": [
           {
             "organization_name": "University of Miami Rosenstiel School of Marine and Atmospheric Science: Miami, FL, US",
@@ -36,8 +47,10 @@
         ]
       },
       {
-        "contributor_type": "person",
+        "contributor_type": "Person",
         "name": "Frank Stewart",
+        "given_name": "Frank",
+        "family_name": "Stewart",
         "affiliations": [
           {
             "organization_name": "Montana State University",
@@ -50,9 +63,11 @@
         ]
       },
       {
-        "contributor_type": "person",
+        "contributor_type": "Person",
         "contributor_id": "ORCID:0000-0002-1785-2352",
         "name": "Jordan Beckler",
+        "given_name": "Jordan",
+        "family_name": "Beckler",
         "affiliations": [
           {
             "organization_name": "Harbor Branch Oceanographic Institute",
@@ -61,8 +76,10 @@
         ]
       },
       {
-        "contributor_type": "person",
+        "contributor_type": "Person",
         "name": "Zoe Dietrich",
+        "given_name": "Zoe",
+        "family_name": "Dietrich",
         "affiliations": [
           {
             "organization_name": "BowDOIn College, Brunswick ME 04011",
@@ -71,9 +88,11 @@
         ]
       },
       {
-        "contributor_type": "person",
+        "contributor_type": "Person",
         "contributor_id": "ORCID:0000-0002-9218-6097",
         "name": "Emily Hall",
+        "given_name": "Emily",
+        "family_name": "Hall",
         "affiliations": [
           {
             "organization_name": "Mote Marine Laboratory",
@@ -118,9 +137,9 @@
     "titles": [
       {
         "title": "Blue Hole Shotgun Metagenome: May 2019, 106 M.",
-        "title_type": "title",
-        "title_language": "en-US"
+        "title_type": "title"
       }
-    ]
+    ],
+    "language": "en-US"
   }
 }

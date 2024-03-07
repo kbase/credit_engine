@@ -1,0 +1,130 @@
+{
+  "credit_metadata_schema_version": "0.0.1-commonmeta",
+  "saved_by": "ialarmedalien",
+  "timestamp": 1234567890,
+  "credit_metadata": {
+    "identifier": "DOI:10.25982/116951.133/1878567",
+    "resource_type": "dataset",
+    "language": "en-US",
+    "license": [
+      {
+        "url": "https://spdx.org/licenses/CC-BY-4.0.html",
+        "id": "CC-BY-4.0"
+      }
+    ],
+    "titles": [
+      {
+        "title": "KBase Narrative - Metagenome-assembled genomes from Amazonian soil microbial consortia",
+        "title_type": "title"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Jessica Mandro",
+        "given_name": "Jessica",
+        "family_name": "Mandro",
+        "contributor_type": "Person",
+        "affiliations": [
+          {
+            "organization_name": "University of São Paulo",
+            "organization_id": "ROR:036rp1748"
+          }
+        ]
+      }
+    ],
+    "dates": [
+      {
+        "date": "2022-07-29",
+        "event": "issued"
+      }
+    ],
+    "descriptions": [
+      {
+        "description_text": "We report 17 metagenome-assembled genomes (MAGs) recovered from microbial consortia of forest and pasture soils, in the Brazilian Eastern Amazon. Recovered MAGs constitute novel genomes with the potential to act in important ecological processes, including the degradation of carbohydrate and sulfur and nitrogen cycling.",
+        "description_type": "abstract"
+      }
+    ],
+    "publisher": {
+      "organization_name": "KBase",
+      "organization_id": "ROR:01znn6x10"
+    },
+    "related_identifiers": [
+      {
+        "relationship_type": "DataCite:IsIdenticalTo",
+        "id": "OSTI:1878567"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1099/mgen.0.000853"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1186/1471-2105-11-538"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1093/bioinformatics/btz848"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1093/bioinformatics/btu170"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1186/2049-2618-2-26"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1038/nmeth.1923"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1101/gr.213959.116"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1038/nbt.4163"
+      },
+      {
+        "relationship_type": "DataCite:References",
+        "id": "DOI:10.1093/bioinformatics/btz848"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1002/cpbi.102"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1101/gr.186072.114"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1038/nbt.4229"
+      },
+      {
+        "relationship_type": "DataCite:References",
+        "id": "DOI:10.1002/cpbi.102"
+      },
+      {
+        "relationship_type": "DataCite:References",
+        "id": "DOI:10.1038/nbt.4229"
+      },
+      {
+        "relationship_type": "DataCite:References",
+        "id": "DOI:10.1186/gb-2009-10-3-r25"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1093/bioinformatics/btv638"
+      },
+      {
+        "relationship_type": "DataCite:References",
+        "id": "DOI:10.1186/2049-2618-2-26"
+      },
+      {
+        "relationship_type": "DataCite:Cites",
+        "id": "DOI:10.1186/gb-2009-10-3-r25"
+      }
+    ]
+  }
+}
