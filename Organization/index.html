@@ -232,13 +232,13 @@
 <tr>
 <td><a href="../organization_id/">organization_id</a></td>
 <td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>persistent unique identifier for the organization in the format &lt;database nam...</td>
+<td>Persistent unique identifier for the organization in the format &lt;database nam...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../organization_name/">organization_name</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
-<td>common name of the organization; use the name recommended by ROR if possible</td>
+<td>Common name of the organization; use the name recommended by ROR if possible</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -255,14 +255,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../CreditMetadata/">CreditMetadata</a></td>
-<td><a href="../repository/">repository</a></td>
+<td><a href="../Contributor/">Contributor</a></td>
+<td><a href="../affiliations/">affiliations</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
-<td><a href="../Contributor/">Contributor</a></td>
-<td><a href="../affiliations/">affiliations</a></td>
+<td><a href="../CreditMetadata/">CreditMetadata</a></td>
+<td><a href="../publisher/">publisher</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
@@ -313,7 +313,7 @@ from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   organization_id:
     name: organization_id
-    description: persistent unique identifier for the organization in the format &lt;database
+    description: Persistent unique identifier for the organization in the format &lt;database
       name&gt;:&lt;identifier within database&gt;
     examples:
     - value: ROR:01bj3aw27
@@ -329,7 +329,7 @@ attributes:
     pattern: ^[a-zA-Z0-9.]+:\S
   organization_name:
     name: organization_name
-    description: common name of the organization; use the name recommended by ROR
+    description: Common name of the organization; use the name recommended by ROR
       if possible.
     examples:
     - value: KBase
@@ -361,7 +361,7 @@ from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   organization_id:
     name: organization_id
-    description: persistent unique identifier for the organization in the format &lt;database
+    description: Persistent unique identifier for the organization in the format &lt;database
       name&gt;:&lt;identifier within database&gt;
     examples:
     - value: ROR:01bj3aw27
@@ -381,7 +381,7 @@ attributes:
     pattern: ^[a-zA-Z0-9.]+:\S
   organization_name:
     name: organization_name
-    description: common name of the organization; use the name recommended by ROR
+    description: Common name of the organization; use the name recommended by ROR
       if possible.
     examples:
     - value: KBase

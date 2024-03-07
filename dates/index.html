@@ -327,7 +327,7 @@
 
 
 <h1 id="slot-dates">Slot: dates</h1>
-<p><em>a list of relevant lifecycle events for the resource.</em></p>
+<p><em>A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.</em></p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/dates">kbcm:dates</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -379,7 +379,9 @@
 <details>
 
 <pre><code class="language-yaml">name: dates
-description: a list of relevant lifecycle events for the resource.
+description: A list of relevant lifecycle events for the resource. Note that these
+  dates apply only to the resource itself, and not to the creation or update of the
+  credit metadata record for the resource.
 examples:
 - value: JsonObj(date=datetime.date(2022, 5, 10), event='available')
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml

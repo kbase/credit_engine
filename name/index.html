@@ -327,7 +327,7 @@
 
 
 <h1 id="slot-name">Slot: name</h1>
-<p><em>contributor name. For organizations, this should be the full (unabbreviated) name; for a person, the full name should be entered.</em></p>
+<p><em>Contributor name. For organizations, this should be the full (unabbreviated) name; can also be used for a person if the given name/family name format is not applicable.</em></p>
 <p>URI: <a href="http://schema.org/name">schema:name</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -366,19 +366,10 @@
 </thead>
 <tbody>
 <tr>
-<td>Helena Bonham Carter</td>
-</tr>
-<tr>
-<td>Hubert Wells</td>
+<td>National Institute of Mental Health</td>
 </tr>
 <tr>
 <td>Madonna</td>
-</tr>
-<tr>
-<td>Marionetta Cecille de la Carte-Postale</td>
-</tr>
-<tr>
-<td>National Institute of Mental Health</td>
 </tr>
 <tr>
 <td>Ransome the Clown</td>
@@ -394,14 +385,12 @@
 <details>
 
 <pre><code class="language-yaml">name: name
-description: contributor name. For organizations, this should be the full (unabbreviated)
-  name; for a person, the full name should be entered.
+description: Contributor name. For organizations, this should be the full (unabbreviated)
+  name; can also be used for a person if the given name/family name format is not
+  applicable.
 examples:
-- value: Helena Bonham Carter
-- value: Hubert Wells
-- value: Madonna
-- value: Marionetta Cecille de la Carte-Postale
 - value: National Institute of Mental Health
+- value: Madonna
 - value: Ransome the Clown
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:

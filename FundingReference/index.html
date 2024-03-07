@@ -204,7 +204,7 @@
 <p><em>Recommended resources for organization identifiers include:</em></p>
 <p>_  - Research Organization Registry, http://ror.org_</p>
 <p>_  - International Standard Name Identifier, https://isni.org_</p>
-<p>_  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/_</p>
+<p>_  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/ (to be subsumed into ROR)_</p>
 <p>__</p>
 <p><em>Some organizations may have a digital object identifier (DOI).</em></p>
 <p>__</p>
@@ -238,13 +238,13 @@
 <tr>
 <td><a href="../grant_id/">grant_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>code for the grant, assigned by the funder</td>
+<td>Code for the grant, assigned by the funder</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../grant_title/">grant_title</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>title for the grant</td>
+<td>Title for the grant</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -256,7 +256,7 @@
 <tr>
 <td><a href="../funder/">funder</a></td>
 <td>0..1 <br/> <a href="../Organization/">Organization</a></td>
-<td>the funder for the grant or award</td>
+<td>The funder for the grant or award</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -313,13 +313,14 @@ description: "Represents a funding source for a resource, including the funding 
   \ and the grant awarded.\n\nThe 'funder_name' field is required; all others are\
   \ optional.\n\nRecommended resources for organization identifiers include:\n  -\
   \ Research Organization Registry, http://ror.org\n  - International Standard Name\
-  \ Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\n\
-  \nSome organizations may have a digital object identifier (DOI).\n"
+  \ Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\
+  \ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier\
+  \ (DOI).\n"
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   grant_id:
     name: grant_id
-    description: code for the grant, assigned by the funder
+    description: Code for the grant, assigned by the funder
     examples:
     - value: '1296'
     - value: CBET-0756451
@@ -335,7 +336,7 @@ attributes:
     slot_uri: schema:identifier
   grant_title:
     name: grant_title
-    description: title for the grant
+    description: Title for the grant
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
@@ -360,7 +361,7 @@ attributes:
     pattern: ^[a-zA-Z0-9.]+:\S
   funder:
     name: funder
-    description: the funder for the grant or award
+    description: The funder for the grant or award
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:funder
@@ -376,13 +377,14 @@ description: "Represents a funding source for a resource, including the funding 
   \ and the grant awarded.\n\nThe 'funder_name' field is required; all others are\
   \ optional.\n\nRecommended resources for organization identifiers include:\n  -\
   \ Research Organization Registry, http://ror.org\n  - International Standard Name\
-  \ Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\n\
-  \nSome organizations may have a digital object identifier (DOI).\n"
+  \ Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\
+  \ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier\
+  \ (DOI).\n"
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   grant_id:
     name: grant_id
-    description: code for the grant, assigned by the funder
+    description: Code for the grant, assigned by the funder
     examples:
     - value: '1296'
     - value: CBET-0756451
@@ -403,7 +405,7 @@ attributes:
     range: string
   grant_title:
     name: grant_title
-    description: title for the grant
+    description: Title for the grant
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
@@ -437,7 +439,7 @@ attributes:
     pattern: ^[a-zA-Z0-9.]+:\S
   funder:
     name: funder
-    description: the funder for the grant or award
+    description: The funder for the grant or award
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:funder

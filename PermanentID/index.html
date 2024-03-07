@@ -235,13 +235,13 @@
 <tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>persistent unique ID for an entity</td>
+<td>Persistent unique ID for an entity</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>description of that entity</td>
+<td>Description of that entity</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@ from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   id:
     name: id
-    description: persistent unique ID for an entity. Should be in the format &lt;database
+    description: Persistent unique ID for an entity. Should be in the format &lt;database
       name&gt;:&lt;identifier within database&gt;.
     examples:
     - value: DOI:10.46936/10.25585/60000745
@@ -336,7 +336,6 @@ attributes:
     - DataCite:attributes.identifiers[]
     related_mappings:
     - OSTI:site_url
-    rank: 1000
     slot_uri: schema:identifier
     identifier: true
     range: uriorcurie
@@ -344,7 +343,7 @@ attributes:
     pattern: ^[a-zA-Z0-9.]+:\S
   description:
     name: description
-    description: description of that entity
+    description: Description of that entity.
     examples:
     - value: Amaranthus hypochondriacus genome
     - value: This data analysis workflow demonstrates how to process a metagenome
@@ -353,6 +352,7 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - OSTI:description
+    rank: 1000
     slot_uri: schema:description
   relationship_type:
     name: relationship_type
@@ -396,7 +396,7 @@ from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   id:
     name: id
-    description: persistent unique ID for an entity. Should be in the format &lt;database
+    description: Persistent unique ID for an entity. Should be in the format &lt;database
       name&gt;:&lt;identifier within database&gt;.
     examples:
     - value: DOI:10.46936/10.25585/60000745
@@ -410,19 +410,19 @@ attributes:
     - DataCite:attributes.identifiers[]
     related_mappings:
     - OSTI:site_url
-    rank: 1000
     slot_uri: schema:identifier
     identifier: true
     alias: id
     owner: PermanentID
     domain_of:
+    - License
     - PermanentID
     range: uriorcurie
     required: true
     pattern: ^[a-zA-Z0-9.]+:\S
   description:
     name: description
-    description: description of that entity
+    description: Description of that entity.
     examples:
     - value: Amaranthus hypochondriacus genome
     - value: This data analysis workflow demonstrates how to process a metagenome
@@ -431,11 +431,11 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - OSTI:description
+    rank: 1000
     slot_uri: schema:description
     alias: description
     owner: PermanentID
     domain_of:
-    - CreditMetadata
     - PermanentID
     range: string
   relationship_type:

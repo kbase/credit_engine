@@ -327,7 +327,7 @@
 
 
 <h1 id="slot-title_type">Slot: title_type</h1>
-<p><em>a descriptor for the title. The default value is 'title'.</em></p>
+<p><em>A descriptor for the title for cases where the contents of the 'title' field is not the primary name or title.</em></p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/title_type">kbcm:title_type</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -343,19 +343,14 @@
 <tbody>
 <tr>
 <td><a href="../Title/">Title</a></td>
-<td>Represents the title or name of a resource</td>
+<td>Represents the title or name of a resource, and the type of that title</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../TitleType/">TitleType</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../TitleType/">TitleType</a></li>
 </ul>
 <h2 id="examples">Examples</h2>
 <table>
@@ -388,7 +383,8 @@
 <details>
 
 <pre><code class="language-yaml">name: title_type
-description: a descriptor for the title. The default value is 'title'.
+description: A descriptor for the title for cases where the contents of the 'title'
+  field is not the primary name or title.
 examples:
 - value: subtitle
 - value: alternative_title
@@ -403,7 +399,6 @@ owner: Title
 domain_of:
 - Title
 range: TitleType
-required: true
 
 </code></pre>
 

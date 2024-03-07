@@ -275,29 +275,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
-  
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -327,8 +307,7 @@
 
 
 <h1 id="slot-id">Slot: id</h1>
-<p><em>persistent unique ID for an entity. Should be in the format <database name>:<identifier within database>.</em></p>
-<p>URI: <a href="http://schema.org/identifier">schema:identifier</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/id">kbcm:id</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -342,6 +321,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../License/">License</a></td>
+<td>License information for the resource</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../PermanentID/">PermanentID</a></td>
 <td>Represents a persistent unique identifier for an entity, with an optional rel...</td>
 <td>no</td>
@@ -350,68 +334,18 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../Uriorcurie/">Uriorcurie</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
-<li>
-<p>Regex pattern: <code>^[a-zA-Z0-9.]+:\S</code></p>
-</li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
-<h2 id="examples">Examples</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DOI:10.46936/10.25585/60000745</td>
-</tr>
-<tr>
-<td>GO:0005456</td>
-</tr>
-<tr>
-<td>HGNC:7470</td>
-</tr>
-</tbody>
-</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
-</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: id
-description: persistent unique ID for an entity. Should be in the format &lt;database
-  name&gt;:&lt;identifier within database&gt;.
-examples:
-- value: DOI:10.46936/10.25585/60000745
-- value: GO:0005456
-- value: HGNC:7470
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-exact_mappings:
-- DataCite:attributes.identifier.value
-- DataCite:attributes.alternate_identifiers[]
-- DataCite:attributes.related_identifiers[]
-- DataCite:attributes.identifiers[]
-related_mappings:
-- OSTI:site_url
-rank: 1000
-slot_uri: schema:identifier
-identifier: true
 alias: id
-owner: PermanentID
 domain_of:
+- License
 - PermanentID
-range: uriorcurie
-required: true
-pattern: ^[a-zA-Z0-9.]+:\S
+range: string
 
 </code></pre>
 

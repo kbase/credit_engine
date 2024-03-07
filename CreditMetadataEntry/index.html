@@ -192,7 +192,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-creditmetadataentry">Class: CreditMetadataEntry</h1>
-<p><em>Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata.</em></p>
+<p><em>Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, a new CreditMetadataEntry is created to store the information.</em></p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/CreditMetadataEntry">kbcm:CreditMetadataEntry</a></p>
 <div class="mermaid"> classDiagram
     class CreditMetadataEntry
@@ -223,13 +223,13 @@
 <tr>
 <td><a href="../credit_metadata/">credit_metadata</a></td>
 <td>1..1 <br/> <a href="../CreditMetadata/">CreditMetadata</a></td>
-<td>the credit metadata itself</td>
+<td>The credit metadata itself</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../credit_metadata_schema_version/">credit_metadata_schema_version</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
-<td>the version of the credit metadata schema used</td>
+<td>The version of the credit metadata schema used</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -241,7 +241,7 @@
 <tr>
 <td><a href="../timestamp/">timestamp</a></td>
 <td>1..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>unix timestamp for the addition of this set of credit metadata</td>
+<td>Unix timestamp for the addition of this set of credit metadata</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -276,12 +276,14 @@
 <details>
 <pre><code class="language-yaml">name: CreditMetadataEntry
 description: Container for an instance of credit metadata; includes the credit metadata
-  itself and metadata for the credit metadata.
+  itself and metadata for the credit metadata, including the schema version used,
+  who submitted it, and the date of submission. When the credit metadata for a resource
+  is added or updated, a new CreditMetadataEntry is created to store the information.
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   credit_metadata:
     name: credit_metadata
-    description: the credit metadata itself
+    description: The credit metadata itself.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:dataset
@@ -289,7 +291,7 @@ attributes:
     required: true
   credit_metadata_schema_version:
     name: credit_metadata_schema_version
-    description: the version of the credit metadata schema used
+    description: The version of the credit metadata schema used.
     examples:
     - value: 1.1.0
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
@@ -298,14 +300,14 @@ attributes:
     required: true
   saved_by:
     name: saved_by
-    description: KBase workspace ID of the user who added this entry
+    description: KBase workspace ID of the user who added this entry.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:sdPublisher
     required: true
   timestamp:
     name: timestamp
-    description: unix timestamp for the addition of this set of credit metadata
+    description: Unix timestamp for the addition of this set of credit metadata.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:sdDatePublished
@@ -319,12 +321,14 @@ tree_root: true
 <details>
 <pre><code class="language-yaml">name: CreditMetadataEntry
 description: Container for an instance of credit metadata; includes the credit metadata
-  itself and metadata for the credit metadata.
+  itself and metadata for the credit metadata, including the schema version used,
+  who submitted it, and the date of submission. When the credit metadata for a resource
+  is added or updated, a new CreditMetadataEntry is created to store the information.
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   credit_metadata:
     name: credit_metadata
-    description: the credit metadata itself
+    description: The credit metadata itself.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:dataset
@@ -336,7 +340,7 @@ attributes:
     required: true
   credit_metadata_schema_version:
     name: credit_metadata_schema_version
-    description: the version of the credit metadata schema used
+    description: The version of the credit metadata schema used.
     examples:
     - value: 1.1.0
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
@@ -350,7 +354,7 @@ attributes:
     required: true
   saved_by:
     name: saved_by
-    description: KBase workspace ID of the user who added this entry
+    description: KBase workspace ID of the user who added this entry.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:sdPublisher
@@ -362,7 +366,7 @@ attributes:
     required: true
   timestamp:
     name: timestamp
-    description: unix timestamp for the addition of this set of credit metadata
+    description: Unix timestamp for the addition of this set of credit metadata.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:sdDatePublished

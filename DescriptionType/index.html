@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kbase.github.io/credit_engine/credit_name/">
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/DescriptionType/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>Slot: credit_name - KBase Credit Engine Metadata Schema</title>
+        <title>Enum: DescriptionType - KBase Credit Engine Metadata Schema</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-credit_name" class="md-skip">
+        <a href="#enum-descriptiontype" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: credit_name
+              Enum: DescriptionType
             
           </span>
         </div>
@@ -261,22 +261,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#permissible-values" class="md-nav__link">
+    Permissible Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#slots" class="md-nav__link">
+    Slots
   </a>
   
 </li>
@@ -326,48 +319,48 @@
   
 
 
-<h1 id="slot-credit_name">Slot: credit_name</h1>
-<p><em>for a person, how the name should appear in a citation.</em></p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/credit_name">kbcm:credit_name</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-descriptiontype">Enum: DescriptionType</h1>
+<p><em>The type of text being represented</em></p>
+<p>URI: <a href="DescriptionType">DescriptionType</a></p>
+<h2 id="permissible-values">Permissible Values</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abstract</td>
+<td>DataCite:abstract</td>
+<td>A brief description of the resource and the context in which the resource was...</td>
+</tr>
+<tr>
+<td>description</td>
+<td>DataCite:descriptions.description.descriptionType</td>
+<td></td>
+</tr>
+<tr>
+<td>summary</td>
+<td>DataCite:summary</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Description</th>
-<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Contributor/">Contributor</a></td>
-<td>Represents a contributor to the resource</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
-<h2 id="examples">Examples</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Carte-Postale, MC</td>
-</tr>
-<tr>
-<td>Bonham Carter, H</td>
-</tr>
-<tr>
-<td>Wells, HG</td>
+<td><a href="../description_type/">description_type</a></td>
+<td>The type of text being represented</td>
 </tr>
 </tbody>
 </table>
@@ -379,21 +372,22 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: credit_name
-description: for a person, how the name should appear in a citation.
-examples:
-- value: Carte-Postale, MC
-- value: Bonham Carter, H
-- value: Wells, HG
+<pre><code class="language-yaml">name: DescriptionType
+description: The type of text being represented
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-exact_mappings:
-- ORCID:credit_name
 rank: 1000
-alias: credit_name
-owner: Contributor
-domain_of:
-- Contributor
-range: string
+permissible_values:
+  abstract:
+    text: abstract
+    description: A brief description of the resource and the context in which the
+      resource was created.
+    meaning: DataCite:abstract
+  description:
+    text: description
+    meaning: DataCite:descriptions.description.descriptionType
+  summary:
+    text: summary
+    meaning: DataCite:summary
 
 </code></pre>
 

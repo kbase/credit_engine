@@ -327,7 +327,7 @@
 
 
 <h1 id="slot-titles">Slot: titles</h1>
-<p><em>one or more titles for the resource. At least one title of title_type "title" must be provided.</em></p>
+<p><em>One or more titles for the resource.</em></p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/titles">kbcm:titles</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -369,10 +369,13 @@
 </thead>
 <tbody>
 <tr>
-<td>[{'title': 'Amaranthus hypochondriacus genome', 'title_type': 'title'}]</td>
+<td>[{'title': 'Amaranthus hypochondriacus genome'}]</td>
 </tr>
 <tr>
-<td>[{'title': 'Геном амаранта ипохондрического', 'title_type': 'translated_title', 'title_language': 'ru-Cyrl'}]</td>
+<td>[{'title': 'Геном амаранта ипохондрического', 'title_type': 'translated_title'}]</td>
+</tr>
+<tr>
+<td>[{'title': 'I know what genome you sequenced last summer', 'title_type': 'alternative_title'}]</td>
 </tr>
 </tbody>
 </table>
@@ -385,12 +388,12 @@
 <details>
 
 <pre><code class="language-yaml">name: titles
-description: one or more titles for the resource. At least one title of title_type
-  &quot;title&quot; must be provided.
+description: One or more titles for the resource.
 examples:
-- value: '[{''title'': ''Amaranthus hypochondriacus genome'', ''title_type'': ''title''}]'
-- value: '[{''title'': ''Геном амаранта ипохондрического'', ''title_type'': ''translated_title'',
-    ''title_language'': ''ru-Cyrl''}]'
+- value: '[{''title'': ''Amaranthus hypochondriacus genome''}]'
+- value: '[{''title'': ''Геном амаранта ипохондрического'', ''title_type'': ''translated_title''}]'
+- value: '[{''title'': ''I know what genome you sequenced last summer'', ''title_type'':
+    ''alternative_title''}]'
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
 - DataCite:attributes.titles[]

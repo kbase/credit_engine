@@ -197,24 +197,14 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-title">Class: Title</h1>
-<p><em>Represents the title or name of a resource.</em></p>
+<p><em>Represents the title or name of a resource, and the type of that title.</em></p>
 <p>__</p>
-<p><em>The 'title_string' field is required; if no value is supplied for 'title_type', it</em></p>
-<p><em>defaults to 'title'.</em></p>
-<p>__</p>
-<p><em>If the title is in a language other than English, the 'title_type' should be set to</em></p>
-<p><em>'translated_title', and the appropriate BCP-47 tag supplied in the 'title_language'</em></p>
-<p><em>field.</em></p>
-<p>__</p>
-<p><em>Note that the workspace checks that the 'title_language' field adheres to IETF</em></p>
-<p><em>BCP-47 syntax rules, but it does not check the validity of the tag.</em></p>
+<p><em>The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.</em></p>
 <p>__</p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/Title">kbcm:Title</a></p>
 <div class="mermaid"> classDiagram
     class Title
       Title : title
-
-      Title : title_language
 
       Title : title_type
 
@@ -237,19 +227,13 @@
 <tr>
 <td><a href="../title/">title</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
-<td>a string used as a title for a resource</td>
+<td>A string used as a title for a resource</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../title_type/">title_type</a></td>
-<td>1..1 <br/> <a href="../TitleType/">TitleType</a></td>
-<td>a descriptor for the title</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../title_language/">title_language</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>language that the title is in, as a IETF BCP-47 tag</td>
+<td>0..1 <br/> <a href="../TitleType/">TitleType</a></td>
+<td>A descriptor for the title for cases where the contents of the 'title' field ...</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -302,33 +286,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Title
-description: 'Represents the title or name of a resource.
+description: 'Represents the title or name of a resource, and the type of that title.
 
 
-  The ''title_string'' field is required; if no value is supplied for ''title_type'',
-  it
-
-  defaults to ''title''.
-
-
-  If the title is in a language other than English, the ''title_type'' should be set
-  to
-
-  ''translated_title'', and the appropriate BCP-47 tag supplied in the ''title_language''
-
-  field.
-
-
-  Note that the workspace checks that the ''title_language'' field adheres to IETF
-
-  BCP-47 syntax rules, but it does not check the validity of the tag.
+  The ''title'' field is required; ''title_type'' is only necessary if the text is
+  not the primary title.
 
   '
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   title:
     name: title
-    description: a string used as a title for a resource
+    description: A string used as a title for a resource
     examples:
     - value: Amaranthus hypochondriacus genome
     - value: Геном амаранта ипохондрического
@@ -341,7 +310,8 @@ attributes:
     required: true
   title_type:
     name: title_type
-    description: a descriptor for the title. The default value is 'title'.
+    description: A descriptor for the title for cases where the contents of the 'title'
+      field is not the primary name or title.
     examples:
     - value: subtitle
     - value: alternative_title
@@ -352,51 +322,24 @@ attributes:
     - DataCite:attributes.title.titleType
     rank: 1000
     range: TitleType
-    required: true
-  title_language:
-    name: title_language
-    description: language that the title is in, as a IETF BCP-47 tag.
-    examples:
-    - value: fr
-    - value: jp-JP
-    - value: zh-Hant-CN
-    - value: en-Latn-GB
-    - value: mn-Cyrl
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    rank: 1000
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Title
-description: 'Represents the title or name of a resource.
+description: 'Represents the title or name of a resource, and the type of that title.
 
 
-  The ''title_string'' field is required; if no value is supplied for ''title_type'',
-  it
-
-  defaults to ''title''.
-
-
-  If the title is in a language other than English, the ''title_type'' should be set
-  to
-
-  ''translated_title'', and the appropriate BCP-47 tag supplied in the ''title_language''
-
-  field.
-
-
-  Note that the workspace checks that the ''title_language'' field adheres to IETF
-
-  BCP-47 syntax rules, but it does not check the validity of the tag.
+  The ''title'' field is required; ''title_type'' is only necessary if the text is
+  not the primary title.
 
   '
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   title:
     name: title
-    description: a string used as a title for a resource
+    description: A string used as a title for a resource
     examples:
     - value: Amaranthus hypochondriacus genome
     - value: Геном амаранта ипохондрического
@@ -414,7 +357,8 @@ attributes:
     required: true
   title_type:
     name: title_type
-    description: a descriptor for the title. The default value is 'title'.
+    description: A descriptor for the title for cases where the contents of the 'title'
+      field is not the primary name or title.
     examples:
     - value: subtitle
     - value: alternative_title
@@ -429,23 +373,6 @@ attributes:
     domain_of:
     - Title
     range: TitleType
-    required: true
-  title_language:
-    name: title_language
-    description: language that the title is in, as a IETF BCP-47 tag.
-    examples:
-    - value: fr
-    - value: jp-JP
-    - value: zh-Hant-CN
-    - value: en-Latn-GB
-    - value: mn-Cyrl
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    rank: 1000
-    alias: title_language
-    owner: Title
-    domain_of:
-    - Title
-    range: string
 
 </code></pre>
 </details>

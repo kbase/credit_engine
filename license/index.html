@@ -327,7 +327,7 @@
 
 
 <h1 id="slot-license">Slot: license</h1>
-<p><em>usage license for the resource. May be a text string or an URL. Abbreviations should be spelled out where possible (e.g. 'Creative Commons 4.0' instead of 'CC-BY-4.0'). The license is interpreted as an URL and checked for well-formedness if it starts with a series of letters, a colon, and slashes, e.g. "http://"; "https://"; "ftp://".</em></p>
+<p><em>Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.</em></p>
 <p>__</p>
 <p><em>All data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.</em></p>
 <p>__</p>
@@ -353,7 +353,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../License/">License</a></li>
 </ul>
 <h2 id="examples">Examples</h2>
 <table>
@@ -364,16 +364,13 @@
 </thead>
 <tbody>
 <tr>
-<td>Creative Commons 0</td>
+<td>JsonObj(id='CC-BY-NC-ND-4.0')</td>
 </tr>
 <tr>
-<td>Creative Commons 4.0</td>
+<td>JsonObj(id='MIT OR Apache-2.0')</td>
 </tr>
 <tr>
-<td>MIT</td>
-</tr>
-<tr>
-<td>https://jgi.doe.gov/user-programs/pmo-overview/policies/</td>
+<td>JsonObj(url='https://jgi.doe.gov/user-programs/pmo-overview/policies/')</td>
 </tr>
 </tbody>
 </table>
@@ -386,10 +383,8 @@
 <details>
 
 <pre><code class="language-yaml">name: license
-description: 'usage license for the resource. May be a text string or an URL. Abbreviations
-  should be spelled out where possible (e.g. ''Creative Commons 4.0'' instead of ''CC-BY-4.0'').
-  The license is interpreted as an URL and checked for well-formedness if it starts
-  with a series of letters, a colon, and slashes, e.g. &quot;http://&quot;; &quot;https://&quot;; &quot;ftp://&quot;.
+description: 'Usage license for the resource. Use one of the SPDX license identifiers
+  or provide a link to the license text if no SPDX ID is available.
 
 
   All data published at KBase is done so under a Creative Commons 0 or Creative Commons
@@ -397,10 +392,9 @@ description: 'usage license for the resource. May be a text string or an URL. Ab
 
   '
 examples:
-- value: Creative Commons 0
-- value: Creative Commons 4.0
-- value: MIT
-- value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
+- value: JsonObj(id='CC-BY-NC-ND-4.0')
+- value: JsonObj(id='MIT OR Apache-2.0')
+- value: JsonObj(url='https://jgi.doe.gov/user-programs/pmo-overview/policies/')
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
 - biolink:license
@@ -412,7 +406,7 @@ alias: license
 owner: CreditMetadata
 domain_of:
 - CreditMetadata
-range: string
+range: License
 
 </code></pre>
 

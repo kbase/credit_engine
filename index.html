@@ -383,7 +383,7 @@
 
 
 <h1 id="credit_metadata">credit_metadata</h1>
-<p>Schema for KBase resource credit metadata</p>
+<p>Schema for KBase resource credit metadata. This version brings the schema into closer alignment with the commonmeta citation schema, https://commonmeta.org.</p>
 <p>URI: https://github.com/kbase/credit_engine/schema/kbase/linkml</p>
 <p>Name: credit_metadata</p>
 <h2 id="classes">Classes</h2>
@@ -402,17 +402,7 @@
 </tbody>
 </table>
 <p>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and
-a 'name'.</p>
-<p>The 'credit_name' field is used to store the name of a person as it would appear in
-a citation. If there is no 'credit_name' supplied, the 'name' field would be used
-in citations.
-For example:
-  name:         Hubert George Wells
-  credit_name:  Wells, HG</p>
-<p>name:         Alexandria Ocasio-Cortez
-  credit_name:  Ocasio-Cortez, A</p>
-<p>name:         Helena Bonham Carter
-  credit_name:  Bonham Carter, H</p>
+one of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).</p>
 <p>The 'contributor_role' field takes values from the DataCite and CRediT contributor
 roles vocabularies. For more information on these resources and choosing the
 appropriate roles, please see the following links:</p>
@@ -428,10 +418,10 @@ resourceTypeGeneral field:</p>
 <p>Currently the KBase workspace only supports credit metadata for objects of type
 'dataset'; anything else will return an error.</p>
 <p>The license may be supplied either as an URL pointing to licensing information for
-the resource, or using a license name. See https://choosealicense.com/appendix/ for
-a list of common open source licenses.</p>
+the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.</p>
 <p>Required fields are:
 - identifier
+- resource_type
 - versioning information: if the resource does not have an explicit version number,
 one or more dates should be supplied: ideally the date of resource publication and
 the last update (if applicable).
@@ -440,7 +430,8 @@ the last update (if applicable).
 <p>The resource_type field is required, but as there is currently only a single valid
 value, 'dataset', it is automatically populated if no value is supplied.
  |
-| <a href="CreditMetadataEntry/">CreditMetadataEntry</a> | Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata. |
+| <a href="CreditMetadataEntry/">CreditMetadataEntry</a> | Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, a new CreditMetadataEntry is created to store the information. |
+| <a href="Description/">Description</a> | Textual information about the resource being represented. |
 | <a href="EventDate/">EventDate</a> | Represents an event in the lifecycle of a resource and the date it occurred on.</p>
 <p>See https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date for more information on the events.
  |
@@ -449,9 +440,10 @@ value, 'dataset', it is automatically populated if no value is supplied.
 <p>Recommended resources for organization identifiers include:
   - Research Organization Registry, http://ror.org
   - International Standard Name Identifier, https://isni.org
-  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/</p>
+  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/ (to be subsumed into ROR)</p>
 <p>Some organizations may have a digital object identifier (DOI).
  |
+| <a href="License/">License</a> | License information for the resource. |
 | <a href="Organization/">Organization</a> | Represents an organization.</p>
 <p>Recommended resources for organization identifiers and canonical organization names include:
   - Research Organization Registry, http://ror.org
@@ -467,14 +459,8 @@ value, 'dataset', it is automatically populated if no value is supplied.
 <p>DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype</p>
 <p>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/
  |
-| <a href="Title/">Title</a> | Represents the title or name of a resource.</p>
-<p>The 'title_string' field is required; if no value is supplied for 'title_type', it
-defaults to 'title'.</p>
-<p>If the title is in a language other than English, the 'title_type' should be set to
-'translated_title', and the appropriate BCP-47 tag supplied in the 'title_language'
-field.</p>
-<p>Note that the workspace checks that the 'title_language' field adheres to IETF
-BCP-47 syntax rules, but it does not check the validity of the tag.
+| <a href="Title/">Title</a> | Represents the title or name of a resource, and the type of that title.</p>
+<p>The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.
  |</p>
 <h2 id="slots">Slots</h2>
 <table>
@@ -487,71 +473,91 @@ BCP-47 syntax rules, but it does not check the validity of the tag.
 <tbody>
 <tr>
 <td><a href="affiliations/">affiliations</a></td>
-<td>list of organizations with which the contributor is affiliated</td>
+<td>List of organizations with which the contributor is affiliated</td>
 </tr>
 <tr>
 <td><a href="comment/">comment</a></td>
-<td>list of strings of freeform text providing extra information about this credi...</td>
+<td>List of strings of freeform text providing extra information about this credi...</td>
+</tr>
+<tr>
+<td><a href="content_url/">content_url</a></td>
+<td>The URL of the content of the resource</td>
 </tr>
 <tr>
 <td><a href="contributor_id/">contributor_id</a></td>
-<td>persistent unique identifier for the contributor; this might be an ORCID for ...</td>
+<td>Persistent unique identifier for the contributor; this might be an ORCID for ...</td>
 </tr>
 <tr>
 <td><a href="contributor_roles/">contributor_roles</a></td>
-<td>list of roles played by the contributor when working on the resource</td>
+<td>List of roles played by the contributor when working on the resource</td>
 </tr>
 <tr>
 <td><a href="contributor_type/">contributor_type</a></td>
-<td>must be either 'Person' or 'Organization'</td>
+<td>Must be either 'Person' or 'Organization'</td>
 </tr>
 <tr>
 <td><a href="contributors/">contributors</a></td>
-<td>a list of people and/or organizations who contributed to the resource</td>
+<td>A list of people and/or organizations who contributed to the resource</td>
 </tr>
 <tr>
 <td><a href="credit_metadata/">credit_metadata</a></td>
-<td>the credit metadata itself</td>
+<td>The credit metadata itself</td>
 </tr>
 <tr>
 <td><a href="credit_metadata_schema_version/">credit_metadata_schema_version</a></td>
-<td>the version of the credit metadata schema used</td>
-</tr>
-<tr>
-<td><a href="credit_name/">credit_name</a></td>
-<td>for a person, how the name should appear in a citation</td>
+<td>The version of the credit metadata schema used</td>
 </tr>
 <tr>
 <td><a href="date/">date</a></td>
-<td>the date associated with the event</td>
+<td>The date associated with the event</td>
 </tr>
 <tr>
 <td><a href="dates/">dates</a></td>
-<td>a list of relevant lifecycle events for the resource</td>
+<td>A list of relevant lifecycle events for the resource</td>
 </tr>
 <tr>
 <td><a href="description/">description</a></td>
+<td>Description of that entity</td>
+</tr>
+<tr>
+<td><a href="description_text/">description_text</a></td>
+<td>The text content of the informational element</td>
+</tr>
+<tr>
+<td><a href="description_type/">description_type</a></td>
+<td>The type of text being represented</td>
+</tr>
+<tr>
+<td><a href="descriptions/">descriptions</a></td>
 <td>A brief description or abstract for the resource being represented</td>
 </tr>
 <tr>
 <td><a href="event/">event</a></td>
-<td>the nature of the resource-related event that occurred on that date</td>
+<td>The nature of the resource-related event that occurred on that date</td>
+</tr>
+<tr>
+<td><a href="family_name/">family_name</a></td>
+<td>The family name(s) of the contributor</td>
 </tr>
 <tr>
 <td><a href="funder/">funder</a></td>
-<td>the funder for the grant or award</td>
+<td>The funder for the grant or award</td>
 </tr>
 <tr>
 <td><a href="funding/">funding</a></td>
-<td>funding sources for the resource</td>
+<td>Funding sources for the resource</td>
+</tr>
+<tr>
+<td><a href="given_name/">given_name</a></td>
+<td>The given name(s) of the contributor</td>
 </tr>
 <tr>
 <td><a href="grant_id/">grant_id</a></td>
-<td>code for the grant, assigned by the funder</td>
+<td>Code for the grant, assigned by the funder</td>
 </tr>
 <tr>
 <td><a href="grant_title/">grant_title</a></td>
-<td>title for the grant</td>
+<td>Title for the grant</td>
 </tr>
 <tr>
 <td><a href="grant_url/">grant_url</a></td>
@@ -559,43 +565,51 @@ BCP-47 syntax rules, but it does not check the validity of the tag.
 </tr>
 <tr>
 <td><a href="id/">id</a></td>
-<td>persistent unique ID for an entity</td>
+<td>String representing the license, from the SPDX license identifiers at https:/...</td>
 </tr>
 <tr>
 <td><a href="identifier/">identifier</a></td>
-<td>resolvable persistent unique identifier for the resource</td>
+<td>Resolvable persistent unique identifier for the resource</td>
+</tr>
+<tr>
+<td><a href="language/">language</a></td>
+<td>The language in which the title and other text relating to the resource is wr...</td>
 </tr>
 <tr>
 <td><a href="license/">license</a></td>
-<td>usage license for the resource</td>
+<td>Usage license for the resource</td>
 </tr>
 <tr>
 <td><a href="name/">name</a></td>
-<td>contributor name</td>
+<td>Contributor name</td>
 </tr>
 <tr>
 <td><a href="organization_id/">organization_id</a></td>
-<td>persistent unique identifier for the organization in the format &lt;database nam...</td>
+<td>Persistent unique identifier for the organization in the format &lt;database nam...</td>
 </tr>
 <tr>
 <td><a href="organization_name/">organization_name</a></td>
-<td>common name of the organization; use the name recommended by ROR if possible</td>
+<td>Common name of the organization; use the name recommended by ROR if possible</td>
+</tr>
+<tr>
+<td><a href="provider/">provider</a></td>
+<td>The provider of the resource</td>
+</tr>
+<tr>
+<td><a href="publisher/">publisher</a></td>
+<td>The publisher of the resource</td>
 </tr>
 <tr>
 <td><a href="related_identifiers/">related_identifiers</a></td>
-<td>other resolvable persistent unique IDs related to the resource</td>
+<td>Other resolvable persistent unique IDs related to the resource</td>
 </tr>
 <tr>
 <td><a href="relationship_type/">relationship_type</a></td>
 <td>The relationship between the ID and some other entity</td>
 </tr>
 <tr>
-<td><a href="repository/">repository</a></td>
-<td>online repository for a dataset</td>
-</tr>
-<tr>
 <td><a href="resource_type/">resource_type</a></td>
-<td>the broad type of the source data for this workspace object</td>
+<td>The broad type of the source data for this workspace object</td>
 </tr>
 <tr>
 <td><a href="saved_by/">saved_by</a></td>
@@ -603,27 +617,27 @@ BCP-47 syntax rules, but it does not check the validity of the tag.
 </tr>
 <tr>
 <td><a href="timestamp/">timestamp</a></td>
-<td>unix timestamp for the addition of this set of credit metadata</td>
+<td>Unix timestamp for the addition of this set of credit metadata</td>
 </tr>
 <tr>
 <td><a href="title/">title</a></td>
-<td>a string used as a title for a resource</td>
-</tr>
-<tr>
-<td><a href="title_language/">title_language</a></td>
-<td>language that the title is in, as a IETF BCP-47 tag</td>
+<td>A string used as a title for a resource</td>
 </tr>
 <tr>
 <td><a href="title_type/">title_type</a></td>
-<td>a descriptor for the title</td>
+<td>A descriptor for the title for cases where the contents of the 'title' field ...</td>
 </tr>
 <tr>
 <td><a href="titles/">titles</a></td>
-<td>one or more titles for the resource</td>
+<td>One or more titles for the resource</td>
+</tr>
+<tr>
+<td><a href="url/">url</a></td>
+<td>The URL of the resource</td>
 </tr>
 <tr>
 <td><a href="version/">version</a></td>
-<td>the version of the resource</td>
+<td>The version of the resource</td>
 </tr>
 </tbody>
 </table>
@@ -645,12 +659,20 @@ BCP-47 syntax rules, but it does not check the validity of the tag.
 <td>The type of contributor being represented</td>
 </tr>
 <tr>
+<td><a href="DescriptionType/">DescriptionType</a></td>
+<td>The type of text being represented</td>
+</tr>
+<tr>
 <td><a href="EventType/">EventType</a></td>
 <td>The type of date being represented</td>
 </tr>
 <tr>
+<td><a href="ProviderType/">ProviderType</a></td>
+<td>The provider of a resource</td>
+</tr>
+<tr>
 <td><a href="RelationshipType/">RelationshipType</a></td>
-<td>the relationship between two entities</td>
+<td>The relationship between two entities</td>
 </tr>
 <tr>
 <td><a href="ResourceType/">ResourceType</a></td>

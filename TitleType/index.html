@@ -320,7 +320,7 @@
 
 
 <h1 id="enum-titletype">Enum: TitleType</h1>
-<p><em>The type of title being represented</em></p>
+<p><em>The type of title being represented.</em></p>
 <p>URI: <a href="TitleType">TitleType</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -332,11 +332,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>title</td>
-<td>None</td>
-<td>the default title</td>
-</tr>
 <tr>
 <td>subtitle</td>
 <td>None</td>
@@ -350,7 +345,7 @@
 <tr>
 <td>translated_title</td>
 <td>None</td>
-<td>translation of the title into another language; title_language must be specif...</td>
+<td>translation of the title into another language</td>
 </tr>
 <tr>
 <td>other</td>
@@ -370,7 +365,7 @@
 <tbody>
 <tr>
 <td><a href="../title_type/">title_type</a></td>
-<td>a descriptor for the title</td>
+<td>A descriptor for the title for cases where the contents of the 'title' field ...</td>
 </tr>
 </tbody>
 </table>
@@ -383,13 +378,10 @@
 <details>
 
 <pre><code class="language-yaml">name: TitleType
-description: The type of title being represented
+description: The type of title being represented.
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 rank: 1000
 permissible_values:
-  title:
-    text: title
-    description: the default title
   subtitle:
     text: subtitle
     description: any subtitle for the resource
@@ -398,8 +390,7 @@ permissible_values:
     description: other title(s) or names for the resource
   translated_title:
     text: translated_title
-    description: translation of the title into another language; title_language must
-      be specified if this value is used
+    description: translation of the title into another language
   other:
     text: other
     description: anything that doesn't fit into the above categories

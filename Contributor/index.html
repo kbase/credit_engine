@@ -200,20 +200,7 @@
 <p><em>Represents a contributor to the resource.</em></p>
 <p>__</p>
 <p><em>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and</em></p>
-<p><em>a 'name'.</em></p>
-<p>__</p>
-<p><em>The 'credit_name' field is used to store the name of a person as it would appear in</em></p>
-<p><em>a citation. If there is no 'credit_name' supplied, the 'name' field would be used</em></p>
-<p><em>in citations.</em></p>
-<p><em>For example:</em></p>
-<p>_  name:         Hubert George Wells_</p>
-<p>_  credit_name:  Wells, HG_</p>
-<p>__</p>
-<p>_  name:         Alexandria Ocasio-Cortez_</p>
-<p>_  credit_name:  Ocasio-Cortez, A_</p>
-<p>__</p>
-<p>_  name:         Helena Bonham Carter_</p>
-<p>_  credit_name:  Bonham Carter, H_</p>
+<p><em>one of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).</em></p>
 <p>__</p>
 <p><em>The 'contributor_role' field takes values from the DataCite and CRediT contributor</em></p>
 <p><em>roles vocabularies. For more information on these resources and choosing the</em></p>
@@ -240,7 +227,9 @@
 
           Contributor --|&gt; ContributorType : contributor_type
 
-      Contributor : credit_name
+      Contributor : family_name
+
+      Contributor : given_name
 
       Contributor : name
 
@@ -261,37 +250,43 @@
 <tr>
 <td><a href="../contributor_type/">contributor_type</a></td>
 <td>0..1 <br/> <a href="../ContributorType/">ContributorType</a></td>
-<td>must be either 'Person' or 'Organization'</td>
+<td>Must be either 'Person' or 'Organization'</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../contributor_id/">contributor_id</a></td>
 <td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>persistent unique identifier for the contributor; this might be an ORCID for ...</td>
+<td>Persistent unique identifier for the contributor; this might be an ORCID for ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
-<td>contributor name</td>
+<td>Contributor name</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../credit_name/">credit_name</a></td>
+<td><a href="../given_name/">given_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>for a person, how the name should appear in a citation</td>
+<td>The given name(s) of the contributor</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../family_name/">family_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The family name(s) of the contributor</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../affiliations/">affiliations</a></td>
 <td>0..* <br/> <a href="../Organization/">Organization</a></td>
-<td>list of organizations with which the contributor is affiliated</td>
+<td>List of organizations with which the contributor is affiliated</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../contributor_roles/">contributor_roles</a></td>
 <td>0..* <br/> <a href="../ContributorRole/">ContributorRole</a></td>
-<td>list of roles played by the contributor when working on the resource</td>
+<td>List of roles played by the contributor when working on the resource</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -344,22 +339,34 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Contributor
-description: "Represents a contributor to the resource.\n\nContributors must have\
-  \ a 'contributor_type', either 'Person' or 'Organization', and\na 'name'.\n\nThe\
-  \ 'credit_name' field is used to store the name of a person as it would appear in\n\
-  a citation. If there is no 'credit_name' supplied, the 'name' field would be used\n\
-  in citations.\nFor example:\n  name:         Hubert George Wells\n  credit_name:\
-  \  Wells, HG\n\n  name:         Alexandria Ocasio-Cortez\n  credit_name:  Ocasio-Cortez,\
-  \ A\n\n  name:         Helena Bonham Carter\n  credit_name:  Bonham Carter, H\n\n\
-  The 'contributor_role' field takes values from the DataCite and CRediT contributor\n\
-  roles vocabularies. For more information on these resources and choosing the\nappropriate\
-  \ roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\
-  \nCRediT contributor role taxonomy: https://credit.niso.org\n"
+description: 'Represents a contributor to the resource.
+
+
+  Contributors must have a ''contributor_type'', either ''Person'' or ''Organization'',
+  and
+
+  one of the ''name'' fields: either ''given_name'' and ''family_name'' (for a person),
+  or ''name'' (for an organization or a person).
+
+
+  The ''contributor_role'' field takes values from the DataCite and CRediT contributor
+
+  roles vocabularies. For more information on these resources and choosing the
+
+  appropriate roles, please see the following links:
+
+
+  DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype
+
+
+  CRediT contributor role taxonomy: https://credit.niso.org
+
+  '
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   contributor_type:
     name: contributor_type
-    description: must be either 'Person' or 'Organization'
+    description: Must be either 'Person' or 'Organization'
     examples:
     - value: Person
     - value: Organization
@@ -372,7 +379,7 @@ attributes:
     range: ContributorType
   contributor_id:
     name: contributor_id
-    description: persistent unique identifier for the contributor; this might be an
+    description: Persistent unique identifier for the contributor; this might be an
       ORCID for an individual, or a ROR ID for an organization.
     examples:
     - value: ORCID:0000-0001-9557-7715
@@ -392,14 +399,12 @@ attributes:
     pattern: ^[a-zA-Z0-9.]+:\S
   name:
     name: name
-    description: contributor name. For organizations, this should be the full (unabbreviated)
-      name; for a person, the full name should be entered.
+    description: Contributor name. For organizations, this should be the full (unabbreviated)
+      name; can also be used for a person if the given name/family name format is
+      not applicable.
     examples:
-    - value: Helena Bonham Carter
-    - value: Hubert Wells
-    - value: Madonna
-    - value: Marionetta Cecille de la Carte-Postale
     - value: National Institute of Mental Health
+    - value: Madonna
     - value: Ransome the Clown
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
@@ -414,20 +419,33 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     required: true
-  credit_name:
-    name: credit_name
-    description: for a person, how the name should appear in a citation.
+  given_name:
+    name: given_name
+    description: The given name(s) of the contributor.
     examples:
-    - value: Carte-Postale, MC
-    - value: Bonham Carter, H
-    - value: Wells, HG
+    - value: Marionetta Cecille de la
+    - value: Helena
+    - value: Hubert George
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    exact_mappings:
-    - ORCID:credit_name
+    related_mappings:
+    - DataCite:attributes.contributors[].givenName
+    - DataCite:attributes.creators[].givenName
+    rank: 1000
+  family_name:
+    name: family_name
+    description: The family name(s) of the contributor.
+    examples:
+    - value: Carte-Postale
+    - value: Bonham Carter
+    - value: Wells
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    related_mappings:
+    - DataCite:attributes.contributors[].familyName
+    - DataCite:attributes.creators[].familyName
     rank: 1000
   affiliations:
     name: affiliations
-    description: list of organizations with which the contributor is affiliated. For
+    description: List of organizations with which the contributor is affiliated. For
       contributors that represent an organization, this may be a parent organization
       (e.g. KBase, US DOE; Arkin lab, LBNL).
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
@@ -445,7 +463,7 @@ attributes:
     inlined_as_list: true
   contributor_roles:
     name: contributor_roles
-    description: list of roles played by the contributor when working on the resource.
+    description: List of roles played by the contributor when working on the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - DataCite:attributes.contributors[].contributor_type
@@ -465,22 +483,34 @@ attributes:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Contributor
-description: "Represents a contributor to the resource.\n\nContributors must have\
-  \ a 'contributor_type', either 'Person' or 'Organization', and\na 'name'.\n\nThe\
-  \ 'credit_name' field is used to store the name of a person as it would appear in\n\
-  a citation. If there is no 'credit_name' supplied, the 'name' field would be used\n\
-  in citations.\nFor example:\n  name:         Hubert George Wells\n  credit_name:\
-  \  Wells, HG\n\n  name:         Alexandria Ocasio-Cortez\n  credit_name:  Ocasio-Cortez,\
-  \ A\n\n  name:         Helena Bonham Carter\n  credit_name:  Bonham Carter, H\n\n\
-  The 'contributor_role' field takes values from the DataCite and CRediT contributor\n\
-  roles vocabularies. For more information on these resources and choosing the\nappropriate\
-  \ roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\
-  \nCRediT contributor role taxonomy: https://credit.niso.org\n"
+description: 'Represents a contributor to the resource.
+
+
+  Contributors must have a ''contributor_type'', either ''Person'' or ''Organization'',
+  and
+
+  one of the ''name'' fields: either ''given_name'' and ''family_name'' (for a person),
+  or ''name'' (for an organization or a person).
+
+
+  The ''contributor_role'' field takes values from the DataCite and CRediT contributor
+
+  roles vocabularies. For more information on these resources and choosing the
+
+  appropriate roles, please see the following links:
+
+
+  DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype
+
+
+  CRediT contributor role taxonomy: https://credit.niso.org
+
+  '
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
   contributor_type:
     name: contributor_type
-    description: must be either 'Person' or 'Organization'
+    description: Must be either 'Person' or 'Organization'
     examples:
     - value: Person
     - value: Organization
@@ -497,7 +527,7 @@ attributes:
     range: ContributorType
   contributor_id:
     name: contributor_id
-    description: persistent unique identifier for the contributor; this might be an
+    description: Persistent unique identifier for the contributor; this might be an
       ORCID for an individual, or a ROR ID for an organization.
     examples:
     - value: ORCID:0000-0001-9557-7715
@@ -521,14 +551,12 @@ attributes:
     pattern: ^[a-zA-Z0-9.]+:\S
   name:
     name: name
-    description: contributor name. For organizations, this should be the full (unabbreviated)
-      name; for a person, the full name should be entered.
+    description: Contributor name. For organizations, this should be the full (unabbreviated)
+      name; can also be used for a person if the given name/family name format is
+      not applicable.
     examples:
-    - value: Helena Bonham Carter
-    - value: Hubert Wells
-    - value: Madonna
-    - value: Marionetta Cecille de la Carte-Postale
     - value: National Institute of Mental Health
+    - value: Madonna
     - value: Ransome the Clown
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
@@ -548,25 +576,43 @@ attributes:
     - Contributor
     range: string
     required: true
-  credit_name:
-    name: credit_name
-    description: for a person, how the name should appear in a citation.
+  given_name:
+    name: given_name
+    description: The given name(s) of the contributor.
     examples:
-    - value: Carte-Postale, MC
-    - value: Bonham Carter, H
-    - value: Wells, HG
+    - value: Marionetta Cecille de la
+    - value: Helena
+    - value: Hubert George
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    exact_mappings:
-    - ORCID:credit_name
+    related_mappings:
+    - DataCite:attributes.contributors[].givenName
+    - DataCite:attributes.creators[].givenName
     rank: 1000
-    alias: credit_name
+    alias: given_name
+    owner: Contributor
+    domain_of:
+    - Contributor
+    range: string
+  family_name:
+    name: family_name
+    description: The family name(s) of the contributor.
+    examples:
+    - value: Carte-Postale
+    - value: Bonham Carter
+    - value: Wells
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    related_mappings:
+    - DataCite:attributes.contributors[].familyName
+    - DataCite:attributes.creators[].familyName
+    rank: 1000
+    alias: family_name
     owner: Contributor
     domain_of:
     - Contributor
     range: string
   affiliations:
     name: affiliations
-    description: list of organizations with which the contributor is affiliated. For
+    description: List of organizations with which the contributor is affiliated. For
       contributors that represent an organization, this may be a parent organization
       (e.g. KBase, US DOE; Arkin lab, LBNL).
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
@@ -584,11 +630,10 @@ attributes:
     domain_of:
     - Contributor
     range: Organization
-    inlined: true
     inlined_as_list: true
   contributor_roles:
     name: contributor_roles
-    description: list of roles played by the contributor when working on the resource.
+    description: List of roles played by the contributor when working on the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - DataCite:attributes.contributors[].contributor_type
