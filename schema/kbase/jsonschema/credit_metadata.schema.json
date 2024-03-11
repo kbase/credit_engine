@@ -20,7 +20,7 @@
                 },
                 "contributor_id": {
                     "description": "Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^[a-zA-Z0-9.-_]+:\\S",
                     "type": "string"
                 },
                 "contributor_roles": {
@@ -166,20 +166,12 @@
                 },
                 "identifier": {
                     "description": "Resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
-                    "type": "string"
-                },
-                "language": {
-                    "description": "The language in which the title and other text relating to the resource is written, using the appropriate IETF BCP-47 notation.",
+                    "pattern": "^[a-zA-Z0-9.-_]+:\\S",
                     "type": "string"
                 },
                 "license": {
                     "$ref": "#/$defs/License",
                     "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.\n"
-                },
-                "provider": {
-                    "$ref": "#/$defs/ProviderType",
-                    "description": "The provider of the resource. This can be a DOI registration agency or a repository."
                 },
                 "publisher": {
                     "$ref": "#/$defs/Organization",
@@ -275,6 +267,10 @@
                 "description_type": {
                     "$ref": "#/$defs/DescriptionType",
                     "description": "The type of text being represented"
+                },
+                "language": {
+                    "description": "The language in which the description is written, using the appropriate IETF BCP-47 notation.",
+                    "type": "string"
                 }
             },
             "required": [
@@ -396,7 +392,7 @@
             "properties": {
                 "organization_id": {
                     "description": "Persistent unique identifier for the organization in the format <database name>:<identifier within database>",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^[a-zA-Z0-9.-_]+:\\S",
                     "type": "string"
                 },
                 "organization_name": {
@@ -420,7 +416,7 @@
                 },
                 "id": {
                     "description": "Persistent unique ID for an entity. Should be in the format <database name>:<identifier within database>.",
-                    "pattern": "^[a-zA-Z0-9.]+:\\S",
+                    "pattern": "^[a-zA-Z0-9.-_]+:\\S",
                     "type": "string"
                 },
                 "relationship_type": {
@@ -429,24 +425,11 @@
                 }
             },
             "required": [
-                "id"
+                "id",
+                "relationship_type"
             ],
             "title": "PermanentID",
             "type": "object"
-        },
-        "ProviderType": {
-            "description": "The provider of a resource.",
-            "enum": [
-                "Crossref",
-                "DataCite",
-                "GitHub",
-                "JaLC",
-                "KISTI",
-                "mEDRA",
-                "OP"
-            ],
-            "title": "ProviderType",
-            "type": "string"
         },
         "RelationshipType": {
             "description": "The relationship between two entities",
@@ -513,7 +496,8 @@
                 "Crossref:IsReviewOf",
                 "Crossref:IsSameAs",
                 "Crossref:IsTranslationOf",
-                "Crossref:Replaces"
+                "Crossref:Replaces",
+                "unknown"
             ],
             "title": "RelationshipType",
             "type": "string"
@@ -530,6 +514,10 @@
             "additionalProperties": false,
             "description": "Represents the title or name of a resource, and the type of that title.\n\nThe 'title' field is required; 'title_type' is only necessary if the text is not the primary title.",
             "properties": {
+                "language": {
+                    "description": "The language in which the description is written, using the appropriate IETF BCP-47 notation.",
+                    "type": "string"
+                },
                 "title": {
                     "description": "A string used as a title for a resource",
                     "type": "string"

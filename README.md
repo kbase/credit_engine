@@ -81,3 +81,16 @@ generate a schema diagram (can be visualised at yuml.me):
 ```sh
 gen-yuml schema/kbase/linkml/credit_metadata.yaml
 ```
+
+#### JSONschema data validation
+
+install the JSONschema check script:
+
+```sh
+brew install check-jsonschema
+```
+
+To test a file against the schema, use the command:
+```sh
+check-jsonschema --schemafile schema.json instance.json
+```

@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://commonmeta.org/commonmeta_v0.10.2.json",
-    "title": "Commonmeta v0.10.2",
+    "$id": "https://commonmeta.org/commonmeta_v0.10.8.json",
+    "title": "Commonmeta v0.10.8",
     "description": "JSON representation of the Commonmeta schema.",
     "additionalProperties": false,
     "definitions": {
@@ -134,6 +134,7 @@
                 "Journal",
                 "PeerReview",
                 "PhysicalObject",
+                "Presentation",
                 "ProceedingsArticle",
                 "ProceedingsSeries",
                 "Proceedings",
@@ -141,6 +142,7 @@
                 "ReportSeries",
                 "Report",
                 "Software",
+                "StudyRegistration",
                 "Other"
             ]
         },
@@ -234,42 +236,36 @@
         },
         "date": {
             "description": "The dates for the resource.",
+            "$comment": "The date fields are not required. Dates should be formatted as ISO 8601 dates.",
             "type": "object",
             "properties": {
                 "created": {
                     "description": "The date the resource was created.",
-                    "type": "string",
-                    "format": "date"
+                    "type": "string"
                 },
                 "submitted": {
                     "description": "The date the resource was submitted.",
-                    "type": "string",
-                    "format": "date"
+                    "type": "string"
                 },
                 "accepted": {
                     "description": "The date the resource was accepted.",
-                    "type": "string",
-                    "format": "date"
+                    "type": "string"
                 },
                 "published": {
                     "description": "The date the resource was published.",
-                    "type": "string",
-                    "format": "date"
+                    "type": "string"
                 },
                 "updated": {
                     "description": "The date the resource was updated.",
-                    "type": "string",
-                    "format": "date"
+                    "type": "string"
                 },
                 "available": {
                     "description": "The date the resource was made available.",
-                    "type": "string",
-                    "format": "date"
+                    "type": "string"
                 },
                 "withdrawn": {
                     "description": "The date the resource was withdrawn.",
-                    "type": "string",
-                    "format": "date"
+                    "type": "string"
                 }
             }
         },
@@ -291,6 +287,10 @@
                             "Subtitle",
                             "TranslatedTitle"
                         ]
+                    },
+                    "language": {
+                        "description": "The language of the title. Use one of the language codes from the IETF BCP 47 standard.",
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -302,8 +302,12 @@
             "description": "The container of the resource.",
             "type": "object",
             "properties": {
-                "id": {
+                "identifier": {
                     "description": "The identifier for the container.",
+                    "type": "string"
+                },
+                "identifierType": {
+                    "description": "The identifierType for the container.",
                     "type": "string"
                 },
                 "type": {
@@ -312,16 +316,33 @@
                     "enum": [
                         "Book",
                         "BookSeries",
-                        "DataCatalog",
                         "Journal",
-                        "Periodical",
+                        "Proceedings",
                         "ProceedingsSeries",
                         "Repository",
+                        "DataRepository",
+                        "Periodical",
                         "Series"
                     ]
                 },
                 "title": {
                     "description": "The title of the container.",
+                    "type": "string"
+                },
+                "firstPage": {
+                    "description": "The first page of the resource.",
+                    "type": "string"
+                },
+                "lastPage": {
+                    "description": "The last page of the resource.",
+                    "type": "string"
+                },
+                "volume": {
+                    "description": "The volume of the resource.",
+                    "type": "string"
+                },
+                "issue": {
+                    "description": "The issue of the resource.",
                     "type": "string"
                 }
             }
@@ -455,7 +476,7 @@
                             "Reviews",
                             "IsPreprintOf",
                             "HasPreprint",
-                            "isSupplementTo"
+                            "IsSupplementTo"
                         ]
                     }
                 },
@@ -517,9 +538,15 @@
                         "type": "string",
                         "enum": [
                             "Abstract",
-                            "Description",
-                            "Summary"
+                            "Summary",
+                            "Methods",
+                            "TechnicalInfo",
+                            "Other"
                         ]
+                    },
+                    "language": {
+                        "description": "The language of the title. Use one of the language codes from the IETF BCP 47 standard.",
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -597,7 +624,8 @@
                 "JaLC",
                 "KISTI",
                 "mEDRA",
-                "OP"
+                "OP",
+                "InvenioRDM"
             ]
         },
         "alternate_identifiers": {
@@ -654,6 +682,7 @@
             "description": "The schema version of the resource.",
             "type": "string",
             "enum": [
+                "https://commonmeta.org/commonmeta_v0.10",
                 "http://datacite.org/schema/kernel-3",
                 "http://datacite.org/schema/kernel-4"
             ]
@@ -665,6 +694,22 @@
                 "findable",
                 "not_found"
             ]
+        },
+        "archive_locations": {
+            "description": "The location where content is archived.",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "CLOCKSS",
+                    "LOCKSS",
+                    "Portico",
+                    "KB",
+                    "Internet Archive",
+                    "DWT"
+                ]
+            },
+            "uniqueItems": true
         }
     },
     "required": [
