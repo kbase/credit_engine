@@ -61,7 +61,7 @@ classes:
         slot_uri: schema:identifier
         description: Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.
         range: uriorcurie
-        pattern: "^[a-zA-Z0-9.]+:\\S"
+        pattern: "^[a-zA-Z0-9.-_]+:\\S"
         examples:
         - value: ORCID:0000-0001-9557-7715
         - value: ROR:01znn6x10
@@ -306,7 +306,7 @@ classes:
         description: Resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.
         range: uriorcurie
         required: true
-        pattern: "^[a-zA-Z0-9.]+:\\S"
+        pattern: "^[a-zA-Z0-9.-_]+:\\S"
         examples:
         - value: RefSeq:GCF_004214875.1
         - value: GenBank:CP035949.1
@@ -326,12 +326,6 @@ classes:
           - ORCID:doi
           # it should be possible to generate an URL from a curie
           - ORCID:url
-
-      language:
-        description: The language in which the title and other text relating to the resource is written, using the appropriate IETF BCP-47 notation.
-        examples:
-        - value: ru-Cyrl
-        - value: fr
 
       license:
         slot_uri: schema:license
@@ -459,6 +453,11 @@ classes:
         - value: description
         - value: summary
 
+      language:
+        description: The language in which the description is written, using the appropriate IETF BCP-47 notation.
+        examples:
+        - value: ru-Cyrl
+        - value: fr
 
   EventDate:
     description: |
@@ -529,7 +528,7 @@ classes:
         close_mappings:
         - OSTI:award_doi
         range: uriorcurie
-        pattern: "^[a-zA-Z0-9.]+:\\S"
+        pattern: "^[a-zA-Z0-9.-_]+:\\S"
         examples:
         - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
 
@@ -546,7 +545,7 @@ classes:
           #   - DataCite:attributes.funding_references[].funder_identifier
           #   - Crossref:message.project.funding.funder.id.id
           #   range: uriorcurie
-          #   pattern: "^[a-zA-Z0-9.]+:\\S"
+          #   pattern: "^[a-zA-Z0-9.-_]+:\\S"
           #   examples:
           #   - value: DOI:10.13039/100000015
           #   - value: ISNI:0000000405337147
@@ -610,7 +609,7 @@ classes:
         - DataCite:attributes.contributors[].affiliation.affiliation_identifier
         - DataCite:attributes.creators[].affiliation.affiliation_identifier
         range: uriorcurie
-        pattern: "^[a-zA-Z0-9.]+:\\S"
+        pattern: "^[a-zA-Z0-9.-_]+:\\S"
 
       organization_name:
         slot_uri: schema:name
@@ -631,7 +630,7 @@ classes:
     description: |
       Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.
 
-      The 'id' field is required; all other fields are optional.
+      The 'id' field and 'relationship_type' fields are required.
 
       The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.
 
@@ -663,7 +662,7 @@ classes:
         related_mappings:
         - OSTI:site_url
         range: uriorcurie
-        pattern: "^[a-zA-Z0-9.]+:\\S"
+        pattern: "^[a-zA-Z0-9.-_]+:\\S"
 
       description:
         slot_uri: schema:description
@@ -672,7 +671,7 @@ classes:
         - OSTI:description
         examples:
         - value: Amaranthus hypochondriacus genome
-        - value: This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2
+        - value: This data analysis workflow demonstrates how to process a metagenome to identify viruses using VirSorter. Then, provides taxonomic classification using vConTACT2.
 
       relationship_type:
         description: |
@@ -685,11 +684,17 @@ classes:
 
   Title:
     description: |
-      Represents the title or name of a resource, and the type of that title.
+      Represents the title or name of a resource, the type of that title, and the language used (if appropriate).
 
       The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.
 
     attributes:
+      language:
+        description: The language in which the title is written, using the appropriate IETF BCP-47 notation.
+        examples:
+        - value: ru-Cyrl
+        - value: fr
+
       title:
         slot_uri: schema:name
         # could also be schema:headline if title type is 'title'
@@ -950,24 +955,6 @@ enums:
       relationship_types:
         - RDFS:subClassOf
 
-  ProviderType:
-    description: The provider of a resource.
-    permissible_values:
-      Crossref:
-        description: Crossref
-      DataCite:
-        description: DataCite
-      GitHub:
-        description: GitHub
-      JaLC:
-        description: Japan Link Center
-      KISTI:
-        description: Korea Institute of Science and Technology Information
-      mEDRA:
-        description: multilingual European DOI Registration Agency
-      OP:
-        description: Publications Office of the European Union
-
   RelationshipType:
     description: The relationship between two entities
     permissible_values:
@@ -1160,6 +1147,9 @@ enums:
       Crossref:Replaces:
         meaning: Crossref:Replaces
         title: replaces
+      Unknown:
+        meaning: Relationship type is unknown
+        title: unknown
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
