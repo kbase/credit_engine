@@ -20,38 +20,39 @@ jobs:
             schema/kbase/linkml/credit_metadata.yaml
 
       - name: Set up python
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         uses: actions/setup-python@v4
         with:
           python-version: 3.12
 
       - name: Regenerate JSONSchema bindings for credit metadata schame
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         shell: bash -l {0}
         run: |
           pip3 install linkml # and any other bits and pieces required - I think that's it, though
           gen-json-schema schema/kbase/linkml/credit_metadata.yaml > schema/kbase/jsonschema/credit_metadata.schema.json
 
       - name: Commit regenerated JSONSchema bindings
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Regenerated JSONSchema bindings for credit metadata schema
 
       - name: checkout DTS repo
+        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         uses: actions/checkout@v4
         with:
           repository: kbase/dts
           path: dts
 
       - name: Regenerate DTS Golang bindings for credit metadata schame
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         shell: bash -l {0}
         run: |
           gen-golang schema/kbase/linkml/credit_metadata.yaml > dts/credit/metadata.go
 
       - name: Create DTS pull request with regenerated credit metadata bindings
-        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.PAT }} # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
