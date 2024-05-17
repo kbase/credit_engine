@@ -1,4 +1,5 @@
 """Input error tests for retrieve_dois and retrieve_dois_from_unknown."""
+
 import re
 
 import pytest

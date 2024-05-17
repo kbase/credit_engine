@@ -1,4 +1,5 @@
 """Base functionality for any client retrieving data from a data source."""
+
 import types
 from enum import Enum
 from typing import Any
