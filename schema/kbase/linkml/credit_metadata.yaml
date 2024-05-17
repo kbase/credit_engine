@@ -1127,7 +1127,7 @@ enums:
         meaning: Crossref:Replaces
         title: replaces
       kbcms:Unknown:
-        meaning: Relationship type is unknown
+        # meaning: Relationship type is unknown
         title: unknown
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
