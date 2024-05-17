@@ -25,11 +25,15 @@ jobs:
         with:
           python-version: 3.12
 
+      - name: Install linkml
+        shell: bash -l {0}
+        run: |
+          pip3 install linkml
+
       - name: Regenerate JSONSchema bindings for credit metadata schame
         if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         shell: bash -l {0}
         run: |
-          pip3 install linkml # and any other bits and pieces required - I think that's it, though
           gen-json-schema schema/kbase/linkml/credit_metadata.yaml > schema/kbase/jsonschema/credit_metadata.schema.json
 
       - name: Commit regenerated JSONSchema bindings
