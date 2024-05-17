@@ -394,14 +394,14 @@ examples:
 - value: Ransome the Clown
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- JGI:organisms[].pi.name
+- JGI:organisms.pi.name
 - ORCID:name
 close_mappings:
-- OSTI:author
-- OSTI:contributor
+- OSTI.ARTICLE:author
+- OSTI.ARTICLE:contributor
 related_mappings:
-- DataCite:attributes.creators[].name
-- DataCite:attributes.contributors[].name
+- DataCite:attributes.creators.name
+- DataCite:attributes.contributors.name
 rank: 1000
 slot_uri: schema:name
 alias: name

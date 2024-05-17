@@ -354,7 +354,7 @@
 <p>Range: <a href="../Uriorcurie/">Uriorcurie</a></p>
 </li>
 <li>
-<p>Regex pattern: <code>^[a-zA-Z0-9.]+:\S</code></p>
+<p>Regex pattern: <code>^[a-zA-Z0-9.-_]+:\S</code></p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -393,8 +393,8 @@ examples:
 - value: CrossrefFunder:100000015
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.contributors[].affiliation.affiliation_identifier
-- DataCite:attributes.creators[].affiliation.affiliation_identifier
+- DataCite:attributes.contributors.affiliation.affiliation_identifier
+- DataCite:attributes.creators.affiliation.affiliation_identifier
 rank: 1000
 slot_uri: schema:identifier
 alias: organization_id
@@ -402,7 +402,7 @@ owner: Organization
 domain_of:
 - Organization
 range: uriorcurie
-pattern: ^[a-zA-Z0-9.]+:\S
+pattern: ^[a-zA-Z0-9.-_]+:\S
 
 </code></pre>
 

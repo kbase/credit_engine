@@ -383,8 +383,8 @@ examples:
 - value: Organization
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.contributors[].name_type
-- DataCite:attributes.creators[].name_type
+- DataCite:attributes.contributors.name_type
+- DataCite:attributes.creators.name_type
 rank: 1000
 slot_uri: schema:@type
 alias: contributor_type

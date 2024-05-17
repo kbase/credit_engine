@@ -385,11 +385,11 @@ examples:
 - value: dataset
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- OSTI:product_type
-- OSTI:workType
+- OSTI.ARTICLE:product_type
+- OSTI.ARTICLE:workType
 - DataCite:attributes.types.schema_org
 narrow_mappings:
-- OSTI:dataset_type
+- OSTI.ARTICLE:dataset_type
 rank: 1000
 slot_uri: schema:@type
 alias: resource_type

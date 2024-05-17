@@ -364,11 +364,11 @@ description: List of organizations with which the contributor is affiliated. For
   DOE; Arkin lab, LBNL).
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 related_mappings:
-- DataCite:attributes.contributors[].affiliation[]
-- DataCite:attributes.creators[].affiliation[]
-- JGI:organisms[].pi.institution
+- DataCite:attributes.contributors.affiliation
+- DataCite:attributes.creators.affiliation
+- JGI:organisms.pi.institution
 narrow_mappings:
-- OSTI:contributor.affiliation_name
+- OSTI.ARTICLE:contributor.affiliation_name
 rank: 1000
 slot_uri: schema:affiliation
 multivalued: true

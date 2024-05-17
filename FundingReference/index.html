@@ -300,7 +300,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>kbcm:FundingReference</td>
+<td>kbcms:FundingReference</td>
 </tr>
 </tbody>
 </table>
@@ -327,11 +327,11 @@ attributes:
     - value: DOI:10.46936/10.25585/60000745
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.funding_references[].award_number
+    - DataCite:attributes.funding_references.award_number
     - Crossref:message.award
     narrow_mappings:
-    - OSTI:award_doi
-    - OSTI:award_number
+    - OSTI.ARTICLE:award_doi
+    - OSTI.ARTICLE:award_number
     rank: 1000
     slot_uri: schema:identifier
   grant_title:
@@ -342,7 +342,7 @@ attributes:
         KBS intensive site
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.funding_references[].award_title
+    - DataCite:attributes.funding_references.award_title
     rank: 1000
     slot_uri: schema:name
   grant_url:
@@ -352,13 +352,13 @@ attributes:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.funding_references[].award_url
+    - DataCite:attributes.funding_references.award_url
     close_mappings:
-    - OSTI:award_doi
+    - OSTI.ARTICLE:award_doi
     rank: 1000
     slot_uri: schema:url
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   funder:
     name: funder
     description: The funder for the grant or award
@@ -391,11 +391,11 @@ attributes:
     - value: DOI:10.46936/10.25585/60000745
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.funding_references[].award_number
+    - DataCite:attributes.funding_references.award_number
     - Crossref:message.award
     narrow_mappings:
-    - OSTI:award_doi
-    - OSTI:award_number
+    - OSTI.ARTICLE:award_doi
+    - OSTI.ARTICLE:award_number
     rank: 1000
     slot_uri: schema:identifier
     alias: grant_id
@@ -411,7 +411,7 @@ attributes:
         KBS intensive site
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.funding_references[].award_title
+    - DataCite:attributes.funding_references.award_title
     rank: 1000
     slot_uri: schema:name
     alias: grant_title
@@ -426,9 +426,9 @@ attributes:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.funding_references[].award_url
+    - DataCite:attributes.funding_references.award_url
     close_mappings:
-    - OSTI:award_doi
+    - OSTI.ARTICLE:award_doi
     rank: 1000
     slot_uri: schema:url
     alias: grant_url
@@ -436,7 +436,7 @@ attributes:
     domain_of:
     - FundingReference
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   funder:
     name: funder
     description: The funder for the grant or award

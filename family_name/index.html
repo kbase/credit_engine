@@ -328,7 +328,7 @@
 
 <h1 id="slot-family_name">Slot: family_name</h1>
 <p><em>The family name(s) of the contributor.</em></p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/family_name">kbcm:family_name</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/family_name">kbcms:family_name</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -387,8 +387,8 @@ examples:
 - value: Wells
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 related_mappings:
-- DataCite:attributes.contributors[].familyName
-- DataCite:attributes.creators[].familyName
+- DataCite:attributes.contributors.familyName
+- DataCite:attributes.creators.familyName
 rank: 1000
 alias: family_name
 owner: Contributor

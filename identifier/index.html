@@ -357,7 +357,7 @@
 <p>Required: True</p>
 </li>
 <li>
-<p>Regex pattern: <code>^[a-zA-Z0-9.]+:\S</code></p>
+<p>Regex pattern: <code>^[a-zA-Z0-9.-_]+:\S</code></p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -397,10 +397,10 @@ examples:
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
 - DataCite:id
-- JGI:organisms[].grouped_by
+- JGI:organisms.grouped_by
 narrow_mappings:
-- OSTI:osti_id
-- OSTI:doi
+- OSTI.ARTICLE:osti_id
+- OSTI.ARTICLE:doi
 - ORCID:doi
 - ORCID:url
 rank: 1000
@@ -411,7 +411,7 @@ domain_of:
 - CreditMetadata
 range: uriorcurie
 required: true
-pattern: ^[a-zA-Z0-9.]+:\S
+pattern: ^[a-zA-Z0-9.-_]+:\S
 
 </code></pre>
 

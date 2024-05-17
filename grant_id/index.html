@@ -387,11 +387,11 @@ examples:
 - value: DOI:10.46936/10.25585/60000745
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.funding_references[].award_number
+- DataCite:attributes.funding_references.award_number
 - Crossref:message.award
 narrow_mappings:
-- OSTI:award_doi
-- OSTI:award_number
+- OSTI.ARTICLE:award_doi
+- OSTI.ARTICLE:award_number
 rank: 1000
 slot_uri: schema:identifier
 alias: grant_id

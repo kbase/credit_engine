@@ -362,13 +362,13 @@
 description: List of roles played by the contributor when working on the resource.
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.contributors[].contributor_type
-- DataCite:attributes.creators[].contributor_type
+- DataCite:attributes.contributors.contributor_type
+- DataCite:attributes.creators.contributor_type
 close_mappings:
 - ORCID:contributor.role
-- OSTI:contributor.contributorType
+- OSTI.ARTICLE:contributor.contributorType
 related_mappings:
-- JGI:organisms[].pi
+- JGI:organisms.pi
 rank: 1000
 slot_uri: schema:Role
 multivalued: true

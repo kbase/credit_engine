@@ -225,7 +225,7 @@
 <p><em>The resource_type field is required, but as there is currently only a single valid</em></p>
 <p><em>value, 'dataset', it is automatically populated if no value is supplied.</em></p>
 <p>__</p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/CreditMetadata">kbcm:CreditMetadata</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/CreditMetadata">kbcms:CreditMetadata</a></p>
 <div class="mermaid"> classDiagram
     class CreditMetadata
       CreditMetadata : comment
@@ -235,6 +235,8 @@
       CreditMetadata : contributors
 
           CreditMetadata --|&gt; Contributor : contributors
+
+      CreditMetadata : credit_metadata_source
 
       CreditMetadata : dates
 
@@ -250,15 +252,9 @@
 
       CreditMetadata : identifier
 
-      CreditMetadata : language
-
       CreditMetadata : license
 
           CreditMetadata --|&gt; License : license
-
-      CreditMetadata : provider
-
-          CreditMetadata --|&gt; ProviderType : provider
 
       CreditMetadata : publisher
 
@@ -313,6 +309,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../credit_metadata_source/">credit_metadata_source</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>A list of CURIEs, URIs, or free text entries denoting the source of the credi...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../dates/">dates</a></td>
 <td>0..* <br/> <a href="../EventDate/">EventDate</a></td>
 <td>A list of relevant lifecycle events for the resource</td>
@@ -337,21 +339,9 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../language/">language</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The language in which the title and other text relating to the resource is wr...</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../license/">license</a></td>
 <td>0..1 <br/> <a href="../License/">License</a></td>
 <td>Usage license for the resource</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../provider/">provider</a></td>
-<td>0..1 <br/> <a href="../ProviderType/">ProviderType</a></td>
-<td>The provider of the resource</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -427,11 +417,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>kbcm:CreditMetadata</td>
+<td>kbcms:CreditMetadata</td>
 </tr>
 <tr>
 <td>native</td>
-<td>kbcm:CreditMetadata</td>
+<td>kbcms:CreditMetadata</td>
 </tr>
 </tbody>
 </table>
@@ -495,7 +485,7 @@ attributes:
     description: List of strings of freeform text providing extra information about
       this credit metadata.
     examples:
-    - value: '[''Credit metadata generated automatically from DOI:10.13039/100000015'']'
+    - value: This comment adds a lot of extra value!
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:comment
@@ -519,9 +509,9 @@ attributes:
     - DataCite:attributes.contributors
     - DataCite:attributes.creators
     - ORCID:contributors
-    - OSTI:contributors
-    - OSTI:authors
-    - JGI:organisms[].pi
+    - OSTI.ARTICLE:contributors
+    - OSTI.ARTICLE:authors
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:creator
     multivalued: true
@@ -529,20 +519,31 @@ attributes:
     required: true
     inlined: true
     inlined_as_list: true
+  credit_metadata_source:
+    name: credit_metadata_source
+    description: A list of CURIEs, URIs, or free text entries denoting the source
+      of the credit metadata.
+    examples:
+    - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
+    - value: DataCite
+    - value: DOI:10.13039/100000015
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    rank: 1000
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   dates:
     name: dates
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
-    examples:
-    - value: JsonObj(date=datetime.date(2022, 5, 10), event='available')
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     close_mappings:
     - DataCite:attributes.published
     - DataCite:attributes.updated
-    - DataCite:attributes.dates[]
+    - DataCite:attributes.dates
     - ORCID:publicationDate
-    - OSTI:publication_date
+    - OSTI.ARTICLE:publication_date
     - Crossref:message.deposited
     rank: 1000
     multivalued: true
@@ -564,7 +565,7 @@ attributes:
     close_mappings:
     - DataCite:attributes.funding_references
     - Crossref:Message.project.funding
-    - OSTI:awards
+    - OSTI.ARTICLE:awards
     rank: 1000
     slot_uri: schema:funding
     multivalued: true
@@ -582,26 +583,17 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - DataCite:id
-    - JGI:organisms[].grouped_by
+    - JGI:organisms.grouped_by
     narrow_mappings:
-    - OSTI:osti_id
-    - OSTI:doi
+    - OSTI.ARTICLE:osti_id
+    - OSTI.ARTICLE:doi
     - ORCID:doi
     - ORCID:url
     rank: 1000
     slot_uri: schema:identifier
     range: uriorcurie
     required: true
-    pattern: ^[a-zA-Z0-9.]+:\S
-  language:
-    name: language
-    description: The language in which the title and other text relating to the resource
-      is written, using the appropriate IETF BCP-47 notation.
-    examples:
-    - value: ru-Cyrl
-    - value: fr
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    rank: 1000
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   license:
     name: license
     description: 'Usage license for the resource. Use one of the SPDX license identifiers
@@ -612,10 +604,6 @@ attributes:
       Commons 4.0 license.
 
       '
-    examples:
-    - value: JsonObj(id='CC-BY-NC-ND-4.0')
-    - value: JsonObj(id='MIT OR Apache-2.0')
-    - value: JsonObj(url='https://jgi.doe.gov/user-programs/pmo-overview/policies/')
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - biolink:license
@@ -624,16 +612,6 @@ attributes:
     rank: 1000
     slot_uri: schema:license
     range: License
-  provider:
-    name: provider
-    description: The provider of the resource. This can be a DOI registration agency
-      or a repository.
-    examples:
-    - value: DataCite
-    - value: OP
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    rank: 1000
-    range: ProviderType
   publisher:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
@@ -641,7 +619,7 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     narrow_mappings:
     - ORCID:url
-    - OSTI:site_url
+    - OSTI.ARTICLE:site_url
     rank: 1000
     slot_uri: schema:provider
     range: Organization
@@ -654,10 +632,10 @@ attributes:
     - DataCite:attributes.related_identifiers
     - DataCite:attributes.alternate_identifiers
     - ORCID:externalIds
-    - OSTI:related_identifiers
+    - OSTI.ARTICLE:related_identifiers
     narrow_mappings:
     - ORCID:doi
-    - OSTI:doi
+    - OSTI.ARTICLE:doi
     rank: 1000
     multivalued: true
     range: PermanentID
@@ -671,11 +649,11 @@ attributes:
     - value: dataset
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - OSTI:product_type
-    - OSTI:workType
+    - OSTI.ARTICLE:product_type
+    - OSTI.ARTICLE:workType
     - DataCite:attributes.types.schema_org
     narrow_mappings:
-    - OSTI:dataset_type
+    - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
     range: ResourceType
@@ -683,16 +661,11 @@ attributes:
   titles:
     name: titles
     description: One or more titles for the resource.
-    examples:
-    - value: '[{''title'': ''Amaranthus hypochondriacus genome''}]'
-    - value: '[{''title'': ''Геном амаранта ипохондрического'', ''title_type'': ''translated_title''}]'
-    - value: '[{''title'': ''I know what genome you sequenced last summer'', ''title_type'':
-        ''alternative_title''}]'
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.titles[]
+    - DataCite:attributes.titles
     - ORCID:title
-    - OSTI:title
+    - OSTI.ARTICLE:title
     rank: 1000
     multivalued: true
     range: Title
@@ -779,7 +752,7 @@ attributes:
     description: List of strings of freeform text providing extra information about
       this credit metadata.
     examples:
-    - value: '[''Credit metadata generated automatically from DOI:10.13039/100000015'']'
+    - value: This comment adds a lot of extra value!
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     slot_uri: schema:comment
@@ -812,9 +785,9 @@ attributes:
     - DataCite:attributes.contributors
     - DataCite:attributes.creators
     - ORCID:contributors
-    - OSTI:contributors
-    - OSTI:authors
-    - JGI:organisms[].pi
+    - OSTI.ARTICLE:contributors
+    - OSTI.ARTICLE:authors
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:creator
     multivalued: true
@@ -826,20 +799,36 @@ attributes:
     required: true
     inlined: true
     inlined_as_list: true
+  credit_metadata_source:
+    name: credit_metadata_source
+    description: A list of CURIEs, URIs, or free text entries denoting the source
+      of the credit metadata.
+    examples:
+    - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
+    - value: DataCite
+    - value: DOI:10.13039/100000015
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    rank: 1000
+    multivalued: true
+    alias: credit_metadata_source
+    owner: CreditMetadata
+    domain_of:
+    - CreditMetadata
+    range: string
+    inlined: true
+    inlined_as_list: true
   dates:
     name: dates
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
-    examples:
-    - value: JsonObj(date=datetime.date(2022, 5, 10), event='available')
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     close_mappings:
     - DataCite:attributes.published
     - DataCite:attributes.updated
-    - DataCite:attributes.dates[]
+    - DataCite:attributes.dates
     - ORCID:publicationDate
-    - OSTI:publication_date
+    - OSTI.ARTICLE:publication_date
     - Crossref:message.deposited
     rank: 1000
     multivalued: true
@@ -869,7 +858,7 @@ attributes:
     close_mappings:
     - DataCite:attributes.funding_references
     - Crossref:Message.project.funding
-    - OSTI:awards
+    - OSTI.ARTICLE:awards
     rank: 1000
     slot_uri: schema:funding
     multivalued: true
@@ -891,10 +880,10 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - DataCite:id
-    - JGI:organisms[].grouped_by
+    - JGI:organisms.grouped_by
     narrow_mappings:
-    - OSTI:osti_id
-    - OSTI:doi
+    - OSTI.ARTICLE:osti_id
+    - OSTI.ARTICLE:doi
     - ORCID:doi
     - ORCID:url
     rank: 1000
@@ -905,21 +894,7 @@ attributes:
     - CreditMetadata
     range: uriorcurie
     required: true
-    pattern: ^[a-zA-Z0-9.]+:\S
-  language:
-    name: language
-    description: The language in which the title and other text relating to the resource
-      is written, using the appropriate IETF BCP-47 notation.
-    examples:
-    - value: ru-Cyrl
-    - value: fr
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    rank: 1000
-    alias: language
-    owner: CreditMetadata
-    domain_of:
-    - CreditMetadata
-    range: string
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   license:
     name: license
     description: 'Usage license for the resource. Use one of the SPDX license identifiers
@@ -930,10 +905,6 @@ attributes:
       Commons 4.0 license.
 
       '
-    examples:
-    - value: JsonObj(id='CC-BY-NC-ND-4.0')
-    - value: JsonObj(id='MIT OR Apache-2.0')
-    - value: JsonObj(url='https://jgi.doe.gov/user-programs/pmo-overview/policies/')
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - biolink:license
@@ -946,20 +917,6 @@ attributes:
     domain_of:
     - CreditMetadata
     range: License
-  provider:
-    name: provider
-    description: The provider of the resource. This can be a DOI registration agency
-      or a repository.
-    examples:
-    - value: DataCite
-    - value: OP
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    rank: 1000
-    alias: provider
-    owner: CreditMetadata
-    domain_of:
-    - CreditMetadata
-    range: ProviderType
   publisher:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
@@ -967,7 +924,7 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     narrow_mappings:
     - ORCID:url
-    - OSTI:site_url
+    - OSTI.ARTICLE:site_url
     rank: 1000
     slot_uri: schema:provider
     alias: publisher
@@ -984,10 +941,10 @@ attributes:
     - DataCite:attributes.related_identifiers
     - DataCite:attributes.alternate_identifiers
     - ORCID:externalIds
-    - OSTI:related_identifiers
+    - OSTI.ARTICLE:related_identifiers
     narrow_mappings:
     - ORCID:doi
-    - OSTI:doi
+    - OSTI.ARTICLE:doi
     rank: 1000
     multivalued: true
     alias: related_identifiers
@@ -1005,11 +962,11 @@ attributes:
     - value: dataset
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - OSTI:product_type
-    - OSTI:workType
+    - OSTI.ARTICLE:product_type
+    - OSTI.ARTICLE:workType
     - DataCite:attributes.types.schema_org
     narrow_mappings:
-    - OSTI:dataset_type
+    - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
     alias: resource_type
@@ -1021,16 +978,11 @@ attributes:
   titles:
     name: titles
     description: One or more titles for the resource.
-    examples:
-    - value: '[{''title'': ''Amaranthus hypochondriacus genome''}]'
-    - value: '[{''title'': ''Геном амаранта ипохондрического'', ''title_type'': ''translated_title''}]'
-    - value: '[{''title'': ''I know what genome you sequenced last summer'', ''title_type'':
-        ''alternative_title''}]'
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.titles[]
+    - DataCite:attributes.titles
     - ORCID:title
-    - OSTI:title
+    - OSTI.ARTICLE:title
     rank: 1000
     multivalued: true
     alias: titles

@@ -199,7 +199,7 @@
 <h1 id="class-permanentid">Class: PermanentID</h1>
 <p><em>Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.</em></p>
 <p>__</p>
-<p><em>The 'id' field is required; all other fields are optional.</em></p>
+<p><em>The 'id' field and 'relationship_type' fields are required.</em></p>
 <p>__</p>
 <p><em>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.</em></p>
 <p>__</p>
@@ -207,7 +207,7 @@
 <p>__</p>
 <p><em>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/</em></p>
 <p>__</p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/PermanentID">kbcm:PermanentID</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/PermanentID">kbcms:PermanentID</a></p>
 <div class="mermaid"> classDiagram
     class PermanentID
       PermanentID : description
@@ -287,11 +287,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>kbcm:PermanentID</td>
+<td>kbcms:PermanentID</td>
 </tr>
 <tr>
 <td>native</td>
-<td>kbcm:PermanentID</td>
+<td>kbcms:PermanentID</td>
 </tr>
 </tbody>
 </table>
@@ -304,7 +304,7 @@ description: 'Represents a persistent unique identifier for an entity, with an o
   relationship to some other entity.
 
 
-  The ''id'' field is required; all other fields are optional.
+  The ''id'' field and ''relationship_type'' fields are required.
 
 
   The values in the ''relationship_type'' field come from controlled vocabularies
@@ -331,16 +331,16 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - DataCite:attributes.identifier.value
-    - DataCite:attributes.alternate_identifiers[]
-    - DataCite:attributes.related_identifiers[]
-    - DataCite:attributes.identifiers[]
+    - DataCite:attributes.alternate_identifiers
+    - DataCite:attributes.related_identifiers
+    - DataCite:attributes.identifiers
     related_mappings:
-    - OSTI:site_url
+    - OSTI.ARTICLE:site_url
     slot_uri: schema:identifier
     identifier: true
     range: uriorcurie
     required: true
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   description:
     name: description
     description: Description of that entity.
@@ -348,10 +348,10 @@ attributes:
     - value: Amaranthus hypochondriacus genome
     - value: This data analysis workflow demonstrates how to process a metagenome
         to identify viruses using VirSorter. Then, provides taxonomic classification
-        using vConTACT2
+        using vConTACT2.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - OSTI:description
+    - OSTI.ARTICLE:description
     rank: 1000
     slot_uri: schema:description
   relationship_type:
@@ -365,7 +365,7 @@ attributes:
       '
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.related_identifiers[].relation_type
+    - DataCite:attributes.related_identifiers.relation_type
     rank: 1000
     range: RelationshipType
 
@@ -378,7 +378,7 @@ description: 'Represents a persistent unique identifier for an entity, with an o
   relationship to some other entity.
 
 
-  The ''id'' field is required; all other fields are optional.
+  The ''id'' field and ''relationship_type'' fields are required.
 
 
   The values in the ''relationship_type'' field come from controlled vocabularies
@@ -405,11 +405,11 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
     - DataCite:attributes.identifier.value
-    - DataCite:attributes.alternate_identifiers[]
-    - DataCite:attributes.related_identifiers[]
-    - DataCite:attributes.identifiers[]
+    - DataCite:attributes.alternate_identifiers
+    - DataCite:attributes.related_identifiers
+    - DataCite:attributes.identifiers
     related_mappings:
-    - OSTI:site_url
+    - OSTI.ARTICLE:site_url
     slot_uri: schema:identifier
     identifier: true
     alias: id
@@ -419,7 +419,7 @@ attributes:
     - PermanentID
     range: uriorcurie
     required: true
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   description:
     name: description
     description: Description of that entity.
@@ -427,10 +427,10 @@ attributes:
     - value: Amaranthus hypochondriacus genome
     - value: This data analysis workflow demonstrates how to process a metagenome
         to identify viruses using VirSorter. Then, provides taxonomic classification
-        using vConTACT2
+        using vConTACT2.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - OSTI:description
+    - OSTI.ARTICLE:description
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -449,7 +449,7 @@ attributes:
       '
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.related_identifiers[].relation_type
+    - DataCite:attributes.related_identifiers.relation_type
     rank: 1000
     alias: relationship_type
     owner: PermanentID

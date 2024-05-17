@@ -210,7 +210,7 @@
 <p>__</p>
 <p><em>CRediT contributor role taxonomy: https://credit.niso.org</em></p>
 <p>__</p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/Contributor">kbcm:Contributor</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/Contributor">kbcms:Contributor</a></p>
 <div class="mermaid"> classDiagram
     class Contributor
       Contributor : affiliations
@@ -326,11 +326,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>kbcm:Contributor</td>
+<td>kbcms:Contributor</td>
 </tr>
 <tr>
 <td>native</td>
-<td>kbcm:Contributor</td>
+<td>kbcms:Contributor</td>
 </tr>
 </tbody>
 </table>
@@ -372,8 +372,8 @@ attributes:
     - value: Organization
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].name_type
-    - DataCite:attributes.creators[].name_type
+    - DataCite:attributes.contributors.name_type
+    - DataCite:attributes.creators.name_type
     rank: 1000
     slot_uri: schema:@type
     range: ContributorType
@@ -386,17 +386,17 @@ attributes:
     - value: ROR:01znn6x10
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].name_identifiers[].name_identifier
-    - DataCite:attributes.creators[].name_identifiers[].name_identifier
+    - DataCite:attributes.contributors.name_identifiers.name_identifier
+    - DataCite:attributes.creators.name_identifiers.name_identifier
     narrow_mappings:
     - ORCID:contributor.orcidId
-    - OSTI:author.orcid_id
-    - OSTI:contributor.orcid_id
+    - OSTI.ARTICLE:author.orcid_id
+    - OSTI.ARTICLE:contributor.orcid_id
     - Crossref:message.project.funding.funder.name
     rank: 1000
     slot_uri: schema:identifier
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   name:
     name: name
     description: Contributor name. For organizations, this should be the full (unabbreviated)
@@ -408,14 +408,14 @@ attributes:
     - value: Ransome the Clown
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - JGI:organisms[].pi.name
+    - JGI:organisms.pi.name
     - ORCID:name
     close_mappings:
-    - OSTI:author
-    - OSTI:contributor
+    - OSTI.ARTICLE:author
+    - OSTI.ARTICLE:contributor
     related_mappings:
-    - DataCite:attributes.creators[].name
-    - DataCite:attributes.contributors[].name
+    - DataCite:attributes.creators.name
+    - DataCite:attributes.contributors.name
     rank: 1000
     slot_uri: schema:name
     required: true
@@ -428,8 +428,8 @@ attributes:
     - value: Hubert George
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     related_mappings:
-    - DataCite:attributes.contributors[].givenName
-    - DataCite:attributes.creators[].givenName
+    - DataCite:attributes.contributors.givenName
+    - DataCite:attributes.creators.givenName
     rank: 1000
   family_name:
     name: family_name
@@ -440,8 +440,8 @@ attributes:
     - value: Wells
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     related_mappings:
-    - DataCite:attributes.contributors[].familyName
-    - DataCite:attributes.creators[].familyName
+    - DataCite:attributes.contributors.familyName
+    - DataCite:attributes.creators.familyName
     rank: 1000
   affiliations:
     name: affiliations
@@ -450,11 +450,11 @@ attributes:
       (e.g. KBase, US DOE; Arkin lab, LBNL).
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     related_mappings:
-    - DataCite:attributes.contributors[].affiliation[]
-    - DataCite:attributes.creators[].affiliation[]
-    - JGI:organisms[].pi.institution
+    - DataCite:attributes.contributors.affiliation
+    - DataCite:attributes.creators.affiliation
+    - JGI:organisms.pi.institution
     narrow_mappings:
-    - OSTI:contributor.affiliation_name
+    - OSTI.ARTICLE:contributor.affiliation_name
     rank: 1000
     slot_uri: schema:affiliation
     multivalued: true
@@ -466,13 +466,13 @@ attributes:
     description: List of roles played by the contributor when working on the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].contributor_type
-    - DataCite:attributes.creators[].contributor_type
+    - DataCite:attributes.contributors.contributor_type
+    - DataCite:attributes.creators.contributor_type
     close_mappings:
     - ORCID:contributor.role
-    - OSTI:contributor.contributorType
+    - OSTI.ARTICLE:contributor.contributorType
     related_mappings:
-    - JGI:organisms[].pi
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:Role
     multivalued: true
@@ -516,8 +516,8 @@ attributes:
     - value: Organization
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].name_type
-    - DataCite:attributes.creators[].name_type
+    - DataCite:attributes.contributors.name_type
+    - DataCite:attributes.creators.name_type
     rank: 1000
     slot_uri: schema:@type
     alias: contributor_type
@@ -534,12 +534,12 @@ attributes:
     - value: ROR:01znn6x10
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].name_identifiers[].name_identifier
-    - DataCite:attributes.creators[].name_identifiers[].name_identifier
+    - DataCite:attributes.contributors.name_identifiers.name_identifier
+    - DataCite:attributes.creators.name_identifiers.name_identifier
     narrow_mappings:
     - ORCID:contributor.orcidId
-    - OSTI:author.orcid_id
-    - OSTI:contributor.orcid_id
+    - OSTI.ARTICLE:author.orcid_id
+    - OSTI.ARTICLE:contributor.orcid_id
     - Crossref:message.project.funding.funder.name
     rank: 1000
     slot_uri: schema:identifier
@@ -548,7 +548,7 @@ attributes:
     domain_of:
     - Contributor
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   name:
     name: name
     description: Contributor name. For organizations, this should be the full (unabbreviated)
@@ -560,14 +560,14 @@ attributes:
     - value: Ransome the Clown
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - JGI:organisms[].pi.name
+    - JGI:organisms.pi.name
     - ORCID:name
     close_mappings:
-    - OSTI:author
-    - OSTI:contributor
+    - OSTI.ARTICLE:author
+    - OSTI.ARTICLE:contributor
     related_mappings:
-    - DataCite:attributes.creators[].name
-    - DataCite:attributes.contributors[].name
+    - DataCite:attributes.creators.name
+    - DataCite:attributes.contributors.name
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -585,8 +585,8 @@ attributes:
     - value: Hubert George
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     related_mappings:
-    - DataCite:attributes.contributors[].givenName
-    - DataCite:attributes.creators[].givenName
+    - DataCite:attributes.contributors.givenName
+    - DataCite:attributes.creators.givenName
     rank: 1000
     alias: given_name
     owner: Contributor
@@ -602,8 +602,8 @@ attributes:
     - value: Wells
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     related_mappings:
-    - DataCite:attributes.contributors[].familyName
-    - DataCite:attributes.creators[].familyName
+    - DataCite:attributes.contributors.familyName
+    - DataCite:attributes.creators.familyName
     rank: 1000
     alias: family_name
     owner: Contributor
@@ -617,11 +617,11 @@ attributes:
       (e.g. KBase, US DOE; Arkin lab, LBNL).
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     related_mappings:
-    - DataCite:attributes.contributors[].affiliation[]
-    - DataCite:attributes.creators[].affiliation[]
-    - JGI:organisms[].pi.institution
+    - DataCite:attributes.contributors.affiliation
+    - DataCite:attributes.creators.affiliation
+    - JGI:organisms.pi.institution
     narrow_mappings:
-    - OSTI:contributor.affiliation_name
+    - OSTI.ARTICLE:contributor.affiliation_name
     rank: 1000
     slot_uri: schema:affiliation
     multivalued: true
@@ -636,13 +636,13 @@ attributes:
     description: List of roles played by the contributor when working on the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].contributor_type
-    - DataCite:attributes.creators[].contributor_type
+    - DataCite:attributes.contributors.contributor_type
+    - DataCite:attributes.creators.contributor_type
     close_mappings:
     - ORCID:contributor.role
-    - OSTI:contributor.contributorType
+    - OSTI.ARTICLE:contributor.contributorType
     related_mappings:
-    - JGI:organisms[].pi
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:Role
     multivalued: true

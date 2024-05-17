@@ -454,12 +454,12 @@ value, 'dataset', it is automatically populated if no value is supplied.
   organization_id:   ROR:01bj3aw27
  |
 | <a href="PermanentID/">PermanentID</a> | Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.</p>
-<p>The 'id' field is required; all other fields are optional.</p>
+<p>The 'id' field and 'relationship_type' fields are required.</p>
 <p>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.</p>
 <p>DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype</p>
 <p>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/
  |
-| <a href="Title/">Title</a> | Represents the title or name of a resource, and the type of that title.</p>
+| <a href="Title/">Title</a> | Represents the title or name of a resource, the type of that title, and the language used (if appropriate).</p>
 <p>The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.
  |</p>
 <h2 id="slots">Slots</h2>
@@ -506,6 +506,10 @@ value, 'dataset', it is automatically populated if no value is supplied.
 <tr>
 <td><a href="credit_metadata_schema_version/">credit_metadata_schema_version</a></td>
 <td>The version of the credit metadata schema used</td>
+</tr>
+<tr>
+<td><a href="credit_metadata_source/">credit_metadata_source</a></td>
+<td>A list of CURIEs, URIs, or free text entries denoting the source of the credi...</td>
 </tr>
 <tr>
 <td><a href="date/">date</a></td>
@@ -573,7 +577,7 @@ value, 'dataset', it is automatically populated if no value is supplied.
 </tr>
 <tr>
 <td><a href="language/">language</a></td>
-<td>The language in which the title and other text relating to the resource is wr...</td>
+<td>The language in which the description is written, using the appropriate IETF ...</td>
 </tr>
 <tr>
 <td><a href="license/">license</a></td>
@@ -590,10 +594,6 @@ value, 'dataset', it is automatically populated if no value is supplied.
 <tr>
 <td><a href="organization_name/">organization_name</a></td>
 <td>Common name of the organization; use the name recommended by ROR if possible</td>
-</tr>
-<tr>
-<td><a href="provider/">provider</a></td>
-<td>The provider of the resource</td>
 </tr>
 <tr>
 <td><a href="publisher/">publisher</a></td>
@@ -665,10 +665,6 @@ value, 'dataset', it is automatically populated if no value is supplied.
 <tr>
 <td><a href="EventType/">EventType</a></td>
 <td>The type of date being represented</td>
-</tr>
-<tr>
-<td><a href="ProviderType/">ProviderType</a></td>
-<td>The provider of a resource</td>
 </tr>
 <tr>
 <td><a href="RelationshipType/">RelationshipType</a></td>

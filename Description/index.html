@@ -198,7 +198,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-description">Class: Description</h1>
 <p><em>Textual information about the resource being represented.</em></p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/Description">kbcm:Description</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/Description">kbcms:Description</a></p>
 <div class="mermaid"> classDiagram
     class Description
       Description : description_text
@@ -206,6 +206,8 @@
       Description : description_type
 
           Description --|&gt; DescriptionType : description_type
+
+      Description : language
 
 
 </div>
@@ -231,6 +233,12 @@
 <td><a href="../description_type/">description_type</a></td>
 <td>0..1 <br/> <a href="../DescriptionType/">DescriptionType</a></td>
 <td>The type of text being represented</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../language/">language</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The language in which the description is written, using the appropriate IETF ...</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -270,11 +278,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>kbcm:Description</td>
+<td>kbcms:Description</td>
 </tr>
 <tr>
 <td>native</td>
-<td>kbcm:Description</td>
+<td>kbcms:Description</td>
 </tr>
 </tbody>
 </table>
@@ -304,6 +312,15 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     rank: 1000
     range: DescriptionType
+  language:
+    name: language
+    description: The language in which the description is written, using the appropriate
+      IETF BCP-47 notation.
+    examples:
+    - value: ru-Cyrl
+    - value: fr
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    rank: 1000
 
 </code></pre>
 </details>
@@ -340,6 +357,21 @@ attributes:
     domain_of:
     - Description
     range: DescriptionType
+  language:
+    name: language
+    description: The language in which the description is written, using the appropriate
+      IETF BCP-47 notation.
+    examples:
+    - value: ru-Cyrl
+    - value: fr
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    rank: 1000
+    alias: language
+    owner: Description
+    domain_of:
+    - Description
+    - Title
+    range: string
 
 </code></pre>
 </details>

@@ -294,7 +294,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>kbcm:Organization</td>
+<td>kbcms:Organization</td>
 </tr>
 </tbody>
 </table>
@@ -321,12 +321,12 @@ attributes:
     - value: CrossrefFunder:100000015
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].affiliation.affiliation_identifier
-    - DataCite:attributes.creators[].affiliation.affiliation_identifier
+    - DataCite:attributes.contributors.affiliation.affiliation_identifier
+    - DataCite:attributes.creators.affiliation.affiliation_identifier
     rank: 1000
     slot_uri: schema:identifier
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   organization_name:
     name: organization_name
     description: Common name of the organization; use the name recommended by ROR
@@ -337,10 +337,10 @@ attributes:
     - value: The Ohio State University
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].affiliation.name
-    - DataCite:attributes.creators[].affiliation.name
-    - OSTI:research_organization
-    - JGI:organisms[].pi.institution
+    - DataCite:attributes.contributors.affiliation.name
+    - DataCite:attributes.creators.affiliation.name
+    - OSTI.ARTICLE:research_organization
+    - JGI:organisms.pi.institution
     rank: 1000
     slot_uri: schema:name
     required: true
@@ -369,8 +369,8 @@ attributes:
     - value: CrossrefFunder:100000015
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].affiliation.affiliation_identifier
-    - DataCite:attributes.creators[].affiliation.affiliation_identifier
+    - DataCite:attributes.contributors.affiliation.affiliation_identifier
+    - DataCite:attributes.creators.affiliation.affiliation_identifier
     rank: 1000
     slot_uri: schema:identifier
     alias: organization_id
@@ -378,7 +378,7 @@ attributes:
     domain_of:
     - Organization
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.]+:\S
+    pattern: ^[a-zA-Z0-9.-_]+:\S
   organization_name:
     name: organization_name
     description: Common name of the organization; use the name recommended by ROR
@@ -389,10 +389,10 @@ attributes:
     - value: The Ohio State University
     from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
     exact_mappings:
-    - DataCite:attributes.contributors[].affiliation.name
-    - DataCite:attributes.creators[].affiliation.name
-    - OSTI:research_organization
-    - JGI:organisms[].pi.institution
+    - DataCite:attributes.contributors.affiliation.name
+    - DataCite:attributes.creators.affiliation.name
+    - OSTI.ARTICLE:research_organization
+    - JGI:organisms.pi.institution
     rank: 1000
     slot_uri: schema:name
     alias: organization_name

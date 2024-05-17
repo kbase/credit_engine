@@ -197,13 +197,15 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-title">Class: Title</h1>
-<p><em>Represents the title or name of a resource, and the type of that title.</em></p>
+<p><em>Represents the title or name of a resource, the type of that title, and the language used (if appropriate).</em></p>
 <p>__</p>
 <p><em>The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.</em></p>
 <p>__</p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/Title">kbcm:Title</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/Title">kbcms:Title</a></p>
 <div class="mermaid"> classDiagram
     class Title
+      Title : language
+
       Title : title
 
       Title : title_type
@@ -224,6 +226,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../language/">language</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The language in which the title is written, using the appropriate IETF BCP-47...</td>
+<td>direct</td>
+</tr>
 <tr>
 <td><a href="../title/">title</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
@@ -273,11 +281,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>kbcm:Title</td>
+<td>kbcms:Title</td>
 </tr>
 <tr>
 <td>native</td>
-<td>kbcm:Title</td>
+<td>kbcms:Title</td>
 </tr>
 </tbody>
 </table>
@@ -286,7 +294,8 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Title
-description: 'Represents the title or name of a resource, and the type of that title.
+description: 'Represents the title or name of a resource, the type of that title,
+  and the language used (if appropriate).
 
 
   The ''title'' field is required; ''title_type'' is only necessary if the text is
@@ -295,6 +304,14 @@ description: 'Represents the title or name of a resource, and the type of that t
   '
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
+  language:
+    name: language
+    description: The language in which the title is written, using the appropriate
+      IETF BCP-47 notation.
+    examples:
+    - value: ru-Cyrl
+    - value: fr
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
   title:
     name: title
     description: A string used as a title for a resource
@@ -328,7 +345,8 @@ attributes:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Title
-description: 'Represents the title or name of a resource, and the type of that title.
+description: 'Represents the title or name of a resource, the type of that title,
+  and the language used (if appropriate).
 
 
   The ''title'' field is required; ''title_type'' is only necessary if the text is
@@ -337,6 +355,20 @@ description: 'Represents the title or name of a resource, and the type of that t
   '
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 attributes:
+  language:
+    name: language
+    description: The language in which the title is written, using the appropriate
+      IETF BCP-47 notation.
+    examples:
+    - value: ru-Cyrl
+    - value: fr
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    alias: language
+    owner: Title
+    domain_of:
+    - Description
+    - Title
+    range: string
   title:
     name: title
     description: A string used as a title for a resource

@@ -275,13 +275,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -328,7 +321,7 @@
 
 <h1 id="slot-dates">Slot: dates</h1>
 <p><em>A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.</em></p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/dates">kbcm:dates</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/dates">kbcms:dates</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -357,19 +350,6 @@
 <p>Multivalued: True</p>
 </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JsonObj(date=datetime.date(2022, 5, 10), event='available')</td>
-</tr>
-</tbody>
-</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -382,15 +362,13 @@
 description: A list of relevant lifecycle events for the resource. Note that these
   dates apply only to the resource itself, and not to the creation or update of the
   credit metadata record for the resource.
-examples:
-- value: JsonObj(date=datetime.date(2022, 5, 10), event='available')
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 close_mappings:
 - DataCite:attributes.published
 - DataCite:attributes.updated
-- DataCite:attributes.dates[]
+- DataCite:attributes.dates
 - ORCID:publicationDate
-- OSTI:publication_date
+- OSTI.ARTICLE:publication_date
 - Crossref:message.deposited
 rank: 1000
 multivalued: true

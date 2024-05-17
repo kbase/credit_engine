@@ -354,7 +354,7 @@
 <p>Range: <a href="../Uriorcurie/">Uriorcurie</a></p>
 </li>
 <li>
-<p>Regex pattern: <code>^[a-zA-Z0-9.]+:\S</code></p>
+<p>Regex pattern: <code>^[a-zA-Z0-9.-_]+:\S</code></p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -384,9 +384,9 @@ examples:
 - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.funding_references[].award_url
+- DataCite:attributes.funding_references.award_url
 close_mappings:
-- OSTI:award_doi
+- OSTI.ARTICLE:award_doi
 rank: 1000
 slot_uri: schema:url
 alias: grant_url
@@ -394,7 +394,7 @@ owner: FundingReference
 domain_of:
 - FundingReference
 range: uriorcurie
-pattern: ^[a-zA-Z0-9.]+:\S
+pattern: ^[a-zA-Z0-9.-_]+:\S
 
 </code></pre>
 

@@ -354,7 +354,7 @@
 <p>Range: <a href="../Uriorcurie/">Uriorcurie</a></p>
 </li>
 <li>
-<p>Regex pattern: <code>^[a-zA-Z0-9.]+:\S</code></p>
+<p>Regex pattern: <code>^[a-zA-Z0-9.-_]+:\S</code></p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -389,12 +389,12 @@ examples:
 - value: ROR:01znn6x10
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
 exact_mappings:
-- DataCite:attributes.contributors[].name_identifiers[].name_identifier
-- DataCite:attributes.creators[].name_identifiers[].name_identifier
+- DataCite:attributes.contributors.name_identifiers.name_identifier
+- DataCite:attributes.creators.name_identifiers.name_identifier
 narrow_mappings:
 - ORCID:contributor.orcidId
-- OSTI:author.orcid_id
-- OSTI:contributor.orcid_id
+- OSTI.ARTICLE:author.orcid_id
+- OSTI.ARTICLE:contributor.orcid_id
 - Crossref:message.project.funding.funder.name
 rank: 1000
 slot_uri: schema:identifier
@@ -403,7 +403,7 @@ owner: Contributor
 domain_of:
 - Contributor
 range: uriorcurie
-pattern: ^[a-zA-Z0-9.]+:\S
+pattern: ^[a-zA-Z0-9.-_]+:\S
 
 </code></pre>
 
