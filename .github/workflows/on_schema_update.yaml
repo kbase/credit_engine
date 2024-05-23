@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Get metadata schema changes
+      - name: Evaluate metadata schema changes
         id: metadata-schema-changes
         uses: tj-actions/changed-files@v44
         with:
@@ -42,7 +42,7 @@ jobs:
         with:
           commit_message: Regenerated JSONSchema bindings for credit metadata schema
 
-      - name: checkout DTS repo
+      - name: Check out DTS repo
         if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         uses: actions/checkout@v4
         with:
@@ -59,4 +59,4 @@ jobs:
         if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.PAT }} # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+          token: ${{ secrets.GHCR_TOKEN }}
