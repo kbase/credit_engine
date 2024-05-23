@@ -59,4 +59,7 @@ jobs:
         if: steps.metadata-schema-changes.outputs.any_changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
+          branch: credit-metadata-schema-update
+          path: dts
+          title: Update to Credit Engine metadata schema
           token: ${{ secrets.GHCR_TOKEN }}
