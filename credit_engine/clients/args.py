@@ -47,12 +47,12 @@ class GenericClientArgs(BaseModel, extra="ignore", arbitrary_types_allowed=True)
         {CE.OutputFormat.JSON, CE.OutputFormat.XML}, const=True
     )
     doi_file: FilePath | None = Field(None)
-    dois_from_file: conset(
-        constr(strip_whitespace=True, min_length=3), min_items=1
-    ) | None = Field(None)
-    doi_list: conset(
-        constr(strip_whitespace=True, min_length=3), min_items=1
-    ) | None = Field(None)
+    dois_from_file: (
+        conset(constr(strip_whitespace=True, min_length=3), min_items=1) | None
+    ) = Field(None)
+    doi_list: (
+        conset(constr(strip_whitespace=True, min_length=3), min_items=1) | None
+    ) = Field(None)
     save_files: bool = Field(default=False)
     # TODO @ialarmedalien: use client's SAMPLE_DATA_DIR as default
     # https://github.com/kbase/credit_engine/issues/158

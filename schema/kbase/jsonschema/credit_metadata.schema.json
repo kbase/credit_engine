@@ -1,15 +1,8 @@
 {
-    "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "additionalProperties": false,
-    "metamodel_version": "1.7.0",
-    "title": "KBase Credit Metadata Schema",
-    "type": "object",
-    "version": "0.0.1-commonmeta",
     "$defs": {
         "Contributor": {
             "additionalProperties": false,
-            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'Person' or 'Organization', and\none of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing the\nappropriate roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\nCRediT contributor role taxonomy: https://credit.niso.org",
+            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'Person' or 'Organization', and\none of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing\nappropriate roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\nCRediT contributor role taxonomy: https://credit.niso.org",
             "properties": {
                 "affiliations": {
                     "description": "List of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).",
@@ -48,20 +41,7 @@
                 }
             },
             "required": [
-                "contributor_type"
-            ],
-            "anyOf": [
-                {
-                    "required": [
-                        "name"
-                    ]
-                },
-                {
-                    "required": [
-                        "family_name",
-                        "given_name"
-                    ]
-                }
+                "name"
             ],
             "title": "Contributor",
             "type": "object"
@@ -90,20 +70,20 @@
                 "DataCite:Supervisor",
                 "DataCite:WorkPackageLeader",
                 "DataCite:Other",
-                "CRediT:conceptualization",
-                "CRediT:data-curation",
-                "CRediT:formal-analysis",
-                "CRediT:funding-acquisition",
-                "CRediT:investigation",
-                "CRediT:methodology",
-                "CRediT:project-administration",
-                "CRediT:resources",
-                "CRediT:software",
-                "CRediT:supervision",
-                "CRediT:validation",
-                "CRediT:visualization",
-                "CRediT:writing-original-draft",
-                "CRediT:writing-review-editing"
+                "crcr:conceptualization",
+                "crcr:data-curation",
+                "crcr:formal-analysis",
+                "crcr:funding-acquisition",
+                "crcr:investigation",
+                "crcr:methodology",
+                "crcr:project-administration",
+                "crcr:resources",
+                "crcr:software",
+                "crcr:supervision",
+                "crcr:validation",
+                "crcr:visualization",
+                "crcr:writing-original-draft",
+                "crcr:writing-review-editing"
             ],
             "title": "ContributorRole",
             "type": "string"
@@ -131,8 +111,7 @@
                 "content_url": {
                     "description": "The URL of the content of the resource.",
                     "items": {
-                        "type": "string",
-                        "format": "uri"
+                        "type": "string"
                     },
                     "type": "array"
                 },
@@ -140,6 +119,13 @@
                     "description": "A list of people and/or organizations who contributed to the resource.",
                     "items": {
                         "$ref": "#/$defs/Contributor"
+                    },
+                    "type": "array"
+                },
+                "credit_metadata_source": {
+                    "description": "A list of CURIEs, URIs, or free text entries denoting the source of the credit metadata.",
+                    "items": {
+                        "type": "string"
                     },
                     "type": "array"
                 },
@@ -197,8 +183,7 @@
                 },
                 "url": {
                     "description": "The URL of the resource.",
-                    "type": "string",
-                    "format": "uri"
+                    "type": "string"
                 },
                 "version": {
                     "description": "The version of the resource. This must be an absolute version, not a relative version like 'latest'.",
@@ -210,18 +195,6 @@
                 "identifier",
                 "resource_type",
                 "titles"
-            ],
-            "anyOf": [
-                {
-                    "required": [
-                        "version"
-                    ]
-                },
-                {
-                    "required": [
-                        "dates"
-                    ]
-                }
             ],
             "title": "CreditMetadata",
             "type": "object"
@@ -295,7 +268,7 @@
             "properties": {
                 "date": {
                     "description": "The date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.",
-                    "pattern": "^\\d{4}(-\\d{2}){0,2}$",
+                    "pattern": "\\d{4}(-\\d{2}){0,2}",
                     "type": "string"
                 },
                 "event": {
@@ -346,14 +319,10 @@
                 },
                 "grant_url": {
                     "description": "URL for the grant",
-                    "pattern": "^https?://\\S",
-                    "type": "string",
-                    "format": "uri"
+                    "pattern": "^[a-zA-Z0-9.-_]+:\\S",
+                    "type": "string"
                 }
             },
-            "required": [
-                "funder"
-            ],
             "title": "FundingReference",
             "type": "object"
         },
@@ -367,22 +336,9 @@
                 },
                 "url": {
                     "description": "URL for the license.",
-                    "type": "string",
-                    "format": "uri"
+                    "type": "string"
                 }
             },
-            "anyOf": [
-                {
-                    "required": [
-                        "url"
-                    ]
-                },
-                {
-                    "required": [
-                        "id"
-                    ]
-                }
-            ],
             "title": "License",
             "type": "object"
         },
@@ -408,7 +364,7 @@
         },
         "PermanentID": {
             "additionalProperties": false,
-            "description": "Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.\n\nThe 'id' field is required; all other fields are optional.\n\nThe values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.\n\nDataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype\n\nCrossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/",
+            "description": "Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.\n\nThe 'id' field and 'relationship_type' fields are required.\n\nThe values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.\n\nDataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype\n\nCrossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/",
             "properties": {
                 "description": {
                     "description": "Description of that entity.",
@@ -425,8 +381,7 @@
                 }
             },
             "required": [
-                "id",
-                "relationship_type"
+                "id"
             ],
             "title": "PermanentID",
             "type": "object"
@@ -497,7 +452,7 @@
                 "Crossref:IsSameAs",
                 "Crossref:IsTranslationOf",
                 "Crossref:Replaces",
-                "unknown"
+                "kbcms:Unknown"
             ],
             "title": "RelationshipType",
             "type": "string"
@@ -512,10 +467,10 @@
         },
         "Title": {
             "additionalProperties": false,
-            "description": "Represents the title or name of a resource, and the type of that title.\n\nThe 'title' field is required; 'title_type' is only necessary if the text is not the primary title.",
+            "description": "Represents the title or name of a resource, the type of that title, and the language used (if appropriate).\n\nThe 'title' field is required; 'title_type' is only necessary if the text is not the primary title.",
             "properties": {
                 "language": {
-                    "description": "The language in which the description is written, using the appropriate IETF BCP-47 notation.",
+                    "description": "The language in which the title is written, using the appropriate IETF BCP-47 notation.",
                     "type": "string"
                 },
                 "title": {
@@ -545,13 +500,36 @@
             "type": "string"
         }
     },
+    "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "description": "Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, a new CreditMetadataEntry is created to store the information.",
+    "metamodel_version": "1.7.0",
     "properties": {
-        "credit_metadata_entry": {
-            "$ref": "#/$defs/CreditMetadataEntry",
-            "description": "A credit metadata entry for a resource."
+        "credit_metadata": {
+            "$ref": "#/$defs/CreditMetadata",
+            "description": "The credit metadata itself."
+        },
+        "credit_metadata_schema_version": {
+            "description": "The version of the credit metadata schema used.",
+            "type": "string"
+        },
+        "saved_by": {
+            "description": "KBase workspace ID of the user who added this entry.",
+            "type": "string"
+        },
+        "timestamp": {
+            "description": "Unix timestamp for the addition of this set of credit metadata.",
+            "type": "integer"
         }
     },
     "required": [
-        "credit_metadata_entry"
-    ]
+        "credit_metadata",
+        "credit_metadata_schema_version",
+        "saved_by",
+        "timestamp"
+    ],
+    "title": "credit_metadata",
+    "type": "object",
+    "version": "0.0.1-commonmeta"
 }
