@@ -19,7 +19,8 @@ def organize(json_obj):
         exclude = ['top_hit', 'files']
         organism_md = {}
         for field, value in organism.items():
-            organism_md[field] = value
+            if field not in exclude:
+                organism_md[field] = value
 
         # traverse the files and jam organism_md into them
         for file in organism["files"]:
