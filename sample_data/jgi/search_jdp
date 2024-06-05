@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+import argparse
+import requests
+
+jdp_url = 'https://files.jgi.doe.gov'
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+                prog='search_jdp',
+                description='Searches for file metadata in the JGI Data Portal')
+    parser.add_argument('query')
+    return parser.parse_args()
+
+def organize(json_obj):
+    md_by_file = {}
+    for organism in json_obj["organisms"]:
+        # gather organism-level metadata
+        exclude = ['top_hit', 'files']
+        organism_md = {}
+        for field, value in organism.items():
+            organism_md[field] = value
+
+        # traverse the files and jam organism_md into them
+        for file in organism["files"]:
+            file_md = dict(organism_md | file)
+            md_by_file[file["file_name"]] = file_md
+
+    return md_by_file
+
+
+def main():
+    args = parse_arguments()
+    response = requests.get(f'{jdp_url}/search/?q={args.query}')
+    response.raise_for_status()
+    md_by_file = organize(response.json())
+    print(md_by_file)
+
+if __name__ == '__main__':
+    main()
