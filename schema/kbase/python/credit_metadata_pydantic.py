@@ -590,12 +590,12 @@ class CreditMetadata(ConfiguredBaseModel):
         }
     )
 
-    comments: list[str] | None = Field(
+    comment: list[str] | None = Field(
         None,
         description="""List of strings of freeform text providing extra information about this credit metadata.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "comments",
+                "alias": "comment",
                 "domain_of": ["CreditMetadata"],
                 "examples": [{"value": "This comment adds a lot of extra value!"}],
                 "slot_uri": "schema:comment",

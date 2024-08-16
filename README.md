@@ -102,7 +102,7 @@ gen-yuml schema/kbase/linkml/credit_metadata.yaml
 
 #### JSONschema data validation
 
-install the JSONschema check script:
+install the [JSONschema check](https://check-jsonschema.readthedocs.io/en/latest/) script:
 
 ```sh
 brew install check-jsonschema
@@ -110,9 +110,9 @@ brew install check-jsonschema
 
 To test a file or files against the schema, use the command:
 ```sh
-check-jsonschema --schemafile schema.json data_file_1.json data_file_2.json
+check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json data_file_1.json data_file_2.json
 ```
 or
 ```sh
-check-jsonschema --schemafile schema.json data/**/*kbcms.json
+check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json sample_data/**/*kbcms.json
 ```

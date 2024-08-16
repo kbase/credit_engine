@@ -149,7 +149,6 @@ classes:
         slot_uri: schema:Role
         description: List of roles played by the contributor when working on the resource.
         range: ContributorRole
-        # inlined_as_list: true
         multivalued: true
         exact_mappings:
         - DataCite:attributes.contributors.contributor_type
@@ -199,7 +198,7 @@ classes:
 
     attributes:
 
-      comments:
+      comment:
         slot_uri: schema:comment
         description: List of strings of freeform text providing extra information about this credit metadata.
         inlined_as_list: true
@@ -436,6 +435,7 @@ classes:
         examples:
         - value: ru-Cyrl
         - value: fr
+
 
   EventDate:
     description: |
