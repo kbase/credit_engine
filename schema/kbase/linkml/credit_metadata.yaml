@@ -2,7 +2,7 @@
 id: https://github.com/kbase/credit_engine/schema/kbase/linkml
 name: credit_metadata
 description: Schema for KBase resource credit metadata. This version brings the schema into closer alignment with the commonmeta citation schema, https://commonmeta.org.
-version: 0.0.1-commonmeta
+version: 0.0.3
 prefixes:
   bioportal: https://bioportal.bioontology.org/ontologies/
   biolink: https://w3id.org/biolink/vocab/
@@ -164,49 +164,21 @@ classes:
           - OSTI.ARTICLE:contributor.contributorType
 
 
-  CreditMetadataEntry:
-    tree_root: true
-    description: Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, a new CreditMetadataEntry is created to store the information.
-
-    attributes:
-      credit_metadata:
-        slot_uri: schema:dataset
-        description: The credit metadata itself.
-        required: true
-        range: CreditMetadata
-
-      credit_metadata_schema_version:
-        slot_uri: schema:schemaVersion
-        description: The version of the credit metadata schema used.
-        required: true
-        examples:
-          - value: 1.1.0
-
-      saved_by:
-        slot_uri: schema:sdPublisher
-        description: KBase workspace ID of the user who added this entry.
-        required: true
-
-      timestamp:
-        slot_uri: schema:sdDatePublished
-        description: Unix timestamp for the addition of this set of credit metadata.
-        required: true
-        range: integer
-
-
   CreditMetadata:
+    tree_root: true
     description: |
-      Represents the credit metadata associated with a workspace object.
+      Represents the credit metadata associated with an object.
 
-      In the following documentation, 'Resource' is used to refer to the workspace object
-      that the CM pertains to.
+      In the following documentation, 'Resource' is used to refer to the object
+      that the CM pertains to, for example, a KBase Workspace object or a
+      sample from the KBase Sample Service.
 
       The 'resource_type' field should be filled using values from the DataCite
       resourceTypeGeneral field:
 
       https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
 
-      Currently the KBase workspace only supports credit metadata for objects of type
+      Currently KBase only supports credit metadata for objects of type
       'dataset'; anything else will return an error.
 
       The license may be supplied either as an URL pointing to licensing information for
@@ -220,13 +192,14 @@ classes:
       the last update (if applicable).
       - contributors (one or more required)
       - titles (one or more required)
+      - meta
 
       The resource_type field is required, but as there is currently only a single valid
       value, 'dataset', it is automatically populated if no value is supplied.
 
     attributes:
 
-      comment:
+      comments:
         slot_uri: schema:comment
         description: List of strings of freeform text providing extra information about this credit metadata.
         inlined_as_list: true
@@ -353,12 +326,9 @@ classes:
         related_mappings:
         - DataCite:attributes.rights_list
 
-      # provider:
-      #   description: The provider of the resource. This can be a DOI registration agency or a repository.
-      #   range: Organization
-      #   examples:
-      #   - value: DataCite
-      #   - value: OP
+      meta:
+        description: Metadata for this credit information, including submitter, schema version, and timestamp.
+        range: Metadata
 
       publisher:
         description: The publisher of the resource. For a dataset, this is the repository where it is stored.
@@ -390,7 +360,7 @@ classes:
 
       resource_type:
         slot_uri: schema:@type
-        description: The broad type of the source data for this workspace object. 'dataset' is currently the only valid value for KBase DOIs.
+        description: The broad type of the source data for this object. 'dataset' is currently the only valid value for KBase DOIs.
         range: ResourceType
         required: true
         exact_mappings:
@@ -560,6 +530,30 @@ classes:
         range: uri
         examples:
         - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
+
+
+  Metadata:
+    description: Metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, this additional metadata must be provided along with the credit information.
+
+    attributes:
+
+      credit_metadata_schema_version:
+        slot_uri: schema:schemaVersion
+        description: The version of the credit metadata schema used.
+        required: true
+        examples:
+          - value: 1.1.0
+
+      saved_by:
+        slot_uri: schema:sdPublisher
+        description: KBase workspace ID of the user who added this entry.
+        required: true
+
+      timestamp:
+        slot_uri: schema:sdDatePublished
+        description: Unix timestamp for the addition of this set of credit metadata.
+        required: true
+        range: integer
 
 
   Organization:

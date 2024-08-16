@@ -99,7 +99,7 @@
         },
         "CreditMetadata": {
             "additionalProperties": false,
-            "description": "Represents the credit metadata associated with a workspace object.\n\nIn the following documentation, 'Resource' is used to refer to the workspace object\nthat the CM pertains to.\n\nThe 'resource_type' field should be filled using values from the DataCite\nresourceTypeGeneral field:\n\nhttps://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral\n\nCurrently the KBase workspace only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
+            "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'Resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object or a\nsample from the KBase Sample Service.\n\nThe 'resource_type' field should be filled using values from the DataCite\nresourceTypeGeneral field:\n\nhttps://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral\n\nCurrently KBase only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
             "properties": {
                 "comment": {
                     "description": "List of strings of freeform text providing extra information about this credit metadata.",
@@ -159,6 +159,10 @@
                     "$ref": "#/$defs/License",
                     "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.\n"
                 },
+                "meta": {
+                    "$ref": "#/$defs/Metadata",
+                    "description": "Metadata for this credit information, including submitter, schema version, and timestamp."
+                },
                 "publisher": {
                     "$ref": "#/$defs/Organization",
                     "description": "The publisher of the resource. For a dataset, this is the repository where it is stored."
@@ -193,20 +197,17 @@
             "required": [
                 "contributors",
                 "identifier",
+                "meta",
                 "resource_type",
                 "titles"
             ],
             "title": "CreditMetadata",
             "type": "object"
         },
-        "CreditMetadataEntry": {
+        "Metadata": {
             "additionalProperties": false,
             "description": "Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, a new CreditMetadataEntry is created to store the information.",
             "properties": {
-                "credit_metadata": {
-                    "$ref": "#/$defs/CreditMetadata",
-                    "description": "The credit metadata itself."
-                },
                 "credit_metadata_schema_version": {
                     "description": "The version of the credit metadata schema used.",
                     "type": "string"
@@ -221,7 +222,6 @@
                 }
             },
             "required": [
-                "credit_metadata",
                 "credit_metadata_schema_version",
                 "saved_by",
                 "timestamp"
@@ -502,34 +502,19 @@
     },
     "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "additionalProperties": true,
-    "description": "Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, a new CreditMetadataEntry is created to store the information.",
     "metamodel_version": "1.7.0",
+    "additionalProperties": false,
+    "description": "Schema to represent an instance of credit metadata.",
     "properties": {
         "credit_metadata": {
             "$ref": "#/$defs/CreditMetadata",
             "description": "The credit metadata itself."
-        },
-        "credit_metadata_schema_version": {
-            "description": "The version of the credit metadata schema used.",
-            "type": "string"
-        },
-        "saved_by": {
-            "description": "KBase workspace ID of the user who added this entry.",
-            "type": "string"
-        },
-        "timestamp": {
-            "description": "Unix timestamp for the addition of this set of credit metadata.",
-            "type": "integer"
         }
     },
     "required": [
-        "credit_metadata",
-        "credit_metadata_schema_version",
-        "saved_by",
-        "timestamp"
+        "credit_metadata"
     ],
-    "title": "credit_metadata",
+    "title": "CreditMetadata",
     "type": "object",
-    "version": "0.0.1-commonmeta"
+    "version": "0.0.3"
 }
