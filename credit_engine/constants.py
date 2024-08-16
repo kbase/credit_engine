@@ -2,22 +2,7 @@
 
 from enum import Enum
 
-import pydantic
 from pydantic import EmailStr
-
-
-class TrimmedString(pydantic.ConstrainedStr):
-    """Non-zero length trimmed string."""
-
-    strip_whitespace = True
-    min_length = 1
-
-
-class NonEmptyList(pydantic.ConstrainedList):
-    """Non-zero length list."""
-
-    min_items = 1
-
 
 # file formats and extensions
 JSON = "json"
