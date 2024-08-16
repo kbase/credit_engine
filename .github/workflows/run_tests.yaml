@@ -8,17 +8,15 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix:
-                python-version: ["3.10", "3.11", "3.12"]
 
         steps:
             - name: Repo checkout
               uses: actions/checkout@main
 
-            - name: Set up Python ${{ matrix.python-version }}
+            - name: Set up Python 3.12
               uses: actions/setup-python@main
               with:
-                  python-version: ${{ matrix.python-version }}
+                  python-version: 3.12
 
             - name: Install Poetry
               uses: snok/install-poetry@main
@@ -59,17 +57,15 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix:
-                python-version: ["3.10", "3.11", "3.12"]
 
         steps:
             - name: Repo checkout
               uses: actions/checkout@main
 
-            - name: Set up Python ${{ matrix.python-version }}
+            - name: Set up Python 3.12
               uses: actions/setup-python@main
               with:
-                  python-version: ${{ matrix.python-version }}
+                  python-version: 3.12
 
             - name: Install dependencies
               id: install_deps
