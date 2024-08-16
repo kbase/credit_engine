@@ -13,6 +13,7 @@ The KBase Credit Engine is a project aimed at ensuring that appropriate citation
     - [Schema Diagram](#schema-diagram)
   - [Software Installation](#software-installation)
     - [Useful commands](#useful-commands)
+      - [JSONschema data validation](#jsonschema-data-validation)
 
 ## Metadata Schema
 
@@ -24,9 +25,11 @@ Full schema documentation can be found at [https://kbase.github.io/credit_engine
 
 ### Schema Diagram
 
-Generated using [erdantic](https://erdantic.drivendata.org/stable/)
+Generated from the [Pydantic version](schema/kbase/python/credit_metadata_pydantic.py) of the KBase Citation Metadata Schema using [erdantic](https://erdantic.drivendata.org/stable/).
 
-![KBase metadata schema diagram](schema/kbase/kbase-schema.png "Entity-relationship diagram for KBase metadata schema")
+![KBase metadata schema diagram](schema/kbase/kbase-schema.png "Entity-relationship diagram for KBase citation metadata schema")
+
+See below for how to regenerate the ER diagram after making changes to the schema.
 
 ## Software Installation
 
@@ -72,25 +75,44 @@ validate data (in file `data.yaml`) against the schema:
 linkml-validate -s schema/kbase/linkml/credit_metadata.yaml data.yaml
 ```
 
-generate Python models:
+generate JSONschema version:
 ```sh
-gen-python schema/kbase/linkml/credit_metadata.yaml > schema/kbase/linkml/credit_metadata.py
+gen-json-schema schema/kbase/linkml/credit_metadata.yaml > schema/kbase/jsonschema/credit_metadata.schema.json
 ```
 
-generate a schema diagram (can be visualised at yuml.me):
+generate Python classes:
+```sh
+gen-python schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata.py
+```
+
+generate Pydantic classes:
+```sh
+gen-pydantic schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata_pydantic.py
+```
+
+generate an ER diagram from the Pydantic classes using erdantic (assumes that erdantic has been installed already):
+```sh
+erdantic schema.kbase.python.credit_metadata_pydantic.CreditMetadata -o schema/kbase/kbase-schema.png
+```
+
+generate a YUML schema diagram (can be visualised at yuml.me):
 ```sh
 gen-yuml schema/kbase/linkml/credit_metadata.yaml
 ```
 
 #### JSONschema data validation
 
-install the JSONschema check script:
+install the [JSONschema check](https://check-jsonschema.readthedocs.io/en/latest/) script:
 
 ```sh
 brew install check-jsonschema
 ```
 
-To test a file against the schema, use the command:
+To test a file or files against the schema, use the command:
 ```sh
-check-jsonschema --schemafile schema.json instance.json
+check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json data_file_1.json data_file_2.json
+```
+or
+```sh
+check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json sample_data/**/*kbcms.json
 ```

@@ -12,5 +12,3 @@ The files are named by according to their DOI or other unique identifier, with a
 All KBCMS files were hand-crafted by a fallible human, so may contain mistakes.
 
 See `schema/kbase/jsonschema/credit_metadata.schema.json` for the KBCMS schema details. The schema has been edited somewhat to bring it into closer alignment with the commonmeta jsonschema.
-
-Note that the linkml schema and documentation have not been updated.

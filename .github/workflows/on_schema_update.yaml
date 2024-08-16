@@ -1,65 +1,53 @@
 name: Update JSONSchema and Golang schema bindings
 
 on:
-  pull_request:
-    branches:
-      - develop
+    pull_request:
+        branches:
+            - develop
 
 jobs:
-  changed_files:
-    runs-on: ubuntu-latest
-    name: Determine schema changes
-    steps:
-      - uses: actions/checkout@v4
+    changed_files:
+        runs-on: ubuntu-latest
+        name: Determine schema changes
+        steps:
+            - uses: actions/checkout@main
 
-      - name: Evaluate metadata schema changes
-        id: metadata-schema-changes
-        uses: tj-actions/changed-files@v44
-        with:
-          files: |
-            schema/kbase/linkml/credit_metadata.yaml
+            - name: Evaluate metadata schema changes
+              id: metadata-schema-changes
+              uses: tj-actions/changed-files@v44
+              with:
+                  files: |
+                      schema/kbase/linkml/credit_metadata.yaml
 
-      - name: Set up python
-        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.12
+            - name: Set up python
+              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+              uses: actions/setup-python@main
+              with:
+                  python-version: 3.12
 
-      - name: Install linkml
-        shell: bash -l {0}
-        run: |
-          pip3 install linkml
+            - name: Install linkml
+              shell: bash -l {0}
+              run: |
+                  pip3 install linkml
 
-      - name: Regenerate JSONSchema bindings for credit metadata schame
-        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
-        shell: bash -l {0}
-        run: |
-          gen-json-schema schema/kbase/linkml/credit_metadata.yaml > schema/kbase/jsonschema/credit_metadata.schema.json
+            - name: Check out DTS repo
+              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+              uses: actions/checkout@main
+              with:
+                  repository: kbase/dts
+                  path: dts
 
-      - name: Commit regenerated JSONSchema bindings
-        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Regenerated JSONSchema bindings for credit metadata schema
+            - name: Regenerate DTS Golang bindings for credit metadata schame
+              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+              shell: bash -l {0}
+              run: |
+                  gen-golang schema/kbase/linkml/credit_metadata.yaml > dts/credit/metadata.go
 
-      - name: Check out DTS repo
-        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
-        uses: actions/checkout@v4
-        with:
-          repository: kbase/dts
-          path: dts
-
-      - name: Regenerate DTS Golang bindings for credit metadata schame
-        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
-        shell: bash -l {0}
-        run: |
-          gen-golang schema/kbase/linkml/credit_metadata.yaml > dts/credit/metadata.go
-
-      - name: Create DTS pull request with regenerated credit metadata bindings
-        if: steps.metadata-schema-changes.outputs.any_changed == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: credit-metadata-schema-update
-          path: dts
-          title: Update to Credit Engine metadata schema
-          token: ${{ secrets.GHCR_TOKEN }}
+            - name: Create DTS pull request with regenerated credit metadata bindings
+              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+              uses: peter-evans/create-pull-request@v6
+              with:
+                  branch: credit-metadata-schema-update
+                  path: dts
+                  title: Update to Credit Engine metadata schema
+                  token: ${{ secrets.GHCR_TOKEN }}

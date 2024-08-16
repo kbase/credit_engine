@@ -8,20 +8,18 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix:
-                python-version: ["3.10", "3.11", "3.12"]
 
         steps:
             - name: Repo checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@main
 
-            - name: Set up Python ${{ matrix.python-version }}
-              uses: actions/setup-python@v4
+            - name: Set up Python 3.12
+              uses: actions/setup-python@main
               with:
-                  python-version: ${{ matrix.python-version }}
+                  python-version: 3.12
 
             - name: Install Poetry
-              uses: snok/install-poetry@v1
+              uses: snok/install-poetry@main
 
             - name: Install dependencies
               id: install_deps
@@ -35,7 +33,7 @@ jobs:
 
             - name: Send to Codecov
               id: send_to_codecov
-              uses: codecov/codecov-action@v4
+              uses: codecov/codecov-action@main
               continue-on-error: true
               with:
                   files: ./coverage.xml
@@ -59,21 +57,19 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix:
-                python-version: ["3.10", "3.11", "3.12"]
 
         steps:
             - name: Repo checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@main
 
-            - name: Set up Python ${{ matrix.python-version }}
-              uses: actions/setup-python@v4
+            - name: Set up Python 3.12
+              uses: actions/setup-python@main
               with:
-                  python-version: ${{ matrix.python-version }}
+                  python-version: 3.12
 
             - name: Install dependencies
               id: install_deps
-              run: pip install linkml
+              run: pip install linkml check-jsonschema 'jsonschema[format]'
 
             - name: Lint linkml file
               id: lint_linkml
@@ -84,8 +80,13 @@ jobs:
             - name: Validate kbase sample data against the schema
               id: validate_kbase_data
               run: |
-                  linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.25982_1722943.yaml
-                  linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/10.6084_m9.figshare.12644081.v1.yaml
+                  linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/**/*kbcms.json
+              continue-on-error: true
+
+            - name: Validate kbase sample data against JSONschema
+              id: validate_kbase_data_against_jsonschema
+              run: |
+                  check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json --verbose sample_data/kbase/**/*kbcms.json
               continue-on-error: true
 
             - name: outcome failure

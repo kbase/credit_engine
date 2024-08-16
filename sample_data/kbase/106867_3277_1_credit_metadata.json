@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "credit_metadata_schema_version": "0.0.3",
+    "saved_by": "ialarmedalien",
+    "timestamp": 1710210050430
+  },
+  "contributors": [
+    {
+      "affiliations": [
+        {
+          "organization_id": "ROR:03k1gpj17",
+          "organization_name": "Colorado State University"
+        }
+      ],
+      "contributor_id": "ORCID:0000-0001-8037-4253",
+      "contributor_roles": [
+        "DataCite:ContactPerson"
+      ],
+      "contributor_type": "Person",
+      "family_name": "Borton",
+      "given_name": "Mikayla"
+    },
+    {
+      "affiliations": [
+        {
+          "organization_id": "ROR:02gz6gg07",
+          "organization_name": "Institute of Environment, Department of Biological Sciences, Florida International University, Miami, FL, US."
+        }
+      ],
+      "contributor_id": "ORCID:0000-0002-0978-3326",
+      "contributor_roles": [
+        "DataCite:DataCollector"
+      ],
+      "contributor_type": "Person",
+      "family_name": "Kominosky",
+      "given_name": "John"
+    },
+    {
+      "affiliations": [
+        {
+          "organization_id": "ROR:02gz6gg07",
+          "organization_name": "Institute of Environment, Department of Biological Sciences, Florida International University, Miami, FL, US."
+        }
+      ],
+      "contributor_id": "ORCID:0000-0003-1994-9745",
+      "contributor_roles": [
+        "DataCite:DataCollector"
+      ],
+      "contributor_type": "Person",
+      "family_name": "Rizzie",
+      "given_name": "Christopher"
+    }
+  ],
+  "dates": [
+    {
+      "date": "2019-05-08",
+      "event": "collected"
+    }
+  ],
+  "identifier": "KBase:106867/3277",
+  "publisher": {
+    "organization_id": "ROR:01znn6x10",
+    "organization_name": "KBase"
+  },
+  "related_identifiers": [
+    {
+      "id": "IGSN:IEGRW000Z",
+      "relationship_type": "DataCite:IsSourceOf"
+    }
+  ],
+  "resource_type": "dataset",
+  "titles": [
+    {
+      "title": "sharkriverslough_2019_sw_WHONDRS-S19S_0042_A_bin_6_mag"
+    }
+  ],
+  "version": "1"
+}
