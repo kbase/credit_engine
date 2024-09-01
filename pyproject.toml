@@ -25,7 +25,7 @@ mkdocs-mermaid2-plugin = "^1.1.1"
 [tool.poetry.group.schema2model.dependencies]
 json2python-models = { version = "^0.3.0", optional = true }
 xmlschema = { version = "^2.3.1", optional = true }
-xsdata = { extras = ["cli", "lxml", "soap"], version = "^23.6", optional = true }
+xsdata = { extras = ["cli", "lxml", "soap"], version = "^24.7", optional = true }
 
 [tool.poetry-dynamic-versioning]
 enable = true
