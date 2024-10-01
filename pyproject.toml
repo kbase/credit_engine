@@ -19,7 +19,7 @@ pytest-cov = "^5.0.0"
 pytest-sugar = "^1.0.0"
 
 [tool.poetry.group.doc.dependencies]
-mkdocs-material = "^9.5.31"
+mkdocs-material = "^9.5.39"
 mkdocs-mermaid2-plugin = "^1.1.1"
 
 [tool.poetry.group.schema2model.dependencies]
