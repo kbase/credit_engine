@@ -46,9 +46,9 @@ classes:
         examples:
         - value: Person
         - value: Organization
-        exact_mappings:
-        - DataCite:attributes.contributors[*].name_type
-        - DataCite:attributes.creators[*].name_type
+        # exact_mappings:
+        # - DataCite:attributes.contributors[*].name_type
+        # - DataCite:attributes.creators[*].name_type
       contributor_id:
         slot_uri: schema:identifier
         description: Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.
@@ -57,9 +57,9 @@ classes:
         examples:
         - value: ORCID:0000-0001-9557-7715
         - value: ROR:01znn6x10
-        exact_mappings:
-        - DataCite:attributes.contributors[*].name_identifiers.name_identifier
-        - DataCite:attributes.creators[*].name_identifiers.name_identifier
+        # exact_mappings:
+        # - DataCite:attributes.contributors[*].name_identifiers.name_identifier
+        # - DataCite:attributes.creators[*].name_identifiers.name_identifier
           # from: DataCite:attributes.contributors[*].name_identifiers[*].name_identifier_scheme == 'ORCID'
           # via: f"ORCID:{src.attributes.contributors[*].name_identifiers[*].name_identifier.replace('https://orcid.org/', '')}"
         narrow_mappings:
@@ -74,10 +74,10 @@ classes:
           - value: National Institute of Mental Health
           - value: Madonna
           - value: Ransome the Clown
-        related_mappings:
+        # related_mappings:
         # these have the names comma-separated and inverted
-        - DataCite:attributes.creators[*].name
-        - DataCite:attributes.contributors[*].name
+        # - DataCite:attributes.creators[*].name
+        # - DataCite:attributes.contributors[*].name
         exact_mappings:
         - JGI:organisms.pi.name
         - ORCID:name
@@ -94,32 +94,31 @@ classes:
           - value: Marionetta Cecille de la
           - value: Helena
           - value: Hubert George
-        related_mappings:
-          - DataCite:attributes.contributors[*].givenName
-          - DataCite:attributes.creators[*].givenName
+        # related_mappings:
+        #   - DataCite:attributes.contributors[*].givenName
+        #   - DataCite:attributes.creators[*].givenName
       family_name:
         description: The family name(s) of the contributor.
         examples:
           - value: Carte-Postale
           - value: Bonham Carter
           - value: Wells
-        related_mappings:
-          - DataCite:attributes.contributors[*].familyName
-          - DataCite:attributes.creators[*].familyName
+        # related_mappings:
+        #   - DataCite:attributes.contributors[*].familyName
+        #   - DataCite:attributes.creators[*].familyName
       affiliations:
         slot_uri: schema:affiliation
         description: List of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).
         multivalued: true
         range: Organization
-        inlined_as_list: true
-        inlined: true
+        # inlined_as_list: true
         related_mappings:
-        - DataCite:attributes.contributors[*].affiliation
+        # - DataCite:attributes.contributors[*].affiliation
           # from: DataCite:attributes.contributors[*].affiliation[*]
           # via: {
           #   organization_name: src.attributes.contributors[*].affiliation[*].name
           # }
-        - DataCite:attributes.creators[*].affiliation
+        # - DataCite:attributes.creators[*].affiliation
           # from: DataCite:attributes.creators[*].affiliation[*]
           # via: {
           #   organization_name: src.attributes.creators[*].affiliation[*].name
@@ -137,9 +136,9 @@ classes:
         description: List of roles played by the contributor when working on the resource.
         multivalued: true
         range: ContributorRole
-        exact_mappings:
-        - DataCite:attributes.contributors[*].contributor_type
-        - DataCite:attributes.creators[*].contributor_type
+        # exact_mappings:
+        # - DataCite:attributes.contributors[*].contributor_type
+        # - DataCite:attributes.creators[*].contributor_type
         related_mappings:
         - JGI:organisms.pi
         # from: JGI:organisms[*].pi
@@ -328,9 +327,9 @@ classes:
         - value: ROR:01bj3aw27
         - value: ISNI:0000000123423717
         - value: CrossrefFunder:100000015
-        exact_mappings:
-        - DataCite:attributes.contributors[*].affiliation.affiliation_identifier
-        - DataCite:attributes.creators[*].affiliation.affiliation_identifier
+        # exact_mappings:
+        # - DataCite:attributes.contributors[*].affiliation.affiliation_identifier
+        # - DataCite:attributes.creators[*].affiliation.affiliation_identifier
         range: uriorcurie
         pattern: "^[a-zA-Z0-9.-_]+:\\S"
       organization_name:
@@ -338,8 +337,8 @@ classes:
         description: Common name of the organization; use the name recommended by ROR if possible.
         required: true
         exact_mappings:
-        - DataCite:attributes.contributors[*].affiliation.name
-        - DataCite:attributes.creators[*].affiliation.name
+        # - DataCite:attributes.contributors[*].affiliation.name
+        # - DataCite:attributes.creators[*].affiliation.name
         - OSTI.ARTICLE:research_organization
         - JGI:organisms.pi.institution
         examples:
