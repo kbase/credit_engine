@@ -1,12 +1,14 @@
-"""Credit Metadata model, Pydantic version."""
-
 from __future__ import annotations
 
 import re
+import sys
+from datetime import date, datetime, time
+from decimal import Decimal
 from enum import Enum
-from typing import Any, ClassVar
+from typing import Any, ClassVar, Dict, List, Literal, Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field, RootModel, field_validator
+
 
 metamodel_version = "None"
 version = "0.0.5"
@@ -21,10 +23,11 @@ class ConfiguredBaseModel(BaseModel):
         use_enum_values=True,
         strict=False,
     )
+    pass
 
 
 class LinkMLMeta(RootModel):
-    root: dict[str, Any] = {}
+    root: Dict[str, Any] = {}
     model_config = ConfigDict(frozen=True)
 
     def __getattr__(self, key: str):
@@ -393,14 +396,18 @@ class RelationshipType(str, Enum):
 
 
 class ResourceType(str, Enum):
-    """The type of resource being represented."""
+    """
+    The type of resource being represented.
+    """
 
     # A dataset.
     dataset = "dataset"
 
 
 class TitleType(str, Enum):
-    """The type of title being represented."""
+    """
+    The type of title being represented.
+    """
 
     # Any subtitle for the resource.
     subtitle = "subtitle"
@@ -444,33 +451,25 @@ class Contributor(ConfiguredBaseModel):
         }
     )
 
-    contributor_type: ContributorType | None = Field(
+    contributor_type: Optional[ContributorType] = Field(
         default=None,
         description="""Must be either 'Person' or 'Organization'.""",
         json_schema_extra={
             "linkml_meta": {
                 "alias": "contributor_type",
                 "domain_of": ["Contributor"],
-                "exact_mappings": [
-                    "DataCite:attributes.contributors.name_type",
-                    "DataCite:attributes.creators.name_type",
-                ],
                 "examples": [{"value": "Person"}, {"value": "Organization"}],
                 "slot_uri": "schema:@type",
             }
         },
     )
-    contributor_id: str | None = Field(
+    contributor_id: Optional[str] = Field(
         default=None,
         description="""Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.""",
         json_schema_extra={
             "linkml_meta": {
                 "alias": "contributor_id",
                 "domain_of": ["Contributor"],
-                "exact_mappings": [
-                    "DataCite:attributes.contributors.name_identifiers.name_identifier",
-                    "DataCite:attributes.creators.name_identifiers.name_identifier",
-                ],
                 "examples": [
                     {"value": "ORCID:0000-0001-9557-7715"},
                     {"value": "ROR:01znn6x10"},
@@ -485,7 +484,7 @@ class Contributor(ConfiguredBaseModel):
             }
         },
     )
-    name: str | None = Field(
+    name: Optional[str] = Field(
         default=None,
         description="""Contributor name. For organizations, this should be the full (unabbreviated) name; can also be used for a person if the given name/family name format is not applicable.""",
         json_schema_extra={
@@ -499,15 +498,11 @@ class Contributor(ConfiguredBaseModel):
                     {"value": "Madonna"},
                     {"value": "Ransome the Clown"},
                 ],
-                "related_mappings": [
-                    "DataCite:attributes.creators.name",
-                    "DataCite:attributes.contributors.name",
-                ],
                 "slot_uri": "schema:name",
             }
         },
     )
-    given_name: str | None = Field(
+    given_name: Optional[str] = Field(
         default=None,
         description="""The given name(s) of the contributor.""",
         json_schema_extra={
@@ -519,14 +514,10 @@ class Contributor(ConfiguredBaseModel):
                     {"value": "Helena"},
                     {"value": "Hubert George"},
                 ],
-                "related_mappings": [
-                    "DataCite:attributes.contributors.givenName",
-                    "DataCite:attributes.creators.givenName",
-                ],
             }
         },
     )
-    family_name: str | None = Field(
+    family_name: Optional[str] = Field(
         default=None,
         description="""The family name(s) of the contributor.""",
         json_schema_extra={
@@ -538,14 +529,10 @@ class Contributor(ConfiguredBaseModel):
                     {"value": "Bonham Carter"},
                     {"value": "Wells"},
                 ],
-                "related_mappings": [
-                    "DataCite:attributes.contributors.familyName",
-                    "DataCite:attributes.creators.familyName",
-                ],
             }
         },
     )
-    affiliations: list[Organization] | None = Field(
+    affiliations: Optional[List[Organization]] = Field(
         default=None,
         description="""List of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).""",
         json_schema_extra={
@@ -553,16 +540,12 @@ class Contributor(ConfiguredBaseModel):
                 "alias": "affiliations",
                 "domain_of": ["Contributor"],
                 "narrow_mappings": ["OSTI.ARTICLE:contributor.affiliation_name"],
-                "related_mappings": [
-                    "DataCite:attributes.contributors.affiliation",
-                    "DataCite:attributes.creators.affiliation",
-                    "JGI:organisms.pi.institution",
-                ],
+                "related_mappings": ["JGI:organisms.pi.institution"],
                 "slot_uri": "schema:affiliation",
             }
         },
     )
-    contributor_roles: list[ContributorRole] | None = Field(
+    contributor_roles: Optional[List[ContributorRole]] = Field(
         default=None,
         description="""List of roles played by the contributor when working on the resource.""",
         json_schema_extra={
@@ -573,10 +556,6 @@ class Contributor(ConfiguredBaseModel):
                     "OSTI.ARTICLE:contributor.contributorType",
                 ],
                 "domain_of": ["Contributor"],
-                "exact_mappings": [
-                    "DataCite:attributes.contributors.contributor_type",
-                    "DataCite:attributes.creators.contributor_type",
-                ],
                 "related_mappings": ["JGI:organisms.pi"],
                 "slot_uri": "schema:Role",
             }
@@ -597,7 +576,9 @@ class Contributor(ConfiguredBaseModel):
 
 
 class Description(ConfiguredBaseModel):
-    """Textual information about the resource being represented."""
+    """
+    Textual information about the resource being represented.
+    """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
         {
@@ -614,13 +595,14 @@ class Description(ConfiguredBaseModel):
                 "domain_of": ["Description"],
                 "examples": [
                     {
-                        "value": "This is the most interesting dataset ever to earn a DOI."
+                        "value": "This is the most interesting dataset ever to earn a "
+                        "DOI."
                     }
                 ],
             }
         },
     )
-    description_type: DescriptionType | None = Field(
+    description_type: Optional[DescriptionType] = Field(
         default=None,
         description="""The type of text being represented.""",
         json_schema_extra={
@@ -635,7 +617,7 @@ class Description(ConfiguredBaseModel):
             }
         },
     )
-    language: str | None = Field(
+    language: Optional[str] = Field(
         default=None,
         description="""The language in which the description is written, using the appropriate IETF BCP-47 notation.""",
         json_schema_extra={
@@ -707,7 +689,6 @@ class FundingReference(ConfiguredBaseModel):
     Represents a funding source for a resource, including the funding body and the grant awarded.
 
     One (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.
-    One (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.
 
     Recommended resources for organization identifiers include:
       - Research Organization Registry, http://ror.org
@@ -733,25 +714,12 @@ class FundingReference(ConfiguredBaseModel):
                 },
                 {"slot_conditions": {"funder": {"name": "funder", "required": True}}},
             ],
-            "any_of": [
-                {
-                    "slot_conditions": {
-                        "grant_id": {"name": "grant_id", "required": True}
-                    }
-                },
-                {
-                    "slot_conditions": {
-                        "grant_url": {"name": "grant_url", "required": True}
-                    }
-                },
-                {"slot_conditions": {"funder": {"name": "funder", "required": True}}},
-            ],
             "class_uri": "schema:MonetaryGrant",
             "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components",
         }
     )
 
-    funder: Organization | None = Field(
+    funder: Optional[Organization] = Field(
         default=None,
         description="""The funder for the grant or award.""",
         json_schema_extra={
@@ -762,7 +730,7 @@ class FundingReference(ConfiguredBaseModel):
             }
         },
     )
-    grant_id: str | None = Field(
+    grant_id: Optional[str] = Field(
         default=None,
         description="""Code for the grant, assigned by the funder.""",
         json_schema_extra={
@@ -786,7 +754,7 @@ class FundingReference(ConfiguredBaseModel):
             }
         },
     )
-    grant_title: str | None = Field(
+    grant_title: Optional[str] = Field(
         default=None,
         description="""Title for the grant.""",
         json_schema_extra={
@@ -806,7 +774,7 @@ class FundingReference(ConfiguredBaseModel):
             }
         },
     )
-    grant_url: str | None = Field(
+    grant_url: Optional[str] = Field(
         default=None,
         description="""URL for the grant.""",
         json_schema_extra={
@@ -839,7 +807,9 @@ class FundingReference(ConfiguredBaseModel):
 
 
 class License(ConfiguredBaseModel):
-    """License information for the resource."""
+    """
+    License information for the resource.
+    """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
         {
@@ -851,7 +821,7 @@ class License(ConfiguredBaseModel):
         }
     )
 
-    id: str | None = Field(
+    id: Optional[str] = Field(
         default=None,
         description="""String representing the license, from the SPDX license identifiers at https://spdx.org/licenses/.""",
         json_schema_extra={
@@ -862,7 +832,7 @@ class License(ConfiguredBaseModel):
             }
         },
     )
-    url: str | None = Field(
+    url: Optional[str] = Field(
         default=None,
         description="""URL for the license.""",
         json_schema_extra={
@@ -948,17 +918,13 @@ class Organization(ConfiguredBaseModel):
         }
     )
 
-    organization_id: str | None = Field(
+    organization_id: Optional[str] = Field(
         default=None,
         description="""Persistent unique identifier for the organization in the format <database name>:<identifier within database>.""",
         json_schema_extra={
             "linkml_meta": {
                 "alias": "organization_id",
                 "domain_of": ["Organization"],
-                "exact_mappings": [
-                    "DataCite:attributes.contributors.affiliation.affiliation_identifier",
-                    "DataCite:attributes.creators.affiliation.affiliation_identifier",
-                ],
                 "examples": [
                     {"value": "ROR:01bj3aw27"},
                     {"value": "ISNI:0000000123423717"},
@@ -976,8 +942,6 @@ class Organization(ConfiguredBaseModel):
                 "alias": "organization_name",
                 "domain_of": ["Organization"],
                 "exact_mappings": [
-                    "DataCite:attributes.contributors.affiliation.name",
-                    "DataCite:attributes.creators.affiliation.name",
                     "OSTI.ARTICLE:research_organization",
                     "JGI:organisms.pi.institution",
                 ],
@@ -1006,7 +970,6 @@ class Organization(ConfiguredBaseModel):
 
 class PermanentID(ConfiguredBaseModel):
     """
-    Represents a persistent unique identifier for an entity and its relationship to some other entity.
     Represents a persistent unique identifier for an entity and its relationship to some other entity.
 
     The 'id' field and 'relationship_type' fields are required.
@@ -1048,7 +1011,7 @@ class PermanentID(ConfiguredBaseModel):
             }
         },
     )
-    description: str | None = Field(
+    description: Optional[str] = Field(
         default=None,
         description="""Description of that entity.""",
         json_schema_extra={
@@ -1069,10 +1032,9 @@ class PermanentID(ConfiguredBaseModel):
             }
         },
     )
-    relationship_type: RelationshipType | None = Field(
+    relationship_type: Optional[RelationshipType] = Field(
         default=None,
         description="""The relationship between the ID and some other entity.
-For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.
 For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.
 """,
         json_schema_extra={
@@ -1085,25 +1047,6 @@ For example, when a PermanentID class is used to represent objects in the Credit
             }
         },
     )
-
-    @field_validator("relationship_type", mode="before")
-    @classmethod
-    def relationship_type_fixed(cls, v: str) -> str:
-        print(f"checking relationship_type with input {v}")
-
-        def fix_str(matchobj) -> str:
-            return matchobj.group(1) + "_" + matchobj.group(2)
-
-        pattern = re.compile(r"\w+:(.+)")
-        if re.match(pattern, v):
-            suffix = re.match(pattern, v).group(1)
-            print(f"suffix: {suffix}")
-
-            fixed = re.sub(r"([a-z])([A-Z])", fix_str, suffix)
-            print(f"fixed: {fixed}")
-            return fixed.lower()
-
-        return v
 
     @field_validator("id")
     def pattern_id(cls, v):
@@ -1132,7 +1075,7 @@ class Title(ConfiguredBaseModel):
         }
     )
 
-    language: str | None = Field(
+    language: Optional[str] = Field(
         default=None,
         description="""The language in which the title is written, using the appropriate IETF BCP-47 notation.""",
         json_schema_extra={
@@ -1162,7 +1105,7 @@ class Title(ConfiguredBaseModel):
             }
         },
     )
-    title_type: TitleType | None = Field(
+    title_type: Optional[TitleType] = Field(
         default=None,
         description="""A descriptor for the title for cases where the contents of the 'title' field is not the primary name or title.""",
         json_schema_extra={
@@ -1226,7 +1169,7 @@ class CreditMetadata(ConfiguredBaseModel):
         }
     )
 
-    comment: list[str] | None = Field(
+    comment: Optional[List[str]] = Field(
         default=None,
         description="""List of strings of freeform text providing extra information about this credit metadata.""",
         json_schema_extra={
@@ -1238,14 +1181,14 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    content_url: list[str] | None = Field(
+    content_url: Optional[List[str]] = Field(
         default=None,
         description="""The URL of the content of the resource.""",
         json_schema_extra={
             "linkml_meta": {"alias": "content_url", "domain_of": ["CreditMetadata"]}
         },
     )
-    contributors: list[Contributor] = Field(
+    contributors: List[Contributor] = Field(
         default=...,
         description="""A list of people and/or organizations who contributed to the resource.""",
         json_schema_extra={
@@ -1264,7 +1207,7 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    credit_metadata_source: list[str] | None = Field(
+    credit_metadata_source: Optional[List[str]] = Field(
         default=None,
         description="""A list of CURIEs, URIs, or free text entries denoting the source of the credit metadata.""",
         json_schema_extra={
@@ -1281,7 +1224,7 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    dates: list[EventDate] | None = Field(
+    dates: Optional[List[EventDate]] = Field(
         default=None,
         description="""A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.""",
         json_schema_extra={
@@ -1299,7 +1242,7 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    descriptions: list[Description] | None = Field(
+    descriptions: Optional[List[Description]] = Field(
         default=None,
         description="""A brief description or abstract for the resource being represented.""",
         json_schema_extra={
@@ -1310,7 +1253,7 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    funding: list[FundingReference] | None = Field(
+    funding: Optional[List[FundingReference]] = Field(
         default=None,
         description="""Funding sources for the resource.""",
         json_schema_extra={
@@ -1350,7 +1293,7 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    license: License | None = Field(
+    license: Optional[License] = Field(
         default=None,
         description="""Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
 
@@ -1373,7 +1316,7 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
             "linkml_meta": {"alias": "meta", "domain_of": ["CreditMetadata"]}
         },
     )
-    publisher: Organization | None = Field(
+    publisher: Optional[Organization] = Field(
         default=None,
         description="""The publisher of the resource. For a dataset, this is the repository where it is stored.""",
         json_schema_extra={
@@ -1385,7 +1328,7 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
             }
         },
     )
-    related_identifiers: list[PermanentID] | None = Field(
+    related_identifiers: Optional[List[PermanentID]] = Field(
         default=None,
         description="""Other resolvable persistent unique IDs related to the resource.""",
         json_schema_extra={
@@ -1421,7 +1364,7 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
             }
         },
     )
-    titles: list[Title] = Field(
+    titles: List[Title] = Field(
         default=...,
         description="""One or more titles for the resource.""",
         json_schema_extra={
@@ -1436,14 +1379,14 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
             }
         },
     )
-    url: str | None = Field(
+    url: Optional[str] = Field(
         default=None,
         description="""The URL of the resource.""",
         json_schema_extra={
             "linkml_meta": {"alias": "url", "domain_of": ["License", "CreditMetadata"]}
         },
     )
-    version: str | None = Field(
+    version: Optional[str] = Field(
         default=None,
         description="""The version of the resource. This must be an absolute version, not a relative version like 'latest'.""",
         json_schema_extra={
@@ -1477,7 +1420,6 @@ Description.model_rebuild()
 EventDate.model_rebuild()
 FundingReference.model_rebuild()
 License.model_rebuild()
-Metadata.model_rebuild()
 Metadata.model_rebuild()
 Organization.model_rebuild()
 PermanentID.model_rebuild()

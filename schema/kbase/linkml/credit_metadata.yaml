@@ -78,10 +78,7 @@ classes:
         required: true
         multivalued: true
         range: Contributor
-        inlined_as_list: true
-        inlined: true
-        inlined_as_list: true
-        inlined: true
+        # inlined_as_list: true
         narrow_mappings:
         - DataCite:attributes.contributors
         - DataCite:attributes.creators
@@ -103,7 +100,7 @@ classes:
         description: A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.
         multivalued: true
         range: EventDate
-        inlined: true
+        # inlined: true
         inlined_as_list: true
         # examples:
         # - value: { date: 2022-05-10, event: available }
@@ -132,7 +129,7 @@ classes:
         description: A brief description or abstract for the resource being represented.
         multivalued: true
         range: Description
-        inlined: true
+        # inlined: true
         inlined_as_list: true
 
       funding:
@@ -140,7 +137,7 @@ classes:
         description: Funding sources for the resource.
         multivalued: true
         range: FundingReference
-        inlined: true
+        # inlined: true
         inlined_as_list: true
         close_mappings:
         - DataCite:attributes.funding_references
@@ -213,7 +210,7 @@ classes:
         multivalued: true
         range: PermanentID
         inlined_as_list: true
-        inlined: true
+        # inlined: true
         close_mappings:
         - DataCite:attributes.identifiers
         - DataCite:attributes.related_identifiers
@@ -251,7 +248,7 @@ classes:
         multivalued: true
         range: Title
         inlined_as_list: true
-        inlined: true
+        # inlined: true
         exact_mappings:
         - DataCite:attributes.titles
         - ORCID:title
