@@ -412,7 +412,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -431,10 +431,6 @@
 <td>native</td>
 <td>kbcms:contributor_type</td>
 </tr>
-<tr>
-<td>exact</td>
-<td>DataCite:attributes.contributors.name_type, DataCite:attributes.creators.name_type</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -445,10 +441,7 @@ description: Must be either 'Person' or 'Organization'.
 examples:
 - value: Person
 - value: Organization
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-exact_mappings:
-- DataCite:attributes.contributors.name_type
-- DataCite:attributes.creators.name_type
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 rank: 1000
 slot_uri: schema:@type
 alias: contributor_type

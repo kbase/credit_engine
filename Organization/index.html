@@ -276,14 +276,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Contributor/">Contributor</a></td>
-<td><a href="../affiliations/">affiliations</a></td>
+<td><a href="../CreditMetadata/">CreditMetadata</a></td>
+<td><a href="../publisher/">publisher</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
-<td><a href="../CreditMetadata/">CreditMetadata</a></td>
-<td><a href="../publisher/">publisher</a></td>
+<td><a href="../Contributor/">Contributor</a></td>
+<td><a href="../affiliations/">affiliations</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
@@ -298,7 +298,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -330,7 +330,7 @@ description: "Represents an organization.\n\nRecommended resources for organizat
   \  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\n\
   \nFor example, the US DOE would be entered as:\n  organization_name: United States\
   \ Department of Energy\n  organization_id:   ROR:01bj3aw27\n"
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   organization_id:
     name: organization_id
@@ -340,10 +340,7 @@ attributes:
     - value: ROR:01bj3aw27
     - value: ISNI:0000000123423717
     - value: CrossrefFunder:100000015
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    exact_mappings:
-    - DataCite:attributes.contributors.affiliation.affiliation_identifier
-    - DataCite:attributes.creators.affiliation.affiliation_identifier
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:identifier
     domain_of:
@@ -358,10 +355,8 @@ attributes:
     - value: KBase
     - value: Lawrence Berkeley National Laboratory
     - value: The Ohio State University
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
-    - DataCite:attributes.contributors.affiliation.name
-    - DataCite:attributes.creators.affiliation.name
     - OSTI.ARTICLE:research_organization
     - JGI:organisms.pi.institution
     rank: 1000
@@ -382,7 +377,7 @@ description: "Represents an organization.\n\nRecommended resources for organizat
   \  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\n\
   \nFor example, the US DOE would be entered as:\n  organization_name: United States\
   \ Department of Energy\n  organization_id:   ROR:01bj3aw27\n"
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   organization_id:
     name: organization_id
@@ -392,10 +387,7 @@ attributes:
     - value: ROR:01bj3aw27
     - value: ISNI:0000000123423717
     - value: CrossrefFunder:100000015
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-    exact_mappings:
-    - DataCite:attributes.contributors.affiliation.affiliation_identifier
-    - DataCite:attributes.creators.affiliation.affiliation_identifier
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:identifier
     alias: organization_id
@@ -412,10 +404,8 @@ attributes:
     - value: KBase
     - value: Lawrence Berkeley National Laboratory
     - value: The Ohio State University
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
-    - DataCite:attributes.contributors.affiliation.name
-    - DataCite:attributes.creators.affiliation.name
     - OSTI.ARTICLE:research_organization
     - JGI:organisms.pi.institution
     rank: 1000

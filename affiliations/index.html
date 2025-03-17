@@ -392,7 +392,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -417,7 +417,7 @@
 </tr>
 <tr>
 <td>related</td>
-<td>DataCite:attributes.contributors.affiliation, DataCite:attributes.creators.affiliation, JGI:organisms.pi.institution</td>
+<td>JGI:organisms.pi.institution</td>
 </tr>
 </tbody>
 </table>
@@ -428,10 +428,8 @@
 description: List of organizations with which the contributor is affiliated. For contributors
   that represent an organization, this may be a parent organization (e.g. KBase, US
   DOE; Arkin lab, LBNL).
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 related_mappings:
-- DataCite:attributes.contributors.affiliation
-- DataCite:attributes.creators.affiliation
 - JGI:organisms.pi.institution
 narrow_mappings:
 - OSTI.ARTICLE:contributor.affiliation_name
@@ -443,8 +441,6 @@ domain_of:
 - Contributor
 range: Organization
 multivalued: true
-inlined: true
-inlined_as_list: true
 
 </code></pre>
 

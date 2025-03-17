@@ -309,7 +309,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -343,12 +343,12 @@ description: "Represents a funding source for a resource, including the funding 
   \  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\
   \ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier\
   \ (DOI).\n"
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   funder:
     name: funder
     description: The funder for the grant or award.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:funder
     domain_of:
@@ -361,7 +361,7 @@ attributes:
     - value: '1296'
     - value: CBET-0756451
     - value: DOI:10.46936/10.25585/60000745
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
     - DataCite:attributes.funding_references.award_number
     - Crossref:message.award
@@ -378,7 +378,7 @@ attributes:
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
     - DataCite:attributes.funding_references.award_title
     rank: 1000
@@ -390,7 +390,7 @@ attributes:
     description: URL for the grant.
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
     - DataCite:attributes.funding_references.award_url
     close_mappings:
@@ -429,12 +429,12 @@ description: "Represents a funding source for a resource, including the funding 
   \  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\
   \ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier\
   \ (DOI).\n"
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   funder:
     name: funder
     description: The funder for the grant or award.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:funder
     alias: funder
@@ -449,7 +449,7 @@ attributes:
     - value: '1296'
     - value: CBET-0756451
     - value: DOI:10.46936/10.25585/60000745
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
     - DataCite:attributes.funding_references.award_number
     - Crossref:message.award
@@ -469,7 +469,7 @@ attributes:
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
     - DataCite:attributes.funding_references.award_title
     rank: 1000
@@ -484,7 +484,7 @@ attributes:
     description: URL for the grant.
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     exact_mappings:
     - DataCite:attributes.funding_references.award_url
     close_mappings:

@@ -284,7 +284,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -314,14 +314,14 @@ description: Metadata for the credit metadata, including the schema version used
   who submitted it, and the date of submission. When the credit metadata for a resource
   is added or updated, this additional metadata must be provided along with the credit
   information.
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   credit_metadata_schema_version:
     name: credit_metadata_schema_version
     description: The version of the credit metadata schema used.
     examples:
     - value: 1.1.0
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:schemaVersion
     domain_of:
@@ -330,7 +330,7 @@ attributes:
   saved_by:
     name: saved_by
     description: KBase workspace ID of the user who added this entry.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:sdPublisher
     domain_of:
@@ -339,7 +339,7 @@ attributes:
   timestamp:
     name: timestamp
     description: Unix timestamp for the addition of this set of credit metadata.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:sdDatePublished
     domain_of:
@@ -356,14 +356,14 @@ description: Metadata for the credit metadata, including the schema version used
   who submitted it, and the date of submission. When the credit metadata for a resource
   is added or updated, this additional metadata must be provided along with the credit
   information.
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   credit_metadata_schema_version:
     name: credit_metadata_schema_version
     description: The version of the credit metadata schema used.
     examples:
     - value: 1.1.0
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:schemaVersion
     alias: credit_metadata_schema_version
@@ -375,7 +375,7 @@ attributes:
   saved_by:
     name: saved_by
     description: KBase workspace ID of the user who added this entry.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:sdPublisher
     alias: saved_by
@@ -387,7 +387,7 @@ attributes:
   timestamp:
     name: timestamp
     description: Unix timestamp for the addition of this set of credit metadata.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     rank: 1000
     slot_uri: schema:sdDatePublished
     alias: timestamp

@@ -461,7 +461,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -539,7 +539,7 @@ description: 'Represents the credit metadata associated with an object.
   value, ''dataset'', it is automatically populated if no value is supplied.
 
   '
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   comment:
     name: comment
@@ -547,7 +547,7 @@ attributes:
       this credit metadata.
     examples:
     - value: This comment adds a lot of extra value!
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:comment
     domain_of:
@@ -556,7 +556,7 @@ attributes:
   content_url:
     name: content_url
     description: The URL of the content of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -565,7 +565,7 @@ attributes:
   contributors:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     narrow_mappings:
     - DataCite:attributes.contributors
     - DataCite:attributes.creators
@@ -580,8 +580,6 @@ attributes:
     range: Contributor
     required: true
     multivalued: true
-    inlined: true
-    inlined_as_list: true
   credit_metadata_source:
     name: credit_metadata_source
     description: A list of CURIEs, URIs, or free text entries denoting the source
@@ -590,7 +588,7 @@ attributes:
     - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
     - value: DataCite
     - value: DOI:10.13039/100000015
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -600,7 +598,7 @@ attributes:
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     close_mappings:
     - DataCite:attributes.published
     - DataCite:attributes.updated
@@ -618,7 +616,7 @@ attributes:
   descriptions:
     name: descriptions
     description: A brief description or abstract for the resource being represented.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:description
     domain_of:
@@ -630,7 +628,7 @@ attributes:
   funding:
     name: funding
     description: Funding sources for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     close_mappings:
     - DataCite:attributes.funding_references
     - Crossref:Message.project.funding
@@ -647,11 +645,13 @@ attributes:
     name: identifier
     description: Resolvable persistent unique identifier for the resource. Should
       be in the format &lt;database name&gt;:&lt;identifier within database&gt;.
+    comments:
+    - can generate schema:url from the identifier
     examples:
     - value: RefSeq:GCF_004214875.1
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - DataCite:id
     - JGI:organisms.grouped_by
@@ -678,7 +678,7 @@ attributes:
       Commons 4.0 license.
 
       '
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - biolink:license
     related_mappings:
@@ -692,7 +692,7 @@ attributes:
     name: meta
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -702,7 +702,7 @@ attributes:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     narrow_mappings:
     - ORCID:url
     - OSTI.ARTICLE:site_url
@@ -714,7 +714,7 @@ attributes:
   related_identifiers:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     close_mappings:
     - DataCite:attributes.identifiers
     - DataCite:attributes.related_identifiers
@@ -737,7 +737,7 @@ attributes:
       the only valid value for KBase DOIs.
     examples:
     - value: dataset
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - OSTI.ARTICLE:product_type
     - OSTI.ARTICLE:workType
@@ -753,7 +753,7 @@ attributes:
   titles:
     name: titles
     description: One or more titles for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - DataCite:attributes.titles
     - ORCID:title
@@ -769,7 +769,7 @@ attributes:
   url:
     name: url
     description: The URL of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -783,7 +783,7 @@ attributes:
     - value: '5'
     - value: 1.2.1
     - value: '20220405'
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - DataCite:attributes.version
     rank: 1000
@@ -858,7 +858,7 @@ description: 'Represents the credit metadata associated with an object.
   value, ''dataset'', it is automatically populated if no value is supplied.
 
   '
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   comment:
     name: comment
@@ -866,7 +866,7 @@ attributes:
       this credit metadata.
     examples:
     - value: This comment adds a lot of extra value!
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:comment
     alias: comment
@@ -878,7 +878,7 @@ attributes:
   content_url:
     name: content_url
     description: The URL of the content of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     alias: content_url
     owner: CreditMetadata
@@ -889,7 +889,7 @@ attributes:
   contributors:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     narrow_mappings:
     - DataCite:attributes.contributors
     - DataCite:attributes.creators
@@ -906,8 +906,6 @@ attributes:
     range: Contributor
     required: true
     multivalued: true
-    inlined: true
-    inlined_as_list: true
   credit_metadata_source:
     name: credit_metadata_source
     description: A list of CURIEs, URIs, or free text entries denoting the source
@@ -916,7 +914,7 @@ attributes:
     - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
     - value: DataCite
     - value: DOI:10.13039/100000015
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     alias: credit_metadata_source
     owner: CreditMetadata
@@ -929,7 +927,7 @@ attributes:
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     close_mappings:
     - DataCite:attributes.published
     - DataCite:attributes.updated
@@ -944,12 +942,11 @@ attributes:
     - CreditMetadata
     range: EventDate
     multivalued: true
-    inlined: true
     inlined_as_list: true
   descriptions:
     name: descriptions
     description: A brief description or abstract for the resource being represented.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:description
     alias: descriptions
@@ -958,12 +955,11 @@ attributes:
     - CreditMetadata
     range: Description
     multivalued: true
-    inlined: true
     inlined_as_list: true
   funding:
     name: funding
     description: Funding sources for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     close_mappings:
     - DataCite:attributes.funding_references
     - Crossref:Message.project.funding
@@ -976,17 +972,18 @@ attributes:
     - CreditMetadata
     range: FundingReference
     multivalued: true
-    inlined: true
     inlined_as_list: true
   identifier:
     name: identifier
     description: Resolvable persistent unique identifier for the resource. Should
       be in the format &lt;database name&gt;:&lt;identifier within database&gt;.
+    comments:
+    - can generate schema:url from the identifier
     examples:
     - value: RefSeq:GCF_004214875.1
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - DataCite:id
     - JGI:organisms.grouped_by
@@ -1015,7 +1012,7 @@ attributes:
       Commons 4.0 license.
 
       '
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - biolink:license
     related_mappings:
@@ -1031,7 +1028,7 @@ attributes:
     name: meta
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     alias: meta
     owner: CreditMetadata
@@ -1043,7 +1040,7 @@ attributes:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     narrow_mappings:
     - ORCID:url
     - OSTI.ARTICLE:site_url
@@ -1057,7 +1054,7 @@ attributes:
   related_identifiers:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     close_mappings:
     - DataCite:attributes.identifiers
     - DataCite:attributes.related_identifiers
@@ -1074,7 +1071,6 @@ attributes:
     - CreditMetadata
     range: PermanentID
     multivalued: true
-    inlined: true
     inlined_as_list: true
   resource_type:
     name: resource_type
@@ -1082,7 +1078,7 @@ attributes:
       the only valid value for KBase DOIs.
     examples:
     - value: dataset
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - OSTI.ARTICLE:product_type
     - OSTI.ARTICLE:workType
@@ -1100,7 +1096,7 @@ attributes:
   titles:
     name: titles
     description: One or more titles for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - DataCite:attributes.titles
     - ORCID:title
@@ -1113,12 +1109,11 @@ attributes:
     range: Title
     required: true
     multivalued: true
-    inlined: true
     inlined_as_list: true
   url:
     name: url
     description: The URL of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     rank: 1000
     alias: url
     owner: CreditMetadata
@@ -1134,7 +1129,7 @@ attributes:
     - value: '5'
     - value: 1.2.1
     - value: '20220405'
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
     exact_mappings:
     - DataCite:attributes.version
     rank: 1000

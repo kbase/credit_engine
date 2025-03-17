@@ -276,7 +276,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -303,7 +303,7 @@
 <details>
 <pre><code class="language-yaml">name: License
 description: License information for the resource.
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   id:
     name: id
@@ -312,9 +312,9 @@ attributes:
     examples:
     - value: CC-BY-NC-ND-4.0
     - value: Apache-2.0
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    rank: 1000
     domain_of:
-    - Contributor
     - License
     - PermanentID
   url:
@@ -322,7 +322,7 @@ attributes:
     description: URL for the license.
     examples:
     - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     domain_of:
     - CreditMetadata
     - License
@@ -343,7 +343,7 @@ any_of:
 <details>
 <pre><code class="language-yaml">name: License
 description: License information for the resource.
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 attributes:
   id:
     name: id
@@ -352,11 +352,11 @@ attributes:
     examples:
     - value: CC-BY-NC-ND-4.0
     - value: Apache-2.0
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    rank: 1000
     alias: id
     owner: License
     domain_of:
-    - Contributor
     - License
     - PermanentID
     range: string
@@ -365,7 +365,7 @@ attributes:
     description: URL for the license.
     examples:
     - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
     alias: url
     owner: License
     domain_of:

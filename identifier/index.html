@@ -308,6 +308,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     <span class="md-ellipsis">
       Identifier and Mapping Information
@@ -420,10 +429,14 @@
 </tr>
 </tbody>
 </table>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>can generate schema:url from the identifier</li>
+</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -458,11 +471,13 @@
 <pre><code class="language-yaml">name: identifier
 description: Resolvable persistent unique identifier for the resource. Should be in
   the format &lt;database name&gt;:&lt;identifier within database&gt;.
+comments:
+- can generate schema:url from the identifier
 examples:
 - value: RefSeq:GCF_004214875.1
 - value: GenBank:CP035949.1
 - value: img.taxon:648028003
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 exact_mappings:
 - DataCite:id
 - JGI:organisms.grouped_by

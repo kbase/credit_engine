@@ -420,7 +420,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -439,10 +439,6 @@
 <td>native</td>
 <td>kbcms:organization_id</td>
 </tr>
-<tr>
-<td>exact</td>
-<td>DataCite:attributes.contributors.affiliation.affiliation_identifier, DataCite:attributes.creators.affiliation.affiliation_identifier</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -455,10 +451,7 @@ examples:
 - value: ROR:01bj3aw27
 - value: ISNI:0000000123423717
 - value: CrossrefFunder:100000015
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-exact_mappings:
-- DataCite:attributes.contributors.affiliation.affiliation_identifier
-- DataCite:attributes.creators.affiliation.affiliation_identifier
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 rank: 1000
 slot_uri: schema:identifier
 alias: organization_id

@@ -201,6 +201,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kbase.github.io/credit_engine/contributor_id/</loc>
+         <lastmod>2025-03-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kbase.github.io/credit_engine/contributor_roles/</loc>
          <lastmod>2025-03-17</lastmod>
          <changefreq>daily</changefreq>

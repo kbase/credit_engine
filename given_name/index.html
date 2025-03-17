@@ -415,7 +415,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -434,10 +434,6 @@
 <td>native</td>
 <td>kbcms:given_name</td>
 </tr>
-<tr>
-<td>related</td>
-<td>DataCite:attributes.contributors.givenName, DataCite:attributes.creators.givenName</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -449,10 +445,7 @@ examples:
 - value: Marionetta Cecille de la
 - value: Helena
 - value: Hubert George
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
-related_mappings:
-- DataCite:attributes.contributors.givenName
-- DataCite:attributes.creators.givenName
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 rank: 1000
 alias: given_name
 owner: Contributor

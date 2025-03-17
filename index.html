@@ -430,7 +430,7 @@
 
 <h1 id="credit_metadata">credit_metadata</h1>
 <p>Schema for KBase resource credit metadata. This version brings the schema into closer alignment with the commonmeta citation schema, https://commonmeta.org.</p>
-<p>URI: https://github.com/kbase/credit_engine/schema/kbase/linkml</p>
+<p>URI: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</p>
 <p>Name: credit_metadata</p>
 <h2 id="classes">Classes</h2>
 <table>
@@ -453,7 +453,7 @@ one of the 'name' fields: either 'given_name' and 'family_name' (for a person), 
 roles vocabularies. For more information on these resources and choosing
 appropriate roles, please see the following links:</p>
 <p>DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</p>
-<p>CRediT contributor role taxonomy: https://credit.niso.org
+<p>CRediT contributor role taxonomy: https://credit.niso.org.
  |
 | <a href="CreditMetadata/">CreditMetadata</a> | Represents the credit metadata associated with an object.</p>
 <p>In the following documentation, 'Resource' is used to refer to the object
@@ -530,6 +530,10 @@ value, 'dataset', it is automatically populated if no value is supplied.
 <tr>
 <td><a href="content_url/">content_url</a></td>
 <td>The URL of the content of the resource</td>
+</tr>
+<tr>
+<td><a href="contributor_id/">contributor_id</a></td>
+<td>Persistent unique identifier for the contributor; this might be an ORCID for ...</td>
 </tr>
 <tr>
 <td><a href="contributor_roles/">contributor_roles</a></td>
@@ -609,7 +613,7 @@ value, 'dataset', it is automatically populated if no value is supplied.
 </tr>
 <tr>
 <td><a href="id/">id</a></td>
-<td>Persistent unique identifier for the contributor; this might be an ORCID for ...</td>
+<td>String representing the license, from the SPDX license identifiers at https:/...</td>
 </tr>
 <tr>
 <td><a href="identifier/">identifier</a></td>

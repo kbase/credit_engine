@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kbase.github.io/credit_engine/date/">
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/contributor_id/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Slot: date - KBase Credit Engine Metadata Schema</title>
+        <title>Slot: contributor_id - KBase Credit Engine Metadata Schema</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-date" class="md-skip">
+        <a href="#slot-contributor_id" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: date
+              Slot: contributor_id
             
           </span>
         </div>
@@ -367,9 +367,9 @@
   
 
 
-<h1 id="slot-date">Slot: date</h1>
-<p><em>The date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.</em></p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/date">kbcms:date</a></p>
+<h1 id="slot-contributor_id">Slot: contributor_id</h1>
+<p><em>Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.</em></p>
+<p>URI: <a href="http://schema.org/identifier">schema:identifier</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -383,8 +383,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../EventDate/">EventDate</a></td>
-<td>Represents an event in the lifecycle of a resource and the date it occurred o...</td>
+<td><a href="../Contributor/">Contributor</a></td>
+<td>Represents a contributor to the resource</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -392,13 +392,10 @@
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../String/">String</a></p>
+<p>Range: <a href="../Uriorcurie/">Uriorcurie</a></p>
 </li>
 <li>
-<p>Required: True</p>
-</li>
-<li>
-<p>Regex pattern: <code>\d{4}(-\d{2}){0,2}</code></p>
+<p>Regex pattern: <code>^[a-zA-Z0-9.-_]+:\S</code></p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -410,13 +407,10 @@
 </thead>
 <tbody>
 <tr>
-<td>2001</td>
+<td>ORCID:0000-0001-9557-7715</td>
 </tr>
 <tr>
-<td>2021-05</td>
-</tr>
-<tr>
-<td>1998-02-15</td>
+<td>ROR:01znn6x10</td>
 </tr>
 </tbody>
 </table>
@@ -436,33 +430,41 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>kbcms:date</td>
+<td>schema:identifier</td>
 </tr>
 <tr>
 <td>native</td>
-<td>kbcms:date</td>
+<td>kbcms:contributor_id</td>
+</tr>
+<tr>
+<td>narrow</td>
+<td>ORCID:contributor.orcidId, OSTI.ARTICLE:author.orcid_id, OSTI.ARTICLE:contributor.orcid_id, Crossref:message.project.funding.funder.name</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: date
-description: The date associated with the event. The date may be in the format YYYY,
-  YYYY-MM, or YYYY-MM-DD.
+<pre><code class="language-yaml">name: contributor_id
+description: Persistent unique identifier for the contributor; this might be an ORCID
+  for an individual, or a ROR ID for an organization.
 examples:
-- value: '2001'
-- value: 2021-05
-- value: '1998-02-15'
+- value: ORCID:0000-0001-9557-7715
+- value: ROR:01znn6x10
 from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
+narrow_mappings:
+- ORCID:contributor.orcidId
+- OSTI.ARTICLE:author.orcid_id
+- OSTI.ARTICLE:contributor.orcid_id
+- Crossref:message.project.funding.funder.name
 rank: 1000
-alias: date
-owner: EventDate
+slot_uri: schema:identifier
+alias: contributor_id
+owner: Contributor
 domain_of:
-- EventDate
-range: string
-required: true
-pattern: \d{4}(-\d{2}){0,2}
+- Contributor
+range: uriorcurie
+pattern: ^[a-zA-Z0-9.-_]+:\S
 
 </code></pre>
 

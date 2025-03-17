@@ -415,7 +415,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml</li>
+<li>from schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -439,10 +439,6 @@
 <td>JGI:organisms.pi.name, ORCID:name</td>
 </tr>
 <tr>
-<td>related</td>
-<td>DataCite:attributes.creators.name, DataCite:attributes.contributors.name</td>
-</tr>
-<tr>
 <td>close</td>
 <td>OSTI.ARTICLE:author, OSTI.ARTICLE:contributor</td>
 </tr>
@@ -459,16 +455,13 @@ examples:
 - value: National Institute of Mental Health
 - value: Madonna
 - value: Ransome the Clown
-from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml
+from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
 exact_mappings:
 - JGI:organisms.pi.name
 - ORCID:name
 close_mappings:
 - OSTI.ARTICLE:author
 - OSTI.ARTICLE:contributor
-related_mappings:
-- DataCite:attributes.creators.name
-- DataCite:attributes.contributors.name
 rank: 1000
 slot_uri: schema:name
 alias: name
