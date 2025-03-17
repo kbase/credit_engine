@@ -1,3 +1,5 @@
+"""Credit Metadata model, Pydantic version."""
+
 from __future__ import annotations
 
 import re
@@ -7,7 +9,39 @@ from typing import Any, ClassVar
 from pydantic import BaseModel, ConfigDict, Field, RootModel, field_validator
 
 metamodel_version = "None"
-version = "0.0.3"
+version = "0.0.4"
+
+
+CURIE_PATTERN: re.Pattern[str] = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
+
+
+def validate_pattern(
+    field_name: str, v: list[str] | str, pattern: re.Pattern = CURIE_PATTERN
+) -> list[str] | str:
+    """
+    Ensure that a value or list of values match a pattern.
+
+    :param field_name: name of the field to be tested
+    :type field_name: str
+    :param v: value or list of values to test
+    :type v: list[str] | str
+    :param pattern: regex to match against
+    :type pattern: re.Pattern
+    :raises ValueError: if the values do not match the pattern
+    :return: validated values
+    :rtype: list[str] | str
+    """
+    errs = []
+    if isinstance(v, list):
+        errs = [el for el in v if not pattern.match(el)]
+    elif isinstance(v, str) and not pattern.match(v):
+        errs.append(v)
+
+    if errs:
+        err_msg = f"Invalid {field_name} format: " + ", ".join(errs)
+        raise ValueError(err_msg)
+
+    return v
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -19,7 +53,6 @@ class ConfiguredBaseModel(BaseModel):
         use_enum_values=True,
         strict=False,
     )
-    pass
 
 
 class LinkMLMeta(RootModel):
@@ -104,9 +137,7 @@ linkml_meta = LinkMLMeta(
 
 
 class ContributorRole(str, Enum):
-    """
-    The type of contribution made by a contributor
-    """
+    """The type of contribution made by a contributor."""
 
     # Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource. May also be "Point of Contact" in organisation that controls access to the resource, if that organisation is different from Publisher, Distributor, Data Manager.
     contact_person = "DataCite:ContactPerson"
@@ -181,9 +212,7 @@ class ContributorRole(str, Enum):
 
 
 class ContributorType(str, Enum):
-    """
-    The type of contributor being represented
-    """
+    """The type of contributor being represented."""
 
     # A person
     Person = "Person"
@@ -192,9 +221,7 @@ class ContributorType(str, Enum):
 
 
 class DescriptionType(str, Enum):
-    """
-    The type of text being represented
-    """
+    """The type of text being represented."""
 
     # A brief description of the resource and the context in which the resource was created.
     abstract = "abstract"
@@ -203,9 +230,7 @@ class DescriptionType(str, Enum):
 
 
 class EventType(str, Enum):
-    """
-    The type of date being represented
-    """
+    """The type of date being represented."""
 
     # The date that the publisher accepted the resource into their system. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
 
@@ -241,89 +266,85 @@ class EventType(str, Enum):
 
 
 class RelationshipType(str, Enum):
-    """
-    The relationship between two entities
-    """
+    """The relationship between two entities. For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered (A) and this ID (B)."""
 
-    cites = "DataCite:Cites"
-    compiles = "DataCite:Compiles"
-    continues = "DataCite:Continues"
-    describes = "DataCite:Describes"
-    documents = "DataCite:Documents"
-    has_metadata = "DataCite:HasMetadata"
-    has_part = "DataCite:HasPart"
-    has_version = "DataCite:HasVersion"
-    is_cited_by = "DataCite:IsCitedBy"
-    is_compiled_by = "DataCite:isCompiledBy"
-    is_continued_by = "DataCite:IsContinuedBy"
-    is_derived_from = "DataCite:IsDerivedFrom"
-    is_described_by = "DataCite:IsDescribedBy"
-    is_documented_by = "DataCite:IsDocumentedBy"
-    is_identical_to = "DataCite:IsIdenticalTo"
-    is_metadata_for = "DataCite:IsMetadataFor"
-    is_new_version_of = "DataCite:IsNewVersionOf"
-    is_original_form_of = "DataCite:IsOriginalFormOf"
-    is_part_of = "DataCite:IsPartOf"
-    is_previous_version_of = "DataCite:IsPreviousVersionOf"
-    is_published_in = "DataCite:IsPublishedIn"
-    is_referenced_by = "DataCite:IsReferencedBy"
-    is_required_by = "DataCite:IsRequiredBy"
-    is_reviewed_by = "DataCite:IsReviewedBy"
-    is_source_of = "DataCite:IsSourceOf"
-    is_supplement_to = "DataCite:IsSupplementTo"
-    is_supplemented_by = "DataCite:IsSupplementedBy"
-    is_variant_form_of = "DataCite:IsVariantFormOf"
-    is_version_of = "DataCite:IsVersionOf"
-    obsoletes = "DataCite:Obsoletes"
-    references = "DataCite:References"
-    requires = "DataCite:Requires"
-    reviews = "DataCite:Reviews"
-    based_on_data = "Crossref:BasedOnData"
-    finances = "Crossref:Finances"
-    has_comment = "Crossref:HasComment"
-    has_derivation = "Crossref:HasDerivation"
-    has_expression = "Crossref:HasExpression"
-    has_format = "Crossref:HasFormat"
-    has_manifestation = "Crossref:HasManifestation"
-    has_manuscript = "Crossref:HasManuscript"
-    has_preprint = "Crossref:HasPreprint"
-    has_related_material = "Crossref:HasRelatedMaterial"
-    has_reply = "Crossref:HasReply"
-    has_review = "Crossref:HasReview"
-    has_translation = "Crossref:HasTranslation"
-    is_based_on = "Crossref:IsBasedOn"
-    is_basis_for = "Crossref:IsBasisFor"
-    is_comment_on = "Crossref:IsCommentOn"
-    is_data_basis_for = "Crossref:IsDataBasisFor"
-    is_expression_of = "Crossref:IsExpressionOf"
-    is_financed_by = "Crossref:IsFinancedBy"
-    is_format_of = "Crossref:IsFormatOf"
-    is_manifestation_of = "Crossref:IsManifestationOf"
-    is_manuscript_of = "Crossref:IsManuscriptOf"
-    is_preprint_of = "Crossref:IsPreprintOf"
-    is_related_material = "Crossref:IsRelatedMaterial"
-    is_replaced_by = "Crossref:IsReplacedBy"
-    is_reply_to = "Crossref:IsReplyTo"
-    is_review_of = "Crossref:IsReviewOf"
-    is_same_as = "Crossref:IsSameAs"
-    is_translation_of = "Crossref:IsTranslationOf"
-    replaces = "Crossref:Replaces"
-    unknown = "kbcms:Unknown"
+    based_on_data = "based_on_data"
+
+    cites = "cites"
+    compiles = "compiles"
+    continues = "continues"
+    describes = "describes"
+    documents = "documents"
+    finances = "finances"
+    has_comment = "has_comment"
+    has_derivation = "has_derivation"
+    has_expression = "has_expression"
+    has_format = "has_format"
+    has_manifestation = "has_manifestation"
+    has_manuscript = "has_manuscript"
+    has_metadata = "has_metadata"
+    has_part = "has_part"
+    has_preprint = "has_preprint"
+    has_related_material = "has_related_material"
+    has_reply = "has_reply"
+    has_review = "has_review"
+    has_translation = "has_translation"
+    has_version = "has_version"
+    is_based_on = "is_based_on"
+    is_basis_for = "is_basis_for"
+    is_cited_by = "is_cited_by"
+    is_comment_on = "is_comment_on"
+    is_compiled_by = "is_compiled_by"
+    is_continued_by = "is_continued_by"
+    is_data_basis_for = "is_data_basis_for"
+    is_derived_from = "is_derived_from"
+    is_described_by = "is_described_by"
+    is_documented_by = "is_documented_by"
+    is_expression_of = "is_expression_of"
+    is_financed_by = "is_financed_by"
+    is_format_of = "is_format_of"
+    is_identical_to = "is_identical_to"
+    is_manifestation_of = "is_manifestation_of"
+    is_manuscript_of = "is_manuscript_of"
+    is_metadata_for = "is_metadata_for"
+    is_new_version_of = "is_new_version_of"
+    is_obsoleted_by = "is_obsoleted_by"
+    is_original_form_of = "is_original_form_of"
+    is_part_of = "is_part_of"
+    is_preprint_of = "is_preprint_of"
+    is_previous_version_of = "is_previous_version_of"
+    is_published_in = "is_published_in"
+    is_referenced_by = "is_referenced_by"
+    is_related_material = "is_related_material"
+    is_replaced_by = "is_replaced_by"
+    is_reply_to = "is_reply_to"
+    is_required_by = "is_required_by"
+    is_review_of = "is_review_of"
+    is_reviewed_by = "is_reviewed_by"
+    is_same_as = "is_same_as"
+    is_source_of = "is_source_of"
+    is_supplement_to = "is_supplement_to"
+    is_supplemented_by = "is_supplemented_by"
+    is_translation_of = "is_translation_of"
+    is_variant_form_of = "is_variant_form_of"
+    is_version_of = "is_version_of"
+    obsoletes = "obsoletes"
+    references = "references"
+    replaces = "replaces"
+    requires = "requires"
+    reviews = "reviews"
+    unknown = "unknown"
 
 
 class ResourceType(str, Enum):
-    """
-    The type of resource being represented.
-    """
+    """The type of resource being represented."""
 
     # a dataset
     dataset = "dataset"
 
 
 class TitleType(str, Enum):
-    """
-    The type of title being represented.
-    """
+    """The type of title being represented."""
 
     # any subtitle for the resource
     subtitle = "subtitle"
@@ -353,7 +374,18 @@ class Contributor(ConfiguredBaseModel):
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
-        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml"}
+        {
+            "any_of": [
+                {
+                    "slot_conditions": {
+                        "family_name": {"name": "family_name", "required": True},
+                        "given_name": {"name": "given_name", "required": True},
+                    }
+                },
+                {"slot_conditions": {"name": {"name": "name", "required": True}}},
+            ],
+            "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
+        }
     )
 
     contributor_type: ContributorType | None = Field(
@@ -394,8 +426,8 @@ class Contributor(ConfiguredBaseModel):
             }
         },
     )
-    name: str = Field(
-        ...,
+    name: str | None = Field(
+        None,
         description="""Contributor name. For organizations, this should be the full (unabbreviated) name; can also be used for a person if the given name/family name format is not applicable.""",
         json_schema_extra={
             "linkml_meta": {
@@ -494,75 +526,23 @@ class Contributor(ConfiguredBaseModel):
 
     @field_validator("contributor_id")
     def pattern_contributor_id(cls, v):
-        pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
-        if isinstance(v, list):
-            for element in v:
-                if not pattern.match(element):
-                    raise ValueError(f"Invalid contributor_id format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid contributor_id format: {v}")
-        return v
-
-
-class Metadata(ConfiguredBaseModel):
-    """
-    Metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, this additional metadata must be provided along with the credit information.
-    """
-
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
-        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml"}
-    )
-
-    credit_metadata_schema_version: str = Field(
-        ...,
-        description="""The version of the credit metadata schema used.""",
-        json_schema_extra={
-            "linkml_meta": {
-                "alias": "credit_metadata_schema_version",
-                "domain_of": ["Metadata"],
-                "examples": [{"value": "1.1.0"}],
-                "slot_uri": "schema:schemaVersion",
-            }
-        },
-    )
-    saved_by: str = Field(
-        ...,
-        description="""KBase workspace ID of the user who added this entry.""",
-        json_schema_extra={
-            "linkml_meta": {
-                "alias": "saved_by",
-                "domain_of": ["Metadata"],
-                "slot_uri": "schema:sdPublisher",
-            }
-        },
-    )
-    timestamp: int = Field(
-        ...,
-        description="""Unix timestamp for the addition of this set of credit metadata.""",
-        json_schema_extra={
-            "linkml_meta": {
-                "alias": "timestamp",
-                "domain_of": ["Metadata"],
-                "slot_uri": "schema:sdDatePublished",
-            }
-        },
-    )
+        return validate_pattern("contributor_id", v)
 
 
 class CreditMetadata(ConfiguredBaseModel):
     """
-    Represents the credit metadata associated with a workspace object.
+    Represents the credit metadata associated with an object.
 
-    In the following documentation, 'Resource' is used to refer to the workspace object
-    that the CM pertains to.
+    In the following documentation, 'Resource' is used to refer to the object
+    that the CM pertains to, for example, a KBase Workspace object or a
+    sample from the KBase Sample Service.
 
     The 'resource_type' field should be filled using values from the DataCite
     resourceTypeGeneral field:
 
     https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
 
-    Currently the KBase workspace only supports credit metadata for objects of type
+    Currently KBase only supports credit metadata for objects of type
     'dataset'; anything else will return an error.
 
     The license may be supplied either as an URL pointing to licensing information for
@@ -585,6 +565,10 @@ class CreditMetadata(ConfiguredBaseModel):
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
         {
+            "any_of": [
+                {"slot_conditions": {"dates": {"name": "dates", "required": True}}},
+                {"slot_conditions": {"version": {"name": "version", "required": True}}},
+            ],
             "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
             "tree_root": True,
         }
@@ -729,8 +713,8 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
             }
         },
     )
-    meta: Metadata | None = Field(
-        None,
+    meta: Metadata = Field(
+        ...,
         description="""Metadata for this credit information, including submitter, schema version, and timestamp.""",
         json_schema_extra={"linkml_meta": {"alias": "meta", "domain_of": ["CreditMetadata"]}},
     )
@@ -766,7 +750,7 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
     )
     resource_type: ResourceType = Field(
         ...,
-        description="""The broad type of the source data for this workspace object. 'dataset' is currently the only valid value for KBase DOIs.""",
+        description="""The broad type of the source data for this object. 'dataset' is currently the only valid value for KBase DOIs.""",
         json_schema_extra={
             "linkml_meta": {
                 "alias": "resource_type",
@@ -820,21 +804,11 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
 
     @field_validator("identifier")
     def pattern_identifier(cls, v):
-        pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
-        if isinstance(v, list):
-            for element in v:
-                if not pattern.match(element):
-                    raise ValueError(f"Invalid identifier format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid identifier format: {v}")
-        return v
+        return validate_pattern("identifier", v)
 
 
 class Description(ConfiguredBaseModel):
-    """
-    Textual information about the resource being represented.
-    """
+    """Textual information about the resource being represented."""
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
         {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml"}
@@ -915,21 +889,14 @@ class EventDate(ConfiguredBaseModel):
     @field_validator("date")
     def pattern_date(cls, v):
         pattern = re.compile(r"\d{4}(-\d{2}){0,2}")
-        if isinstance(v, list):
-            for element in v:
-                if not pattern.match(element):
-                    raise ValueError(f"Invalid date format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid date format: {v}")
-        return v
+        return validate_pattern("date", v, pattern=pattern)
 
 
 class FundingReference(ConfiguredBaseModel):
     """
     Represents a funding source for a resource, including the funding body and the grant awarded.
 
-    The 'funder_name' field is required; all others are optional.
+    One (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.
 
     Recommended resources for organization identifiers include:
       - Research Organization Registry, http://ror.org
@@ -942,11 +909,27 @@ class FundingReference(ConfiguredBaseModel):
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
         {
+            "any_of": [
+                {"slot_conditions": {"grant_id": {"name": "grant_id", "required": True}}},
+                {"slot_conditions": {"grant_url": {"name": "grant_url", "required": True}}},
+                {"slot_conditions": {"funder": {"name": "funder", "required": True}}},
+            ],
             "class_uri": "schema:MonetaryGrant",
             "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
         }
     )
 
+    funder: Organization | None = Field(
+        None,
+        description="""The funder for the grant or award""",
+        json_schema_extra={
+            "linkml_meta": {
+                "alias": "funder",
+                "domain_of": ["FundingReference"],
+                "slot_uri": "schema:funder",
+            }
+        },
+    )
     grant_id: str | None = Field(
         None,
         description="""Code for the grant, assigned by the funder""",
@@ -1004,35 +987,14 @@ class FundingReference(ConfiguredBaseModel):
             }
         },
     )
-    funder: Organization | None = Field(
-        None,
-        description="""The funder for the grant or award""",
-        json_schema_extra={
-            "linkml_meta": {
-                "alias": "funder",
-                "domain_of": ["FundingReference"],
-                "slot_uri": "schema:funder",
-            }
-        },
-    )
 
     @field_validator("grant_url")
     def pattern_grant_url(cls, v):
-        pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
-        if isinstance(v, list):
-            for element in v:
-                if not pattern.match(element):
-                    raise ValueError(f"Invalid grant_url format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid grant_url format: {v}")
-        return v
+        return validate_pattern("grant_url", v)
 
 
 class License(ConfiguredBaseModel):
-    """
-    License information for the resource.
-    """
+    """License information for the resource."""
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
         {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml"}
@@ -1057,6 +1019,49 @@ class License(ConfiguredBaseModel):
                 "alias": "url",
                 "domain_of": ["CreditMetadata", "License"],
                 "examples": [{"value": "https://jgi.doe.gov/user-programs/pmo-overview/policies/"}],
+            }
+        },
+    )
+
+
+class Metadata(ConfiguredBaseModel):
+    """Metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, this additional metadata must be provided along with the credit information."""
+
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
+        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml"}
+    )
+
+    credit_metadata_schema_version: str = Field(
+        ...,
+        description="""The version of the credit metadata schema used.""",
+        json_schema_extra={
+            "linkml_meta": {
+                "alias": "credit_metadata_schema_version",
+                "domain_of": ["Metadata"],
+                "examples": [{"value": "1.1.0"}],
+                "slot_uri": "schema:schemaVersion",
+            }
+        },
+    )
+    saved_by: str = Field(
+        ...,
+        description="""KBase workspace ID of the user who added this entry.""",
+        json_schema_extra={
+            "linkml_meta": {
+                "alias": "saved_by",
+                "domain_of": ["Metadata"],
+                "slot_uri": "schema:sdPublisher",
+            }
+        },
+    )
+    timestamp: int = Field(
+        ...,
+        description="""Unix timestamp for the addition of this set of credit metadata.""",
+        json_schema_extra={
+            "linkml_meta": {
+                "alias": "timestamp",
+                "domain_of": ["Metadata"],
+                "slot_uri": "schema:sdDatePublished",
             }
         },
     )
@@ -1129,20 +1134,12 @@ class Organization(ConfiguredBaseModel):
 
     @field_validator("organization_id")
     def pattern_organization_id(cls, v):
-        pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
-        if isinstance(v, list):
-            for element in v:
-                if not pattern.match(element):
-                    raise ValueError(f"Invalid organization_id format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid organization_id format: {v}")
-        return v
+        return validate_pattern("organization_id", v)
 
 
 class PermanentID(ConfiguredBaseModel):
     """
-    Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.
+    Represents a persistent unique identifier for an entity and its relationship to some other entity.
 
     The 'id' field and 'relationship_type' fields are required.
 
@@ -1205,7 +1202,7 @@ class PermanentID(ConfiguredBaseModel):
     relationship_type: RelationshipType | None = Field(
         None,
         description="""The relationship between the ID and some other entity.
-For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the CreditMetadata and this ID.
+For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.
 """,
         json_schema_extra={
             "linkml_meta": {
@@ -1216,17 +1213,28 @@ For example, when a PermanentID class is used to represent objects in the Credit
         },
     )
 
+    @field_validator("relationship_type", mode="before")
+    @classmethod
+    def relationship_type_fixed(cls, v: str) -> str:
+        print(f"checking relationship_type with input {v}")
+
+        def fix_str(matchobj) -> str:
+            return matchobj.group(1) + "_" + matchobj.group(2)
+
+        pattern = re.compile(r"\w+:(.+)")
+        if re.match(pattern, v):
+            suffix = re.match(pattern, v).group(1)
+            print(f"suffix: {suffix}")
+
+            fixed = re.sub(r"([a-z])([A-Z])", fix_str, suffix)
+            print(f"fixed: {fixed}")
+            return fixed.lower()
+
+        return v
+
     @field_validator("id")
     def pattern_id(cls, v):
-        pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
-        if isinstance(v, list):
-            for element in v:
-                if not pattern.match(element):
-                    raise ValueError(f"Invalid id format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid id format: {v}")
-        return v
+        return validate_pattern("id", v)
 
 
 class Title(ConfiguredBaseModel):
@@ -1293,12 +1301,12 @@ class Title(ConfiguredBaseModel):
 # Model rebuild
 # see https://pydantic-docs.helpmanual.io/usage/models/#rebuilding-a-model
 Contributor.model_rebuild()
-Metadata.model_rebuild()
 CreditMetadata.model_rebuild()
 Description.model_rebuild()
 EventDate.model_rebuild()
 FundingReference.model_rebuild()
 License.model_rebuild()
+Metadata.model_rebuild()
 Organization.model_rebuild()
 PermanentID.model_rebuild()
 Title.model_rebuild()

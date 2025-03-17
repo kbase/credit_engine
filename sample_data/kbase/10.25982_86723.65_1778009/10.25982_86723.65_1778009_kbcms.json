@@ -1,6 +1,6 @@
 {
   "meta": {
-    "credit_metadata_schema_version": "0.0.3",
+    "credit_metadata_schema_version": "0.0.4",
     "saved_by": "ialarmedalien",
     "timestamp": 1234567890
   },
@@ -64,40 +64,40 @@
   "related_identifiers": [
     {
       "id": "OSTI:1778009",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     },
     {
       "id": "DOI:10.1038/s41396-021-00917-x",
       "description": "Gulf of Mexico blue hole harbors high levels of novel microbial lineages",
-      "relationship_type": "DataCite:References"
+      "relationship_type": "references"
     },
     {
       "id": "DOI:10.6084/m9.figshare.12644018.v3",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     },
     {
       "id": "DOI:10.6084/m9.figshare.12644042.v1",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     },
     {
       "id": "DOI:10.6084/m9.figshare.12644045.v1",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     },
     {
       "id": "DOI:10.6084/m9.figshare.12644048.v1",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     },
     {
       "id": "DOI:10.6084/m9.figshare.12644051.v1",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     },
     {
       "id": "DOI:10.6084/m9.figshare.12644060.v1",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     },
     {
       "id": "DOI:10.6084/m9.figshare.12644081.v1",
-      "relationship_type": "DataCite:IsIdenticalTo"
+      "relationship_type": "is_identical_to"
     }
   ],
   "titles": [

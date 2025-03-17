@@ -1,8 +1,8 @@
 {
   "meta": {
-    "credit_metadata_schema_version": "0.0.3",
+    "credit_metadata_schema_version": "0.0.4",
     "saved_by": "ialarmedalien",
-    "timestamp": 1710210050430
+    "timestamp": 1710210050
   },
   "contributors": [
     {
@@ -65,7 +65,7 @@
   "related_identifiers": [
     {
       "id": "IGSN:IEGRW000Z",
-      "relationship_type": "DataCite:IsSourceOf"
+      "relationship_type": "is_source_of"
     }
   ],
   "resource_type": "dataset",

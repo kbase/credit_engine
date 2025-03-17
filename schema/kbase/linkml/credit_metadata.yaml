@@ -2,7 +2,7 @@
 id: https://github.com/kbase/credit_engine/schema/kbase/linkml
 name: credit_metadata
 description: Schema for KBase resource credit metadata. This version brings the schema into closer alignment with the commonmeta citation schema, https://commonmeta.org.
-version: 0.0.3
+version: 0.0.4
 prefixes:
   bioportal: https://bioportal.bioontology.org/ontologies/
   biolink: https://w3id.org/biolink/vocab/
@@ -44,11 +44,10 @@ classes:
 
       CRediT contributor role taxonomy: https://credit.niso.org
 
-
     attributes:
       contributor_type:
         slot_uri: schema:@type
-        description: Must be either 'Person' or 'Organization'
+        description: Must be either 'Person' or 'Organization'.
         range: ContributorType
         examples:
         - value: Person
@@ -57,7 +56,7 @@ classes:
         - DataCite:attributes.contributors.name_type
         - DataCite:attributes.creators.name_type
 
-      contributor_id:
+      id:
         slot_uri: schema:identifier
         description: Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.
         range: uriorcurie
@@ -83,7 +82,6 @@ classes:
           - value: National Institute of Mental Health
           - value: Madonna
           - value: Ransome the Clown
-        required: true
         related_mappings:
         # these have the names comma-separated and inverted
         - DataCite:attributes.creators.name
@@ -122,9 +120,10 @@ classes:
       affiliations:
         slot_uri: schema:affiliation
         description: List of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).
-        inlined_as_list: true
         multivalued: true
         range: Organization
+        inlined_as_list: true
+        inlined: true
         related_mappings:
         - DataCite:attributes.contributors.affiliation
           # from: DataCite:attributes.contributors[].affiliation[]
@@ -148,8 +147,8 @@ classes:
       contributor_roles:
         slot_uri: schema:Role
         description: List of roles played by the contributor when working on the resource.
-        range: ContributorRole
         multivalued: true
+        range: ContributorRole
         exact_mappings:
         - DataCite:attributes.contributors.contributor_type
         - DataCite:attributes.creators.contributor_type
@@ -161,6 +160,17 @@ classes:
           # TODO: mappings to CRediT/DataCite roles
           - ORCID:contributor.role
           - OSTI.ARTICLE:contributor.contributorType
+
+    any_of:
+      - slot_conditions:
+          given_name:
+            required: true
+          family_name:
+            required: true
+
+      - slot_conditions:
+          name:
+            required: true
 
 
   CreditMetadata:
@@ -201,24 +211,25 @@ classes:
       comment:
         slot_uri: schema:comment
         description: List of strings of freeform text providing extra information about this credit metadata.
-        inlined_as_list: true
         multivalued: true
+        # inlined: true
         examples:
         - value: "This comment adds a lot of extra value!"
 
       content_url:
         description: The URL of the content of the resource.
-        inlined_as_list: true
         multivalued: true
+        # inlined: true
         range: uri
 
       contributors:
         slot_uri: schema:creator
         description: A list of people and/or organizations who contributed to the resource.
-        inlined_as_list: true
-        multivalued: true
         required: true
+        multivalued: true
         range: Contributor
+        inlined_as_list: true
+        inlined: true
         narrow_mappings:
         - DataCite:attributes.contributors
         - DataCite:attributes.creators
@@ -229,8 +240,8 @@ classes:
 
       credit_metadata_source:
         description: A list of CURIEs, URIs, or free text entries denoting the source of the credit metadata.
-        inlined_as_list: true
         multivalued: true
+        # inlined: true
         examples:
         - value: "https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081"
         - value: "DataCite"
@@ -238,9 +249,10 @@ classes:
 
       dates:
         description: A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.
-        inlined_as_list: true
         multivalued: true
         range: EventDate
+        inlined: true
+        inlined_as_list: true
         # examples:
         # - value: { date: 2022-05-10, event: available }
         close_mappings:
@@ -268,19 +280,23 @@ classes:
         description: A brief description or abstract for the resource being represented.
         multivalued: true
         range: Description
+        inlined: true
+        inlined_as_list: true
 
       funding:
         slot_uri: schema:funding
         description: Funding sources for the resource.
-        inlined_as_list: true
         multivalued: true
         range: FundingReference
+        inlined: true
+        inlined_as_list: true
         close_mappings:
         - DataCite:attributes.funding_references
         - Crossref:Message.project.funding
         - OSTI.ARTICLE:awards
 
       identifier:
+        identifier: true
         slot_uri: schema:identifier
         # can generate schema:url from this ID
         description: Resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.
@@ -328,6 +344,7 @@ classes:
       meta:
         description: Metadata for this credit information, including submitter, schema version, and timestamp.
         range: Metadata
+        required: true
 
       publisher:
         description: The publisher of the resource. For a dataset, this is the repository where it is stored.
@@ -340,9 +357,10 @@ classes:
 
       related_identifiers:
         description: Other resolvable persistent unique IDs related to the resource.
-        inlined_as_list: true
         multivalued: true
         range: PermanentID
+        inlined_as_list: true
+        inlined: true
         close_mappings:
         - DataCite:attributes.identifiers
         - DataCite:attributes.related_identifiers
@@ -376,10 +394,11 @@ classes:
 
       titles:
         description: One or more titles for the resource.
-        inlined_as_list: true
+        required: true
         multivalued: true
         range: Title
-        required: true
+        inlined_as_list: true
+        inlined: true
         exact_mappings:
         - DataCite:attributes.titles
         - ORCID:title
@@ -412,6 +431,15 @@ classes:
         - value: 1.2.1
         - value: '20220405'
 
+    any_of:
+      - slot_conditions:
+          dates:
+            required: true
+
+      - slot_conditions:
+          version:
+            required: true
+
 
   Description:
     description: Textual information about the resource being represented.
@@ -423,7 +451,7 @@ classes:
         - value: This is the most interesting dataset ever to earn a DOI.
 
       description_type:
-        description: The type of text being represented
+        description: The type of text being represented.
         range: DescriptionType
         examples:
         - value: abstract
@@ -445,7 +473,6 @@ classes:
     attributes:
       date:
         description: The date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.
-        range: string
         pattern: \d{4}(-\d{2}){0,2}
         required: true
         examples:
@@ -467,7 +494,7 @@ classes:
     description: |
       Represents a funding source for a resource, including the funding body and the grant awarded.
 
-      The 'funder_name' field is required; all others are optional.
+      One (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.
 
       Recommended resources for organization identifiers include:
         - Research Organization Registry, http://ror.org
@@ -476,9 +503,15 @@ classes:
 
       Some organizations may have a digital object identifier (DOI).
     attributes:
+
+      funder:
+        slot_uri: schema:funder
+        description: The funder for the grant or award.
+        range: Organization
+
       grant_id:
         slot_uri: schema:identifier
-        description: Code for the grant, assigned by the funder
+        description: Code for the grant, assigned by the funder.
         exact_mappings:
         - DataCite:attributes.funding_references.award_number
         - Crossref:message.award
@@ -492,7 +525,7 @@ classes:
 
       grant_title:
         slot_uri: schema:name
-        description: Title for the grant
+        description: Title for the grant.
         exact_mappings:
         - DataCite:attributes.funding_references.award_title
         examples:
@@ -500,7 +533,7 @@ classes:
 
       grant_url:
         slot_uri: schema:url
-        description: URL for the grant
+        description: URL for the grant.
         exact_mappings:
         - DataCite:attributes.funding_references.award_url
         close_mappings:
@@ -510,10 +543,18 @@ classes:
         examples:
         - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
 
-      funder:
-        slot_uri: schema:funder
-        description: The funder for the grant or award
-        range: Organization
+    any_of:
+      - slot_conditions:
+          grant_id:
+            required: true
+
+      - slot_conditions:
+          grant_url:
+            required: true
+
+      - slot_conditions:
+          funder:
+            required: true
 
 
   License:
@@ -530,6 +571,15 @@ classes:
         range: uri
         examples:
         - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
+
+    any_of:
+      - slot_conditions:
+          id:
+            required: true
+
+      - slot_conditions:
+          url:
+            required: true
 
 
   Metadata:
@@ -573,7 +623,7 @@ classes:
     attributes:
       organization_id:
         slot_uri: schema:identifier
-        description: Persistent unique identifier for the organization in the format <database name>:<identifier within database>
+        description: Persistent unique identifier for the organization in the format <database name>:<identifier within database>.
         examples:
         - value: ROR:01bj3aw27
         - value: ISNI:0000000123423717
@@ -601,7 +651,7 @@ classes:
 
   PermanentID:
     description: |
-      Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.
+      Represents a persistent unique identifier for an entity and its relationship to some other entity.
 
       The 'id' field and 'relationship_type' fields are required.
 
@@ -614,7 +664,6 @@ classes:
     attributes:
       id:
         slot_uri: schema:identifier
-        identifier: true
         description: Persistent unique ID for an entity. Should be in the format <database name>:<identifier within database>.
         required: true
         examples:
@@ -649,7 +698,7 @@ classes:
       relationship_type:
         description: |
           The relationship between the ID and some other entity.
-          For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the CreditMetadata and this ID.
+          For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.
         range: RelationshipType
         exact_mappings:
         - DataCite:attributes.related_identifiers.relation_type
@@ -672,7 +721,7 @@ classes:
         slot_uri: schema:name
         # could also be schema:headline if title type is 'title'
         # subtitle/alternative title: schema:alternativeHeadline
-        description: A string used as a title for a resource
+        description: A string used as a title for a resource.
         required: true
         examples:
         - value: Amaranthus hypochondriacus genome
@@ -695,7 +744,7 @@ classes:
 enums:
   ContributorRole:
     enum_uri: roleName
-    description: The type of contribution made by a contributor
+    description: The type of contribution made by a contributor.
     permissible_values:
 
       DataCite:ContactPerson:
@@ -725,7 +774,7 @@ enums:
       DataCite:HostingInstitution:
         meaning: DataCite:HostingInstitution
         title: hosting institution
-        description: Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support. May also be used for an organisation that stores the data offline. Often a data centre (if that data centre is not the "publisher" of the resource.)
+        description: Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support. May also be used for an organisation that stores the data offline. Often a data centre (if that data centre is not the "publisher" of the resource).
       DataCite:Producer:
         meaning: DataCite:Producer
         title: producer
@@ -847,13 +896,13 @@ enums:
         - RDFS:subClassOf
 
   ContributorType:
-    description: The type of contributor being represented
+    description: The type of contributor being represented.
     permissible_values:
       Person:
-        description: A person
+        description: A person.
         meaning: schema:Person
       Organization:
-        description: An organization
+        description: An organization.
         meaning: schema:Organization
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
@@ -864,7 +913,7 @@ enums:
         - RDFS:subClassOf
 
   DescriptionType:
-    description: The type of text being represented
+    description: The type of text being represented.
     permissible_values:
       abstract:
         meaning: DataCite:abstract
@@ -875,7 +924,7 @@ enums:
         meaning: DataCite:summary
 
   EventType:
-    description: The type of date being represented
+    description: The type of date being represented.
     permissible_values:
       accepted:
         meaning: DataCite:accepted
@@ -929,200 +978,277 @@ enums:
         - RDFS:subClassOf
 
   RelationshipType:
-    description: The relationship between two entities
+    description: The relationship between two entities. For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered (A) and this ID (B).
     permissible_values:
-      DataCite:Cites:
-        meaning: DataCite:Cites
-        title: cites
-      DataCite:Compiles:
-        meaning: DataCite:Compiles
-        title: compiles
-      DataCite:Continues:
-        meaning: DataCite:Continues
-        title: continues
-      DataCite:Describes:
-        meaning: DataCite:Describes
-        title: describes
-      DataCite:Documents:
-        meaning: DataCite:Documents
-        title: documents
-      DataCite:HasMetadata:
-        meaning: DataCite:HasMetadata
-        title: has metadata
-      DataCite:HasPart:
-        meaning: DataCite:HasPart
-        title: has part
-      DataCite:HasVersion:
-        meaning: DataCite:HasVersion
-        title: has version
-      DataCite:IsCitedBy:
-        meaning: DataCite:IsCitedBy
-        title: is cited by
-      DataCite:isCompiledBy:
-        meaning: DataCite:isCompiledBy
-        title: is compiled by
-      DataCite:IsContinuedBy:
-        meaning: DataCite:IsContinuedBy
-        title: is continued by
-      DataCite:IsDerivedFrom:
-        meaning: DataCite:IsDerivedFrom
-        title: is derived from
-      DataCite:IsDescribedBy:
-        meaning: DataCite:IsDescribedBy
-        title: is described by
-      DataCite:IsDocumentedBy:
-        meaning: DataCite:IsDocumentedBy
-        title: is documented by
-      DataCite:IsIdenticalTo:
-        meaning: DataCite:IsIdenticalTo
-        title: is identical to
-      DataCite:IsMetadataFor:
-        meaning: DataCite:IsMetadataFor
-        title: is metadata for
-      DataCite:IsNewVersionOf:
-        meaning: DataCite:IsNewVersionOf
-        title: is new version of
-      DataCite:IsOriginalFormOf:
-        meaning: DataCite:IsOriginalFormOf
-        title: is original form of
-      DataCite:IsPartOf:
-        meaning: DataCite:IsPartOf
-        title: is part of
-      DataCite:IsPreviousVersionOf:
-        meaning: DataCite:IsPreviousVersionOf
-        title: is previous version of
-      DataCite:IsPublishedIn:
-        meaning: DataCite:IsPublishedIn
-        title: is published in
-      DataCite:IsReferencedBy:
-        meaning: DataCite:IsReferencedBy
-        title: is referenced by
-      DataCite:IsRequiredBy:
-        meaning: DataCite:IsRequiredBy
-        title: is required by
-      DataCite:IsReviewedBy:
-        meaning: DataCite:IsReviewedBy
-        title: is reviewed by
-      DataCite:IsSourceOf:
-        meaning: DataCite:IsSourceOf
-        title: is source of
-      DataCite:IsSupplementTo:
-        meaning: DataCite:IsSupplementTo
-        title: is supplement to
-      DataCite:IsSupplementedBy:
-        meaning: DataCite:IsSupplementedBy
-        title: is supplemented by
-      DataCite:IsVariantFormOf:
-        meaning: DataCite:IsVariantFormOf
-        title: is variant form of
-      DataCite:IsVersionOf:
-        meaning: DataCite:IsVersionOf
-        title: is version of
-      DataCite:Obsoletes:
-        meaning: DataCite:Obsoletes
-        title: obsoletes
-      DataCite:References:
-        meaning: DataCite:References
-        title: references
-      DataCite:Requires:
-        meaning: DataCite:Requires
-        title: requires
-      DataCite:Reviews:
-        meaning: DataCite:Reviews
-        title: reviews
-      Crossref:BasedOnData:
-        meaning: Crossref:BasedOnData
+      based_on_data:
         title: based on data
-      Crossref:Finances:
+        meaning: Crossref:BasedOnData
+      cites:
+        meaning: DataCite:Cites
+        description: |
+          Indicates that A includes B in a citation.
+      compiles:
+        meaning: DataCite:Compiles
+        description: |
+          Indicates B is the result of a compile or creation event using A. Note: May be used for software and text, as a compiler can be a computer program or a person.
+      continues:
+        meaning: DataCite:Continues
+        description: |
+          Indicates A is a continuation of the work B.
+      describes:
+        meaning: DataCite:Describes
+        description: |
+          Indicates A describes B.
+      documents:
+        meaning: DataCite:Documents
+        description: |
+          Indicates A is documentation about B; e.g. points to software documentation.
+      finances:
         meaning: Crossref:Finances
-        title: finances
-      Crossref:HasComment:
-        meaning: Crossref:HasComment
+      has_comment:
         title: has comment
-      Crossref:HasDerivation:
-        meaning: Crossref:HasDerivation
+        meaning: Crossref:HasComment
+      has_derivation:
         title: has derivation
-      Crossref:HasExpression:
-        meaning: Crossref:HasExpression
+        meaning: Crossref:HasDerivation
+      has_expression:
         title: has expression
-      Crossref:HasFormat:
-        meaning: Crossref:HasFormat
+        meaning: Crossref:HasExpression
+      has_format:
         title: has format
-      Crossref:HasManifestation:
-        meaning: Crossref:HasManifestation
+        meaning: Crossref:HasFormat
+      has_manifestation:
         title: has manifestation
-      Crossref:HasManuscript:
-        meaning: Crossref:HasManuscript
+        meaning: Crossref:HasManifestation
+      has_manuscript:
         title: has manuscript
-      Crossref:HasPreprint:
-        meaning: Crossref:HasPreprint
+        meaning: Crossref:HasManuscript
+      has_metadata:
+        title: has metadata
+        meaning: DataCite:HasMetadata
+        description: |
+          Indicates resource A has additional metadata B.
+      has_part:
+        title: has part
+        meaning: DataCite:HasPart
+        description: |
+          Indicates A includes the part B.
+          Primarily this relation is applied to container-contained type relationships.
+          Note: May be used for individual software modules; note that code repository-to-version relationships should be modeled using IsVersionOf and HasVersion.
+      has_preprint:
         title: has preprint
-      Crossref:HasRelatedMaterial:
-        meaning: Crossref:HasRelatedMaterial
+        meaning: Crossref:HasPreprint
+      has_related_material:
         title: has related material
-      Crossref:HasReply:
-        meaning: Crossref:HasReply
+        meaning: Crossref:HasRelatedMaterial
+      has_reply:
         title: has reply
-      Crossref:HasReview:
-        meaning: Crossref:HasReview
+        meaning: Crossref:HasReply
+      has_review:
         title: has review
-      Crossref:HasTranslation:
-        meaning: Crossref:HasTranslation
+        meaning: Crossref:HasReview
+      has_translation:
         title: has translation
-      Crossref:IsBasedOn:
-        meaning: Crossref:IsBasedOn
+        meaning: Crossref:HasTranslation
+      has_version:
+        title: has version
+        meaning: DataCite:HasVersion
+        description: |
+          Indicates A has a version (B).
+          The registered resource such as a software package or code repository has a versioned instance (indicates A has the instance B) e.g. it may be used to relate an un-versioned code repository to one of its specific software versions.
+      is_based_on:
         title: is based on
-      Crossref:IsBasisFor:
-        meaning: Crossref:IsBasisFor
+        meaning: Crossref:IsBasedOn
+      is_basis_for:
         title: is basis for
-      Crossref:IsCommentOn:
-        meaning: Crossref:IsCommentOn
+        meaning: Crossref:IsBasisFor
+      is_cited_by:
+        title: is cited by
+        meaning: DataCite:IsCitedBy
+        description: |
+          Indicates that B includes A in a citation.
+      is_comment_on:
         title: is comment on
-      Crossref:IsDataBasisFor:
-        meaning: Crossref:IsDataBasisFor
+        meaning: Crossref:IsCommentOn
+      is_compiled_by:
+        title: is compiled by
+        meaning: DataCite:IsCompiledBy
+        description: |
+          Indicates B is used to compile or create A. Note: May be used for software and text, as a compiler can be a computer program or a person.
+      is_continued_by:
+        title: is continued by
+        meaning: DataCite:IsContinuedBy
+        description: |
+          Indicates A is continued by the work B.
+      is_data_basis_for:
         title: is data basis for
-      Crossref:IsExpressionOf:
-        meaning: Crossref:IsExpressionOf
+        meaning: Crossref:IsDataBasisFor
+      is_derived_from:
+        title: is derived from
+        meaning: DataCite:IsDerivedFrom
+        description: |
+          Indicates B is a source upon which A is based.
+          IsDerivedFrom should be used for a resource that is a derivative of an original resource.
+          For example, 'A isDerivedFrom B' could describe a dataset (A) derived from a larger dataset (B) where data values have been manipulated from their original state.
+      is_described_by:
+        title: is described by
+        meaning: DataCite:IsDescribedBy
+        description: |
+          Indicates A is described by B.
+      is_documented_by:
+        title: is documented by
+        meaning: DataCite:IsDocumentedBy
+        description: |
+          Indicates B is documentation about/explaining A; e.g. points to software documentation.
+      is_expression_of:
         title: is expression of
-      Crossref:IsFinancedBy:
-        meaning: Crossref:IsFinancedBy
+        meaning: Crossref:IsExpressionOf
+      is_financed_by:
         title: is financed by
-      Crossref:IsFormatOf:
-        meaning: Crossref:IsFormatOf
+        meaning: Crossref:IsFinancedBy
+      is_format_of:
         title: is format of
-      Crossref:IsManifestationOf:
-        meaning: Crossref:IsManifestationOf
+        meaning: Crossref:IsFormatOf
+      is_identical_to:
+        title: is identical to
+        meaning: DataCite:IsIdenticalTo
+        description: |
+          Indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource.
+          IsIdenticalTo should be used for a resource that is the same as the registered resource but is saved in another location, maybe another institution.
+      is_manifestation_of:
         title: is manifestation of
-      Crossref:IsManuscriptOf:
-        meaning: Crossref:IsManuscriptOf
+        meaning: Crossref:IsManifestationOf
+      is_manuscript_of:
         title: is manuscript of
-      Crossref:IsPreprintOf:
-        meaning: Crossref:IsPreprintOf
+        meaning: Crossref:IsManuscriptOf
+      is_metadata_for:
+        title: is metadata for
+        meaning: DataCite:IsMetadataFor
+        description: |
+          Indicates additional metadata A for a resource B.
+      is_new_version_of:
+        title: is new version of
+        meaning: DataCite:IsNewVersionOf
+        description: |
+          Indicates A is a new edition of B, where the new edition has been modified or updated.
+      is_obsoleted_by:
+        title: is obsoleted by
+        meaning: DataCite:IsObsoletedBy
+        description: |
+          Indicates A is replaced by B.
+      is_original_form_of:
+        title: is original form of
+        meaning: DataCite:IsOriginalFormOf
+        description: |
+          Indicates A is the original form of B.
+          May be used for different software operating systems or compiler formats, for example.
+      is_part_of:
+        title: is part of
+        meaning: DataCite:IsPartOf
+        description: |
+          Indicates A is a portion of B; may be used for elements of a series.
+          Primarily this relation is applied to container-contained type relationships.
+          Note: May be used for individual software modules; note that code repository-to-version relationships should be modeled using IsVersionOf and HasVersion.
+      is_preprint_of:
         title: is preprint of
-      Crossref:IsRelatedMaterial:
-        meaning: Crossref:IsRelatedMaterial
+        meaning: Crossref:IsPreprintOf
+      is_previous_version_of:
+        title: is previous version of
+        meaning: DataCite:IsPreviousVersionOf
+        description: |
+          Indicates A is a previous edition of B.
+      is_published_in:
+        title: is published in
+        meaning: DataCite:IsPublishedIn
+        description: |
+          indicates A is published inside B, but is independent of other things published inside of B.
+      is_referenced_by:
+        title: is referenced by
+        meaning: DataCite:IsReferencedBy
+        description: |
+          Indicates A is used as a source of information by B.
+      is_related_material:
         title: is related material
-      Crossref:IsReplacedBy:
-        meaning: Crossref:IsReplacedBy
+        meaning: Crossref:IsRelatedMaterial
+      is_replaced_by:
         title: is replaced by
-      Crossref:IsReplyTo:
-        meaning: Crossref:IsReplyTo
+        meaning: Crossref:IsReplacedBy
+      is_reply_to:
         title: is reply to
-      Crossref:IsReviewOf:
-        meaning: Crossref:IsReviewOf
+        meaning: Crossref:IsReplyTo
+      is_required_by:
+        title: is required by
+        meaning: DataCite:IsRequiredBy
+        description: |
+          Indicates A is required by B.
+          Note: May be used to indicate software dependencies.
+      is_review_of:
         title: is review of
-      Crossref:IsSameAs:
-        meaning: Crossref:IsSameAs
+        meaning: Crossref:IsReviewOf
+      is_reviewed_by:
+        title: is reviewed by
+        meaning: DataCite:IsReviewedBy
+        description: |
+          Indicates that A is reviewed by B.
+      is_same_as:
         title: is same as
-      Crossref:IsTranslationOf:
-        meaning: Crossref:IsTranslationOf
+        meaning: Crossref:IsSameAs
+      is_source_of:
+        title: is source of
+        meaning: DataCite:IsSourceOf
+        description: |
+          Indicates A is a source upon which B is based.
+          IsSourceOf is the original resource from which a derivative resource was created.
+          For example, 'A isSourceOf B' could describe a dataset (A) which acts as the source of a derived dataset (B) where the values have been manipulated.
+      is_supplement_to:
+        title: is supplement to
+        meaning: DataCite:IsSupplementTo
+        description: |
+          Indicates that A is a supplement to B.
+      is_supplemented_by:
+        title: is supplemented by
+        meaning: DataCite:IsSupplementedBy
+        description: |
+          Indicates that B is a supplement to A.
+      is_translation_of:
         title: is translation of
-      Crossref:Replaces:
+        meaning: Crossref:IsTranslationOf
+      is_variant_form_of:
+        title: is variant form of
+        meaning: DataCite:IsVariantFormOf
+        description: |
+          Indicates A is a variant or different form of B.
+          Use for a different form of one thing.
+          May be used for different software operating systems or compiler formats, for example.
+      is_version_of:
+        title: is version of
+        meaning: DataCite:IsVersionOf
+        description: |
+          Indicates A is a version of B.
+          The registered resource is an instance of a target resource (indicates that A is an instance of B) e.g. it may be used to relate a specific version of a software package to its software code repository.
+      obsoletes:
+        meaning: DataCite:Obsoletes
+        description: |
+          Indicates A replaces B.
+      references:
+        meaning: DataCite:References
+        description: |
+          Indicates B is used as a source of information for A.
+      replaces:
         meaning: Crossref:Replaces
-        title: replaces
-      kbcms:Unknown:
-        # meaning: Relationship type is unknown
+      requires:
+        meaning: DataCite:Requires
+        description: |
+          Indicates A requires B.
+          Note: May be used to indicate software dependencies.
+      reviews:
+        meaning: DataCite:Reviews
+        description: |
+          Indicates that A is a review of B.
+      unknown:
         title: unknown
+        description: The relationship between subject and object is unknown.
+
     reachable_from:
       source_ontology: bioportal:DATACITE-VOCAB
       source_nodes:
@@ -1135,17 +1261,17 @@ enums:
     description: The type of resource being represented.
     permissible_values:
       dataset:
-        description: a dataset
+        description: A dataset.
         meaning: schema:Dataset
 
   TitleType:
     description: The type of title being represented.
     permissible_values:
       subtitle:
-        description: any subtitle for the resource
+        description: Any subtitle for the resource.
       alternative_title:
-        description: other title(s) or names for the resource
+        description: Other title(s) or names for the resource.
       translated_title:
-        description: translation of the title into another language
+        description: Translation of the title into another language.
       other:
-        description: anything that doesn't fit into the above categories
+        description: Anything that doesn't fit into the above categories.

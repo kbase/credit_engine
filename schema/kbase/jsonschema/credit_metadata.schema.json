@@ -2,62 +2,67 @@
     "$defs": {
         "Contributor": {
             "additionalProperties": false,
-            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'Person' or 'Organization', and\none of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing\nappropriate roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\nCRediT contributor role taxonomy: https://credit.niso.org",
+            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'Person' or 'Organization', and\none of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing\nappropriate roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\nCRediT contributor role taxonomy: https://credit.niso.org.",
             "properties": {
                 "affiliations": {
                     "description": "List of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).",
                     "items": {
                         "$ref": "#/$defs/Organization"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "contributor_id": {
                     "description": "Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.",
                     "pattern": "^[a-zA-Z0-9.-_]+:\\S",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "contributor_roles": {
                     "description": "List of roles played by the contributor when working on the resource.",
                     "items": {
                         "$ref": "#/$defs/ContributorRole"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "contributor_type": {
                     "$ref": "#/$defs/ContributorType",
-                    "description": "Must be either 'Person' or 'Organization'"
+                    "description": "Must be either 'Person' or 'Organization'."
                 },
                 "family_name": {
                     "description": "The family name(s) of the contributor.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "given_name": {
                     "description": "The given name(s) of the contributor.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "name": {
                     "description": "Contributor name. For organizations, this should be the full (unabbreviated) name; can also be used for a person if the given name/family name format is not applicable.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
-            "anyOf": [
-                {
-                    "required": [
-                        "name"
-                    ]
-                },
-                {
-                    "required": [
-                        "given_name",
-                        "family_name"
-                    ]
-                }
-            ],
             "title": "Contributor",
             "type": "object"
         },
         "ContributorRole": {
-            "description": "The type of contribution made by a contributor",
+            "description": "The type of contribution made by a contributor.",
             "enum": [
                 "DataCite:ContactPerson",
                 "DataCite:DataCollector",
@@ -99,7 +104,7 @@
             "type": "string"
         },
         "ContributorType": {
-            "description": "The type of contributor being represented",
+            "description": "The type of contributor being represented.",
             "enum": [
                 "Person",
                 "Organization"
@@ -116,14 +121,20 @@
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "content_url": {
                     "description": "The URL of the content of the resource.",
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "contributors": {
                     "description": "A list of people and/or organizations who contributed to the resource.",
@@ -137,28 +148,40 @@
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "dates": {
                     "description": "A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.",
                     "items": {
                         "$ref": "#/$defs/EventDate"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "descriptions": {
                     "description": "A brief description or abstract for the resource being represented.",
                     "items": {
                         "$ref": "#/$defs/Description"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "funding": {
                     "description": "Funding sources for the resource.",
                     "items": {
                         "$ref": "#/$defs/FundingReference"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "identifier": {
                     "description": "Resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.",
@@ -166,15 +189,29 @@
                     "type": "string"
                 },
                 "license": {
-                    "$ref": "#/$defs/License",
-                    "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.\n"
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/License"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license."
                 },
                 "meta": {
                     "$ref": "#/$defs/Metadata",
                     "description": "Metadata for this credit information, including submitter, schema version, and timestamp."
                 },
                 "publisher": {
-                    "$ref": "#/$defs/Organization",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Organization"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "description": "The publisher of the resource. For a dataset, this is the repository where it is stored."
                 },
                 "related_identifiers": {
@@ -182,11 +219,14 @@
                     "items": {
                         "$ref": "#/$defs/PermanentID"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "resource_type": {
                     "$ref": "#/$defs/ResourceType",
-                    "description": "The broad type of the source data for this workspace object. 'dataset' is currently the only valid value for KBase DOIs."
+                    "description": "The broad type of the source data for this object. 'dataset' is currently the only valid value for KBase DOIs."
                 },
                 "titles": {
                     "description": "One or more titles for the resource.",
@@ -197,25 +237,19 @@
                 },
                 "url": {
                     "description": "The URL of the resource.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "version": {
                     "description": "The version of the resource. This must be an absolute version, not a relative version like 'latest'.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
-            "anyOf": [
-                {
-                    "required": [
-                        "version"
-                    ]
-                },
-                {
-                    "required": [
-                        "dates"
-                    ]
-                }
-            ],
             "required": [
                 "contributors",
                 "identifier",
@@ -224,31 +258,6 @@
                 "titles"
             ],
             "title": "CreditMetadata",
-            "type": "object"
-        },
-        "Metadata": {
-            "additionalProperties": false,
-            "description": "Container for an instance of credit metadata; includes the credit metadata itself and metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, a new CreditMetadataEntry is created to store the information.",
-            "properties": {
-                "credit_metadata_schema_version": {
-                    "description": "The version of the credit metadata schema used.",
-                    "type": "string"
-                },
-                "saved_by": {
-                    "description": "KBase workspace ID of the user who added this entry.",
-                    "type": "string"
-                },
-                "timestamp": {
-                    "description": "Unix timestamp for the addition of this set of credit metadata.",
-                    "type": "integer"
-                }
-            },
-            "required": [
-                "credit_metadata_schema_version",
-                "saved_by",
-                "timestamp"
-            ],
-            "title": "CreditMetadataEntry",
             "type": "object"
         },
         "Description": {
@@ -261,11 +270,14 @@
                 },
                 "description_type": {
                     "$ref": "#/$defs/DescriptionType",
-                    "description": "The type of text being represented"
+                    "description": "The type of text being represented."
                 },
                 "language": {
                     "description": "The language in which the description is written, using the appropriate IETF BCP-47 notation.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -275,7 +287,7 @@
             "type": "object"
         },
         "DescriptionType": {
-            "description": "The type of text being represented",
+            "description": "The type of text being represented.",
             "enum": [
                 "abstract",
                 "description",
@@ -306,7 +318,7 @@
             "type": "object"
         },
         "EventType": {
-            "description": "The type of date being represented",
+            "description": "The type of date being represented.",
             "enum": [
                 "accepted",
                 "available",
@@ -325,24 +337,40 @@
         },
         "FundingReference": {
             "additionalProperties": false,
-            "description": "Represents a funding source for a resource, including the funding body and the grant awarded.\n\nThe 'funder_name' field is required; all others are optional.\n\nRecommended resources for organization identifiers include:\n  - Research Organization Registry, http://ror.org\n  - International Standard Name Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier (DOI).",
+            "description": "Represents a funding source for a resource, including the funding body and the grant awarded.\n\nOne (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.\n\nRecommended resources for organization identifiers include:\n  - Research Organization Registry, http://ror.org\n  - International Standard Name Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier (DOI).",
             "properties": {
                 "funder": {
-                    "$ref": "#/$defs/Organization",
-                    "description": "The funder for the grant or award"
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Organization"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The funder for the grant or award."
                 },
                 "grant_id": {
-                    "description": "Code for the grant, assigned by the funder",
-                    "type": "string"
+                    "description": "Code for the grant, assigned by the funder.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "grant_title": {
-                    "description": "Title for the grant",
-                    "type": "string"
+                    "description": "Title for the grant.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "grant_url": {
-                    "description": "URL for the grant",
+                    "description": "URL for the grant.",
                     "pattern": "^[a-zA-Z0-9.-_]+:\\S",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
             "title": "FundingReference",
@@ -354,26 +382,45 @@
             "properties": {
                 "id": {
                     "description": "String representing the license, from the SPDX license identifiers at https://spdx.org/licenses/.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "url": {
                     "description": "URL for the license.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
-            "anyOf": [
-                {
-                    "required": [
-                        "id"
-                    ]
-                },
-                {
-                    "required": [
-                        "url"
-                    ]
-                }
-            ],
             "title": "License",
+            "type": "object"
+        },
+        "Metadata": {
+            "additionalProperties": false,
+            "description": "Metadata for the credit metadata, including the schema version used, who submitted it, and the date of submission. When the credit metadata for a resource is added or updated, this additional metadata must be provided along with the credit information.",
+            "properties": {
+                "credit_metadata_schema_version": {
+                    "description": "The version of the credit metadata schema used.",
+                    "type": "string"
+                },
+                "saved_by": {
+                    "description": "KBase workspace ID of the user who added this entry.",
+                    "type": "string"
+                },
+                "timestamp": {
+                    "description": "Unix timestamp for the addition of this set of credit metadata.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "credit_metadata_schema_version",
+                "saved_by",
+                "timestamp"
+            ],
+            "title": "Metadata",
             "type": "object"
         },
         "Organization": {
@@ -381,9 +428,12 @@
             "description": "Represents an organization.\n\nRecommended resources for organization identifiers and canonical organization names include:\n  - Research Organization Registry, http://ror.org\n  - International Standard Name Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\n\nFor example, the US DOE would be entered as:\n  organization_name: United States Department of Energy\n  organization_id:   ROR:01bj3aw27",
             "properties": {
                 "organization_id": {
-                    "description": "Persistent unique identifier for the organization in the format <database name>:<identifier within database>",
+                    "description": "Persistent unique identifier for the organization in the format <database name>:<identifier within database>.",
                     "pattern": "^[a-zA-Z0-9.-_]+:\\S",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "organization_name": {
                     "description": "Common name of the organization; use the name recommended by ROR if possible.",
@@ -398,11 +448,14 @@
         },
         "PermanentID": {
             "additionalProperties": false,
-            "description": "Represents a persistent unique identifier for an entity, with an optional relationship to some other entity.\n\nThe 'id' field and 'relationship_type' fields are required.\n\nThe values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.\n\nDataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype\n\nCrossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/",
+            "description": "Represents a persistent unique identifier for an entity and its relationship to some other entity.\n\nThe 'id' field and 'relationship_type' fields are required.\n\nThe values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.\n\nDataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype\n\nCrossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/",
             "properties": {
                 "description": {
                     "description": "Description of that entity.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "id": {
                     "description": "Persistent unique ID for an entity. Should be in the format <database name>:<identifier within database>.",
@@ -411,7 +464,7 @@
                 },
                 "relationship_type": {
                     "$ref": "#/$defs/RelationshipType",
-                    "description": "The relationship between the ID and some other entity.\nFor example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the CreditMetadata and this ID.\n"
+                    "description": "The relationship between the ID and some other entity.\nFor example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID."
                 }
             },
             "required": [
@@ -421,72 +474,73 @@
             "type": "object"
         },
         "RelationshipType": {
-            "description": "The relationship between two entities",
+            "description": "The relationship between two entities. For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered (A) and this ID (B).",
             "enum": [
-                "DataCite:Cites",
-                "DataCite:Compiles",
-                "DataCite:Continues",
-                "DataCite:Describes",
-                "DataCite:Documents",
-                "DataCite:HasMetadata",
-                "DataCite:HasPart",
-                "DataCite:HasVersion",
-                "DataCite:IsCitedBy",
-                "DataCite:isCompiledBy",
-                "DataCite:IsContinuedBy",
-                "DataCite:IsDerivedFrom",
-                "DataCite:IsDescribedBy",
-                "DataCite:IsDocumentedBy",
-                "DataCite:IsIdenticalTo",
-                "DataCite:IsMetadataFor",
-                "DataCite:IsNewVersionOf",
-                "DataCite:IsOriginalFormOf",
-                "DataCite:IsPartOf",
-                "DataCite:IsPreviousVersionOf",
-                "DataCite:IsPublishedIn",
-                "DataCite:IsReferencedBy",
-                "DataCite:IsRequiredBy",
-                "DataCite:IsReviewedBy",
-                "DataCite:IsSourceOf",
-                "DataCite:IsSupplementTo",
-                "DataCite:IsSupplementedBy",
-                "DataCite:IsVariantFormOf",
-                "DataCite:IsVersionOf",
-                "DataCite:Obsoletes",
-                "DataCite:References",
-                "DataCite:Requires",
-                "DataCite:Reviews",
-                "Crossref:BasedOnData",
-                "Crossref:Finances",
-                "Crossref:HasComment",
-                "Crossref:HasDerivation",
-                "Crossref:HasExpression",
-                "Crossref:HasFormat",
-                "Crossref:HasManifestation",
-                "Crossref:HasManuscript",
-                "Crossref:HasPreprint",
-                "Crossref:HasRelatedMaterial",
-                "Crossref:HasReply",
-                "Crossref:HasReview",
-                "Crossref:HasTranslation",
-                "Crossref:IsBasedOn",
-                "Crossref:IsBasisFor",
-                "Crossref:IsCommentOn",
-                "Crossref:IsDataBasisFor",
-                "Crossref:IsExpressionOf",
-                "Crossref:IsFinancedBy",
-                "Crossref:IsFormatOf",
-                "Crossref:IsManifestationOf",
-                "Crossref:IsManuscriptOf",
-                "Crossref:IsPreprintOf",
-                "Crossref:IsRelatedMaterial",
-                "Crossref:IsReplacedBy",
-                "Crossref:IsReplyTo",
-                "Crossref:IsReviewOf",
-                "Crossref:IsSameAs",
-                "Crossref:IsTranslationOf",
-                "Crossref:Replaces",
-                "kbcms:Unknown"
+                "based_on_data",
+                "cites",
+                "compiles",
+                "continues",
+                "describes",
+                "documents",
+                "finances",
+                "has_comment",
+                "has_derivation",
+                "has_expression",
+                "has_format",
+                "has_manifestation",
+                "has_manuscript",
+                "has_metadata",
+                "has_part",
+                "has_preprint",
+                "has_related_material",
+                "has_reply",
+                "has_review",
+                "has_translation",
+                "has_version",
+                "is_based_on",
+                "is_basis_for",
+                "is_cited_by",
+                "is_comment_on",
+                "is_compiled_by",
+                "is_continued_by",
+                "is_data_basis_for",
+                "is_derived_from",
+                "is_described_by",
+                "is_documented_by",
+                "is_expression_of",
+                "is_financed_by",
+                "is_format_of",
+                "is_identical_to",
+                "is_manifestation_of",
+                "is_manuscript_of",
+                "is_metadata_for",
+                "is_new_version_of",
+                "is_obsoleted_by",
+                "is_original_form_of",
+                "is_part_of",
+                "is_preprint_of",
+                "is_previous_version_of",
+                "is_published_in",
+                "is_referenced_by",
+                "is_related_material",
+                "is_replaced_by",
+                "is_reply_to",
+                "is_required_by",
+                "is_review_of",
+                "is_reviewed_by",
+                "is_same_as",
+                "is_source_of",
+                "is_supplement_to",
+                "is_supplemented_by",
+                "is_translation_of",
+                "is_variant_form_of",
+                "is_version_of",
+                "obsoletes",
+                "references",
+                "replaces",
+                "requires",
+                "reviews",
+                "unknown"
             ],
             "title": "RelationshipType",
             "type": "string"
@@ -505,10 +559,13 @@
             "properties": {
                 "language": {
                     "description": "The language in which the title is written, using the appropriate IETF BCP-47 notation.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "title": {
-                    "description": "A string used as a title for a resource",
+                    "description": "A string used as a title for a resource.",
                     "type": "string"
                 },
                 "title_type": {
@@ -534,25 +591,31 @@
             "type": "string"
         }
     },
-    "$id": "https://github.com/kbase/credit_engine/schema/kbase/jsonschema/credit_metadata.schema.json",
+    "$id": "https://github.com/kbase/credit_engine/schema/kbase/linkml",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "metamodel_version": "1.7.0",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'Resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object or a\nsample from the KBase Sample Service.\n\nThe 'resource_type' field should be filled using values from the DataCite\nresourceTypeGeneral field:\n\nhttps://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral\n\nCurrently KBase only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
+    "metamodel_version": "1.7.0",
     "properties": {
         "comment": {
             "description": "List of strings of freeform text providing extra information about this credit metadata.",
             "items": {
                 "type": "string"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         },
         "content_url": {
             "description": "The URL of the content of the resource.",
             "items": {
                 "type": "string"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         },
         "contributors": {
             "description": "A list of people and/or organizations who contributed to the resource.",
@@ -566,28 +629,40 @@
             "items": {
                 "type": "string"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         },
         "dates": {
             "description": "A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.",
             "items": {
                 "$ref": "#/$defs/EventDate"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         },
         "descriptions": {
             "description": "A brief description or abstract for the resource being represented.",
             "items": {
                 "$ref": "#/$defs/Description"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         },
         "funding": {
             "description": "Funding sources for the resource.",
             "items": {
                 "$ref": "#/$defs/FundingReference"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         },
         "identifier": {
             "description": "Resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.",
@@ -595,15 +670,29 @@
             "type": "string"
         },
         "license": {
-            "$ref": "#/$defs/License",
-            "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.\n"
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/License"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nAll data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license."
         },
         "meta": {
             "$ref": "#/$defs/Metadata",
             "description": "Metadata for this credit information, including submitter, schema version, and timestamp."
         },
         "publisher": {
-            "$ref": "#/$defs/Organization",
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/Organization"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "description": "The publisher of the resource. For a dataset, this is the repository where it is stored."
         },
         "related_identifiers": {
@@ -611,11 +700,14 @@
             "items": {
                 "$ref": "#/$defs/PermanentID"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         },
         "resource_type": {
             "$ref": "#/$defs/ResourceType",
-            "description": "The broad type of the source data for this workspace object. 'dataset' is currently the only valid value for KBase DOIs."
+            "description": "The broad type of the source data for this object. 'dataset' is currently the only valid value for KBase DOIs."
         },
         "titles": {
             "description": "One or more titles for the resource.",
@@ -626,25 +718,19 @@
         },
         "url": {
             "description": "The URL of the resource.",
-            "type": "string"
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "version": {
             "description": "The version of the resource. This must be an absolute version, not a relative version like 'latest'.",
-            "type": "string"
+            "type": [
+                "string",
+                "null"
+            ]
         }
     },
-    "anyOf": [
-        {
-            "required": [
-                "version"
-            ]
-        },
-        {
-            "required": [
-                "dates"
-            ]
-        }
-    ],
     "required": [
         "contributors",
         "identifier",
@@ -652,7 +738,7 @@
         "resource_type",
         "titles"
     ],
-    "title": "CreditMetadata",
+    "title": "credit_metadata",
     "type": "object",
-    "version": "0.0.3"
+    "version": "0.0.4"
 }
