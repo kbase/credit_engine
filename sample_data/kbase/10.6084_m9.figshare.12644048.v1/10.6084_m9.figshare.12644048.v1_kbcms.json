@@ -1,8 +1,8 @@
 {
   "meta": {
-    "credit_metadata_schema_version": "0.0.3",
+    "credit_metadata_schema_version": "0.0.4",
     "saved_by": "ialarmedalien",
-    "timestamp": 1678829569424
+    "timestamp": 1678829569
   },
   "comment": [
     "manually mapped from FigShare"
@@ -125,12 +125,12 @@
     {
       "id": "DOI:10.1101/2020.10.18.342550",
       "description": "Gulf of Mexico blue hole harbors high levels of novel microbial lineages",
-      "relationship_type": "Crossref:HasPreprint"
+      "relationship_type": "has_preprint"
     },
     {
       "id": "DOI:10.1038/s41396-021-00917-x",
       "description": "Gulf of Mexico blue hole harbors high levels of novel microbial lineages",
-      "relationship_type": "DataCite:IsReferencedBy"
+      "relationship_type": "is_referenced_by"
     }
   ],
   "titles": [

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "credit_metadata_schema_version": "0.0.3",
+        "credit_metadata_schema_version": "0.0.4",
         "saved_by": "ialarmedalien",
         "timestamp": 1234567890
     },
@@ -128,37 +128,37 @@
         {
             "description": "JGI taxon ID",
             "id": "jgi_taxon:3300041981",
-            "relationship_type": "kbcms:Unknown"
+            "relationship_type": "unknown"
         },
         {
             "description": "JGI aggregation ID",
             "id": "IMG_AP:1279887",
-            "relationship_type": "DataCite:IsPartOf"
+            "relationship_type": "is_part_of"
         },
         {
             "description": "GOLD sample ID",
             "id": "JGI_GOLD_sample:Gp0503312",
-            "relationship_type": "kbcms:Unknown"
+            "relationship_type": "unknown"
         },
         {
             "description": "GOLD analysis project ID",
             "id": "JGI_GOLD_analysis:Ga0451497",
-            "relationship_type": "DataCite:IsPartOf"
+            "relationship_type": "is_part_of"
         },
         {
             "description": "ITS analysis project ID",
             "id": "JGI_ITS_AP_ID:1279887",
-            "relationship_type": "DataCite:IsPartOf"
+            "relationship_type": "is_part_of"
         },
         {
             "description": "ITS sequencing project ID",
             "id": "JGI_ITS_SP_ID:1280049",
-            "relationship_type": "DataCite:IsPartOf"
+            "relationship_type": "is_part_of"
         },
         {
             "description": "award doi",
             "id": "DOI:10.46936/10.25585/60001289",
-            "relationship_type": "Crossref:Finances"
+            "relationship_type": "finances"
         }
     ],
     "titles": [
