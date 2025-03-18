@@ -26,13 +26,11 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5
 
-      - name: Install Poetry
-        run: uv pip install linkml mkdocs-material mkdocs-mermaid2-plugin
-
       - name: Build documentation
         run: |
           mkdir -p site
           touch site/.nojekyll
+          uv add linkml mkdocs mkdocs-material mkdocs-mermaid2-plugin
           make gendoc
           ([ ! -f docs/about.md ] && cp src/docs/*.md docs/) || true
           uv run mkdocs build -d site

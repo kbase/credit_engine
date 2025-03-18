@@ -200,7 +200,7 @@ gendoc: $(DOCDIR)
 	cp -rf $(SRC)/docs/files/* $(DOCDIR) ; \
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR) --template-directory $(DOCTEMPLATES) $(SOURCE_SCHEMA_PATH)
 	mkdir -p $(DOCDIR)/js
-	$(RUN) cp $(SRC)/docs/js/*.js $(DOCDIR)/js/
+	cp $(SRC)/docs/js/*.js $(DOCDIR)/js/
 
 testdoc: gendoc serve
 
