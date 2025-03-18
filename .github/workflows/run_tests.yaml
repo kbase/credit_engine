@@ -106,3 +106,6 @@ jobs:
                   echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
                   echo "KBase sample data validation: ${{ steps.validate_kbase_data.outcome }}"
                   exit 0
+
+
+                  name: Preview credit_engine documentation build
