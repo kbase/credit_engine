@@ -30,9 +30,8 @@ jobs:
         run: |
           mkdir -p site
           touch site/.nojekyll
-          uv add linkml mkdocs mkdocs-material mkdocs-mermaid2-plugin
+          uv sync --group docs
           make gendoc
-          ([ ! -f docs/about.md ] && cp src/docs/*.md docs/) || true
           uv run mkdocs build -d site
 
       - name: Deploy preview
