@@ -1,3 +1,3 @@
-# bertron-schema
+# credit-metadata
 
-LinkML schema for BER data integration work
+LinkML schema for dataset citation metadata, as used by [KBase](https://kbase.us).

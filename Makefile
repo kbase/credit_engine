@@ -19,6 +19,7 @@ RUN = $(PACKAGE_TOOL) run
 SCHEMA_NAME = $(LINKML_SCHEMA_NAME)
 SOURCE_SCHEMA_PATH = $(LINKML_SCHEMA_SOURCE_PATH)
 SOURCE_SCHEMA_DIR = $(dir $(dir $(SOURCE_SCHEMA_PATH)))
+SCHEMA_ROOT = CreditMetadata
 SRC = src
 DEST = project
 PYMODEL = $(SOURCE_SCHEMA_DIR)/python
@@ -85,7 +86,7 @@ setup: install gen-project gendoc # gen-examples
 
 # install any dependencies required for building
 install:
-	poetry install
+	uv sync
 .PHONY: install
 
 # ---
@@ -99,13 +100,13 @@ cruft-check:
 cruft-diff:
 	cruft diff
 
-update: update-template update-linkml
+update: update-template update-packages
 update-template:
 	cruft update
 
-# todo: consider pinning to template
-update-linkml:
-	poetry add -D linkml@latest
+# N.b. does not update pyproject.toml
+update-packages:
+	uv sync -U
 
 # EXPERIMENTAL
 create-data-harmonizer:
@@ -163,14 +164,14 @@ else
 endif
 
 convert-examples-to-%:
-	$(patsubst %, $(RUN) linkml-convert  % -s $(SOURCE_SCHEMA_PATH) -C Person, $(shell ${SHELL} find src/data/examples -name "*.yaml"))
+	$(patsubst %, $(RUN) linkml-convert  % -s $(SOURCE_SCHEMA_PATH) -C $(SCHEMA_ROOT), $(shell ${SHELL} find src/data/examples -name "*.yaml"))
 
 examples/%.yaml: src/data/examples/%.yaml
-	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
+	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C $(SCHEMA_ROOT) $< -o $@
 examples/%.json: src/data/examples/%.yaml
-	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
+	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C $(SCHEMA_ROOT) $< -o $@
 examples/%.ttl: src/data/examples/%.yaml
-	$(RUN) linkml-convert -P EXAMPLE=http://example.org/ -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
+	$(RUN) linkml-convert -P EXAMPLE=http://example.org/ -s $(SOURCE_SCHEMA_PATH) -C $(SCHEMA_ROOT) $< -o $@
 
 test-examples: examples/output
 
@@ -198,8 +199,8 @@ $(DOCDIR):
 gendoc: $(DOCDIR)
 	cp -rf $(SRC)/docs/files/* $(DOCDIR) ; \
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR) --template-directory $(DOCTEMPLATES) $(SOURCE_SCHEMA_PATH)
-	mkdir -p $(DOCDIR)/javascripts
-	$(RUN) cp $(SRC)/docs/js/*.js $(DOCDIR)/javascripts/
+	mkdir -p $(DOCDIR)/js
+	$(RUN) cp $(SRC)/docs/js/*.js $(DOCDIR)/js/
 
 testdoc: gendoc serve
 

@@ -3,15 +3,17 @@ name = "credit-engine"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12.9"
+requires-python = ">=3.12"
 dependencies = [
-    "jsonschema>=4.23.0",
+    "check-jsonschema>=0.31.3",
+    "jsonschema[format]>=4.23.0",
     "linkml>=1.8.7",
 ]
 
 [dependency-groups]
 dev = [
     "ruff>=0.11.0",
+    "cruft>=2.16.0",
 ]
 docs = [
     "mkdocs-material>=9.6.9",
@@ -20,10 +22,6 @@ docs = [
 
 [tool.ruff]
 line-length = 100
-
-extend-exclude = [
-    "lib/installed_clients/*"
-]
 
 # Assume Python 3.12.
 target-version = "py312"
