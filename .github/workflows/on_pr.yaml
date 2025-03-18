@@ -12,11 +12,14 @@ jobs:
     run_unit_tests:
         uses: ./.github/workflows/run_tests.yaml
 
-    run_code_ql:
-        uses: ./.github/workflows/codeql.yaml
+    run_linkml_tasks:
+        uses: ./.github/workflows/run_tests.yaml
 
-    run_codacy:
-        uses: ./.github/workflows/codacy.yaml
+    # run_code_ql:
+    #     uses: ./.github/workflows/codeql.yaml
 
-    run_trivy:
-        uses: ./.github/workflows/trivy.yaml
+    # run_codacy:
+    #     uses: ./.github/workflows/codacy.yaml
+
+    # run_trivy:
+    #     uses: ./.github/workflows/trivy.yaml

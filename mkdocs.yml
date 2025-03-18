@@ -13,8 +13,9 @@ plugins:
   - mermaid2
 nav:
   - Index: index.md
+  - About: pages/about.md
+  - KBase DOIs: pages/kbase_dois.md
   - GitHub Repo: https://github.com/kbase/credit_engine
-#  - KBase DOIs: docs/kbase_dois.md
 
 site_url: https://kbase.github.io/credit_engine
 repo_url: https://github.com/kbase/credit_engine
