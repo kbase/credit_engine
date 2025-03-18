@@ -1,11 +1,10 @@
 # Changelog
 
-## [#156](https://github.com/kbase/credit_engine/pull/156) - 2023-07-18
+## [#199](https://github.com/kbase/credit_engine/pull/199) - 2025-03-17
 
 ### Changed
 
-- Switching linter over to using Ruff instead of isort + a billion flake8 modules.
-
+- Switching python / environment / package management to [uv](https://docs.astral.sh/uv/).
 
 ## [#156](https://github.com/kbase/credit_engine/pull/156) - 2023-07-18
 

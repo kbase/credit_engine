@@ -33,71 +33,65 @@ See below for how to regenerate the ER diagram after making changes to the schem
 
 ## Software Installation
 
-This repo uses [poetry](https://python-poetry.org/) to manage the python environment and dependencies.
+This repo uses [uv](https://docs.astral.sh/uv/) to manage the python environment and dependencies.
 
-See the [poetry docs](https://python-poetry.org/docs/) for poetry installation instructions.
+See the [uv docs](https://docs.astral.sh/uv/) for uv installation instructions.
 
 Install the project dependencies and create a virtual environment:
 
 ```sh
-poetry install
-```
-
-Activate the virtual environment:
-
-```sh
-poetry shell
+uv sync
 ```
 
 Run tests or other scripts:
 
 ```sh
-poetry run <command>
-poetry run pytest tests/
+uv run <command>
+uv run pytest tests/
 ```
 
 ### Useful commands
 
-These assume that you have already run `poetry shell` to activate the credit engine virtual environment.
+These assume that you have already run `uv sync` to install the credit engine virtual environment and dependencies.
 
 generate derived files in all formats:
 ```sh
-gen-project -d schema/kbase/ schema/kbase/linkml/credit_metadata.yaml
+uv run gen-project -d schema/kbase/ schema/kbase/linkml/credit_metadata.yaml
 ```
 
 lint the KBase linkml schema file:
 ```sh
-linkml-lint -f terminal schema/kbase/linkml/credit_metadata.yaml
+uv run linkml-lint -f terminal schema/kbase/linkml/credit_metadata.yaml
 ```
 
 validate data (in file `data.yaml`) against the schema:
 ```sh
-linkml-validate -s schema/kbase/linkml/credit_metadata.yaml data.yaml
+uv run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml data.yaml
 ```
 
 generate JSONschema version:
 ```sh
-gen-json-schema schema/kbase/linkml/credit_metadata.yaml > schema/kbase/jsonschema/credit_metadata.schema.json
+uv run gen-json-schema schema/kbase/linkml/credit_metadata.yaml > schema/kbase/jsonschema/credit_metadata.schema.json
 ```
 
 generate Python classes:
 ```sh
-gen-python schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata.py
+uv run gen-python schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata.py
 ```
 
 generate Pydantic classes:
 ```sh
-gen-pydantic schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata_pydantic.py
+uv run gen-pydantic schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata_pydantic.py
 ```
 
-generate an ER diagram from the Pydantic classes using erdantic (assumes that erdantic has been installed already):
+generate an ER diagram from the Pydantic classes using [erdantic](https://erdantic.drivendata.org/stable/) (assumes that erdantic has been installed already):
 ```sh
-erdantic schema.kbase.python.credit_metadata_pydantic.CreditMetadata -o schema/kbase/kbase-schema.png
+uv run erdantic schema.kbase.python.credit_metadata_pydantic.CreditMetadata -o schema/kbase/kbase-schema.png
 ```
 
 generate a YUML schema diagram (can be visualised at yuml.me):
 ```sh
-gen-yuml schema/kbase/linkml/credit_metadata.yaml
+uv run gen-yuml schema/kbase/linkml/credit_metadata.yaml
 ```
 
 #### JSONschema data validation

@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Python / poetry
+  # Python
   - package-ecosystem: "pip" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:

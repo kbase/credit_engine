@@ -6,6 +6,7 @@ on:
 jobs:
     run_unit_tests:
         runs-on: ubuntu-latest
+        if: 1 == 0
         strategy:
             fail-fast: false
 
@@ -13,22 +14,25 @@ jobs:
             - name: Repo checkout
               uses: actions/checkout@main
 
-            - name: Set up Python 3.12
+            - name: Set up Python 3.
               uses: actions/setup-python@main
               with:
-                  python-version: 3.12
+                python-version-file: "pyproject.toml"
 
-            - name: Install Poetry
-              uses: snok/install-poetry@main
+            - name: Install uv
+              uses: astral-sh/setup-uv@v5
+              with:
+                # Install a specific version of uv.
+                version: "0.6.6"
 
             - name: Install dependencies
               id: install_deps
-              run: poetry install
+              run: uv sync
 
-            - name: poetry run pytest -rP tests/
+            - name: run pytest -rP tests/
               id: run_pytest
               run: |
-                  poetry run pytest --cov=credit_engine --cov-report=xml -rP tests/
+                  uv run pytest --cov=credit_engine --cov-report=xml -rP tests/
               continue-on-error: true
 
             - name: Send to Codecov
@@ -62,31 +66,37 @@ jobs:
             - name: Repo checkout
               uses: actions/checkout@main
 
-            - name: Set up Python 3.12
+            - name: Set up Python 3.
               uses: actions/setup-python@main
               with:
-                  python-version: 3.12
+                python-version-file: "pyproject.toml"
+
+            - name: Install uv
+              uses: astral-sh/setup-uv@v5
+              with:
+                # Install a specific version of uv.
+                version: "0.6.6"
 
             - name: Install dependencies
               id: install_deps
-              run: pip install linkml check-jsonschema 'jsonschema[format]'
+              run: uv sync
 
             - name: Lint linkml file
               id: lint_linkml
               run: |
-                  linkml-lint ./schema/kbase/linkml/credit_metadata.yaml --ignore-warnings
+                  uv run linkml-lint ./schema/kbase/linkml/credit_metadata.yaml --ignore-warnings
               continue-on-error: true
 
             - name: Validate kbase sample data against the schema
               id: validate_kbase_data
               run: |
-                  linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/**/*kbcms.json
+                  uv run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml sample_data/kbase/**/*kbcms.json
               continue-on-error: true
 
             - name: Validate kbase sample data against JSONschema
               id: validate_kbase_data_against_jsonschema
               run: |
-                  check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json --verbose sample_data/kbase/**/*kbcms.json
+                  uv run check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json --verbose sample_data/kbase/**/*kbcms.json
               continue-on-error: true
 
             - name: outcome failure

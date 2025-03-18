@@ -19,10 +19,10 @@ LINKML_USE_SCHEMASHEETS=No
 ###### linkml generator variables, used by makefile
 
 ## gen-project configuration file
-LINKML_GENERATORS_CONFIG_YAML=config.yaml
+LINKML_GENERATORS_CONFIG_YAML=linkml_gen_config.yaml
 
 ## pass args if gendoc ignores config.yaml (i.e. --no-mergeimports)
-LINKML_GENERATORS_DOC_ARGS=--template-directory src/docs/templates
+LINKML_GENERATORS_DOC_ARGS=--template-directory src/docs/templates/
 
 ## pass args to workaround genowl rdfs config bug (linkml#1453)
 ##   (i.e. --no-type-objects --no-metaclasses --metadata-profile rdfs)

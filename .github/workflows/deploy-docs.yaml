@@ -16,17 +16,21 @@ jobs:
             - name: Set up Python 3.
               uses: actions/setup-python@main
               with:
-                  python-version: 3.11
+                python-version-file: "pyproject.toml"
 
-            - name: Install Poetry.
-              uses: snok/install-poetry@main
+            - name: Install uv
+              uses: astral-sh/setup-uv@v5
+              with:
+                # Install a specific version of uv.
+                version: "0.6.6"
 
             - name: Install dependencies.
-              run: poetry install -E docs
+              run: uv sync --all-extras
 
             - name: Build documentation.
               run: |
                   mkdir -p docs
                   touch docs/.nojekyll
-                  poetry run gen-doc -d docs schema/kbase/linkml/credit_metadata.yaml
-                  poetry run mkdocs gh-deploy
+                  make gendoc
+                  ([ ! -f docs/about.md ] && cp src/docs/*.md docs/) || true
+                  make mkd-gh-deploy
