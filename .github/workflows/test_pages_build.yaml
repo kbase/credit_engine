@@ -1,11 +1,7 @@
 name: Preview credit_engine documentation build
 
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
+    workflow_call:
 
 concurrency: preview-${{ github.ref }}
 
