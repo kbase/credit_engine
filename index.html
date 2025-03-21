@@ -20,7 +20,7 @@
     
     
       
-        <title>KBase Credit Engine Metadata Schema</title>
+        <title>Credit Metadata Schema</title>
       
     
     
@@ -86,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="KBase Credit Engine Metadata Schema" class="md-header__button md-logo" aria-label="KBase Credit Engine Metadata Schema" data-md-component="logo">
+    <a href="." title="Credit Metadata Schema" class="md-header__button md-logo" aria-label="Credit Metadata Schema" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            KBase Credit Engine Metadata Schema
+            Credit Metadata Schema
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -193,13 +193,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="KBase Credit Engine Metadata Schema" class="md-nav__button md-logo" aria-label="KBase Credit Engine Metadata Schema" data-md-component="logo">
+    <a href="." title="Credit Metadata Schema" class="md-nav__button md-logo" aria-label="Credit Metadata Schema" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    KBase Credit Engine Metadata Schema
+    Credit Metadata Schema
   </label>
   
     <div class="md-nav__source">
@@ -495,9 +495,9 @@
 
 
 <h1 id="credit_metadata">credit_metadata</h1>
-<p>Schema for KBase resource credit metadata. This version brings the schema into closer alignment with the commonmeta citation schema, https://commonmeta.org.</p>
+<p>Schema for dataset credit metadata.</p>
 <h2 id="name-credit_metadata">Name: credit_metadata</h2>
-<p>URI: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata</p>
+<p>URI: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -513,7 +513,7 @@
 </tr>
 <tr>
 <td><a href="CreditMetadata/">CreditMetadata</a></td>
-<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'Resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object or a<br>sample from the KBase Sample Service.<br><br>The 'resource_type' field should be filled using values from the DataCite<br>resourceTypeGeneral field:<br><br>https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral<br><br>Currently KBase only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
+<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'Resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the DataCite<br>resourceTypeGeneral field:<br><br>https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
 </tr>
 <tr>
 <td><a href="Description/">Description</a></td>
@@ -921,6 +921,10 @@
     
     
       <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="javascripts/tablesort.js"></script>
       
     
   </body>
