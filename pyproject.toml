@@ -12,6 +12,9 @@ dependencies = [
 ]
 
 [dependency-groups]
+erd = [
+    "erdantic>=1.0.5",
+]
 data_ingest = [
     "dlt[deltalake,duckdb,parquet]>=1.8.1",
 ]

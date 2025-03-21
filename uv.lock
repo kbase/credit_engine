@@ -264,6 +264,9 @@ docs = [
     { name = "mkdocs-material" },
     { name = "mkdocs-mermaid2-plugin" },
 ]
+erd = [
+    { name = "erdantic" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -283,6 +286,7 @@ docs = [
     { name = "mkdocs-material", specifier = ">=9.6.9" },
     { name = "mkdocs-mermaid2-plugin", specifier = ">=1.2.1" },
 ]
+erd = [{ name = "erdantic", specifier = ">=1.0.5" }]
 
 [[package]]
 name = "cruft"
