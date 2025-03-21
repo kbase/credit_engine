@@ -46,31 +46,20 @@ class LinkMLMeta(RootModel):
 linkml_meta = LinkMLMeta(
     {
         "default_curi_maps": ["semweb_context"],
-        "default_prefix": "kbcms",
+        "default_prefix": "dcm",
         "default_range": "string",
-        "description": "Schema for KBase resource credit metadata. This version "
-        "brings the schema into closer alignment with the commonmeta "
-        "citation schema, https://commonmeta.org.",
-        "id": "https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata",
+        "description": "Schema for dataset credit metadata.",
+        "id": "https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata",
         "imports": ["components", "linkml:types"],
         "name": "credit_metadata",
         "prefixes": {
-            "Crossref": {
-                "prefix_prefix": "Crossref",
-                "prefix_reference": "https://crossref.org/",
-            },
-            "DOI": {
-                "prefix_prefix": "DOI",
-                "prefix_reference": "http://identifiers.org/doi/",
-            },
+            "Crossref": {"prefix_prefix": "Crossref", "prefix_reference": "https://crossref.org/"},
+            "DOI": {"prefix_prefix": "DOI", "prefix_reference": "http://identifiers.org/doi/"},
             "DataCite": {
                 "prefix_prefix": "DataCite",
                 "prefix_reference": "https://purl.org/datacite/v4.4/",
             },
-            "JGI": {
-                "prefix_prefix": "JGI",
-                "prefix_reference": "https://data.jgi.doe.gov/search/",
-            },
+            "JGI": {"prefix_prefix": "JGI", "prefix_reference": "https://data.jgi.doe.gov/search/"},
             "ORCID": {
                 "prefix_prefix": "ORCID",
                 "prefix_reference": "http://identifiers.org/orcid/",
@@ -83,20 +72,14 @@ linkml_meta = LinkMLMeta(
                 "prefix_prefix": "biolink",
                 "prefix_reference": "https://w3id.org/biolink/vocab/",
             },
-            "kbcms": {
-                "prefix_prefix": "kbcms",
+            "dcm": {
+                "prefix_prefix": "dcm",
                 "prefix_reference": "https://kbase.github.io/credit_engine/",
             },
-            "linkml": {
-                "prefix_prefix": "linkml",
-                "prefix_reference": "https://w3id.org/linkml/",
-            },
-            "schema": {
-                "prefix_prefix": "schema",
-                "prefix_reference": "http://schema.org/",
-            },
+            "linkml": {"prefix_prefix": "linkml", "prefix_reference": "https://w3id.org/linkml/"},
+            "schema": {"prefix_prefix": "schema", "prefix_reference": "http://schema.org/"},
         },
-        "source_file": "schema/kbase/linkml/credit_metadata.yaml",
+        "source_file": "schema/dcm/linkml/credit_metadata.yaml",
     }
 )
 
@@ -470,10 +453,7 @@ class Contributor(ConfiguredBaseModel):
             "linkml_meta": {
                 "alias": "contributor_id",
                 "domain_of": ["Contributor"],
-                "examples": [
-                    {"value": "ORCID:0000-0001-9557-7715"},
-                    {"value": "ROR:01znn6x10"},
-                ],
+                "examples": [{"value": "ORCID:0000-0001-9557-7715"}, {"value": "ROR:01znn6x10"}],
                 "narrow_mappings": [
                     "ORCID:contributor.orcidId",
                     "OSTI.ARTICLE:author.orcid_id",
@@ -581,9 +561,7 @@ class Description(ConfiguredBaseModel):
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
-        {
-            "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"
-        }
+        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"}
     )
 
     description_text: str = Field(
@@ -593,12 +571,7 @@ class Description(ConfiguredBaseModel):
             "linkml_meta": {
                 "alias": "description_text",
                 "domain_of": ["Description"],
-                "examples": [
-                    {
-                        "value": "This is the most interesting dataset ever to earn a "
-                        "DOI."
-                    }
-                ],
+                "examples": [{"value": "This is the most interesting dataset ever to earn a DOI."}],
             }
         },
     )
@@ -609,11 +582,7 @@ class Description(ConfiguredBaseModel):
             "linkml_meta": {
                 "alias": "description_type",
                 "domain_of": ["Description"],
-                "examples": [
-                    {"value": "abstract"},
-                    {"value": "description"},
-                    {"value": "summary"},
-                ],
+                "examples": [{"value": "abstract"}, {"value": "description"}, {"value": "summary"}],
             }
         },
     )
@@ -639,9 +608,7 @@ class EventDate(ConfiguredBaseModel):
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
-        {
-            "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"
-        }
+        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"}
     )
 
     date: str = Field(
@@ -651,11 +618,7 @@ class EventDate(ConfiguredBaseModel):
             "linkml_meta": {
                 "alias": "date",
                 "domain_of": ["EventDate"],
-                "examples": [
-                    {"value": "2001"},
-                    {"value": "2021-05"},
-                    {"value": "1998-02-15"},
-                ],
+                "examples": [{"value": "2001"}, {"value": "2021-05"}, {"value": "1998-02-15"}],
             }
         },
     )
@@ -702,16 +665,8 @@ class FundingReference(ConfiguredBaseModel):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
         {
             "any_of": [
-                {
-                    "slot_conditions": {
-                        "grant_id": {"name": "grant_id", "required": True}
-                    }
-                },
-                {
-                    "slot_conditions": {
-                        "grant_url": {"name": "grant_url", "required": True}
-                    }
-                },
+                {"slot_conditions": {"grant_id": {"name": "grant_id", "required": True}}},
+                {"slot_conditions": {"grant_url": {"name": "grant_url", "required": True}}},
                 {"slot_conditions": {"funder": {"name": "funder", "required": True}}},
             ],
             "class_uri": "schema:MonetaryGrant",
@@ -746,10 +701,7 @@ class FundingReference(ConfiguredBaseModel):
                     {"value": "CBET-0756451"},
                     {"value": "DOI:10.46936/10.25585/60000745"},
                 ],
-                "narrow_mappings": [
-                    "OSTI.ARTICLE:award_doi",
-                    "OSTI.ARTICLE:award_number",
-                ],
+                "narrow_mappings": ["OSTI.ARTICLE:award_doi", "OSTI.ARTICLE:award_number"],
                 "slot_uri": "schema:identifier",
             }
         },
@@ -761,9 +713,7 @@ class FundingReference(ConfiguredBaseModel):
             "linkml_meta": {
                 "alias": "grant_title",
                 "domain_of": ["FundingReference"],
-                "exact_mappings": [
-                    "DataCite:attributes.funding_references.award_title"
-                ],
+                "exact_mappings": ["DataCite:attributes.funding_references.award_title"],
                 "examples": [
                     {
                         "value": "Metagenomic analysis of the rhizosphere of three "
@@ -839,11 +789,7 @@ class License(ConfiguredBaseModel):
             "linkml_meta": {
                 "alias": "url",
                 "domain_of": ["License", "CreditMetadata"],
-                "examples": [
-                    {
-                        "value": "https://jgi.doe.gov/user-programs/pmo-overview/policies/"
-                    }
-                ],
+                "examples": [{"value": "https://jgi.doe.gov/user-programs/pmo-overview/policies/"}],
             }
         },
     )
@@ -855,9 +801,7 @@ class Metadata(ConfiguredBaseModel):
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
-        {
-            "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"
-        }
+        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"}
     )
 
     credit_metadata_schema_version: str = Field(
@@ -983,9 +927,7 @@ class PermanentID(ConfiguredBaseModel):
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
-        {
-            "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"
-        }
+        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"}
     )
 
     id: str = Field(
@@ -1041,9 +983,7 @@ For example, when a PermanentID class is used to represent objects in the Credit
             "linkml_meta": {
                 "alias": "relationship_type",
                 "domain_of": ["PermanentID"],
-                "exact_mappings": [
-                    "DataCite:attributes.related_identifiers.relation_type"
-                ],
+                "exact_mappings": ["DataCite:attributes.related_identifiers.relation_type"],
             }
         },
     )
@@ -1070,9 +1010,7 @@ class Title(ConfiguredBaseModel):
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
-        {
-            "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"
-        }
+        {"from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/components"}
     )
 
     language: Optional[str] = Field(
@@ -1129,15 +1067,15 @@ class CreditMetadata(ConfiguredBaseModel):
     Represents the credit metadata associated with an object.
 
     In the following documentation, 'Resource' is used to refer to the object
-    that the CM pertains to, for example, a KBase Workspace object or a
-    sample from the KBase Sample Service.
+    that the CM pertains to, for example, a KBase Workspace object; a
+    sample from NMDC or ESS-DIVE; sequence data from IMG.
 
     The 'resource_type' field should be filled using values from the DataCite
     resourceTypeGeneral field:
 
     https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
 
-    Currently KBase only supports credit metadata for objects of type
+    Currently this schema only supports credit metadata for objects of type
     'dataset'; anything else will return an error.
 
     The license may be supplied either as an URL pointing to licensing information for
@@ -1164,7 +1102,7 @@ class CreditMetadata(ConfiguredBaseModel):
                 {"slot_conditions": {"dates": {"name": "dates", "required": True}}},
                 {"slot_conditions": {"version": {"name": "version", "required": True}}},
             ],
-            "from_schema": "https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata",
+            "from_schema": "https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata",
             "tree_root": True,
         }
     )
@@ -1296,8 +1234,6 @@ class CreditMetadata(ConfiguredBaseModel):
     license: Optional[License] = Field(
         default=None,
         description="""Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
-
-All data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.
 """,
         json_schema_extra={
             "linkml_meta": {
@@ -1312,9 +1248,7 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
     meta: Metadata = Field(
         default=...,
         description="""Metadata for this credit information, including submitter, schema version, and timestamp.""",
-        json_schema_extra={
-            "linkml_meta": {"alias": "meta", "domain_of": ["CreditMetadata"]}
-        },
+        json_schema_extra={"linkml_meta": {"alias": "meta", "domain_of": ["CreditMetadata"]}},
     )
     publisher: Optional[Organization] = Field(
         default=None,
@@ -1348,7 +1282,7 @@ All data published at KBase is done so under a Creative Commons 0 or Creative Co
     )
     resource_type: ResourceType = Field(
         default=...,
-        description="""The broad type of the source data for this object. 'dataset' is currently the only valid value for KBase DOIs.""",
+        description="""The broad type of the source data for this object. 'dataset' is currently the only valid value supported by this schema.""",
         json_schema_extra={
             "linkml_meta": {
                 "alias": "resource_type",

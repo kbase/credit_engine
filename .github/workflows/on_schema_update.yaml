@@ -12,15 +12,15 @@ jobs:
         steps:
             - uses: actions/checkout@main
 
-            - name: Evaluate metadata schema changes
-              id: metadata-schema-changes
+            - name: Evaluate LinkML DCM changes
+              id: linkml-schema-changes
               uses: tj-actions/changed-files@v44
               with:
                   files: |
-                      schema/kbase/linkml/credit_metadata.yaml
+                      schema/dcm/linkml/credit_metadata.yaml
 
             - name: Set up python
-              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+              if: steps.linkml-schema-changes.outputs.any_changed == 'true'
               uses: actions/setup-python@main
               with:
                   python-version: 3.12
@@ -31,20 +31,20 @@ jobs:
                   pip3 install linkml
 
             - name: Check out DTS repo
-              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+              if: steps.linkml-schema-changes.outputs.any_changed == 'true'
               uses: actions/checkout@main
               with:
                   repository: kbase/dts
                   path: dts
 
-            - name: Regenerate DTS Golang bindings for credit metadata schame
-              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+            - name: Regenerate DTS Golang bindings for credit metadata schema
+              if: steps.linkml-schema-changes.outputs.any_changed == 'true'
               shell: bash -l {0}
               run: |
-                  gen-golang schema/kbase/linkml/credit_metadata.yaml > dts/credit/metadata.go
+                  gen-golang schema/dcm/linkml/credit_metadata.yaml > dts/credit/metadata.go
 
             - name: Create DTS pull request with regenerated credit metadata bindings
-              if: steps.metadata-schema-changes.outputs.any_changed == 'true'
+              if: steps.linkml-schema-changes.outputs.any_changed == 'true'
               uses: peter-evans/create-pull-request@v6
               with:
                   branch: credit-metadata-schema-update

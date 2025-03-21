@@ -10,7 +10,7 @@
 LINKML_SCHEMA_NAME="credit_metadata"
 LINKML_SCHEMA_AUTHOR="AJ Ireland <aireland@lbl.gov>"
 LINKML_SCHEMA_DESCRIPTION="LinkML schema for dataset citation information"
-LINKML_SCHEMA_SOURCE_PATH="schema/kbase/linkml/credit_metadata.yaml"
+LINKML_SCHEMA_SOURCE_PATH="schema/dcm/linkml/credit_metadata.yaml"
 LINKML_SCHEMA_GOOGLE_SHEET_MODULE=""
 LINKML_SCHEMA_GOOGLE_SHEET_ID=""
 LINKML_SCHEMA_GOOGLE_SHEET_TABS=""

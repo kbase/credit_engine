@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=https://linkml.io/linkml-model/linkml_model/jsonschema/meta.schema.json
-id: https://github.com/kbase/credit_engine/schema/kbase/linkml/credit_metadata
+id: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
 name: credit_metadata
-description: Schema for KBase resource credit metadata. This version brings the schema into closer alignment with the commonmeta citation schema, https://commonmeta.org.
+description: Schema for dataset credit metadata.
 version: 0.0.5
 prefixes:
   biolink: https://w3id.org/biolink/vocab/
-  kbcms: https://kbase.github.io/credit_engine/
+  dcm: https://kbase.github.io/credit_engine/
   Crossref: https://crossref.org/
   DataCite: https://purl.org/datacite/v4.4/
   DOI: http://identifiers.org/doi/
@@ -20,7 +20,7 @@ imports:
 default_range: string
 default_curi_maps:
   - semweb_context
-default_prefix: kbcms
+default_prefix: dcm
 
 classes:
   CreditMetadata:
@@ -29,15 +29,15 @@ classes:
       Represents the credit metadata associated with an object.
 
       In the following documentation, 'Resource' is used to refer to the object
-      that the CM pertains to, for example, a KBase Workspace object or a
-      sample from the KBase Sample Service.
+      that the CM pertains to, for example, a KBase Workspace object; a
+      sample from NMDC or ESS-DIVE; sequence data from IMG.
 
       The 'resource_type' field should be filled using values from the DataCite
       resourceTypeGeneral field:
 
       https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
 
-      Currently KBase only supports credit metadata for objects of type
+      Currently this schema only supports credit metadata for objects of type
       'dataset'; anything else will return an error.
 
       The license may be supplied either as an URL pointing to licensing information for
@@ -179,9 +179,6 @@ classes:
         range: License
         description: |
           Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
-
-          All data published at KBase is done so under a Creative Commons 0 or Creative Commons 4.0 license.
-
         # examples:
         # - value: { id: "CC-BY-NC-ND-4.0" }
         # - value: { id: "MIT OR Apache-2.0" }
@@ -227,7 +224,7 @@ classes:
 
       resource_type:
         slot_uri: schema:@type
-        description: The broad type of the source data for this object. 'dataset' is currently the only valid value for KBase DOIs.
+        description: The broad type of the source data for this object. 'dataset' is currently the only valid value supported by this schema.
         range: ResourceType
         required: true
         exact_mappings:

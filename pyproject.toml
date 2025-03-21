@@ -6,11 +6,15 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "check-jsonschema>=0.31.3",
+    "erdantic>=1.0.5",
     "jsonschema[format]>=4.23.0",
     "linkml>=1.8.7",
 ]
 
 [dependency-groups]
+data_ingest = [
+    "dlt[deltalake,duckdb,parquet]>=1.8.1",
+]
 dev = [
     "ruff>=0.11.0",
     "cruft>=2.16.0",

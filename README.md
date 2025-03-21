@@ -2,13 +2,13 @@
 [![Codecov](https://codecov.io/gh/kbase/credit_engine/branch/develop/graph/badge.svg?token=vOUaMmH86Z)](https://codecov.io/gh/kbase/credit_engine)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/dd36ff4877b94ce48f67a18aa4638dc8)](https://www.codacy.com/gh/kbase/credit_engine/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kbase/credit_engine&amp;utm_campaign=Badge_Grade)
 
-# KBase Credit Engine
+# Dataset Credit Engine
 
-This repo holds the schema and associated scripts used by the KBase Credit Engine.
+This repo holds the schema and associated scripts used by the Dataset Credit Engine.
 
-The KBase Credit Engine is a project aimed at ensuring that appropriate citation information exists for data entering and/or produced by the [KBase software and data science platform](https://kbase.us) to allow credit to be attributed to those who produced the data.
+The Dataset Credit Engine is a project aimed at ensuring that appropriate citation information exists for data entering and/or produced by biological and environmental research platforms to allow credit to be attributed to those who produced the data.
 
-- [KBase Credit Engine](#kbase-credit-engine)
+- [Dataset Credit Engine](#dataset-credit-engine)
   - [Metadata Schema](#metadata-schema)
     - [Schema Diagram](#schema-diagram)
   - [Software Installation](#software-installation)
@@ -17,7 +17,7 @@ The KBase Credit Engine is a project aimed at ensuring that appropriate citation
 
 ## Metadata Schema
 
-The KBase credit metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/kbase/linkml/credit_metadata.yaml).
+The dataset credit metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/dcm/linkml/credit_metadata.yaml).
 
 See the [linkml documentation](https://linkml.io/linkml/index.html) for full details on using the linkml format and the related tools.
 
@@ -25,9 +25,9 @@ Full schema documentation can be found at [https://kbase.github.io/credit_engine
 
 ### Schema Diagram
 
-Generated from the [Pydantic version](schema/kbase/python/credit_metadata_pydantic.py) of the KBase Citation Metadata Schema using [erdantic](https://erdantic.drivendata.org/stable/).
+Generated from the [Pydantic version](schema/dcm/python/credit_metadata_pydantic.py) of the Dataset Credit Metadata Schema using [erdantic](https://erdantic.drivendata.org/stable/).
 
-![KBase metadata schema diagram](schema/kbase/kbase-schema.png "Entity-relationship diagram for KBase citation metadata schema")
+![dataset credit metadata schema diagram](schema/dcm/dcm-schema.png "Entity-relationship diagram for dataset citation metadata schema")
 
 See below for how to regenerate the ER diagram after making changes to the schema.
 
@@ -56,42 +56,42 @@ These assume that you have already run `uv sync` to install the credit engine vi
 
 generate derived files in all formats:
 ```sh
-uv run gen-project -d schema/kbase/ schema/kbase/linkml/credit_metadata.yaml
+uv run gen-project -d schema/dcm/ schema/dcm/linkml/credit_metadata.yaml
 ```
 
-lint the KBase linkml schema file:
+lint the linkml schema file:
 ```sh
-uv run linkml-lint -f terminal schema/kbase/linkml/credit_metadata.yaml
+uv run linkml-lint -f terminal schema/dcm/linkml/credit_metadata.yaml
 ```
 
 validate data (in file `data.yaml`) against the schema:
 ```sh
-uv run linkml-validate -s schema/kbase/linkml/credit_metadata.yaml data.yaml
+uv run linkml-validate -s schema/dcm/linkml/credit_metadata.yaml data.yaml
 ```
 
 generate JSONschema version:
 ```sh
-uv run gen-json-schema schema/kbase/linkml/credit_metadata.yaml > schema/kbase/jsonschema/credit_metadata.schema.json
+uv run gen-json-schema schema/dcm/linkml/credit_metadata.yaml > schema/dcm/jsonschema/credit_metadata.schema.json
 ```
 
 generate Python classes:
 ```sh
-uv run gen-python schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata.py
+uv run gen-python schema/dcm/linkml/credit_metadata.yaml > schema/dcm/python/credit_metadata.py
 ```
 
 generate Pydantic classes:
 ```sh
-uv run gen-pydantic schema/kbase/linkml/credit_metadata.yaml > schema/kbase/python/credit_metadata_pydantic.py
+uv run gen-pydantic schema/dcm/linkml/credit_metadata.yaml > schema/dcm/python/credit_metadata_pydantic.py
 ```
 
 generate an ER diagram from the Pydantic classes using [erdantic](https://erdantic.drivendata.org/stable/) (assumes that erdantic has been installed already):
 ```sh
-uv run erdantic schema.kbase.python.credit_metadata_pydantic.CreditMetadata -o schema/kbase/kbase-schema.png
+uv run erdantic schema.dcm.python.credit_metadata_pydantic.CreditMetadata -o schema/dcm/dcm-schema.png
 ```
 
 generate a YUML schema diagram (can be visualised at yuml.me):
 ```sh
-uv run gen-yuml schema/kbase/linkml/credit_metadata.yaml
+uv run gen-yuml schema/dcm/linkml/credit_metadata.yaml
 ```
 
 #### JSONschema data validation
@@ -104,9 +104,9 @@ brew install check-jsonschema
 
 To test a file or files against the schema, use the command:
 ```sh
-check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json data_file_1.json data_file_2.json
+check-jsonschema --schemafile schema/dcm/jsonschema/credit_metadata.schema.json data_file_1.json data_file_2.json
 ```
 or
 ```sh
-check-jsonschema --schemafile schema/kbase/jsonschema/credit_metadata.schema.json sample_data/**/*kbcms.json
+check-jsonschema --schemafile schema/dcm/jsonschema/credit_metadata.schema.json sample_data/**/*_dcm.json
 ```
