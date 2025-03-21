@@ -16,9 +16,15 @@ nav:
   - About: pages/about.md
   - KBase DOIs: pages/kbase_dois.md
   - GitHub Repo: https://github.com/kbase/credit_engine
+markdown_extensions:
+  - tables
 
 site_url: https://kbase.github.io/credit_engine
 repo_url: https://github.com/kbase/credit_engine
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
 
 # Uncomment this block to enable use of Google Analytics.
 # Replace the property value with your own ID.
