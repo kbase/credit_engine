@@ -247,7 +247,6 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "check-jsonschema" },
-    { name = "erdantic" },
     { name = "jsonschema", extra = ["format"] },
     { name = "linkml" },
 ]
@@ -264,11 +263,13 @@ docs = [
     { name = "mkdocs-material" },
     { name = "mkdocs-mermaid2-plugin" },
 ]
+erd = [
+    { name = "erdantic" },
+]
 
 [package.metadata]
 requires-dist = [
     { name = "check-jsonschema", specifier = ">=0.31.3" },
-    { name = "erdantic", specifier = ">=1.0.5" },
     { name = "jsonschema", extras = ["format"], specifier = ">=4.23.0" },
     { name = "linkml", specifier = ">=1.8.7" },
 ]
@@ -283,6 +284,7 @@ docs = [
     { name = "mkdocs-material", specifier = ">=9.6.9" },
     { name = "mkdocs-mermaid2-plugin", specifier = ">=1.2.1" },
 ]
+erd = [{ name = "erdantic", specifier = ">=1.0.5" }]
 
 [[package]]
 name = "cruft"

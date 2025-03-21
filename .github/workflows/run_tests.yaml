@@ -84,25 +84,25 @@ jobs:
             - name: Validate sample data against the schema
               id: validate_sample_data
               run: |
-                  uv run linkml-validate -s schema/dcm/linkml/credit_metadata.yaml sample_data/dcm/**/*kbcms.json
+                  uv run linkml-validate -s schema/dcm/linkml/credit_metadata.yaml sample_data/**/**/*_dcm.json
               continue-on-error: true
 
             - name: Validate sample data against JSONschema
               id: validate_sample_data_against_jsonschema
               run: |
-                  uv run check-jsonschema --schemafile schema/dcm/jsonschema/credit_metadata.schema.json --verbose sample_data/dcm/**/*dcm.json
+                  uv run check-jsonschema --schemafile schema/dcm/jsonschema/credit_metadata.schema.json --verbose sample_data/**/**/*_dcm.json
               continue-on-error: true
 
             - name: outcome failure
-              if: steps.lint_linkml.outcome != 'success' # || steps.validate_sample_data.outcome != 'success'
+              if: steps.lint_linkml.outcome != 'success' || steps.validate_sample_data.outcome != 'success'
               run: |
                   echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
                   echo "sample data validation: ${{ steps.validate_sample_data.outcome }}"
                   exit 1
 
             - name: outcome success
-              if: steps.lint_linkml.outcome == 'success' # || steps.validate_sample_data.outcome != 'success'
+              if: steps.lint_linkml.outcome == 'success' && steps.validate_sample_data.outcome == 'success'
               run: |
                   echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
-                  echo "sample data validation: ${{ steps.validate_dcm_data.outcome }}"
+                  echo "sample data validation: ${{ steps.validate_sample_data.outcome }}"
                   exit 0

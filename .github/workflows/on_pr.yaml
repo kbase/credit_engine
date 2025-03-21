@@ -12,9 +12,6 @@ jobs:
     run_unit_tests:
         uses: ./.github/workflows/run_tests.yaml
 
-    run_linkml_tasks:
-        uses: ./.github/workflows/run_tests.yaml
-
     # run_code_ql:
     #     uses: ./.github/workflows/codeql.yaml
 
