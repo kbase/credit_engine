@@ -75,6 +75,9 @@ jobs:
               id: install_deps
               run: uv sync
 
+            - name: tmate
+              uses: mxschmitt/action-tmate@v3
+
             - name: Lint linkml file
               id: lint_linkml
               run: |
@@ -94,15 +97,15 @@ jobs:
               continue-on-error: true
 
             - name: outcome failure
-              if: steps.lint_linkml.outcome != 'success' # || steps.validate_sample_data.outcome != 'success'
+              if: steps.lint_linkml.outcome != 'success' || steps.validate_sample_data.outcome != 'success'
               run: |
                   echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
                   echo "sample data validation: ${{ steps.validate_sample_data.outcome }}"
                   exit 1
 
             - name: outcome success
-              if: steps.lint_linkml.outcome == 'success' # || steps.validate_sample_data.outcome != 'success'
+              if: steps.lint_linkml.outcome == 'success' && steps.validate_sample_data.outcome == 'success'
               run: |
                   echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
-                  echo "sample data validation: ${{ steps.validate_dcm_data.outcome }}"
+                  echo "sample data validation: ${{ steps.validate_sample_data.outcome }}"
                   exit 0
