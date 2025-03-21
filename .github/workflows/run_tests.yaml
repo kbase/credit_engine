@@ -84,13 +84,13 @@ jobs:
             - name: Validate sample data against the schema
               id: validate_sample_data
               run: |
-                  uv run linkml-validate -s schema/dcm/linkml/credit_metadata.yaml sample_data/dcm/**/*kbcms.json
+                  uv run linkml-validate -s schema/dcm/linkml/credit_metadata.yaml sample_data/**/*_dcm.json
               continue-on-error: true
 
             - name: Validate sample data against JSONschema
               id: validate_sample_data_against_jsonschema
               run: |
-                  uv run check-jsonschema --schemafile schema/dcm/jsonschema/credit_metadata.schema.json --verbose sample_data/dcm/**/*dcm.json
+                  uv run check-jsonschema --schemafile schema/dcm/jsonschema/credit_metadata.schema.json --verbose sample_data/**/*_dcm.json
               continue-on-error: true
 
             - name: outcome failure
