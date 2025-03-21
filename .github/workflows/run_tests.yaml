@@ -75,9 +75,6 @@ jobs:
               id: install_deps
               run: uv sync
 
-            - name: tmate
-              uses: mxschmitt/action-tmate@v3
-
             - name: Lint linkml file
               id: lint_linkml
               run: |
