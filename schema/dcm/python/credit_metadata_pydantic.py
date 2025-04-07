@@ -156,7 +156,7 @@ class ContributorRole(str, Enum):
     """Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation)."""
     writing_original_draft = "writing_original_draft"
     """Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages."""
-    writing_review_andSOLIDUSor_editing = "crcr:writing-review-editing"
+    writing_review_andSOLIDUSor_editing = "writing_review_editing"
 
 
 class ContributorType(str, Enum):

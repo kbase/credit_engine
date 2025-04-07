@@ -98,7 +98,7 @@
                 "validation",
                 "visualization",
                 "writing_original_draft",
-                "crcr:writing-review-editing"
+                "writing_review_editing"
             ],
             "title": "ContributorRole",
             "type": "string"
