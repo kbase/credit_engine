@@ -343,6 +343,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     <span class="md-ellipsis">
       Identifier and Mapping Information
@@ -434,6 +443,10 @@
 <p>Required: True</p>
 </li>
 </ul>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>This could be added programmatically when updates occur.</li>
+</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -463,6 +476,8 @@
 
 <pre><code class="language-yaml">name: timestamp
 description: Unix timestamp for the addition of this set of credit metadata.
+comments:
+- This could be added programmatically when updates occur.
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
 rank: 1000
 slot_uri: schema:sdDatePublished

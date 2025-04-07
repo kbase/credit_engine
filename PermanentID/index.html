@@ -372,14 +372,7 @@ attributes:
     - value: DOI:10.46936/10.25585/60000745
     - value: GO:0005456
     - value: HGNC:7470
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.identifier.value
-    - DataCite:attributes.alternate_identifiers
-    - DataCite:attributes.related_identifiers
-    - DataCite:attributes.identifiers
-    related_mappings:
-    - OSTI.ARTICLE:site_url
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     slot_uri: schema:identifier
     domain_of:
     - License
@@ -395,25 +388,18 @@ attributes:
     - value: This data analysis workflow demonstrates how to process a metagenome
         to identify viruses using VirSorter. Then, provides taxonomic classification
         using vConTACT2.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - OSTI.ARTICLE:description
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:description
     domain_of:
     - PermanentID
   relationship_type:
     name: relationship_type
-    description: 'The relationship between the ID and some other entity.
-
-      For example, when a PermanentID class is used to represent objects in the CreditMetadata
-      field ''related_identifiers'', the ''relationship_type'' field captures the
-      relationship between the resource being registered and this ID.
-
-      '
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.related_identifiers.relation_type
+    description: The relationship between the ID and some other entity. For example,
+      when a PermanentID class is used to represent objects in the CreditMetadata
+      field 'related_identifiers', the 'relationship_type' field captures the relationship
+      between the resource being registered and this ID.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     domain_of:
     - PermanentID
@@ -452,14 +438,7 @@ attributes:
     - value: DOI:10.46936/10.25585/60000745
     - value: GO:0005456
     - value: HGNC:7470
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.identifier.value
-    - DataCite:attributes.alternate_identifiers
-    - DataCite:attributes.related_identifiers
-    - DataCite:attributes.identifiers
-    related_mappings:
-    - OSTI.ARTICLE:site_url
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     slot_uri: schema:identifier
     alias: id
     owner: PermanentID
@@ -477,9 +456,7 @@ attributes:
     - value: This data analysis workflow demonstrates how to process a metagenome
         to identify viruses using VirSorter. Then, provides taxonomic classification
         using vConTACT2.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - OSTI.ARTICLE:description
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -489,16 +466,11 @@ attributes:
     range: string
   relationship_type:
     name: relationship_type
-    description: 'The relationship between the ID and some other entity.
-
-      For example, when a PermanentID class is used to represent objects in the CreditMetadata
-      field ''related_identifiers'', the ''relationship_type'' field captures the
-      relationship between the resource being registered and this ID.
-
-      '
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.related_identifiers.relation_type
+    description: The relationship between the ID and some other entity. For example,
+      when a PermanentID class is used to represent objects in the CreditMetadata
+      field 'related_identifiers', the 'relationship_type' field captures the relationship
+      between the resource being registered and this ID.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     alias: relationship_type
     owner: PermanentID

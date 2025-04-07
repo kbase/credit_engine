@@ -630,7 +630,7 @@
 <tr>
 <td>is_published_in</td>
 <td>DataCite:IsPublishedIn</td>
-<td>indicates A is published inside B, but is independent of other things publish...</td>
+<td>Indicates A is published inside B, but is independent of other things publish...</td>
 </tr>
 <tr>
 <td>is_referenced_by</td>
@@ -771,35 +771,25 @@ permissible_values:
     title: based on data
   cites:
     text: cites
-    description: 'Indicates that A includes B in a citation.
-
-      '
+    description: Indicates that A includes B in a citation.
     meaning: DataCite:Cites
   compiles:
     text: compiles
-    description: 'Indicates B is the result of a compile or creation event using A.
-      Note: May be used for software and text, as a compiler can be a computer program
-      or a person.
-
-      '
+    description: Indicates B is the result of a compile or creation event using A.
+      May be used for software and text, as a compiler can be a computer program or
+      a person.
     meaning: DataCite:Compiles
   continues:
     text: continues
-    description: 'Indicates A is a continuation of the work B.
-
-      '
+    description: Indicates A is a continuation of the work B.
     meaning: DataCite:Continues
   describes:
     text: describes
-    description: 'Indicates A describes B.
-
-      '
+    description: Indicates A describes B.
     meaning: DataCite:Describes
   documents:
     text: documents
-    description: 'Indicates A is documentation about B; e.g. points to software documentation.
-
-      '
+    description: Indicates A is documentation about B; e.g. points to software documentation.
     meaning: DataCite:Documents
   finances:
     text: finances
@@ -830,21 +820,15 @@ permissible_values:
     title: has manuscript
   has_metadata:
     text: has_metadata
-    description: 'Indicates resource A has additional metadata B.
-
-      '
+    description: Indicates resource A has additional metadata B.
     meaning: DataCite:HasMetadata
     title: has metadata
   has_part:
     text: has_part
-    description: 'Indicates A includes the part B.
-
-      Primarily this relation is applied to container-contained type relationships.
-
-      Note: May be used for individual software modules; note that code repository-to-version
-      relationships should be modeled using IsVersionOf and HasVersion.
-
-      '
+    description: Indicates A includes the part B. Primarily this relation is applied
+      to container-contained type relationships. May be used for individual software
+      modules; note that code repository-to-version relationships should be modeled
+      using IsVersionOf and HasVersion.
     meaning: DataCite:HasPart
     title: has part
   has_preprint:
@@ -869,13 +853,10 @@ permissible_values:
     title: has translation
   has_version:
     text: has_version
-    description: 'Indicates A has a version (B).
-
-      The registered resource such as a software package or code repository has a
-      versioned instance (indicates A has the instance B) e.g. it may be used to relate
-      an un-versioned code repository to one of its specific software versions.
-
-      '
+    description: Indicates A has a version (B). The registered resource such as a
+      software package or code repository has a versioned instance (indicates A has
+      the instance B) e.g. it may be used to relate an un-versioned code repository
+      to one of its specific software versions.
     meaning: DataCite:HasVersion
     title: has version
   is_based_on:
@@ -888,9 +869,7 @@ permissible_values:
     title: is basis for
   is_cited_by:
     text: is_cited_by
-    description: 'Indicates that B includes A in a citation.
-
-      '
+    description: Indicates that B includes A in a citation.
     meaning: DataCite:IsCitedBy
     title: is cited by
   is_comment_on:
@@ -899,17 +878,13 @@ permissible_values:
     title: is comment on
   is_compiled_by:
     text: is_compiled_by
-    description: 'Indicates B is used to compile or create A. Note: May be used for
-      software and text, as a compiler can be a computer program or a person.
-
-      '
+    description: Indicates B is used to compile or create A. May be used for software
+      and text, as a compiler can be a computer program or a person.
     meaning: DataCite:IsCompiledBy
     title: is compiled by
   is_continued_by:
     text: is_continued_by
-    description: 'Indicates A is continued by the work B.
-
-      '
+    description: Indicates A is continued by the work B.
     meaning: DataCite:IsContinuedBy
     title: is continued by
   is_data_basis_for:
@@ -918,31 +893,21 @@ permissible_values:
     title: is data basis for
   is_derived_from:
     text: is_derived_from
-    description: 'Indicates B is a source upon which A is based.
-
-      IsDerivedFrom should be used for a resource that is a derivative of an original
-      resource.
-
-      For example, ''A isDerivedFrom B'' could describe a dataset (A) derived from
-      a larger dataset (B) where data values have been manipulated from their original
-      state.
-
-      '
+    description: Indicates B is a source upon which A is based. IsDerivedFrom should
+      be used for a resource that is a derivative of an original resource. For example,
+      'A isDerivedFrom B' could describe a dataset (A) derived from a larger dataset
+      (B) where data values have been manipulated from their original state.
     meaning: DataCite:IsDerivedFrom
     title: is derived from
   is_described_by:
     text: is_described_by
-    description: 'Indicates A is described by B.
-
-      '
+    description: Indicates A is described by B.
     meaning: DataCite:IsDescribedBy
     title: is described by
   is_documented_by:
     text: is_documented_by
-    description: 'Indicates B is documentation about/explaining A; e.g. points to
-      software documentation.
-
-      '
+    description: Indicates B is documentation about/explaining A; e.g. points to software
+      documentation.
     meaning: DataCite:IsDocumentedBy
     title: is documented by
   is_expression_of:
@@ -959,13 +924,10 @@ permissible_values:
     title: is format of
   is_identical_to:
     text: is_identical_to
-    description: 'Indicates that A is identical to B, for use when there is a need
-      to register two separate instances of the same resource.
-
-      IsIdenticalTo should be used for a resource that is the same as the registered
-      resource but is saved in another location, maybe another institution.
-
-      '
+    description: Indicates that A is identical to B, for use when there is a need
+      to register two separate instances of the same resource. Should be used for
+      a resource that is the same as the registered resource but is saved in another
+      location, e.g. another institution.
     meaning: DataCite:IsIdenticalTo
     title: is identical to
   is_manifestation_of:
@@ -978,46 +940,32 @@ permissible_values:
     title: is manuscript of
   is_metadata_for:
     text: is_metadata_for
-    description: 'Indicates additional metadata A for a resource B.
-
-      '
+    description: Indicates additional metadata A for a resource B.
     meaning: DataCite:IsMetadataFor
     title: is metadata for
   is_new_version_of:
     text: is_new_version_of
-    description: 'Indicates A is a new edition of B, where the new edition has been
+    description: Indicates A is a new edition of B, where the new edition has been
       modified or updated.
-
-      '
     meaning: DataCite:IsNewVersionOf
     title: is new version of
   is_obsoleted_by:
     text: is_obsoleted_by
-    description: 'Indicates A is replaced by B.
-
-      '
+    description: Indicates A is replaced by B.
     meaning: DataCite:IsObsoletedBy
     title: is obsoleted by
   is_original_form_of:
     text: is_original_form_of
-    description: 'Indicates A is the original form of B.
-
-      May be used for different software operating systems or compiler formats, for
-      example.
-
-      '
+    description: Indicates A is the original form of B. May be used for different
+      software operating systems or compiler formats, for example.
     meaning: DataCite:IsOriginalFormOf
     title: is original form of
   is_part_of:
     text: is_part_of
-    description: 'Indicates A is a portion of B; may be used for elements of a series.
-
+    description: Indicates A is a portion of B; may be used for elements of a series.
       Primarily this relation is applied to container-contained type relationships.
-
-      Note: May be used for individual software modules; note that code repository-to-version
+      May be used for individual software modules; note that code repository-to-version
       relationships should be modeled using IsVersionOf and HasVersion.
-
-      '
     meaning: DataCite:IsPartOf
     title: is part of
   is_preprint_of:
@@ -1026,24 +974,18 @@ permissible_values:
     title: is preprint of
   is_previous_version_of:
     text: is_previous_version_of
-    description: 'Indicates A is a previous edition of B.
-
-      '
+    description: Indicates A is a previous edition of B.
     meaning: DataCite:IsPreviousVersionOf
     title: is previous version of
   is_published_in:
     text: is_published_in
-    description: 'indicates A is published inside B, but is independent of other things
+    description: Indicates A is published inside B, but is independent of other things
       published inside of B.
-
-      '
     meaning: DataCite:IsPublishedIn
     title: is published in
   is_referenced_by:
     text: is_referenced_by
-    description: 'Indicates A is used as a source of information by B.
-
-      '
+    description: Indicates A is used as a source of information by B.
     meaning: DataCite:IsReferencedBy
     title: is referenced by
   is_related_material:
@@ -1060,11 +1002,7 @@ permissible_values:
     title: is reply to
   is_required_by:
     text: is_required_by
-    description: 'Indicates A is required by B.
-
-      Note: May be used to indicate software dependencies.
-
-      '
+    description: Indicates A is required by B. May be used to indicate software dependencies.
     meaning: DataCite:IsRequiredBy
     title: is required by
   is_review_of:
@@ -1073,9 +1011,7 @@ permissible_values:
     title: is review of
   is_reviewed_by:
     text: is_reviewed_by
-    description: 'Indicates that A is reviewed by B.
-
-      '
+    description: Indicates that A is reviewed by B.
     meaning: DataCite:IsReviewedBy
     title: is reviewed by
   is_same_as:
@@ -1084,28 +1020,20 @@ permissible_values:
     title: is same as
   is_source_of:
     text: is_source_of
-    description: 'Indicates A is a source upon which B is based.
-
-      IsSourceOf is the original resource from which a derivative resource was created.
-
-      For example, ''A isSourceOf B'' could describe a dataset (A) which acts as the
-      source of a derived dataset (B) where the values have been manipulated.
-
-      '
+    description: Indicates A is a source upon which B is based. IsSourceOf is the
+      original resource from which a derivative resource was created. For example,
+      'A isSourceOf B' could describe a dataset (A) which acts as the source of a
+      derived dataset (B) where the values have been manipulated.
     meaning: DataCite:IsSourceOf
     title: is source of
   is_supplement_to:
     text: is_supplement_to
-    description: 'Indicates that A is a supplement to B.
-
-      '
+    description: Indicates that A is a supplement to B.
     meaning: DataCite:IsSupplementTo
     title: is supplement to
   is_supplemented_by:
     text: is_supplemented_by
-    description: 'Indicates that B is a supplement to A.
-
-      '
+    description: Indicates that B is a supplement to A.
     meaning: DataCite:IsSupplementedBy
     title: is supplemented by
   is_translation_of:
@@ -1114,55 +1042,36 @@ permissible_values:
     title: is translation of
   is_variant_form_of:
     text: is_variant_form_of
-    description: 'Indicates A is a variant or different form of B.
-
-      Use for a different form of one thing.
-
-      May be used for different software operating systems or compiler formats, for
-      example.
-
-      '
+    description: Indicates A is a variant or different form of B. Use for a different
+      form of one thing. May be used for different software operating systems or compiler
+      formats, for example.
     meaning: DataCite:IsVariantFormOf
     title: is variant form of
   is_version_of:
     text: is_version_of
-    description: 'Indicates A is a version of B.
-
-      The registered resource is an instance of a target resource (indicates that
-      A is an instance of B) e.g. it may be used to relate a specific version of a
-      software package to its software code repository.
-
-      '
+    description: Indicates A is a version of B. The registered resource is an instance
+      of a target resource (indicates that A is an instance of B) e.g. it may be used
+      to relate a specific version of a software package to its software code repository.
     meaning: DataCite:IsVersionOf
     title: is version of
   obsoletes:
     text: obsoletes
-    description: 'Indicates A replaces B.
-
-      '
+    description: Indicates A replaces B.
     meaning: DataCite:Obsoletes
   references:
     text: references
-    description: 'Indicates B is used as a source of information for A.
-
-      '
+    description: Indicates B is used as a source of information for A.
     meaning: DataCite:References
   replaces:
     text: replaces
     meaning: Crossref:Replaces
   requires:
     text: requires
-    description: 'Indicates A requires B.
-
-      Note: May be used to indicate software dependencies.
-
-      '
+    description: Indicates A requires B. May be used to indicate software dependencies.
     meaning: DataCite:Requires
   reviews:
     text: reviews
-    description: 'Indicates that A is a review of B.
-
-      '
+    description: Indicates that A is a review of B.
     meaning: DataCite:Reviews
   unknown:
     text: unknown

@@ -366,7 +366,7 @@ attributes:
   funder:
     name: funder
     description: The funder for the grant or award.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:funder
     domain_of:
@@ -379,13 +379,7 @@ attributes:
     - value: '1296'
     - value: CBET-0756451
     - value: DOI:10.46936/10.25585/60000745
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.funding_references.award_number
-    - Crossref:message.award
-    narrow_mappings:
-    - OSTI.ARTICLE:award_doi
-    - OSTI.ARTICLE:award_number
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:identifier
     domain_of:
@@ -396,9 +390,7 @@ attributes:
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.funding_references.award_title
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:name
     domain_of:
@@ -408,11 +400,7 @@ attributes:
     description: URL for the grant.
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.funding_references.award_url
-    close_mappings:
-    - OSTI.ARTICLE:award_doi
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:url
     domain_of:
@@ -452,7 +440,7 @@ attributes:
   funder:
     name: funder
     description: The funder for the grant or award.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:funder
     alias: funder
@@ -467,13 +455,7 @@ attributes:
     - value: '1296'
     - value: CBET-0756451
     - value: DOI:10.46936/10.25585/60000745
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.funding_references.award_number
-    - Crossref:message.award
-    narrow_mappings:
-    - OSTI.ARTICLE:award_doi
-    - OSTI.ARTICLE:award_number
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:identifier
     alias: grant_id
@@ -487,9 +469,7 @@ attributes:
     examples:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.funding_references.award_title
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:name
     alias: grant_title
@@ -502,11 +482,7 @@ attributes:
     description: URL for the grant.
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
-    exact_mappings:
-    - DataCite:attributes.funding_references.award_url
-    close_mappings:
-    - OSTI.ARTICLE:award_doi
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:url
     alias: grant_url

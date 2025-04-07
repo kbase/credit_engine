@@ -242,6 +242,15 @@
     click Metadata href "../Metadata"
       Metadata : credit_metadata_schema_version
 
+      Metadata : credit_metadata_source
+
+
+
+
+    Metadata --&gt; "*" DataSource : credit_metadata_source
+    click DataSource href "../DataSource"
+
+
       Metadata : saved_by
 
       Metadata : timestamp
@@ -267,9 +276,15 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../credit_metadata_source/">credit_metadata_source</a></td>
+<td>* <br/> <a href="../DataSource/">DataSource</a></td>
+<td>Information about where the credit metadata was sourced from</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../saved_by/">saved_by</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
-<td>KBase workspace ID of the user who added this entry</td>
+<td>PID for the user who added this entry</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -339,16 +354,25 @@ attributes:
     description: The version of the credit metadata schema used.
     examples:
     - value: 1.1.0
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:schemaVersion
     domain_of:
     - Metadata
     required: true
+  credit_metadata_source:
+    name: credit_metadata_source
+    description: Information about where the credit metadata was sourced from.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    rank: 1000
+    domain_of:
+    - Metadata
+    range: DataSource
+    multivalued: true
   saved_by:
     name: saved_by
-    description: KBase workspace ID of the user who added this entry.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    description: PID for the user who added this entry.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:sdPublisher
     domain_of:
@@ -357,7 +381,9 @@ attributes:
   timestamp:
     name: timestamp
     description: Unix timestamp for the addition of this set of credit metadata.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    comments:
+    - This could be added programmatically when updates occur.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:sdDatePublished
     domain_of:
@@ -381,7 +407,7 @@ attributes:
     description: The version of the credit metadata schema used.
     examples:
     - value: 1.1.0
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:schemaVersion
     alias: credit_metadata_schema_version
@@ -390,10 +416,21 @@ attributes:
     - Metadata
     range: string
     required: true
+  credit_metadata_source:
+    name: credit_metadata_source
+    description: Information about where the credit metadata was sourced from.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    rank: 1000
+    alias: credit_metadata_source
+    owner: Metadata
+    domain_of:
+    - Metadata
+    range: DataSource
+    multivalued: true
   saved_by:
     name: saved_by
-    description: KBase workspace ID of the user who added this entry.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    description: PID for the user who added this entry.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:sdPublisher
     alias: saved_by
@@ -405,7 +442,9 @@ attributes:
   timestamp:
     name: timestamp
     description: Unix timestamp for the addition of this set of credit metadata.
-    from_schema: https://github.com/kbase/credit_engine/schema/kbase/linkml/components
+    comments:
+    - This could be added programmatically when updates occur.
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
     slot_uri: schema:sdDatePublished
     alias: timestamp

@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://kbase.github.io/credit_engine/Contributor/" rel="canonical"/>
+<link href="https://kbase.github.io/credit_engine/DataSource/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
-<title>Class: Contributor - Credit Metadata Schema</title>
+<title>Class: DataSource - Credit Metadata Schema</title>
 <link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-contributor">
+<a class="md-skip" href="#class-datasource">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Contributor
+              Class: DataSource
             
           </span>
 </div>
@@ -234,58 +234,19 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="class-contributor">Class: Contributor</h1>
-<p><em>Represents a contributor to the resource.</em></p>
-<p>__</p>
-<p><em>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and</em></p>
-<p><em>one of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).</em></p>
-<p>__</p>
-<p><em>The 'contributor_role' field takes values from the DataCite and CRediT contributor</em></p>
-<p><em>roles vocabularies. For more information on these resources and choosing</em></p>
-<p><em>appropriate roles, please see the following links:</em></p>
-<p>__</p>
-<p><em>DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</em></p>
-<p>__</p>
-<p><em>CRediT contributor role taxonomy: https://credit.niso.org.</em></p>
-<p>__</p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/Contributor">dcm:Contributor</a></p>
+<h1 id="class-datasource">Class: DataSource</h1>
+<p><em>Source of any kind of data.</em></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/DataSource">dcm:DataSource</a></p>
 <div class="mermaid"> classDiagram
-    class Contributor
-    click Contributor href "../Contributor"
-      Contributor : affiliations
+    class DataSource
+    click DataSource href "../DataSource"
+      DataSource : access_timestamp
 
+      DataSource : source_data_updated
 
+      DataSource : source_name
 
-
-    Contributor --&gt; "*" Organization : affiliations
-    click Organization href "../Organization"
-
-
-      Contributor : contributor_id
-
-      Contributor : contributor_roles
-
-
-
-
-    Contributor --&gt; "*" ContributorRole : contributor_roles
-    click ContributorRole href "../ContributorRole"
-
-
-      Contributor : contributor_type
-
-
-
-
-    Contributor --&gt; "0..1" ContributorType : contributor_type
-    click ContributorType href "../ContributorType"
-
-
-      Contributor : family_name
-
-      Contributor : given_name
-
-      Contributor : name
+      DataSource : source_url
 
 
 </div>
@@ -302,45 +263,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../contributor_type/">contributor_type</a></td>
-<td>0..1 <br/> <a href="../ContributorType/">ContributorType</a></td>
-<td>Must be either 'Person' or 'Organization'</td>
+<td><a href="../access_timestamp/">access_timestamp</a></td>
+<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Unix timestamp for when the data was retrieved from that source</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../contributor_id/">contributor_id</a></td>
+<td><a href="../source_data_updated/">source_data_updated</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
+<td>The date when the data source was last updated, if available</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../source_name/">source_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Where the data was retrieved from</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../source_url/">source_url</a></td>
 <td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>Persistent unique identifier for the contributor; this might be an ORCID for ...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Contributor name</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../given_name/">given_name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The given name(s) of the contributor</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../family_name/">family_name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The family name(s) of the contributor</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../affiliations/">affiliations</a></td>
-<td>* <br/> <a href="../Organization/">Organization</a></td>
-<td>List of organizations with which the contributor is affiliated</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../contributor_roles/">contributor_roles</a></td>
-<td>* <br/> <a href="../ContributorRole/">ContributorRole</a></td>
-<td>List of roles played by the contributor when working on the resource</td>
+<td>URL from whence data was retrieved</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -357,10 +300,10 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../CreditMetadata/">CreditMetadata</a></td>
-<td><a href="../contributors/">contributors</a></td>
+<td><a href="../Metadata/">Metadata</a></td>
+<td><a href="../credit_metadata_source/">credit_metadata_source</a></td>
 <td>range</td>
-<td><a href="./">Contributor</a></td>
+<td><a href="./">DataSource</a></td>
 </tr>
 </tbody>
 </table>
@@ -380,11 +323,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>dcm:Contributor</td>
+<td>dcm:DataSource</td>
 </tr>
 <tr>
 <td>native</td>
-<td>dcm:Contributor</td>
+<td>dcm:DataSource</td>
 </tr>
 </tbody>
 </table>
@@ -392,271 +335,128 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Contributor
-description: 'Represents a contributor to the resource.
-
-
-  Contributors must have a ''contributor_type'', either ''Person'' or ''Organization'',
-  and
-
-  one of the ''name'' fields: either ''given_name'' and ''family_name'' (for a person),
-  or ''name'' (for an organization or a person).
-
-
-  The ''contributor_role'' field takes values from the DataCite and CRediT contributor
-
-  roles vocabularies. For more information on these resources and choosing
-
-  appropriate roles, please see the following links:
-
-
-  DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype
-
-
-  CRediT contributor role taxonomy: https://credit.niso.org.
-
-  '
+<pre><code class="language-yaml">name: DataSource
+description: Source of any kind of data.
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
 attributes:
-  contributor_type:
-    name: contributor_type
-    description: Must be either 'Person' or 'Organization'.
-    examples:
-    - value: Person
-    - value: Organization
+  access_timestamp:
+    name: access_timestamp
+    description: Unix timestamp for when the data was retrieved from that source.
+    comments:
+    - This could be added programmatically when updates occur.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
-    slot_uri: schema:@type
     domain_of:
-    - Contributor
-    range: ContributorType
-  contributor_id:
-    name: contributor_id
-    description: Persistent unique identifier for the contributor; this might be an
-      ORCID for an individual, or a ROR ID for an organization.
-    examples:
-    - value: ORCID:0000-0001-9557-7715
-    - value: ROR:01znn6x10
+    - DataSource
+    range: integer
+    required: true
+  source_data_updated:
+    name: source_data_updated
+    description: The date when the data source was last updated, if available.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
-    slot_uri: schema:identifier
     domain_of:
-    - Contributor
+    - DataSource
+    range: datetime
+  source_name:
+    name: source_name
+    description: Where the data was retrieved from.
+    examples:
+    - value: DataCite
+    - value: Crossref
+    - value: IMG
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    rank: 1000
+    domain_of:
+    - DataSource
+    range: string
+  source_url:
+    name: source_url
+    description: URL from whence data was retrieved.
+    examples:
+    - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
+    - value: https://api.microbiomedata.org/studies/sty-123abc-999
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    rank: 1000
+    domain_of:
+    - DataSource
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.-_]+:\S
-  name:
-    name: name
-    description: Contributor name. For organizations, this should be the full (unabbreviated)
-      name; can also be used for a person if the given name/family name format is
-      not applicable.
-    examples:
-    - value: National Institute of Mental Health
-    - value: Madonna
-    - value: Ransome the Clown
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    slot_uri: schema:name
-    domain_of:
-    - Contributor
-  given_name:
-    name: given_name
-    description: The given name(s) of the contributor.
-    examples:
-    - value: Marionetta Cecille de la
-    - value: Helena
-    - value: Hubert George
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    domain_of:
-    - Contributor
-  family_name:
-    name: family_name
-    description: The family name(s) of the contributor.
-    examples:
-    - value: Carte-Postale
-    - value: Bonham Carter
-    - value: Wells
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    domain_of:
-    - Contributor
-  affiliations:
-    name: affiliations
-    description: List of organizations with which the contributor is affiliated. For
-      contributors that represent an organization, this may be a parent organization
-      (e.g. KBase, US DOE; Arkin lab, LBNL).
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    slot_uri: schema:affiliation
-    domain_of:
-    - Contributor
-    range: Organization
-    multivalued: true
-  contributor_roles:
-    name: contributor_roles
-    description: List of roles played by the contributor when working on the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    slot_uri: schema:Role
-    domain_of:
-    - Contributor
-    range: ContributorRole
-    multivalued: true
 any_of:
 - slot_conditions:
-    given_name:
-      name: given_name
-      required: true
-    family_name:
-      name: family_name
+    source_name:
+      name: source_name
       required: true
 - slot_conditions:
-    name:
-      name: name
+    source_url:
+      name: source_url
       required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Contributor
-description: 'Represents a contributor to the resource.
-
-
-  Contributors must have a ''contributor_type'', either ''Person'' or ''Organization'',
-  and
-
-  one of the ''name'' fields: either ''given_name'' and ''family_name'' (for a person),
-  or ''name'' (for an organization or a person).
-
-
-  The ''contributor_role'' field takes values from the DataCite and CRediT contributor
-
-  roles vocabularies. For more information on these resources and choosing
-
-  appropriate roles, please see the following links:
-
-
-  DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype
-
-
-  CRediT contributor role taxonomy: https://credit.niso.org.
-
-  '
+<pre><code class="language-yaml">name: DataSource
+description: Source of any kind of data.
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
 attributes:
-  contributor_type:
-    name: contributor_type
-    description: Must be either 'Person' or 'Organization'.
-    examples:
-    - value: Person
-    - value: Organization
+  access_timestamp:
+    name: access_timestamp
+    description: Unix timestamp for when the data was retrieved from that source.
+    comments:
+    - This could be added programmatically when updates occur.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
-    slot_uri: schema:@type
-    alias: contributor_type
-    owner: Contributor
+    alias: access_timestamp
+    owner: DataSource
     domain_of:
-    - Contributor
-    range: ContributorType
-  contributor_id:
-    name: contributor_id
-    description: Persistent unique identifier for the contributor; this might be an
-      ORCID for an individual, or a ROR ID for an organization.
-    examples:
-    - value: ORCID:0000-0001-9557-7715
-    - value: ROR:01znn6x10
+    - DataSource
+    range: integer
+    required: true
+  source_data_updated:
+    name: source_data_updated
+    description: The date when the data source was last updated, if available.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
     rank: 1000
-    slot_uri: schema:identifier
-    alias: contributor_id
-    owner: Contributor
+    alias: source_data_updated
+    owner: DataSource
     domain_of:
-    - Contributor
+    - DataSource
+    range: datetime
+  source_name:
+    name: source_name
+    description: Where the data was retrieved from.
+    examples:
+    - value: DataCite
+    - value: Crossref
+    - value: IMG
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    rank: 1000
+    alias: source_name
+    owner: DataSource
+    domain_of:
+    - DataSource
+    range: string
+  source_url:
+    name: source_url
+    description: URL from whence data was retrieved.
+    examples:
+    - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
+    - value: https://api.microbiomedata.org/studies/sty-123abc-999
+    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    rank: 1000
+    alias: source_url
+    owner: DataSource
+    domain_of:
+    - DataSource
     range: uriorcurie
-    pattern: ^[a-zA-Z0-9.-_]+:\S
-  name:
-    name: name
-    description: Contributor name. For organizations, this should be the full (unabbreviated)
-      name; can also be used for a person if the given name/family name format is
-      not applicable.
-    examples:
-    - value: National Institute of Mental Health
-    - value: Madonna
-    - value: Ransome the Clown
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    slot_uri: schema:name
-    alias: name
-    owner: Contributor
-    domain_of:
-    - Contributor
-    range: string
-  given_name:
-    name: given_name
-    description: The given name(s) of the contributor.
-    examples:
-    - value: Marionetta Cecille de la
-    - value: Helena
-    - value: Hubert George
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    alias: given_name
-    owner: Contributor
-    domain_of:
-    - Contributor
-    range: string
-  family_name:
-    name: family_name
-    description: The family name(s) of the contributor.
-    examples:
-    - value: Carte-Postale
-    - value: Bonham Carter
-    - value: Wells
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    alias: family_name
-    owner: Contributor
-    domain_of:
-    - Contributor
-    range: string
-  affiliations:
-    name: affiliations
-    description: List of organizations with which the contributor is affiliated. For
-      contributors that represent an organization, this may be a parent organization
-      (e.g. KBase, US DOE; Arkin lab, LBNL).
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    slot_uri: schema:affiliation
-    alias: affiliations
-    owner: Contributor
-    domain_of:
-    - Contributor
-    range: Organization
-    multivalued: true
-  contributor_roles:
-    name: contributor_roles
-    description: List of roles played by the contributor when working on the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
-    rank: 1000
-    slot_uri: schema:Role
-    alias: contributor_roles
-    owner: Contributor
-    domain_of:
-    - Contributor
-    range: ContributorRole
-    multivalued: true
 any_of:
 - slot_conditions:
-    given_name:
-      name: given_name
-      required: true
-    family_name:
-      name: family_name
+    source_name:
+      name: source_name
       required: true
 - slot_conditions:
-    name:
-      name: name
+    source_url:
+      name: source_url
       required: true
 
 </code></pre>

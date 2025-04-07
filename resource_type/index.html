@@ -478,14 +478,6 @@
 <td>native</td>
 <td>dcm:resource_type</td>
 </tr>
-<tr>
-<td>exact</td>
-<td>OSTI.ARTICLE:product_type, OSTI.ARTICLE:workType, DataCite:attributes.types.schema_org</td>
-</tr>
-<tr>
-<td>narrow</td>
-<td>OSTI.ARTICLE:dataset_type</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -497,12 +489,6 @@ description: The broad type of the source data for this object. 'dataset' is cur
 examples:
 - value: dataset
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-exact_mappings:
-- OSTI.ARTICLE:product_type
-- OSTI.ARTICLE:workType
-- DataCite:attributes.types.schema_org
-narrow_mappings:
-- OSTI.ARTICLE:dataset_type
 rank: 1000
 slot_uri: schema:@type
 alias: resource_type

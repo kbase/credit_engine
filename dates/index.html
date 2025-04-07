@@ -456,10 +456,6 @@
 <td>native</td>
 <td>dcm:dates</td>
 </tr>
-<tr>
-<td>close</td>
-<td>DataCite:attributes.published, DataCite:attributes.updated, DataCite:attributes.dates, ORCID:publicationDate, OSTI.ARTICLE:publication_date, Crossref:message.deposited</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -470,13 +466,6 @@ description: A list of relevant lifecycle events for the resource. Note that the
   dates apply only to the resource itself, and not to the creation or update of the
   credit metadata record for the resource.
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-close_mappings:
-- DataCite:attributes.published
-- DataCite:attributes.updated
-- DataCite:attributes.dates
-- ORCID:publicationDate
-- OSTI.ARTICLE:publication_date
-- Crossref:message.deposited
 rank: 1000
 alias: dates
 owner: CreditMetadata

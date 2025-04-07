@@ -513,7 +513,11 @@
 </tr>
 <tr>
 <td><a href="CreditMetadata/">CreditMetadata</a></td>
-<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'Resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the DataCite<br>resourceTypeGeneral field:<br><br>https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
+<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the DataCite<br>resourceTypeGeneral field:<br><br>https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
+</tr>
+<tr>
+<td><a href="DataSource/">DataSource</a></td>
+<td>Source of any kind of data.</td>
 </tr>
 <tr>
 <td><a href="Description/">Description</a></td>
@@ -559,6 +563,10 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="access_timestamp/">access_timestamp</a></td>
+<td>Unix timestamp for when the data was retrieved from that source</td>
+</tr>
+<tr>
 <td><a href="affiliations/">affiliations</a></td>
 <td>List of organizations with which the contributor is affiliated</td>
 </tr>
@@ -592,7 +600,7 @@
 </tr>
 <tr>
 <td><a href="credit_metadata_source/">credit_metadata_source</a></td>
-<td>A list of CURIEs, URIs, or free text entries denoting the source of the credi...</td>
+<td>Information about where the credit metadata was sourced from</td>
 </tr>
 <tr>
 <td><a href="date/">date</a></td>
@@ -700,7 +708,19 @@
 </tr>
 <tr>
 <td><a href="saved_by/">saved_by</a></td>
-<td>KBase workspace ID of the user who added this entry</td>
+<td>PID for the user who added this entry</td>
+</tr>
+<tr>
+<td><a href="source_data_updated/">source_data_updated</a></td>
+<td>The date when the data source was last updated, if available</td>
+</tr>
+<tr>
+<td><a href="source_name/">source_name</a></td>
+<td>Where the data was retrieved from</td>
+</tr>
+<tr>
+<td><a href="source_url/">source_url</a></td>
+<td>URL from whence data was retrieved</td>
 </tr>
 <tr>
 <td><a href="timestamp/">timestamp</a></td>

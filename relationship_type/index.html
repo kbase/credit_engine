@@ -404,9 +404,7 @@
 
 
 <h1 id="slot-relationship_type">Slot: relationship_type</h1>
-<p><em>The relationship between the ID and some other entity.</em></p>
-<p><em>For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.</em></p>
-<p>__</p>
+<p><em>The relationship between the ID and some other entity. For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.</em></p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/relationship_type">dcm:relationship_type</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -453,26 +451,17 @@
 <td>native</td>
 <td>dcm:relationship_type</td>
 </tr>
-<tr>
-<td>exact</td>
-<td>DataCite:attributes.related_identifiers.relation_type</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: relationship_type
-description: 'The relationship between the ID and some other entity.
-
-  For example, when a PermanentID class is used to represent objects in the CreditMetadata
-  field ''related_identifiers'', the ''relationship_type'' field captures the relationship
-  between the resource being registered and this ID.
-
-  '
+description: The relationship between the ID and some other entity. For example, when
+  a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers',
+  the 'relationship_type' field captures the relationship between the resource being
+  registered and this ID.
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-exact_mappings:
-- DataCite:attributes.related_identifiers.relation_type
 rank: 1000
 alias: relationship_type
 owner: PermanentID

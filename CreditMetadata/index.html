@@ -230,7 +230,7 @@
 <h1 id="class-creditmetadata">Class: CreditMetadata</h1>
 <p><em>Represents the credit metadata associated with an object.</em></p>
 <p>__</p>
-<p><em>In the following documentation, 'Resource' is used to refer to the object</em></p>
+<p><em>In the following documentation, 'resource' is used to refer to the object</em></p>
 <p><em>that the CM pertains to, for example, a KBase Workspace object; a</em></p>
 <p><em>sample from NMDC or ESS-DIVE; sequence data from IMG.</em></p>
 <p>__</p>
@@ -274,8 +274,6 @@
     CreditMetadata --&gt; "1..*" Contributor : contributors
     click Contributor href "../Contributor"
 
-
-      CreditMetadata : credit_metadata_source
 
       CreditMetadata : dates
 
@@ -397,12 +395,6 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../credit_metadata_source/">credit_metadata_source</a></td>
-<td>* <br/> <a href="../String/">String</a></td>
-<td>A list of CURIEs, URIs, or free text entries denoting the source of the credi...</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../dates/">dates</a></td>
 <td>* <br/> <a href="../EventDate/">EventDate</a></td>
 <td>A list of relevant lifecycle events for the resource</td>
@@ -508,7 +500,7 @@
 description: 'Represents the credit metadata associated with an object.
 
 
-  In the following documentation, ''Resource'' is used to refer to the object
+  In the following documentation, ''resource'' is used to refer to the object
 
   that the CM pertains to, for example, a KBase Workspace object; a
 
@@ -584,13 +576,6 @@ attributes:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    narrow_mappings:
-    - DataCite:attributes.contributors
-    - DataCite:attributes.creators
-    - ORCID:contributors
-    - OSTI.ARTICLE:contributors
-    - OSTI.ARTICLE:authors
-    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:creator
     domain_of:
@@ -598,32 +583,12 @@ attributes:
     range: Contributor
     required: true
     multivalued: true
-  credit_metadata_source:
-    name: credit_metadata_source
-    description: A list of CURIEs, URIs, or free text entries denoting the source
-      of the credit metadata.
-    examples:
-    - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
-    - value: DataCite
-    - value: DOI:10.13039/100000015
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    rank: 1000
-    domain_of:
-    - CreditMetadata
-    multivalued: true
   dates:
     name: dates
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    close_mappings:
-    - DataCite:attributes.published
-    - DataCite:attributes.updated
-    - DataCite:attributes.dates
-    - ORCID:publicationDate
-    - OSTI.ARTICLE:publication_date
-    - Crossref:message.deposited
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -646,11 +611,9 @@ attributes:
   funding:
     name: funding
     description: Funding sources for the resource.
+    todos:
+    - Should funding info be duplicated in the related_identifiers field?
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    close_mappings:
-    - DataCite:attributes.funding_references
-    - Crossref:Message.project.funding
-    - OSTI.ARTICLE:awards
     rank: 1000
     slot_uri: schema:funding
     domain_of:
@@ -670,14 +633,6 @@ attributes:
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    exact_mappings:
-    - DataCite:id
-    - JGI:organisms.grouped_by
-    narrow_mappings:
-    - OSTI.ARTICLE:osti_id
-    - OSTI.ARTICLE:doi
-    - ORCID:doi
-    - ORCID:url
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -695,8 +650,6 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
     exact_mappings:
     - biolink:license
-    related_mappings:
-    - DataCite:attributes.rights_list
     rank: 1000
     slot_uri: schema:license
     domain_of:
@@ -717,9 +670,6 @@ attributes:
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    narrow_mappings:
-    - ORCID:url
-    - OSTI.ARTICLE:site_url
     rank: 1000
     slot_uri: schema:provider
     domain_of:
@@ -729,15 +679,6 @@ attributes:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    close_mappings:
-    - DataCite:attributes.identifiers
-    - DataCite:attributes.related_identifiers
-    - DataCite:attributes.alternate_identifiers
-    - ORCID:externalIds
-    - OSTI.ARTICLE:related_identifiers
-    narrow_mappings:
-    - ORCID:doi
-    - OSTI.ARTICLE:doi
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -752,12 +693,6 @@ attributes:
     examples:
     - value: dataset
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    exact_mappings:
-    - OSTI.ARTICLE:product_type
-    - OSTI.ARTICLE:workType
-    - DataCite:attributes.types.schema_org
-    narrow_mappings:
-    - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
     domain_of:
@@ -768,10 +703,6 @@ attributes:
     name: titles
     description: One or more titles for the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    exact_mappings:
-    - DataCite:attributes.titles
-    - ORCID:title
-    - OSTI.ARTICLE:title
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -823,7 +754,7 @@ any_of:
 description: 'Represents the credit metadata associated with an object.
 
 
-  In the following documentation, ''Resource'' is used to refer to the object
+  In the following documentation, ''resource'' is used to refer to the object
 
   that the CM pertains to, for example, a KBase Workspace object; a
 
@@ -904,13 +835,6 @@ attributes:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    narrow_mappings:
-    - DataCite:attributes.contributors
-    - DataCite:attributes.creators
-    - ORCID:contributors
-    - OSTI.ARTICLE:contributors
-    - OSTI.ARTICLE:authors
-    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:creator
     alias: contributors
@@ -920,35 +844,12 @@ attributes:
     range: Contributor
     required: true
     multivalued: true
-  credit_metadata_source:
-    name: credit_metadata_source
-    description: A list of CURIEs, URIs, or free text entries denoting the source
-      of the credit metadata.
-    examples:
-    - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
-    - value: DataCite
-    - value: DOI:10.13039/100000015
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    rank: 1000
-    alias: credit_metadata_source
-    owner: CreditMetadata
-    domain_of:
-    - CreditMetadata
-    range: string
-    multivalued: true
   dates:
     name: dates
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    close_mappings:
-    - DataCite:attributes.published
-    - DataCite:attributes.updated
-    - DataCite:attributes.dates
-    - ORCID:publicationDate
-    - OSTI.ARTICLE:publication_date
-    - Crossref:message.deposited
     rank: 1000
     alias: dates
     owner: CreditMetadata
@@ -973,11 +874,9 @@ attributes:
   funding:
     name: funding
     description: Funding sources for the resource.
+    todos:
+    - Should funding info be duplicated in the related_identifiers field?
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    close_mappings:
-    - DataCite:attributes.funding_references
-    - Crossref:Message.project.funding
-    - OSTI.ARTICLE:awards
     rank: 1000
     slot_uri: schema:funding
     alias: funding
@@ -998,14 +897,6 @@ attributes:
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    exact_mappings:
-    - DataCite:id
-    - JGI:organisms.grouped_by
-    narrow_mappings:
-    - OSTI.ARTICLE:osti_id
-    - OSTI.ARTICLE:doi
-    - ORCID:doi
-    - ORCID:url
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -1025,8 +916,6 @@ attributes:
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
     exact_mappings:
     - biolink:license
-    related_mappings:
-    - DataCite:attributes.rights_list
     rank: 1000
     slot_uri: schema:license
     alias: license
@@ -1051,9 +940,6 @@ attributes:
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    narrow_mappings:
-    - ORCID:url
-    - OSTI.ARTICLE:site_url
     rank: 1000
     slot_uri: schema:provider
     alias: publisher
@@ -1065,15 +951,6 @@ attributes:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    close_mappings:
-    - DataCite:attributes.identifiers
-    - DataCite:attributes.related_identifiers
-    - DataCite:attributes.alternate_identifiers
-    - ORCID:externalIds
-    - OSTI.ARTICLE:related_identifiers
-    narrow_mappings:
-    - ORCID:doi
-    - OSTI.ARTICLE:doi
     rank: 1000
     alias: related_identifiers
     owner: CreditMetadata
@@ -1089,12 +966,6 @@ attributes:
     examples:
     - value: dataset
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    exact_mappings:
-    - OSTI.ARTICLE:product_type
-    - OSTI.ARTICLE:workType
-    - DataCite:attributes.types.schema_org
-    narrow_mappings:
-    - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
     alias: resource_type
@@ -1107,10 +978,6 @@ attributes:
     name: titles
     description: One or more titles for the resource.
     from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-    exact_mappings:
-    - DataCite:attributes.titles
-    - ORCID:title
-    - OSTI.ARTICLE:title
     rank: 1000
     alias: titles
     owner: CreditMetadata

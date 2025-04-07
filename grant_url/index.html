@@ -478,14 +478,6 @@
 <td>native</td>
 <td>dcm:grant_url</td>
 </tr>
-<tr>
-<td>exact</td>
-<td>DataCite:attributes.funding_references.award_url</td>
-</tr>
-<tr>
-<td>close</td>
-<td>OSTI.ARTICLE:award_doi</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -496,10 +488,6 @@ description: URL for the grant.
 examples:
 - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-exact_mappings:
-- DataCite:attributes.funding_references.award_url
-close_mappings:
-- OSTI.ARTICLE:award_doi
 rank: 1000
 slot_uri: schema:url
 alias: grant_url

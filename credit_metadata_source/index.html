@@ -343,15 +343,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     <span class="md-ellipsis">
       Identifier and Mapping Information
@@ -413,7 +404,7 @@
 
 
 <h1 id="slot-credit_metadata_source">Slot: credit_metadata_source</h1>
-<p><em>A list of CURIEs, URIs, or free text entries denoting the source of the credit metadata.</em></p>
+<p><em>Information about where the credit metadata was sourced from.</em></p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/credit_metadata_source">dcm:credit_metadata_source</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -428,8 +419,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../CreditMetadata/">CreditMetadata</a></td>
-<td>Represents the credit metadata associated with an object</td>
+<td><a href="../Metadata/">Metadata</a></td>
+<td>Metadata for the credit metadata, including the schema version used, who subm...</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -437,31 +428,12 @@
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../String/">String</a></p>
+<p>Range: <a href="../DataSource/">DataSource</a></p>
 </li>
 <li>
 <p>Multivalued: True</p>
 </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081</td>
-</tr>
-<tr>
-<td>DataCite</td>
-</tr>
-<tr>
-<td>DOI:10.13039/100000015</td>
-</tr>
-</tbody>
-</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -490,19 +462,14 @@
 <details>
 
 <pre><code class="language-yaml">name: credit_metadata_source
-description: A list of CURIEs, URIs, or free text entries denoting the source of the
-  credit metadata.
-examples:
-- value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
-- value: DataCite
-- value: DOI:10.13039/100000015
+description: Information about where the credit metadata was sourced from.
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
 rank: 1000
 alias: credit_metadata_source
-owner: CreditMetadata
+owner: Metadata
 domain_of:
-- CreditMetadata
-range: string
+- Metadata
+range: DataSource
 multivalued: true
 
 </code></pre>

@@ -343,6 +343,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#todos" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODOs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     <span class="md-ellipsis">
       Identifier and Mapping Information
@@ -434,6 +443,10 @@
 <p>Multivalued: True</p>
 </li>
 </ul>
+<h2 id="todos">TODOs</h2>
+<ul>
+<li>Should funding info be duplicated in the related_identifiers field?</li>
+</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -456,10 +469,6 @@
 <td>native</td>
 <td>dcm:funding</td>
 </tr>
-<tr>
-<td>close</td>
-<td>DataCite:attributes.funding_references, Crossref:Message.project.funding, OSTI.ARTICLE:awards</td>
-</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -467,11 +476,9 @@
 
 <pre><code class="language-yaml">name: funding
 description: Funding sources for the resource.
+todos:
+- Should funding info be duplicated in the related_identifiers field?
 from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
-close_mappings:
-- DataCite:attributes.funding_references
-- Crossref:Message.project.funding
-- OSTI.ARTICLE:awards
 rank: 1000
 slot_uri: schema:funding
 alias: funding
