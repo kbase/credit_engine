@@ -38,9 +38,9 @@
         }
       ],
       "contributor_roles": [
-        "DataCite:DataCurator",
-        "DataCite:ContactPerson",
-        "crcr:writing-original-draft"
+        "data_curator",
+        "contact_person",
+        "writing_original_draft"
       ]
     }
   ],

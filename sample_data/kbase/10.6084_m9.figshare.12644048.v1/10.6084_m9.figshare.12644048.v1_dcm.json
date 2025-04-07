@@ -41,8 +41,8 @@
         }
       ],
       "contributor_roles": [
-        "DataCite:DataCurator",
-        "DataCite:ContactPerson"
+        "data_curator",
+        "contact_person"
       ]
     },
     {

@@ -36,8 +36,8 @@
                 }
             ],
             "contributor_roles": [
-                "crcr:writing-original-draft",
-                "crcr:writing-review-editing"
+                "writing_original_draft",
+                "writing_review_editing"
             ]
         },
         {
@@ -53,8 +53,8 @@
                 }
             ],
             "contributor_roles": [
-                "crcr:writing-original-draft",
-                "crcr:writing-review-editing"
+                "writing_original_draft",
+                "writing_review_editing"
             ]
         },
         {
@@ -70,8 +70,8 @@
                 }
             ],
             "contributor_roles": [
-                "crcr:writing-original-draft",
-                "crcr:writing-review-editing"
+                "writing_original_draft",
+                "writing_review_editing"
             ]
         },
         {
@@ -87,8 +87,8 @@
                 }
             ],
             "contributor_roles": [
-                "crcr:writing-original-draft",
-                "crcr:writing-review-editing"
+                "writing_original_draft",
+                "writing_review_editing"
             ]
         }
     ],

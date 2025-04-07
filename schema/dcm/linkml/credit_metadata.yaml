@@ -2,7 +2,7 @@
 id: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
 name: credit_metadata
 description: Schema for dataset credit metadata.
-version: 0.0.5
+version: 0.0.6
 prefixes:
   biolink: https://w3id.org/biolink/vocab/
   dcm: https://kbase.github.io/credit_engine/
@@ -11,15 +11,17 @@ prefixes:
   DOI: http://identifiers.org/doi/
   JGI: https://data.jgi.doe.gov/search/
   linkml: https://w3id.org/linkml/
+  nmdc: https://w3id.org/nmdc/
   ORCID: http://identifiers.org/orcid/
   OSTI.ARTICLE: https://www.osti.gov/biblio/
   schema: http://schema.org/
+
 imports:
-  - components
-  - linkml:types
+- components
+- linkml:types
 default_range: string
 default_curi_maps:
-  - semweb_context
+- semweb_context
 default_prefix: dcm
 
 classes:
@@ -28,7 +30,7 @@ classes:
     description: |
       Represents the credit metadata associated with an object.
 
-      In the following documentation, 'Resource' is used to refer to the object
+      In the following documentation, 'resource' is used to refer to the object
       that the CM pertains to, for example, a KBase Workspace object; a
       sample from NMDC or ESS-DIVE; sequence data from IMG.
 
@@ -57,19 +59,16 @@ classes:
       value, 'dataset', it is automatically populated if no value is supplied.
 
     attributes:
-
       comment:
         slot_uri: schema:comment
         description: List of strings of freeform text providing extra information about this credit metadata.
         multivalued: true
-        # inlined: true
         examples:
         - value: "This comment adds a lot of extra value!"
 
       content_url:
         description: The URL of the content of the resource.
         multivalued: true
-        # inlined: true
         range: uri
 
       contributors:
@@ -78,72 +77,27 @@ classes:
         required: true
         multivalued: true
         range: Contributor
-        # inlined_as_list: true
-        narrow_mappings:
-        - DataCite:attributes.contributors
-        - DataCite:attributes.creators
-        - ORCID:contributors
-        - OSTI.ARTICLE:contributors
-        - OSTI.ARTICLE:authors
-        - JGI:organisms.pi
-
-      credit_metadata_source:
-        description: A list of CURIEs, URIs, or free text entries denoting the source of the credit metadata.
-        multivalued: true
-        # inlined: true
-        examples:
-        - value: "https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081"
-        - value: "DataCite"
-        - value: DOI:10.13039/100000015
-
       dates:
         description: A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.
         multivalued: true
         range: EventDate
-        # inlined: true
         inlined_as_list: true
         # examples:
         # - value: { date: 2022-05-10, event: available }
-        close_mappings:
-        - DataCite:attributes.published
-          # from DataCite:attributes.published
-          # via { date: src.attributes.published, event: 'available' }
-        - DataCite:attributes.updated
-          # from DataCite:attributes.updated
-          # via { date: src.attributes.updated, event: 'updated' }
-        - DataCite:attributes.dates
-          # from DataCite:attributes.dates[]
-          # via { date: src.attributes.dates[].date, event: src.attributes.dates[].dateType }
-        - ORCID:publicationDate
-          # from: ORCID:publicationDate
-          # via { date: src.publicationDate, event: 'available' }
-        - OSTI.ARTICLE:publication_date
-          # from: OSTI.ARTICLE:publication_date
-          # via { date: src.publication_date, event: 'available' }
-        - Crossref:message.deposited
-          # from: Crossref:message.deposited
-          # via { date: src.message.deposited.date-time, event: 'available' }
-
       descriptions:
         slot_uri: schema:description
         description: A brief description or abstract for the resource being represented.
         multivalued: true
         range: Description
-        # inlined: true
         inlined_as_list: true
-
       funding:
         slot_uri: schema:funding
         description: Funding sources for the resource.
         multivalued: true
         range: FundingReference
-        # inlined: true
         inlined_as_list: true
-        close_mappings:
-        - DataCite:attributes.funding_references
-        - Crossref:Message.project.funding
-        - OSTI.ARTICLE:awards
-
+        todos:
+        - Should funding info be duplicated in the related_identifiers field?
       identifier:
         identifier: true
         slot_uri: schema:identifier
@@ -157,22 +111,6 @@ classes:
         - value: RefSeq:GCF_004214875.1
         - value: GenBank:CP035949.1
         - value: img.taxon:648028003
-        exact_mappings:
-        - DataCite:id
-          # from: DataCite:id
-          # via: f"DOI:{src.id}"
-        - JGI:organisms.grouped_by
-          # from src.organisms[].grouped_by
-          # via: src.organisms[].files[][src.organisms[].grouped_by]
-        narrow_mappings:
-          - OSTI.ARTICLE:osti_id
-            # from: OSTI.ARTICLE:osti_id
-            # via: f"OSTI.ARTICLE:{src.osti_id}"
-          - OSTI.ARTICLE:doi
-          - ORCID:doi
-          # it should be possible to generate an URL from a curie
-          - ORCID:url
-
       license:
         slot_uri: schema:license
         # also slot_uri:isAccessibleForFree
@@ -184,10 +122,7 @@ classes:
         # - value: { id: "MIT OR Apache-2.0" }
         # - value: { url: "https://jgi.doe.gov/user-programs/pmo-overview/policies/" }
         exact_mappings:
-          - biolink:license
-        related_mappings:
-        - DataCite:attributes.rights_list
-
+        - biolink:license
       meta:
         description: Metadata for this credit information, including submitter, schema version, and timestamp.
         range: Metadata
@@ -198,62 +133,24 @@ classes:
         # CHECK ME!
         slot_uri: schema:provider
         range: Organization
-        narrow_mappings:
-          - ORCID:url
-          - OSTI.ARTICLE:site_url
-
       related_identifiers:
         description: Other resolvable persistent unique IDs related to the resource.
         multivalued: true
         range: PermanentID
         inlined_as_list: true
-        # inlined: true
-        close_mappings:
-        - DataCite:attributes.identifiers
-        - DataCite:attributes.related_identifiers
-        - DataCite:attributes.alternate_identifiers
-        - ORCID:externalIds
-        - OSTI.ARTICLE:related_identifiers
-        narrow_mappings:
-        - ORCID:doi
-        # from ORCID:doi
-        # via: { id: f"DOI:{src.doi}" }
-        - OSTI.ARTICLE:doi
-        # from: OSTI.ARTICLE:doi
-        # via: { id: f"DOI:{src.doi}"}
-
       resource_type:
         slot_uri: schema:@type
         description: The broad type of the source data for this object. 'dataset' is currently the only valid value supported by this schema.
         range: ResourceType
         required: true
-        exact_mappings:
-        # OSTI.ARTICLE:DA is used for dataset
-        - OSTI.ARTICLE:product_type
-        # ORCID:data-set
-        - OSTI.ARTICLE:workType
-        # see DataCite:attributes.types
-        - DataCite:attributes.types.schema_org
-        narrow_mappings:
-          - OSTI.ARTICLE:dataset_type
         examples:
         - value: dataset
-
       titles:
         description: One or more titles for the resource.
         required: true
         multivalued: true
         range: Title
         inlined_as_list: true
-        # inlined: true
-        exact_mappings:
-        - DataCite:attributes.titles
-        - ORCID:title
-          # from: ORCID:title
-          # via: [{ title: src.title }]
-        - OSTI.ARTICLE:title
-          # from: OSTI.ARTICLE:title
-          # via: [{ title: src.title }]
         # examples:
         # - value:
         #   - title: Amaranthus hypochondriacus genome
@@ -263,26 +160,23 @@ classes:
         # - value:
         #   - title: I know what genome you sequenced last summer
         #     title_type: alternative_title
-
       url:
         description: The URL of the resource.
         range: uri
-
       version:
         slot_uri: schema:version
         description: The version of the resource. This must be an absolute version, not a relative version like 'latest'.
         exact_mappings:
         - DataCite:attributes.version
         examples:
-        - value: '5'
+        - value: "5"
         - value: 1.2.1
-        - value: '20220405'
-
+        - value: "20220405"
     any_of:
-      - slot_conditions:
-          dates:
-            required: true
+    - slot_conditions:
+        dates:
+          required: true
 
-      - slot_conditions:
-          version:
-            required: true
+    - slot_conditions:
+        version:
+          required: true
