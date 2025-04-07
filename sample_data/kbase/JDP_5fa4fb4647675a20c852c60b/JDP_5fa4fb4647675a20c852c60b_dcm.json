@@ -14,8 +14,8 @@
                 }
             ],
             "contributor_roles": [
-                "crcr:investigation",
-                "DataCite:ProjectLeader"
+                "investigation",
+                "project_leader"
             ],
             "name": "Kelly Wrighton",
             "given_name": "Kelly",

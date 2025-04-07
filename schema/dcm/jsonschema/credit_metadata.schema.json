@@ -64,41 +64,41 @@
         "ContributorRole": {
             "description": "The type of contribution made by a contributor.",
             "enum": [
-                "DataCite:ContactPerson",
-                "DataCite:DataCollector",
-                "DataCite:DataCurator",
-                "DataCite:DataManager",
-                "DataCite:Distributor",
-                "DataCite:Editor",
-                "DataCite:HostingInstitution",
-                "DataCite:Producer",
-                "DataCite:ProjectLeader",
-                "DataCite:ProjectManager",
-                "DataCite:ProjectMember",
-                "DataCite:RegistrationAgency",
-                "DataCite:RegistrationAuthority",
-                "DataCite:RelatedPerson",
-                "DataCite:Researcher",
-                "DataCite:ResearchGroup",
-                "DataCite:RightsHolder",
-                "DataCite:Sponsor",
-                "DataCite:Supervisor",
-                "DataCite:WorkPackageLeader",
-                "DataCite:Other",
-                "crcr:conceptualization",
-                "crcr:data-curation",
-                "crcr:formal-analysis",
-                "crcr:funding-acquisition",
-                "crcr:investigation",
-                "crcr:methodology",
-                "crcr:project-administration",
-                "crcr:resources",
-                "crcr:software",
-                "crcr:supervision",
-                "crcr:validation",
-                "crcr:visualization",
-                "crcr:writing-original-draft",
-                "crcr:writing-review-editing"
+                "contact_person",
+                "data_collector",
+                "data_curator",
+                "data_manager",
+                "distributor",
+                "editor",
+                "hosting_institution",
+                "producer",
+                "project_leader",
+                "project_manager",
+                "project_member",
+                "registration_agency",
+                "registration_authority",
+                "related_person",
+                "researcher",
+                "research_group",
+                "rights_holder",
+                "sponsor",
+                "supervisor",
+                "work_package_leader",
+                "other",
+                "conceptualization",
+                "data_curation",
+                "formal_analysis",
+                "funding_acquisition",
+                "investigation",
+                "methodology",
+                "project_administration",
+                "resources",
+                "software",
+                "supervision",
+                "validation",
+                "visualization",
+                "writing_original_draft",
+                "writing_review_editing"
             ],
             "title": "ContributorRole",
             "type": "string"
@@ -114,7 +114,7 @@
         },
         "CreditMetadata": {
             "additionalProperties": false,
-            "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'Resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the DataCite\nresourceTypeGeneral field:\n\nhttps://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
+            "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the DataCite\nresourceTypeGeneral field:\n\nhttps://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
             "properties": {
                 "comment": {
                     "description": "List of strings of freeform text providing extra information about this credit metadata.",
@@ -142,16 +142,6 @@
                         "$ref": "#/$defs/Contributor"
                     },
                     "type": "array"
-                },
-                "credit_metadata_source": {
-                    "description": "A list of CURIEs, URIs, or free text entries denoting the source of the credit metadata.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
                 },
                 "dates": {
                     "description": "A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.",
@@ -258,6 +248,43 @@
                 "titles"
             ],
             "title": "CreditMetadata",
+            "type": "object"
+        },
+        "DataSource": {
+            "additionalProperties": false,
+            "description": "Source of any kind of data.",
+            "properties": {
+                "access_timestamp": {
+                    "description": "Unix timestamp for when the data was retrieved from that source.",
+                    "type": "integer"
+                },
+                "source_data_updated": {
+                    "description": "The date when the data source was last updated, if available.",
+                    "format": "date-time",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "source_name": {
+                    "description": "Where the data was retrieved from.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "source_url": {
+                    "description": "URL from whence data was retrieved.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "access_timestamp"
+            ],
+            "title": "DataSource",
             "type": "object"
         },
         "Description": {
@@ -406,8 +433,18 @@
                     "description": "The version of the credit metadata schema used.",
                     "type": "string"
                 },
+                "credit_metadata_source": {
+                    "description": "Information about where the credit metadata was sourced from.",
+                    "items": {
+                        "$ref": "#/$defs/DataSource"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "saved_by": {
-                    "description": "KBase workspace ID of the user who added this entry.",
+                    "description": "PID for the user who added this entry.",
                     "type": "string"
                 },
                 "timestamp": {
@@ -464,7 +501,7 @@
                 },
                 "relationship_type": {
                     "$ref": "#/$defs/RelationshipType",
-                    "description": "The relationship between the ID and some other entity.\nFor example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.\n"
+                    "description": "The relationship between the ID and some other entity. For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID."
                 }
             },
             "required": [
@@ -594,7 +631,7 @@
     "$id": "https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
-    "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'Resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the DataCite\nresourceTypeGeneral field:\n\nhttps://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
+    "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the DataCite\nresourceTypeGeneral field:\n\nhttps://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
     "metamodel_version": "1.7.0",
     "properties": {
         "comment": {
@@ -623,16 +660,6 @@
                 "$ref": "#/$defs/Contributor"
             },
             "type": "array"
-        },
-        "credit_metadata_source": {
-            "description": "A list of CURIEs, URIs, or free text entries denoting the source of the credit metadata.",
-            "items": {
-                "type": "string"
-            },
-            "type": [
-                "array",
-                "null"
-            ]
         },
         "dates": {
             "description": "A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.",
@@ -740,5 +767,5 @@
     ],
     "title": "credit_metadata",
     "type": "object",
-    "version": "0.0.5"
+    "version": "0.0.6"
 }
