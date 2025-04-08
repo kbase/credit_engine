@@ -202,6 +202,8 @@ gendoc: $(DOCDIR)
 	cp $(SRC)/docs/js/*.js $(DOCDIR)/javascripts/
 	mkdir -p $(DOCDIR)/pages
 	cp $(SRC)/docs/pages/*.md $(DOCDIR)/pages/
+	mkdir -p $(DOCDIR)/linkml
+	cp schema/linkml/*.yaml $(DOCDIR)/linkml/
 
 gendoc-gh: $(DOCDIR)
 	touch $(DOCDIR)/.nojekyll
