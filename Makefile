@@ -203,6 +203,11 @@ gendoc: $(DOCDIR)
 	mkdir -p $(DOCDIR)/pages
 	cp $(SRC)/docs/pages/*.md $(DOCDIR)/pages/
 
+gendoc-gh: $(DOCDIR)
+	touch $(DOCDIR)/.nojekyll
+	make gendoc
+	make mkd-gh-deploy
+
 testdoc: gendoc serve
 
 MKDOCS = $(RUN) mkdocs

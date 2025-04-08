@@ -26,9 +26,5 @@ jobs:
 
             - name: Build documentation.
               run: |
-                  mkdir -p docs
-                  touch docs/.nojekyll
                   uv sync --group docs
-                  make gendoc
-                  # ([ ! -f docs/about.md ] && cp src/docs/*.md docs/) || true
-                  make mkd-gh-deploy
+                  make gendoc-gh
