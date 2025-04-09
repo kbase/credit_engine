@@ -13,13 +13,13 @@ The Dataset Credit Engine is a project aimed at ensuring that appropriate citati
     - [Schema Diagram](#schema-diagram)
   - [Software Installation](#software-installation)
     - [Useful commands](#useful-commands)
-      - [JSONschema data validation](#jsonschema-data-validation)
+      - [JSON Schema data validation](#json-schema-data-validation)
 
 ## Metadata Schema
 
-The dataset credit metadata schema is maintained in [linkml format](https://linkml.io); other formats (including the python class) can be generated from the [linkml schema file](schema/dcm/linkml/credit_metadata.yaml).
+The dataset credit metadata schema is maintained in [LinkML format](https://linkml.io); other formats (including the python class) can be generated from the [LinkML schema file](schema/dcm/linkml/credit_metadata.yaml).
 
-See the [linkml documentation](https://linkml.io/linkml/index.html) for full details on using the linkml format and the related tools.
+See the [LinkML documentation](https://linkml.io/linkml/index.html) for full details on using the LinkML format and the related tools.
 
 Full schema documentation can be found at [https://kbase.github.io/credit_engine/](https://kbase.github.io/credit_engine/).
 
@@ -54,12 +54,12 @@ uv run pytest tests/
 
 These assume that you have already run `uv sync` to install the credit engine virtual environment and dependencies.
 
-generate derived files in all formats:
+generate derived files in all formats and save them to the `project` directory:
 ```sh
-uv run gen-project -d schema/dcm/ schema/dcm/linkml/credit_metadata.yaml
+uv run gen-project -d project/ schema/dcm/linkml/credit_metadata.yaml
 ```
 
-lint the linkml schema file:
+lint the LinkML schema file:
 ```sh
 uv run linkml-lint -f terminal schema/dcm/linkml/credit_metadata.yaml
 ```
@@ -69,7 +69,7 @@ validate data (in file `data.yaml`) against the schema:
 uv run linkml-validate -s schema/dcm/linkml/credit_metadata.yaml data.yaml
 ```
 
-generate JSONschema version:
+generate JSON Schema version:
 ```sh
 uv run gen-json-schema schema/dcm/linkml/credit_metadata.yaml > schema/dcm/jsonschema/credit_metadata.schema.json
 ```
@@ -94,12 +94,18 @@ generate a YUML schema diagram (can be visualised at yuml.me):
 uv run gen-yuml schema/dcm/linkml/credit_metadata.yaml
 ```
 
-#### JSONschema data validation
+#### JSON Schema data validation
 
 install the [JSONschema check](https://check-jsonschema.readthedocs.io/en/latest/) script:
 
 ```sh
+# install with Homebrew
 brew install check-jsonschema
+```
+or
+```sh
+# install with pip
+pip install check-jsonschema
 ```
 
 To test a file or files against the schema, use the command:
