@@ -1,0 +1,395 @@
+classes.Contributor.attributes.contributor_type:
+  transformations:
+    DataCite:
+    - tr_from:
+    # TODO: check if these are identical
+      - $.name_type
+    nmdc:
+    - tr_from:
+      - $.has_credit_associations[*]
+      tr_expr: "Person"
+classes.Contributor.attributes.contributor_id:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.name_identifiers[*]
+      tr_expr: |
+        if value.name_identifier_scheme == 'ORCID':
+            f"ORCID:{value.name_identifier.replace('https://orcid.org/', '')}"
+    ORCID:
+    - tr_from:
+      - $.contributor.orcidId
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.author.orcid_id
+    - tr_from:
+      - $.contributor.orcid_id
+    Crossref:
+    - tr_from:
+      - $.message.project.funding.funder.name             # ????
+    nmdc:
+    - tr_from:
+      - $.has_credit_associations[*].applies_to_person/orcid
+
+classes.Contributor.attributes.name:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.creators[*].name
+      - $.contributors[*].name
+    JGI:
+    - tr_from:
+      - $.organisms.pi.name
+    ORCID:
+    - tr_from:
+      - $.name
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.author
+      - $.contributor
+      tr_expr: 'f"{value.first_name} {value.last_name}"'
+    nmdc:
+    - tr_from:
+      - $.has_credit_associations[*].applies_to_person/name
+classes.Contributor.attributes.given_name:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.givenName
+      - $.givenName
+classes.Contributor.attributes.family_name:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.familyName
+      - $.familyName
+classes.Contributor.attributes.affiliations:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.affiliation[*]
+      tr_expr: "Organization(value)"
+    JGI:
+    - tr_from:
+      - $.organisms[*].pi.institution
+      tr_expr: '{ "organization_name": {value.pi.institution} }'
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.contributor.affiliation_name
+      tr_expr: '{ "organization_name": {src.contributor.affiliation_name} }'
+classes.Contributor.attributes.contributor_roles:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.contributor_type
+    JGI:
+    - tr_from:
+      - $.organisms.pi
+      tr_expr: "project_leader"
+            # TODO: mappings to CRediT/DataCite roles
+    ORCID:
+    - tr_from:
+      - $.contributor.role
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.contributor.contributorType
+    nmdc:
+    - tr_from:
+      - $.applied_roles
+classes.DataSource.attributes.data_source_updated:
+  transformations:
+    DataCite:
+    - tr_from:
+    # TODO: check date formatting
+      - $.updated
+classes.FundingReference.attributes.grant_id:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.funding_references.award_number
+    Crossref:
+    - tr_from:
+      - $.message.award
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.award_doi
+    - tr_from:
+      - $.award_number
+classes.FundingReference.attributes.grant_title:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.funding_references.award_title
+
+classes.FundingReference.attributes.grant_url:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.funding_references.award_url
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.award_doi
+classes.Organization.attributes.organization_id:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.contributors[*].affiliation.affiliation_identifier
+      - $.creators[*].affiliation.affiliation_identifier
+classes.Organization.attributes.organization_name:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.contributors[*].affiliation.name
+      - $.creators[*].affiliation.name
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.research_organization
+    JGI:
+    - tr_from:
+      - $.organisms.pi.institution
+
+classes.PermanentID.attributes.id:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.identifier.value
+    - tr_from:
+      - $.alternate_identifiers[*]
+      tr_expr: 'f"{value.alternate_identifier_type}:{value.alternate_identifier}"'
+    - tr_from:
+      - $.related_identifiers[*]
+      tr_expr: 'f"{value.related_identifier_type}:{value.related_identifier}"'
+    - tr_from:
+      - $.identifiers[*]
+      tr_expr: 'f"{value.identifier_type}:{value.identifier}'
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.site_url
+classes.PermanentID.attributes.description:
+  transformations:
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.description
+classes.PermanentID.attributes.relationship_type:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.related_identifiers.relation_type
+
+classes.Title.attributes.title:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.titles.title
+    Crossref:
+    - tr_from:
+      - $.message.project.project-title.title
+classes.Title.attributes.title_type:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.title.titleType
+
+classes.CreditMetadata.attributes.contributors:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.contributors
+      - $.creators
+      tr_via: "$.contributors + $.creators"
+    ORCID:
+    - tr_from:
+      - $.contributors
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.contributors
+      - $.authors
+      tr_via: "$.authors + $.contributors"
+    JGI:
+    - tr_from:
+      - $.organisms.pi
+    nmdc:
+    - tr_from:
+      - $.has_credit_associations[*]
+
+classes.CreditMetadata.attributes.dates:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.dates
+      tr_expr: '{ "date": {value.date}, "event": {value.dateType} }'
+    ORCID:
+    - tr_from:
+      - $.publicationDate
+      tr_expr: '{ "date": {value}, "event": "available" }'
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.publication_date
+      tr_expr: '{ "date": {value}, "event": "available" }'
+    Crossref:
+    - tr_from:
+      - $.deposited
+      tr_expr: '{ "date": {value.date-time}, "event": "available" }'
+
+classes.CreditMetadata.attributes.descriptions:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.descriptions
+    nmdc:
+    - tr_from:
+      - $.description
+      - $.alternative_descriptions
+      tr_expr: '{"description_text": value, "description_type": "description"}'
+
+classes.CreditMetadata.attributes.funding:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.funding_references
+    Crossref:
+    - tr_from:
+      - $.project.funding
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.awards
+
+classes.CreditMetadata.attributes.identifier:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.id
+      tr_expr: 'f"DOI:{value}"'
+    JGI:
+    - tr_from:
+      - $.organisms[*].grouped_by
+      tr_expr: "$.organisms[*].files[*][$.organisms[*].grouped_by]"
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.doi
+      tr_expr: 'f"DOI:{value}"'
+    ORCID:
+    - tr_from:
+      - $.doi
+    nmdc:
+    - tr_from:
+      - $.id
+
+classes.CreditMetadata.attributes.license:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.rights_list
+
+classes.CreditMetadata.attributes.publisher:
+  transformations:
+    ORCID:
+    - tr_from:
+      - $.url
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.site_url
+    nmdc:
+    - tr_expr: |
+        Organization(
+          organization_id="ROR:05cwx3318",
+          organization_name="National Microbiome Data Collective"
+        )
+
+classes.CreditMetadata.attributes.related_identifiers:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.identifiers
+      - $.related_identifiers
+      - $.alternate_identifiers
+    ORCID:
+    - tr_from:
+      - $.externalIds
+    - tr_from:
+      - $.doi
+      tr_expr: 'f"DOI:{value}"'
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.related_identifiers
+    - tr_from:
+      - $.osti_id
+      tr_expr: 'PermanentId(id=f"OSTI.ARTICLE:{value}", relationship_type="is_identical_to")'
+    nmdc:
+    - tr_from:
+      - $.part_of
+      tr_expr: 'PermanentID(id={value}, relationship_type="is_part_of")'
+    - tr_from:
+      - $.associated_dois[*]
+      tr_expr: |
+        rel_map = {
+            "award_doi": "is_financed_by",
+            "dataset_doi": "is_published_in",
+            "publication_doi": "is_referenced_by",
+            "data_management_plan_doi": "is_related_material",
+        }
+        PermanentID(
+          id={value}.doi_value,
+          description=f"NMDC {str({value}.doi_category).replace('_', ' ')}",
+          relationship_type=rel_map[str({value}.doi_category)]
+        )
+    - tr_from:
+                  # any field that ends with _identifiers
+      - $.".*"_identifiers
+      tr_expr: |
+        PermanentID(
+          id={value},
+          description=f"{ptr.get_parts()[-1].replace('_', ' ').replace('identifiers', 'identifier')}"
+        )
+
+classes.CreditMetadata.attributes.resource_type:
+  transformations:
+    # OSTI.ARTICLE:DA is used for dataset
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.product_type
+    - tr_from:
+      - $.workType
+    - tr_from:
+      - $.dataset_type
+  # ORCID:data-set
+  # see DataCite:attributes.types
+    DataCite:
+    - tr_from:
+      - $.types.schema_org
+
+classes.CreditMetadata.attributes.titles:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.titles
+    ORCID:
+    - tr_from:
+      - $.title
+      tr_expr: '{ "title": {value} }'
+    OSTI.ARTICLE:
+    - tr_from:
+      - $.title
+      tr_expr: '{ "title": {value} }'
+    nmdc:
+    - tr_from:
+      - $.title
+      tr_expr: '{ "title": {value} }'
+    - tr_from:
+      - $.name
+      - $.alternative_names[*]
+      - $.alternative_titles[*]
+      tr_expr: '{ "title": {value}, "title_type": "alternative_title" }'
+
+classes.CreditMetadata.attributes.url:
+  transformations:
+    nmdc:
+    - tr_from:
+      - $.id
+      tr_expr: f"https://api.microbiomedata.org/studies/{value}"
+
+classes.CreditMetadata.attributes.version:
+  transformations:
+    DataCite:
+    - tr_from:
+      - $.version

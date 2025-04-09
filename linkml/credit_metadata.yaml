@@ -1,0 +1,182 @@
+# yaml-language-server: $schema=https://linkml.io/linkml-model/linkml_model/jsonschema/meta.schema.json
+id: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+name: credit_metadata
+description: Schema for dataset credit metadata.
+version: 0.0.6
+prefixes:
+  biolink: https://w3id.org/biolink/vocab/
+  dcm: https://kbase.github.io/credit_engine/
+  Crossref: https://crossref.org/
+  DataCite: https://purl.org/datacite/v4.4/
+  DOI: http://identifiers.org/doi/
+  JGI: https://data.jgi.doe.gov/search/
+  linkml: https://w3id.org/linkml/
+  nmdc: https://w3id.org/nmdc/
+  ORCID: http://identifiers.org/orcid/
+  OSTI.ARTICLE: https://www.osti.gov/biblio/
+  schema: http://schema.org/
+
+imports:
+- components
+- linkml:types
+default_range: string
+default_curi_maps:
+- semweb_context
+default_prefix: dcm
+
+classes:
+  CreditMetadata:
+    tree_root: true
+    description: |
+      Represents the credit metadata associated with an object.
+
+      In the following documentation, 'resource' is used to refer to the object
+      that the CM pertains to, for example, a KBase Workspace object; a
+      sample from NMDC or ESS-DIVE; sequence data from IMG.
+
+      The 'resource_type' field should be filled using values from the DataCite
+      resourceTypeGeneral field:
+
+      https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
+
+      Currently this schema only supports credit metadata for objects of type
+      'dataset'; anything else will return an error.
+
+      The license may be supplied either as an URL pointing to licensing information for
+      the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.
+
+      Required fields are:
+      - identifier
+      - resource_type
+      - versioning information: if the resource does not have an explicit version number,
+      one or more dates should be supplied: ideally the date of resource publication and
+      the last update (if applicable).
+      - contributors (one or more required)
+      - titles (one or more required)
+      - meta
+
+      The resource_type field is required, but as there is currently only a single valid
+      value, 'dataset', it is automatically populated if no value is supplied.
+
+    attributes:
+      comment:
+        slot_uri: schema:comment
+        description: List of strings of freeform text providing extra information about this credit metadata.
+        multivalued: true
+        examples:
+        - value: "This comment adds a lot of extra value!"
+
+      content_url:
+        description: The URL of the content of the resource.
+        multivalued: true
+        range: uri
+
+      contributors:
+        slot_uri: schema:creator
+        description: A list of people and/or organizations who contributed to the resource.
+        required: true
+        multivalued: true
+        range: Contributor
+      dates:
+        description: A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.
+        multivalued: true
+        range: EventDate
+        inlined_as_list: true
+        # examples:
+        # - value: { date: 2022-05-10, event: available }
+      descriptions:
+        slot_uri: schema:description
+        description: A brief description or abstract for the resource being represented.
+        multivalued: true
+        range: Description
+        inlined_as_list: true
+      funding:
+        slot_uri: schema:funding
+        description: Funding sources for the resource.
+        multivalued: true
+        range: FundingReference
+        inlined_as_list: true
+        todos:
+        - Should funding info be duplicated in the related_identifiers field?
+      identifier:
+        identifier: true
+        slot_uri: schema:identifier
+        comments:
+        - can generate schema:url from the identifier
+        description: Resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.
+        range: uriorcurie
+        required: true
+        pattern: "^[a-zA-Z0-9.-_]+:\\S"
+        examples:
+        - value: RefSeq:GCF_004214875.1
+        - value: GenBank:CP035949.1
+        - value: img.taxon:648028003
+      license:
+        slot_uri: schema:license
+        # also slot_uri:isAccessibleForFree
+        range: License
+        description: |
+          Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
+        # examples:
+        # - value: { id: "CC-BY-NC-ND-4.0" }
+        # - value: { id: "MIT OR Apache-2.0" }
+        # - value: { url: "https://jgi.doe.gov/user-programs/pmo-overview/policies/" }
+        exact_mappings:
+        - biolink:license
+      meta:
+        description: Metadata for this credit information, including submitter, schema version, and timestamp.
+        range: Metadata
+        required: true
+
+      publisher:
+        description: The publisher of the resource. For a dataset, this is the repository where it is stored.
+        # CHECK ME!
+        slot_uri: schema:provider
+        range: Organization
+      related_identifiers:
+        description: Other resolvable persistent unique IDs related to the resource.
+        multivalued: true
+        range: PermanentID
+        inlined_as_list: true
+      resource_type:
+        slot_uri: schema:@type
+        description: The broad type of the source data for this object. 'dataset' is currently the only valid value supported by this schema.
+        range: ResourceType
+        required: true
+        examples:
+        - value: dataset
+      titles:
+        description: One or more titles for the resource.
+        required: true
+        multivalued: true
+        range: Title
+        inlined_as_list: true
+        # examples:
+        # - value:
+        #   - title: Amaranthus hypochondriacus genome
+        # - value:
+        #   - title: Геном амаранта ипохондрического
+        #     title_type: translated_title
+        # - value:
+        #   - title: I know what genome you sequenced last summer
+        #     title_type: alternative_title
+      url:
+        description: The URL of the resource.
+        range: uri
+      version:
+        slot_uri: schema:version
+        description: The version of the resource. This must be an absolute version, not a relative version like 'latest'.
+        exact_mappings:
+        - DataCite:attributes.version
+        examples:
+        - value: "5"
+        - value: 1.2.1
+        - value: "20220405"
+    any_of:
+    - slot_conditions:
+        dates:
+          required: true
+
+    - slot_conditions:
+        version:
+          required: true
