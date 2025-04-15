@@ -497,7 +497,7 @@
 <h1 id="credit_metadata">credit_metadata</h1>
 <p>Schema for dataset credit metadata.</p>
 <h2 id="name-credit_metadata">Name: credit_metadata</h2>
-<p>URI: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata</p>
+<p>URI: https://kbase.github.io/credit_engine/linkml/credit_metadata</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -513,7 +513,7 @@
 </tr>
 <tr>
 <td><a href="CreditMetadata/">CreditMetadata</a></td>
-<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the DataCite<br>resourceTypeGeneral field:<br><br>https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
+<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral">DataCite<br>resourceTypeGeneral field</a>.<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
 </tr>
 <tr>
 <td><a href="DataSource/">DataSource</a></td>

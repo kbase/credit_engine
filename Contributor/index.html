@@ -248,7 +248,7 @@
 <p>__</p>
 <p><em>CRediT contributor role taxonomy: https://credit.niso.org.</em></p>
 <p>__</p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/Contributor">dcm:Contributor</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/linkml/Contributor">dcm:Contributor</a></p>
 <div class="mermaid"> classDiagram
     class Contributor
     click Contributor href "../Contributor"
@@ -367,7 +367,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata</li>
+<li>from schema: https://kbase.github.io/credit_engine/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -416,7 +416,7 @@ description: 'Represents a contributor to the resource.
   CRediT contributor role taxonomy: https://credit.niso.org.
 
   '
-from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   contributor_type:
     name: contributor_type
@@ -424,7 +424,7 @@ attributes:
     examples:
     - value: Person
     - value: Organization
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:@type
     domain_of:
@@ -437,7 +437,7 @@ attributes:
     examples:
     - value: ORCID:0000-0001-9557-7715
     - value: ROR:01znn6x10
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:identifier
     domain_of:
@@ -453,7 +453,7 @@ attributes:
     - value: National Institute of Mental Health
     - value: Madonna
     - value: Ransome the Clown
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:name
     domain_of:
@@ -465,7 +465,7 @@ attributes:
     - value: Marionetta Cecille de la
     - value: Helena
     - value: Hubert George
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     domain_of:
     - Contributor
@@ -476,7 +476,7 @@ attributes:
     - value: Carte-Postale
     - value: Bonham Carter
     - value: Wells
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     domain_of:
     - Contributor
@@ -485,7 +485,7 @@ attributes:
     description: List of organizations with which the contributor is affiliated. For
       contributors that represent an organization, this may be a parent organization
       (e.g. KBase, US DOE; Arkin lab, LBNL).
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:affiliation
     domain_of:
@@ -495,7 +495,7 @@ attributes:
   contributor_roles:
     name: contributor_roles
     description: List of roles played by the contributor when working on the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:Role
     domain_of:
@@ -543,7 +543,7 @@ description: 'Represents a contributor to the resource.
   CRediT contributor role taxonomy: https://credit.niso.org.
 
   '
-from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   contributor_type:
     name: contributor_type
@@ -551,7 +551,7 @@ attributes:
     examples:
     - value: Person
     - value: Organization
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:@type
     alias: contributor_type
@@ -566,7 +566,7 @@ attributes:
     examples:
     - value: ORCID:0000-0001-9557-7715
     - value: ROR:01znn6x10
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:identifier
     alias: contributor_id
@@ -584,7 +584,7 @@ attributes:
     - value: National Institute of Mental Health
     - value: Madonna
     - value: Ransome the Clown
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -599,7 +599,7 @@ attributes:
     - value: Marionetta Cecille de la
     - value: Helena
     - value: Hubert George
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     alias: given_name
     owner: Contributor
@@ -613,7 +613,7 @@ attributes:
     - value: Carte-Postale
     - value: Bonham Carter
     - value: Wells
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     alias: family_name
     owner: Contributor
@@ -625,7 +625,7 @@ attributes:
     description: List of organizations with which the contributor is affiliated. For
       contributors that represent an organization, this may be a parent organization
       (e.g. KBase, US DOE; Arkin lab, LBNL).
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:affiliation
     alias: affiliations
@@ -637,7 +637,7 @@ attributes:
   contributor_roles:
     name: contributor_roles
     description: List of roles played by the contributor when working on the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     slot_uri: schema:Role
     alias: contributor_roles

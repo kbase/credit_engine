@@ -236,7 +236,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-datasource">Class: DataSource</h1>
 <p><em>Source of any kind of data.</em></p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/DataSource">dcm:DataSource</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/linkml/DataSource">dcm:DataSource</a></p>
 <div class="mermaid"> classDiagram
     class DataSource
     click DataSource href "../DataSource"
@@ -310,7 +310,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata</li>
+<li>from schema: https://kbase.github.io/credit_engine/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -337,14 +337,14 @@
 <details>
 <pre><code class="language-yaml">name: DataSource
 description: Source of any kind of data.
-from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   access_timestamp:
     name: access_timestamp
     description: Unix timestamp for when the data was retrieved from that source.
     comments:
     - This could be added programmatically when updates occur.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     domain_of:
     - DataSource
@@ -353,7 +353,7 @@ attributes:
   source_data_updated:
     name: source_data_updated
     description: The date when the data source was last updated, if available.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     domain_of:
     - DataSource
@@ -365,7 +365,7 @@ attributes:
     - value: DataCite
     - value: Crossref
     - value: IMG
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     domain_of:
     - DataSource
@@ -376,7 +376,7 @@ attributes:
     examples:
     - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
     - value: https://api.microbiomedata.org/studies/sty-123abc-999
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     domain_of:
     - DataSource
@@ -397,14 +397,14 @@ any_of:
 <details>
 <pre><code class="language-yaml">name: DataSource
 description: Source of any kind of data.
-from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   access_timestamp:
     name: access_timestamp
     description: Unix timestamp for when the data was retrieved from that source.
     comments:
     - This could be added programmatically when updates occur.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     alias: access_timestamp
     owner: DataSource
@@ -415,7 +415,7 @@ attributes:
   source_data_updated:
     name: source_data_updated
     description: The date when the data source was last updated, if available.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     alias: source_data_updated
     owner: DataSource
@@ -429,7 +429,7 @@ attributes:
     - value: DataCite
     - value: Crossref
     - value: IMG
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     alias: source_name
     owner: DataSource
@@ -442,7 +442,7 @@ attributes:
     examples:
     - value: https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081
     - value: https://api.microbiomedata.org/studies/sty-123abc-999
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/components
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     alias: source_url
     owner: DataSource

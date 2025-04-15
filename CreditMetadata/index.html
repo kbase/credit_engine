@@ -234,10 +234,8 @@
 <p><em>that the CM pertains to, for example, a KBase Workspace object; a</em></p>
 <p><em>sample from NMDC or ESS-DIVE; sequence data from IMG.</em></p>
 <p>__</p>
-<p><em>The 'resource_type' field should be filled using values from the DataCite</em></p>
-<p><em>resourceTypeGeneral field:</em></p>
-<p>__</p>
-<p><em>https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral</em></p>
+<p><em>The 'resource_type' field should be filled using values from the [DataCite</em></p>
+<p><em>resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).</em></p>
 <p>__</p>
 <p><em>Currently this schema only supports credit metadata for objects of type</em></p>
 <p><em>'dataset'; anything else will return an error.</em></p>
@@ -258,7 +256,7 @@
 <p><em>The resource_type field is required, but as there is currently only a single valid</em></p>
 <p><em>value, 'dataset', it is automatically populated if no value is supplied.</em></p>
 <p>__</p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/CreditMetadata">dcm:CreditMetadata</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/linkml/CreditMetadata">dcm:CreditMetadata</a></p>
 <div class="mermaid"> classDiagram
     class CreditMetadata
     click CreditMetadata href "../CreditMetadata"
@@ -471,7 +469,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata</li>
+<li>from schema: https://kbase.github.io/credit_engine/linkml/credit_metadata</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -507,12 +505,9 @@ description: 'Represents the credit metadata associated with an object.
   sample from NMDC or ESS-DIVE; sequence data from IMG.
 
 
-  The ''resource_type'' field should be filled using values from the DataCite
+  The ''resource_type'' field should be filled using values from the [DataCite
 
-  resourceTypeGeneral field:
-
-
-  https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
+  resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).
 
 
   Currently this schema only supports credit metadata for objects of type
@@ -549,7 +544,7 @@ description: 'Represents the credit metadata associated with an object.
   value, ''dataset'', it is automatically populated if no value is supplied.
 
   '
-from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   comment:
     name: comment
@@ -557,7 +552,7 @@ attributes:
       this credit metadata.
     examples:
     - value: This comment adds a lot of extra value!
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:comment
     domain_of:
@@ -566,7 +561,7 @@ attributes:
   content_url:
     name: content_url
     description: The URL of the content of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -575,7 +570,7 @@ attributes:
   contributors:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:creator
     domain_of:
@@ -588,7 +583,7 @@ attributes:
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -599,7 +594,7 @@ attributes:
   descriptions:
     name: descriptions
     description: A brief description or abstract for the resource being represented.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:description
     domain_of:
@@ -613,7 +608,7 @@ attributes:
     description: Funding sources for the resource.
     todos:
     - Should funding info be duplicated in the related_identifiers field?
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:funding
     domain_of:
@@ -632,7 +627,7 @@ attributes:
     - value: RefSeq:GCF_004214875.1
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -647,7 +642,7 @@ attributes:
       or provide a link to the license text if no SPDX ID is available.
 
       '
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - biolink:license
     rank: 1000
@@ -659,7 +654,7 @@ attributes:
     name: meta
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -669,7 +664,7 @@ attributes:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:provider
     domain_of:
@@ -678,7 +673,7 @@ attributes:
   related_identifiers:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -692,7 +687,7 @@ attributes:
       the only valid value supported by this schema.
     examples:
     - value: dataset
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:@type
     domain_of:
@@ -702,7 +697,7 @@ attributes:
   titles:
     name: titles
     description: One or more titles for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -714,7 +709,7 @@ attributes:
   url:
     name: url
     description: The URL of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -728,7 +723,7 @@ attributes:
     - value: '5'
     - value: 1.2.1
     - value: '20220405'
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - DataCite:attributes.version
     rank: 1000
@@ -761,12 +756,9 @@ description: 'Represents the credit metadata associated with an object.
   sample from NMDC or ESS-DIVE; sequence data from IMG.
 
 
-  The ''resource_type'' field should be filled using values from the DataCite
+  The ''resource_type'' field should be filled using values from the [DataCite
 
-  resourceTypeGeneral field:
-
-
-  https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral
+  resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).
 
 
   Currently this schema only supports credit metadata for objects of type
@@ -803,7 +795,7 @@ description: 'Represents the credit metadata associated with an object.
   value, ''dataset'', it is automatically populated if no value is supplied.
 
   '
-from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   comment:
     name: comment
@@ -811,7 +803,7 @@ attributes:
       this credit metadata.
     examples:
     - value: This comment adds a lot of extra value!
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:comment
     alias: comment
@@ -823,7 +815,7 @@ attributes:
   content_url:
     name: content_url
     description: The URL of the content of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     alias: content_url
     owner: CreditMetadata
@@ -834,7 +826,7 @@ attributes:
   contributors:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:creator
     alias: contributors
@@ -849,7 +841,7 @@ attributes:
     description: A list of relevant lifecycle events for the resource. Note that these
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     alias: dates
     owner: CreditMetadata
@@ -861,7 +853,7 @@ attributes:
   descriptions:
     name: descriptions
     description: A brief description or abstract for the resource being represented.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:description
     alias: descriptions
@@ -876,7 +868,7 @@ attributes:
     description: Funding sources for the resource.
     todos:
     - Should funding info be duplicated in the related_identifiers field?
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:funding
     alias: funding
@@ -896,7 +888,7 @@ attributes:
     - value: RefSeq:GCF_004214875.1
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -913,7 +905,7 @@ attributes:
       or provide a link to the license text if no SPDX ID is available.
 
       '
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - biolink:license
     rank: 1000
@@ -927,7 +919,7 @@ attributes:
     name: meta
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     alias: meta
     owner: CreditMetadata
@@ -939,7 +931,7 @@ attributes:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:provider
     alias: publisher
@@ -950,7 +942,7 @@ attributes:
   related_identifiers:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     alias: related_identifiers
     owner: CreditMetadata
@@ -965,7 +957,7 @@ attributes:
       the only valid value supported by this schema.
     examples:
     - value: dataset
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     slot_uri: schema:@type
     alias: resource_type
@@ -977,7 +969,7 @@ attributes:
   titles:
     name: titles
     description: One or more titles for the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     alias: titles
     owner: CreditMetadata
@@ -990,7 +982,7 @@ attributes:
   url:
     name: url
     description: The URL of the resource.
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
     alias: url
     owner: CreditMetadata
@@ -1006,7 +998,7 @@ attributes:
     - value: '5'
     - value: 1.2.1
     - value: '20220405'
-    from_schema: https://github.com/kbase/credit_engine/schema/dcm/linkml/credit_metadata
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - DataCite:attributes.version
     rank: 1000
