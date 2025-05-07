@@ -11,19 +11,23 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "ruff>=0.11.0",
+]
+data_import = [
     "asteval>=1.0.6",
     "dlt[deltalake,duckdb,parquet]>=1.10.0",
-    "erdantic>=1.1.0.post1",
     "httpx>=0.28.1",
     "ipykernel>=6.29.5",
     "json-merge-patch>=0.3.0",
     "jsonpatch>=1.33",
-    "pygraphviz>=1.14",
     "pyyaml>=6.0.2",
-    "ruff>=0.11.0",
     "streamlit>=1.45.0",
     "vcrpy>=7.0.0",
     "xmlschema>=4.0.1",
+]
+erdantic = [
+    "erdantic>=1.1.0.post1",
+    "pygraphviz>=1.14",
 ]
 docs = [
     "mkdocs-material>=9.6.9",

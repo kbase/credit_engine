@@ -309,24 +309,28 @@ dependencies = [
 ]
 
 [package.dev-dependencies]
-dev = [
+data-import = [
     { name = "asteval" },
     { name = "dlt", extra = ["deltalake", "duckdb", "parquet"] },
-    { name = "erdantic" },
     { name = "httpx" },
     { name = "ipykernel" },
     { name = "json-merge-patch" },
     { name = "jsonpatch" },
-    { name = "pygraphviz" },
     { name = "pyyaml" },
-    { name = "ruff" },
     { name = "streamlit" },
     { name = "vcrpy" },
     { name = "xmlschema" },
 ]
+dev = [
+    { name = "ruff" },
+]
 docs = [
     { name = "mkdocs-material" },
     { name = "mkdocs-mermaid2-plugin" },
+]
+erdantic = [
+    { name = "erdantic" },
+    { name = "pygraphviz" },
 ]
 
 [package.metadata]
@@ -336,24 +340,26 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [
+data-import = [
     { name = "asteval", specifier = ">=1.0.6" },
     { name = "dlt", extras = ["deltalake", "duckdb", "parquet"], specifier = ">=1.10.0" },
-    { name = "erdantic", specifier = ">=1.1.0.post1" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "json-merge-patch", specifier = ">=0.3.0" },
     { name = "jsonpatch", specifier = ">=1.33" },
-    { name = "pygraphviz", specifier = ">=1.14" },
     { name = "pyyaml", specifier = ">=6.0.2" },
-    { name = "ruff", specifier = ">=0.11.0" },
     { name = "streamlit", specifier = ">=1.45.0" },
     { name = "vcrpy", specifier = ">=7.0.0" },
     { name = "xmlschema", specifier = ">=4.0.1" },
 ]
+dev = [{ name = "ruff", specifier = ">=0.11.0" }]
 docs = [
     { name = "mkdocs-material", specifier = ">=9.6.9" },
     { name = "mkdocs-mermaid2-plugin", specifier = ">=1.2.1" },
+]
+erdantic = [
+    { name = "erdantic", specifier = ">=1.1.0.post1" },
+    { name = "pygraphviz", specifier = ">=1.14" },
 ]
 
 [[package]]
