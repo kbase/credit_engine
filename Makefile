@@ -99,7 +99,7 @@ install:
 .PHONY: install
 
 
-install-pygraphviz
+install-pygraphviz:
 	uv add --config-settings="--globaal-option=build_ext" --config-settings="--global-option=-I$(brew --prefix graphviz)/include/"  --config-settings="--global-option=-L$(brew --prefix graphviz)/lib/" pygraphviz --dev
 
 update-packages: ## update packages in the uv lock file. Does not update pyproject.toml.
