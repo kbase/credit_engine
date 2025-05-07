@@ -5,21 +5,25 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "check-jsonschema>=0.31.3",
-    "jsonschema[format]>=4.23.0",
-    "linkml>=1.8.7",
+    "check-jsonschema>=0.33.0",
+    "linkml>=1.9.1",
 ]
 
 [dependency-groups]
-erd = [
-    "erdantic>=1.0.5",
-]
-data_ingest = [
-    "dlt[deltalake,duckdb,parquet]>=1.8.1",
-]
 dev = [
+    "asteval>=1.0.6",
+    "dlt[deltalake,duckdb,parquet]>=1.10.0",
+    "erdantic>=1.1.0.post1",
+    "httpx>=0.28.1",
+    "ipykernel>=6.29.5",
+    "json-merge-patch>=0.3.0",
+    "jsonpatch>=1.33",
+    "pygraphviz>=1.14",
+    "pyyaml>=6.0.2",
     "ruff>=0.11.0",
-    "cruft>=2.16.0",
+    "streamlit>=1.45.0",
+    "vcrpy>=7.0.0",
+    "xmlschema>=4.0.1",
 ]
 docs = [
     "mkdocs-material>=9.6.9",
@@ -27,7 +31,7 @@ docs = [
 ]
 
 [tool.ruff]
-line-length = 100
+line-length = 120
 
 # Assume Python 3.12.
 target-version = "py312"
@@ -114,6 +118,7 @@ ignore = [
 # Allow autofix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
+
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
