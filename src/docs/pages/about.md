@@ -16,7 +16,7 @@ The Dataset Citation Metadata (DCM) schema is designed to capture accurate credi
 
 The schema is based heavily on the [DataCite Metadata Schema](https://schema.datacite.org) and [Commonmeta](https://docs.commonmeta.org), with some alterations and additions to allow more accurate capture of dataset-relevant information.
 
-It aims to satisfy the data citation recommendations published in [Ten simple rules for getting and giving credit for data](https://doi.org/10.1371/journal.pcbi.1010476) [1] and [Data Citation Guidelines for Earth Science Data, Version 2](https://doi.org/10.6084/m9.figshare.8441816.v1) [2].
+It aims to satisfy the data citation recommendations published in [Ten simple rules for getting and giving credit for data](https://doi.org/10.1371/journal.pcbi.1010476) [^1] and [Data Citation Guidelines for Earth Science Data, Version 2](https://doi.org/10.6084/m9.figshare.8441816.v1) [^2].
 
 
 ### Required Elements
@@ -38,8 +38,7 @@ The core elements required for a data citation are as follows:
 
 ### Example Dataset Citation
 
-Cline, D., R. Armstrong, R. Davis, K. Elder, and G. Liston. 2003. CLPX-Ground: ISA snow depth transects and related measurements ver. 2.0. Edited by M. A. Parsons and M. J. Brodzik. NASA National Snow and Ice Data Center Distributed Active Archive Center. https://doi.org/10.5060/D4MW2F23. Accessed
-2008-05-14.
+Cline, D., R. Armstrong, R. Davis, K. Elder, and G. Liston. 2003. CLPX-Ground: ISA snow depth transects and related measurements ver. 2.0. Edited by M. A. Parsons and M. J. Brodzik. NASA National Snow and Ice Data Center Distributed Active Archive Center. https://doi.org/10.5060/D4MW2F23. Accessed 2008-05-14.
 
 
 ### Other Elements
@@ -69,6 +68,6 @@ Data producers and consumers whose data citation information informed the develo
 
 ### References
 
-[1] Wood-Charlson EM, Crockett Z, Erdmann C, Arkin AP, Robinson CB (2022) Ten simple rules for getting and giving credit for data. PLoS Comput Biol 18(9): e1010476. https://doi.org/10.1371/journal.pcbi.1010476
+[^1]: Wood-Charlson EM, Crockett Z, Erdmann C, Arkin AP, Robinson CB (2022) Ten simple rules for getting and giving credit for data. PLoS Comput Biol 18(9): e1010476. [https://doi.org/10.1371/journal.pcbi.1010476](https://doi.org/10.1371/journal.pcbi.1010476)
 
-[2] ESIP Data Preservation and Stewardship Committee (2019). Data Citation Guidelines for Earth Science Data, Version 2. ESIP. Online resource. https://doi.org/10.6084/m9.figshare.8441816.v1
+[^2]: ESIP Data Preservation and Stewardship Committee (2019). Data Citation Guidelines for Earth Science Data, Version 2. ESIP. Online resource. [https://doi.org/10.6084/m9.figshare.8441816.v1](https://doi.org/10.6084/m9.figshare.8441816.v1)
