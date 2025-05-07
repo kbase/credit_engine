@@ -18,6 +18,7 @@ nav:
   - GitHub Repo: https://github.com/kbase/credit_engine
 markdown_extensions:
   - tables
+  - footnotes
 
 site_url: https://kbase.github.io/credit_engine
 repo_url: https://github.com/kbase/credit_engine
