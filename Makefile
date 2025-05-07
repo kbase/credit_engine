@@ -98,20 +98,9 @@ install:
 	uv sync
 .PHONY: install
 
-# ---
-# Project Synchronization
-# ---
-#
-# check we are up to date
-check: cruft-check
-cruft-check:
-	cruft check
-cruft-diff:
-	cruft diff
 
-update: update-template update-packages
-update-template:
-	cruft update
+install-pygraphviz:
+	uv add --config-settings="--globaal-option=build_ext" --config-settings="--global-option=-I$(brew --prefix graphviz)/include/"  --config-settings="--global-option=-L$(brew --prefix graphviz)/lib/" pygraphviz --dev
 
 update-packages: ## update packages in the uv lock file. Does not update pyproject.toml.
 	uv sync -U
