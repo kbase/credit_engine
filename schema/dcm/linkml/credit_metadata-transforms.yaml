@@ -30,7 +30,6 @@ classes.Contributor.attributes.contributor_id:
     nmdc:
     - tr_from:
       - $.has_credit_associations[*].applies_to_person/orcid
-
 classes.Contributor.attributes.name:
   transformations:
     DataCite:
@@ -318,7 +317,7 @@ classes.CreditMetadata.attributes.related_identifiers:
     nmdc:
     - tr_from:
       - $.part_of
-      tr_expr: 'PermanentID(id={value}, relationship_type="is_part_of")'
+      tr_expr: {"id": value, "relationship_type": "is_part_of"}
     - tr_from:
       - $.associated_dois[*]
       tr_expr: |
@@ -334,7 +333,7 @@ classes.CreditMetadata.attributes.related_identifiers:
           relationship_type=rel_map[str({value}.doi_category)]
         )
     - tr_from:
-                  # any field that ends with _identifiers
+      # any field that ends with _identifiers
       - $.".*"_identifiers
       tr_expr: |
         PermanentID(
@@ -379,15 +378,13 @@ classes.CreditMetadata.attributes.titles:
       - $.name
       - $.alternative_names[*]
       - $.alternative_titles[*]
-      tr_expr: '{ "title": {value}, "title_type": "alternative_title" }'
-
+      tr_expr: { "title": value, "title_type": "alternative_title" }
 classes.CreditMetadata.attributes.url:
   transformations:
     nmdc:
     - tr_from:
       - $.id
       tr_expr: f"https://api.microbiomedata.org/studies/{value}"
-
 classes.CreditMetadata.attributes.version:
   transformations:
     DataCite:

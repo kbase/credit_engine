@@ -211,7 +211,8 @@ gen-artefacts: $(PYTHON_DIR) $(JSONSCHEMA_DIR)  ## generate derived files: JSON 
 	$(RUN) gen-json-schema $(LINKML_SCHEMA_SOURCE_PATH) > $(JSONSCHEMA_DIR)/credit_metadata.schema.json
 	$(RUN) gen-python $(LINKML_SCHEMA_SOURCE_PATH) > $(PYTHON_DIR)/credit_metadata.py
 	$(RUN) gen-pydantic $(LINKML_SCHEMA_SOURCE_PATH) > $(PYTHON_DIR)/credit_metadata_pydantic.py
-	$(RUN) erdantic schema.dcm.python.credit_metadata_pydantic.$(SCHEMA_ROOT) -o $(DCM_SCHEMA_DIR)/dcm-schema.png
+	$(RUN) ruff format $(PYTHON_DIR)
+	PYTHONPATH=$(PYTHON_DIR) $(RUN) erdantic credit_metadata_pydantic.$(SCHEMA_ROOT) -o $(DCM_SCHEMA_DIR)/dcm-schema.png
 
 gendoc: $(DOC_DIR)  ## generate Markdown documentation locally
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOC_DIR) $(LINKML_SCHEMA_FILE)
