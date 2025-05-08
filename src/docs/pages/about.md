@@ -47,7 +47,7 @@ The DCM schema also has the capacity to track other dataset-related information,
 
 ### Sources used in Schema Design
 
-Data producers and consumers whose data citation information informed the development of this schema include (but are not limited to):
+Data producers, consumers, providers, and managers whose data citation information informed the development of this schema include (but are not limited to):
 
 * [Commonmeta](https://docs.commonmeta.org)
 * [Contributor Role Taxonomy](https://credit.niso.org/contributor-roles/)

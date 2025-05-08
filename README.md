@@ -25,6 +25,8 @@ See the [LinkML documentation](https://linkml.io/linkml/index.html) for full det
 
 Full schema documentation can be found at [https://kbase.github.io/credit_engine/](https://kbase.github.io/credit_engine/).
 
+See also [some additional information on the schema design](https://kbase.github.io/credit_engine/pages/about/).
+
 ### Schema Diagram
 
 Generated from the [Pydantic version](schema/dcm/python/credit_metadata_pydantic.py) of the Dataset Credit Metadata Schema using [erdantic](https://erdantic.drivendata.org/stable/).
