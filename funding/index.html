@@ -476,6 +476,10 @@
 <td>native</td>
 <td>dcm:funding</td>
 </tr>
+<tr>
+<td>close</td>
+<td>DataCite:attributes.funding_references, Crossref:Message.project.funding, OSTI.ARTICLE:awards</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -486,6 +490,10 @@ description: Funding sources for the resource.
 todos:
 - Should funding info be duplicated in the related_identifiers field?
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+close_mappings:
+- DataCite:attributes.funding_references
+- Crossref:Message.project.funding
+- OSTI.ARTICLE:awards
 rank: 1000
 slot_uri: schema:funding
 alias: funding

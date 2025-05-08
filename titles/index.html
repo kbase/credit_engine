@@ -466,6 +466,10 @@
 <td>native</td>
 <td>dcm:titles</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.titles, ORCID:title, OSTI.ARTICLE:title</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -474,6 +478,10 @@
 <pre><code class="language-yaml">name: titles
 description: One or more titles for the resource.
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.titles
+- ORCID:title
+- OSTI.ARTICLE:title
 rank: 1000
 alias: titles
 owner: CreditMetadata

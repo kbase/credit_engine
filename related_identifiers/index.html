@@ -463,6 +463,14 @@
 <td>native</td>
 <td>dcm:related_identifiers</td>
 </tr>
+<tr>
+<td>narrow</td>
+<td>ORCID:doi, OSTI.ARTICLE:doi</td>
+</tr>
+<tr>
+<td>close</td>
+<td>DataCite:attributes.identifiers, DataCite:attributes.related_identifiers, DataCite:attributes.alternate_identifiers, ORCID:externalIds, OSTI.ARTICLE:related_identifiers</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -471,6 +479,15 @@
 <pre><code class="language-yaml">name: related_identifiers
 description: Other resolvable persistent unique IDs related to the resource.
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+close_mappings:
+- DataCite:attributes.identifiers
+- DataCite:attributes.related_identifiers
+- DataCite:attributes.alternate_identifiers
+- ORCID:externalIds
+- OSTI.ARTICLE:related_identifiers
+narrow_mappings:
+- ORCID:doi
+- OSTI.ARTICLE:doi
 rank: 1000
 alias: related_identifiers
 owner: CreditMetadata

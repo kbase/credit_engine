@@ -488,6 +488,10 @@
 <td>native</td>
 <td>dcm:title</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.titles.title, Crossref:message.project.project-title.title</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -499,6 +503,9 @@ examples:
 - value: Amaranthus hypochondriacus genome
 - value: Геном амаранта ипохондрического
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.titles.title
+- Crossref:message.project.project-title.title
 rank: 1000
 slot_uri: schema:name
 alias: title

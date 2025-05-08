@@ -463,6 +463,14 @@
 <td>native</td>
 <td>dcm:affiliations</td>
 </tr>
+<tr>
+<td>narrow</td>
+<td>OSTI.ARTICLE:contributor.affiliation_name</td>
+</tr>
+<tr>
+<td>related</td>
+<td>DataCite:attributes.contributors.affiliation, DataCite:attributes.creators.affiliation, JGI:organisms.pi.institution</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -473,6 +481,12 @@ description: List of organizations with which the contributor is affiliated. For
   that represent an organization, this may be a parent organization (e.g. KBase, US
   DOE; Arkin lab, LBNL).
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+related_mappings:
+- DataCite:attributes.contributors.affiliation
+- DataCite:attributes.creators.affiliation
+- JGI:organisms.pi.institution
+narrow_mappings:
+- OSTI.ARTICLE:contributor.affiliation_name
 rank: 1000
 slot_uri: schema:affiliation
 alias: affiliations

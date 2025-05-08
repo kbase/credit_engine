@@ -366,6 +366,9 @@ attributes:
     - value: Amaranthus hypochondriacus genome
     - value: Геном амаранта ипохондрического
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.titles.title
+    - Crossref:message.project.project-title.title
     rank: 1000
     slot_uri: schema:name
     domain_of:
@@ -381,6 +384,8 @@ attributes:
     - value: translated_title
     - value: other
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.title.titleType
     rank: 1000
     domain_of:
     - Title
@@ -422,6 +427,9 @@ attributes:
     - value: Amaranthus hypochondriacus genome
     - value: Геном амаранта ипохондрического
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.titles.title
+    - Crossref:message.project.project-title.title
     rank: 1000
     slot_uri: schema:name
     alias: title
@@ -440,6 +448,8 @@ attributes:
     - value: translated_title
     - value: other
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.title.titleType
     rank: 1000
     alias: title_type
     owner: Title

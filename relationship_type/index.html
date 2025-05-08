@@ -458,6 +458,10 @@
 <td>native</td>
 <td>dcm:relationship_type</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.related_identifiers.relation_type</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -469,6 +473,8 @@ description: The relationship between the ID and some other entity. For example,
   the 'relationship_type' field captures the relationship between the resource being
   registered and this ID.
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.related_identifiers.relation_type
 rank: 1000
 alias: relationship_type
 owner: PermanentID

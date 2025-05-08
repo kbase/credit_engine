@@ -240,9 +240,9 @@
 <p><em>One (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.</em></p>
 <p>__</p>
 <p><em>Recommended resources for organization identifiers include:</em></p>
-<p>_  - Research Organization Registry, http://ror.org_</p>
-<p>_  - International Standard Name Identifier, https://isni.org_</p>
-<p>_  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/ (to be subsumed into ROR)_</p>
+<p>_  - <a href="http://ror.org">Research Organization Registry</a>_</p>
+<p>_  - <a href="https://isni.org">International Standard Name Identifier</a>_</p>
+<p>_  - <a href="https://www.crossref.org/services/funder-registry/">Crossref Funder Registry</a> (to be subsumed into ROR)_</p>
 <p>__</p>
 <p><em>Some organizations may have a digital object identifier (DOI).</em></p>
 <p>__</p>
@@ -356,11 +356,10 @@
 description: "Represents a funding source for a resource, including the funding body\
   \ and the grant awarded.\n\nOne (or more) of the fields 'grant_id', 'grant_url',\
   \ or 'funder.organization_name' is required; others are optional.\n\nRecommended\
-  \ resources for organization identifiers include:\n  - Research Organization Registry,\
-  \ http://ror.org\n  - International Standard Name Identifier, https://isni.org\n\
-  \  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\
-  \ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier\
-  \ (DOI).\n"
+  \ resources for organization identifiers include:\n  - [Research Organization Registry](http://ror.org)\n\
+  \  - [International Standard Name Identifier](https://isni.org)\n  - [Crossref Funder\
+  \ Registry](https://www.crossref.org/services/funder-registry/) (to be subsumed\
+  \ into ROR)\n\nSome organizations may have a digital object identifier (DOI).\n"
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   funder:
@@ -380,6 +379,12 @@ attributes:
     - value: CBET-0756451
     - value: DOI:10.46936/10.25585/60000745
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.funding_references.award_number
+    - Crossref:message.award
+    narrow_mappings:
+    - OSTI.ARTICLE:award_doi
+    - OSTI.ARTICLE:award_number
     rank: 1000
     slot_uri: schema:identifier
     domain_of:
@@ -391,6 +396,8 @@ attributes:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.funding_references.award_title
     rank: 1000
     slot_uri: schema:name
     domain_of:
@@ -401,6 +408,10 @@ attributes:
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.funding_references.award_url
+    close_mappings:
+    - OSTI.ARTICLE:award_doi
     rank: 1000
     slot_uri: schema:url
     domain_of:
@@ -430,11 +441,10 @@ any_of:
 description: "Represents a funding source for a resource, including the funding body\
   \ and the grant awarded.\n\nOne (or more) of the fields 'grant_id', 'grant_url',\
   \ or 'funder.organization_name' is required; others are optional.\n\nRecommended\
-  \ resources for organization identifiers include:\n  - Research Organization Registry,\
-  \ http://ror.org\n  - International Standard Name Identifier, https://isni.org\n\
-  \  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\
-  \ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier\
-  \ (DOI).\n"
+  \ resources for organization identifiers include:\n  - [Research Organization Registry](http://ror.org)\n\
+  \  - [International Standard Name Identifier](https://isni.org)\n  - [Crossref Funder\
+  \ Registry](https://www.crossref.org/services/funder-registry/) (to be subsumed\
+  \ into ROR)\n\nSome organizations may have a digital object identifier (DOI).\n"
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   funder:
@@ -456,6 +466,12 @@ attributes:
     - value: CBET-0756451
     - value: DOI:10.46936/10.25585/60000745
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.funding_references.award_number
+    - Crossref:message.award
+    narrow_mappings:
+    - OSTI.ARTICLE:award_doi
+    - OSTI.ARTICLE:award_number
     rank: 1000
     slot_uri: schema:identifier
     alias: grant_id
@@ -470,6 +486,8 @@ attributes:
     - value: Metagenomic analysis of the rhizosphere of three biofuel crops at the
         KBS intensive site
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.funding_references.award_title
     rank: 1000
     slot_uri: schema:name
     alias: grant_title
@@ -483,6 +501,10 @@ attributes:
     examples:
     - value: https://genome.jgi.doe.gov/portal/Metanaintenssite/Metanaintenssite.info.html
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.funding_references.award_url
+    close_mappings:
+    - OSTI.ARTICLE:award_doi
     rank: 1000
     slot_uri: schema:url
     alias: grant_url

@@ -244,9 +244,9 @@
 <p><em>roles vocabularies. For more information on these resources and choosing</em></p>
 <p><em>appropriate roles, please see the following links:</em></p>
 <p>__</p>
-<p><em>DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</em></p>
+<p><em>DataCite contributor roles: <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype">https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</a></em></p>
 <p>__</p>
-<p><em>CRediT contributor role taxonomy: https://credit.niso.org.</em></p>
+<p><em>CRediT contributor role taxonomy: <a href="https://credit.niso.org">https://credit.niso.org</a>.</em></p>
 <p>__</p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/linkml/Contributor">dcm:Contributor</a></p>
 <div class="mermaid"> classDiagram
@@ -410,10 +410,10 @@ description: 'Represents a contributor to the resource.
   appropriate roles, please see the following links:
 
 
-  DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype
+  DataCite contributor roles: [https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype)
 
 
-  CRediT contributor role taxonomy: https://credit.niso.org.
+  CRediT contributor role taxonomy: [https://credit.niso.org](https://credit.niso.org).
 
   '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -425,6 +425,9 @@ attributes:
     - value: Person
     - value: Organization
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.contributors.name_type
+    - DataCite:attributes.creators.name_type
     rank: 1000
     slot_uri: schema:@type
     domain_of:
@@ -438,6 +441,14 @@ attributes:
     - value: ORCID:0000-0001-9557-7715
     - value: ROR:01znn6x10
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.contributors.name_identifiers.name_identifier
+    - DataCite:attributes.creators.name_identifiers.name_identifier
+    narrow_mappings:
+    - ORCID:contributor.orcidId
+    - OSTI.ARTICLE:author.orcid_id
+    - OSTI.ARTICLE:contributor.orcid_id
+    - Crossref:message.project.funding.funder.name
     rank: 1000
     slot_uri: schema:identifier
     domain_of:
@@ -454,6 +465,15 @@ attributes:
     - value: Madonna
     - value: Ransome the Clown
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - JGI:organisms.pi.name
+    - ORCID:name
+    close_mappings:
+    - OSTI.ARTICLE:author
+    - OSTI.ARTICLE:contributor
+    related_mappings:
+    - DataCite:attributes.creators.name
+    - DataCite:attributes.contributors.name
     rank: 1000
     slot_uri: schema:name
     domain_of:
@@ -466,6 +486,9 @@ attributes:
     - value: Helena
     - value: Hubert George
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    related_mappings:
+    - DataCite:attributes.contributors.givenName
+    - DataCite:attributes.creators.givenName
     rank: 1000
     domain_of:
     - Contributor
@@ -477,6 +500,9 @@ attributes:
     - value: Bonham Carter
     - value: Wells
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    related_mappings:
+    - DataCite:attributes.contributors.familyName
+    - DataCite:attributes.creators.familyName
     rank: 1000
     domain_of:
     - Contributor
@@ -486,6 +512,12 @@ attributes:
       contributors that represent an organization, this may be a parent organization
       (e.g. KBase, US DOE; Arkin lab, LBNL).
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    related_mappings:
+    - DataCite:attributes.contributors.affiliation
+    - DataCite:attributes.creators.affiliation
+    - JGI:organisms.pi.institution
+    narrow_mappings:
+    - OSTI.ARTICLE:contributor.affiliation_name
     rank: 1000
     slot_uri: schema:affiliation
     domain_of:
@@ -496,6 +528,14 @@ attributes:
     name: contributor_roles
     description: List of roles played by the contributor when working on the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.contributors.contributor_type
+    - DataCite:attributes.creators.contributor_type
+    close_mappings:
+    - ORCID:contributor.role
+    - OSTI.ARTICLE:contributor.contributorType
+    related_mappings:
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:Role
     domain_of:
@@ -537,10 +577,10 @@ description: 'Represents a contributor to the resource.
   appropriate roles, please see the following links:
 
 
-  DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype
+  DataCite contributor roles: [https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype)
 
 
-  CRediT contributor role taxonomy: https://credit.niso.org.
+  CRediT contributor role taxonomy: [https://credit.niso.org](https://credit.niso.org).
 
   '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -552,6 +592,9 @@ attributes:
     - value: Person
     - value: Organization
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.contributors.name_type
+    - DataCite:attributes.creators.name_type
     rank: 1000
     slot_uri: schema:@type
     alias: contributor_type
@@ -567,6 +610,14 @@ attributes:
     - value: ORCID:0000-0001-9557-7715
     - value: ROR:01znn6x10
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.contributors.name_identifiers.name_identifier
+    - DataCite:attributes.creators.name_identifiers.name_identifier
+    narrow_mappings:
+    - ORCID:contributor.orcidId
+    - OSTI.ARTICLE:author.orcid_id
+    - OSTI.ARTICLE:contributor.orcid_id
+    - Crossref:message.project.funding.funder.name
     rank: 1000
     slot_uri: schema:identifier
     alias: contributor_id
@@ -585,6 +636,15 @@ attributes:
     - value: Madonna
     - value: Ransome the Clown
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - JGI:organisms.pi.name
+    - ORCID:name
+    close_mappings:
+    - OSTI.ARTICLE:author
+    - OSTI.ARTICLE:contributor
+    related_mappings:
+    - DataCite:attributes.creators.name
+    - DataCite:attributes.contributors.name
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -600,6 +660,9 @@ attributes:
     - value: Helena
     - value: Hubert George
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    related_mappings:
+    - DataCite:attributes.contributors.givenName
+    - DataCite:attributes.creators.givenName
     rank: 1000
     alias: given_name
     owner: Contributor
@@ -614,6 +677,9 @@ attributes:
     - value: Bonham Carter
     - value: Wells
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    related_mappings:
+    - DataCite:attributes.contributors.familyName
+    - DataCite:attributes.creators.familyName
     rank: 1000
     alias: family_name
     owner: Contributor
@@ -626,6 +692,12 @@ attributes:
       contributors that represent an organization, this may be a parent organization
       (e.g. KBase, US DOE; Arkin lab, LBNL).
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    related_mappings:
+    - DataCite:attributes.contributors.affiliation
+    - DataCite:attributes.creators.affiliation
+    - JGI:organisms.pi.institution
+    narrow_mappings:
+    - OSTI.ARTICLE:contributor.affiliation_name
     rank: 1000
     slot_uri: schema:affiliation
     alias: affiliations
@@ -638,6 +710,14 @@ attributes:
     name: contributor_roles
     description: List of roles played by the contributor when working on the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.contributors.contributor_type
+    - DataCite:attributes.creators.contributor_type
+    close_mappings:
+    - ORCID:contributor.role
+    - OSTI.ARTICLE:contributor.contributorType
+    related_mappings:
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:Role
     alias: contributor_roles

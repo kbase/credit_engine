@@ -486,6 +486,18 @@
 <td>native</td>
 <td>dcm:name</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>JGI:organisms.pi.name, ORCID:name</td>
+</tr>
+<tr>
+<td>related</td>
+<td>DataCite:attributes.creators.name, DataCite:attributes.contributors.name</td>
+</tr>
+<tr>
+<td>close</td>
+<td>OSTI.ARTICLE:author, OSTI.ARTICLE:contributor</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -500,6 +512,15 @@ examples:
 - value: Madonna
 - value: Ransome the Clown
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- JGI:organisms.pi.name
+- ORCID:name
+close_mappings:
+- OSTI.ARTICLE:author
+- OSTI.ARTICLE:contributor
+related_mappings:
+- DataCite:attributes.creators.name
+- DataCite:attributes.contributors.name
 rank: 1000
 slot_uri: schema:name
 alias: name

@@ -486,6 +486,14 @@
 <td>native</td>
 <td>dcm:grant_id</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.funding_references.award_number, Crossref:message.award</td>
+</tr>
+<tr>
+<td>narrow</td>
+<td>OSTI.ARTICLE:award_doi, OSTI.ARTICLE:award_number</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -498,6 +506,12 @@ examples:
 - value: CBET-0756451
 - value: DOI:10.46936/10.25585/60000745
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.funding_references.award_number
+- Crossref:message.award
+narrow_mappings:
+- OSTI.ARTICLE:award_doi
+- OSTI.ARTICLE:award_number
 rank: 1000
 slot_uri: schema:identifier
 alias: grant_id

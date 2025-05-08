@@ -463,6 +463,18 @@
 <td>native</td>
 <td>dcm:contributor_roles</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.contributors.contributor_type, DataCite:attributes.creators.contributor_type</td>
+</tr>
+<tr>
+<td>related</td>
+<td>JGI:organisms.pi</td>
+</tr>
+<tr>
+<td>close</td>
+<td>ORCID:contributor.role, OSTI.ARTICLE:contributor.contributorType</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -471,6 +483,14 @@
 <pre><code class="language-yaml">name: contributor_roles
 description: List of roles played by the contributor when working on the resource.
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.contributors.contributor_type
+- DataCite:attributes.creators.contributor_type
+close_mappings:
+- ORCID:contributor.role
+- OSTI.ARTICLE:contributor.contributorType
+related_mappings:
+- JGI:organisms.pi
 rank: 1000
 slot_uri: schema:Role
 alias: contributor_roles

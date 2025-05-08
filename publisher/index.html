@@ -458,6 +458,10 @@
 <td>native</td>
 <td>dcm:publisher</td>
 </tr>
+<tr>
+<td>narrow</td>
+<td>ORCID:url, OSTI.ARTICLE:site_url</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -467,6 +471,9 @@
 description: The publisher of the resource. For a dataset, this is the repository
   where it is stored.
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+narrow_mappings:
+- ORCID:url
+- OSTI.ARTICLE:site_url
 rank: 1000
 slot_uri: schema:provider
 alias: publisher

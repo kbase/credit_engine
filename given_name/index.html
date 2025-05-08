@@ -486,6 +486,10 @@
 <td>native</td>
 <td>dcm:given_name</td>
 </tr>
+<tr>
+<td>related</td>
+<td>DataCite:attributes.contributors.givenName, DataCite:attributes.creators.givenName</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -498,6 +502,9 @@ examples:
 - value: Helena
 - value: Hubert George
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+related_mappings:
+- DataCite:attributes.contributors.givenName
+- DataCite:attributes.creators.givenName
 rank: 1000
 alias: given_name
 owner: Contributor

@@ -491,6 +491,10 @@
 <td>native</td>
 <td>dcm:organization_id</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.contributors.affiliation.affiliation_identifier, DataCite:attributes.creators.affiliation.affiliation_identifier</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -504,6 +508,9 @@ examples:
 - value: ISNI:0000000123423717
 - value: CrossrefFunder:100000015
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.contributors.affiliation.affiliation_identifier
+- DataCite:attributes.creators.affiliation.affiliation_identifier
 rank: 1000
 slot_uri: schema:identifier
 alias: organization_id

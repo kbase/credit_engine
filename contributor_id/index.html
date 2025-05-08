@@ -488,6 +488,14 @@
 <td>native</td>
 <td>dcm:contributor_id</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.contributors.name_identifiers.name_identifier, DataCite:attributes.creators.name_identifiers.name_identifier</td>
+</tr>
+<tr>
+<td>narrow</td>
+<td>ORCID:contributor.orcidId, OSTI.ARTICLE:author.orcid_id, OSTI.ARTICLE:contributor.orcid_id, Crossref:message.project.funding.funder.name</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -500,6 +508,14 @@ examples:
 - value: ORCID:0000-0001-9557-7715
 - value: ROR:01znn6x10
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.contributors.name_identifiers.name_identifier
+- DataCite:attributes.creators.name_identifiers.name_identifier
+narrow_mappings:
+- ORCID:contributor.orcidId
+- OSTI.ARTICLE:author.orcid_id
+- OSTI.ARTICLE:contributor.orcid_id
+- Crossref:message.project.funding.funder.name
 rank: 1000
 slot_uri: schema:identifier
 alias: contributor_id

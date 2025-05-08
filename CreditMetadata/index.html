@@ -241,7 +241,7 @@
 <p><em>'dataset'; anything else will return an error.</em></p>
 <p>__</p>
 <p><em>The license may be supplied either as an URL pointing to licensing information for</em></p>
-<p><em>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.</em></p>
+<p><em>the resource, or using an SPDX license identifier from the list maintained at <a href="https://spdx.org/licenses">https://spdx.org/licenses</a>.</em></p>
 <p>__</p>
 <p><em>Required fields are:</em></p>
 <p><em>- identifier</em></p>
@@ -311,12 +311,12 @@
     click License href "../License"
 
 
-      CreditMetadata : meta
+      CreditMetadata : metadata
 
 
 
 
-    CreditMetadata --&gt; "1" Metadata : meta
+    CreditMetadata --&gt; "0..1" Metadata : metadata
     click Metadata href "../Metadata"
 
 
@@ -423,8 +423,8 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../meta/">meta</a></td>
-<td>1 <br/> <a href="../Metadata/">Metadata</a></td>
+<td><a href="../metadata/">metadata</a></td>
+<td>0..1 <br/> <a href="../Metadata/">Metadata</a></td>
 <td>Metadata for this credit information, including submitter, schema version, an...</td>
 <td>direct</td>
 </tr>
@@ -517,7 +517,7 @@ description: 'Represents the credit metadata associated with an object.
 
   The license may be supplied either as an URL pointing to licensing information for
 
-  the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.
+  the resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).
 
 
   Required fields are:
@@ -571,6 +571,13 @@ attributes:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    narrow_mappings:
+    - DataCite:attributes.contributors
+    - DataCite:attributes.creators
+    - ORCID:contributors
+    - OSTI.ARTICLE:contributors
+    - OSTI.ARTICLE:authors
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:creator
     domain_of:
@@ -584,6 +591,13 @@ attributes:
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    close_mappings:
+    - DataCite:attributes.published
+    - DataCite:attributes.updated
+    - DataCite:attributes.dates
+    - ORCID:publicationDate
+    - OSTI.ARTICLE:publication_date
+    - Crossref:message.deposited
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -609,6 +623,10 @@ attributes:
     todos:
     - Should funding info be duplicated in the related_identifiers field?
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    close_mappings:
+    - DataCite:attributes.funding_references
+    - Crossref:Message.project.funding
+    - OSTI.ARTICLE:awards
     rank: 1000
     slot_uri: schema:funding
     domain_of:
@@ -628,6 +646,14 @@ attributes:
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:id
+    - JGI:organisms.grouped_by
+    narrow_mappings:
+    - OSTI.ARTICLE:osti_id
+    - OSTI.ARTICLE:doi
+    - ORCID:doi
+    - ORCID:url
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -645,13 +671,15 @@ attributes:
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - biolink:license
+    related_mappings:
+    - DataCite:attributes.rights_list
     rank: 1000
     slot_uri: schema:license
     domain_of:
     - CreditMetadata
     range: License
-  meta:
-    name: meta
+  metadata:
+    name: metadata
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -659,12 +687,14 @@ attributes:
     domain_of:
     - CreditMetadata
     range: Metadata
-    required: true
   publisher:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    narrow_mappings:
+    - ORCID:url
+    - OSTI.ARTICLE:site_url
     rank: 1000
     slot_uri: schema:provider
     domain_of:
@@ -674,6 +704,15 @@ attributes:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    close_mappings:
+    - DataCite:attributes.identifiers
+    - DataCite:attributes.related_identifiers
+    - DataCite:attributes.alternate_identifiers
+    - ORCID:externalIds
+    - OSTI.ARTICLE:related_identifiers
+    narrow_mappings:
+    - ORCID:doi
+    - OSTI.ARTICLE:doi
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -688,6 +727,12 @@ attributes:
     examples:
     - value: dataset
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - OSTI.ARTICLE:product_type
+    - OSTI.ARTICLE:workType
+    - DataCite:attributes.types.schema_org
+    narrow_mappings:
+    - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
     domain_of:
@@ -698,6 +743,10 @@ attributes:
     name: titles
     description: One or more titles for the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:attributes.titles
+    - ORCID:title
+    - OSTI.ARTICLE:title
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -768,7 +817,7 @@ description: 'Represents the credit metadata associated with an object.
 
   The license may be supplied either as an URL pointing to licensing information for
 
-  the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.
+  the resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).
 
 
   Required fields are:
@@ -827,6 +876,13 @@ attributes:
     name: contributors
     description: A list of people and/or organizations who contributed to the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    narrow_mappings:
+    - DataCite:attributes.contributors
+    - DataCite:attributes.creators
+    - ORCID:contributors
+    - OSTI.ARTICLE:contributors
+    - OSTI.ARTICLE:authors
+    - JGI:organisms.pi
     rank: 1000
     slot_uri: schema:creator
     alias: contributors
@@ -842,6 +898,13 @@ attributes:
       dates apply only to the resource itself, and not to the creation or update of
       the credit metadata record for the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    close_mappings:
+    - DataCite:attributes.published
+    - DataCite:attributes.updated
+    - DataCite:attributes.dates
+    - ORCID:publicationDate
+    - OSTI.ARTICLE:publication_date
+    - Crossref:message.deposited
     rank: 1000
     alias: dates
     owner: CreditMetadata
@@ -869,6 +932,10 @@ attributes:
     todos:
     - Should funding info be duplicated in the related_identifiers field?
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    close_mappings:
+    - DataCite:attributes.funding_references
+    - Crossref:Message.project.funding
+    - OSTI.ARTICLE:awards
     rank: 1000
     slot_uri: schema:funding
     alias: funding
@@ -889,6 +956,14 @@ attributes:
     - value: GenBank:CP035949.1
     - value: img.taxon:648028003
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:id
+    - JGI:organisms.grouped_by
+    narrow_mappings:
+    - OSTI.ARTICLE:osti_id
+    - OSTI.ARTICLE:doi
+    - ORCID:doi
+    - ORCID:url
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -908,6 +983,8 @@ attributes:
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - biolink:license
+    related_mappings:
+    - DataCite:attributes.rights_list
     rank: 1000
     slot_uri: schema:license
     alias: license
@@ -915,23 +992,25 @@ attributes:
     domain_of:
     - CreditMetadata
     range: License
-  meta:
-    name: meta
+  metadata:
+    name: metadata
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
-    alias: meta
+    alias: metadata
     owner: CreditMetadata
     domain_of:
     - CreditMetadata
     range: Metadata
-    required: true
   publisher:
     name: publisher
     description: The publisher of the resource. For a dataset, this is the repository
       where it is stored.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    narrow_mappings:
+    - ORCID:url
+    - OSTI.ARTICLE:site_url
     rank: 1000
     slot_uri: schema:provider
     alias: publisher
@@ -943,6 +1022,15 @@ attributes:
     name: related_identifiers
     description: Other resolvable persistent unique IDs related to the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    close_mappings:
+    - DataCite:attributes.identifiers
+    - DataCite:attributes.related_identifiers
+    - DataCite:attributes.alternate_identifiers
+    - ORCID:externalIds
+    - OSTI.ARTICLE:related_identifiers
+    narrow_mappings:
+    - ORCID:doi
+    - OSTI.ARTICLE:doi
     rank: 1000
     alias: related_identifiers
     owner: CreditMetadata
@@ -958,6 +1046,12 @@ attributes:
     examples:
     - value: dataset
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - OSTI.ARTICLE:product_type
+    - OSTI.ARTICLE:workType
+    - DataCite:attributes.types.schema_org
+    narrow_mappings:
+    - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
     alias: resource_type
@@ -970,6 +1064,10 @@ attributes:
     name: titles
     description: One or more titles for the resource.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:attributes.titles
+    - ORCID:title
+    - OSTI.ARTICLE:title
     rank: 1000
     alias: titles
     owner: CreditMetadata

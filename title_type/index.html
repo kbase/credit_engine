@@ -489,6 +489,10 @@
 <td>native</td>
 <td>dcm:title_type</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.title.titleType</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -503,6 +507,8 @@ examples:
 - value: translated_title
 - value: other
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.title.titleType
 rank: 1000
 alias: title_type
 owner: Title

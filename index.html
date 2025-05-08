@@ -503,7 +503,7 @@
 
 
 <h1 id="credit_metadata">credit_metadata</h1>
-<p>Schema for dataset credit metadata.</p>
+<p>Schema for dataset credit metadata. Schema documentation available at https://kbase.github.io/credit_engine/.</p>
 <h2 id="name-credit_metadata">Name: credit_metadata</h2>
 <p>URI: https://kbase.github.io/credit_engine/linkml/credit_metadata</p>
 <h2 id="classes">Classes</h2>
@@ -517,11 +517,11 @@
 <tbody>
 <tr>
 <td><a href="Contributor/">Contributor</a></td>
-<td>Represents a contributor to the resource.<br><br>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and<br>one of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).<br><br>The 'contributor_role' field takes values from the DataCite and CRediT contributor<br>roles vocabularies. For more information on these resources and choosing<br>appropriate roles, please see the following links:<br><br>DataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype<br><br>CRediT contributor role taxonomy: https://credit.niso.org.<br></td>
+<td>Represents a contributor to the resource.<br><br>Contributors must have a 'contributor_type', either 'Person' or 'Organization', and<br>one of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).<br><br>The 'contributor_role' field takes values from the DataCite and CRediT contributor<br>roles vocabularies. For more information on these resources and choosing<br>appropriate roles, please see the following links:<br><br>DataCite contributor roles: <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype">https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype</a><br><br>CRediT contributor role taxonomy: <a href="https://credit.niso.org">https://credit.niso.org</a>.<br></td>
 </tr>
 <tr>
 <td><a href="CreditMetadata/">CreditMetadata</a></td>
-<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral">DataCite<br>resourceTypeGeneral field</a>.<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
+<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral">DataCite<br>resourceTypeGeneral field</a>.<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at <a href="https://spdx.org/licenses">https://spdx.org/licenses</a>.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
 </tr>
 <tr>
 <td><a href="DataSource/">DataSource</a></td>
@@ -533,11 +533,11 @@
 </tr>
 <tr>
 <td><a href="EventDate/">EventDate</a></td>
-<td>Represents an event in the lifecycle of a resource and the date it occurred on.<br><br>See https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date for more information on the events.<br></td>
+<td>Represents an event in the lifecycle of a resource and the date it occurred on.<br><br>See <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date">DataCite documentation on date events</a> for more information on the events.<br></td>
 </tr>
 <tr>
 <td><a href="FundingReference/">FundingReference</a></td>
-<td>Represents a funding source for a resource, including the funding body and the grant awarded.<br><br>One (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.<br><br>Recommended resources for organization identifiers include:<br>  - Research Organization Registry, http://ror.org<br>  - International Standard Name Identifier, https://isni.org<br>  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/ (to be subsumed into ROR)<br><br>Some organizations may have a digital object identifier (DOI).<br></td>
+<td>Represents a funding source for a resource, including the funding body and the grant awarded.<br><br>One (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.<br><br>Recommended resources for organization identifiers include:<br>  - <a href="http://ror.org">Research Organization Registry</a><br>  - <a href="https://isni.org">International Standard Name Identifier</a><br>  - <a href="https://www.crossref.org/services/funder-registry/">Crossref Funder Registry</a> (to be subsumed into ROR)<br><br>Some organizations may have a digital object identifier (DOI).<br></td>
 </tr>
 <tr>
 <td><a href="License/">License</a></td>
@@ -549,11 +549,11 @@
 </tr>
 <tr>
 <td><a href="Organization/">Organization</a></td>
-<td>Represents an organization.<br><br>Recommended resources for organization identifiers and canonical organization names include:<br>  - Research Organization Registry, http://ror.org<br>  - International Standard Name Identifier, https://isni.org<br>  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/<br><br>For example, the US DOE would be entered as:<br>  organization_name: United States Department of Energy<br>  organization_id:   ROR:01bj3aw27<br></td>
+<td>Represents an organization.<br><br>Recommended resources for organization identifiers include:<br>  - <a href="http://ror.org">Research Organization Registry</a><br>  - <a href="https://isni.org">International Standard Name Identifier</a><br>  - <a href="https://www.crossref.org/services/funder-registry/">Crossref Funder Registry</a> (to be subsumed into ROR)<br><br>For example, the US DOE would be entered as:<br>  organization_name: United States Department of Energy<br>  organization_id:   ROR:01bj3aw27<br></td>
 </tr>
 <tr>
 <td><a href="PermanentID/">PermanentID</a></td>
-<td>Represents a persistent unique identifier for an entity and its relationship to some other entity.<br><br>The 'id' field and 'relationship_type' fields are required.<br><br>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.<br><br>DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype<br><br>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/<br></td>
+<td>Represents a persistent unique identifier for an entity and its relationship to some other entity.<br><br>The 'id' field and 'relationship_type' fields are required.<br><br>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.<br><br><a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype">DataCite relation types</a><br><br><a href="https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/">Crossref relation types</a><br></td>
 </tr>
 <tr>
 <td><a href="Title/">Title</a></td>
@@ -668,7 +668,7 @@
 </tr>
 <tr>
 <td><a href="id/">id</a></td>
-<td>String representing the license, from the SPDX license identifiers at https:/...</td>
+<td>String representing the license, from the [SPDX license identifiers](https://...</td>
 </tr>
 <tr>
 <td><a href="identifier/">identifier</a></td>
@@ -683,7 +683,7 @@
 <td>Usage license for the resource</td>
 </tr>
 <tr>
-<td><a href="meta/">meta</a></td>
+<td><a href="metadata/">metadata</a></td>
 <td>Metadata for this credit information, including submitter, schema version, an...</td>
 </tr>
 <tr>

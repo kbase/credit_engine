@@ -483,6 +483,10 @@
 <td>native</td>
 <td>dcm:contributor_type</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>DataCite:attributes.contributors.name_type, DataCite:attributes.creators.name_type</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -494,6 +498,9 @@ examples:
 - value: Person
 - value: Organization
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+exact_mappings:
+- DataCite:attributes.contributors.name_type
+- DataCite:attributes.creators.name_type
 rank: 1000
 slot_uri: schema:@type
 alias: contributor_type

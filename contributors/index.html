@@ -466,6 +466,10 @@
 <td>native</td>
 <td>dcm:contributors</td>
 </tr>
+<tr>
+<td>narrow</td>
+<td>DataCite:attributes.contributors, DataCite:attributes.creators, ORCID:contributors, OSTI.ARTICLE:contributors, OSTI.ARTICLE:authors, JGI:organisms.pi</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -474,6 +478,13 @@
 <pre><code class="language-yaml">name: contributors
 description: A list of people and/or organizations who contributed to the resource.
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+narrow_mappings:
+- DataCite:attributes.contributors
+- DataCite:attributes.creators
+- ORCID:contributors
+- OSTI.ARTICLE:contributors
+- OSTI.ARTICLE:authors
+- JGI:organisms.pi
 rank: 1000
 slot_uri: schema:creator
 alias: contributors

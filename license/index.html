@@ -463,6 +463,10 @@
 <td>exact</td>
 <td>biolink:license</td>
 </tr>
+<tr>
+<td>related</td>
+<td>DataCite:attributes.rights_list</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -476,6 +480,8 @@ description: 'Usage license for the resource. Use one of the SPDX license identi
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 exact_mappings:
 - biolink:license
+related_mappings:
+- DataCite:attributes.rights_list
 rank: 1000
 slot_uri: schema:license
 alias: license

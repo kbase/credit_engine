@@ -241,9 +241,9 @@
 <p>__</p>
 <p><em>The values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.</em></p>
 <p>__</p>
-<p><em>DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype</em></p>
+<p><em><a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype">DataCite relation types</a></em></p>
 <p>__</p>
-<p><em>Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/</em></p>
+<p><em><a href="https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/">Crossref relation types</a></em></p>
 <p>__</p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/linkml/PermanentID">dcm:PermanentID</a></p>
 <div class="mermaid"> classDiagram
@@ -356,10 +356,10 @@ description: 'Represents a persistent unique identifier for an entity and its re
   details.
 
 
-  DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype
+  [DataCite relation types](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype)
 
 
-  Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/
+  [Crossref relation types](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/)
 
   '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -373,6 +373,13 @@ attributes:
     - value: GO:0005456
     - value: HGNC:7470
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.identifier.value
+    - DataCite:attributes.alternate_identifiers
+    - DataCite:attributes.related_identifiers
+    - DataCite:attributes.identifiers
+    related_mappings:
+    - OSTI.ARTICLE:site_url
     slot_uri: schema:identifier
     domain_of:
     - License
@@ -389,6 +396,8 @@ attributes:
         to identify viruses using VirSorter. Then, provides taxonomic classification
         using vConTACT2.
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - OSTI.ARTICLE:description
     rank: 1000
     slot_uri: schema:description
     domain_of:
@@ -400,6 +409,8 @@ attributes:
       field 'related_identifiers', the 'relationship_type' field captures the relationship
       between the resource being registered and this ID.
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.related_identifiers.relation_type
     rank: 1000
     domain_of:
     - PermanentID
@@ -422,10 +433,10 @@ description: 'Represents a persistent unique identifier for an entity and its re
   details.
 
 
-  DataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype
+  [DataCite relation types](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype)
 
 
-  Crossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/
+  [Crossref relation types](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/)
 
   '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -439,6 +450,13 @@ attributes:
     - value: GO:0005456
     - value: HGNC:7470
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.identifier.value
+    - DataCite:attributes.alternate_identifiers
+    - DataCite:attributes.related_identifiers
+    - DataCite:attributes.identifiers
+    related_mappings:
+    - OSTI.ARTICLE:site_url
     slot_uri: schema:identifier
     alias: id
     owner: PermanentID
@@ -457,6 +475,8 @@ attributes:
         to identify viruses using VirSorter. Then, provides taxonomic classification
         using vConTACT2.
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - OSTI.ARTICLE:description
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -471,6 +491,8 @@ attributes:
       field 'related_identifiers', the 'relationship_type' field captures the relationship
       between the resource being registered and this ID.
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.related_identifiers.relation_type
     rank: 1000
     alias: relationship_type
     owner: PermanentID

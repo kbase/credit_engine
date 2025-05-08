@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kbase.github.io/credit_engine/meta/">
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/metadata/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Slot: meta - Credit Metadata Schema</title>
+        <title>Slot: metadata - Credit Metadata Schema</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-meta" class="md-skip">
+        <a href="#slot-metadata" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: meta
+              Slot: metadata
             
           </span>
         </div>
@@ -410,9 +410,9 @@
   
 
 
-<h1 id="slot-meta">Slot: meta</h1>
+<h1 id="slot-metadata">Slot: metadata</h1>
 <p><em>Metadata for this credit information, including submitter, schema version, and timestamp.</em></p>
-<p>URI: <a href="https://kbase.github.io/credit_engine/linkml/meta">dcm:meta</a></p>
+<p>URI: <a href="https://kbase.github.io/credit_engine/linkml/metadata">dcm:metadata</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -434,12 +434,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../Metadata/">Metadata</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../Metadata/">Metadata</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -457,28 +452,27 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>dcm:meta</td>
+<td>dcm:metadata</td>
 </tr>
 <tr>
 <td>native</td>
-<td>dcm:meta</td>
+<td>dcm:metadata</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: meta
+<pre><code class="language-yaml">name: metadata
 description: Metadata for this credit information, including submitter, schema version,
   and timestamp.
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 rank: 1000
-alias: meta
+alias: metadata
 owner: CreditMetadata
 domain_of:
 - CreditMetadata
 range: Metadata
-required: true
 
 </code></pre>
 
