@@ -1212,10 +1212,10 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    metadata: Optional[Metadata] = Field(
+    meta: Optional[Metadata] = Field(
         default=None,
         description="""Metadata for this credit information, including submitter, schema version, and timestamp.""",
-        json_schema_extra={"linkml_meta": {"alias": "metadata", "domain_of": ["CreditMetadata"]}},
+        json_schema_extra={"linkml_meta": {"alias": "meta", "domain_of": ["CreditMetadata"]}},
     )
     publisher: Optional[Organization] = Field(
         default=None,

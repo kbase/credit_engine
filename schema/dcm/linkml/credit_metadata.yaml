@@ -168,7 +168,7 @@ classes:
         related_mappings:
           - DataCite:attributes.rights_list
 
-      metadata:
+      meta:
         description: Metadata for this credit information, including submitter, schema version, and timestamp.
         range: Metadata
 
