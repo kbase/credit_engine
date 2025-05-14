@@ -311,12 +311,12 @@
     click License href "../License"
 
 
-      CreditMetadata : metadata
+      CreditMetadata : meta
 
 
 
 
-    CreditMetadata --&gt; "0..1" Metadata : metadata
+    CreditMetadata --&gt; "0..1" Metadata : meta
     click Metadata href "../Metadata"
 
 
@@ -423,7 +423,7 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../metadata/">metadata</a></td>
+<td><a href="../meta/">meta</a></td>
 <td>0..1 <br/> <a href="../Metadata/">Metadata</a></td>
 <td>Metadata for this credit information, including submitter, schema version, an...</td>
 <td>direct</td>
@@ -678,8 +678,8 @@ attributes:
     domain_of:
     - CreditMetadata
     range: License
-  metadata:
-    name: metadata
+  meta:
+    name: meta
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -992,13 +992,13 @@ attributes:
     domain_of:
     - CreditMetadata
     range: License
-  metadata:
-    name: metadata
+  meta:
+    name: meta
     description: Metadata for this credit information, including submitter, schema
       version, and timestamp.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     rank: 1000
-    alias: metadata
+    alias: meta
     owner: CreditMetadata
     domain_of:
     - CreditMetadata
