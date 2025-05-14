@@ -2,7 +2,7 @@
     "$defs": {
         "Contributor": {
             "additionalProperties": false,
-            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'Person' or 'Organization', and\none of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing\nappropriate roles, please see the following links:\n\nDataCite contributor roles: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype\n\nCRediT contributor role taxonomy: https://credit.niso.org.",
+            "description": "Represents a contributor to the resource.\n\nContributors must have a 'contributor_type', either 'Person' or 'Organization', and\none of the 'name' fields: either 'given_name' and 'family_name' (for a person), or 'name' (for an organization or a person).\n\nThe 'contributor_role' field takes values from the DataCite and CRediT contributor\nroles vocabularies. For more information on these resources and choosing\nappropriate roles, please see the following links:\n\nDataCite contributor roles: [https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#7a-contributortype)\n\nCRediT contributor role taxonomy: [https://credit.niso.org](https://credit.niso.org).",
             "properties": {
                 "affiliations": {
                     "description": "List of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).",
@@ -114,7 +114,7 @@
         },
         "CreditMetadata": {
             "additionalProperties": false,
-            "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the [DataCite\nresourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
+            "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the [DataCite\nresourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
             "properties": {
                 "comment": {
                     "description": "List of strings of freeform text providing extra information about this credit metadata.",
@@ -189,7 +189,7 @@
                     ],
                     "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n"
                 },
-                "metadata": {
+                "meta": {
                     "anyOf": [
                         {
                             "$ref": "#/$defs/Metadata"
@@ -331,7 +331,7 @@
         },
         "EventDate": {
             "additionalProperties": false,
-            "description": "Represents an event in the lifecycle of a resource and the date it occurred on.\n\nSee https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date for more information on the events.",
+            "description": "Represents an event in the lifecycle of a resource and the date it occurred on.\n\nSee [DataCite documentation on date events](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date) for more information on the events.",
             "properties": {
                 "date": {
                     "description": "The date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.",
@@ -370,7 +370,7 @@
         },
         "FundingReference": {
             "additionalProperties": false,
-            "description": "Represents a funding source for a resource, including the funding body and the grant awarded.\n\nOne (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.\n\nRecommended resources for organization identifiers include:\n  - Research Organization Registry, http://ror.org\n  - International Standard Name Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/ (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier (DOI).",
+            "description": "Represents a funding source for a resource, including the funding body and the grant awarded.\n\nOne (or more) of the fields 'grant_id', 'grant_url', or 'funder.organization_name' is required; others are optional.\n\nRecommended resources for organization identifiers include:\n  - [Research Organization Registry](http://ror.org)\n  - [International Standard Name Identifier](https://isni.org)\n  - [Crossref Funder Registry](https://www.crossref.org/services/funder-registry/) (to be subsumed into ROR)\n\nSome organizations may have a digital object identifier (DOI).",
             "properties": {
                 "funder": {
                     "anyOf": [
@@ -414,7 +414,7 @@
             "description": "License information for the resource.",
             "properties": {
                 "id": {
-                    "description": "String representing the license, from the SPDX license identifiers at https://spdx.org/licenses/.",
+                    "description": "String representing the license, from the [SPDX license identifiers](https://spdx.org/licenses/).",
                     "type": [
                         "string",
                         "null"
@@ -468,7 +468,7 @@
         },
         "Organization": {
             "additionalProperties": false,
-            "description": "Represents an organization.\n\nRecommended resources for organization identifiers and canonical organization names include:\n  - Research Organization Registry, http://ror.org\n  - International Standard Name Identifier, https://isni.org\n  - Crossref Funder Registry, https://www.crossref.org/services/funder-registry/\n\nFor example, the US DOE would be entered as:\n  organization_name: United States Department of Energy\n  organization_id:   ROR:01bj3aw27",
+            "description": "Represents an organization.\n\nRecommended resources for organization identifiers include:\n  - [Research Organization Registry](http://ror.org)\n  - [International Standard Name Identifier](https://isni.org)\n  - [Crossref Funder Registry](https://www.crossref.org/services/funder-registry/) (to be subsumed into ROR)\n\nFor example, the US DOE would be entered as:\n  organization_name: United States Department of Energy\n  organization_id:   ROR:01bj3aw27",
             "properties": {
                 "organization_id": {
                     "description": "Persistent unique identifier for the organization in the format <database name>:<identifier within database>.",
@@ -491,7 +491,7 @@
         },
         "PermanentID": {
             "additionalProperties": false,
-            "description": "Represents a persistent unique identifier for an entity and its relationship to some other entity.\n\nThe 'id' field and 'relationship_type' fields are required.\n\nThe values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.\n\nDataCite relation types: https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype\n\nCrossref relation types: https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/",
+            "description": "Represents a persistent unique identifier for an entity and its relationship to some other entity.\n\nThe 'id' field and 'relationship_type' fields are required.\n\nThe values in the 'relationship_type' field come from controlled vocabularies maintained by DataCite and Crossref. See the documentation links below for more details.\n\n[DataCite relation types](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#12b-relationtype)\n\n[Crossref relation types](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/)",
             "properties": {
                 "description": {
                     "description": "Description of that entity.",
@@ -637,7 +637,7 @@
     "$id": "https://kbase.github.io/credit_engine/linkml/credit_metadata",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
-    "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the [DataCite\nresourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at https://spdx.org/licenses/.\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
+    "description": "Represents the credit metadata associated with an object.\n\nIn the following documentation, 'resource' is used to refer to the object\nthat the CM pertains to, for example, a KBase Workspace object; a\nsample from NMDC or ESS-DIVE; sequence data from IMG.\n\nThe 'resource_type' field should be filled using values from the [DataCite\nresourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).\n\nCurrently this schema only supports credit metadata for objects of type\n'dataset'; anything else will return an error.\n\nThe license may be supplied either as an URL pointing to licensing information for\nthe resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).\n\nRequired fields are:\n- identifier\n- resource_type\n- versioning information: if the resource does not have an explicit version number,\none or more dates should be supplied: ideally the date of resource publication and\nthe last update (if applicable).\n- contributors (one or more required)\n- titles (one or more required)\n- meta\n\nThe resource_type field is required, but as there is currently only a single valid\nvalue, 'dataset', it is automatically populated if no value is supplied.",
     "metamodel_version": "1.7.0",
     "properties": {
         "comment": {
@@ -713,7 +713,7 @@
             ],
             "description": "Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n"
         },
-        "metadata": {
+        "meta": {
             "anyOf": [
                 {
                     "$ref": "#/$defs/Metadata"
@@ -779,5 +779,5 @@
     ],
     "title": "credit_metadata",
     "type": "object",
-    "version": "0.0.6"
+    "version": "0.0.7"
 }
