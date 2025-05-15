@@ -1,7 +1,12 @@
 # yaml-language-server: $schema=https://linkml.io/linkml-model/linkml_model/jsonschema/meta.schema.json
 id: https://kbase.github.io/credit_engine/linkml/credit_metadata
 name: credit_metadata
-description: Schema for dataset credit metadata. Schema documentation available at https://kbase.github.io/credit_engine/.
+description: |
+  The Dataset Citation Metadata (DCM) schema is designed to capture accurate credit (citation) information for scientific datasets whilst maintaining compatibility with DOI minting authorities such as [DataCite](https://datacite.org), [Crossref](https://www.crossref.org), and the US Department of Energy's [Office of Scientific and Technical Information](https://www.osti.gov).
+
+  The schema is based heavily on the [DataCite Metadata Schema](https://schema.datacite.org) and [Commonmeta](https://docs.commonmeta.org), with some alterations and additions to allow more accurate capture of dataset-relevant information.
+
+  Schema documentation is available at https://kbase.github.io/credit_engine/.
 version: 0.0.7
 prefixes:
   biolink: https://w3id.org/biolink/vocab/
