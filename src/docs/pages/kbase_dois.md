@@ -1,8 +1,12 @@
 # KBase FAIR Narratives
-Generated on 2025-03-18
+Generated on 2025-06-24
 
 | DOI | Title, Authors | Published | Updated |
 |-----|----------------|-----------|---------|
+| 10.25982/218406.47/2569606 | [Fermented Foods Microbial Genomes Database](https://dx.doi.org/10.25982/218406.47/2569606)<br>McDaniel E, Dutton R | 2025 | 2025-06-20T13:09:23Z |
+| 10.25982/187935.57/2565930 | [ISME Workshop - All Congo Genomes](https://dx.doi.org/10.25982/187935.57/2565930)<br>Allen B | 2025 | 2025-05-15T02:15:24Z |
+| 10.25982/200793.58/2556864 | [TUTORIAL: A new custom metabolic model for iron-oxidizing bacteria](https://dx.doi.org/10.25982/200793.58/2556864)<br>Tothero G, Weisenhorn P, Liu F, Faria J, Henry C, Chan C | 2025 | 2025-04-17T02:23:18Z |
+| 10.25982/189485.18/2538685 | [Seven soil endospore forming bacteria from campus woodland fragments](https://dx.doi.org/10.25982/189485.18/2538685)<br>McLoon A, Cucca A, Gardner L, Higgins M, Rigby C, Rigby C, Gerbasi F, Lunman A, Mondelo V, Kronau L, Gejo J, Le J, Naef M, Spiliotis C, Churan G, Barker J, Maune K | 2025 | 2025-03-27T02:26:07Z |
 | 10.25982/175980.54/2520041 | [General Biology 2 Sugar Beet Lab - Spring 24](https://dx.doi.org/10.25982/175980.54/2520041)<br>Schirmer A, Parikh K | 2025 | 2025-02-21T03:37:31Z |
 | 10.25982/165213.26/2519695 | [RWRtoolkit Narrative](https://dx.doi.org/10.25982/165213.26/2519695)<br>Kainer D, Lane M, Sullivan K, Miller J, Cashman M, Morgan M, Cliff A, Romero J, Walker A, Blair D, Chhetri H, Wang Y, Pavicic M, Furches A, Noshay J, Drake M, Landry N, Ireland A, Missaoui A, Kang Y, Sedbrook J, Dehal P, Canon S, Jacobson D | 2024 | 2025-02-20T03:37:28Z |
 | 10.25982/159671.262/2496635 | [Linking soil microbial genomic features to forest-to-pasture conversion in the Amazon](https://dx.doi.org/10.25982/159671.262/2496635)<br>Venturini A | 2025 | 2025-01-08T03:29:06Z |
@@ -24,10 +28,10 @@ Generated on 2025-03-18
 | 10.25982/138628.97/2327013 | [KBase Narrative - Atacama Trench &amp; Sn Clemente 2018 cruise Metagenomes -Decontamination through Metagenomic Fractionation and analysis of Metabolic Potential-](https://dx.doi.org/10.25982/138628.97/2327013)<br>Plominsky A | 2024 | 2024-03-26T02:48:27Z |
 | 10.25982/174276.9/2324582 | [KBase Narrative - Formation of a constructed microbial community in a nutrient rich environment indicates bacterial interspecific competition](https://dx.doi.org/10.25982/174276.9/2324582)<br>Wang J, Appidi M, Burdick L, Abraham P, Hettich R, Pelletier D, Doktycz M | 2024 | 2024-03-19T02:32:10Z |
 | 10.25982/95510.53/2310383 | [KBase Narrative - C. roseus Tissue Specificity Analysis using Góngora-Castillo Transcripts and Franke v2 Genome](https://dx.doi.org/10.25982/95510.53/2310383)<br>Cole-Osborn L, MCCallan S, Prifti O, Abu R, Sjoelund V, Lee-Parsons C | 2022 | 2024-05-18T21:51:46Z |
+| 10.25982/138628.97/2327013 | [KBase Narrative - Atacama Trench &amp; Sn Clemente 2018 cruise Metagenomes -Decontamination through Metagenomic Fractionation and analysis of Metabolic Potential-](https://dx.doi.org/10.25982/138628.97/2327013)<br>Plominsky A | 2024 | 2024-03-26T02:48:27Z |
+| 10.25982/90888.1452/2327015 | [KBase Narrative - Atacama Trench &amp; Sn Clemente 2018 cruise Metagenomes -Sequence quality filtration &amp; Assembly-](https://dx.doi.org/10.25982/90888.1452/2327015)<br>Plominsky A | 2024 | 2024-03-26T02:48:12Z |
 | 10.25982/171033.8/2309719 | [KBase Narrative - Lachnospiraceae sp. C1.1 genome](https://dx.doi.org/10.25982/171033.8/2309719)<br>Hackmann T, Zhang B | 2024 | 2024-03-21T14:17:44Z |
 | 10.25982/171029.13/2309718 | [KBase Narrative - Porphyromonadaceae sp. W3.11 genome](https://dx.doi.org/10.25982/171029.13/2309718)<br>Hackmann T, Zhang B | 2024 | 2024-03-21T14:17:41Z |
-| 10.25982/135835.33/2203552 | [KBase Narrative - Genomic and environmental controls on Castellaniella biogeography in an anthropogenically disturbed site](https://dx.doi.org/10.25982/135835.33/2203552)<br>Szink E, Goff J, Durrence K, Lui L, Nielsen T, Kuehl J, Hunt K, Chandonia J, Thorgersen M, Poole F, Stahl D, Chakraborty R, Arkin A, Adams M | 2023 | 2024-05-07T02:10:50Z |
-| 10.25982/152701.14/1996997 | [Five draft genome assemblies from Bacillaceae isolated from a degraded wetland environment](https://dx.doi.org/10.25982/152701.14/1996997)<br>McLoon A, Asante P, Anderson T, Cochrane D, Cohen K, German J, Hrubes C, LaCroix I, McNamee K, Nichter A, Pepe J, Schofield A | 2023 | 2023-12-15T03:07:07Z |
 | 10.25982/174276.9/2324582 | [KBase Narrative - Formation of a constructed microbial community in a nutrient rich environment indicates bacterial interspecific competition](https://dx.doi.org/10.25982/174276.9/2324582)<br>Wang J, Appidi M, Burdick L, Abraham P, Hettich R, Pelletier D, Doktycz M | 2024 | 2024-03-19T02:32:10Z |
 | 10.25982/1764746 | [KBase partners with community developers from several Department of Energy Science Focus Areas to increase functionality of tools and analysis](https://dx.doi.org/10.25982/1764746)<br>Wood-Charlson E, Drake M | 2021 | 2024-03-07T03:12:25Z |
 | 10.25982/1608940 | [Make the Most Out of Genome Announcements with KBase](https://dx.doi.org/10.25982/1608940)<br>Allen B, Land M, Wood-Charlson E | 2020 | 2024-03-07T03:12:18Z |
