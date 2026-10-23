@@ -3,7 +3,7 @@ name = "credit-engine"
 version = "0.1.0"
 description = "Standardised citation metadata for scientific datasets."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "check-jsonschema>=0.38.2",
     "dlt>=1.31.0",

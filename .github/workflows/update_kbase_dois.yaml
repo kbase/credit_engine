@@ -23,7 +23,7 @@ jobs:
             - name: Setup python
               uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
               with:
-                  python-version-file: ".python-version"
+                  python-version: "3.14"
 
             - name: Install uv
               uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e
@@ -31,10 +31,10 @@ jobs:
                   python-version: 3.14
 
             - name: Install project
-              run: uv sync --locked --all-extras
+              run: uv sync --no-build
 
             - name: Generate KBase DOI list
-              run: uv run --no-build scripts/gen_kbase_doi_list.py
+              run: uv run --frozen --no-sync scripts/gen_kbase_doi_list.py
 
             - name: Create Pull Request with updated KBase DOI list
               uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1
