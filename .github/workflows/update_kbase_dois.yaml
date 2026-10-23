@@ -27,10 +27,10 @@ jobs:
                   cache-dependency-glob: "uv.lock"
 
             - name: Install dependencies
-              run: uv sync
+              run: uv sync --no-build
 
             - name: Generate KBase DOI list
-              run: uv run scripts/gen_kbase_doi_list.py
+              run: uv run --no-build scripts/gen_kbase_doi_list.py
 
             - name: Create Pull Request with updated KBase DOI list
               uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1
