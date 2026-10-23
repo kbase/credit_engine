@@ -27,7 +27,7 @@ jobs:
           python-version: 3.14
 
       - name: Install project
-        run: uv sync --frozen --no-sync --group docs
+        run: uv sync --frozen --group docs
 
       - name: Lint linkml file
         id: lint_linkml

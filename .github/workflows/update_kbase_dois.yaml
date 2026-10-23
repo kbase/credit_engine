@@ -31,10 +31,10 @@ jobs:
                   python-version: 3.14
 
             - name: Install project
-              run: uv sync --frozen --no-sync
+              run: uv sync --frozen
 
             - name: Generate KBase DOI list
-              run: uv run --frozen --no-sync scripts/gen_kbase_doi_list.py
+              run: uv run --frozen scripts/gen_kbase_doi_list.py
 
             - name: Create Pull Request with updated KBase DOI list
               uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1
