@@ -21,10 +21,6 @@ jobs:
         with:
           python-version: 3.14
 
-      - name: Install dependencies
-        id: install_deps
-        run: uv sync --no-build
-
       - name: Lint linkml file
         id: lint_linkml
         run: |
