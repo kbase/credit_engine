@@ -31,7 +31,7 @@ jobs:
                   python-version: 3.14
 
             - name: Install project
-              run: uv sync --no-build
+              run: uv sync --frozen --no-sync
 
             - name: Generate KBase DOI list
               run: uv run --frozen --no-sync scripts/gen_kbase_doi_list.py
