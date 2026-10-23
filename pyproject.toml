@@ -1,44 +1,57 @@
 [project]
 name = "credit-engine"
 version = "0.1.0"
-description = "Add your description here"
+description = "Standardised citation metadata for scientific datasets."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
-    "check-jsonschema>=0.33.0",
-    "linkml>=1.9.1",
-]
-
-[dependency-groups]
-dev = [
-    "ruff>=0.11.0",
-]
-data_import = [
-    "asteval>=1.0.6",
-    "dlt[deltalake,duckdb,parquet]>=1.10.0",
-    "httpx>=0.28.1",
-    "ipykernel>=6.29.5",
-    "json-merge-patch>=0.3.0",
-    "jsonpatch>=1.33",
-    "pyyaml>=6.0.2",
-    "streamlit>=1.45.0",
-    "vcrpy>=7.0.0",
-    "xmlschema>=4.0.1",
-]
-erdantic = [
-    "erdantic>=1.1.0.post1",
-    "pygraphviz>=1.14",
-]
-docs = [
-    "mkdocs-material>=9.6.9",
-    "mkdocs-mermaid2-plugin>=1.2.1",
+    "check-jsonschema>=0.38.2",
+    "dlt>=1.31.0",
+    "jsonschema[format]>=4.26.0",
+    "linkml>=1.12.1",
+    "linkml-runtime>=1.12.1",
 ]
 
 [tool.ruff]
 line-length = 120
 
-# Assume Python 3.12.
-target-version = "py312"
+# Assume Python 3.14.
+target-version = "py314"
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    "__pypackages__",
+    "_build",
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git-rewrite",
+    ".git",
+    ".github",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "*.pyc",
+    "buck-out",
+    "build",
+    "deps",
+    "dist",
+    "node_modules",
+    "other_schema",
+    "python-coverage",
+    "sample_data",
+    "venv",
+]
 
 [tool.ruff.lint]
 select = [
@@ -91,12 +104,12 @@ select = [
     "TD", # flake8-todos
     "FIX", # flake8-fixme
     "ERA", # eradicate
-    # "PD", # pandas-vet
+    "PD", # pandas-vet
     "PGH", # pygrep-hooks
     "PL", # Pylint
     "TRY", # tryceratops
     "FLY", # flynt
-    # "NPY", # NumPy-specific rules
+    "NPY", # NumPy-specific rules
     "AIR", # Airflow
     "PERF", # Perflint
     "FURB", # refurb
@@ -116,42 +129,23 @@ ignore = [
     "E203",
     "E501",
     "ISC001",
-    "S101",
 ]
 
-# Allow autofix for all enabled rules (when `--fix`) is provided.
-fixable = ["ALL"]
-unfixable = []
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"] # use of assert
 
+[tool.ruff.lint.mccabe]
+# Flag errors (`C901`) whenever the complexity level exceeds 15.
+max-complexity = 15
 
-# Exclude a variety of commonly ignored directories.
-exclude = [
-    "__pypackages__",
-    "_build",
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git-rewrite",
-    ".git",
-    ".github",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "*.pyc",
-    "buck-out",
-    "build",
-    "deps",
-    "dist",
-    "node_modules",
-    "other_schema",
-    "python-coverage",
-    "sample_data",
-    "venv",
+[dependency-groups]
+dev = [
+    "ruff>=0.17.2",
 ]
-per-file-ignores = {}
+docs = [
+    "mkdocs-material>=9.7.7",
+    "mkdocs-mermaid2-plugin>=1.2.3",
+]
+erd = [
+    "erdantic>=1.2.1",
+]

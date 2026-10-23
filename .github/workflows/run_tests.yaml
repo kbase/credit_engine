@@ -1,116 +1,112 @@
 name: Lint and Test
 
 on:
-    workflow_call:
+  workflow_call:
 
 jobs:
-    run_unit_tests:
-        runs-on: ubuntu-latest
-        if: 1 == 0
-        strategy:
-            fail-fast: false
+  run_unit_tests:
+    runs-on: ubuntu-latest
+    if: 1 == 0
+    strategy:
+      fail-fast: false
 
-        steps:
-            - name: Repo checkout
-              uses: actions/checkout@main
+    steps:
+      - name: Repo checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
-            - name: Set up Python 3.
-              uses: actions/setup-python@main
-              with:
-                python-version: 3.12
+      - name: Install uv
+        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e
+        with:
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
 
-            - name: Install uv
-              uses: astral-sh/setup-uv@v6
+      - name: Install dependencies
+        id: install_deps
+        run: uv sync
 
-            - name: Install dependencies
-              id: install_deps
-              run: uv sync
+      - name: run pytest -rP tests/
+        id: run_pytest
+        run: |
+          uv run pytest --cov=credit_engine --cov-report=xml -rP tests/
+        continue-on-error: true
 
-            - name: run pytest -rP tests/
-              id: run_pytest
-              run: |
-                  uv run pytest --cov=credit_engine --cov-report=xml -rP tests/
-              continue-on-error: true
+      - name: Send to Codecov
+        id: send_to_codecov
+        uses: codecov/codecov-action@main
+        continue-on-error: true
+        with:
+          files: ./coverage.xml
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
 
-            - name: Send to Codecov
-              id: send_to_codecov
-              uses: codecov/codecov-action@main
-              continue-on-error: true
-              with:
-                  files: ./coverage.xml
-                  fail_ci_if_error: true
-                  token: ${{ secrets.CODECOV_TOKEN }}
+      - name: outcome failure
+        if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success'
+        run: |
+          echo "Python tests: ${{ steps.run_pytest.outcome }}"
+          echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
+          exit 1
 
-            - name: outcome failure
-              if: steps.run_pytest.outcome != 'success' || steps.send_to_codecov.outcome != 'success'
-              run: |
-                  echo "Python tests: ${{ steps.run_pytest.outcome }}"
-                  echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
-                  exit 1
+      - name: outcome success
+        run: |
+          echo "Python tests: ${{ steps.run_pytest.outcome }}"
+          echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
+          exit 0
 
-            - name: outcome success
-              run: |
-                  echo "Python tests: ${{ steps.run_pytest.outcome }}"
-                  echo "upload coverage: ${{ steps.send_to_codecov.outcome }}"
-                  exit 0
+  run_linkml_tasks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
 
-    run_linkml_tasks:
-        runs-on: ubuntu-latest
-        strategy:
-            fail-fast: false
+    steps:
+      - name: Repo checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
-        steps:
-            - name: Repo checkout
-              uses: actions/checkout@main
+      - name: Install uv
+        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e
+        with:
+          python-version: 3.14
 
-            - name: Set up Python 3.
-              uses: actions/setup-python@main
-              with:
-                python-version: 3.12
+      - name: Install dependencies
+        id: install_deps
+        run: uv sync
 
-            - name: Install uv
-              uses: astral-sh/setup-uv@v6
+      - name: Lint linkml file
+        id: lint_linkml
+        run: |
+          make lint-no-warn
+        continue-on-error: true
 
-            - name: Install dependencies
-              id: install_deps
-              run: uv sync
+      - name: Validate sample data against the schema
+        id: test_sample_data
+        run: |
+          make test-sample-data
+        continue-on-error: true
 
-            - name: Lint linkml file
-              id: lint_linkml
-              run: |
-                  make lint-no-warn
-              continue-on-error: true
+      - name: Validate sample data against JSONschema
+        id: test_sample_data_jsonschema
+        run: |
+          make test-sample-data-jsonschema
+        continue-on-error: true
 
-            - name: Validate sample data against the schema
-              id: test_sample_data
-              run: |
-                  make test-sample-data
-              continue-on-error: true
+      - name: Test documentation generation
+        id: test_docgen
+        run: |
+          uv sync --group docs
+          make gendoc
+        continue-on-error: true
 
-            - name: Validate sample data against JSONschema
-              id: test_sample_data_jsonschema
-              run: |
-                  make test-sample-data-jsonschema
-              continue-on-error: true
+      - name: outcome failure
+        if: steps.lint_linkml.outcome != 'success' || steps.test_sample_data.outcome != 'success' || steps.test_sample_data_jsonschema.outcome != 'success' || steps.test_docgen.outcome != 'success'
+        run: |
+          echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
+          echo "sample data validation: ${{ steps.test_sample_data.outcome }}"
+          echo "sample data JSON Schema validation: ${{ steps.test_sample_data_jsonschema.outcome }}"
+          echo "documentation generator: ${{ steps.test_docgen.outcome }}"
+          exit 1
 
-            - name: Test documentation generation
-              id: test_docgen
-              run: |
-                  uv sync --group docs
-                  make gendoc
-              continue-on-error: true
-
-            - name: outcome failure
-              if: steps.lint_linkml.outcome != 'success' || steps.test_sample_data.outcome != 'success' || steps.test_sample_data_jsonschema.outcome != 'success' || steps.test_docgen.outcome != 'success'
-              run: |
-                  echo "linkml linting: ${{ steps.lint_linkml.outcome }}"
-                  echo "sample data validation: ${{ steps.test_sample_data.outcome }}"
-                  echo "sample data JSON Schema validation: ${{ steps.test_sample_data_jsonschema.outcome }}"
-                  echo "documentation generator: ${{ steps.test_docgen.outcome }}"
-                  exit 1
-
-            - name: outcome success
-              if: steps.lint_linkml.outcome == 'success' && steps.test_sample_data.outcome == 'success' && steps.test_sample_data_jsonschema.outcome == 'success' && steps.test_docgen.outcome == 'success'
-              run: |
-                  echo All tests passed successfully!
-                  exit 0
+      - name: outcome success
+        if: steps.lint_linkml.outcome == 'success' && steps.test_sample_data.outcome == 'success' && steps.test_sample_data_jsonschema.outcome == 'success' && steps.test_docgen.outcome == 'success'
+        run: |
+          echo All tests passed successfully!
+          exit 0
