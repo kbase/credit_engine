@@ -5,11 +5,24 @@ description = "Standardised citation metadata for scientific datasets."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "check-jsonschema>=0.38.2",
-    "dlt>=1.31.0",
+    "check-jsonschema>=0.39.0",
+    "dlt>=1.32.0",
+    "erdantic>=1.2.1",
     "jsonschema[format]>=4.26.0",
     "linkml>=1.12.1",
     "linkml-runtime>=1.12.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.2",
+]
+docs = [
+    "mkdocs-material>=9.7.7",
+    "mkdocs-mermaid2-plugin>=1.2.3",
+]
+erd = [
+    "erdantic>=1.2.1",
 ]
 
 [tool.ruff]
@@ -17,10 +30,6 @@ line-length = 120
 
 # Assume Python 3.14.
 target-version = "py314"
-
-# Allow autofix for all enabled rules (when `--fix`) is provided.
-fixable = ["ALL"]
-unfixable = []
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
@@ -54,6 +63,7 @@ exclude = [
 ]
 
 [tool.ruff.lint]
+
 select = [
     # core
     "F", # Pyflakes
@@ -131,21 +141,13 @@ ignore = [
     "ISC001",
 ]
 
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*.py" = ["S101"] # use of assert
 
 [tool.ruff.lint.mccabe]
 # Flag errors (`C901`) whenever the complexity level exceeds 15.
 max-complexity = 15
-
-[dependency-groups]
-dev = [
-    "ruff>=0.17.2",
-]
-docs = [
-    "mkdocs-material>=9.7.7",
-    "mkdocs-mermaid2-plugin>=1.2.3",
-]
-erd = [
-    "erdantic>=1.2.1",
-]

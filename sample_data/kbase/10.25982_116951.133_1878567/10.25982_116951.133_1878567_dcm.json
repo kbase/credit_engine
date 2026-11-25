@@ -6,10 +6,12 @@
   },
   "identifier": "DOI:10.25982/116951.133/1878567",
   "resource_type": "dataset",
-  "license": {
-    "url": "https://spdx.org/licenses/CC-BY-4.0.html",
-    "id": "CC-BY-4.0"
-  },
+  "license": [
+    {
+      "url": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "id": "CC-BY-4.0"
+    }
+  ],
   "titles": [
     {
       "title": "KBase Narrative - Metagenome-assembled genomes from Amazonian soil microbial consortia",

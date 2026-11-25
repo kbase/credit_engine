@@ -196,8 +196,10 @@
   ],
   "identifier": "DOI:10.25982/105874.55/1844990",
   "resource_type": "dataset",
-  "license": {
-    "url": "https://spdx.org/licenses/CC-BY-4.0.html",
-    "id": "CC-BY-4.0"
-  }
+  "license": [
+    {
+      "url": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "id": "CC-BY-4.0"
+    }
+  ]
 }
