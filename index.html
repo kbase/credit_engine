@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -575,7 +575,7 @@
 </tr>
 <tr>
 <td><a href="CreditMetadata/">CreditMetadata</a></td>
-<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field should be filled using values from the <a href="https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral">DataCite<br>resourceTypeGeneral field</a>.<br><br>Currently this schema only supports credit metadata for objects of type<br>'dataset'; anything else will return an error.<br><br>The license may be supplied either as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at <a href="https://spdx.org/licenses">https://spdx.org/licenses</a>.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required, but as there is currently only a single valid<br>value, 'dataset', it is automatically populated if no value is supplied.<br></td>
+<td>Represents the credit metadata associated with an object.<br><br>In the following documentation, 'resource' is used to refer to the object<br>that the CM pertains to, for example, a KBase Workspace object; a<br>sample from NMDC or ESS-DIVE; sequence data from IMG.<br><br>The 'resource_type' field takes values from the ResourceType enum, which combines<br>the <a href="https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/">DataCite resourceTypeGeneral</a><br>vocabulary with the resource types used by Commonmeta, Crossref, and OSTI. A free<br>text description of the resource type can be supplied in 'resource_type_detail'.<br><br>One or more licenses may be supplied. Each license may be given as an URL pointing to licensing information for<br>the resource, or using an SPDX license identifier from the list maintained at <a href="https://spdx.org/licenses">https://spdx.org/licenses</a>.<br><br>Required fields are:<br>- identifier<br>- resource_type<br>- versioning information: if the resource does not have an explicit version number,<br>one or more dates should be supplied: ideally the date of resource publication and<br>the last update (if applicable).<br>- contributors (one or more required)<br>- titles (one or more required)<br>- meta<br><br>The resource_type field is required; if no value is supplied, it is populated<br>with 'dataset'.<br></td>
 </tr>
 <tr>
 <td><a href="DataSource/">DataSource</a></td>
@@ -595,7 +595,7 @@
 </tr>
 <tr>
 <td><a href="License/">License</a></td>
-<td>License information for the resource.</td>
+<td>License or rights information for the resource.<br><br>One (or more) of 'id', 'url', or 'name' is required.<br></td>
 </tr>
 <tr>
 <td><a href="Metadata/">Metadata</a></td>
@@ -611,7 +611,7 @@
 </tr>
 <tr>
 <td><a href="Title/">Title</a></td>
-<td>Represents the title or name of a resource, the type of that title, and the language used (if appropriate).<br><br>The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.<br></td>
+<td>Represents the title or name of a resource, the type of that title, and the language used (if appropriate).<br><br>The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.<br><br>If the title_type is 'translated_title', 'language' must be specified.<br></td>
 </tr>
 </tbody>
 </table>
@@ -693,6 +693,10 @@
 <td>The nature of the resource-related event that occurred on that date</td>
 </tr>
 <tr>
+<td><a href="event_information/">event_information</a></td>
+<td>Free text information about the event or date</td>
+</tr>
+<tr>
 <td><a href="family_name/">family_name</a></td>
 <td>The family name(s) of the contributor</td>
 </tr>
@@ -730,11 +734,11 @@
 </tr>
 <tr>
 <td><a href="language/">language</a></td>
-<td>The language in which the description is written, using the appropriate IETF ...</td>
+<td>The primary language of the resource, using the appropriate IETF BCP-47 notat...</td>
 </tr>
 <tr>
-<td><a href="license/">license</a></td>
-<td>Usage license for the resource</td>
+<td><a href="licenses/">licenses</a></td>
+<td>Usage licenses or rights statements for the resource</td>
 </tr>
 <tr>
 <td><a href="meta/">meta</a></td>
@@ -765,8 +769,12 @@
 <td>The relationship between the ID and some other entity</td>
 </tr>
 <tr>
+<td><a href="relationship_type_information/">relationship_type_information</a></td>
+<td>Free text further describing the relationship, e</td>
+</tr>
+<tr>
 <td><a href="resource_type/">resource_type</a></td>
-<td>The broad type of the source data for this object</td>
+<td>The broad type of the resource</td>
 </tr>
 <tr>
 <td><a href="saved_by/">saved_by</a></td>
@@ -1002,10 +1010,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -462,6 +462,76 @@
 <td>DataCite:summary</td>
 <td></td>
 </tr>
+<tr>
+<td>methods</td>
+<td>DataCite:Methods</td>
+<td>The methodology employed for the study or research</td>
+</tr>
+<tr>
+<td>series_information</td>
+<td>DataCite:SeriesInformation</td>
+<td>Information about a repeating series, such as volume, issue, or number</td>
+</tr>
+<tr>
+<td>table_of_contents</td>
+<td>DataCite:TableOfContents</td>
+<td>A listing of the table of contents</td>
+</tr>
+<tr>
+<td>technical_info</td>
+<td>DataCite:TechnicalInfo</td>
+<td>Detailed information that may be associated with design, implementation, oper...</td>
+</tr>
+<tr>
+<td>acknowledgement</td>
+<td>Crossref:acknowledgement</td>
+<td>Acknowledgement of contributions to the resource that are not otherwise credi...</td>
+</tr>
+<tr>
+<td>accessibility_statement</td>
+<td>Crossref:accessibility</td>
+<td>Statement about the accessibility of the resource</td>
+</tr>
+<tr>
+<td>ai_use_statement</td>
+<td>Crossref:ai_use</td>
+<td>Statement about the use of artificial intelligence tools in the creation of t...</td>
+</tr>
+<tr>
+<td>conflict_of_interest_statement</td>
+<td>Crossref:conflict_of_interest</td>
+<td>Statement disclosing any competing interests of the creators</td>
+</tr>
+<tr>
+<td>copyright_statement</td>
+<td>Crossref:copyright</td>
+<td>Statement of copyright for the resource</td>
+</tr>
+<tr>
+<td>data_availability_statement</td>
+<td>Crossref:data_availability</td>
+<td>Statement about where the data underlying the resource can be accessed, and a...</td>
+</tr>
+<tr>
+<td>ethics_statement</td>
+<td>Crossref:ethics</td>
+<td>Statement about ethical approval or ethical considerations for the work</td>
+</tr>
+<tr>
+<td>funding_statement</td>
+<td>Crossref:funding</td>
+<td>Free text statement of the funding received for the work</td>
+</tr>
+<tr>
+<td>versioning_statement</td>
+<td>Crossref:versioning</td>
+<td>Statement describing the version of the resource and how it differs from othe...</td>
+</tr>
+<tr>
+<td>other</td>
+<td>DataCite:Other</td>
+<td>Other description information that does not fit into an existing category</td>
+</tr>
 </tbody>
 </table>
 <h2 id="slots">Slots</h2>
@@ -503,6 +573,82 @@ permissible_values:
   summary:
     text: summary
     meaning: DataCite:summary
+    exact_mappings:
+    - commonmeta:Summary
+  methods:
+    text: methods
+    description: The methodology employed for the study or research.
+    meaning: DataCite:Methods
+    exact_mappings:
+    - commonmeta:Methods
+  series_information:
+    text: series_information
+    description: Information about a repeating series, such as volume, issue, or number.
+    meaning: DataCite:SeriesInformation
+  table_of_contents:
+    text: table_of_contents
+    description: A listing of the table of contents.
+    meaning: DataCite:TableOfContents
+  technical_info:
+    text: technical_info
+    description: Detailed information that may be associated with design, implementation,
+      operation, use, and/or maintenance of a process, system, or instrument. For
+      software, this may include the contents of a README file.
+    meaning: DataCite:TechnicalInfo
+    exact_mappings:
+    - commonmeta:TechnicalInfo
+    close_mappings:
+    - OSTI.ARTICLE:format_information
+  acknowledgement:
+    text: acknowledgement
+    description: Acknowledgement of contributions to the resource that are not otherwise
+      credited.
+    meaning: Crossref:acknowledgement
+  accessibility_statement:
+    text: accessibility_statement
+    description: Statement about the accessibility of the resource.
+    meaning: Crossref:accessibility
+  ai_use_statement:
+    text: ai_use_statement
+    description: Statement about the use of artificial intelligence tools in the creation
+      of the resource.
+    meaning: Crossref:ai_use
+  conflict_of_interest_statement:
+    text: conflict_of_interest_statement
+    description: Statement disclosing any competing interests of the creators.
+    meaning: Crossref:conflict_of_interest
+  copyright_statement:
+    text: copyright_statement
+    description: Statement of copyright for the resource.
+    meaning: Crossref:copyright
+  data_availability_statement:
+    text: data_availability_statement
+    description: Statement about where the data underlying the resource can be accessed,
+      and any conditions of access.
+    meaning: Crossref:data_availability
+  ethics_statement:
+    text: ethics_statement
+    description: Statement about ethical approval or ethical considerations for the
+      work.
+    meaning: Crossref:ethics
+  funding_statement:
+    text: funding_statement
+    description: Free text statement of the funding received for the work. Use 'funding'
+      for structured funding information.
+    meaning: Crossref:funding
+  versioning_statement:
+    text: versioning_statement
+    description: Statement describing the version of the resource and how it differs
+      from other versions.
+    meaning: Crossref:versioning
+  other:
+    text: other
+    description: Other description information that does not fit into an existing
+      category.
+    meaning: DataCite:Other
+    exact_mappings:
+    - commonmeta:Other
+    - Crossref:other
 
 </code></pre>
 
@@ -558,10 +704,10 @@ permissible_values:
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

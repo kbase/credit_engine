@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kbase.github.io/credit_engine/License/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.8.2" name="generator"/>
 <title>Class: License - Credit Metadata Schema</title>
-<link href="../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.57a0d79d.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.fb2fffe2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -267,12 +267,17 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-license">Class: License</h1>
-<p><em>License information for the resource.</em></p>
+<p><em>License or rights information for the resource.</em></p>
+<p>__</p>
+<p><em>One (or more) of 'id', 'url', or 'name' is required.</em></p>
+<p>__</p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/linkml/License">dcm:License</a></p>
 <div class="mermaid"> classDiagram
     class License
     click License href "../License"
       License : id
+
+      License : name
 
       License : url
 
@@ -302,6 +307,12 @@
 <td>URL for the license</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Full name of the license or a rights statement, if no SPDX identifier is avai...</td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -317,7 +328,7 @@
 <tbody>
 <tr>
 <td><a href="../CreditMetadata/">CreditMetadata</a></td>
-<td><a href="../license/">license</a></td>
+<td><a href="../licenses/">licenses</a></td>
 <td>range</td>
 <td><a href="./">License</a></td>
 </tr>
@@ -352,7 +363,12 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: License
-description: License information for the resource.
+description: 'License or rights information for the resource.
+
+
+  One (or more) of ''id'', ''url'', or ''name'' is required.
+
+  '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   id:
@@ -362,6 +378,10 @@ attributes:
     - value: CC-BY-NC-ND-4.0
     - value: Apache-2.0
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - commonmeta:license.id
+    close_mappings:
+    - DataCite:attributes.rights_list.rights_identifier
     rank: 1000
     domain_of:
     - License
@@ -372,10 +392,27 @@ attributes:
     examples:
     - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - commonmeta:license.url
+    - DataCite:attributes.rights_list.rights_uri
+    - Crossref:message.license.URL
     domain_of:
     - CreditMetadata
     - License
     range: uri
+  name:
+    name: name
+    description: Full name of the license or a rights statement, if no SPDX identifier
+      is available. Include version information if applicable.
+    examples:
+    - value: Creative Commons Attribution 4.0 International
+    - value: JGI Data Usage Policy
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.rights_list.rights
+    domain_of:
+    - Contributor
+    - License
 any_of:
 - slot_conditions:
     id:
@@ -385,13 +422,22 @@ any_of:
     url:
       name: url
       required: true
+- slot_conditions:
+    name:
+      name: name
+      required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: License
-description: License information for the resource.
+description: 'License or rights information for the resource.
+
+
+  One (or more) of ''id'', ''url'', or ''name'' is required.
+
+  '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   id:
@@ -401,6 +447,10 @@ attributes:
     - value: CC-BY-NC-ND-4.0
     - value: Apache-2.0
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - commonmeta:license.id
+    close_mappings:
+    - DataCite:attributes.rights_list.rights_identifier
     rank: 1000
     owner: License
     domain_of:
@@ -413,11 +463,30 @@ attributes:
     examples:
     - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
     from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - commonmeta:license.url
+    - DataCite:attributes.rights_list.rights_uri
+    - Crossref:message.license.URL
     owner: License
     domain_of:
     - CreditMetadata
     - License
     range: uri
+  name:
+    name: name
+    description: Full name of the license or a rights statement, if no SPDX identifier
+      is available. Include version information if applicable.
+    examples:
+    - value: Creative Commons Attribution 4.0 International
+    - value: JGI Data Usage Policy
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.rights_list.rights
+    owner: License
+    domain_of:
+    - Contributor
+    - License
+    range: string
 any_of:
 - slot_conditions:
     id:
@@ -426,6 +495,10 @@ any_of:
 - slot_conditions:
     url:
       name: url
+      required: true
+- slot_conditions:
+    name:
+      name: name
       required: true
 
 </code></pre>
@@ -454,8 +527,8 @@ any_of:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../js/tablesort.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";

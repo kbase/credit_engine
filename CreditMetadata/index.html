@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kbase.github.io/credit_engine/CreditMetadata/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.8.2" name="generator"/>
 <title>Class: CreditMetadata - Credit Metadata Schema</title>
-<link href="../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.57a0d79d.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.fb2fffe2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -264,13 +264,12 @@
 <p><em>that the CM pertains to, for example, a KBase Workspace object; a</em></p>
 <p><em>sample from NMDC or ESS-DIVE; sequence data from IMG.</em></p>
 <p>__</p>
-<p><em>The 'resource_type' field should be filled using values from the [DataCite</em></p>
-<p><em>resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).</em></p>
+<p><em>The 'resource_type' field takes values from the ResourceType enum, which combines</em></p>
+<p><em>the <a href="https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/">DataCite resourceTypeGeneral</a></em></p>
+<p><em>vocabulary with the resource types used by Commonmeta, Crossref, and OSTI. A free</em></p>
+<p><em>text description of the resource type can be supplied in 'resource_type_detail'.</em></p>
 <p>__</p>
-<p><em>Currently this schema only supports credit metadata for objects of type</em></p>
-<p><em>'dataset'; anything else will return an error.</em></p>
-<p>__</p>
-<p><em>The license may be supplied either as an URL pointing to licensing information for</em></p>
+<p><em>One or more licenses may be supplied. Each license may be given as an URL pointing to licensing information for</em></p>
 <p><em>the resource, or using an SPDX license identifier from the list maintained at <a href="https://spdx.org/licenses">https://spdx.org/licenses</a>.</em></p>
 <p>__</p>
 <p><em>Required fields are:</em></p>
@@ -283,8 +282,8 @@
 <p><em>- titles (one or more required)</em></p>
 <p><em>- meta</em></p>
 <p>__</p>
-<p><em>The resource_type field is required, but as there is currently only a single valid</em></p>
-<p><em>value, 'dataset', it is automatically populated if no value is supplied.</em></p>
+<p><em>The resource_type field is required; if no value is supplied, it is populated</em></p>
+<p><em>with 'dataset'.</em></p>
 <p>__</p>
 <p>URI: <a href="https://kbase.github.io/credit_engine/linkml/CreditMetadata">dcm:CreditMetadata</a></p>
 <div class="mermaid"> classDiagram
@@ -332,12 +331,14 @@
 
       CreditMetadata : identifier
 
-      CreditMetadata : license
+      CreditMetadata : language
+
+      CreditMetadata : licenses
 
 
 
 
-    CreditMetadata --&gt; "0..1" License : license
+    CreditMetadata --&gt; "*" License : licenses
     click License href "../License"
 
 
@@ -447,9 +448,15 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../license/">license</a></td>
-<td>0..1 <br/> <a href="../License/">License</a></td>
-<td>Usage license for the resource</td>
+<td><a href="../language/">language</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The primary language of the resource, using the appropriate IETF BCP-47 notat...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../licenses/">licenses</a></td>
+<td>* <br/> <a href="../License/">License</a></td>
+<td>Usage licenses or rights statements for the resource</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -473,7 +480,7 @@
 <tr>
 <td><a href="../resource_type/">resource_type</a></td>
 <td>1 <br/> <a href="../ResourceType/">ResourceType</a></td>
-<td>The broad type of the source data for this object</td>
+<td>The broad type of the resource</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -535,17 +542,17 @@ description: 'Represents the credit metadata associated with an object.
   sample from NMDC or ESS-DIVE; sequence data from IMG.
 
 
-  The ''resource_type'' field should be filled using values from the [DataCite
+  The ''resource_type'' field takes values from the ResourceType enum, which combines
 
-  resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).
+  the [DataCite resourceTypeGeneral](https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/)
+
+  vocabulary with the resource types used by Commonmeta, Crossref, and OSTI. A free
+
+  text description of the resource type can be supplied in ''resource_type_detail''.
 
 
-  Currently this schema only supports credit metadata for objects of type
-
-  ''dataset''; anything else will return an error.
-
-
-  The license may be supplied either as an URL pointing to licensing information for
+  One or more licenses may be supplied. Each license may be given as an URL pointing
+  to licensing information for
 
   the resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).
 
@@ -569,9 +576,9 @@ description: 'Represents the credit metadata associated with an object.
   - meta
 
 
-  The resource_type field is required, but as there is currently only a single valid
+  The resource_type field is required; if no value is supplied, it is populated
 
-  value, ''dataset'', it is automatically populated if no value is supplied.
+  with ''dataset''.
 
   '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -628,6 +635,9 @@ attributes:
     - ORCID:publicationDate
     - OSTI.ARTICLE:publication_date
     - Crossref:message.deposited
+    - commonmeta:date
+    - Crossref:database_date
+    - OSTI.ARTICLE:media_embargo_sunset_date
     rank: 1000
     domain_of:
     - CreditMetadata
@@ -638,6 +648,13 @@ attributes:
     name: descriptions
     description: A brief description or abstract for the resource being represented.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:attributes.descriptions
+    - commonmeta:descriptions
+    close_mappings:
+    - Crossref:abstract
+    - Crossref:statement_info
+    - OSTI.ARTICLE:description
     rank: 1000
     slot_uri: schema:description
     domain_of:
@@ -689,22 +706,53 @@ attributes:
     range: uriorcurie
     required: true
     pattern: ^[a-zA-Z0-9.-_]+:\S
-  license:
-    name: license
-    description: 'Usage license for the resource. Use one of the SPDX license identifiers
-      or provide a link to the license text if no SPDX ID is available.
+  language:
+    name: language
+    description: The primary language of the resource, using the appropriate IETF
+      BCP-47 notation.
+    examples:
+    - value: ru-Cyrl
+    - value: en
+    - value: fr
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:attributes.language
+    - commonmeta:language
+    - Crossref:message.language
+    close_mappings:
+    - OSTI.ARTICLE:languages
+    rank: 1000
+    slot_uri: schema:inLanguage
+    domain_of:
+    - CreditMetadata
+    - Title
+  licenses:
+    name: licenses
+    description: 'Usage licenses or rights statements for the resource. For each license,
+      use one of the SPDX license identifiers or provide a link to the license text
+      if no SPDX ID is available.
+
+
+      Supply more than one license if different licenses apply to different versions
+      or uses of the resource (see ''applies_to''), or if the resource is available
+      under a choice of licenses.
 
       '
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - biolink:license
+    - commonmeta:license
     related_mappings:
     - DataCite:attributes.rights_list
+    - Crossref:message.license
+    - OSTI.ARTICLE:access_limitations
     rank: 1000
     slot_uri: schema:license
     domain_of:
     - CreditMetadata
     range: License
+    multivalued: true
+    inlined_as_list: true
   meta:
     name: meta
     description: Metadata for this credit information, including submitter, schema
@@ -748,19 +796,25 @@ attributes:
     inlined_as_list: true
   resource_type:
     name: resource_type
-    description: The broad type of the source data for this object. 'dataset' is currently
-      the only valid value supported by this schema.
+    description: The broad type of the resource. Defaults to 'dataset'.
     examples:
     - value: dataset
+    - value: software
+    - value: workflow
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
+    - DataCite:attributes.types.resource_type_general
+    - commonmeta:type
     - OSTI.ARTICLE:product_type
     - OSTI.ARTICLE:workType
     - DataCite:attributes.types.schema_org
+    close_mappings:
+    - Crossref:message.type
     narrow_mappings:
     - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
+    ifabsent: ResourceType(dataset)
     domain_of:
     - CreditMetadata
     range: ResourceType
@@ -830,17 +884,17 @@ description: 'Represents the credit metadata associated with an object.
   sample from NMDC or ESS-DIVE; sequence data from IMG.
 
 
-  The ''resource_type'' field should be filled using values from the [DataCite
+  The ''resource_type'' field takes values from the ResourceType enum, which combines
 
-  resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).
+  the [DataCite resourceTypeGeneral](https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/)
+
+  vocabulary with the resource types used by Commonmeta, Crossref, and OSTI. A free
+
+  text description of the resource type can be supplied in ''resource_type_detail''.
 
 
-  Currently this schema only supports credit metadata for objects of type
-
-  ''dataset''; anything else will return an error.
-
-
-  The license may be supplied either as an URL pointing to licensing information for
+  One or more licenses may be supplied. Each license may be given as an URL pointing
+  to licensing information for
 
   the resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).
 
@@ -864,9 +918,9 @@ description: 'Represents the credit metadata associated with an object.
   - meta
 
 
-  The resource_type field is required, but as there is currently only a single valid
+  The resource_type field is required; if no value is supplied, it is populated
 
-  value, ''dataset'', it is automatically populated if no value is supplied.
+  with ''dataset''.
 
   '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
@@ -927,6 +981,9 @@ attributes:
     - ORCID:publicationDate
     - OSTI.ARTICLE:publication_date
     - Crossref:message.deposited
+    - commonmeta:date
+    - Crossref:database_date
+    - OSTI.ARTICLE:media_embargo_sunset_date
     rank: 1000
     owner: CreditMetadata
     domain_of:
@@ -939,6 +996,13 @@ attributes:
     name: descriptions
     description: A brief description or abstract for the resource being represented.
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:attributes.descriptions
+    - commonmeta:descriptions
+    close_mappings:
+    - Crossref:abstract
+    - Crossref:statement_info
+    - OSTI.ARTICLE:description
     rank: 1000
     slot_uri: schema:description
     owner: CreditMetadata
@@ -995,23 +1059,57 @@ attributes:
     range: uriorcurie
     required: true
     pattern: ^[a-zA-Z0-9.-_]+:\S
-  license:
-    name: license
-    description: 'Usage license for the resource. Use one of the SPDX license identifiers
-      or provide a link to the license text if no SPDX ID is available.
+  language:
+    name: language
+    description: The primary language of the resource, using the appropriate IETF
+      BCP-47 notation.
+    examples:
+    - value: ru-Cyrl
+    - value: en
+    - value: fr
+    from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
+    exact_mappings:
+    - DataCite:attributes.language
+    - commonmeta:language
+    - Crossref:message.language
+    close_mappings:
+    - OSTI.ARTICLE:languages
+    rank: 1000
+    slot_uri: schema:inLanguage
+    owner: CreditMetadata
+    domain_of:
+    - CreditMetadata
+    - Title
+    range: string
+  licenses:
+    name: licenses
+    description: 'Usage licenses or rights statements for the resource. For each license,
+      use one of the SPDX license identifiers or provide a link to the license text
+      if no SPDX ID is available.
+
+
+      Supply more than one license if different licenses apply to different versions
+      or uses of the resource (see ''applies_to''), or if the resource is available
+      under a choice of licenses.
 
       '
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
     - biolink:license
+    - commonmeta:license
     related_mappings:
     - DataCite:attributes.rights_list
+    - Crossref:message.license
+    - OSTI.ARTICLE:access_limitations
     rank: 1000
     slot_uri: schema:license
     owner: CreditMetadata
     domain_of:
     - CreditMetadata
     range: License
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   meta:
     name: meta
     description: Metadata for this credit information, including submitter, schema
@@ -1059,19 +1157,25 @@ attributes:
     inlined_as_list: true
   resource_type:
     name: resource_type
-    description: The broad type of the source data for this object. 'dataset' is currently
-      the only valid value supported by this schema.
+    description: The broad type of the resource. Defaults to 'dataset'.
     examples:
     - value: dataset
+    - value: software
+    - value: workflow
     from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
     exact_mappings:
+    - DataCite:attributes.types.resource_type_general
+    - commonmeta:type
     - OSTI.ARTICLE:product_type
     - OSTI.ARTICLE:workType
     - DataCite:attributes.types.schema_org
+    close_mappings:
+    - Crossref:message.type
     narrow_mappings:
     - OSTI.ARTICLE:dataset_type
     rank: 1000
     slot_uri: schema:@type
+    ifabsent: ResourceType(dataset)
     owner: CreditMetadata
     domain_of:
     - CreditMetadata
@@ -1158,8 +1262,8 @@ any_of:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../js/tablesort.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";

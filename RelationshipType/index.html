@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -458,6 +458,11 @@
 <td>Indicates that A includes B in a citation</td>
 </tr>
 <tr>
+<td>collects</td>
+<td>DataCite:Collects</td>
+<td>Indicates that A is used to collect B, e</td>
+</tr>
+<tr>
 <td>compiles</td>
 <td>DataCite:Compiles</td>
 <td>Indicates B is the result of a compile or creation event using A</td>
@@ -545,7 +550,7 @@
 <tr>
 <td>has_translation</td>
 <td>Crossref:HasTranslation</td>
-<td></td>
+<td>Indicates B is a translation of A</td>
 </tr>
 <tr>
 <td>has_version</td>
@@ -566,6 +571,11 @@
 <td>is_cited_by</td>
 <td>DataCite:IsCitedBy</td>
 <td>Indicates that B includes A in a citation</td>
+</tr>
+<tr>
+<td>is_collected_by</td>
+<td>DataCite:IsCollectedBy</td>
+<td>Indicates that A is collected by B, e</td>
 </tr>
 <tr>
 <td>is_comment_on</td>
@@ -730,7 +740,7 @@
 <tr>
 <td>is_translation_of</td>
 <td>Crossref:IsTranslationOf</td>
-<td></td>
+<td>Indicates A is a translation of B</td>
 </tr>
 <tr>
 <td>is_variant_form_of</td>
@@ -746,6 +756,11 @@
 <td>obsoletes</td>
 <td>DataCite:Obsoletes</td>
 <td>Indicates A replaces B</td>
+</tr>
+<tr>
+<td>other</td>
+<td>DataCite:Other</td>
+<td>Indicates A is related to B in a way not covered by the other relationship ty...</td>
 </tr>
 <tr>
 <td>references</td>
@@ -813,6 +828,11 @@ permissible_values:
     text: cites
     description: Indicates that A includes B in a citation.
     meaning: DataCite:Cites
+  collects:
+    text: collects
+    description: Indicates that A is used to collect B, e.g. an instrument (A) used
+      to collect a dataset (B).
+    meaning: DataCite:Collects
   compiles:
     text: compiles
     description: Indicates B is the result of a compile or creation event using A.
@@ -889,8 +909,11 @@ permissible_values:
     title: has review
   has_translation:
     text: has_translation
+    description: Indicates B is a translation of A.
     meaning: Crossref:HasTranslation
     title: has translation
+    exact_mappings:
+    - DataCite:HasTranslation
   has_version:
     text: has_version
     description: Indicates A has a version (B). The registered resource such as a
@@ -912,6 +935,12 @@ permissible_values:
     description: Indicates that B includes A in a citation.
     meaning: DataCite:IsCitedBy
     title: is cited by
+  is_collected_by:
+    text: is_collected_by
+    description: Indicates that A is collected by B, e.g. a dataset (A) collected
+      using an instrument (B).
+    meaning: DataCite:IsCollectedBy
+    title: is collected by
   is_comment_on:
     text: is_comment_on
     meaning: Crossref:IsCommentOn
@@ -1078,8 +1107,11 @@ permissible_values:
     title: is supplemented by
   is_translation_of:
     text: is_translation_of
+    description: Indicates A is a translation of B.
     meaning: Crossref:IsTranslationOf
     title: is translation of
+    exact_mappings:
+    - DataCite:IsTranslationOf
   is_variant_form_of:
     text: is_variant_form_of
     description: Indicates A is a variant or different form of B. Use for a different
@@ -1098,6 +1130,11 @@ permissible_values:
     text: obsoletes
     description: Indicates A replaces B.
     meaning: DataCite:Obsoletes
+  other:
+    text: other
+    description: Indicates A is related to B in a way not covered by the other relationship
+      types. Describe the relationship in the 'relationship_type_information' field.
+    meaning: DataCite:Other
   references:
     text: references
     description: Indicates B is used as a source of information for A.
@@ -1179,10 +1216,10 @@ reachable_from:
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

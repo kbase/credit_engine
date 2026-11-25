@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -457,7 +457,7 @@
 
 
 <h1 id="slot-resource_type">Slot: resource_type</h1>
-<p><em>The broad type of the source data for this object. 'dataset' is currently the only valid value supported by this schema.</em></p>
+<p><em>The broad type of the resource. Defaults to 'dataset'.</em></p>
 <p>URI: <a href="http://schema.org/@type">schema:@type</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -498,6 +498,12 @@
 <tr>
 <td>dataset</td>
 </tr>
+<tr>
+<td>software</td>
+</tr>
+<tr>
+<td>workflow</td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -524,11 +530,15 @@
 </tr>
 <tr>
 <td>exact</td>
-<td>OSTI.ARTICLE:product_type, OSTI.ARTICLE:workType, DataCite:attributes.types.schema_org</td>
+<td>DataCite:attributes.types.resource_type_general, commonmeta:type, OSTI.ARTICLE:product_type, OSTI.ARTICLE:workType, DataCite:attributes.types.schema_org</td>
 </tr>
 <tr>
 <td>narrow</td>
 <td>OSTI.ARTICLE:dataset_type</td>
+</tr>
+<tr>
+<td>close</td>
+<td>Crossref:message.type</td>
 </tr>
 </tbody>
 </table>
@@ -536,19 +546,25 @@
 <details>
 
 <pre><code class="language-yaml">name: resource_type
-description: The broad type of the source data for this object. 'dataset' is currently
-  the only valid value supported by this schema.
+description: The broad type of the resource. Defaults to 'dataset'.
 examples:
 - value: dataset
+- value: software
+- value: workflow
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 exact_mappings:
+- DataCite:attributes.types.resource_type_general
+- commonmeta:type
 - OSTI.ARTICLE:product_type
 - OSTI.ARTICLE:workType
 - DataCite:attributes.types.schema_org
+close_mappings:
+- Crossref:message.type
 narrow_mappings:
 - OSTI.ARTICLE:dataset_type
 rank: 1000
 slot_uri: schema:@type
+ifabsent: ResourceType(dataset)
 owner: CreditMetadata
 domain_of:
 - CreditMetadata
@@ -609,10 +625,10 @@ required: true
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

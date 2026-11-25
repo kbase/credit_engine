@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kbase.github.io/credit_engine/license/">
+        <link rel="canonical" href="https://kbase.github.io/credit_engine/licenses/">
       
       
       
@@ -17,18 +17,18 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
-        <title>Slot: license - Credit Metadata Schema</title>
+        <title>Slot: licenses - Credit Metadata Schema</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-license" class="md-skip">
+        <a href="#slot-licenses" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: license
+              Slot: licenses
             
           </span>
         </div>
@@ -445,8 +445,10 @@
   
 
 
-<h1 id="slot-license">Slot: license</h1>
-<p><em>Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.</em></p>
+<h1 id="slot-licenses">Slot: licenses</h1>
+<p><em>Usage licenses or rights statements for the resource. For each license, use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.</em></p>
+<p>__</p>
+<p><em>Supply more than one license if different licenses apply to different versions or uses of the resource (see 'applies_to'), or if the resource is available under a choice of licenses.</em></p>
 <p>__</p>
 <p>URI: <a href="http://schema.org/license">schema:license</a></p>
 <!-- no inheritance hierarchy -->
@@ -470,7 +472,12 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../License/">License</a></li>
+<li>
+<p>Range: <a href="../License/">License</a></p>
+</li>
+<li>
+<p>Multivalued: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -492,37 +499,49 @@
 </tr>
 <tr>
 <td>native</td>
-<td>dcm:license</td>
+<td>dcm:licenses</td>
 </tr>
 <tr>
 <td>exact</td>
-<td>biolink:license</td>
+<td>biolink:license, commonmeta:license</td>
 </tr>
 <tr>
 <td>related</td>
-<td>DataCite:attributes.rights_list</td>
+<td>DataCite:attributes.rights_list, Crossref:message.license, OSTI.ARTICLE:access_limitations</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: license
-description: 'Usage license for the resource. Use one of the SPDX license identifiers
-  or provide a link to the license text if no SPDX ID is available.
+<pre><code class="language-yaml">name: licenses
+description: 'Usage licenses or rights statements for the resource. For each license,
+  use one of the SPDX license identifiers or provide a link to the license text if
+  no SPDX ID is available.
+
+
+  Supply more than one license if different licenses apply to different versions or
+  uses of the resource (see ''applies_to''), or if the resource is available under
+  a choice of licenses.
 
   '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 exact_mappings:
 - biolink:license
+- commonmeta:license
 related_mappings:
 - DataCite:attributes.rights_list
+- Crossref:message.license
+- OSTI.ARTICLE:access_limitations
 rank: 1000
 slot_uri: schema:license
 owner: CreditMetadata
 domain_of:
 - CreditMetadata
 range: License
+multivalued: true
+inlined: true
+inlined_as_list: true
 
 </code></pre>
 
@@ -578,10 +597,10 @@ range: License
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

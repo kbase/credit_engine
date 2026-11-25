@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kbase.github.io/credit_engine/EventDate/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.8.2" name="generator"/>
 <title>Class: EventDate - Credit Metadata Schema</title>
-<link href="../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.57a0d79d.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.fb2fffe2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -286,6 +286,8 @@
     click EventType href "../EventType"
 
 
+      EventDate : event_information
+
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -310,6 +312,12 @@
 <td><a href="../event/">event</a></td>
 <td>1 <br/> <a href="../EventType/">EventType</a></td>
 <td>The nature of the resource-related event that occurred on that date</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../event_information/">event_information</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Free text information about the event or date</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -374,18 +382,28 @@ from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   date:
     name: date
-    description: The date associated with the event. The date may be in the format
-      YYYY, YYYY-MM, or YYYY-MM-DD.
+    description: 'The date associated with the event. The date may be in the format
+      YYYY, YYYY-MM, YYYY-MM-DD, or an ISO 8601 date-time (YYYY-MM-DDThh:mm:ssTZD).
+
+
+      A date range may be given using the [RKMS-ISO8601](https://www.ukoln.ac.uk/metadata/dcmi/collection-RKMS-ISO8601/)
+      notation, e.g. 2020-01-01/2020-06-30. The start of the range may be ''unknown'';
+      the end may be ''unknown'' or ''open''. Date ranges are useful for ''collected'',
+      ''coverage'', and ''valid'' events.
+
+      '
     examples:
     - value: '2001'
     - value: 2021-05
     - value: '1998-02-15'
+    - value: '2022-05-03T14:21:07Z'
+    - value: 2019-04-01/2019-09-30
     from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     domain_of:
     - EventDate
     required: true
-    pattern: \d{4}(-\d{2}){0,2}
+    pattern: ^(\d{4}(-\d{2}){0,2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})?)?|unknown)(/(\d{4}(-\d{2}){0,2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})?)?|unknown|open))?$
   event:
     name: event
     description: The nature of the resource-related event that occurred on that date.
@@ -398,6 +416,18 @@ attributes:
     - EventDate
     range: EventType
     required: true
+  event_information:
+    name: event_information
+    description: Free text information about the event or date.
+    examples:
+    - value: Embargo period ended.
+    - value: Samples collected during the 2019 field season.
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.dates.date_information
+    rank: 1000
+    domain_of:
+    - EventDate
 
 </code></pre>
 </details>
@@ -416,12 +446,22 @@ from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 attributes:
   date:
     name: date
-    description: The date associated with the event. The date may be in the format
-      YYYY, YYYY-MM, or YYYY-MM-DD.
+    description: 'The date associated with the event. The date may be in the format
+      YYYY, YYYY-MM, YYYY-MM-DD, or an ISO 8601 date-time (YYYY-MM-DDThh:mm:ssTZD).
+
+
+      A date range may be given using the [RKMS-ISO8601](https://www.ukoln.ac.uk/metadata/dcmi/collection-RKMS-ISO8601/)
+      notation, e.g. 2020-01-01/2020-06-30. The start of the range may be ''unknown'';
+      the end may be ''unknown'' or ''open''. Date ranges are useful for ''collected'',
+      ''coverage'', and ''valid'' events.
+
+      '
     examples:
     - value: '2001'
     - value: 2021-05
     - value: '1998-02-15'
+    - value: '2022-05-03T14:21:07Z'
+    - value: 2019-04-01/2019-09-30
     from_schema: https://kbase.github.io/credit_engine/linkml/components
     rank: 1000
     owner: EventDate
@@ -429,7 +469,7 @@ attributes:
     - EventDate
     range: string
     required: true
-    pattern: \d{4}(-\d{2}){0,2}
+    pattern: ^(\d{4}(-\d{2}){0,2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})?)?|unknown)(/(\d{4}(-\d{2}){0,2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})?)?|unknown|open))?$
   event:
     name: event
     description: The nature of the resource-related event that occurred on that date.
@@ -443,6 +483,20 @@ attributes:
     - EventDate
     range: EventType
     required: true
+  event_information:
+    name: event_information
+    description: Free text information about the event or date.
+    examples:
+    - value: Embargo period ended.
+    - value: Samples collected during the 2019 field season.
+    from_schema: https://kbase.github.io/credit_engine/linkml/components
+    exact_mappings:
+    - DataCite:attributes.dates.date_information
+    rank: 1000
+    owner: EventDate
+    domain_of:
+    - EventDate
+    range: string
 
 </code></pre>
 </details>
@@ -470,8 +524,8 @@ attributes:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../js/tablesort.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";

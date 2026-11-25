@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -453,6 +453,16 @@
 <td>The date that the publisher accepted the resource into their system</td>
 </tr>
 <tr>
+<td>accessed</td>
+<td>commonmeta:date.accessed</td>
+<td>The date the resource was accessed, e</td>
+</tr>
+<tr>
+<td>approved</td>
+<td>Crossref:approval_date</td>
+<td>The date on which a dissertation was accepted by the institution awarding the...</td>
+</tr>
+<tr>
 <td>available</td>
 <td>DataCite:available</td>
 <td>The date the resource is made publicly available</td>
@@ -466,6 +476,11 @@
 <td>collected</td>
 <td>DataCite:collected</td>
 <td>The date or date range in which the resource content was collected</td>
+</tr>
+<tr>
+<td>coverage</td>
+<td>DataCite:Coverage</td>
+<td>The date or date range that the content of the resource is about, e</td>
 </tr>
 <tr>
 <td>created</td>
@@ -539,6 +554,25 @@ permissible_values:
 
       '
     meaning: DataCite:accepted
+    exact_mappings:
+    - commonmeta:date.accepted
+    - Crossref:acceptance_date
+  accessed:
+    text: accessed
+    description: 'The date the resource was accessed, e.g. when the resource content
+      was retrieved for use in another resource.
+
+      '
+    meaning: commonmeta:date.accessed
+  approved:
+    text: approved
+    description: 'The date on which a dissertation was accepted by the institution
+      awarding the degree, a report was approved, or a standard was accepted.
+
+      '
+    meaning: Crossref:approval_date
+    close_mappings:
+    - Crossref:posted_date
   available:
     text: available
     description: 'The date the resource is made publicly available. To indicate the
@@ -560,6 +594,16 @@ permissible_values:
 
       '
     meaning: DataCite:collected
+  coverage:
+    text: coverage
+    description: 'The date or date range that the content of the resource is about,
+      e.g. the time period covered by a set of observations or a report.
+
+      '
+    meaning: DataCite:Coverage
+    close_mappings:
+    - OSTI.ARTICLE:report_period_start_date
+    - OSTI.ARTICLE:report_period_end_date
   created:
     text: created
     description: 'The date the resource itself was put together; this could refer
@@ -568,6 +612,9 @@ permissible_values:
 
       '
     meaning: DataCite:created
+    exact_mappings:
+    - commonmeta:date.created
+    - Crossref:creation_date
   issued:
     text: issued
     description: 'The date that the resource is published or distributed e.g. to a
@@ -575,6 +622,9 @@ permissible_values:
 
       '
     meaning: DataCite:issued
+    close_mappings:
+    - commonmeta:date.published
+    - Crossref:publication_date
   submitted:
     text: submitted
     description: 'The date the creator submits the resource to the publisher. This
@@ -668,10 +718,10 @@ reachable_from:
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

@@ -7,9 +7,10 @@ description: |
   The schema is based heavily on the [DataCite Metadata Schema](https://schema.datacite.org) and [Commonmeta](https://docs.commonmeta.org), with some alterations and additions to allow more accurate capture of dataset-relevant information.
 
   Schema documentation is available at https://kbase.github.io/credit_engine/.
-version: 0.0.7
+version: 0.0.8
 prefixes:
   biolink: https://w3id.org/biolink/vocab/
+  commonmeta: https://commonmeta.org/
   dcm: https://kbase.github.io/credit_engine/linkml/
   Crossref: https://crossref.org/
   DataCite: http://purl.org/spar/datacite/
@@ -39,13 +40,12 @@ classes:
       that the CM pertains to, for example, a KBase Workspace object; a
       sample from NMDC or ESS-DIVE; sequence data from IMG.
 
-      The 'resource_type' field should be filled using values from the [DataCite
-      resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).
+      The 'resource_type' field takes values from the ResourceType enum, which combines
+      the [DataCite resourceTypeGeneral](https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/)
+      vocabulary with the resource types used by Commonmeta, Crossref, and OSTI. A free
+      text description of the resource type can be supplied in 'resource_type_detail'.
 
-      Currently this schema only supports credit metadata for objects of type
-      'dataset'; anything else will return an error.
-
-      The license may be supplied either as an URL pointing to licensing information for
+      One or more licenses may be supplied. Each license may be given as an URL pointing to licensing information for
       the resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).
 
       Required fields are:
@@ -58,8 +58,8 @@ classes:
       - titles (one or more required)
       - meta
 
-      The resource_type field is required, but as there is currently only a single valid
-      value, 'dataset', it is automatically populated if no value is supplied.
+      The resource_type field is required; if no value is supplied, it is populated
+      with 'dataset'.
 
     attributes:
       comment:
@@ -112,6 +112,13 @@ classes:
           - Crossref:message.deposited
             # from: Crossref:message.deposited
             # via { date: src.message.deposited.date-time, event: 'available' }
+          - commonmeta:date
+            # from: commonmeta:date.<key>
+            # via { date: src.date.<key>, event: <key> } ('published' => 'issued')
+          - Crossref:database_date
+            # creation_date => 'created'; publication_date => 'issued'; update_date => 'updated'
+          - OSTI.ARTICLE:media_embargo_sunset_date
+            # via { date: src.media_embargo_sunset_date, event: 'available' }
 
       descriptions:
         slot_uri: schema:description
@@ -119,6 +126,13 @@ classes:
         multivalued: true
         range: Description
         inlined_as_list: true
+        exact_mappings:
+          - DataCite:attributes.descriptions
+          - commonmeta:descriptions
+        close_mappings:
+          - Crossref:abstract
+          - Crossref:statement_info
+          - OSTI.ARTICLE:description
 
       funding:
         slot_uri: schema:funding
@@ -162,16 +176,37 @@ classes:
           # it should be possible to generate an URL from a curie
           - ORCID:url
 
-      license:
+      language:
+        slot_uri: schema:inLanguage
+        description: The primary language of the resource, using the appropriate IETF BCP-47 notation.
+        examples:
+          - value: ru-Cyrl
+          - value: en
+          - value: fr
+        exact_mappings:
+          - DataCite:attributes.language
+          - commonmeta:language
+          - Crossref:message.language
+        close_mappings:
+          - OSTI.ARTICLE:languages
+
+      licenses:
         slot_uri: schema:license
         # also slot_uri:isAccessibleForFree
         range: License
+        multivalued: true
+        inlined_as_list: true
         description: |
-          Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
+          Usage licenses or rights statements for the resource. For each license, use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
+
+          Supply more than one license if different licenses apply to different versions or uses of the resource (see 'applies_to'), or if the resource is available under a choice of licenses.
         exact_mappings:
           - biolink:license
+          - commonmeta:license
         related_mappings:
           - DataCite:attributes.rights_list
+          - Crossref:message.license
+          - OSTI.ARTICLE:access_limitations
 
       meta:
         description: Metadata for this credit information, including submitter, schema version, and timestamp.
@@ -207,20 +242,27 @@ classes:
 
       resource_type:
         slot_uri: schema:@type
-        description: The broad type of the source data for this object. 'dataset' is currently the only valid value supported by this schema.
+        description: The broad type of the resource. Defaults to 'dataset'.
         range: ResourceType
         required: true
+        ifabsent: ResourceType(dataset)
         exact_mappings:
+          - DataCite:attributes.types.resource_type_general
+          - commonmeta:type
           # OSTI.ARTICLE:DA is used for dataset
           - OSTI.ARTICLE:product_type
           # ORCID:data-set
           - OSTI.ARTICLE:workType
           # see DataCite:attributes.types
           - DataCite:attributes.types.schema_org
+        close_mappings:
+          - Crossref:message.type
         narrow_mappings:
           - OSTI.ARTICLE:dataset_type
         examples:
           - value: dataset
+          - value: software
+          - value: workflow
 
       titles:
         description: One or more titles for the resource.

@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -543,6 +543,11 @@
 <td>Designated administrator over one or more groups/teams working to produce a r...</td>
 </tr>
 <tr>
+<td>translator</td>
+<td>DataCite:Translator</td>
+<td>Person, organisation or automated system responsible for rendering the conten...</td>
+</tr>
+<tr>
 <td>work_package_leader</td>
 <td>DataCite:WorkPackageLeader</td>
 <td>A Work Package is a recognized data product, not all of which is included in ...</td>
@@ -551,6 +556,51 @@
 <td>other</td>
 <td>DataCite:Other</td>
 <td>Any person or institution making a significant contribution to the developmen...</td>
+</tr>
+<tr>
+<td>author</td>
+<td>Crossref:author</td>
+<td>A creator of the resource</td>
+</tr>
+<tr>
+<td>chair</td>
+<td>Crossref:chair</td>
+<td>Person who chairs a conference, committee, or other body responsible for the ...</td>
+</tr>
+<tr>
+<td>corresponding_author</td>
+<td>Crossref:corresponding-author</td>
+<td>The author responsible for correspondence about the resource</td>
+</tr>
+<tr>
+<td>maintainer</td>
+<td>commonmeta:Maintainer</td>
+<td>Person or organisation responsible for the ongoing maintenance of the resourc...</td>
+</tr>
+<tr>
+<td>reader</td>
+<td>Crossref:reader</td>
+<td>Person who reads the resource aloud, e</td>
+</tr>
+<tr>
+<td>reviewer</td>
+<td>Crossref:reviewer</td>
+<td>Person who reviews the resource, e</td>
+</tr>
+<tr>
+<td>review_assistant</td>
+<td>Crossref:review-assistant</td>
+<td>Person who assists a reviewer</td>
+</tr>
+<tr>
+<td>reviewer_external</td>
+<td>Crossref:reviewer-external</td>
+<td>Reviewer from outside the organisation or editorial board responsible for the...</td>
+</tr>
+<tr>
+<td>stats_reviewer</td>
+<td>Crossref:stats-reviewer</td>
+<td>Reviewer who assesses the statistical methods and analysis used in the resour...</td>
 </tr>
 <tr>
 <td>conceptualization</td>
@@ -812,6 +862,16 @@ permissible_values:
       produce a resource or over one or more steps of a development process.
     meaning: DataCite:Supervisor
     title: supervisor
+  translator:
+    text: translator
+    description: Person, organisation or automated system responsible for rendering
+      the content of a resource from one language into another.
+    meaning: DataCite:Translator
+    title: translator
+    exact_mappings:
+    - Crossref:translator
+    - commonmeta:Translator
+    - OSTI.ARTICLE:Translator
   work_package_leader:
     text: work_package_leader
     description: A Work Package is a recognized data product, not all of which is
@@ -832,6 +892,75 @@ permissible_values:
       analysing usage, etc.), or one of many other roles.
     meaning: DataCite:Other
     title: other
+  author:
+    text: author
+    description: A creator of the resource. Equivalent to a DataCite creator.
+    meaning: Crossref:author
+    title: author
+    exact_mappings:
+    - commonmeta:Author
+    - OSTI.ARTICLE:AUTHOR
+  chair:
+    text: chair
+    description: Person who chairs a conference, committee, or other body responsible
+      for the resource.
+    meaning: Crossref:chair
+    title: chair
+    exact_mappings:
+    - commonmeta:Chair
+    - OSTI.ARTICLE:Chair
+  corresponding_author:
+    text: corresponding_author
+    description: The author responsible for correspondence about the resource.
+    meaning: Crossref:corresponding-author
+    title: corresponding author
+  maintainer:
+    text: maintainer
+    description: Person or organisation responsible for the ongoing maintenance of
+      the resource, e.g. a software package or a database.
+    meaning: commonmeta:Maintainer
+    title: maintainer
+  reader:
+    text: reader
+    description: Person who reads the resource aloud, e.g. for an audio recording.
+    meaning: Crossref:reader
+    title: reader
+    exact_mappings:
+    - commonmeta:Reader
+  reviewer:
+    text: reviewer
+    description: Person who reviews the resource, e.g. a peer reviewer.
+    meaning: Crossref:reviewer
+    title: reviewer
+    exact_mappings:
+    - commonmeta:Reviewer
+    - OSTI.ARTICLE:Reviewer
+  review_assistant:
+    text: review_assistant
+    description: Person who assists a reviewer.
+    meaning: Crossref:review-assistant
+    title: review assistant
+    exact_mappings:
+    - commonmeta:ReviewAssistant
+    - OSTI.ARTICLE:ReviewAssistant
+  reviewer_external:
+    text: reviewer_external
+    description: Reviewer from outside the organisation or editorial board responsible
+      for the review process.
+    meaning: Crossref:reviewer-external
+    title: external reviewer
+    exact_mappings:
+    - commonmeta:ReviewerExternal
+    - OSTI.ARTICLE:ReviewerExternal
+  stats_reviewer:
+    text: stats_reviewer
+    description: Reviewer who assesses the statistical methods and analysis used in
+      the resource.
+    meaning: Crossref:stats-reviewer
+    title: statistical reviewer
+    exact_mappings:
+    - commonmeta:StatsReviewer
+    - OSTI.ARTICLE:StatsReviewer
   conceptualization:
     text: conceptualization
     description: Ideas; formulation or evolution of overarching research goals and
@@ -980,10 +1109,10 @@ reachable_from:
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

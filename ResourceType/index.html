@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -436,6 +436,9 @@
 
 <h1 id="enum-resourcetype">Enum: ResourceType</h1>
 <p><em>The type of resource being represented.</em></p>
+<p>__</p>
+<p><em>Values combine the <a href="https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/">DataCite resourceTypeGeneral</a> vocabulary (v4.7) with the resource types used by <a href="https://docs.commonmeta.org">Commonmeta</a>, Crossref, and OSTI. Where a resource type exists in DataCite, the DataCite term is used.</em></p>
+<p>__</p>
 <p>URI: <a href="./">ResourceType</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -448,9 +451,279 @@
 </thead>
 <tbody>
 <tr>
+<td>article</td>
+<td>commonmeta:Article</td>
+<td>An article not published in a journal or proceedings, e</td>
+</tr>
+<tr>
+<td>audiovisual</td>
+<td>DataCite:Audiovisual</td>
+<td>A series of visual representations imparting an impression of motion when sho...</td>
+</tr>
+<tr>
+<td>award</td>
+<td>DataCite:Award</td>
+<td>Funding or support provided to an individual or organization to conduct resea...</td>
+</tr>
+<tr>
+<td>blog</td>
+<td>Crossref:blog</td>
+<td>A blog; a collection of blog posts</td>
+</tr>
+<tr>
+<td>blog_post</td>
+<td>commonmeta:BlogPost</td>
+<td>A single post in a blog</td>
+</tr>
+<tr>
+<td>book</td>
+<td>DataCite:Book</td>
+<td>A medium for recording information in the form of writing or images, typicall...</td>
+</tr>
+<tr>
+<td>book_chapter</td>
+<td>DataCite:BookChapter</td>
+<td>One of the main divisions of a book</td>
+</tr>
+<tr>
+<td>book_part</td>
+<td>commonmeta:BookPart</td>
+<td>A part of a book that is larger than a chapter</td>
+</tr>
+<tr>
+<td>book_section</td>
+<td>commonmeta:BookSection</td>
+<td>A section of a book that is smaller than a chapter</td>
+</tr>
+<tr>
+<td>book_series</td>
+<td>commonmeta:BookSeries</td>
+<td>A series of books</td>
+</tr>
+<tr>
+<td>book_set</td>
+<td>commonmeta:BookSet</td>
+<td>A set of books published together, e</td>
+</tr>
+<tr>
+<td>collection</td>
+<td>DataCite:Collection</td>
+<td>An aggregation of resources, which may encompass collections of one resource ...</td>
+</tr>
+<tr>
+<td>component</td>
+<td>commonmeta:Component</td>
+<td>A component of another resource, e</td>
+</tr>
+<tr>
+<td>computational_notebook</td>
+<td>DataCite:ComputationalNotebook</td>
+<td>A virtual notebook environment used for literate programming</td>
+</tr>
+<tr>
+<td>conference_paper</td>
+<td>DataCite:ConferencePaper</td>
+<td>Article that is written with the goal of being accepted to a conference</td>
+</tr>
+<tr>
+<td>conference_proceeding</td>
+<td>DataCite:ConferenceProceeding</td>
+<td>Collection of academic papers published in the context of an academic confere...</td>
+</tr>
+<tr>
+<td>data_paper</td>
+<td>DataCite:DataPaper</td>
+<td>A factual and objective publication with a focused intent to identify and des...</td>
+</tr>
+<tr>
+<td>database</td>
+<td>commonmeta:Database</td>
+<td>A database, i</td>
+</tr>
+<tr>
 <td>dataset</td>
 <td>schema:Dataset</td>
-<td>A dataset</td>
+<td>Data encoded in a defined structure</td>
+</tr>
+<tr>
+<td>dissertation</td>
+<td>DataCite:Dissertation</td>
+<td>A written essay, treatise, or thesis, especially one written by a candidate f...</td>
+</tr>
+<tr>
+<td>document</td>
+<td>commonmeta:Document</td>
+<td>A document that does not fit into the other text-based categories</td>
+</tr>
+<tr>
+<td>entry</td>
+<td>commonmeta:Entry</td>
+<td>An entry in a reference work, e</td>
+</tr>
+<tr>
+<td>event</td>
+<td>DataCite:Event</td>
+<td>A non-persistent, time-based occurrence</td>
+</tr>
+<tr>
+<td>image</td>
+<td>DataCite:Image</td>
+<td>A visual representation other than text</td>
+</tr>
+<tr>
+<td>instrument</td>
+<td>DataCite:Instrument</td>
+<td>A device, tool or apparatus used to obtain, measure and/or analyze data</td>
+</tr>
+<tr>
+<td>interactive_resource</td>
+<td>DataCite:InteractiveResource</td>
+<td>A resource requiring interaction from the user to be understood, executed, or...</td>
+</tr>
+<tr>
+<td>journal</td>
+<td>DataCite:Journal</td>
+<td>A scholarly publication consisting of articles that is published regularly th...</td>
+</tr>
+<tr>
+<td>journal_article</td>
+<td>DataCite:JournalArticle</td>
+<td>A written composition on a topic of interest, which forms a separate part of ...</td>
+</tr>
+<tr>
+<td>journal_issue</td>
+<td>commonmeta:JournalIssue</td>
+<td>An issue of a journal</td>
+</tr>
+<tr>
+<td>journal_volume</td>
+<td>commonmeta:JournalVolume</td>
+<td>A volume of a journal</td>
+</tr>
+<tr>
+<td>letter</td>
+<td>Crossref:letter</td>
+<td>A short communication, e</td>
+</tr>
+<tr>
+<td>model</td>
+<td>DataCite:Model</td>
+<td>An abstract, conceptual, graphical, mathematical or visualization model that ...</td>
+</tr>
+<tr>
+<td>output_management_plan</td>
+<td>DataCite:OutputManagementPlan</td>
+<td>A formal document that outlines how research outputs are to be handled both d...</td>
+</tr>
+<tr>
+<td>patent</td>
+<td>Crossref:patent</td>
+<td>A patent or patent application</td>
+</tr>
+<tr>
+<td>peer_review</td>
+<td>DataCite:PeerReview</td>
+<td>Evaluation of scientific, academic, or professional work by others working in...</td>
+</tr>
+<tr>
+<td>physical_object</td>
+<td>DataCite:PhysicalObject</td>
+<td>An inanimate, three-dimensional object or substance, e</td>
+</tr>
+<tr>
+<td>poster</td>
+<td>DataCite:Poster</td>
+<td>A visual presentation of research, typically displayed at a conference</td>
+</tr>
+<tr>
+<td>preprint</td>
+<td>DataCite:Preprint</td>
+<td>A version of a scholarly or scientific paper that precedes formal peer review...</td>
+</tr>
+<tr>
+<td>presentation</td>
+<td>DataCite:Presentation</td>
+<td>A set of slides or other material used to deliver a talk</td>
+</tr>
+<tr>
+<td>proceedings_series</td>
+<td>commonmeta:ProceedingsSeries</td>
+<td>A series of conference proceedings</td>
+</tr>
+<tr>
+<td>project</td>
+<td>DataCite:Project</td>
+<td>A planned endeavor or activity, frequently collaborative, intended to achieve...</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>Crossref:protocol</td>
+<td>A detailed description of the procedures used in an experiment or study</td>
+</tr>
+<tr>
+<td>registered_report</td>
+<td>Crossref:registered_report</td>
+<td>A study design and analysis plan that is peer reviewed before the research is...</td>
+</tr>
+<tr>
+<td>report</td>
+<td>DataCite:Report</td>
+<td>A document that presents information in an organized format for a specific au...</td>
+</tr>
+<tr>
+<td>report_component</td>
+<td>commonmeta:ReportComponent</td>
+<td>A component of a report, e</td>
+</tr>
+<tr>
+<td>report_series</td>
+<td>commonmeta:ReportSeries</td>
+<td>A series of reports</td>
+</tr>
+<tr>
+<td>service</td>
+<td>DataCite:Service</td>
+<td>An organized system of apparatus, appliances, staff, etc</td>
+</tr>
+<tr>
+<td>software</td>
+<td>DataCite:Software</td>
+<td>A computer program other than a computational notebook, in either source code...</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>DataCite:Sound</td>
+<td>A resource primarily intended to be heard</td>
+</tr>
+<tr>
+<td>standard</td>
+<td>DataCite:Standard</td>
+<td>Something established by authority, custom, or general consent as a model, ex...</td>
+</tr>
+<tr>
+<td>study_registration</td>
+<td>DataCite:StudyRegistration</td>
+<td>A detailed, time-stamped description of a research plan, often openly shared ...</td>
+</tr>
+<tr>
+<td>text</td>
+<td>DataCite:Text</td>
+<td>A resource consisting primarily of words for reading that is not covered by a...</td>
+</tr>
+<tr>
+<td>web_page</td>
+<td>commonmeta:WebPage</td>
+<td>A web page or web site</td>
+</tr>
+<tr>
+<td>workflow</td>
+<td>DataCite:Workflow</td>
+<td>A structured series of steps which can be executed to produce a final outcome...</td>
+</tr>
+<tr>
+<td>other</td>
+<td>DataCite:Other</td>
+<td>A resource that does not fit into any of the other categories</td>
 </tr>
 </tbody>
 </table>
@@ -465,7 +738,7 @@
 <tbody>
 <tr>
 <td><a href="../resource_type/">resource_type</a></td>
-<td>The broad type of the source data for this object</td>
+<td>The broad type of the resource</td>
 </tr>
 </tbody>
 </table>
@@ -478,14 +751,370 @@
 <details>
 
 <pre><code class="language-yaml">name: ResourceType
-description: The type of resource being represented.
+description: 'The type of resource being represented.
+
+
+  Values combine the [DataCite resourceTypeGeneral](https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/)
+  vocabulary (v4.7) with the resource types used by [Commonmeta](https://docs.commonmeta.org),
+  Crossref, and OSTI. Where a resource type exists in DataCite, the DataCite term
+  is used.
+
+  '
 from_schema: https://kbase.github.io/credit_engine/linkml/credit_metadata
 rank: 1000
 permissible_values:
+  article:
+    text: article
+    description: An article not published in a journal or proceedings, e.g. a magazine
+      or newspaper article.
+    meaning: commonmeta:Article
+  audiovisual:
+    text: audiovisual
+    description: A series of visual representations imparting an impression of motion
+      when shown in succession. May or may not include sound.
+    meaning: DataCite:Audiovisual
+    exact_mappings:
+    - commonmeta:Audiovisual
+  award:
+    text: award
+    description: Funding or support provided to an individual or organization to conduct
+      research or academic work, e.g. a grant.
+    meaning: DataCite:Award
+    exact_mappings:
+    - commonmeta:Grant
+    - Crossref:grant
+  blog:
+    text: blog
+    description: A blog; a collection of blog posts.
+    meaning: Crossref:blog
+  blog_post:
+    text: blog_post
+    description: A single post in a blog.
+    meaning: commonmeta:BlogPost
+    exact_mappings:
+    - Crossref:blog_post
+  book:
+    text: book
+    description: A medium for recording information in the form of writing or images,
+      typically composed of many pages bound together and protected by a cover.
+    meaning: DataCite:Book
+    exact_mappings:
+    - commonmeta:Book
+    - Crossref:book
+    - OSTI.ARTICLE:B
+  book_chapter:
+    text: book_chapter
+    description: One of the main divisions of a book.
+    meaning: DataCite:BookChapter
+    exact_mappings:
+    - commonmeta:BookChapter
+    - Crossref:book_chapter
+  book_part:
+    text: book_part
+    description: A part of a book that is larger than a chapter.
+    meaning: commonmeta:BookPart
+  book_section:
+    text: book_section
+    description: A section of a book that is smaller than a chapter.
+    meaning: commonmeta:BookSection
+  book_series:
+    text: book_series
+    description: A series of books.
+    meaning: commonmeta:BookSeries
+  book_set:
+    text: book_set
+    description: A set of books published together, e.g. a multi-volume work.
+    meaning: commonmeta:BookSet
+  collection:
+    text: collection
+    description: An aggregation of resources, which may encompass collections of one
+      resource type as well as those of mixed types.
+    meaning: DataCite:Collection
+    exact_mappings:
+    - commonmeta:Collection
+    - Crossref:collection
+  component:
+    text: component
+    description: A component of another resource, e.g. a figure, table, or supplementary
+      file.
+    meaning: commonmeta:Component
+    close_mappings:
+    - Crossref:sa_component
+  computational_notebook:
+    text: computational_notebook
+    description: A virtual notebook environment used for literate programming.
+    meaning: DataCite:ComputationalNotebook
+  conference_paper:
+    text: conference_paper
+    description: Article that is written with the goal of being accepted to a conference.
+    meaning: DataCite:ConferencePaper
+    exact_mappings:
+    - commonmeta:ProceedingsArticle
+    - Crossref:conference_paper
+    close_mappings:
+    - OSTI.ARTICLE:CO
+  conference_proceeding:
+    text: conference_proceeding
+    description: Collection of academic papers published in the context of an academic
+      conference.
+    meaning: DataCite:ConferenceProceeding
+    exact_mappings:
+    - commonmeta:Proceedings
+    - Crossref:conference_proceedings
+  data_paper:
+    text: data_paper
+    description: A factual and objective publication with a focused intent to identify
+      and describe specific data, sets of data, or data collections to facilitate
+      discoverability.
+    meaning: DataCite:DataPaper
+  database:
+    text: database
+    description: A database, i.e. an organized collection of datasets or records.
+    meaning: commonmeta:Database
+    exact_mappings:
+    - Crossref:database
   dataset:
     text: dataset
-    description: A dataset.
+    description: Data encoded in a defined structure.
     meaning: schema:Dataset
+    exact_mappings:
+    - DataCite:Dataset
+    - commonmeta:Dataset
+    - Crossref:dataset
+    - OSTI.ARTICLE:DA
+  dissertation:
+    text: dissertation
+    description: A written essay, treatise, or thesis, especially one written by a
+      candidate for the degree of Doctor of Philosophy.
+    meaning: DataCite:Dissertation
+    exact_mappings:
+    - commonmeta:Dissertation
+    - Crossref:dissertation
+    - OSTI.ARTICLE:TD
+  document:
+    text: document
+    description: A document that does not fit into the other text-based categories.
+    meaning: commonmeta:Document
+    close_mappings:
+    - OSTI.ARTICLE:FS
+    - OSTI.ARTICLE:PD
+    - OSTI.ARTICLE:SM
+  entry:
+    text: entry
+    description: An entry in a reference work, e.g. an encyclopedia or dictionary.
+    meaning: commonmeta:Entry
+    close_mappings:
+    - Crossref:reference_entry
+  event:
+    text: event
+    description: A non-persistent, time-based occurrence.
+    meaning: DataCite:Event
+    exact_mappings:
+    - commonmeta:Event
+  image:
+    text: image
+    description: A visual representation other than text.
+    meaning: DataCite:Image
+    exact_mappings:
+    - commonmeta:Image
+  instrument:
+    text: instrument
+    description: A device, tool or apparatus used to obtain, measure and/or analyze
+      data.
+    meaning: DataCite:Instrument
+    exact_mappings:
+    - commonmeta:Instrument
+  interactive_resource:
+    text: interactive_resource
+    description: A resource requiring interaction from the user to be understood,
+      executed, or experienced.
+    meaning: DataCite:InteractiveResource
+    exact_mappings:
+    - commonmeta:InteractiveResource
+  journal:
+    text: journal
+    description: A scholarly publication consisting of articles that is published
+      regularly throughout the year.
+    meaning: DataCite:Journal
+    exact_mappings:
+    - commonmeta:Journal
+    - Crossref:journal
+  journal_article:
+    text: journal_article
+    description: A written composition on a topic of interest, which forms a separate
+      part of a journal.
+    meaning: DataCite:JournalArticle
+    exact_mappings:
+    - commonmeta:JournalArticle
+    - Crossref:journal_article
+    - OSTI.ARTICLE:JA
+  journal_issue:
+    text: journal_issue
+    description: An issue of a journal.
+    meaning: commonmeta:JournalIssue
+    exact_mappings:
+    - Crossref:journal_issue
+  journal_volume:
+    text: journal_volume
+    description: A volume of a journal.
+    meaning: commonmeta:JournalVolume
+    exact_mappings:
+    - Crossref:journal_volume
+  letter:
+    text: letter
+    description: A short communication, e.g. a letter to the editor.
+    meaning: Crossref:letter
+  model:
+    text: model
+    description: An abstract, conceptual, graphical, mathematical or visualization
+      model that represents empirical objects, phenomena, or physical processes.
+    meaning: DataCite:Model
+  output_management_plan:
+    text: output_management_plan
+    description: A formal document that outlines how research outputs are to be handled
+      both during a research project and after the project is completed, e.g. a data
+      management plan.
+    meaning: DataCite:OutputManagementPlan
+  patent:
+    text: patent
+    description: A patent or patent application.
+    meaning: Crossref:patent
+    close_mappings:
+    - OSTI.ARTICLE:P
+    - OSTI.ARTICLE:PA
+  peer_review:
+    text: peer_review
+    description: Evaluation of scientific, academic, or professional work by others
+      working in the same field.
+    meaning: DataCite:PeerReview
+    exact_mappings:
+    - commonmeta:PeerReview
+    - Crossref:peer_review
+  physical_object:
+    text: physical_object
+    description: An inanimate, three-dimensional object or substance, e.g. a physical
+      sample.
+    meaning: DataCite:PhysicalObject
+    exact_mappings:
+    - commonmeta:PhysicalObject
+  poster:
+    text: poster
+    description: A visual presentation of research, typically displayed at a conference.
+    meaning: DataCite:Poster
+    exact_mappings:
+    - Crossref:poster
+  preprint:
+    text: preprint
+    description: A version of a scholarly or scientific paper that precedes formal
+      peer review and publication in a peer-reviewed scholarly or scientific journal.
+    meaning: DataCite:Preprint
+    exact_mappings:
+    - Crossref:preprint
+  presentation:
+    text: presentation
+    description: A set of slides or other material used to deliver a talk.
+    meaning: DataCite:Presentation
+    exact_mappings:
+    - commonmeta:Presentation
+  proceedings_series:
+    text: proceedings_series
+    description: A series of conference proceedings.
+    meaning: commonmeta:ProceedingsSeries
+  project:
+    text: project
+    description: A planned endeavor or activity, frequently collaborative, intended
+      to achieve a particular aim using allocated resources such as budget, time,
+      and expertise.
+    meaning: DataCite:Project
+  protocol:
+    text: protocol
+    description: A detailed description of the procedures used in an experiment or
+      study.
+    meaning: Crossref:protocol
+  registered_report:
+    text: registered_report
+    description: A study design and analysis plan that is peer reviewed before the
+      research is conducted.
+    meaning: Crossref:registered_report
+  report:
+    text: report
+    description: A document that presents information in an organized format for a
+      specific audience and purpose, e.g. a technical report.
+    meaning: DataCite:Report
+    exact_mappings:
+    - commonmeta:Report
+    - Crossref:report
+    - OSTI.ARTICLE:TR
+    close_mappings:
+    - OSTI.ARTICLE:AR
+  report_component:
+    text: report_component
+    description: A component of a report, e.g. a chapter.
+    meaning: commonmeta:ReportComponent
+  report_series:
+    text: report_series
+    description: A series of reports.
+    meaning: commonmeta:ReportSeries
+  service:
+    text: service
+    description: An organized system of apparatus, appliances, staff, etc., for supplying
+      some function(s) required by end users.
+    meaning: DataCite:Service
+  software:
+    text: software
+    description: A computer program other than a computational notebook, in either
+      source code (text) or compiled form.
+    meaning: DataCite:Software
+    exact_mappings:
+    - commonmeta:Software
+    - Crossref:software
+  sound:
+    text: sound
+    description: A resource primarily intended to be heard.
+    meaning: DataCite:Sound
+  standard:
+    text: standard
+    description: Something established by authority, custom, or general consent as
+      a model, example, or point of reference.
+    meaning: DataCite:Standard
+    exact_mappings:
+    - commonmeta:Standard
+    - Crossref:standard
+  study_registration:
+    text: study_registration
+    description: A detailed, time-stamped description of a research plan, often openly
+      shared in a registry or published in a journal before the study is conducted.
+    meaning: DataCite:StudyRegistration
+    exact_mappings:
+    - commonmeta:StudyRegistration
+  text:
+    text: text
+    description: A resource consisting primarily of words for reading that is not
+      covered by any other textual resource type.
+    meaning: DataCite:Text
+  web_page:
+    text: web_page
+    description: A web page or web site.
+    meaning: commonmeta:WebPage
+    exact_mappings:
+    - Crossref:web_resource
+  workflow:
+    text: workflow
+    description: A structured series of steps which can be executed to produce a final
+      outcome, allowing users a means to specify and enact their work in a more reproducible
+      manner.
+    meaning: DataCite:Workflow
+  other:
+    text: other
+    description: A resource that does not fit into any of the other categories. Describe
+      the resource type in the 'resource_type_detail' field.
+    meaning: DataCite:Other
+    exact_mappings:
+    - commonmeta:Other
+    - Crossref:other
+    - OSTI.ARTICLE:OT
+    close_mappings:
+    - OSTI.ARTICLE:MI
 
 </code></pre>
 
@@ -541,10 +1170,10 @@ permissible_values:
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
