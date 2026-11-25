@@ -6,7 +6,7 @@
   },
   "identifier": "DOI:10.25982/116951.133/1878567",
   "resource_type": "dataset",
-  "license": [
+  "licenses": [
     {
       "url": "https://spdx.org/licenses/CC-BY-4.0.html",
       "id": "CC-BY-4.0"

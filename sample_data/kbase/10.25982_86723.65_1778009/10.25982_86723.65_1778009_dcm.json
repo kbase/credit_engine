@@ -8,7 +8,7 @@
     "manually mapped from DataCite"
   ],
   "identifier": "DOI:10.25982/86723.65/1778009",
-  "license": [
+  "licenses": [
     {
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "id": "CC-BY-4.0"

@@ -1785,7 +1785,7 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    license: Optional[list[License]] = Field(
+    licenses: Optional[list[License]] = Field(
         default=None,
         description="""Usage licenses or rights statements for the resource. For each license, use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
 

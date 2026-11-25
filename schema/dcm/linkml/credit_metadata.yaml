@@ -190,7 +190,7 @@ classes:
         close_mappings:
           - OSTI.ARTICLE:languages
 
-      license:
+      licenses:
         slot_uri: schema:license
         # also slot_uri:isAccessibleForFree
         range: License

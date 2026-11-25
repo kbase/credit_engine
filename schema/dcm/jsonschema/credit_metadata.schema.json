@@ -282,7 +282,7 @@
                         "null"
                     ]
                 },
-                "license": {
+                "licenses": {
                     "description": "Usage licenses or rights statements for the resource. For each license, use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nSupply more than one license if different licenses apply to different versions or uses of the resource (see 'applies_to'), or if the resource is available under a choice of licenses.\n",
                     "items": {
                         "$ref": "#/$defs/License"
@@ -1133,7 +1133,7 @@
                 "null"
             ]
         },
-        "license": {
+        "licenses": {
             "description": "Usage licenses or rights statements for the resource. For each license, use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.\n\nSupply more than one license if different licenses apply to different versions or uses of the resource (see 'applies_to'), or if the resource is available under a choice of licenses.\n",
             "items": {
                 "$ref": "#/$defs/License"

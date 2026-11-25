@@ -119,7 +119,7 @@
             "event": "updated"
         }
     ],
-    "license": [
+    "licenses": [
         {
             "url": "https://spdx.org/licenses/CC-BY-4.0.html",
             "id": "CC-BY-4.0"
