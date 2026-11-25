@@ -184,14 +184,12 @@
   "descriptions": [
     {
       "description_text": "Bacillus cereus strain CPT56D-587-MTF (also referred to as CPTF) was isolated from a nitrate and heavy-metal contaminated site at the Oak Ridge Field Research Center (ORFRC) in Oak Ridge, Tennessee, USA. Strain CPTF has 100% 16S rRNA gene identity to the most abundant metagenome 16S v4 region amplicon sequence variant (ASV) in the soils of the highly contaminated Area 3, the site immediately adjacent to the contamination source: the former S-3 ponds.",
-      "description_type": "abstract",
-      "language": "en-US"
+      "description_type": "abstract"
     }
   ],
   "titles": [
     {
-      "title": "Complete Genome of ORR Isolate Bacillus cereus CPT56D-587-MTF",
-      "language": "en-US"
+      "title": "Complete Genome of ORR Isolate Bacillus cereus CPT56D-587-MTF"
     }
   ],
   "identifier": "DOI:10.25982/105874.55/1844990",
@@ -201,5 +199,6 @@
       "url": "https://spdx.org/licenses/CC-BY-4.0.html",
       "id": "CC-BY-4.0"
     }
-  ]
+  ],
+  "language": "en-US"
 }

@@ -1581,6 +1581,8 @@ class Title(ConfiguredBaseModel):
 
     The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.
 
+    If the title_type is 'translated_title', 'language' must be specified.
+
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
