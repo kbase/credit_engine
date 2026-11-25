@@ -6,15 +6,18 @@ API documentation: https://support.datacite.org/docs/api
 """
 
 import datetime as dt
-from collections.abc import Generator
 from io import StringIO, TextIOWrapper
 from pathlib import Path
-from typing import Any, TextIO
+from typing import TYPE_CHECKING, Any, TextIO
 
 import dlt
-from dlt.common.typing import TDataItem
 from dlt.destinations import filesystem as fs_out
 from dlt.sources.rest_api import rest_api_source
+
+if TYPE_CHECKING:
+    from collections.abc import Generator
+
+    from dlt.common.typing import TDataItem
 
 
 def has_required_keys(item: dict, required_keys: list) -> bool:

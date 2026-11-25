@@ -7,15 +7,26 @@ from decimal import Decimal
 from enum import Enum
 from typing import Any, ClassVar, Literal, Optional, Union
 
-from pydantic import BaseModel, ConfigDict, Field, RootModel, field_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    RootModel,
+    SerializationInfo,
+    SerializerFunctionWrapHandler,
+    field_validator,
+    model_serializer,
+)
 
 
-metamodel_version = "None"
-version = "0.0.7"
+metamodel_version = "1.12.0"
+version = "0.0.8"
 
 
 class ConfiguredBaseModel(BaseModel):
     model_config = ConfigDict(
+        serialize_by_alias=True,
+        validate_by_name=True,
         validate_assignment=True,
         validate_default=True,
         extra="forbid",
@@ -23,7 +34,6 @@ class ConfiguredBaseModel(BaseModel):
         use_enum_values=True,
         strict=False,
     )
-    pass
 
 
 class LinkMLMeta(RootModel):
@@ -48,8 +58,22 @@ linkml_meta = LinkMLMeta(
         "default_curi_maps": ["semweb_context"],
         "default_prefix": "dcm",
         "default_range": "string",
-        "description": "Schema for dataset credit metadata. Schema documentation "
-        "available at https://kbase.github.io/credit_engine/.",
+        "description": "The Dataset Citation Metadata (DCM) schema is designed to "
+        "capture accurate credit (citation) information for scientific "
+        "datasets whilst maintaining compatibility with DOI minting "
+        "authorities such as [DataCite](https://datacite.org), "
+        "[Crossref](https://www.crossref.org), and the US Department "
+        "of Energy's [Office of Scientific and Technical "
+        "Information](https://www.osti.gov).\n"
+        "\n"
+        "The schema is based heavily on the [DataCite Metadata "
+        "Schema](https://schema.datacite.org) and "
+        "[Commonmeta](https://docs.commonmeta.org), with some "
+        "alterations and additions to allow more accurate capture of "
+        "dataset-relevant information.\n"
+        "\n"
+        "Schema documentation is available at "
+        "https://kbase.github.io/credit_engine/.\n",
         "id": "https://kbase.github.io/credit_engine/linkml/credit_metadata",
         "imports": ["components", "linkml:types"],
         "name": "credit_metadata",
@@ -61,6 +85,7 @@ linkml_meta = LinkMLMeta(
             "ORCID": {"prefix_prefix": "ORCID", "prefix_reference": "http://identifiers.org/orcid/"},
             "OSTI.ARTICLE": {"prefix_prefix": "OSTI.ARTICLE", "prefix_reference": "https://www.osti.gov/biblio/"},
             "biolink": {"prefix_prefix": "biolink", "prefix_reference": "https://w3id.org/biolink/vocab/"},
+            "commonmeta": {"prefix_prefix": "commonmeta", "prefix_reference": "https://commonmeta.org/"},
             "dcm": {"prefix_prefix": "dcm", "prefix_reference": "https://kbase.github.io/credit_engine/linkml/"},
             "linkml": {"prefix_prefix": "linkml", "prefix_reference": "https://w3id.org/linkml/"},
             "nmdc": {"prefix_prefix": "nmdc", "prefix_reference": "https://w3id.org/nmdc/"},
@@ -76,76 +101,186 @@ class ContributorRole(str, Enum):
     The type of contribution made by a contributor.
     """
 
-    # Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource. May also be "Point of Contact" in organisation that controls access to the resource, if that organisation is different from Publisher, Distributor, Data Manager.
     contact_person = "contact_person"
-    # Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). May also use when crediting survey conductors, interviewers, event or condition observers, person responsible for monitoring key instrument data.
+    """
+    Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource. May also be "Point of Contact" in organisation that controls access to the resource, if that organisation is different from Publisher, Distributor, Data Manager.
+    """
     data_collector = "data_collector"
-    # Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository. While the "DataManager" is concerned with digital maintenance, the DataCurator's role encompasses quality assurance focused on content and metadata. This includes checking whether the submitted dataset is complete, with all files and components as described by submitter, whether the metadata is standardized to appropriate systems and schema, whether specialized metadata is needed to add value and ensure access across disciplines, and determining how the metadata might map to search engines, database products, and automated feeds.
+    """
+    Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). May also use when crediting survey conductors, interviewers, event or condition observers, person responsible for monitoring key instrument data.
+    """
     data_curator = "data_curator"
-    # Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource. The work done by this person or organisation ensures that the resource is periodically "refreshed" in terms of software/hardware support, is kept available or is protected from unauthorized access, is stored in accordance with industry standards, and is handled in accordance with the records management requirements applicable to it.
+    """
+    Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository. While the "DataManager" is concerned with digital maintenance, the DataCurator's role encompasses quality assurance focused on content and metadata. This includes checking whether the submitted dataset is complete, with all files and components as described by submitter, whether the metadata is standardized to appropriate systems and schema, whether specialized metadata is needed to add value and ensure access across disciplines, and determining how the metadata might map to search engines, database products, and automated feeds.
+    """
     data_manager = "data_manager"
-    # Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form. Works stored in more than one archive/repository may credit each as a distributor.
+    """
+    Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource. The work done by this person or organisation ensures that the resource is periodically "refreshed" in terms of software/hardware support, is kept available or is protected from unauthorized access, is stored in accordance with industry standards, and is handled in accordance with the records management requirements applicable to it.
+    """
     distributor = "distributor"
-    # A person who oversees the details related to the publication format of the resource. N.b. if the Editor is to be credited in place of multiple creators, the Editor's name may be supplied as Creator, with "(Ed.)" appended to the name.
+    """
+    Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form. Works stored in more than one archive/repository may credit each as a distributor.
+    """
     editor = "editor"
-    # Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support. May also be used for an organisation that stores the data offline. Often a data centre (if that data centre is not the "publisher" of the resource).
+    """
+    A person who oversees the details related to the publication format of the resource. N.b. if the Editor is to be credited in place of multiple creators, the Editor's name may be supplied as Creator, with "(Ed.)" appended to the name.
+    """
     hosting_institution = "hosting_institution"
-    # Typically a person or organisation responsible for the artistry and form of a media product. In the data industry, this may be a company "producing" DVDs that package data for future dissemination by a distributor.
+    """
+    Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support. May also be used for an organisation that stores the data offline. Often a data centre (if that data centre is not the "publisher" of the resource).
+    """
     producer = "producer"
-    # Person officially designated as head of project team or sub- project team instrumental in the work necessary to development of the resource. The Project Leader is not "removed" from the work that resulted in the resource; he or she remains intimately involved throughout the life of the particular project team.
+    """
+    Typically a person or organisation responsible for the artistry and form of a media product. In the data industry, this may be a company "producing" DVDs that package data for future dissemination by a distributor.
+    """
     project_leader = "project_leader"
-    # Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams. The manager of a project normally has more administrative responsibility than actual work involvement.
+    """
+    Person officially designated as head of project team or sub- project team instrumental in the work necessary to development of the resource. The Project Leader is not "removed" from the work that resulted in the resource; he or she remains intimately involved throughout the life of the particular project team.
+    """
     project_manager = "project_manager"
-    # Person on the membership list of a designated project/project team. This vocabulary may or may not indicate the quality, quantity, or substance of the person's involvement.
+    """
+    Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams. The manager of a project normally has more administrative responsibility than actual work involvement.
+    """
     project_member = "project_member"
-    # Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility. DataCite is a Registration Agency for the International DOI Foundation (IDF). One of DataCite's tasks is to assign DOI prefixes to the allocating agents who then assign the full, specific character string to data clients, provide metadata back to the DataCite registry, etc.
+    """
+    Person on the membership list of a designated project/project team. This vocabulary may or may not indicate the quality, quantity, or substance of the person's involvement.
+    """
     registration_agency = "registration_agency"
-    # A standards-setting body from which Registration Agencies obtain official recognition and guidance. The IDF serves as the Registration Authority for the International Standards Organisation (ISO) in the area/domain of Digital Object Identifiers.
+    """
+    Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility. DataCite is a Registration Agency for the International DOI Foundation (IDF). One of DataCite's tasks is to assign DOI prefixes to the allocating agents who then assign the full, specific character string to data clients, provide metadata back to the DataCite registry, etc.
+    """
     registration_authority = "registration_authority"
-    # A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize. This person could be an author's intellectual mentor, a person providing intellectual leadership in the discipline or subject domain, etc.
+    """
+    A standards-setting body from which Registration Agencies obtain official recognition and guidance. The IDF serves as the Registration Authority for the International Standards Organisation (ISO) in the area/domain of Digital Object Identifiers.
+    """
     related_person = "related_person"
-    # A person involved in analyzing data or the results of an experiment or formal study. May indicate an intern or assistant to one of the authors who helped with research but who was not so "key" as to be listed as an author. Should be a person, not an institution. Note that a person involved in the gathering of data would fall under the contributorType "data_collector." The researcher may find additional data online and correlate it to the data collected for the experiment or study, for example.
+    """
+    A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize. This person could be an author's intellectual mentor, a person providing intellectual leadership in the discipline or subject domain, etc.
+    """
     researcher = "researcher"
-    # Typically refers to a group of individuals with a lab, department, or division; the group has a particular, defined focus of activity. May operate at a narrower level of scope; may or may not hold less administrative responsibility than a project team.
+    """
+    A person involved in analyzing data or the results of an experiment or formal study. May indicate an intern or assistant to one of the authors who helped with research but who was not so "key" as to be listed as an author. Should be a person, not an institution. Note that a person involved in the gathering of data would fall under the contributorType "data_collector." The researcher may find additional data online and correlate it to the data collected for the experiment or study, for example.
+    """
     research_group = "research_group"
-    # Person or institution owning or managing property rights, including intellectual property rights over the resource.
+    """
+    Typically refers to a group of individuals with a lab, department, or division; the group has a particular, defined focus of activity. May operate at a narrower level of scope; may or may not hold less administrative responsibility than a project team.
+    """
     rights_holder = "rights_holder"
-    # Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc. Includes organisations that provide in-kind support, through donation, provision of people or a facility or instrumentation necessary for the development of the resource, etc.
+    """
+    Person or institution owning or managing property rights, including intellectual property rights over the resource.
+    """
     sponsor = "sponsor"
-    # Designated administrator over one or more groups/teams working to produce a resource or over one or more steps of a development process.
+    """
+    Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc. Includes organisations that provide in-kind support, through donation, provision of people or a facility or instrumentation necessary for the development of the resource, etc.
+    """
     supervisor = "supervisor"
-    # A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource.
+    """
+    Designated administrator over one or more groups/teams working to produce a resource or over one or more steps of a development process.
+    """
+    translator = "translator"
+    """
+    Person, organisation or automated system responsible for rendering the content of a resource from one language into another.
+    """
     work_package_leader = "work_package_leader"
-    # Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution does not "fit" other controlled vocabulary for contributorType. Could be a photographer, artist, or writer whose contribution helped to publicize the resource (as opposed to creating it), a reviewer of the resource, someone providing administrative services to the author (such as depositing updates into an online repository, analysing usage, etc.), or one of many other roles.
+    """
+    A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource.
+    """
     other = "other"
-    # Ideas; formulation or evolution of overarching research goals and aims.
+    """
+    Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution does not "fit" other controlled vocabulary for contributorType. Could be a photographer, artist, or writer whose contribution helped to publicize the resource (as opposed to creating it), a reviewer of the resource, someone providing administrative services to the author (such as depositing updates into an online repository, analysing usage, etc.), or one of many other roles.
+    """
+    author = "author"
+    """
+    A creator of the resource. Equivalent to a DataCite creator.
+    """
+    chair = "chair"
+    """
+    Person who chairs a conference, committee, or other body responsible for the resource.
+    """
+    corresponding_author = "corresponding_author"
+    """
+    The author responsible for correspondence about the resource.
+    """
+    maintainer = "maintainer"
+    """
+    Person or organisation responsible for the ongoing maintenance of the resource, e.g. a software package or a database.
+    """
+    reader = "reader"
+    """
+    Person who reads the resource aloud, e.g. for an audio recording.
+    """
+    reviewer = "reviewer"
+    """
+    Person who reviews the resource, e.g. a peer reviewer.
+    """
+    review_assistant = "review_assistant"
+    """
+    Person who assists a reviewer.
+    """
+    external_reviewer = "reviewer_external"
+    """
+    Reviewer from outside the organisation or editorial board responsible for the review process.
+    """
+    statistical_reviewer = "stats_reviewer"
+    """
+    Reviewer who assesses the statistical methods and analysis used in the resource.
+    """
     conceptualization = "conceptualization"
-    # Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later re-use.
+    """
+    Ideas; formulation or evolution of overarching research goals and aims.
+    """
     data_curation = "data_curation"
-    # Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data.
+    """
+    Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later re-use.
+    """
     formal_analysis = "formal_analysis"
-    # Acquisition of the financial support for the project leading to this publication.
+    """
+    Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data.
+    """
     funding_acquisition = "funding_acquisition"
-    # Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.
+    """
+    Acquisition of the financial support for the project leading to this publication.
+    """
     investigation = "investigation"
-    # Development or design of methodology; creation of models.
+    """
+    Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.
+    """
     methodology = "methodology"
-    # Management and coordination responsibility for the research activity planning and execution.
+    """
+    Development or design of methodology; creation of models.
+    """
     project_administration = "project_administration"
-    # Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.
+    """
+    Management and coordination responsibility for the research activity planning and execution.
+    """
     resources = "resources"
-    # Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.
+    """
+    Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.
+    """
     software = "software"
-    # Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.
+    """
+    Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.
+    """
     supervision = "supervision"
-    # Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.
+    """
+    Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.
+    """
     validation = "validation"
-    # Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.
+    """
+    Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.
+    """
     visualization = "visualization"
-    # Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).
+    """
+    Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.
+    """
     writing_original_draft = "writing_original_draft"
-    # Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages.
+    """
+    Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).
+    """
     writing_review_andSOLIDUSor_editing = "writing_review_editing"
+    """
+    Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages.
+    """
 
 
 class ContributorType(str, Enum):
@@ -153,10 +288,14 @@ class ContributorType(str, Enum):
     The type of contributor being represented.
     """
 
-    # A person.
     Person = "Person"
-    # An organization.
+    """
+    A person.
+    """
     Organization = "Organization"
+    """
+    An organization.
+    """
 
 
 class DescriptionType(str, Enum):
@@ -164,10 +303,68 @@ class DescriptionType(str, Enum):
     The type of text being represented.
     """
 
-    # A brief description of the resource and the context in which the resource was created.
     abstract = "abstract"
+    """
+    A brief description of the resource and the context in which the resource was created.
+    """
     description = "description"
     summary = "summary"
+    methods = "methods"
+    """
+    The methodology employed for the study or research.
+    """
+    series_information = "series_information"
+    """
+    Information about a repeating series, such as volume, issue, or number.
+    """
+    table_of_contents = "table_of_contents"
+    """
+    A listing of the table of contents.
+    """
+    technical_info = "technical_info"
+    """
+    Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process, system, or instrument. For software, this may include the contents of a README file.
+    """
+    acknowledgement = "acknowledgement"
+    """
+    Acknowledgement of contributions to the resource that are not otherwise credited.
+    """
+    accessibility_statement = "accessibility_statement"
+    """
+    Statement about the accessibility of the resource.
+    """
+    ai_use_statement = "ai_use_statement"
+    """
+    Statement about the use of artificial intelligence tools in the creation of the resource.
+    """
+    conflict_of_interest_statement = "conflict_of_interest_statement"
+    """
+    Statement disclosing any competing interests of the creators.
+    """
+    copyright_statement = "copyright_statement"
+    """
+    Statement of copyright for the resource.
+    """
+    data_availability_statement = "data_availability_statement"
+    """
+    Statement about where the data underlying the resource can be accessed, and any conditions of access.
+    """
+    ethics_statement = "ethics_statement"
+    """
+    Statement about ethical approval or ethical considerations for the work.
+    """
+    funding_statement = "funding_statement"
+    """
+    Free text statement of the funding received for the work. Use 'funding' for structured funding information.
+    """
+    versioning_statement = "versioning_statement"
+    """
+    Statement describing the version of the resource and how it differs from other versions.
+    """
+    other = "other"
+    """
+    Other description information that does not fit into an existing category.
+    """
 
 
 class EventType(str, Enum):
@@ -175,36 +372,71 @@ class EventType(str, Enum):
     The type of date being represented.
     """
 
-    # The date that the publisher accepted the resource into their system. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
-
     accepted = "accepted"
-    # The date the resource is made publicly available. To indicate the end of an embargo period, use Available.
+    """
+    The date that the publisher accepted the resource into their system. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
 
+    """
+    accessed = "accessed"
+    """
+    The date the resource was accessed, e.g. when the resource content was retrieved for use in another resource.
+
+    """
+    approved = "approved"
+    """
+    The date on which a dissertation was accepted by the institution awarding the degree, a report was approved, or a standard was accepted.
+
+    """
     available = "available"
-    # The specific, documented date at which the resource receives a copyrighted status, if applicable.
+    """
+    The date the resource is made publicly available. To indicate the end of an embargo period, use Available.
 
+    """
     copyrighted = "copyrighted"
-    # The date or date range in which the resource content was collected. To indicate precise or particular timeframes in which research was conducted.
+    """
+    The specific, documented date at which the resource receives a copyrighted status, if applicable.
 
+    """
     collected = "collected"
-    # The date the resource itself was put together; this could refer to a timeframe in ancient history, be a date range or a single date for a final component, e.g., the finalized file with all of the data.
+    """
+    The date or date range in which the resource content was collected. To indicate precise or particular timeframes in which research was conducted.
 
+    """
+    coverage = "coverage"
+    """
+    The date or date range that the content of the resource is about, e.g. the time period covered by a set of observations or a report.
+
+    """
     created = "created"
-    # The date that the resource is published or distributed e.g. to a data centre
+    """
+    The date the resource itself was put together; this could refer to a timeframe in ancient history, be a date range or a single date for a final component, e.g., the finalized file with all of the data.
 
+    """
     issued = "issued"
-    # The date the creator submits the resource to the publisher. This could be different from Accepted if the publisher then applies a selection process. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
+    """
+    The date that the resource is published or distributed e.g. to a data centre
 
+    """
     submitted = "submitted"
-    # The date of the last update to the resource, when the resource is being added to.
+    """
+    The date the creator submits the resource to the publisher. This could be different from Accepted if the publisher then applies a selection process. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
 
+    """
     updated = "updated"
-    # The date (or date range) during which the dataset or resource is accurate.
+    """
+    The date of the last update to the resource, when the resource is being added to.
 
+    """
     valid = "valid"
-    # The date the resource is removed.
+    """
+    The date (or date range) during which the dataset or resource is accurate.
 
+    """
     withdrawn = "withdrawn"
+    """
+    The date the resource is removed.
+
+    """
     other = "other"
 
 
@@ -214,16 +446,30 @@ class RelationshipType(str, Enum):
     """
 
     based_on_data = "based_on_data"
-    # Indicates that A includes B in a citation.
     cites = "cites"
-    # Indicates B is the result of a compile or creation event using A. May be used for software and text, as a compiler can be a computer program or a person.
+    """
+    Indicates that A includes B in a citation.
+    """
+    collects = "collects"
+    """
+    Indicates that A is used to collect B, e.g. an instrument (A) used to collect a dataset (B).
+    """
     compiles = "compiles"
-    # Indicates A is a continuation of the work B.
+    """
+    Indicates B is the result of a compile or creation event using A. May be used for software and text, as a compiler can be a computer program or a person.
+    """
     continues = "continues"
-    # Indicates A describes B.
+    """
+    Indicates A is a continuation of the work B.
+    """
     describes = "describes"
-    # Indicates A is documentation about B; e.g. points to software documentation.
+    """
+    Indicates A describes B.
+    """
     documents = "documents"
+    """
+    Indicates A is documentation about B; e.g. points to software documentation.
+    """
     finances = "finances"
     has_comment = "has_comment"
     has_derivation = "has_derivation"
@@ -231,97 +477,392 @@ class RelationshipType(str, Enum):
     has_format = "has_format"
     has_manifestation = "has_manifestation"
     has_manuscript = "has_manuscript"
-    # Indicates resource A has additional metadata B.
     has_metadata = "has_metadata"
-    # Indicates A includes the part B. Primarily this relation is applied to container-contained type relationships. May be used for individual software modules; note that code repository-to-version relationships should be modeled using IsVersionOf and HasVersion.
+    """
+    Indicates resource A has additional metadata B.
+    """
     has_part = "has_part"
+    """
+    Indicates A includes the part B. Primarily this relation is applied to container-contained type relationships. May be used for individual software modules; note that code repository-to-version relationships should be modeled using IsVersionOf and HasVersion.
+    """
     has_preprint = "has_preprint"
     has_related_material = "has_related_material"
     has_reply = "has_reply"
     has_review = "has_review"
     has_translation = "has_translation"
-    # Indicates A has a version (B). The registered resource such as a software package or code repository has a versioned instance (indicates A has the instance B) e.g. it may be used to relate an un-versioned code repository to one of its specific software versions.
+    """
+    Indicates B is a translation of A.
+    """
     has_version = "has_version"
+    """
+    Indicates A has a version (B). The registered resource such as a software package or code repository has a versioned instance (indicates A has the instance B) e.g. it may be used to relate an un-versioned code repository to one of its specific software versions.
+    """
     is_based_on = "is_based_on"
     is_basis_for = "is_basis_for"
-    # Indicates that B includes A in a citation.
     is_cited_by = "is_cited_by"
+    """
+    Indicates that B includes A in a citation.
+    """
+    is_collected_by = "is_collected_by"
+    """
+    Indicates that A is collected by B, e.g. a dataset (A) collected using an instrument (B).
+    """
     is_comment_on = "is_comment_on"
-    # Indicates B is used to compile or create A. May be used for software and text, as a compiler can be a computer program or a person.
     is_compiled_by = "is_compiled_by"
-    # Indicates A is continued by the work B.
+    """
+    Indicates B is used to compile or create A. May be used for software and text, as a compiler can be a computer program or a person.
+    """
     is_continued_by = "is_continued_by"
+    """
+    Indicates A is continued by the work B.
+    """
     is_data_basis_for = "is_data_basis_for"
-    # Indicates B is a source upon which A is based. IsDerivedFrom should be used for a resource that is a derivative of an original resource. For example, 'A isDerivedFrom B' could describe a dataset (A) derived from a larger dataset (B) where data values have been manipulated from their original state.
     is_derived_from = "is_derived_from"
-    # Indicates A is described by B.
+    """
+    Indicates B is a source upon which A is based. IsDerivedFrom should be used for a resource that is a derivative of an original resource. For example, 'A isDerivedFrom B' could describe a dataset (A) derived from a larger dataset (B) where data values have been manipulated from their original state.
+    """
     is_described_by = "is_described_by"
-    # Indicates B is documentation about/explaining A; e.g. points to software documentation.
+    """
+    Indicates A is described by B.
+    """
     is_documented_by = "is_documented_by"
+    """
+    Indicates B is documentation about/explaining A; e.g. points to software documentation.
+    """
     is_expression_of = "is_expression_of"
     is_financed_by = "is_financed_by"
     is_format_of = "is_format_of"
-    # Indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource. Should be used for a resource that is the same as the registered resource but is saved in another location, e.g. another institution.
     is_identical_to = "is_identical_to"
+    """
+    Indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource. Should be used for a resource that is the same as the registered resource but is saved in another location, e.g. another institution.
+    """
     is_manifestation_of = "is_manifestation_of"
     is_manuscript_of = "is_manuscript_of"
-    # Indicates additional metadata A for a resource B.
     is_metadata_for = "is_metadata_for"
-    # Indicates A is a new edition of B, where the new edition has been modified or updated.
+    """
+    Indicates additional metadata A for a resource B.
+    """
     is_new_version_of = "is_new_version_of"
-    # Indicates A is replaced by B.
+    """
+    Indicates A is a new edition of B, where the new edition has been modified or updated.
+    """
     is_obsoleted_by = "is_obsoleted_by"
-    # Indicates A is the original form of B. May be used for different software operating systems or compiler formats, for example.
+    """
+    Indicates A is replaced by B.
+    """
     is_original_form_of = "is_original_form_of"
-    # Indicates A is a portion of B; may be used for elements of a series. Primarily this relation is applied to container-contained type relationships. May be used for individual software modules; note that code repository-to-version relationships should be modeled using IsVersionOf and HasVersion.
+    """
+    Indicates A is the original form of B. May be used for different software operating systems or compiler formats, for example.
+    """
     is_part_of = "is_part_of"
+    """
+    Indicates A is a portion of B; may be used for elements of a series. Primarily this relation is applied to container-contained type relationships. May be used for individual software modules; note that code repository-to-version relationships should be modeled using IsVersionOf and HasVersion.
+    """
     is_preprint_of = "is_preprint_of"
-    # Indicates A is a previous edition of B.
     is_previous_version_of = "is_previous_version_of"
-    # Indicates A is published inside B, but is independent of other things published inside of B.
+    """
+    Indicates A is a previous edition of B.
+    """
     is_published_in = "is_published_in"
-    # Indicates A is used as a source of information by B.
+    """
+    Indicates A is published inside B, but is independent of other things published inside of B.
+    """
     is_referenced_by = "is_referenced_by"
+    """
+    Indicates A is used as a source of information by B.
+    """
     is_related_material = "is_related_material"
     is_replaced_by = "is_replaced_by"
     is_reply_to = "is_reply_to"
-    # Indicates A is required by B. May be used to indicate software dependencies.
     is_required_by = "is_required_by"
+    """
+    Indicates A is required by B. May be used to indicate software dependencies.
+    """
     is_review_of = "is_review_of"
-    # Indicates that A is reviewed by B.
     is_reviewed_by = "is_reviewed_by"
+    """
+    Indicates that A is reviewed by B.
+    """
     is_same_as = "is_same_as"
-    # Indicates A is a source upon which B is based. IsSourceOf is the original resource from which a derivative resource was created. For example, 'A isSourceOf B' could describe a dataset (A) which acts as the source of a derived dataset (B) where the values have been manipulated.
     is_source_of = "is_source_of"
-    # Indicates that A is a supplement to B.
+    """
+    Indicates A is a source upon which B is based. IsSourceOf is the original resource from which a derivative resource was created. For example, 'A isSourceOf B' could describe a dataset (A) which acts as the source of a derived dataset (B) where the values have been manipulated.
+    """
     is_supplement_to = "is_supplement_to"
-    # Indicates that B is a supplement to A.
+    """
+    Indicates that A is a supplement to B.
+    """
     is_supplemented_by = "is_supplemented_by"
+    """
+    Indicates that B is a supplement to A.
+    """
     is_translation_of = "is_translation_of"
-    # Indicates A is a variant or different form of B. Use for a different form of one thing. May be used for different software operating systems or compiler formats, for example.
+    """
+    Indicates A is a translation of B.
+    """
     is_variant_form_of = "is_variant_form_of"
-    # Indicates A is a version of B. The registered resource is an instance of a target resource (indicates that A is an instance of B) e.g. it may be used to relate a specific version of a software package to its software code repository.
+    """
+    Indicates A is a variant or different form of B. Use for a different form of one thing. May be used for different software operating systems or compiler formats, for example.
+    """
     is_version_of = "is_version_of"
-    # Indicates A replaces B.
+    """
+    Indicates A is a version of B. The registered resource is an instance of a target resource (indicates that A is an instance of B) e.g. it may be used to relate a specific version of a software package to its software code repository.
+    """
     obsoletes = "obsoletes"
-    # Indicates B is used as a source of information for A.
+    """
+    Indicates A replaces B.
+    """
+    other = "other"
+    """
+    Indicates A is related to B in a way not covered by the other relationship types. Describe the relationship in the 'relationship_type_information' field.
+    """
     references = "references"
+    """
+    Indicates B is used as a source of information for A.
+    """
     replaces = "replaces"
-    # Indicates A requires B. May be used to indicate software dependencies.
     requires = "requires"
-    # Indicates that A is a review of B.
+    """
+    Indicates A requires B. May be used to indicate software dependencies.
+    """
     reviews = "reviews"
-    # The relationship between subject and object is unknown.
+    """
+    Indicates that A is a review of B.
+    """
     unknown = "unknown"
+    """
+    The relationship between subject and object is unknown.
+    """
 
 
 class ResourceType(str, Enum):
     """
-    The type of resource being represented.
+        The type of resource being represented.
+
+    Values combine the [DataCite resourceTypeGeneral](https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/) vocabulary (v4.7) with the resource types used by [Commonmeta](https://docs.commonmeta.org), Crossref, and OSTI. Where a resource type exists in DataCite, the DataCite term is used.
+
     """
 
-    # A dataset.
+    article = "article"
+    """
+    An article not published in a journal or proceedings, e.g. a magazine or newspaper article.
+    """
+    audiovisual = "audiovisual"
+    """
+    A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound.
+    """
+    award = "award"
+    """
+    Funding or support provided to an individual or organization to conduct research or academic work, e.g. a grant.
+    """
+    blog = "blog"
+    """
+    A blog; a collection of blog posts.
+    """
+    blog_post = "blog_post"
+    """
+    A single post in a blog.
+    """
+    book = "book"
+    """
+    A medium for recording information in the form of writing or images, typically composed of many pages bound together and protected by a cover.
+    """
+    book_chapter = "book_chapter"
+    """
+    One of the main divisions of a book.
+    """
+    book_part = "book_part"
+    """
+    A part of a book that is larger than a chapter.
+    """
+    book_section = "book_section"
+    """
+    A section of a book that is smaller than a chapter.
+    """
+    book_series = "book_series"
+    """
+    A series of books.
+    """
+    book_set = "book_set"
+    """
+    A set of books published together, e.g. a multi-volume work.
+    """
+    collection = "collection"
+    """
+    An aggregation of resources, which may encompass collections of one resource type as well as those of mixed types.
+    """
+    component = "component"
+    """
+    A component of another resource, e.g. a figure, table, or supplementary file.
+    """
+    computational_notebook = "computational_notebook"
+    """
+    A virtual notebook environment used for literate programming.
+    """
+    conference_paper = "conference_paper"
+    """
+    Article that is written with the goal of being accepted to a conference.
+    """
+    conference_proceeding = "conference_proceeding"
+    """
+    Collection of academic papers published in the context of an academic conference.
+    """
+    data_paper = "data_paper"
+    """
+    A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability.
+    """
+    database = "database"
+    """
+    A database, i.e. an organized collection of datasets or records.
+    """
     dataset = "dataset"
+    """
+    Data encoded in a defined structure.
+    """
+    dissertation = "dissertation"
+    """
+    A written essay, treatise, or thesis, especially one written by a candidate for the degree of Doctor of Philosophy.
+    """
+    document = "document"
+    """
+    A document that does not fit into the other text-based categories.
+    """
+    entry = "entry"
+    """
+    An entry in a reference work, e.g. an encyclopedia or dictionary.
+    """
+    event = "event"
+    """
+    A non-persistent, time-based occurrence.
+    """
+    image = "image"
+    """
+    A visual representation other than text.
+    """
+    instrument = "instrument"
+    """
+    A device, tool or apparatus used to obtain, measure and/or analyze data.
+    """
+    interactive_resource = "interactive_resource"
+    """
+    A resource requiring interaction from the user to be understood, executed, or experienced.
+    """
+    journal = "journal"
+    """
+    A scholarly publication consisting of articles that is published regularly throughout the year.
+    """
+    journal_article = "journal_article"
+    """
+    A written composition on a topic of interest, which forms a separate part of a journal.
+    """
+    journal_issue = "journal_issue"
+    """
+    An issue of a journal.
+    """
+    journal_volume = "journal_volume"
+    """
+    A volume of a journal.
+    """
+    letter = "letter"
+    """
+    A short communication, e.g. a letter to the editor.
+    """
+    model = "model"
+    """
+    An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes.
+    """
+    output_management_plan = "output_management_plan"
+    """
+    A formal document that outlines how research outputs are to be handled both during a research project and after the project is completed, e.g. a data management plan.
+    """
+    patent = "patent"
+    """
+    A patent or patent application.
+    """
+    peer_review = "peer_review"
+    """
+    Evaluation of scientific, academic, or professional work by others working in the same field.
+    """
+    physical_object = "physical_object"
+    """
+    An inanimate, three-dimensional object or substance, e.g. a physical sample.
+    """
+    poster = "poster"
+    """
+    A visual presentation of research, typically displayed at a conference.
+    """
+    preprint = "preprint"
+    """
+    A version of a scholarly or scientific paper that precedes formal peer review and publication in a peer-reviewed scholarly or scientific journal.
+    """
+    presentation = "presentation"
+    """
+    A set of slides or other material used to deliver a talk.
+    """
+    proceedings_series = "proceedings_series"
+    """
+    A series of conference proceedings.
+    """
+    project = "project"
+    """
+    A planned endeavor or activity, frequently collaborative, intended to achieve a particular aim using allocated resources such as budget, time, and expertise.
+    """
+    protocol = "protocol"
+    """
+    A detailed description of the procedures used in an experiment or study.
+    """
+    registered_report = "registered_report"
+    """
+    A study design and analysis plan that is peer reviewed before the research is conducted.
+    """
+    report = "report"
+    """
+    A document that presents information in an organized format for a specific audience and purpose, e.g. a technical report.
+    """
+    report_component = "report_component"
+    """
+    A component of a report, e.g. a chapter.
+    """
+    report_series = "report_series"
+    """
+    A series of reports.
+    """
+    service = "service"
+    """
+    An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users.
+    """
+    software = "software"
+    """
+    A computer program other than a computational notebook, in either source code (text) or compiled form.
+    """
+    sound = "sound"
+    """
+    A resource primarily intended to be heard.
+    """
+    standard = "standard"
+    """
+    Something established by authority, custom, or general consent as a model, example, or point of reference.
+    """
+    study_registration = "study_registration"
+    """
+    A detailed, time-stamped description of a research plan, often openly shared in a registry or published in a journal before the study is conducted.
+    """
+    text = "text"
+    """
+    A resource consisting primarily of words for reading that is not covered by any other textual resource type.
+    """
+    web_page = "web_page"
+    """
+    A web page or web site.
+    """
+    workflow = "workflow"
+    """
+    A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner.
+    """
+    other = "other"
+    """
+    A resource that does not fit into any of the other categories. Describe the resource type in the 'resource_type_detail' field.
+    """
 
 
 class TitleType(str, Enum):
@@ -329,14 +870,22 @@ class TitleType(str, Enum):
     The type of title being represented.
     """
 
-    # Any subtitle for the resource.
     subtitle = "subtitle"
-    # Other title(s) or names for the resource.
+    """
+    Any subtitle for the resource.
+    """
     alternative_title = "alternative_title"
-    # Translation of the title into another language.
+    """
+    Other title(s) or names for the resource.
+    """
     translated_title = "translated_title"
-    # Anything that doesn't fit into the above categories.
+    """
+    Translation of the title into another language.
+    """
     other = "other"
+    """
+    Anything that doesn't fit into the above categories.
+    """
 
 
 class Contributor(ConfiguredBaseModel):
@@ -376,7 +925,6 @@ class Contributor(ConfiguredBaseModel):
         description="""Must be either 'Person' or 'Organization'.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "contributor_type",
                 "domain_of": ["Contributor"],
                 "exact_mappings": [
                     "DataCite:attributes.contributors.name_type",
@@ -392,7 +940,6 @@ class Contributor(ConfiguredBaseModel):
         description="""Persistent unique identifier for the contributor; this might be an ORCID for an individual, or a ROR ID for an organization.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "contributor_id",
                 "domain_of": ["Contributor"],
                 "exact_mappings": [
                     "DataCite:attributes.contributors.name_identifiers.name_identifier",
@@ -414,9 +961,8 @@ class Contributor(ConfiguredBaseModel):
         description="""Contributor name. For organizations, this should be the full (unabbreviated) name; can also be used for a person if the given name/family name format is not applicable.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "name",
                 "close_mappings": ["OSTI.ARTICLE:author", "OSTI.ARTICLE:contributor"],
-                "domain_of": ["Contributor"],
+                "domain_of": ["Contributor", "License"],
                 "exact_mappings": ["JGI:organisms.pi.name", "ORCID:name"],
                 "examples": [
                     {"value": "National Institute of Mental Health"},
@@ -433,7 +979,6 @@ class Contributor(ConfiguredBaseModel):
         description="""The given name(s) of the contributor.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "given_name",
                 "domain_of": ["Contributor"],
                 "examples": [{"value": "Marionetta Cecille de la"}, {"value": "Helena"}, {"value": "Hubert George"}],
                 "related_mappings": [
@@ -448,7 +993,6 @@ class Contributor(ConfiguredBaseModel):
         description="""The family name(s) of the contributor.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "family_name",
                 "domain_of": ["Contributor"],
                 "examples": [{"value": "Carte-Postale"}, {"value": "Bonham Carter"}, {"value": "Wells"}],
                 "related_mappings": [
@@ -463,7 +1007,6 @@ class Contributor(ConfiguredBaseModel):
         description="""List of organizations with which the contributor is affiliated. For contributors that represent an organization, this may be a parent organization (e.g. KBase, US DOE; Arkin lab, LBNL).""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "affiliations",
                 "domain_of": ["Contributor"],
                 "narrow_mappings": ["OSTI.ARTICLE:contributor.affiliation_name"],
                 "related_mappings": [
@@ -480,7 +1023,6 @@ class Contributor(ConfiguredBaseModel):
         description="""List of roles played by the contributor when working on the resource.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "contributor_roles",
                 "close_mappings": ["ORCID:contributor.role", "OSTI.ARTICLE:contributor.contributorType"],
                 "domain_of": ["Contributor"],
                 "exact_mappings": [
@@ -498,11 +1040,12 @@ class Contributor(ConfiguredBaseModel):
         pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
         if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid contributor_id format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid contributor_id format: {v}")
+                if isinstance(element, str) and not pattern.search(element):
+                    err_msg = f"Invalid contributor_id format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.search(v):
+            err_msg = f"Invalid contributor_id format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -526,7 +1069,6 @@ class DataSource(ConfiguredBaseModel):
         description="""Unix timestamp for when the data was retrieved from that source.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "access_timestamp",
                 "comments": ["This could be added programmatically when updates occur."],
                 "domain_of": ["DataSource"],
             }
@@ -535,14 +1077,13 @@ class DataSource(ConfiguredBaseModel):
     source_data_updated: Optional[datetime] = Field(
         default=None,
         description="""The date when the data source was last updated, if available.""",
-        json_schema_extra={"linkml_meta": {"alias": "source_data_updated", "domain_of": ["DataSource"]}},
+        json_schema_extra={"linkml_meta": {"domain_of": ["DataSource"]}},
     )
     source_name: Optional[str] = Field(
         default=None,
         description="""Where the data was retrieved from.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "source_name",
                 "domain_of": ["DataSource"],
                 "examples": [{"value": "DataCite"}, {"value": "Crossref"}, {"value": "IMG"}],
             }
@@ -553,7 +1094,6 @@ class DataSource(ConfiguredBaseModel):
         description="""URL from whence data was retrieved.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "source_url",
                 "domain_of": ["DataSource"],
                 "examples": [
                     {"value": "https://figshare.com/articles/dataset/Blue_Hole_Metagenome-assembled_Genomes/12644081"},
@@ -578,7 +1118,6 @@ class Description(ConfiguredBaseModel):
         description="""The text content of the informational element.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "description_text",
                 "domain_of": ["Description"],
                 "examples": [{"value": "This is the most interesting dataset ever to earn a DOI."}],
             }
@@ -589,20 +1128,8 @@ class Description(ConfiguredBaseModel):
         description="""The type of text being represented.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "description_type",
                 "domain_of": ["Description"],
                 "examples": [{"value": "abstract"}, {"value": "description"}, {"value": "summary"}],
-            }
-        },
-    )
-    language: Optional[str] = Field(
-        default=None,
-        description="""The language in which the description is written, using the appropriate IETF BCP-47 notation.""",
-        json_schema_extra={
-            "linkml_meta": {
-                "alias": "language",
-                "domain_of": ["Description", "Title"],
-                "examples": [{"value": "ru-Cyrl"}, {"value": "fr"}],
             }
         },
     )
@@ -622,12 +1149,20 @@ class EventDate(ConfiguredBaseModel):
 
     date: str = Field(
         default=...,
-        description="""The date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.""",
+        description="""The date associated with the event. The date may be in the format YYYY, YYYY-MM, YYYY-MM-DD, or an ISO 8601 date-time (YYYY-MM-DDThh:mm:ssTZD).
+
+A date range may be given using the [RKMS-ISO8601](https://www.ukoln.ac.uk/metadata/dcmi/collection-RKMS-ISO8601/) notation, e.g. 2020-01-01/2020-06-30. The start of the range may be 'unknown'; the end may be 'unknown' or 'open'. Date ranges are useful for 'collected', 'coverage', and 'valid' events.
+""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "date",
                 "domain_of": ["EventDate"],
-                "examples": [{"value": "2001"}, {"value": "2021-05"}, {"value": "1998-02-15"}],
+                "examples": [
+                    {"value": "2001"},
+                    {"value": "2021-05"},
+                    {"value": "1998-02-15"},
+                    {"value": "2022-05-03T14:21:07Z"},
+                    {"value": "2019-04-01/2019-09-30"},
+                ],
             }
         },
     )
@@ -635,24 +1170,37 @@ class EventDate(ConfiguredBaseModel):
         default=...,
         description="""The nature of the resource-related event that occurred on that date.""",
         json_schema_extra={
+            "linkml_meta": {"domain_of": ["EventDate"], "examples": [{"value": "available"}, {"value": "updated"}]}
+        },
+    )
+    event_information: Optional[str] = Field(
+        default=None,
+        description="""Free text information about the event or date.""",
+        json_schema_extra={
             "linkml_meta": {
-                "alias": "event",
                 "domain_of": ["EventDate"],
-                "examples": [{"value": "available"}, {"value": "updated"}],
+                "exact_mappings": ["DataCite:attributes.dates.date_information"],
+                "examples": [
+                    {"value": "Embargo period ended."},
+                    {"value": "Samples collected during the 2019 field season."},
+                ],
             }
         },
     )
 
     @field_validator("date")
     def pattern_date(cls, v):
-        pattern = re.compile(r"\d{4}(-\d{2}){0,2}")
+        pattern = re.compile(
+            r"^(\d{4}(-\d{2}){0,2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})?)?|unknown)(/(\d{4}(-\d{2}){0,2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})?)?|unknown|open))?$"
+        )
         if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid date format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid date format: {v}")
+                if isinstance(element, str) and not pattern.search(element):
+                    err_msg = f"Invalid date format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.search(v):
+            err_msg = f"Invalid date format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -686,16 +1234,13 @@ class FundingReference(ConfiguredBaseModel):
     funder: Optional[Organization] = Field(
         default=None,
         description="""The funder for the grant or award.""",
-        json_schema_extra={
-            "linkml_meta": {"alias": "funder", "domain_of": ["FundingReference"], "slot_uri": "schema:funder"}
-        },
+        json_schema_extra={"linkml_meta": {"domain_of": ["FundingReference"], "slot_uri": "schema:funder"}},
     )
     grant_id: Optional[str] = Field(
         default=None,
         description="""Code for the grant, assigned by the funder.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "grant_id",
                 "domain_of": ["FundingReference"],
                 "exact_mappings": ["DataCite:attributes.funding_references.award_number", "Crossref:message.award"],
                 "examples": [{"value": "1296"}, {"value": "CBET-0756451"}, {"value": "DOI:10.46936/10.25585/60000745"}],
@@ -709,7 +1254,6 @@ class FundingReference(ConfiguredBaseModel):
         description="""Title for the grant.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "grant_title",
                 "domain_of": ["FundingReference"],
                 "exact_mappings": ["DataCite:attributes.funding_references.award_title"],
                 "examples": [
@@ -727,7 +1271,6 @@ class FundingReference(ConfiguredBaseModel):
         description="""URL for the grant.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "grant_url",
                 "close_mappings": ["OSTI.ARTICLE:award_doi"],
                 "domain_of": ["FundingReference"],
                 "exact_mappings": ["DataCite:attributes.funding_references.award_url"],
@@ -744,17 +1287,21 @@ class FundingReference(ConfiguredBaseModel):
         pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
         if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid grant_url format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid grant_url format: {v}")
+                if isinstance(element, str) and not pattern.search(element):
+                    err_msg = f"Invalid grant_url format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.search(v):
+            err_msg = f"Invalid grant_url format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
 class License(ConfiguredBaseModel):
     """
-    License information for the resource.
+    License or rights information for the resource.
+
+    One (or more) of 'id', 'url', or 'name' is required.
+
     """
 
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta(
@@ -762,6 +1309,7 @@ class License(ConfiguredBaseModel):
             "any_of": [
                 {"slot_conditions": {"id": {"name": "id", "required": True}}},
                 {"slot_conditions": {"url": {"name": "url", "required": True}}},
+                {"slot_conditions": {"name": {"name": "name", "required": True}}},
             ],
             "from_schema": "https://kbase.github.io/credit_engine/linkml/components",
         }
@@ -772,8 +1320,9 @@ class License(ConfiguredBaseModel):
         description="""String representing the license, from the [SPDX license identifiers](https://spdx.org/licenses/).""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "id",
+                "close_mappings": ["DataCite:attributes.rights_list.rights_identifier"],
                 "domain_of": ["License", "PermanentID"],
+                "exact_mappings": ["commonmeta:license.id"],
                 "examples": [{"value": "CC-BY-NC-ND-4.0"}, {"value": "Apache-2.0"}],
             }
         },
@@ -783,9 +1332,27 @@ class License(ConfiguredBaseModel):
         description="""URL for the license.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "url",
                 "domain_of": ["License", "CreditMetadata"],
+                "exact_mappings": [
+                    "commonmeta:license.url",
+                    "DataCite:attributes.rights_list.rights_uri",
+                    "Crossref:message.license.URL",
+                ],
                 "examples": [{"value": "https://jgi.doe.gov/user-programs/pmo-overview/policies/"}],
+            }
+        },
+    )
+    name: Optional[str] = Field(
+        default=None,
+        description="""Full name of the license or a rights statement, if no SPDX identifier is available. Include version information if applicable.""",
+        json_schema_extra={
+            "linkml_meta": {
+                "domain_of": ["Contributor", "License"],
+                "exact_mappings": ["DataCite:attributes.rights_list.rights"],
+                "examples": [
+                    {"value": "Creative Commons Attribution 4.0 International"},
+                    {"value": "JGI Data Usage Policy"},
+                ],
             }
         },
     )
@@ -805,7 +1372,6 @@ class Metadata(ConfiguredBaseModel):
         description="""The version of the credit metadata schema used.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "credit_metadata_schema_version",
                 "domain_of": ["Metadata"],
                 "examples": [{"value": "1.1.0"}],
                 "slot_uri": "schema:schemaVersion",
@@ -815,21 +1381,18 @@ class Metadata(ConfiguredBaseModel):
     credit_metadata_source: Optional[list[DataSource]] = Field(
         default=None,
         description="""Information about where the credit metadata was sourced from.""",
-        json_schema_extra={"linkml_meta": {"alias": "credit_metadata_source", "domain_of": ["Metadata"]}},
+        json_schema_extra={"linkml_meta": {"domain_of": ["Metadata"]}},
     )
     saved_by: str = Field(
         default=...,
         description="""PID for the user who added this entry.""",
-        json_schema_extra={
-            "linkml_meta": {"alias": "saved_by", "domain_of": ["Metadata"], "slot_uri": "schema:sdPublisher"}
-        },
+        json_schema_extra={"linkml_meta": {"domain_of": ["Metadata"], "slot_uri": "schema:sdPublisher"}},
     )
     timestamp: int = Field(
         default=...,
         description="""Unix timestamp for the addition of this set of credit metadata.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "timestamp",
                 "comments": ["This could be added programmatically when updates occur."],
                 "domain_of": ["Metadata"],
                 "slot_uri": "schema:sdDatePublished",
@@ -862,7 +1425,6 @@ class Organization(ConfiguredBaseModel):
         description="""Persistent unique identifier for the organization in the format <database name>:<identifier within database>.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "organization_id",
                 "domain_of": ["Organization"],
                 "exact_mappings": [
                     "DataCite:attributes.contributors.affiliation.affiliation_identifier",
@@ -882,7 +1444,6 @@ class Organization(ConfiguredBaseModel):
         description="""Common name of the organization; use the name recommended by ROR if possible.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "organization_name",
                 "domain_of": ["Organization"],
                 "exact_mappings": [
                     "DataCite:attributes.contributors.affiliation.name",
@@ -905,11 +1466,12 @@ class Organization(ConfiguredBaseModel):
         pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
         if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid organization_id format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid organization_id format: {v}")
+                if isinstance(element, str) and not pattern.search(element):
+                    err_msg = f"Invalid organization_id format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.search(v):
+            err_msg = f"Invalid organization_id format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -936,7 +1498,6 @@ class PermanentID(ConfiguredBaseModel):
         description="""Persistent unique ID for an entity. Should be in the format <database name>:<identifier within database>.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "id",
                 "domain_of": ["License", "PermanentID"],
                 "exact_mappings": [
                     "DataCite:attributes.identifier.value",
@@ -959,7 +1520,6 @@ class PermanentID(ConfiguredBaseModel):
         description="""Description of that entity.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "description",
                 "domain_of": ["PermanentID"],
                 "exact_mappings": ["OSTI.ARTICLE:description"],
                 "examples": [
@@ -980,9 +1540,23 @@ class PermanentID(ConfiguredBaseModel):
         description="""The relationship between the ID and some other entity. For example, when a PermanentID class is used to represent objects in the CreditMetadata field 'related_identifiers', the 'relationship_type' field captures the relationship between the resource being registered and this ID.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "relationship_type",
                 "domain_of": ["PermanentID"],
-                "exact_mappings": ["DataCite:attributes.related_identifiers.relation_type"],
+                "exact_mappings": [
+                    "DataCite:attributes.related_identifiers.relation_type",
+                    "commonmeta:relations.type",
+                    "OSTI.ARTICLE:related_identifiers.relation",
+                ],
+            }
+        },
+    )
+    relationship_type_information: Optional[str] = Field(
+        default=None,
+        description="""Free text further describing the relationship, e.g. when the relationship type is 'other'.""",
+        json_schema_extra={
+            "linkml_meta": {
+                "domain_of": ["PermanentID"],
+                "exact_mappings": ["DataCite:attributes.related_identifiers.relation_type_information"],
+                "examples": [{"value": "Raw reads used to generate the assembly."}],
             }
         },
     )
@@ -992,11 +1566,12 @@ class PermanentID(ConfiguredBaseModel):
         pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
         if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid id format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid id format: {v}")
+                if isinstance(element, str) and not pattern.search(element):
+                    err_msg = f"Invalid id format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.search(v):
+            err_msg = f"Invalid id format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -1005,6 +1580,8 @@ class Title(ConfiguredBaseModel):
     Represents the title or name of a resource, the type of that title, and the language used (if appropriate).
 
     The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.
+
+    If the title_type is 'translated_title', 'language' must be specified.
 
     """
 
@@ -1017,8 +1594,7 @@ class Title(ConfiguredBaseModel):
         description="""The language in which the title is written, using the appropriate IETF BCP-47 notation.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "language",
-                "domain_of": ["Description", "Title"],
+                "domain_of": ["Title", "CreditMetadata"],
                 "examples": [{"value": "ru-Cyrl"}, {"value": "fr"}],
             }
         },
@@ -1028,7 +1604,6 @@ class Title(ConfiguredBaseModel):
         description="""A string used as a title for a resource.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "title",
                 "domain_of": ["Title"],
                 "exact_mappings": ["DataCite:attributes.titles.title", "Crossref:message.project.project-title.title"],
                 "examples": [
@@ -1044,7 +1619,6 @@ class Title(ConfiguredBaseModel):
         description="""A descriptor for the title for cases where the contents of the 'title' field is not the primary name or title.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "title_type",
                 "domain_of": ["Title"],
                 "exact_mappings": ["DataCite:attributes.title.titleType"],
                 "examples": [
@@ -1066,13 +1640,12 @@ class CreditMetadata(ConfiguredBaseModel):
     that the CM pertains to, for example, a KBase Workspace object; a
     sample from NMDC or ESS-DIVE; sequence data from IMG.
 
-    The 'resource_type' field should be filled using values from the [DataCite
-    resourceTypeGeneral field](https://support.datacite.org/docs/datacite-metadata-schema-v44-mandatory-properties#10a-resourcetypegeneral).
+    The 'resource_type' field takes values from the ResourceType enum, which combines
+    the [DataCite resourceTypeGeneral](https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/)
+    vocabulary with the resource types used by Commonmeta, Crossref, and OSTI. A free
+    text description of the resource type can be supplied in 'resource_type_detail'.
 
-    Currently this schema only supports credit metadata for objects of type
-    'dataset'; anything else will return an error.
-
-    The license may be supplied either as an URL pointing to licensing information for
+    One or more licenses may be supplied. Each license may be given as an URL pointing to licensing information for
     the resource, or using an SPDX license identifier from the list maintained at [https://spdx.org/licenses](https://spdx.org/licenses).
 
     Required fields are:
@@ -1085,8 +1658,8 @@ class CreditMetadata(ConfiguredBaseModel):
     - titles (one or more required)
     - meta
 
-    The resource_type field is required, but as there is currently only a single valid
-    value, 'dataset', it is automatically populated if no value is supplied.
+    The resource_type field is required; if no value is supplied, it is populated
+    with 'dataset'.
 
     """
 
@@ -1106,7 +1679,6 @@ class CreditMetadata(ConfiguredBaseModel):
         description="""List of strings of freeform text providing extra information about this credit metadata.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "comment",
                 "domain_of": ["CreditMetadata"],
                 "examples": [{"value": "This comment adds a lot of extra value!"}],
                 "slot_uri": "schema:comment",
@@ -1116,14 +1688,13 @@ class CreditMetadata(ConfiguredBaseModel):
     content_url: Optional[list[str]] = Field(
         default=None,
         description="""The URL of the content of the resource.""",
-        json_schema_extra={"linkml_meta": {"alias": "content_url", "domain_of": ["CreditMetadata"]}},
+        json_schema_extra={"linkml_meta": {"domain_of": ["CreditMetadata"]}},
     )
     contributors: list[Contributor] = Field(
         default=...,
         description="""A list of people and/or organizations who contributed to the resource.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "contributors",
                 "domain_of": ["CreditMetadata"],
                 "narrow_mappings": [
                     "DataCite:attributes.contributors",
@@ -1142,7 +1713,6 @@ class CreditMetadata(ConfiguredBaseModel):
         description="""A list of relevant lifecycle events for the resource. Note that these dates apply only to the resource itself, and not to the creation or update of the credit metadata record for the resource.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "dates",
                 "close_mappings": [
                     "DataCite:attributes.published",
                     "DataCite:attributes.updated",
@@ -1150,6 +1720,9 @@ class CreditMetadata(ConfiguredBaseModel):
                     "ORCID:publicationDate",
                     "OSTI.ARTICLE:publication_date",
                     "Crossref:message.deposited",
+                    "commonmeta:date",
+                    "Crossref:database_date",
+                    "OSTI.ARTICLE:media_embargo_sunset_date",
                 ],
                 "domain_of": ["CreditMetadata"],
             }
@@ -1159,7 +1732,12 @@ class CreditMetadata(ConfiguredBaseModel):
         default=None,
         description="""A brief description or abstract for the resource being represented.""",
         json_schema_extra={
-            "linkml_meta": {"alias": "descriptions", "domain_of": ["CreditMetadata"], "slot_uri": "schema:description"}
+            "linkml_meta": {
+                "close_mappings": ["Crossref:abstract", "Crossref:statement_info", "OSTI.ARTICLE:description"],
+                "domain_of": ["CreditMetadata"],
+                "exact_mappings": ["DataCite:attributes.descriptions", "commonmeta:descriptions"],
+                "slot_uri": "schema:description",
+            }
         },
     )
     funding: Optional[list[FundingReference]] = Field(
@@ -1167,7 +1745,6 @@ class CreditMetadata(ConfiguredBaseModel):
         description="""Funding sources for the resource.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "funding",
                 "close_mappings": [
                     "DataCite:attributes.funding_references",
                     "Crossref:Message.project.funding",
@@ -1184,7 +1761,6 @@ class CreditMetadata(ConfiguredBaseModel):
         description="""Resolvable persistent unique identifier for the resource. Should be in the format <database name>:<identifier within database>.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "identifier",
                 "comments": ["can generate schema:url from the identifier"],
                 "domain_of": ["CreditMetadata"],
                 "exact_mappings": ["DataCite:id", "JGI:organisms.grouped_by"],
@@ -1198,16 +1774,34 @@ class CreditMetadata(ConfiguredBaseModel):
             }
         },
     )
-    license: Optional[License] = Field(
+    language: Optional[str] = Field(
         default=None,
-        description="""Usage license for the resource. Use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
+        description="""The primary language of the resource, using the appropriate IETF BCP-47 notation.""",
+        json_schema_extra={
+            "linkml_meta": {
+                "close_mappings": ["OSTI.ARTICLE:languages"],
+                "domain_of": ["Title", "CreditMetadata"],
+                "exact_mappings": ["DataCite:attributes.language", "commonmeta:language", "Crossref:message.language"],
+                "examples": [{"value": "ru-Cyrl"}, {"value": "en"}, {"value": "fr"}],
+                "slot_uri": "schema:inLanguage",
+            }
+        },
+    )
+    licenses: Optional[list[License]] = Field(
+        default=None,
+        description="""Usage licenses or rights statements for the resource. For each license, use one of the SPDX license identifiers or provide a link to the license text if no SPDX ID is available.
+
+Supply more than one license if different licenses apply to different versions or uses of the resource (see 'applies_to'), or if the resource is available under a choice of licenses.
 """,
         json_schema_extra={
             "linkml_meta": {
-                "alias": "license",
                 "domain_of": ["CreditMetadata"],
-                "exact_mappings": ["biolink:license"],
-                "related_mappings": ["DataCite:attributes.rights_list"],
+                "exact_mappings": ["biolink:license", "commonmeta:license"],
+                "related_mappings": [
+                    "DataCite:attributes.rights_list",
+                    "Crossref:message.license",
+                    "OSTI.ARTICLE:access_limitations",
+                ],
                 "slot_uri": "schema:license",
             }
         },
@@ -1215,14 +1809,13 @@ class CreditMetadata(ConfiguredBaseModel):
     meta: Optional[Metadata] = Field(
         default=None,
         description="""Metadata for this credit information, including submitter, schema version, and timestamp.""",
-        json_schema_extra={"linkml_meta": {"alias": "meta", "domain_of": ["CreditMetadata"]}},
+        json_schema_extra={"linkml_meta": {"domain_of": ["CreditMetadata"]}},
     )
     publisher: Optional[Organization] = Field(
         default=None,
         description="""The publisher of the resource. For a dataset, this is the repository where it is stored.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "publisher",
                 "domain_of": ["CreditMetadata"],
                 "narrow_mappings": ["ORCID:url", "OSTI.ARTICLE:site_url"],
                 "slot_uri": "schema:provider",
@@ -1234,7 +1827,6 @@ class CreditMetadata(ConfiguredBaseModel):
         description="""Other resolvable persistent unique IDs related to the resource.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "related_identifiers",
                 "close_mappings": [
                     "DataCite:attributes.identifiers",
                     "DataCite:attributes.related_identifiers",
@@ -1248,18 +1840,21 @@ class CreditMetadata(ConfiguredBaseModel):
         },
     )
     resource_type: ResourceType = Field(
-        default=...,
-        description="""The broad type of the source data for this object. 'dataset' is currently the only valid value supported by this schema.""",
+        default=ResourceType("dataset"),
+        description="""The broad type of the resource. Defaults to 'dataset'.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "resource_type",
+                "close_mappings": ["Crossref:message.type"],
                 "domain_of": ["CreditMetadata"],
                 "exact_mappings": [
+                    "DataCite:attributes.types.resource_type_general",
+                    "commonmeta:type",
                     "OSTI.ARTICLE:product_type",
                     "OSTI.ARTICLE:workType",
                     "DataCite:attributes.types.schema_org",
                 ],
-                "examples": [{"value": "dataset"}],
+                "examples": [{"value": "dataset"}, {"value": "software"}, {"value": "workflow"}],
+                "ifabsent": "ResourceType(dataset)",
                 "narrow_mappings": ["OSTI.ARTICLE:dataset_type"],
                 "slot_uri": "schema:@type",
             }
@@ -1270,7 +1865,6 @@ class CreditMetadata(ConfiguredBaseModel):
         description="""One or more titles for the resource.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "titles",
                 "domain_of": ["CreditMetadata"],
                 "exact_mappings": ["DataCite:attributes.titles", "ORCID:title", "OSTI.ARTICLE:title"],
             }
@@ -1279,14 +1873,13 @@ class CreditMetadata(ConfiguredBaseModel):
     url: Optional[str] = Field(
         default=None,
         description="""The URL of the resource.""",
-        json_schema_extra={"linkml_meta": {"alias": "url", "domain_of": ["License", "CreditMetadata"]}},
+        json_schema_extra={"linkml_meta": {"domain_of": ["License", "CreditMetadata"]}},
     )
     version: Optional[str] = Field(
         default=None,
         description="""The version of the resource. This must be an absolute version, not a relative version like 'latest'.""",
         json_schema_extra={
             "linkml_meta": {
-                "alias": "version",
                 "domain_of": ["CreditMetadata"],
                 "exact_mappings": ["DataCite:attributes.version"],
                 "examples": [{"value": "5"}, {"value": "1.2.1"}, {"value": "20220405"}],
@@ -1300,11 +1893,12 @@ class CreditMetadata(ConfiguredBaseModel):
         pattern = re.compile(r"^[a-zA-Z0-9.-_]+:\S")
         if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid identifier format: {element}")
-        elif isinstance(v, str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid identifier format: {v}")
+                if isinstance(element, str) and not pattern.search(element):
+                    err_msg = f"Invalid identifier format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.search(v):
+            err_msg = f"Invalid identifier format: {v}"
+            raise ValueError(err_msg)
         return v
 
 

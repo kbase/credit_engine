@@ -4,6 +4,7 @@ name: components
 description: Components for the Dataset Credit Metadata Schema.
 prefixes:
   bioportal: https://bioportal.bioontology.org/ontologies/
+  commonmeta: https://commonmeta.org/
   dcm: https://kbase.github.io/credit_engine/linkml/
   crcr: https://credit.niso.org/contributor-roles/
   Crossref: https://crossref.org/
@@ -206,11 +207,6 @@ classes:
           - value: abstract
           - value: description
           - value: summary
-      language:
-        description: The language in which the description is written, using the appropriate IETF BCP-47 notation.
-        examples:
-          - value: ru-Cyrl
-          - value: fr
 
   EventDate:
     description: |
@@ -219,13 +215,18 @@ classes:
       See [DataCite documentation on date events](https://support.datacite.org/docs/datacite-metadata-schema-v44-recommended-and-optional-properties#8-date) for more information on the events.
     attributes:
       date:
-        description: The date associated with the event. The date may be in the format YYYY, YYYY-MM, or YYYY-MM-DD.
-        pattern: \d{4}(-\d{2}){0,2}
+        description: |
+          The date associated with the event. The date may be in the format YYYY, YYYY-MM, YYYY-MM-DD, or an ISO 8601 date-time (YYYY-MM-DDThh:mm:ssTZD).
+
+          A date range may be given using the [RKMS-ISO8601](https://www.ukoln.ac.uk/metadata/dcmi/collection-RKMS-ISO8601/) notation, e.g. 2020-01-01/2020-06-30. The start of the range may be 'unknown'; the end may be 'unknown' or 'open'. Date ranges are useful for 'collected', 'coverage', and 'valid' events.
+        pattern: "^(\\d{4}(-\\d{2}){0,2}(T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:?\\d{2})?)?|unknown)(/(\\d{4}(-\\d{2}){0,2}(T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:?\\d{2})?)?|unknown|open))?$"
         required: true
         examples:
           - value: "2001"
           - value: "2021-05"
           - value: "1998-02-15"
+          - value: "2022-05-03T14:21:07Z"
+          - value: "2019-04-01/2019-09-30"
       event:
         description: The nature of the resource-related event that occurred on that date.
         range: EventType
@@ -233,6 +234,13 @@ classes:
         examples:
           - value: available
           - value: updated
+      event_information:
+        description: Free text information about the event or date.
+        examples:
+          - value: Embargo period ended.
+          - value: Samples collected during the 2019 field season.
+        exact_mappings:
+          - DataCite:attributes.dates.date_information
 
   FundingReference:
     class_uri: schema:MonetaryGrant
@@ -295,24 +303,46 @@ classes:
             required: true
 
   License:
-    description: License information for the resource.
+    description: |
+      License or rights information for the resource.
+
+      One (or more) of 'id', 'url', or 'name' is required.
     attributes:
       id:
         description: String representing the license, from the [SPDX license identifiers](https://spdx.org/licenses/).
         examples:
           - value: CC-BY-NC-ND-4.0
           - value: Apache-2.0
+        exact_mappings:
+          - commonmeta:license.id
+        close_mappings:
+          # where rights_identifier_scheme is 'SPDX'
+          - DataCite:attributes.rights_list.rights_identifier
       url:
         description: URL for the license.
         range: uri
         examples:
           - value: https://jgi.doe.gov/user-programs/pmo-overview/policies/
+        exact_mappings:
+          - commonmeta:license.url
+          - DataCite:attributes.rights_list.rights_uri
+          - Crossref:message.license.URL
+      name:
+        description: Full name of the license or a rights statement, if no SPDX identifier is available. Include version information if applicable.
+        examples:
+          - value: Creative Commons Attribution 4.0 International
+          - value: JGI Data Usage Policy
+        exact_mappings:
+          - DataCite:attributes.rights_list.rights
     any_of:
       - slot_conditions:
           id:
             required: true
       - slot_conditions:
           url:
+            required: true
+      - slot_conditions:
+          name:
             required: true
 
   Metadata:
@@ -428,12 +458,22 @@ classes:
         range: RelationshipType
         exact_mappings:
           - DataCite:attributes.related_identifiers.relation_type
+          - commonmeta:relations.type
+          - OSTI.ARTICLE:related_identifiers.relation
+      relationship_type_information:
+        description: Free text further describing the relationship, e.g. when the relationship type is 'other'.
+        examples:
+          - value: Raw reads used to generate the assembly.
+        exact_mappings:
+          - DataCite:attributes.related_identifiers.relation_type_information
 
   Title:
     description: |
       Represents the title or name of a resource, the type of that title, and the language used (if appropriate).
 
       The 'title' field is required; 'title_type' is only necessary if the text is not the primary title.
+
+      If the title_type is 'translated_title', 'language' must be specified.
     attributes:
       language:
         description: The language in which the title is written, using the appropriate IETF BCP-47 notation.
@@ -544,6 +584,14 @@ enums:
         meaning: DataCite:Supervisor
         title: supervisor
         description: Designated administrator over one or more groups/teams working to produce a resource or over one or more steps of a development process.
+      translator:
+        meaning: DataCite:Translator
+        title: translator
+        description: Person, organisation or automated system responsible for rendering the content of a resource from one language into another.
+        exact_mappings:
+          - Crossref:translator
+          - commonmeta:Translator
+          - OSTI.ARTICLE:Translator
       work_package_leader:
         meaning: DataCite:WorkPackageLeader
         title: work package leader
@@ -552,6 +600,62 @@ enums:
         meaning: DataCite:Other
         title: other
         description: Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution does not "fit" other controlled vocabulary for contributorType. Could be a photographer, artist, or writer whose contribution helped to publicize the resource (as opposed to creating it), a reviewer of the resource, someone providing administrative services to the author (such as depositing updates into an online repository, analysing usage, etc.), or one of many other roles.
+      author:
+        meaning: Crossref:author
+        title: author
+        description: A creator of the resource. Equivalent to a DataCite creator.
+        exact_mappings:
+          - commonmeta:Author
+          - OSTI.ARTICLE:AUTHOR
+      chair:
+        meaning: Crossref:chair
+        title: chair
+        description: Person who chairs a conference, committee, or other body responsible for the resource.
+        exact_mappings:
+          - commonmeta:Chair
+          - OSTI.ARTICLE:Chair
+      corresponding_author:
+        meaning: Crossref:corresponding-author
+        title: corresponding author
+        description: The author responsible for correspondence about the resource.
+      maintainer:
+        meaning: commonmeta:Maintainer
+        title: maintainer
+        description: Person or organisation responsible for the ongoing maintenance of the resource, e.g. a software package or a database.
+      reader:
+        meaning: Crossref:reader
+        title: reader
+        description: Person who reads the resource aloud, e.g. for an audio recording.
+        exact_mappings:
+          - commonmeta:Reader
+      reviewer:
+        meaning: Crossref:reviewer
+        title: reviewer
+        description: Person who reviews the resource, e.g. a peer reviewer.
+        exact_mappings:
+          - commonmeta:Reviewer
+          - OSTI.ARTICLE:Reviewer
+      review_assistant:
+        meaning: Crossref:review-assistant
+        title: review assistant
+        description: Person who assists a reviewer.
+        exact_mappings:
+          - commonmeta:ReviewAssistant
+          - OSTI.ARTICLE:ReviewAssistant
+      reviewer_external:
+        meaning: Crossref:reviewer-external
+        title: external reviewer
+        description: Reviewer from outside the organisation or editorial board responsible for the review process.
+        exact_mappings:
+          - commonmeta:ReviewerExternal
+          - OSTI.ARTICLE:ReviewerExternal
+      stats_reviewer:
+        meaning: Crossref:stats-reviewer
+        title: statistical reviewer
+        description: Reviewer who assesses the statistical methods and analysis used in the resource.
+        exact_mappings:
+          - commonmeta:StatsReviewer
+          - OSTI.ARTICLE:StatsReviewer
       conceptualization:
         meaning: crcr:conceptualization
         title: conceptualization
@@ -643,6 +747,59 @@ enums:
         meaning: DataCite:descriptions.description.descriptionType
       summary:
         meaning: DataCite:summary
+        exact_mappings:
+          - commonmeta:Summary
+      methods:
+        meaning: DataCite:Methods
+        description: The methodology employed for the study or research.
+        exact_mappings:
+          - commonmeta:Methods
+      series_information:
+        meaning: DataCite:SeriesInformation
+        description: Information about a repeating series, such as volume, issue, or number.
+      table_of_contents:
+        meaning: DataCite:TableOfContents
+        description: A listing of the table of contents.
+      technical_info:
+        meaning: DataCite:TechnicalInfo
+        description: Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process, system, or instrument. For software, this may include the contents of a README file.
+        exact_mappings:
+          - commonmeta:TechnicalInfo
+        close_mappings:
+          - OSTI.ARTICLE:format_information
+      acknowledgement:
+        meaning: Crossref:acknowledgement
+        description: Acknowledgement of contributions to the resource that are not otherwise credited.
+      accessibility_statement:
+        meaning: Crossref:accessibility
+        description: Statement about the accessibility of the resource.
+      ai_use_statement:
+        meaning: Crossref:ai_use
+        description: Statement about the use of artificial intelligence tools in the creation of the resource.
+      conflict_of_interest_statement:
+        meaning: Crossref:conflict_of_interest
+        description: Statement disclosing any competing interests of the creators.
+      copyright_statement:
+        meaning: Crossref:copyright
+        description: Statement of copyright for the resource.
+      data_availability_statement:
+        meaning: Crossref:data_availability
+        description: Statement about where the data underlying the resource can be accessed, and any conditions of access.
+      ethics_statement:
+        meaning: Crossref:ethics
+        description: Statement about ethical approval or ethical considerations for the work.
+      funding_statement:
+        meaning: Crossref:funding
+        description: Free text statement of the funding received for the work. Use 'funding' for structured funding information.
+      versioning_statement:
+        meaning: Crossref:versioning
+        description: Statement describing the version of the resource and how it differs from other versions.
+      other:
+        meaning: DataCite:Other
+        description: Other description information that does not fit into an existing category.
+        exact_mappings:
+          - commonmeta:Other
+          - Crossref:other
 
   EventType:
     description: The type of date being represented.
@@ -651,6 +808,19 @@ enums:
         meaning: DataCite:accepted
         description: |
           The date that the publisher accepted the resource into their system. To indicate the start of an embargo period, use Submitted or Accepted, as appropriate.
+        exact_mappings:
+          - commonmeta:date.accepted
+          - Crossref:acceptance_date
+      accessed:
+        meaning: commonmeta:date.accessed
+        description: |
+          The date the resource was accessed, e.g. when the resource content was retrieved for use in another resource.
+      approved:
+        meaning: Crossref:approval_date
+        description: |
+          The date on which a dissertation was accepted by the institution awarding the degree, a report was approved, or a standard was accepted.
+        close_mappings:
+          - Crossref:posted_date
       available:
         # schema:datePublished
         meaning: DataCite:available
@@ -664,14 +834,28 @@ enums:
         meaning: DataCite:collected
         description: |
           The date or date range in which the resource content was collected. To indicate precise or particular timeframes in which research was conducted.
+      coverage:
+        meaning: DataCite:Coverage
+        description: |
+          The date or date range that the content of the resource is about, e.g. the time period covered by a set of observations or a report.
+        close_mappings:
+          # via { date: f"{src.report_period_start_date}/{src.report_period_end_date}", event: 'coverage' }
+          - OSTI.ARTICLE:report_period_start_date
+          - OSTI.ARTICLE:report_period_end_date
       created:
         meaning: DataCite:created
         description: |
           The date the resource itself was put together; this could refer to a timeframe in ancient history, be a date range or a single date for a final component, e.g., the finalized file with all of the data.
+        exact_mappings:
+          - commonmeta:date.created
+          - Crossref:creation_date
       issued:
         meaning: DataCite:issued
         description: |
           The date that the resource is published or distributed e.g. to a data centre
+        close_mappings:
+          - commonmeta:date.published
+          - Crossref:publication_date
       submitted:
         meaning: DataCite:submitted
         description: |
@@ -707,6 +891,9 @@ enums:
       cites:
         meaning: DataCite:Cites
         description: Indicates that A includes B in a citation.
+      collects:
+        meaning: DataCite:Collects
+        description: Indicates that A is used to collect B, e.g. an instrument (A) used to collect a dataset (B).
       compiles:
         meaning: DataCite:Compiles
         description: Indicates B is the result of a compile or creation event using A. May be used for software and text, as a compiler can be a computer program or a person.
@@ -762,6 +949,9 @@ enums:
       has_translation:
         title: has translation
         meaning: Crossref:HasTranslation
+        description: Indicates B is a translation of A.
+        exact_mappings:
+          - DataCite:HasTranslation
       has_version:
         title: has version
         meaning: DataCite:HasVersion
@@ -776,6 +966,10 @@ enums:
         title: is cited by
         meaning: DataCite:IsCitedBy
         description: Indicates that B includes A in a citation.
+      is_collected_by:
+        title: is collected by
+        meaning: DataCite:IsCollectedBy
+        description: Indicates that A is collected by B, e.g. a dataset (A) collected using an instrument (B).
       is_comment_on:
         title: is comment on
         meaning: Crossref:IsCommentOn
@@ -894,6 +1088,9 @@ enums:
       is_translation_of:
         title: is translation of
         meaning: Crossref:IsTranslationOf
+        description: Indicates A is a translation of B.
+        exact_mappings:
+          - DataCite:IsTranslationOf
       is_variant_form_of:
         title: is variant form of
         meaning: DataCite:IsVariantFormOf
@@ -905,6 +1102,9 @@ enums:
       obsoletes:
         meaning: DataCite:Obsoletes
         description: Indicates A replaces B.
+      other:
+        meaning: DataCite:Other
+        description: Indicates A is related to B in a way not covered by the other relationship types. Describe the relationship in the 'relationship_type_information' field.
       references:
         meaning: DataCite:References
         description: Indicates B is used as a source of information for A.
@@ -928,11 +1128,278 @@ enums:
         - rdfs:subClassOf
 
   ResourceType:
-    description: The type of resource being represented.
+    description: |
+      The type of resource being represented.
+
+      Values combine the [DataCite resourceTypeGeneral](https://datacite-metadata-schema.readthedocs.io/en/4.7/appendices/appendix-1/resourceTypeGeneral/) vocabulary (v4.7) with the resource types used by [Commonmeta](https://docs.commonmeta.org), Crossref, and OSTI. Where a resource type exists in DataCite, the DataCite term is used.
     permissible_values:
+      article:
+        meaning: commonmeta:Article
+        description: An article not published in a journal or proceedings, e.g. a magazine or newspaper article.
+      audiovisual:
+        meaning: DataCite:Audiovisual
+        description: A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound.
+        exact_mappings:
+          - commonmeta:Audiovisual
+      award:
+        meaning: DataCite:Award
+        description: Funding or support provided to an individual or organization to conduct research or academic work, e.g. a grant.
+        exact_mappings:
+          - commonmeta:Grant
+          - Crossref:grant
+      blog:
+        meaning: Crossref:blog
+        description: A blog; a collection of blog posts.
+      blog_post:
+        meaning: commonmeta:BlogPost
+        description: A single post in a blog.
+        exact_mappings:
+          - Crossref:blog_post
+      book:
+        meaning: DataCite:Book
+        description: A medium for recording information in the form of writing or images, typically composed of many pages bound together and protected by a cover.
+        exact_mappings:
+          - commonmeta:Book
+          - Crossref:book
+          - OSTI.ARTICLE:B
+      book_chapter:
+        meaning: DataCite:BookChapter
+        description: One of the main divisions of a book.
+        exact_mappings:
+          - commonmeta:BookChapter
+          - Crossref:book_chapter
+      book_part:
+        meaning: commonmeta:BookPart
+        description: A part of a book that is larger than a chapter.
+      book_section:
+        meaning: commonmeta:BookSection
+        description: A section of a book that is smaller than a chapter.
+      book_series:
+        meaning: commonmeta:BookSeries
+        description: A series of books.
+      book_set:
+        meaning: commonmeta:BookSet
+        description: A set of books published together, e.g. a multi-volume work.
+      collection:
+        meaning: DataCite:Collection
+        description: An aggregation of resources, which may encompass collections of one resource type as well as those of mixed types.
+        exact_mappings:
+          - commonmeta:Collection
+          - Crossref:collection
+      component:
+        meaning: commonmeta:Component
+        description: A component of another resource, e.g. a figure, table, or supplementary file.
+        close_mappings:
+          - Crossref:sa_component
+      computational_notebook:
+        meaning: DataCite:ComputationalNotebook
+        description: A virtual notebook environment used for literate programming.
+      conference_paper:
+        meaning: DataCite:ConferencePaper
+        description: Article that is written with the goal of being accepted to a conference.
+        exact_mappings:
+          - commonmeta:ProceedingsArticle
+          - Crossref:conference_paper
+        close_mappings:
+          - OSTI.ARTICLE:CO
+      conference_proceeding:
+        meaning: DataCite:ConferenceProceeding
+        description: Collection of academic papers published in the context of an academic conference.
+        exact_mappings:
+          - commonmeta:Proceedings
+          - Crossref:conference_proceedings
+      data_paper:
+        meaning: DataCite:DataPaper
+        description: A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability.
+      database:
+        meaning: commonmeta:Database
+        description: A database, i.e. an organized collection of datasets or records.
+        exact_mappings:
+          - Crossref:database
       dataset:
-        description: A dataset.
+        description: Data encoded in a defined structure.
         meaning: schema:Dataset
+        exact_mappings:
+          - DataCite:Dataset
+          - commonmeta:Dataset
+          - Crossref:dataset
+          - OSTI.ARTICLE:DA
+      dissertation:
+        meaning: DataCite:Dissertation
+        description: A written essay, treatise, or thesis, especially one written by a candidate for the degree of Doctor of Philosophy.
+        exact_mappings:
+          - commonmeta:Dissertation
+          - Crossref:dissertation
+          - OSTI.ARTICLE:TD
+      document:
+        meaning: commonmeta:Document
+        description: A document that does not fit into the other text-based categories.
+        close_mappings:
+          # factsheet, program document, software manual
+          - OSTI.ARTICLE:FS
+          - OSTI.ARTICLE:PD
+          - OSTI.ARTICLE:SM
+      entry:
+        meaning: commonmeta:Entry
+        description: An entry in a reference work, e.g. an encyclopedia or dictionary.
+        close_mappings:
+          - Crossref:reference_entry
+      event:
+        meaning: DataCite:Event
+        description: A non-persistent, time-based occurrence.
+        exact_mappings:
+          - commonmeta:Event
+      image:
+        meaning: DataCite:Image
+        description: A visual representation other than text.
+        exact_mappings:
+          - commonmeta:Image
+      instrument:
+        meaning: DataCite:Instrument
+        description: A device, tool or apparatus used to obtain, measure and/or analyze data.
+        exact_mappings:
+          - commonmeta:Instrument
+      interactive_resource:
+        meaning: DataCite:InteractiveResource
+        description: A resource requiring interaction from the user to be understood, executed, or experienced.
+        exact_mappings:
+          - commonmeta:InteractiveResource
+      journal:
+        meaning: DataCite:Journal
+        description: A scholarly publication consisting of articles that is published regularly throughout the year.
+        exact_mappings:
+          - commonmeta:Journal
+          - Crossref:journal
+      journal_article:
+        meaning: DataCite:JournalArticle
+        description: A written composition on a topic of interest, which forms a separate part of a journal.
+        exact_mappings:
+          - commonmeta:JournalArticle
+          - Crossref:journal_article
+          - OSTI.ARTICLE:JA
+      journal_issue:
+        meaning: commonmeta:JournalIssue
+        description: An issue of a journal.
+        exact_mappings:
+          - Crossref:journal_issue
+      journal_volume:
+        meaning: commonmeta:JournalVolume
+        description: A volume of a journal.
+        exact_mappings:
+          - Crossref:journal_volume
+      letter:
+        meaning: Crossref:letter
+        description: A short communication, e.g. a letter to the editor.
+      model:
+        meaning: DataCite:Model
+        description: An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes.
+      output_management_plan:
+        meaning: DataCite:OutputManagementPlan
+        description: A formal document that outlines how research outputs are to be handled both during a research project and after the project is completed, e.g. a data management plan.
+      patent:
+        meaning: Crossref:patent
+        description: A patent or patent application.
+        close_mappings:
+          - OSTI.ARTICLE:P
+          - OSTI.ARTICLE:PA
+      peer_review:
+        meaning: DataCite:PeerReview
+        description: Evaluation of scientific, academic, or professional work by others working in the same field.
+        exact_mappings:
+          - commonmeta:PeerReview
+          - Crossref:peer_review
+      physical_object:
+        meaning: DataCite:PhysicalObject
+        description: An inanimate, three-dimensional object or substance, e.g. a physical sample.
+        exact_mappings:
+          - commonmeta:PhysicalObject
+      poster:
+        meaning: DataCite:Poster
+        description: A visual presentation of research, typically displayed at a conference.
+        exact_mappings:
+          - Crossref:poster
+      preprint:
+        meaning: DataCite:Preprint
+        description: A version of a scholarly or scientific paper that precedes formal peer review and publication in a peer-reviewed scholarly or scientific journal.
+        exact_mappings:
+          - Crossref:preprint
+      presentation:
+        meaning: DataCite:Presentation
+        description: A set of slides or other material used to deliver a talk.
+        exact_mappings:
+          - commonmeta:Presentation
+      proceedings_series:
+        meaning: commonmeta:ProceedingsSeries
+        description: A series of conference proceedings.
+      project:
+        meaning: DataCite:Project
+        description: A planned endeavor or activity, frequently collaborative, intended to achieve a particular aim using allocated resources such as budget, time, and expertise.
+      protocol:
+        meaning: Crossref:protocol
+        description: A detailed description of the procedures used in an experiment or study.
+      registered_report:
+        meaning: Crossref:registered_report
+        description: A study design and analysis plan that is peer reviewed before the research is conducted.
+      report:
+        meaning: DataCite:Report
+        description: A document that presents information in an organized format for a specific audience and purpose, e.g. a technical report.
+        exact_mappings:
+          - commonmeta:Report
+          - Crossref:report
+          - OSTI.ARTICLE:TR
+        close_mappings:
+          # accomplishment report
+          - OSTI.ARTICLE:AR
+      report_component:
+        meaning: commonmeta:ReportComponent
+        description: A component of a report, e.g. a chapter.
+      report_series:
+        meaning: commonmeta:ReportSeries
+        description: A series of reports.
+      service:
+        meaning: DataCite:Service
+        description: An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users.
+      software:
+        meaning: DataCite:Software
+        description: A computer program other than a computational notebook, in either source code (text) or compiled form.
+        exact_mappings:
+          - commonmeta:Software
+          - Crossref:software
+      sound:
+        meaning: DataCite:Sound
+        description: A resource primarily intended to be heard.
+      standard:
+        meaning: DataCite:Standard
+        description: Something established by authority, custom, or general consent as a model, example, or point of reference.
+        exact_mappings:
+          - commonmeta:Standard
+          - Crossref:standard
+      study_registration:
+        meaning: DataCite:StudyRegistration
+        description: A detailed, time-stamped description of a research plan, often openly shared in a registry or published in a journal before the study is conducted.
+        exact_mappings:
+          - commonmeta:StudyRegistration
+      text:
+        meaning: DataCite:Text
+        description: A resource consisting primarily of words for reading that is not covered by any other textual resource type.
+      web_page:
+        meaning: commonmeta:WebPage
+        description: A web page or web site.
+        exact_mappings:
+          - Crossref:web_resource
+      workflow:
+        meaning: DataCite:Workflow
+        description: A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner.
+      other:
+        meaning: DataCite:Other
+        description: A resource that does not fit into any of the other categories. Describe the resource type in the 'resource_type_detail' field.
+        exact_mappings:
+          - commonmeta:Other
+          - Crossref:other
+          - OSTI.ARTICLE:OT
+        close_mappings:
+          # miscellaneous
+          - OSTI.ARTICLE:MI
 
   TitleType:
     description: The type of title being represented.
